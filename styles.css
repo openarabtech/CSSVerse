@@ -87,7 +87,7 @@ main {
   padding: 0px 20px;
   min-height: 80vh;
   display: block;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 10px auto; /* centers horizontally */
   
 }
@@ -103,7 +103,11 @@ main h1 {
   box-shadow: 0 1px 2px #ff3131;
   border-radius: 12px;
   padding: 20px;
-  font-size: large;
+  font-size: x-large;
+}
+
+.blur-box h2 {
+  padding: 1rem 0.5rem;
 }
 
 .blur-box ul {
@@ -136,13 +140,27 @@ footer .support a{
 /* ENDS FOOTER */
 
 
-/* MOBILE */
+
+
+
+/* Responsive: for tablets and below (≤ 768px) */
+/* متجاوب: للأجهزة اللوحية وما دونها (≤ 768px) */
+
 @media (max-width: 768px) {
-  header #logo {
+ header #logo {
     height: 100px;
   }
   header .open-source p{
   font-size: medium;
   }
+  .blur-box {
+  font-size: large;
 }
-/* MOBILE */
+}
+
+/* Responsive: for phones (≤ 480px) */
+/* متجاوب: للهواتف (≤ 480px) */
+
+@media (max-width: 480px) {
+ 
+}

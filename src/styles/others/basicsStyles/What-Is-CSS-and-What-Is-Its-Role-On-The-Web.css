@@ -116,7 +116,7 @@
 /* Responsive: for phones (≤ 480px) */
 /* متجاوب: للهواتف (≤ 480px) */
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
  .header3 {
   padding: 1.5rem 1rem;
  }

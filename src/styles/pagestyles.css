@@ -47,6 +47,7 @@ main {
   border: red 2px solid;
   border-radius: 4px;
   box-shadow: 0 1px 2px #ff3131;
+  font-size: x-large;
 }
 
 
@@ -70,7 +71,7 @@ border-bottom: darkblue 2px solid;
 
 .userstory {
   font-weight: bold;
-  font-size: large;
+  font-size: x-large;
   color: black;
 }
 
@@ -265,3 +266,25 @@ footer {
   font-weight: bold;
 }
 /* ENDS FOOTER */
+
+
+
+
+/* Responsive: for tablets and below (≤ 768px) */
+/* متجاوب: للأجهزة اللوحية وما دونها (≤ 768px) */
+
+@media (max-width: 768px) {
+  main {
+    font-size: large;
+  }
+  .userstory {
+  font-size: larger;
+  }
+}
+
+/* Responsive: for phones (≤ 480px) */
+/* متجاوب: للهواتف (≤ 480px) */
+
+@media (max-width: 480px) {
+ 
+}
