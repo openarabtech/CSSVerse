@@ -13,6 +13,7 @@ body {
   font-family: "Noto Kufi Arabic", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  font-size: x-large;
   font-weight: 500;
 
 }
@@ -27,8 +28,7 @@ header {
 .open-source {
   display: flex;
   align-items: center;
-  padding-right: 20px;
-  font-size: large;
+  padding: 2px 10px;
 }
 
 .open-source a {
@@ -49,7 +49,7 @@ header {
 /* ENDS HEADER */
 
 /* START NAVBAR */
-nav {
+.navbar {
   background-color: whitesmoke;
   padding: 5px;
 }
@@ -76,7 +76,7 @@ nav {
   color:#ff3131;
   font-weight: bold;
   transition: color 0.3s;
-  font-size: 1.5rem;
+  font-size: xx-large;
 }
 /* ENDS NAVBAR */
 
@@ -103,15 +103,18 @@ main h1 {
   box-shadow: 0 1px 2px #ff3131;
   border-radius: 12px;
   padding: 20px;
-  font-size: x-large;
 }
 
 .blur-box h2 {
-  padding: 1rem 0.5rem;
+  padding: 1rem auto;
 }
 
 .blur-box ul {
   list-style: none;
+}
+
+.blur-box ul li {
+  padding: 10px 0;
 }
 /* ENDS MAIN */
 
@@ -123,10 +126,10 @@ footer {
   font-weight: bold;
   padding: 8px;
   margin-top: 100px;
+  font-size: medium;
 }
 
 footer .support {
-  font-size: xx-small;
   font-weight: bold;
 }
 
@@ -136,6 +139,7 @@ footer .support a{
   background: linear-gradient(180deg, #ff3131, darkred);
   border-radius: 4px;
   padding: 2px;
+  font-size: small;
 }
 /* ENDS FOOTER */
 
@@ -147,16 +151,45 @@ footer .support a{
 /* متجاوب: للأجهزة اللوحية وما دونها (≤ 768px) */
 
 @media (max-width: 768px) {
- header #logo {
+  body {
+    font-size: large;
+  }
+
+  header #logo {
     height: 100px;
   }
-  header .open-source p{
+
+  .open-source {
   font-size: medium;
   }
-  .blur-box {
-  font-size: large;
+
+  main h1 {
+    margin: 50px auto;
+  }
+
+  .blur-box h2 {
+  padding: 1rem 0.5rem;
+  }
+
+  .nav-links a {
+  font-size: x-large;
+  }
+
+  footer {
+  font-size: small;
+  }
+
+  footer .support a{  
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(180deg, #ff3131, darkred);
+    border-radius: 4px;
+    padding: 2px;
+    font-size: x-small;
+  }
+
 }
-}
+
 
 /* Responsive: for phones (≤ 480px) */
 /* متجاوب: للهواتف (≤ 480px) */
