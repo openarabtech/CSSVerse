@@ -283,7 +283,10 @@ footer {
   }
   .pquestions {
   font-size: x-large;
-}
+  }
+  footer p {
+  font-size: medium;
+  }
 }
 
 /* Responsive: for phones (≤ 480px) */
