@@ -1,5 +1,7 @@
 * {
- box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -45,10 +47,14 @@ main {
   margin: 5vh auto; /* centers horizontally */
   padding: 20px;
   background-color: whitesmoke;
-  border: red 2px solid;
+ 
   border-radius: 4px;
-  box-shadow: 0 1px 2px #ff3131;
   
+  
+}
+
+main p {
+  margin: 20px 5px;
 }
 
 
@@ -264,7 +270,24 @@ border-bottom: darkblue 2px solid;
 /* START FOOTER */
 footer {
   text-align: center;
+  border-top:#ff3131  2px solid;
   font-weight: bold;
+  padding: 8px;
+  margin-top: 50px;
+  font-size: medium;
+}
+
+footer .support {
+  font-weight: bold;
+}
+
+footer .support a{  
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(180deg, #ff3131, darkred);
+  border-radius: 4px;
+  padding: 2px;
+  font-size: small;
 }
 /* ENDS FOOTER */
 
@@ -284,8 +307,17 @@ footer {
   .pquestions {
   font-size: x-large;
   }
-  footer p {
-  font-size: medium;
+  footer {
+  font-size: small;
+  }
+
+  footer .support a{  
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(180deg, #ff3131, darkred);
+    border-radius: 4px;
+    padding: 2px;
+    font-size: x-small;
   }
 }
 

@@ -1,4 +1,6 @@
 * {
+ padding: 0;
+ margin: 0;
  box-sizing: border-box;
 }
 
@@ -14,7 +16,7 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 500;
-
+  font-size: x-large;
 }
 
 
@@ -50,20 +52,19 @@ main {
 /* START NAVBAR */
 .navbar {
   background-color:  whitesmoke;
-  margin-top: 5vh;
-  border: red 2px solid;
+  margin: 5vh 0px;
   border-radius: 4px;
-  box-shadow: 0 1px 2px #ff3131;
+  padding: 10px;
 }
 
 
 .navbar .nav-links li {
   text-decoration: none;
   color: black;
-  font-size: 1.2rem;
   font-weight: bold;
   transition: color 0.3s;
-  margin-top: 25px;
+  margin-right: 35px;
+  padding: 10px 2px;
 }
 
 .navbar .nav-links li:hover {
@@ -79,15 +80,15 @@ main {
 }
 
 .navbar .nav-links  .second-navlinks li {
-  margin: 20px 0px;
-  
+  margin-top: 5px;
+  font-size: large;
 }
 
 .navbar .nav-links  .second-navlinks li a {
   text-decoration: none;
-  font-size: 1rem;
   font-weight: 700;
   color: black;
+
 }
 
 .navbar .nav-links a:hover {
@@ -106,6 +107,63 @@ main {
 /* START FOOTER */
 footer {
   text-align: center;
+  border-top:#ff3131  2px solid;
+  font-weight: bold;
+  padding: 8px;
+  margin-top: 50px;
+  font-size: medium;
+}
+
+footer .support {
   font-weight: bold;
 }
+
+footer .support a{  
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(180deg, #ff3131, darkred);
+  border-radius: 4px;
+  padding: 2px;
+  font-size: small;
+}
 /* ENDS FOOTER */
+
+
+
+
+
+/* Responsive: for tablets and below (≤ 768px) */
+/* متجاوب: للأجهزة اللوحية وما دونها (≤ 768px) */
+
+@media (max-width: 768px) {
+  body {
+    font-size: large;
+  }
+
+  .navbar .nav-links  .second-navlinks li {
+  font-size: medium;
+  }
+
+
+  footer {
+  font-size: small;
+  }
+
+  footer .support a{  
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(180deg, #ff3131, darkred);
+    border-radius: 4px;
+    padding: 2px;
+    font-size: x-small;
+  }
+
+}
+
+
+/* Responsive: for phones (≤ 480px) */
+/* متجاوب: للهواتف (≤ 480px) */
+
+@media (max-width: 480px) {
+ 
+}
