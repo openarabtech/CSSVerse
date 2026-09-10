@@ -61,6 +61,11 @@ main p {
 .sub-title {
 color: darkblue;
 border-bottom: darkblue 2px solid;
+margin: 25px 0px;
+}
+
+.sub-title h2 {
+margin: 10px 0px;
 }
 
 .sub-title .hint {
@@ -78,7 +83,7 @@ border-bottom: darkblue 2px solid;
 
 .userstory {
   font-weight: bold;
-  font-size: xx-large;
+  font-size: x-large;
   color: black;
 }
 
