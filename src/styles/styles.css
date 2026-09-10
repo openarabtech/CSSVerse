@@ -29,12 +29,13 @@ header .black {
   text-decoration: none;
   font-weight: bolder;
   font-size: large;
-  padding: 0px 4px;
+  padding: 0px 8px;
   background-color: black;
   
 }
 
 header h1 {
+  margin-top: 50px;
   text-align: center;
   color:#ff3131;
 }
@@ -138,6 +139,10 @@ footer .support a{
 @media (max-width: 768px) {
   body {
     font-size: large;
+  }
+
+  header h1 {
+  font-size: x-large;
   }
 
   .navbar .nav-links  .second-navlinks li {
