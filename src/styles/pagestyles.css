@@ -11,7 +11,8 @@ body {
   font-family: "Noto Kufi Arabic", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: x-large;
 
 }
 
@@ -47,7 +48,7 @@ main {
   border: red 2px solid;
   border-radius: 4px;
   box-shadow: 0 1px 2px #ff3131;
-  font-size: x-large;
+  
 }
 
 
@@ -71,7 +72,7 @@ border-bottom: darkblue 2px solid;
 
 .userstory {
   font-weight: bold;
-  font-size: x-large;
+  font-size: xx-large;
   color: black;
 }
 
@@ -224,7 +225,7 @@ border-bottom: darkblue 2px solid;
 }
 .pquestions {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: xx-large;
   font-weight: bold;
 }
 
@@ -274,12 +275,15 @@ footer {
 /* متجاوب: للأجهزة اللوحية وما دونها (≤ 768px) */
 
 @media (max-width: 768px) {
-  main {
+  body {
     font-size: large;
   }
   .userstory {
   font-size: larger;
   }
+  .pquestions {
+  font-size: x-large;
+}
 }
 
 /* Responsive: for phones (≤ 480px) */
