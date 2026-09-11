@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS |  ما الغرض من استخدام عنصر Meta Viewport ؟"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+    <h1>ما هي لغة CSS ؟</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+		<h2>ما الغرض من استخدام عنصر Meta Viewport ؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+    </section>
+
+    <section>
+        <p>يعد عنصر meta viewport مكوناً جوهرياً في "تصميم الويب المتجاوب" (responsive web design) .</p>
+        <p>
+            <span dir="ltr">( <span class="br-spec">meta</span> element )</span> عنصر خاص في لغة HTML يزود المتصفح بتعليمات حول كيفية التحكم في "أبعاد الصفحة" (page's dimensions) ومستوى تكبيرها أو تصغيرها (التحجيم) على مختلف الأجهزة، ولا سيما الهواتف المحمولة والأجهزة اللوحية.
+        </p>
+        <p class="hinty">
+            لنلقِ نظرةً على الصيغة الأساسية لعنصر meta viewport :
+        </p>
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;meta <span class="attr">name=<span class="value">"viewport"</span> content=<span class="value">"width=device-width, initial-scale=1.0"</span></span>&gt;</span>
+        </code></pre></div>
+        <br>
+        <p>
+            عادةً ما يُوضع هذا العنصر في قسم الرأس <span class="br-spec">head</span> من مستند HTML الخاص بك. ولكن، ماذا يعني كل جزء من أجزاء هذا العنصر؟
+        </p>
+        <p>
+            يُوجّه الجزء <span dir="ltr" class="br-spec nw">width=device-width</span> المتصفحَ لضبط "عرض الصفحة" (width of the page) بحيث يطابق عرض شاشة الجهاز; ويُعد هذا أمراً جوهرياً لإنشاء "تخطيطات متجاوبة" (responsive layouts) تتكيف مع أحجام الشاشات المختلفة.
+        </p>
+        <p>
+            تُحدد الخاصية <span dir="ltr" class="br-spec nw">initial-scale=1.0</span> مستوى التكبير الأولي عند تحميل الصفحة لأول مرة; إذ تعني القيمة <b dir="ltr">1.0</b> أن الصفحة تُعرض بمستوى تكبير 100%, دون أي تغيير في الحجم (Scaling).
+        </p>
+        <p>
+            من خلال استخدام عنصر meta viewport , فإنك تضمن عرض صفحات الويب الخاصة بك بشكل صحيح على الأجهزة المحمولة.
+        </p>
+        <p>
+            بدون ذلك، عادةً ما تقوم متصفحات الأجهزة المحمولة بعرض الصفحة وفقاً لعرض شاشة سطح المكتب ثم تصغير حجمها، مما قد يؤدي إلى "تجربة مستخدم سيئة" (poor user experience) تتسم بنصوص صغيرة يصعب قراءتها.
+        </p>
+        <p>
+            يتيح لك أيضاً عنصر meta viewport التحكم في إمكانية قيام المستخدمين بتكبير وتصغير صفحات الويب الخاصة بك.
+        </p>
+        <p>
+            على الرغم من إمكانية تعطيل ميزة التكبير باستخدام السمة <span dir="ltr" class="br-spec nw">user-scalable=no</span> , إلا أنه يُنصح عموماً بتجنب ذلك لاعتبارات تتعلق بإمكانية الوصول.
+        </p>
+        <p>
+            يعتمد العديد من المستخدمين على إمكانية التكبير لتحسين القراءة، ولا سيما ذوي الإعاقات البصرية.
+        </p>
+
+        <p class="hinty">إليك مثال على ما لا ينبغي فعله:</p>
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;meta <span class="attr">name=<span class="value">"viewport"</span> content=<span class="value">"width=device-width, initial-scale=1.0, user-scalable=no"</span></span>&gt;</span>
+        </code></pre></div>
+        <br>
+
+        <p>
+            بدلاً من ذلك، من الأفضل تصميم موقعك الإلكتروني ليكون متجاوباً وقابلاً للقراءة عند مستويات تكبير مختلفة، مما يضمن لجميع المستخدمين الوصول إلى المحتوى الخاص بك بسهولة وراحة.
+        </p>
+        <p>
+            يلعب عنصر meta viewport دوراً حاسماً في إنشاء مواقع إلكترونية متوافقة مع الأجهزة المحمولة.
+        </p>
+        <p>
+            يضمن عرض تصميماتك المتجاوبة - التي أُعدت بعناية - بالشكل المقصود على مختلف الأجهزة, مما يوفر تجربة مستخدم أفضل لجميع زوار موقعك.
+        </p>
+
+    </section>
+
+
+    <!-- QUESTIONS -->
+		<section class="questions">
+			<p class="pquestions">أسئلة :</p>
+				
+			<p class="userstory">ما هو الغرض الأساسي من الوسم <span dir="ltr" class="br-spec nw">&lt;meta name="viewport"&gt;</span> ؟</p>
+
+			<p> 1. لتحسين سرعة تحميل الموقع الإلكتروني. ❌</p>
+            <p><mark> 2. للتحكم في أبعاد الصفحة ومقياس العرض على مختلف الأجهزة. ✅</mark></p>
+            <p> 3. لتوفير أوصاف للصفحة لمحركات البحث. ❌</p>
+			<p> 4. لتفعيل وظائف JavaScript. ❌</p>
+
+            <br>
+
+            <p class="userstory">ما هي وظيفة <span dir="ltr" class="br-spec nw">width=device-width</span> في وسم <span dir="ltr" class="br-spec nw">&lt;meta name="viewport"&gt;</span> ؟</p>
+			
+			<p> 1. يضبط عرض جميع الصور ليتناسب مع عرض الجهاز. ❌</p>
+            <p><mark> 2. يوجه المتصفح لمطابقة عرض الصفحة مع عرض شاشة الجهاز. ✅</mark></p>
+            <p> 3. يُعدّل حجم الخط بناءً على عرض الجهاز. ❌</p>
+			<p> 4. يُحدّد الحد الأقصى لعرض صفحة الويب. ❌</p>
+
+            <br>
+
+            <p class="userstory">لماذا يُنصح عمومًا بتجنب استخدام <span dir="ltr" class="br-spec nw">user-scalable=no</span> في وسم <span dir="ltr" class="br-spec nw">&lt;meta name="viewport"&gt;</span> ؟</p>
+			
+			<p> 1. قد يتسبب ذلك في تعطل الموقع على أجهزة معينة. ❌</p>
+            <p> 2. يمنع ذلك محركات البحث من فهرسة الموقع. ❌</p>
+            <p><mark> 3. قد يؤدي ذلك إلى مشاكل في سهولة الوصول للمستخدمين الذين يحتاجون إلى استخدام خاصية التكبير. ✅</mark></p>
+			<p> 4. يؤدي ذلك إلى بطء تحميل الموقع على الأجهزة المحمولة. ❌</p>
+
+		</section>
+
+
+  
+
+
+
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./What-Is-the-Basic-Anatomy-of-a-CSS-Rule.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a href="https://www.linkedin.com/company/openarabtech/" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+
+
+</body>
+</html>
