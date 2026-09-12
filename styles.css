@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+ul, ol, blockquote {
+  margin-block: 1em;
+  padding-inline-start: 40px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -34,6 +39,11 @@ header {
   text-decoration: none;
 }
 
+.open-source a:hover {
+  color: red;
+  text-decoration: none;
+}
+
 .opens {
   display: flex;
   align-items: center;
@@ -54,6 +64,7 @@ header {
 
 
 .nav-links {
+  list-style: none;
   margin:5px 0;
   color: whitesmoke;
   display: flex;
@@ -65,9 +76,7 @@ header {
   padding-right: 10px;
 }
 
-.nav-links:hover {
-  color: red;
-}
+
 
 .nav-links a {
   text-decoration: none;
@@ -75,6 +84,10 @@ header {
   font-weight: bold;
   transition: color 0.3s;
   font-size: xx-large;
+}
+
+.nav-links a:hover {
+  color: red;
 }
 /* ENDS NAVBAR */
 
@@ -112,7 +125,7 @@ main h1 {
 }
 
 .blur-box ul li {
-  padding: 10px 0;
+  padding: 10px;
 }
 /* ENDS MAIN */
 
