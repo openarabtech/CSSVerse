@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS |  ما هي CSS المضمَّنة والداخلية والخارجية، ومتى ينبغي استخدام كلٍّ منها؟"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+    <h1>ما هي لغة CSS ؟</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+		<h2>ما هي CSS المضمَّنة والداخلية والخارجية، ومتى ينبغي استخدام كلٍّ منها؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+    </section>
+
+    <section>
+        <p>
+            يمكن تطبيق CSS على صفحة الويب بثلاث طرق رئيسية: مضمنة (inline)، أو داخلية (internal)، أو خارجية (external).
+        </p>
+        <p>
+            لكل طريقة حالات استخدام ومزايا وقيود خاصة بها، وتُعد معرفة متى ينبغي استخدام كل منها أمراً جوهرياً لكتابة "شيفرة برمجية نظيفة وفعالة وسهلة الصيانة" (clean, efficient, and maintainable code).
+        </p>
+        <p>
+            لنستعرض أنواع CSS الثلاثة ومتى ينبغي استخدامها.
+        </p>
+        <p>
+            تُكتب لغة CSS المضمنة (Inline CSS) مباشرةً داخل عنصر HTML باستخدام السمة <span dir="ltr" class="br-spec nw">style</span> ; حيث تُطبِّق التنسيقات على عنصر محدد.
+        </p>
+
+        <p class="hinty">
+            إليك مثال يستخدم CSS المضمنة (inline CSS) :
+        </p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;p <span class="attr">style=<span class="value">"color: green;"</span></span>&gt;<span dir="rtl" class="txt">هذه فقرة ذات تنسيق مُضمَّن.</span>&lt;/p&gt;</span>
+        </code></pre></div>
+        
+        <p class="hinty">معاينة:</p>
+
+        <div class="preview" role="presentation">	
+            <p style="color: green;">هذه فقرة ذات تنسيق مُضمَّن.</p>
+        </div>
+        <br>
+
+        <p>
+            في هذا المثال، نستخدم السمة <span dir="ltr" class="br-spec nw">style</span> لضبط لون نص الفقرة على الأخضر <span dir="ltr" class="br-spec nw">green</span> .
+        </p>
+        <p>
+            تُستخدم لغة CSS المضمنة (Inline CSS) عادةً لتطبيق أنماط سريعة ومحددة لمرة واحدة، أو لتجاوز أنماط أخرى خاصة بعنصر معين.
+        </p>
+        <p>
+            ومع ذلك، ينبغي تجنب ذلك في معظم الحالات; لأنه قد يؤدي إلى "تكدس" (clutter) كود HTML وجعل صيانته أكثر صعوبة.
+        </p>
+        <p>
+            في معظم الحالات، يُفضل استخدام CSS داخلية أو خارجية (internal or external) للحفاظ على تنظيم الأنماط وتسهيل صيانتها.
+        </p>
+        <p>
+            تُكتب لغة CSS الداخلية (Internal CSS) داخل وسوم <span dir="ltr" class="br-spec nw">style</span> في قسم <span dir="ltr" class="br-spec nw">head</span> من مستند HTML ; وهي تُطبِّق التنسيقات على الصفحة بأكملها، وتُعد مفيدةً عندما تحتاج إلى تنسيق مستندٍ واحدٍ فقط.
+        </p>
+
+        <p class="hinty">إليك مثال على CSS الداخلي (internal CSS) :</p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;head&gt;
+ &lt;style&gt;
+  <span class="attr">p {
+   color: <span class="txt">blue</span>;
+  }</span>
+ &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">تم تنسيق هذه الفقرة باستخدام CSS داخلي (internal CSS).</span>&lt;/p&gt;
+&lt;/body&gt;</span>
+        </code></pre></div>
+        
+        <p class="hinty">معاينة:</p>
+
+        <div class="preview" role="presentation">	
+            <p style="color: blue;">تم تنسيق هذه الفقرة باستخدام CSS داخلي (internal CSS).</p>
+        </div>
+        <br>
+
+        <p>
+            في المثال أعلاه، يقوم نظام CSS الداخلي بتطبيق نص أزرق على جميع عناصر <span dir="ltr" class="br-spec nw">p</span> في الصفحة.
+        </p>
+        <p>
+            يُعد استخدام CSS الداخلي (Internal CSS) الخيار الأمثل عندما تحتاج إلى تطبيق أنماط على صفحة محددة بدلاً من تطبيقها على صفحات متعددة; فهو مفيد للمواقع المكونة من صفحة واحدة أو في الحالات التي لا تتطلب إعادة استخدام تلك الأنماط في أماكن أخرى.
+        </p>
+        <p>
+            ومع ذلك، ثمة بعض السلبيات، مثل عدم دعم إمكانية إعادة الاستخدام عبر صفحات متعددة. وعلاوة على ذلك، فهو - شأنه شأن تنسيق CSS المضمّن (inline CSS) - يدمج بين HTML و CSS, مما يجعل صيانة الكود أكثر صعوبة في المشاريع الكبيرة.
+        </p>
+        <p>
+            تُكتب ملفات CSS الخارجية (External CSS) في ملف منفصل بامتداد <span dir="ltr" class="br-spec nw">.css</span> , وتُربط بمستند HTML باستخدام عنصر <span dir="ltr" class="br-spec nw">link</span> في قسم <span dir="ltr" class="br-spec nw">head</span> .
+        </p>
+        <p>
+            يتيح لك تنسيق صفحات متعددة بشكل متسق، ويُعد الأسلوب المفضل في مجال تطوير الويب الاحترافي (professional web development) .
+        </p>
+
+        <p class="hinty">إليك مثال على تنسيق جميع عناصر الفقرة:</p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;head&gt;
+ &lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">تم تنسيق هذه الفقرة باستخدام ملف CSS خارجي (external CSS).</span>&lt;/p&gt;
+&lt;/body&gt;</span>
+            </code></pre></div>
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="attr"> p {
+ color: <span class="txt">red</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+
+        <div class="preview" role="presentation">	
+            <p style="color: red;">تم تنسيق هذه الفقرة باستخدام ملف CSS خارجي (external CSS).</p>
+        </div>
+        <br>
+
+        <p>
+            في درس سابق، تعلّمت أن عنصر <span dir="ltr" class="br-spec nw">link</span> يحتوي على السمة <span dir="ltr" class="br-spec nw">rel</span> التي تحدد العلاقة بين المستند الحالي والمورد المرتبط به، مثل الربط بملف أنماط (stylesheet) أو مورد خارجي.
+        </p>
+        <p>
+            من ناحية أخرى، تحدد السمة <span dir="ltr" class="br-spec nw">href</span> عنوان URL للمورد المرتبط، مشيرةً إلى المكان الذي ينبغي جلب المورد منه.
+        </p>
+        <p>
+            تُعد ملفات CSS الخارجية مثالية للمشاريع الكبيرة التي ترغب فيها بالحفاظ على نمط متسق عبر صفحات متعددة.
+        </p>
+        <p>
+            يعزز هذا النهج مبدأ "فصل الاهتمامات" (separation of concerns) من خلال جعل HTML تتولى مسؤولية الهيكلة وCSS تتولى مسؤولية التنسيق، مما يجعل الكود البرمجي أسهل في الصيانة وأكثر قابلية للتوسع.
+        </p>
+        <p>
+            يُعد فهم متى يجب استخدام كل نوع من أنواع CSS أمراً بالغ الأهمية لتطوير الويب بكفاءة وفعالية.
+        </p>
+        <p>
+            في معظم الحالات، ينبغي أن يكون استخدام ملفات CSS الخارجية هو خيارك المفضل، لا سيما في المشاريع الكبيرة والأكثر تعقيداً.
+        </p>
+
+        <!-- QUESTIONS -->
+		<section class="questions">
+			<p class="pquestions">أسئلة :</p>
+				
+			<p class="userstory">متى يكون استخدام CSS المضمن (Inline CSS) هو الخيار الأنسب؟</p>
+
+			<p> 1. لتنسيق جميع الفقرات في المستند. ❌</p>
+            <p><mark> 2. لتجاوز التنسيقات بسرعة على عنصر واحد. ✅</mark></p>
+            <p> 3. لتنسيق موقع ويب بالكامل. ❌</p>
+			<p> 4. للفصل بين المهام في المشاريع الكبيرة. ❌</p>
+
+            <br>
+
+            <p class="userstory">أي نوع من أنواع CSS هو الأنسب لتطبيق الأنماط على صفحة ويب واحدة فقط؟</p>
+			
+			<p> 1. سي.اس.اس مضمّن (Inline CSS). ❌</p>
+            <p> 2. سي.اس.اس خارجي (External CSS). ❌</p>
+            <p><mark> 3. سي.اس.اس داخلي (Internal CSS). ✅</mark></p>
+			<p> 4. سي.اس.اس عام (Universal CSS). ❌</p>
+
+            <br>
+
+            <p class="userstory">لماذا يُفضَّل استخدام ملفات CSS الخارجية (External CSS) في المشاريع الكبيرة؟</p>
+			
+			<p> 1. يسمح بإجراء تغييرات سريعة ومؤقتة على الأنماط. ❌</p>
+            <p> 2. يطبّق الأنماط على عنصر محدد فقط. ❌</p>
+            <p><mark> 3. يعزز مبدأ فصل المهام وإمكانية إعادة الاستخدام عبر صفحات متعددة. ✅</mark></p>
+			<p> 4. يجعل كود HTML أكثر تعقيداً. ❌</p>
+            
+		</section>
+
+    </section>
+
+
+  
+
+
+
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./What-Are-Some-Default-Browser-Styles-Applied-to-HTML.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a href="https://www.linkedin.com/company/openarabtech/" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+
+
+</body>
+</html>

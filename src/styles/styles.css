@@ -9,10 +9,6 @@ ul, ol {
   padding-inline-start: 15px;
 }
 
-blockquote {
-  margin-block: 1em;
-  padding-inline-start: 40px;
-}
 
 html {
   scroll-behavior: smooth;
@@ -63,8 +59,14 @@ main {
 .navbar {
   background-color:  whitesmoke;
   border-radius: 4px;
-  padding: 10px;
+  padding-inline-start: 30px;
+  padding-block: 1em;
 }
+
+
+
+
+
 
 
 .navbar .nav-links li {
@@ -73,6 +75,7 @@ main {
   font-weight: bold;
   transition: color 0.3s;
   padding: 10px 2px;
+  margin-block: 1em;
 }
 
 .navbar .nav-links li:hover {
