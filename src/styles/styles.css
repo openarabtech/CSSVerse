@@ -1,14 +1,18 @@
 * {
- padding: 0;
- margin: 0;
- box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-ul, ol, blockquote {
+ul, ol {
+  margin-block: 1em;
+  padding-inline-start: 15px;
+}
+
+blockquote {
   margin-block: 1em;
   padding-inline-start: 40px;
 }
-
 
 html {
   scroll-behavior: smooth;

@@ -4,7 +4,12 @@
   box-sizing: border-box;
 }
 
-ul, ol, blockquote {
+ul, ol {
+  margin-block: 1em;
+  padding-inline-start: 15px;
+}
+
+blockquote {
   margin-block: 1em;
   padding-inline-start: 40px;
 }
@@ -113,7 +118,7 @@ main h1 {
   background: whitesmoke; /* semi-transparent background */
   box-shadow: 0 1px 2px #ff3131;
   border-radius: 12px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .blur-box h2 {
