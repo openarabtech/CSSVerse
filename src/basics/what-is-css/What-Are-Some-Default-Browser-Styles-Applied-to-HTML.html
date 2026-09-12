@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS |  ماهي بعض أنماط المتصفح الافتراضية المُطبَّقة على HTML ؟"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+    <h1>ما هي لغة CSS ؟</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+		<h2>ماهي بعض أنماط المتصفح الافتراضية المُطبَّقة على HTML ؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+    </section>
+
+    <section>
+        <p>
+            عند البدء في العمل باستخدام HTML وCSS، ستلاحظ أن بعض الأنماط تُطبَّق على صفحات الويب الخاصة بك حتى قبل كتابة أي كود CSS ; وتُعرف هذه الأنماط باسم "أنماط المتصفح الافتراضية" (default browser styles) أو "أنماط وكيل المستخدم" (user-agent styles).
+        </p>
+        <p>
+            توفر أنماط المتصفح الافتراضية هذه تنسيقاً أساسياً لضمان عرض عناصر HTML بطريقة قابلة للقراءة عبر جميع المتصفحات.
+        </p>
+        <p>
+            ومع ذلك، قد تختلف هذه الأنماط قليلاً من متصفح لآخر; ولهذا السبب, من المهم فهمها عند تصميم مظهر متسق لموقعك الإلكتروني.
+        </p>
+        <p>
+            لنلقِ نظرةً على بعض أنماط المتصفح الافتراضية الشائعة المطبقة على عناصر HTML المختلفة.
+        </p>
+        <p>
+            تُعد "العناوين" (Headings) من أكثر عناصر HTML استخداماً, وهي مُنسَّقة افتراضياً بـ"أحجام وأوزان" (sizes and weights) متفاوتة.
+        </p>
+        <p>
+            على سبيل المثال، عادةً ما يكون الوسم <span dir="ltr" class="br-spec nw">h1</span> (العنوان ذو المستوى الأعلى) بخط عريض وحجم أكبر مقارنةً بالعناوين ذات المستويات الأدنى مثل <span dir="ltr" class="br-spec nw">h2</span> و <span dir="ltr" class="br-spec nw">h3</span> وما إلى ذلك.
+        </p>
+        <p>
+            تساعد "وسوم العناوين" (heading tags) هذه في تحديد التسلسل الهرمي وبنية المحتوى الخاص بك.
+        </p>
+        
+        <p class="hinty">
+            يوضح المثال التالي عناصر العناوين الستة جميعها، من <span dir="ltr" class="br-spec nw">h1</span> إلى <span dir="ltr" class="br-spec nw">h6</span>.
+        </p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;h1&gt;<span dir="rtl" class="txt">العنوان 1</span>&lt;/h1&gt;</span>
+<span class="tag">&lt;h2&gt;<span dir="rtl" class="txt">العنوان 2</span>&lt;/h2&gt;</span>
+<span class="tag">&lt;h3&gt;<span dir="rtl" class="txt">العنوان 3</span>&lt;/h3&gt;</span>
+<span class="tag">&lt;h4&gt;<span dir="rtl" class="txt">العنوان 4</span>&lt;/h4&gt;</span>
+<span class="tag">&lt;h5&gt;<span dir="rtl" class="txt">العنوان 5</span>&lt;/h5&gt;</span>
+<span class="tag">&lt;h6&gt;<span dir="rtl" class="txt">العنوان 6</span>&lt;/h6&gt;</span>
+        </code></pre></div>
+        
+        <p class="hinty">معاينة:</p>
+
+        <div class="preview" role="presentation">
+			<h1>العنوان 1</h1>
+            <h2>العنوان 2</h2>
+            <h3>العنوان 3</h3>
+            <h4>العنوان 4</h4>
+            <h5>العنوان 5</h5>
+            <h6>العنوان 6</h6>
+        </div>
+        <br>
+
+        <p>
+            من العناصر الأخرى التي تمتلك أنماطاً افتراضية عنصر <span dir="ltr" class="br-spec nw">hr</span> , الذي يُنشئ "خطاً أفقياً" (horizontal rule) يُستخدم غالباً للفصل بصرياً بين أقسام المحتوى; وعادةً ما تُطبّق المتصفحات "نمط خط بسيطاً" (simple line style) على هذا العنصر.
+        </p>
+        
+        <p class="hinty">
+            لفهم الأمر بشكل أفضل، دعنا نلقي نظرة على مثال الكود هذا:
+        </p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;<span dir="rtl" class="txt">الفقرة 1</span>&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;<span dir="rtl" class="txt">الفقرة 2</span>&lt;/p&gt;</span>
+<span class="tag">&lt;hr&gt;</span>
+<span class="tag">&lt;p&gt;<span dir="rtl" class="txt">الفقرة 4</span>&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;<span dir="rtl" class="txt">الفقرة 5</span>&lt;/p&gt;</span>
+        </code></pre></div>
+        
+        <p class="hinty">معاينة:</p>
+
+        <div class="preview" role="presentation">
+			<p>الفقرة 1</p>
+            <p>الفقرة 2</p>
+            <hr>
+            <p>الفقرة 4</p>
+            <p>الفقرة 5</p>
+        </div>
+        <br>
+
+        <p>
+            يظهر الخط الأفقي كخط رفيع مع وجود مسافة أعلى النص وأسفله للفصل بين أقسام المحتوى.
+        </p>
+        <p>
+            بعد ذلك، سنلقي نظرة على "عنصر الاقتباس" <span dir="ltr" class="br-spec nw">blockquote</span> .
+        </p>
+        <p>
+            تُستخدم كتل الاقتباس (Blockquotes) للإشارة إلى جزء من النص يمثل اقتباساً من مصدر آخر; وعادةً ما تقوم المتصفحات بإضافة إزاحة (مسافة بادئة) للنص, وأحياناً تجعله مائلاً.
+        </p>
+        <p>
+            تساعد "المسافة البادئة" (indentation) في تمييز "الاقتباسات" (blockquotes) المنسقة ككتل مستقلة عن بقية النص, مما يوضح أن هذا المحتوى مقتبس من مصدر آخر.
+        </p>
+
+        <p class="hinty">لنلقِ نظرةً على مثال الكود هذا:</p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;<span dir="rtl" class="txt">الفقرة 1</span>&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;<span dir="rtl" class="txt">الفقرة 2</span>&lt;/p&gt;</span>
+<span class="tag">&lt;blockquote&gt;<span dir="rtl" class="txt">أنا أفكّر، إذن أنا موجود. (رينيه ديكارت)</span>&lt;/blockquote&gt;</span>
+<span class="tag">&lt;p&gt;<span dir="rtl" class="txt">الفقرة 4</span>&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;<span dir="rtl" class="txt">الفقرة 5</span>&lt;/p&gt;</span>
+        </code></pre></div>
+        
+        <p class="hinty">معاينة:</p>
+
+        <div class="preview" role="presentation">
+			<p>الفقرة 1</p>
+            <p>الفقرة 2</p>
+            <blockquote>أنا أفكّر، إذن أنا موجود. (رينيه ديكارت)</blockquote>
+            <p>الفقرة 4</p>
+            <p>الفقرة 5</p>
+        </div>
+        <br>
+
+        <p>
+            عنصر آخر يتمتع بأنماط افتراضية هو عنصر الرابط <span dir="ltr" class="br-spec nw">&lt;a&gt;</span> , الذي يُنسَّق بلون أزرق افتراضي (default blue color) وخط تحتي (underlining) لتمييزه كرابط.
+        </p>
+
+        <p class="hinty">لنلقِ نظرةً على مثال HTML التالي:</p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;<span dir="rtl" class="txt">الفقرة 1</span>&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;<span dir="rtl" class="txt">الفقرة 2</span>&lt;/p&gt;</span>
+<span class="tag">&lt;a <span class="attr">href=<span class="value">"https://openarabtech.github.io/CSSVerse/"</span></span>&gt;<span dir="rtl" class="txt">تعلم سي.اس.اس بالعربية</span>&lt;/a&gt;</span>
+<span class="tag">&lt;p&gt;<span dir="rtl" class="txt">الفقرة 4</span>&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;<span dir="rtl" class="txt">الفقرة 5</span>&lt;/p&gt;</span>
+        </code></pre></div>
+        
+        <p class="hinty">معاينة:</p>
+
+        <div class="preview" role="presentation">
+			<p>الفقرة 1</p>
+            <p>الفقرة 2</p>
+            <a href="https://openarabtech.github.io/CSSVerse/" target=__blank>تعلم سي.اس.اس بالعربية</a>
+            <p>الفقرة 4</p>
+            <p>الفقرة 5</p>
+        </div>
+        <br>
+
+        <p>
+            يحتوي الكود المذكور أعلاه على أربعة عناصر فقرة (paragraph elements) تتوسطها عنصر رابط (anchor element). وقد تم تنسيق عنصر الرابط باللون الأزرق مع خط تحته، وذلك لتوجيه المستخدمين إلى الصفحة الرئيسية في موقع CSSVerse.
+        </p>
+        <p>
+            وأخيراً، سنلقي نظرة على "عناصر القوائم غير المرتبة والمرتبة" (unordered and ordered list elements) .
+        </p>
+        <p>
+            تُضيف المتصفحات تنسيقاً أساسياً إلى "القوائم" (lists) ، بما في ذلك المسافة البادئة والرموز النقطية أو الأرقام، وذلك بناءً على ما إذا كنت تستخدم قائمة غير مرتبة <span dir="ltr" class="br-spec nw">ul</span> أو قائمة مرتبة <span dir="ltr" class="br-spec nw">ol</span>.
+        </p>
+
+        <p class="hinty">لنلقِ نظرةً على مثال:</p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;<span dir="rtl" class="txt">فقرة نموذجية</span>&lt;/p&gt;</span>
+<span class="tag">&lt;ol&gt;</span>
+ <span class="tag">&lt;li&gt;<span dir="rtl" class="txt">العنصر 1</span>&lt;/li&gt;</span>
+ <span class="tag">&lt;li&gt;<span dir="rtl" class="txt">العنصر 2</span>&lt;/li&gt;</span>
+ <span class="tag">&lt;li&gt;<span dir="rtl" class="txt">العنصر 3</span>&lt;/li&gt;</span>
+<span class="tag">&lt;/ol&gt;</span>
+<span class="tag">&lt;ul&gt;</span>
+ <span class="tag">&lt;li&gt;<span dir="rtl" class="txt">عنصر</span>&lt;/li&gt;</span>
+ <span class="tag">&lt;li&gt;<span dir="rtl" class="txt">عنصر آخر</span>&lt;/li&gt;</span>
+ <span class="tag">&lt;li&gt;<span dir="rtl" class="txt">عنصر آخر</span>&lt;/li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span>
+<span class="tag">&lt;p&gt;<span dir="rtl" class="txt">الفقرة الختامية</span>&lt;/p&gt;</span>
+        </code></pre></div>
+        
+        <p class="hinty">معاينة:</p>
+
+        <div class="preview" role="presentation">
+			<p>فقرة نموذجية</p>
+            <ol>
+                <li>العنصر 1</li>
+                <li>العنصر 2</li>
+                <li>العنصر 3</li>
+            </ol>
+            <ul>
+                <li>عنصر</li>
+                <li>عنصر آخر</li>
+                <li>عنصر آخر</li>
+            </ul>
+            <p>الفقرة الختامية</p>
+        </div>
+        <br>
+
+        <p>
+            في مثال الكود أعلاه، نستخدم قائمة غير مرتبة وقائمة مرتبة. وستكون كلتا القائمتين مُزاحتين قليلاً نحو اليسار بشكل افتراضي.
+        </p>
+        <p>
+            في كل هذه الأمثلة، رأيتَ كيف طبّق المتصفحُ مسافاتٍ افتراضيةً وأحجامَ خطوطٍ وأوزانًا متفاوتةً على عناصر HTML هذه.
+        </p>
+        <p>
+            في الدروس اللاحقة، ستتعلم كيفية إعادة تعيين بعض هذه الأنماط الافتراضية باستخدام "إعادة تعيين سي.اس.اس" (CSS reset).
+        </p>
+
+        <!-- QUESTIONS -->
+		<section class="questions">
+			<p class="pquestions">أسئلة :</p>
+				
+			<p class="userstory">ما هو النمط الافتراضي المطبق على وسوم العناوين (من <span dir="ltr" class="br-spec nw">h1</span> إلى <span dir="ltr" class="br-spec nw">h6</span>) في معظم المتصفحات؟</p>
+
+			<p> 1. تتميز جميعها بالحجم والوزن نفسيهما. ❌</p>
+            <p><mark> 2. تتفاوت أحجامها وأوزانها، حيث يُعد <span dir="ltr" class="br-spec nw">h1</span> الأكبر والأكثر بروزاً (بخط عريض). ✅</mark></p>
+            <p> 3. يظهر <span dir="ltr" class="br-spec nw">h1</span> بخط مائل، بينما يظهر <span dir="ltr" class="br-spec nw">h6</span> بخط تحته خط. ❌</p>
+			<p> 4. تكون جميع وسوم العناوين مُحاذاةً إلى المنتصف بشكل افتراضي. ❌</p>
+
+            <br>
+
+            <p class="userstory">كيف يبدو عنصر <span dir="ltr" class="br-spec nw">hr</span> عادةً بشكل افتراضي في معظم المتصفحات؟</p>
+			
+			<p><mark> 1. خط أفقي رفيع مع مسافة فاصلة أعلاه وأسفله. ✅</mark></p>
+			<p> 2. خط متقطع يمتد على كامل عرض الصفحة. ❌</p>
+            <p> 3. خط أسود سميك دون مسافات فاصلة. ❌</p>
+			<p> 4. شريط ملون يفصل بين الأقسام. ❌</p>
+
+            <br>
+
+            <p class="userstory">كيف يتم عادةً تنسيق وسوم الربط (<span dir="ltr" class="br-spec nw">a</span>) افتراضيًا في المتصفحات؟</p>
+			
+			<p> 1. <span dir="ltr" class="br-spec nw">bold</span> و <span dir="ltr" class="br-spec nw">green</span> ❌</p>
+            <p><mark> 2. <span dir="ltr" class="br-spec nw">underline</span> و <span dir="ltr" class="br-spec nw">blue</span> ✅</mark></p>
+            <p> 3. <span dir="ltr" class="br-spec nw">italic</span> و <span dir="ltr" class="br-spec nw">red</span> ❌</p>
+			<p> 4. <span dir="ltr" class="br-spec nw">underline</span> و <span dir="ltr" class="br-spec nw">purple</span> ❌</p>
+
+		</section>
+
+
+
+    </section>
+
+
+  
+
+
+
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./What-Is-the-Meta-Viewport-Element-Used-For.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a href="https://www.linkedin.com/company/openarabtech/" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+
+
+</body>
+</html>

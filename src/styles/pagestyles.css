@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+ul, ol, blockquote {
+  margin-block: 1em;
+  padding-inline-start: 40px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -77,6 +82,7 @@ margin: 10px 0px;
   font-weight: bold;
   border-radius: 4px;
 }
+
 
 .hinty {
   font-weight: 600;
