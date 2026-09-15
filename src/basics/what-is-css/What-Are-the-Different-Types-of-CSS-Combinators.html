@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS | ما الأنواع المختلفة لمُحدِّدات العلاقات (Combinators) في CSS ؟"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/basicsStyles/What-Are-the-Different-Types-of-CSS-Combinators.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+    <h1>ما هي لغة CSS ؟</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+		<h2>ما الأنواع المختلفة لمُحدِّدات العلاقات (Combinators) في CSS ؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+    </section>
+
+    <section>
+        <section>
+            <h3>مُركِّبات CSS - (CSS Combinators)</h3>
+            <p>
+                تُستخدم مُركِّبات CSS (Combinators) لتحديد العلاقة بين المُحدِّدات (Selectors) في CSS ; فهي تساعد في اختيار العناصر بناءً على علاقتها بعناصر أخرى، مما يتيح تطبيق تنسيقات أكثر دقة وكفاءة.
+            </p>
+            <p>
+                سنناقش بعض مُركِّبات CSS الأساسية وحالات استخدامها، بدءاً بمُركِّب العناصر التابعة (descendant combinator).
+            </p>
+        </section>
+
+        <section>
+            <h3>مُركِّب العناصر المتحدِّرة - (Descendant Combinator)</h3>
+            <p>
+                يُستخدم مُركِّب العناصر المتحدِّرة (descendant combinator) لاستهداف العناصر التي يطابقها المُحدِّد الثاني، وذلك في حال كانت متداخلةً داخل عنصر "سلف" (ancestor) يطابقه المُحدِّد الأول. ويمكن أن يكون هذا السلف عنصراً أباً (parent) أو جداً (grandparent) أو أي عنصر آخر يسبقه في التسلسل الهرمي لشجرة المستند.
+            </p>
+            <p class="hinty">
+                لفهم كيفية عمل ذلك بشكل أفضل، دعنا نلقِ نظرة على مثال.
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;figure&gt;
+ &lt;img <span class="attr">src=<span class="value">"https://openarabtech.github.io/src/assets/relaxing-cat.jpg"</span> alt=<span class="value">"قطة تسترخي"</span></span>&gt;
+ &lt;figcaption&gt;<span class="txt">قطة مسترخية بإطار</span>&lt;/figcaption&gt;
+&lt;/figure&gt;</span>
+            </code></pre></div>
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">figure img</span> <span class="attr">{
+ border: <span class="txt">4px solid red</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <figure class="figure1">
+                    <img class="img1" src="../../assets/relaxing-cat.jpg" alt="قطة تسترخي">
+                    <figcaption>قطة مسترخية بإطار</figcaption>
+                </figure>	
+            </div>
+            <br>
+
+            <p>
+                في المثال أعلاه، نستخدم مُحدِّد العناصر المتحدِّرة (descendant combinator) لاختيار جميع عناصر الصور الموجودة داخل عناصر <span dir="ltr" class="br-spec nw">figure</span> وتطبيق "إطار أحمر مصمت" <span dir="ltr">(<span class="br-spec">solid red</span> border)</span> على الجوانب الأربعة.
+            </p>
+            <p>
+                لاحظ أنه يتم استخدام "مسافة" (space) بين "مُحدِّد العنصر الأب ومُحدِّد العنصر الابن" (the parent and child selector).
+            </p>
+            <p>
+                في هذه الحالة، سيكون العنصر <span dir="ltr" class="br-spec nw">figure</span> هو "العنصر الأب" (the parent) ,  وسيكون العنصر <span dir="ltr" class="br-spec nw">img</span> هو "العنصر الابن" (the child).
+            </p>
+            <p>
+                إذا كانت لديك صور متعددة داخل عنصر <span dir="ltr" class="br-spec nw">figure</span> , فإن استخدام "مُحدِّد العناصر المتحدِّرة" (descendant combinator) يُعد طريقة جيدة لتطبيق "إطار أسود مصمت" (solid black border) حول كل صورة من تلك الصور.
+            </p>
+
+        </section>
+
+        <section>
+            <h3>مُركِّب الابن المباشر - (Child Combinator)</h3>
+            <p>
+                نوع آخر من المُركِّبات هو "مُركِّب الابن" (child combinator).
+            </p>
+            <p>
+                يُستخدم مُحدِّد الابن (child combinator) - <span dir="ltr">(<span class="br-spec">&gt;</span>)</span> في CSS لاختيار العناصر التي تُعد أبناءً مباشرةً لـ"عنصر أبٍ" (parent element) مُحدَّد.
+            </p>
+            <p>
+                يستهدف هذا المُجمِّع (combinator) العناصر التي تتبع أباً محدداً فقط، مما يجعل قواعد CSS الخاصة بك أكثر دقة ويحول دون تطبيق التنسيق بشكل غير مقصود على العناصر المتداخلة في مستويات أعمق.
+            </p>
+            <p class="hinty">
+                لنلقِ نظرةً على مثال HTML التالي:
+            </p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;div <span class="attr">class=<span class="value">container</span></span>&gt;
+ &lt;p&gt;<span class="txt">أولاً</span>&lt;/p&gt;
+ &lt;div&gt;
+  &lt;p&gt;<span class="txt">ثانيًا</span>&lt;/p&gt;
+ &lt;/div&gt;
+ &lt;div&gt;
+  &lt;p&gt;<span class="txt">ثالثًا</span>&lt;/p&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <div>
+                <p>أولاً</p>
+                <div>
+                    <p>ثانيًا</p>
+                </div>
+                <div>
+                    <p>ثالثًا</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <p>
+            في بنية HTML المذكورة أعلاه، يتم تطبيق الفئة <span dir="ltr" class="br-spec nw">container</span> على عنصر <span dir="ltr" class="br-spec nw">div</span>.
+        </p>
+        <p>
+            يوجد داخل هذه "الحاوية " (container) عنصر <span dir="ltr" class="br-spec nw">p</span> يمثل "ابناً مباشراً" (direct child) (يحمل النص "أولاً")، يليه عنصرَا <span dir="ltr" class="br-spec nw">div</span> إضافيان، يحتوي كل منهما على عنصر <span dir="ltr" class="br-spec nw">p</span> (يحملان النصين "ثانيًا" و"ثالثًا" على التوالي).
+        </p>
+        <p>
+            يُعد عنصر <span dir="ltr" class="br-spec nw">p</span> الأول "ابناً مباشراً" (direct child) لعنصر <span dir="ltr" class="br-spec nw">.container</span> , في حين أن عنصري <span dir="ltr" class="br-spec nw">p</span> الآخرين متداخلان داخل عناصر <span dir="ltr" class="br-spec nw">div</span> أخرى، مما يجعلهما عنصرين فرعيين يقعان في مستوى أعمق من التسلسل الهرمي.
+        </p>
+
+        <p class="hinty">
+            لتطبيق الأنماط على "الابن المباشر" (direct child) لفئة الحاوية <span dir="ltr">(<span class="br-spec">container</span> class)</span> فقط، يمكنك استخدام مُركِّب الابن (child combinator) على النحو التالي:
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;</span>
+        
+<span class="tag">&lt;div <span class="attr">class=<span class="value">container</span></span>&gt;
+ &lt;p&gt;<span class="txt">أولاً</span>&lt;/p&gt;
+ &lt;div&gt;
+  &lt;p&gt;<span class="txt">ثانيًا</span>&lt;/p&gt;
+ &lt;/div&gt;
+ &lt;div&gt;
+  &lt;p&gt;<span class="txt">ثالثًا</span>&lt;/p&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.container &gt; p</span> <span class="attr">{
+ color: <span class="txt">blue</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class=container3>
+                    <p>أولاً</p>
+                    <div>
+                        <p>ثانيًا</p>
+                    </div>
+                    <div>
+                        <p>ثالثًا</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <p>
+                في المثال أعلاه، نحن نستهدف فقط "الابن المباشر" (direct child) للفئة (class) المسماة <span dir="ltr" class="br-spec nw">container</span>. سيؤدي ذلك إلى جعل لون نص هذا الابن المباشر "أزرق" <span dir="ltr" class="br-spec nw">blue</span>.
+            </p>
+            <p>
+                نظراً لأن عنصري "الفقرة" (paragraph) الآخرين متداخلان داخل عناصر <span dir="ltr" class="br-spec nw">div</span> , فإنهما لا يُعتبران أبناءً مباشرين للفئة الحاوية <span dir="ltr">(<span class="br-spec">container</span> class)</span> , وبالتالي لن يكتسبا اللون الأزرق للنص.
+            </p>
+        </section>
+
+        <section>
+            <h3>مُركِّب الأخ التالي - (Next-Sibling Combinator)</h3>
+            <p>
+                من أدوات الربط الشائعة الأخرى أداة الربط الخاصة بالعنصر الشقيق التالي (next-sibling combinator).
+            </p>
+            <p>
+                يُستخدم مُحدِّد "العنصر الشقيق التالي" (Next-Sibling Combinator) - <span dir="ltr">(<span class="br-spec">+</span>)</span> في CSS لاختيار عنصر يأتي مباشرةً بعد عنصر شقيق مُحدَّد. وتكمن فائدة هذا المُحدِّد في إمكانية تطبيق أنماط (styles) على عنصر يتبع عنصراً آخر بشكل مباشر، مما يتيح تنسيقاً موجَّهاً يعتمد على موقع العنصر بالنسبة للعناصر الشقيقة الأخرى.
+            </p>
+            <p class="hinty">
+                لنلقِ نظرةً على مثال HTML التالي:
+            </p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;figure&gt;
+ &lt;img <span class="attr">src=<span class="value">"https://openarabtech.github.io/src/assets/relaxing-cat.jpg"</span> alt=<span class="value">"قطة برتقالية لطيفة مستلقية على ظهرها."</span></span>&gt;
+ &lt;figcaption&gt;<span dir="rtl" class="txt">قطة برتقالية لطيفة مستلقية على ظهرها.</span>&lt;/figcaption&gt;
+&lt;/figure&gt;</span>
+            </code></pre></div>
+
+            <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <figure>
+             <img src="../../assets/relaxing-cat.jpg" alt="قطة برتقالية لطيفة مستلقية على ظهرها.">
+             <figcaption>قطة برتقالية لطيفة مستلقية على ظهرها.</figcaption>
+            </figure>
+        </div>
+        <br>
+        <p>
+            لدينا هنا عنصر <span dir="ltr" class="br-spec nw">figure</span> يحتوي على عنصر <span dir="ltr" class="br-spec nw">img</span> يليه عنصر <span dir="ltr" class="br-spec nw">figcaption</span> ; ويُعد عنصر <span dir="ltr" class="br-spec nw">figcaption</span> "الشقيق المباشر" (the immediate sibling) لعنصر <span dir="ltr" class="br-spec nw">img</span>.
+        </p>
+        <p class="hinty">
+            إذا أردت تطبيق "إطار أسود" (black border) حول العنصر <span dir="ltr" class="br-spec nw">figcaption</span> , يمكنك استخدام مُشغِّل "العنصر الشقيق التالي" (next-sibling combinator) على النحو التالي:
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;figure&gt;
+ &lt;img <span class="attr">src=<span class="value">"https://openarabtech.github.io/src/assets/relaxing-cat.jpg"</span> 
+    alt=<span class="value">"قطة برتقالية لطيفة مستلقية على ظهرها."</span></span>&gt;
+ &lt;figcaption&gt;<span dir="rtl" class="txt">قطة برتقالية لطيفة مستلقية على ظهرها.</span>&lt;/figcaption&gt;
+&lt;/figure&gt;</span>
+            </code></pre></div>
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">img <span class="txt">+</span> figcaption</span> <span class="attr">{
+ border: <span class="txt">4px solid black</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <figure class="figure5">
+                <img src="../../assets/relaxing-cat.jpg" 
+                    alt="قطة برتقالية لطيفة مستلقية على ظهرها.">
+                <figcaption>قطة برتقالية لطيفة مستلقية على ظهرها.</figcaption>
+                </figure>
+            </div>
+            <br>
+            <p>
+                في هذا المثال، يختار "مُحدِّد الشقيق التالي" (next-sibling combinator) - <span dir="ltr">(<span class="br-spec">+</span>)</span> عنصر <span dir="ltr" class="br-spec nw">figcaption</span> الذي يلي عنصر <span dir="ltr" class="br-spec nw">img</span> مباشرةً، وتُضيف قاعدة CSS المُطبَّقة "إطاراً أسود متصلاً بسُمك 4 بكسل" (4px solid black border) حول عنصر <span dir="ltr" class="br-spec nw">figcaption</span>.
+            </p>
+
+
+        </section>
+
+        <section>
+            <h3>مُركِّب الأشقاء اللاحقين  - (Subsequent-Sibling Combinator)</h3>
+            <p>
+                مُركِّب الأشقاء اللاحقين (Subsequent-sibling Combinator) هو مُركِّب شائع آخر.
+            </p>
+            <p>
+                يختار مُركِّب الأشقاء اللاحقين <span dir="ltr">(<span class="br-spec">~</span>)</span> في CSS جميع الأشقاء لعنصرٍ مُحدَّدٍ والذين يقعون بعده.
+            </p>
+            <p>
+                على عكس مُحدِّد الأخ التالي المباشر (next-sibling combinator) الذي يستهدف فقط العنصر الشقيق الذي يلي العنصر المحدد مباشرةً، يمكن لمُحدِّد الأشقاء اللاحقين (subsequent-sibling combinator) - <span dir="ltr">(<span class="br-spec">~</span>)</span> استهداف أي عناصر شقيقة تلي العنصر المحدد، مما يوفر مرونة أكبر في التنسيق.
+            </p>
+            <p class="hinty">
+                لنلقِ نظرةً على مثال HTML التالي:
+            </p>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;div <span class="attr">class=<span class="value">"container"</span></span>&gt;
+ &lt;h2&gt;<span class="txt">عنوان فرعي</span>&lt;/h2&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">الفقرة الأولى.</span>&lt;/p&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">الفقرة الثانية.</span>&lt;/p&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">الفقرة الثالثة.</span>&lt;/p&gt;
+ &lt;p&gt;<span class="txt">عنصر فقرة آخر</span>&lt;/p&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+
+            <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <div>
+                <h2>عنوان فرعي</h2>
+                <p>الفقرة الأولى.</p>
+                <p>الفقرة الثانية.</p>
+                <p>الفقرة الثالثة.</p>
+                <p>عنصر فقرة آخر</p>
+            </div>
+        </div>
+        <br>
+        <p>
+            في هيكلية HTML هذه، لدينا عنصر <span dir="ltr" class="br-spec nw">h2</span> تتبعه أربعة عناصر فقرة <span dir="ltr" class="br-spec nw">p</span>. وتُعد عناصر الفقرة هذه عناصر شقيقة (siblings) لعنصر <span dir="ltr" class="br-spec nw">h2</span>.
+        </p>
+
+        <p class="hinty">
+            إذا كنت ترغب في تنسيق جميع عناصر الفقرة <span dir="ltr" class="br-spec nw">p</span> التي تلي عنصر <span dir="ltr" class="br-spec nw">h2</span> , فيمكنك استخدام مُحدِّد "الأخ اللاحق" (subsequent-sibling combinator) على النحو التالي:
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"container"</span></span>&gt;
+ &lt;h2&gt;<span class="txt">عنوان فرعي</span>&lt;/h2&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">الفقرة الأولى.</span>&lt;/p&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">الفقرة الثانية.</span>&lt;/p&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">الفقرة الثالثة.</span>&lt;/p&gt;
+ &lt;p&gt;<span class="txt">عنصر فقرة آخر</span>&lt;/p&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">h2 <span class="txt">~</span> p</span> <span class="attr">{
+ color: <span class="txt">green</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="container4">
+                    <h2 class="h2-7">عنوان فرعي</h2>
+                    <p>الفقرة الأولى.</p>
+                    <p>الفقرة الثانية.</p>
+                    <p>الفقرة الثالثة.</p>
+                    <p>عنصر فقرة آخر</p>
+                </div>
+            </div>
+            <br>
+
+            <p>
+                في هذا المثال، سيكون لون نص جميع عناصر الفقرة <span dir="ltr" class="br-spec nw">p</span> التي تلي عنصر <span dir="ltr" class="br-spec nw">h2</span> "أخضر" <span dir="ltr" class="br-spec nw">green</span>.
+            </p>
+            <p>
+                يستهدف المُركِّب <span dir="ltr">(<span class="br-spec">~</span>)</span> جميع عناصر الفقرات <span dir="ltr" class="br-spec nw">p</span> التي تلي عنصر <span dir="ltr" class="br-spec nw">h2</span> مباشرةً أو بشكل غير مباشر (أي جميع الفقرات الشقيقة التي تظهر بعده).
+            </p>
+
+
+        </section>
+
+        <section>
+            <h3>لماذا تُعد "مُجمِّعات سي.اس.اس"  (CSS Combinators) مهمة؟</h3>
+            <p>
+                ختاماً، يتيح لك فهم واستخدام مختلف مُجمِّعات سي.اس.اس (CSS combinators) تطبيق أنماط دقيقة على عناصر HTML، مما يعزز التحكم في تصميمك ويزيد من مرونته.
+            </p>
+            <p>
+                ومن خلال إتقان هذه المُحدِّدات، يمكنك إنشاء قواعد تنسيق أكثر تطوراً وتحديداً، مما يحسّن كلاً من مظهر صفحات الويب ووظائفها.
+            </p>
+        </section>
+
+    </section>
+
+    <!-- QUESTIONS -->
+	<section class="questions">
+			<p class="pquestions">أسئلة :</p>
+				
+			<p class="userstory">ما هي قاعدة CSS التي ستُطبّق التنسيق على جميع عناصر <span dir="ltr" class="br-spec nw">span</span> الموجودة داخل عناصر <span dir="ltr" class="br-spec nw">div</span>, بغض النظر عن مستوى تداخلها؟</p>
+
+			<p> 1. <div class="code-block"><pre><code>
+<span class="tag-b">div <span class="txt">&gt;</span> span</span> <span class="attr">{
+ color: <span class="txt">red</span>;
+}</span>
+            </code></pre></div> ❌</p>
+			<p> 2. <div class="code-block"><pre><code>
+<span class="tag-b">div <span class="txt">+</span> span</span> <span class="attr">{
+ color: <span class="txt">red</span>;
+}</span>
+            </code></pre></div> ❌</p>
+			<p> 3. <div class="code-block"><pre><code>
+<span class="tag-b">div <span class="txt">~</span> span</span> <span class="attr">{
+ color: <span class="txt">red</span>;
+}</span>
+            </code></pre></div> ❌</p>
+            <p><mark> 4. <div class="code-block"><pre><code>
+<span class="tag-b">div span</span> <span class="attr">{
+ color: <span class="txt">red</span>;
+}</span>
+            </code></pre></div> ✅</mark></p>
+
+            <br>
+
+            <p class="userstory">ما هي قاعدة CSS التي ستُنسق فقط عناصر <span dir="ltr" class="br-spec nw">li</span> الفرعية المباشرة لعناصر <span dir="ltr" class="br-spec nw">ul</span> ؟</p>
+			
+			<p><mark> 1. <div class="code-block"><pre><code>
+<span class="tag-b">ul <span class="txt">&gt;</span> li</span> <span class="attr">{
+ font-weight: <span class="txt">bold</span>;
+}</span>
+            </code></pre></div> ✅</mark></p>
+			<p> 2. <div class="code-block"><pre><code>
+<span class="tag-b">ul li</span> <span class="attr">{
+ font-weight: <span class="txt">bold</span>;
+}</span>
+            </code></pre></div> ❌</p>
+            <p> 3. <div class="code-block"><pre><code>
+<span class="tag-b">ul <span class="txt">+</span> li</span> <span class="attr">{
+ font-weight: <span class="txt">bold</span>;
+}</span>
+            </code></pre></div> ❌</p>
+			<p> 4. <div class="code-block"><pre><code>
+<span class="tag-b">ul <span class="txt">~</span> li</span> <span class="attr">{
+ font-weight: <span class="txt">bold</span>;
+}</span>
+            </code></pre></div> ❌</p>
+
+            <br>
+
+            <p class="userstory">ما هي قاعدة CSS التي ستُطبّق التنسيق على أول عنصر <span dir="ltr" class="br-spec nw">p</span> يلي مباشرةً أي عنصر <span dir="ltr" class="br-spec nw">h1</span> ؟</p>
+			
+            <p> 1. <div class="code-block"><pre><code>
+<span class="tag-b">h1 <span class="txt">&gt;</span> p</span> <span class="attr">{
+ margin-top: <span class="txt">0</span>;
+}</span>
+            </code></pre></div> ❌</p>
+            <p><mark> 2. <div class="code-block"><pre><code>
+<span class="tag-b">h1 <span class="txt">+</span> p</span> <span class="attr">{
+ margin-top: <span class="txt">0</span>;
+}</span>
+            </code></pre></div> ✅</mark></p>
+            <p> 3. <div class="code-block"><pre><code>
+<span class="tag-b">h1 <span class="txt">~</span> p</span> <span class="attr">{
+ margin-top: <span class="txt">0</span>;
+}</span>
+            </code></pre></div> ❌</p>
+			<p> 4. <div class="code-block"><pre><code>
+<span class="tag-b">h1 p</span> <span class="attr">{
+ margin-top: <span class="txt">0</span>;
+}</span>
+            </code></pre></div> ❌</p>
+
+	</section>
+
+   
+
+
+
+  
+
+
+
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./How-Do-Width-and-Height-Work.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+
+</body>
+</html>
