@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS | ما الفرق بين العناصر المضمَّنة (Inline) والعناصر على مستوى الكتلة (Block-Level) في CSS ؟"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+    <h1>ما هي لغة CSS ؟</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+		<h2>ما الفرق بين العناصر المضمَّنة (Inline) والعناصر على مستوى الكتلة (Block-Level) في CSS ؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+    </section>
+
+    <section>
+        <p>
+            في لغتي HTML و CSS , تُصنَّف العناصر إما كعناصر "ضمن السطر" (inline elements) أو كعناصر "على مستوى الكتلة" (block-level elements) , ويُحدِّد هذا التصنيف كيفية سلوكها ضمن تخطيط المستند.
+        </p>
+        <p>
+            يُعد فهم هذا الاختلاف أمراً بالغ الأهمية للتحكم في كيفية عرض المحتوى الخاص بك على صفحة الويب.
+        </p>
+        <p>
+            العناصر على مستوى الكتلة (Block-level elements) هي عناصر تشغل افتراضياً كامل العرض المتاح لها، حيث تمتد عبر عرض الحاوية التي تحتويها.
+        </p>
+        <p>
+            تبدأ هذه العناصر دائمًا في سطر جديد وتدفع المحتوى الآخر إلى السطر التالي، مما يُشكّل "كتلة" (block) من المحتوى.
+        </p>
+        <p>
+            تُطبَّق خاصية CSS المسماة <span dir="ltr" class="br-spec nw">display: block;</span> افتراضياً على العناصر من نوع (Block-level) ; وتضمن هذه الخاصية تمدد العنصر ليملأ عرض الحاوية وظهوره في سطر جديد.
+        </p>
+        <p>
+            من الأمثلة الشائعة على عناصر مستوى الكتلة (block-level elements) : عناصر <span dir="ltr" class="br-spec nw">div</span> , والفقرات (paragraphs) , والعناوين (headings) , والقوائم المرتبة (ordered lists) , والقوائم غير المرتبة (unordered lists) , وعناصر الأقسام (section).
+        </p>
+        <p class="hinty">إليك مثال برمجي لعنصر على "مستوى الكتلة" (block-level) :</p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;p <span class="attr">style=<span class="value">"border: 2px solid red;"</span></span>&gt;
+ <span class="txt">الفقرة الأولى</span>
+&lt;/p&gt;
+&lt;p&gt;<span class="txt">الفقرة الثانية</span>&lt;/p&gt;</span>
+        </code></pre></div>
+
+        <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <p style="border: 2px solid red;">
+                 الفقرة الأولى
+                </p>
+                <p>الفقرة الثانية</p>
+            </div>
+        <br>
+
+        <p>
+            في هذا المثال، لدينا عنصران من نوع "فقرة" (paragraph)، حيث يحيط بالفقرة الأولى "إطار أحمر" (red border).
+        </p>
+        <p>
+            لا يتشارك عنصرا الفقرة في السطر نفسه; لأنهما يُعدّان من عناصر مستوى الكتلة (block-level elements) بشكل افتراضي.
+        </p>
+        <p>
+            وبذلك، سيشغل كلا عنصري الفقرة العرض الكامل للحاوية الخاصة بهما، وهي في هذه الحالة عنصر الجسم <span dir="ltr" class="br-spec nw">body</span>.
+        </p>
+        <p>
+            تُعد العناصر ذات مستوى الكتلة (Block-level elements) مثاليةً عندما ترغب في ترتيب المحتوى بشكل عمودي، مثل الفقرات أو الأقسام أو كتل المحتوى الكبيرة; إذ تُستخدم عادةً لتحديد تخطيط صفحة الويب وهيكلها.
+        </p>
+        <p>
+            على عكس العناصر التي تشغل مستوى الكتلة (block-level elements)، تشغل العناصر المضمنة (inline elements) فقط القدر الذي تحتاجه من العرض ولا تبدأ في سطر جديد؛ إذ تنساب هذه العناصر ضمن المحتوى، مما يسمح للنصوص والعناصر المضمنة الأخرى بالظهور بجانبها.
+        </p>
+        <p>
+            تُطبَّق خاصية CSS المسماة <span dir="ltr" class="br-spec nw">display: inline;</span> على العناصر المضمنة (inline elements) بشكل افتراضي؛ وتضمن هذه الخاصية بقاء العنصر ضمن تدفق المحتوى دون الانتقال إلى سطر جديد.
+        </p>
+        <p>
+            من العناصر المضمنة (inline elements) الشائعة: عناصر <span dir="ltr" class="br-spec nw">span</span> و <span dir="ltr" class="br-spec nw">a</span> و <span dir="ltr" class="br-spec nw">img</span>.
+        </p>
+
+        <p class="hinty">إليك مثال لفهم العناصر المضمنة (inline elements) بشكل أفضل:</p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;<span dir="rtl" class="txt">هذه كلمة</span>
+ &lt;span <span class="attr">style=<span class="value">"color: red; border: 2px solid green;"</span></span>&gt;<span dir="rtl" class="txt">حمراء</span>&lt;/span&gt;
+ <span dir="rtl" class="txt">داخل فقرة.</span>
+&lt;/p&gt;</span>
+        </code></pre></div>
+
+        <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <p>هذه كلمة
+                <span style="color: red; border: 2px solid green;">حمراء</span>
+                داخل فقرة.
+                </p>
+            </div>
+        <br>
+        <p>
+            في هذا المثال، لدينا عنصر <span dir="ltr" class="br-spec nw">span</span> متداخل داخل عنصر فقرة <span dir="ltr" class="br-spec nw">p</span>. يتميز عنصر <span dir="ltr" class="br-spec nw">span</span> بلون نص أحمر وإطار أخضر يحيط به، وذلك ليتسنى لك رؤية الكلمة المُبرَزة بشكل أوضح.
+        </p>
+        <p>
+            كما ترى، يشغل عنصر <span dir="ltr" class="br-spec nw">span</span> مساحة تعادل حجم كلمة "حمراء" فقط، ولا يدفع المحتوى التالي إلى سطر جديد.
+        </p>
+        <p>
+            تُعد العناصر المضمنة (Inline elements) الخيار الأمثل لتنسيق أجزاء صغيرة من النص أو المحتوى داخل السطر نفسه، مثل إبراز كلمة، أو إنشاء روابط تشعبية، أو تطبيق تنسيقات محددة على أجزاء من الفقرة.
+        </p>
+    </section>
+
+
+    <!-- QUESTIONS -->
+	<section class="questions">
+			<p class="pquestions">أسئلة :</p>
+				
+			<p class="userstory">ما هو السلوك الافتراضي للعناصر ذات مستوى الكتلة (block-level elements) في CSS ؟</p>
+
+			<p> 1. تشغل قدراً من العرض يتناسب مع الحاجة وتبقى ضمن تدفق المحتوى. ❌</p>
+            <p><mark> 2. تشغل العرض الكامل للحاوية الخاصة بها وتبدأ في سطر جديد. ✅</mark></p>
+            <p> 3. تُستخدم فقط للصور والروابط. ❌</p>
+			<p> 4. تكون دائماً محاذية لمنتصف الصفحة. ❌</p>
+
+            <br>
+
+            <p class="userstory">أي مما يلي يُعد مثالاً على عنصر مضمّن (inline element) ؟</p>
+			
+			<p> 1. <span dir="ltr" class="br-spec nw">div</span> ❌</p>
+            <p> 2. <span dir="ltr" class="br-spec nw">p</span> ❌</p>
+            <p><mark> 3. <span dir="ltr" class="br-spec nw">span</span> ✅</mark></p>
+			<p> 4. <span dir="ltr" class="br-spec nw">section</span> ❌</p>
+
+            <br>
+
+            <p class="userstory">كيف يمكنك تغيير سلوك عنصر من نوع "block-level" ليصبح سلوكه مشابهاً لعنصر من نوع "inline"؟</p>
+			
+			<p> 1. طبّق <span dir="ltr" class="br-spec nw">display: inline-block;</span>. ❌</p>
+            <p> 2. طبّق <span dir="ltr" class="br-spec nw">display: flex;</span>. ❌</p>
+            <p><mark> 3. طبّق <span dir="ltr" class="br-spec nw">display: inline;</span>. ✅</mark></p>
+			<p> 4. طبّق <span dir="ltr" class="br-spec nw">display: none;</span>. ❌</p>
+	</section>
+
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./What-Are-the-Different-Types-of-CSS-Combinators.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+
+</body>
+</html>
