@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS | كيف تعمل خاصية Inline-Block ، وكيف تختلف عن العناصر المضمَّنة (Inline) وعناصر مستوى الكتلة (Block) ؟"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/basicsStyles/How-Does-Inline-Block-Work-and-How-Does-It-Differ-from-Inline-and-Block-Elements.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+    <h1>ما هي لغة CSS ؟</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+        <h2>كيف تعمل خاصية Inline-Block ، وكيف تختلف عن العناصر المضمَّنة (Inline) وعناصر مستوى الكتلة (Block) ؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+    </section>
+
+    <section>
+        <p>
+            عند العمل باستخدام CSS، غالباً ما تواجه ثلاثة أنواع مختلفة من سلوكيات العرض للعناصر: <span dir="ltr" class="br-spec nw">inline</span> و <span dir="ltr" class="br-spec nw">block</span> و <span dir="ltr" class="br-spec nw">inline-block</span>.
+        </p>
+        <p>
+            تؤثر كل خاصية من هذه الخصائص في كيفية تموضع العناصر وكيفية تفاعلها مع العناصر الأخرى في الصفحة.
+        </p>
+        <p>
+            في هذا الدرس، سنركز على كيفية عمل الخاصية <span dir="ltr" class="br-spec nw">inline-block</span> وكيف تختلف عن كل من العناصر المضمنة (inline) والعناصر التي تشغل كتلة كاملة (block-level).
+        </p>
+        <p>
+            تتصرف العناصر ذات المستوى الكتلي (Block-level elements) كحاويات كبيرة أو "كتل" (blocks) تشغل العرض الكامل للحاوية الأب؛ فهي تبدأ دائمًا في سطر جديد، ويمكن تعديل كل من ارتفاعها وعرضها.
+        </p>
+        <p>
+            تشغل العناصر المضمنة (Inline elements) القدر الذي تحتاجه فقط من المساحة؛ فهي تنساب ضمن المحتوى المحيط بها ولا تنتقل إلى سطر جديد.
+        </p>
+        <p>
+            تُعد الخاصية <span dir="ltr" class="br-spec nw">inline-block</span> مزيجاً يجمع بين هذين السلوكين؛ فمثلها مثل العناصر من النوع (inline elements)، تظل عناصر <span dir="ltr" class="br-spec nw">inline-block</span> ضمن تدفق النص دون أن تبدأ في سطر جديد.
+        </p>
+        <p>
+            ومع ذلك، وعلى عكس العناصر المضمنة (inline elements)، يمكنك تعديل عرض وارتفاع العنصر من نوع <span dir="ltr" class="br-spec nw">inline-block</span> تماماً كما تفعل مع عناصر مستوى الكتلة (block-level elements).
+        </p>
+        <p>
+            باختصار، يكمن الفرق الجوهري بين <span dir="ltr" class="br-spec nw">inline</span> و <span dir="ltr" class="br-spec nw">inline-block</span> في أن العناصر من النوع <span dir="ltr" class="br-spec nw">inline</span> لا يمكن التحكم في أبعادها، بينما تتيح العناصر من النوع <span dir="ltr" class="br-spec nw">inline-block</span> تحكماً كاملاً في الأبعاد مع الحفاظ على تموضعها ضمن السطر نفسه مع المحتوى الآخر.
+        </p>
+
+        <p class="hinty">لنلقِ نظرةً على مثال.</p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"container"</span></span>&gt;
+ &lt;span <span class="attr">class=<span class="value">"inline-block-element element1"</span></span>&gt;<span dir="rtl" class="txt">كتلة مضمنة</span>&lt;/span&gt;
+ &lt;span <span class="attr">class=<span class="value">"inline-block-element element2"</span></span>&gt;<span dir="rtl" class="txt">كتلة مضمنة</span>&lt;/span&gt;
+&lt;/div&gt;</span>
+        </code></pre></div>
+            
+        <p class="file-name">styles.css</p>
+        <div class="code-block"><pre><code>
+<span class="tag-b">.inline-block-element</span> <span class="attr">{
+ display: <span class="txt">inline-block</span>;
+ width: <span class="txt">150px</span>;
+ height: <span class="txt">100px</span>;
+}</span>
+
+<span class="tag-b">.element1</span> <span class="attr">{
+ background-color: <span class="txt">lightblue</span>;
+}</span>
+
+<span class="tag-b">.element2</span> <span class="attr">{
+ background-color: <span class="txt">lightgreen</span>;
+}</span>
+        </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+                <div>
+                    <span class="inline-block-element1 element1">كتلة مضمنة</span>
+                    <span class="inline-block-element1 element2">كتلة مضمنة</span>
+                </div>
+        </div>
+        <br>
+
+        <p>
+            في المثال أعلاه، لدينا عنصر <span dir="ltr" class="br-spec nw">div</span> يحمل الفئة <span dir="ltr">(class <span class="br-spec">container</span>)</span>. وداخل عنصر <span dir="ltr" class="br-spec nw">div</span> هذا، يوجد عنصران من نوع <span dir="ltr" class="br-spec nw">span</span>.
+        </p>
+        <p>
+            تم ضبط كل عنصر من عناصر <span dir="ltr" class="br-spec nw">span</span> على النمط <span dir="ltr" class="br-spec nw">display: inline-block</span> مع تحديد عرض وارتفاع لكل منها أيضاً.
+        </p>
+        <p>
+            ستظهر العناصر من النوع (inline-block) جنباً إلى جنب لأنها تسلك سلوك العناصر المضمنة (inline)، ولكنها تتمتع أيضاً بعرض وارتفاع محددين، مما يمنحها خصائص مشابهة لعناصر الكتلة (block).
+        </p>
+        <p>
+            ولكن، إذا أزلت الخاصية <span dir="ltr" class="br-spec nw">display: inline-block</span>، فلن يتم تطبيق كل من الارتفاع <span dir="ltr" class="br-spec nw">height</span> والعرض <span dir="ltr" class="br-spec nw">width</span>، حتى وإن كنت قد حددتهما بوضوح.
+        </p>
+
+        <p class="hinty">إليك كود CSS المُعدَّل:</p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"container"</span></span>&gt;
+ &lt;span <span class="attr">class=<span class="value">"inline-block-element element1"</span></span>&gt;<span dir="rtl" class="txt">عنصر span</span>&lt;/span&gt;
+ &lt;span <span class="attr">class=<span class="value">"inline-block-element element2"</span></span>&gt;<span dir="rtl" class="txt">عنصر span</span>&lt;/span&gt;
+&lt;/div&gt;</span>
+        </code></pre></div>
+            
+        <p class="file-name">styles.css</p>
+        <div class="code-block"><pre><code>
+<span class="tag-b">.inline-block-element</span> <span class="attr">{
+ width: <span class="txt">150px</span>;
+ height: <span class="txt">100px</span>;
+}</span>
+
+<span class="tag-b">.element1</span> <span class="attr">{
+ background-color: <span class="txt">lightblue</span>;
+}</span>
+
+<span class="tag-b">.element2</span> <span class="attr">{
+ background-color: <span class="txt">lightgreen</span>;
+}</span>
+        </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+                <div>
+                    <span class="inline-block-element2 element3">كتلة مضمنة</span>
+                    <span class="inline-block-element2 element4">كتلة مضمنة</span>
+                </div>
+        </div>
+        <br>
+
+        <p>
+            في هذا الكود، قمنا بإزالة الخاصية <span dir="ltr" class="br-spec nw">display: inline-block;</span> مع الإبقاء على كل شيء آخر كما هو؛ وهنا تعود عناصر <span dir="ltr" class="br-spec nw">span</span> إلى سلوكها الافتراضي كعناصر "ضمن السطر" (inline elements).
+        </p>
+        <p>
+            ونتيجةً لذلك، يتم تجاهل العرض والارتفاع المحددين، ولا تشغل العناصر سوى المساحة اللازمة لمحتواها.
+        </p>
+        <p>
+            يُعد فهم آلية عمل <span dir="ltr" class="br-spec nw">inline-block</span> أمراً مفيداً؛ إذ يمكنك استخدامه لإنشاء تخطيطات تتطلب كلاً من المحاذاة والتحكم في الأبعاد ضمن تدفق نصي متصل.
+        </p>
+
+
+    </section>
+
+
+
+    <!-- QUESTIONS -->
+		<section class="questions">
+			<p class="pquestions">أسئلة :</p>
+				
+			<p class="userstory">ما هي السمة الرئيسية لعنصر (inline-block) التي تميزه عن عنصر (inline) ؟</p>
+
+			<p> 1. لا يمكن تضمين عناصر (inline-block) داخل عناصر (block). ❌</p>
+            <p> 2. تمتد عناصر (inline-block) تلقائياً لتشغل العرض الكامل للحاوية الخاصة بها. ❌</p>
+            <p><mark> 3. تسمح عناصر (inline-block) بتحديد الارتفاع والعرض، على عكس عناصر (inline). ✅</mark></p>
+			<p> 4. تنتقل عناصر (inline-block) دائماً إلى سطر جديد. ❌</p>
+
+            <br>
+
+            <p class="userstory">ما هو السيناريو الأنسب لاستخدام عناصر (inline-block) بدلاً من عناصر (inline) أو (block) ؟</p>
+			
+			<p> 1. عندما تحتاج إلى أن يشغل العنصر العرض الكامل للحاوية الأب (parent container). ❌</p>
+            <p><mark> 2. عندما ترغب في بقاء العنصر ضمن السطر (inline) مع الحاجة إلى تعديل حجمه. ✅</mark></p>
+            <p> 3. عندما تحتاج إلى أن يبدأ العنصر دائماً في سطر جديد. ❌</p>
+			<p> 4. عندما لا ترغب في أن يتأثر العنصر بالحشوة (padding) والهوامش (margins). ❌</p>
+
+            <br>
+
+            <p class="userstory">في أي حالة قد يسلك عنصر يحمل الخاصية <span dir="ltr" class="br-spec nw">display: inline-block;</span> سلوكاً مختلفاً عن عنصر يحمل الخاصية <span dir="ltr" class="br-spec nw">display: block;</span> ؟</p>
+			
+			<p> 1. عندما تحتاج إلى أن يشغل العنصر العرض الكامل للحاوية. ❌</p>
+            <p><mark> 2. عندما تريد أن ينساب العنصر بجوار النص والعناصر الأخرى المضمنة (inline elements). ✅</mark></p>
+            <p> 3. عندما تحتاج إلى أن يبدأ العنصر في سطر جديد تلقائياً. ❌</p>
+			<p> 4. عندما لا ترغب في أن تكون للعنصر أي خصائص تتعلق بالارتفاع أو العرض. ❌</p>
+
+		</section>
+
+
+    
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./What-Is-the-Difference-Between-Inline-and-Block-Level-Elements-in-CSS.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+
+</body>
+</html>

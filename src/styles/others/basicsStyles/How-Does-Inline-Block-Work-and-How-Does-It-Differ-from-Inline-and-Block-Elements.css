@@ -1,0 +1,29 @@
+/* PREVIEW 1 */
+.inline-block-element1 {
+  display: inline-block;
+  width: 150px;
+  height: 100px;
+}
+
+.element1 {
+  background-color: lightblue;
+}
+
+.element2 {
+  background-color: lightgreen;
+}
+/* PREVIEW 1 */
+
+/* PREVIEW 2 */
+.inline-block-element2 {
+  width: 150px;
+  height: 100px;
+}
+
+.element3 {
+  background-color: lightblue;
+}
+.element4 {
+  background-color: lightgreen;
+}
+/* PREVIEW 2 */
