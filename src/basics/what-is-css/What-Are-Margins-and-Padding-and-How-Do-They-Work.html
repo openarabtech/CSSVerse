@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS | ما هي الهوامش (Margins) والمسافات الداخلية (Padding) ، وكيف تعمل؟"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/basicsStyles/what-is-css/What-Are-Margins-and-Padding-and-How-Do-They-Work.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+    <h1>ما هي لغة CSS ؟</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+        <h2>ما هي الهوامش (Margins) والمسافات الداخلية (Padding) ، وكيف تعمل؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+    </section>
+
+    <section>
+        <p>
+           تُعد خاصيتا الهامش (Margin) والحشوة (Padding) عنصرين أساسيين في لغة CSS لإنشاء صفحات ويب منظمة جيداً، وسهلة القراءة، وجذابة بصرياً. 
+        </p>
+        <p>
+            تتحكم الهوامش (Margins) في المساحة المحيطة بالعنصر من الخارج، مما يساعد على فصله عن العناصر الأخرى وتحديد هيكل التخطيط، بينما تتحكم الحشوة (Padding) في المساحة داخل العنصر، مما يعزز من سهولة قراءة المحتوى والجاذبية الجمالية.
+        </p>
+        <p>
+            لفهم الفروق بين الهامش <span dir="ltr" class="br-spec nw">margin</span> والحشوة <span dir="ltr" class="br-spec nw">padding</span> بشكل أفضل، دعنا نلقي نظرة على بعض الأمثلة.
+        </p>
+        <p class="hinty">إليك مثال بلغة HTML لثلاثة عناصر فقرة (paragraph) في الصفحة:</p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;<span class="txt">الفقرة الأولى</span>&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;<span class="txt">الفقرة الثانية</span>&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;<span class="txt">الفقرة الثالثة</span>&lt;/p&gt;</span>
+        </code></pre></div>
+
+        <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <p>الفقرة الأولى</p>
+                <p>الفقرة الثانية</p>
+                <p>الفقرة الثالثة</p>
+        </div>
+        <br>
+
+        <section>
+            <h3>خاصية الهامش <span dir="ltr" class="br-spec nw">margin</span></h3>
+            <p class="hinty">لتطبيق مسافة أعلى كل عنصر فقرة، يمكنك استخدام الخاصية <span dir="ltr" class="br-spec nw">margin-top</span> على النحو التالي:</p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;</span>
+
+<span class="tag">&lt;p&gt;<span class="txt">الفقرة الأولى</span>&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;<span class="txt">الفقرة الثانية</span>&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;<span class="txt">الفقرة الثالثة</span>&lt;/p&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">p</span> <span class="attr">{
+ margin-top: <span class="txt">20px</span>;
+ border: <span class="txt">2px solid black</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <p class="p2">الفقرة الأولى</p>
+                <p class="p2">الفقرة الثانية</p>
+                <p class="p2">الفقرة الثالثة</p>
+            </div>
+            <br>
+
+            <p>
+                في هذا المثال، نُطبّق "هامشاً" (margin) بمقدار <span dir="ltr" class="br-spec nw">20px</span> على الجزء العلوي من كل عنصر فقرة فقط.
+            </p>
+            <p>
+                لدينا أيضاً "إطار أسود متصل" (solid black border) يحيط بالجهات الأربع، مما يتيح لك رؤية "الهامش" (margin) بشكل أوضح.
+            </p>
+            <p>
+                خصائص الهامش الأربع المختلفة هي: الهامش العلوي <span dir="ltr" class="br-spec nw">margin-top</span>، والهامش الأيمن <span dir="ltr" class="br-spec nw">margin-right</span>، والهامش السفلي <span dir="ltr" class="br-spec nw">margin-bottom</span>، والهامش الأيسر <span dir="ltr" class="br-spec nw">margin-left</span>.
+            </p>
+
+            <p class="hinty">إليك مثال على استخدام الخصائص الأربع جميعها:</p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;</span>
+
+<span class="tag">&lt;span&gt;<span class="txt">الفقرة الأولى</span>&lt;/span&gt;</span>
+<span class="tag">&lt;p&gt;<span class="txt">الفقرة الثانية</span>&lt;/p&gt;</span>
+<span class="tag">&lt;span&gt;<span class="txt">الفقرة الثالثة</span>&lt;/span&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">p</span> <span class="attr">{
+ margin-top: <span class="txt">10px</span>;
+ margin-right: <span class="txt">20px</span>;
+ margin-bottom: <span class="txt">30px</span>;
+ margin-left: <span class="txt">40px</span>;
+ border: <span class="txt">2px solid black</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <span>الفقرة الأولى</span>
+                <p class="p3">الفقرة الثانية</p>
+                <span>الفقرة الثالثة</span>
+            </div>
+            <br>
+
+            <p>
+                في هذا المثال، نقوم بتعيين قيم للمسافات على الجوانب الأربعة لعنصر الفقرة. كما تمت إضافة "إطار أسود متصل" (solid black border) لتتمكن من رؤية "الهوامش" (margins) بشكل أوضح.
+            </p>
+
+        </section>
+
+        <section>
+            <h3>اختصار الهامش <span dir="ltr" class="br-spec nw">margin</span></h3>
+            <p>
+                هناك طريقة أخرى لاستخدام خاصية الهامش <span dir="ltr" class="br-spec nw">margin</span> وهي الصيغة المختصرة؛ إذ يمكنك تحديد قيمة واحدة أو قيمتين أو ثلاث أو أربع قيم دفعة واحدة. دعونا نستكشف هذه الخيارات معاً.
+            </p>
+            <p>
+                عند استخدام قيمة واحدة في الخاصية المختصرة للهامش <span dir="ltr" class="br-spec nw">margin</span>، سيتم تطبيق تلك القيمة تحديداً على الجوانب الأربعة للعنصر المستهدف.
+            </p>
+            
+            <p class="hinty">إليك مثال على استخدام قيمة واحدة في الخاصية المختصرة للهامش <span dir="ltr" class="br-spec nw">margin</span> :</p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;</span>
+
+<span class="tag">&lt;span&gt;<span class="txt">الفقرة الأولى</span>&lt;/span&gt;</span>
+<span class="tag">&lt;p&gt;<span class="txt">الفقرة الثانية</span>&lt;/p&gt;</span>
+<span class="tag">&lt;span&gt;<span class="txt">الفقرة الثالثة</span>&lt;/span&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">p</span> <span class="attr">{
+ margin: <span class="txt">10px</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <span>الفقرة الأولى</span>
+                <p class="p4">الفقرة الثانية</p>
+                <span>الفقرة الثالثة</span>
+            </div>
+            <br>
+
+            <p>
+                سيُطبِّق مثال الكود هذا هامشاً <span dir="ltr" class="br-spec nw">margin</span> بمقدار <span dir="ltr" class="br-spec nw">10px</span> بالتساوي على الجوانب الأربعة لعنصر الفقرة.
+            </p>
+            <p>
+                عند استخدام قيمتين، تُطبَّق القيمة الأولى على الجانبين "العلوي" <span dir="ltr" class="br-spec nw">top</span> و"السفلي" <span dir="ltr" class="br-spec nw">bottom</span> ، بينما تُطبَّق القيمة الثانية على الجانبين "الأيسر" <span dir="ltr" class="br-spec nw">left</span> و"الأيمن" <span dir="ltr" class="br-spec nw">right</span> للعنصر.
+            </p>
+
+            <p class="hinty">إليك مثال على استخدام قيمتين للاختصار الخاص بالهامش <span dir="ltr" class="br-spec nw">margin</span> :</p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;</span>
+
+<span class="tag">&lt;span&gt;<span class="txt">الفقرة الأولى</span>&lt;/span&gt;</span>
+<span class="tag">&lt;p&gt;<span class="txt">الفقرة الثانية</span>&lt;/p&gt;</span>
+<span class="tag">&lt;span&gt;<span class="txt">الفقرة الثالثة</span>&lt;/span&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">p</span> <span class="attr">{
+ margin: <span class="txt">10px 20px</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <span>الفقرة الأولى</span>
+                <p class="p5">الفقرة الثانية</p>
+                <span>الفقرة الثالثة</span>
+            </div>
+            <br>
+
+            <p>
+                يُحدد هذا الإجراء "الهوامش" (margins) العلوية <span dir="ltr" class="br-spec nw">top</span> والسفلية <span dir="ltr" class="br-spec nw">bottom</span> لعنصر الفقرة بـ <span dir="ltr" class="br-spec nw">10px</span>، والهوامش اليمنى <span dir="ltr" class="br-spec nw">right</span> واليسرى <span dir="ltr" class="br-spec nw">left</span> بـ <span dir="ltr" class="br-spec nw">20px</span>.
+            </p>
+            <p>
+                إذا تم توفير "ثلاث قيم" (three values)، فإن القيمة الأولى تُطبَّق على الهامش العلوي <span dir="ltr" class="nw">(<span class="br-spec">top</span> margin)</span> ، والقيمة الثانية على الهامشين الأيسر والأيمن <span dir="ltr" class="nw">(<span class="br-spec">left</span> and <span class="br-spec">right</span> margin)</span> ، والقيمة الثالثة على الهامش السفلي <span dir="ltr" class="nw">(<span class="br-spec">bottom</span> margin)</span>.
+            </p>
+
+            <p class="hinty">إليك مثال لتوضيح الأمر بشكل أفضل:</p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;</span>
+
+<span class="tag">&lt;span&gt;<span class="txt">الفقرة الأولى</span>&lt;/span&gt;</span>
+<span class="tag">&lt;p&gt;<span class="txt">الفقرة الثانية</span>&lt;/p&gt;</span>
+<span class="tag">&lt;span&gt;<span class="txt">الفقرة الثالثة</span>&lt;/span&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">p</span> <span class="attr">{
+ margin: <span class="txt">10px 20px 30px</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <span>الفقرة الأولى</span>
+                <p class="p6">الفقرة الثانية</p>
+                <span>الفقرة الثالثة</span>
+            </div>
+            <br>
+
+            <p>
+                يُحدد هذا "الهامش" (margin) بـ <span dir="ltr" class="br-spec nw">10px</span> للأعلى <span dir="ltr" class="br-spec nw">top</span> ، و <span dir="ltr" class="br-spec nw">20px</span> لليسار واليمين <span dir="ltr" class="nw">(<span class="br-spec">left</span> and <span class="br-spec">right</span>)</span> ، و <span dir="ltr" class="br-spec nw">30px</span> للأسفل <span dir="ltr" class="br-spec nw">bottom</span>.
+            </p>
+            <p>
+                عند استخدام "أربع قيم" (four values) ، يمنحك ذلك تحكماً أكبر، إذ يمكنك تحديد قيمة الهامش (margin) بشكل مستقل لكل جانب من جوانب العنصر المستهدف.
+            </p>
+            <p>
+                تُحدد القيمة الأولى الجهة العلوية <span dir="ltr" class="br-spec nw">top</span> ، وتُحدد القيمة الثانية الجهة اليمنى <span dir="ltr" class="br-spec nw">right</span> ، وتُحدد القيمة الثالثة الجهة السفلية <span dir="ltr" class="br-spec nw">bottom</span> ، وتُحدد القيمة الرابعة الجهة اليسرى <span dir="ltr" class="br-spec nw">left</span>.
+            </p>
+
+            <p class="hinty">إليك مثال على استخدام الاختصار الخاص بالهامش (margin) مع أربع قيم:</p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;</span>
+
+<span class="tag">&lt;span&gt;<span class="txt">الفقرة الأولى</span>&lt;/span&gt;</span>
+<span class="tag">&lt;p&gt;<span class="txt">الفقرة الثانية</span>&lt;/p&gt;</span>
+<span class="tag">&lt;span&gt;<span class="txt">الفقرة الثالثة</span>&lt;/span&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">p</span> <span class="attr">{
+ margin: <span class="txt">10px 20px 30px 40px</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <span>الفقرة الأولى</span>
+                <p class="p7">الفقرة الثانية</p>
+                <span>الفقرة الثالثة</span>
+            </div>
+            <br>
+
+            <p>
+                يُحدد هذا الهامش (margin) بـ <span dir="ltr" class="br-spec nw">10px</span> للأعلى <span dir="ltr" class="br-spec nw">top</span> ، و <span dir="ltr" class="br-spec nw">20px</span> لليمين <span dir="ltr" class="br-spec nw">right</span> ، و <span dir="ltr" class="br-spec nw">30px</span> للأسفل <span dir="ltr" class="br-spec nw">bottom</span> ، و <span dir="ltr" class="br-spec nw">40px</span> لليسار <span dir="ltr" class="br-spec nw">left</span>.
+            </p>
+
+
+
+        </section>
+
+        <section>
+            <h3>خاصية الحشوة <span dir="ltr" class="br-spec nw">padding</span></h3>
+            <p>
+                تُستخدم الخاصية <span dir="ltr" class="br-spec nw">padding</span> لإضافة مساحة داخل العنصر، بين المحتوى والحدود الخاصة به.
+            </p>
+            <p>
+                على غرار خاصية الهامش <span dir="ltr" class="br-spec nw">margin</span> ، فإن خصائص الحشو <span dir="ltr" class="br-spec nw">padding</span> الأربع هي: <span dir="ltr" class="br-spec nw">padding-top</span> و <span dir="ltr" class="br-spec nw">padding-right</span> و <span dir="ltr" class="br-spec nw">padding-bottom</span> و <span dir="ltr" class="br-spec nw">padding-left</span>.
+            </p>
+            <p class="hinty">إليك مثال على كيفية ضبط الهامش الداخلي <span dir="ltr" class="br-spec nw">padding</span> لعنصر الفقرة:</p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;</span>
+
+<span class="tag">&lt;span&gt;<span class="txt">الفقرة الأولى</span>&lt;/span&gt;</span>
+<span class="tag">&lt;p&gt;<span class="txt">الفقرة الثانية</span>&lt;/p&gt;</span>
+<span class="tag">&lt;span&gt;<span class="txt">الفقرة الثالثة</span>&lt;/span&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">p</span> <span class="attr">{
+ padding-top: <span class="txt">10px</span>;
+ padding-right: <span class="txt">20px</span>;
+ padding-bottom: <span class="txt">30px</span>;
+ padding-left: <span class="txt">40px</span>;
+ border: <span class="txt">2px solid black</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <span>الفقرة الأولى</span>
+                <p class="p8">الفقرة الثانية</p>
+                <span>الفقرة الثالثة</span>
+            </div>
+            <br>
+
+            <p>
+                يُحدد هذا الهامش الداخلي <span dir="ltr" class="br-spec nw">padding</span> بـ <span dir="ltr" class="br-spec nw">10px</span> للأعلى <span dir="ltr" class="br-spec nw">top</span> ، و <span dir="ltr" class="br-spec nw">20px</span>  لليمين <span dir="ltr" class="br-spec nw">right</span> ، و <span dir="ltr" class="br-spec nw">30px</span> للأسفل <span dir="ltr" class="br-spec nw">bottom</span> ، و <span dir="ltr" class="br-spec nw">40px</span> لليسار <span dir="ltr" class="br-spec nw">left</span> .
+            </p>
+            <p>
+                كما ترى، تُطبَّق الحشوة <span dir="ltr" class="br-spec nw">padding</span> على المحتوى الموجود داخل الحدود، بخلاف الهامش <span dir="ltr" class="br-spec nw">margin</span> الذي يُطبَّق خارج الحدود.
+            </p>
+
+
+
+        </section>
+
+        <section>
+            <h3>اختصار الحشوة <span dir="ltr" class="br-spec nw">padding</span></h3>
+            <p>
+                تماماً مثل خاصية <span dir="ltr" class="br-spec nw">margin</span> ، يمكنك أيضاً اختيار استخدام الصيغة المختصرة لخاصية <span dir="ltr" class="br-spec nw">padding</span> .
+            </p>
+            <p>
+                يمكنك أيضاً تحديد قيمة واحدة أو اثنتين أو ثلاث أو أربع قيم للخاصية المختصرة <span dir="ltr" class="br-spec nw">padding</span>.
+            </p>
+            <p class="hinty">
+                إليك مثال على استخدام الصيغة المختصرة لخاصية الحشو <span dir="ltr" class="br-spec nw">padding</span> لعنصر الفقرة المذكور سابقاً:
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;</span>
+
+<span class="tag">&lt;span&gt;<span class="txt">الفقرة الأولى</span>&lt;/span&gt;</span>
+<span class="tag">&lt;p&gt;<span class="txt">الفقرة الثانية</span>&lt;/p&gt;</span>
+<span class="tag">&lt;span&gt;<span class="txt">الفقرة الثالثة</span>&lt;/span&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">p</span> <span class="attr">{
+ padding: <span class="txt">10px 20px 30px 40px</span>;
+ border: <span class="txt">2px solid black</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <span>الفقرة الأولى</span>
+                <p class="p9">الفقرة الثانية</p>
+                <span>الفقرة الثالثة</span>
+            </div>
+            <br>
+
+            <p>
+                في هذا المثال، وباستخدام الصيغة المختصرة، سيقوم الكود بتعيين الهامش الداخلي (padding) لعنصر الفقرة بحيث يكون <span dir="ltr" class="br-spec nw">10px</span> من الأعلى <span dir="ltr" class="br-spec nw">top</span> ، و <span dir="ltr" class="br-spec nw">20px</span> من اليمين <span dir="ltr" class="br-spec nw">right</span> ، و <span dir="ltr" class="br-spec nw">30px</span>  من الأسفل <span dir="ltr" class="br-spec nw">bottom</span> ، و <span dir="ltr" class="br-spec nw">40px</span> من اليسار <span dir="ltr" class="br-spec nw">left</span>.
+            </p>
+
+
+
+        </section>
+
+    </section>
+
+
+    <!-- QUESTIONS -->
+	<section class="questions">
+			<p class="pquestions">أسئلة :</p>
+				
+			<p class="userstory">ما هي خاصية CSS التي ستستخدمها لإنشاء مسافة بين حدود عنصر ما والعناصر المجاورة له؟</p>
+
+			<p> 1. <span dir="ltr" class="br-spec nw">padding</span> ❌</p>
+            <p> 2. <span dir="ltr" class="br-spec nw">border</span> ❌</p>
+            <p><mark> 3. <span dir="ltr" class="br-spec nw">margin</span> ✅</mark></p>
+			<p> 4. <span dir="ltr" class="br-spec nw">width</span> ❌</p>
+
+            <br>
+
+            <p class="userstory">ما هي خاصية CSS التي ستستخدمها لإنشاء مسافة بين محتوى العنصر وحدوده؟</p>
+			
+			<p><mark> 1. <span dir="ltr" class="br-spec nw">padding</span> ✅</mark></p>
+			<p> 2. <span dir="ltr" class="br-spec nw">margin</span> ❌</p>
+            <p> 3. <span dir="ltr" class="br-spec nw">border</span> ❌</p>
+			<p> 4. <span dir="ltr" class="br-spec nw">height</span> ❌</p>
+
+            <br>
+
+            <p class="userstory">ما هو الترتيب الصحيح للقيم عند استخدام خاصية الاختصار (shorthand property) للهوامش <span dir="ltr" class="br-spec nw">margin</span> أو الحشوة <span dir="ltr" class="br-spec nw">padding</span> مع أربع قيم؟</p>
+			
+			<p> 1. <span dir="ltr" class="nw"><span class="br-spec">left</span>, <span class="br-spec">right</span>, <span class="br-spec">top</span>, <span class="br-spec">bottom</span></span> ❌</p>
+            <p> 2. <span dir="ltr" class="nw"><span class="br-spec">top</span>, <span class="br-spec">left</span>, <span class="br-spec">bottom</span>, <span class="br-spec">right</span></span> ❌</p>
+            <p><mark> 3. <span dir="ltr" class="nw"><span class="br-spec">top</span>, <span class="br-spec">right</span>, <span class="br-spec">bottom</span>, <span class="br-spec">left</span></span> ✅</mark></p>
+			<p> 4. <span dir="ltr" class="nw"><span class="br-spec">right</span>, <span class="br-spec">bottom</span>, <span class="br-spec">left</span>, <span class="br-spec">top</span></span> ❌</p>
+
+		</section>
+
+
+
+   
+
+    
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./How-Does-Inline-Block-Work-and-How-Does-It-Differ-from-Inline-and-Block-Elements.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+
+</body>
+</html>
