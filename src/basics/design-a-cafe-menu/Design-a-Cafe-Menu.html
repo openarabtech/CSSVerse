@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS | تصميم قائمة مقهى (Cafe Menu)"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/basicsStyles/designCafeMenu/Design-a-Cafe-Menu.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+    <h1>الأساسيات</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+        <h2>تصميم قائمة مقهى (Cafe Menu)</h2>
+		<span class="hint">ورشة عمل</span>
+		<p>في هذه الورشة، ستتدرب على أساسيات CSS (أوراق الأنماط المتتالية - Cascading Style Sheets) من خلال إنشاء قائمة طعام لمقهى (a cafe menu).</p>
+    </section>
+
+    <section>
+        <br>
+        <h3>نموذج "اتش.تي.إم.إل" The HTML boilerplate.</h3>
+        <br>
+        <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span>قائمة المقهى<span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+ <span class="value">&lt;!-- هنا تضع اكواد التطبيق --&gt;</span>
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+            </div>
+    </section>
+
+    <section>
+        <br>
+        <h3>الخطوات</h3>
+        <br>
+
+        <!-- STEP 1 -->
+        <section>
+            <h4>الخطوة 1</h4>
+            <p>
+                ابدأ بإضافة بعض المحتوى إلى القائمة. أضف عنصراً رئيسياً <span dir="ltr" class="br-spec nw">main</span> داخل عنصر الجسم <span dir="ltr" class="br-spec nw">body</span> الموجود حالياً؛ إذ سيحتوي هذا العنصر لاحقاً على معلومات الأسعار الخاصة بالقهوة والحلويات التي يقدمها المقهى.
+            </p>
+        </section>
+
+        <!-- STEP 2 -->
+        <section>
+            <h4>الخطوة 2</h4>
+            <p>
+                اسم المقهى هو <span dir="rtl" class="br-spec nw">مقهى التقنية</span>. لذا، أضف عنصر <span dir="ltr" class="br-spec nw">h1</span> داخل العنصر الرئيسي <span dir="ltr" class="nw">(<span class="br-spec">main</span> element)</span>، واجعل محتواه اسم المقهى.
+            </p>
+        </section>
+
+        <!-- STEP 3 -->
+        <section>
+            <h4>الخطوة 3</h4>
+            <p>
+                لإعلام الزوار بأن المقهى قد تأسس عام <span dir="ltr" class="br-spec nw">2025</span>، أضف عنصراً من النوع <span dir="ltr" class="br-spec nw">p</span> أسفل العنصر <span dir="ltr" class="br-spec nw">h1</span> يحتوي على النص <span dir="rtl" class="br-spec nw">تأسست عام 2025</span>.
+            </p>
+        </section>
+
+        <!-- STEP 4 -->
+        <section>
+            <h4>الخطوة 4</h4>
+            <p>
+                ستتضمن القائمة قسمين: أحدهما للقهوة والآخر للحلويات. أضف عنصراً من نوع <span dir="ltr" class="br-spec nw">section</span> داخل العنصر الرئيسي <span dir="ltr" class="br-spec nw">main</span> لتوفير مكان تضع فيه جميع أنواع القهوة المتاحة.
+            </p>
+        </section>
+
+        <!-- STEP 5 -->
+        <section>
+            <h4>الخطوة 5</h4>
+            <p>
+                أنشئ عنصر <span dir="ltr" class="br-spec nw">h2</span> داخل عنصر <span dir="ltr" class="br-spec nw">section</span> واجعل النص بداخله <span dir="rtl" class="br-spec nw">قهوة</span>.
+            </p>
+        </section>
+
+        <!-- STEP 6 -->
+        <section>
+            <h4>الخطوة 6</h4>
+            <p>
+              حتى الآن، كانت سيطرتك على طريقة عرض محتواك ومظهره محدودة. ولتغيير ذلك، أضف عنصر نمط <span dir="ltr" class="nw">(<span class="br-spec">style</span> element)</span> داخل عنصر الرأس <span dir="ltr" class="nw">(<span class="br-spec">head</span> element)</span>.  
+            </p>
+        </section>
+
+        <!-- STEP 7 -->
+        <section>
+            <h4>الخطوة 7</h4>
+            <p>
+                في الدروس السابقة، تعلمت كيفية إضافة خصائص وقيم CSS بهذا الشكل:
+            </p>
+            <h5>نموذج للكود البرمجي</h5>
+            <div class="code-block">
+                <pre><code>
+<span class="tag-b">element</span> <span class="attr">{
+ property: <span class="txt">value</span>;
+}</span>
+                </code></pre>
+            </div>
+            <p>
+                قم بمحاذاة محتوى عنصر <span dir="ltr" class="br-spec nw">h1</span> في المنتصف عن طريق ضبط خاصية <span dir="ltr" class="br-spec nw">text-align</span> على القيمة <span dir="ltr" class="br-spec nw">center</span>.
+            </p>
+        </section>
+
+        <!-- STEP 8 -->
+        <section>
+            <h4>الخطوة 8</h4>
+            <p>
+                في الخطوة السابقة، استخدمتَ مُحدِّد النوع (type selector) لتنسيق العنصر <span dir="ltr" class="br-spec nw">h1</span>. قم بمحاذاة محتوى العنصرين <span dir="ltr" class="br-spec nw">h2</span> و <span dir="ltr" class="br-spec nw">p</span> إلى المنتصف عن طريق إضافة مُحدِّد نوع جديد لكل منهما إلى عنصر التنسيق <span dir="ltr" class="nw">(<span class="br-spec">style</span> element)</span> الموجود.
+            </p>
+        </section>
+
+        <!-- STEP 9 -->
+        <section>
+            <h4>الخطوة 9</h4>
+            <p>
+                لديك الآن ثلاثة مُحدِّدات نوع (type selectors) تشترك في نفس التنسيق. يمكنك تطبيق مجموعة التنسيقات نفسها على عناصر متعددة من خلال إنشاء قائمة بالمُحدِّدات، حيث يتم الفصل بين كل مُحدِّد وآخر "بفاصلة" (commas)، على النحو التالي:
+            </p>
+            <h5>نموذج للكود البرمجي</h5>
+            <div class="code-block">
+                <pre><code>
+<span class="tag-b">selector1, selector2</span> <span class="attr">{
+ property: <span class="txt">value</span>;
+}</span>
+                </code></pre>
+            </div>
+            <p>
+                احذف محددات النوع الثلاثة الموجودة واستبدلها بقائمة محددات واحدة تُحاذي النص في المنتصف لعناصر <span dir="ltr" class="br-spec nw">h1</span> و <span dir="ltr" class="br-spec nw">h2</span> و <span dir="ltr" class="br-spec nw">p</span>.
+            </p>
+        </section>
+
+        <!-- STEP 10 -->
+        <section>
+            <h4>الخطوة 10</h4>
+            <p>
+                لقد قمت بتنسيق ثلاثة عناصر عن طريق كتابة أكواد CSS داخل وسوم <span dir="ltr" class="br-spec nw">style</span>. ورغم أن هذه الطريقة فعالة، إلا أنه نظراً لاحتمالية إضافة المزيد من التنسيقات، فمن الأفضل وضع جميع التنسيقات في ملف منفصل وربطه بالصفحة.
+            </p>
+            <p>
+                قم بإنشاء ملف <span dir="ltr" class="br-spec nw">styles.css</span> منفصل.
+            </p>
+            <p>
+                ابدأ بنقل الأنماط التي أنشأتها إلى ملف <span dir="ltr" class="br-spec nw">styles.css</span>؛ وتأكد من استبعاد وسوم الفتح والإغلاق الخاصة بالأنماط <span dir="ltr" class="nw">(<span class="br-spec">style</span> tags)</span>.
+            </p>
+        </section>
+
+        <!-- STEP 11 -->
+        <section>
+            <h4>الخطوة 11</h4>
+            <p>
+                الآن بعد أن أصبح كود CSS موجوداً في ملف <span dir="ltr" class="br-spec nw">styles.css</span>، قم بإزالة عنصر <span dir="ltr" class="br-spec nw">style</span> وكافة محتوياته؛ وبمجرد إزالته، سيعود النص الذي كان متمركزاً في المنتصف إلى جهة اليمين.
+            </p>
+           
+        </section>
+
+        <!-- STEP 12 -->
+        <section>
+            <h4>الخطوة 12</h4>
+            <p>
+                الآن، عليك ربط ملف <span dir="ltr" class="br-spec nw">styles.css</span> ليتم تطبيق الأنماط مرة أخرى. أضف عنصر <span dir="ltr" class="br-spec nw">link</span> داخل عنصر <span dir="ltr" class="br-spec nw">head</span>؛ وامنحه السمة <span dir="ltr" class="br-spec nw">rel</span> بقيمة <span dir="ltr" class="br-spec nw">"stylesheet"</span> والسمة <span dir="ltr" class="br-spec nw">href</span> بقيمة <span dir="ltr" class="br-spec nw">"styles.css"</span>.
+            </p>
+            <p>
+                <b>ملاحظة:</b> يُعد عنصر <span dir="ltr" class="br-spec nw">link</span> عنصراً فارغاً (void element)، مما يعني أنه لا يحتوي على وسم إغلاق. لذا، ينبغي كتابة العناصر الفارغة بالصيغة <span dir="ltr" class="br-spec nw">&lt;link&gt;</span> بدلاً من <span dir="ltr" class="br-spec nw">&lt;link&gt;&lt;/link&gt;</span>.
+            </p>
+           
+        </section>
+
+        <!-- STEP 13 -->
+        <section>
+            <h4>الخطوة 13</h4>
+            <p>
+                لجعل تنسيق الصفحة يبدو متشابهاً على الأجهزة المحمولة وأجهزة الكمبيوتر المكتبية أو المحمولة، تحتاج إلى إضافة عنصر <span dir="ltr" class="br-spec nw">meta</span> يحتوي على سمة محتوى <span dir="ltr" class="br-spec nw">content</span> خاصة.
+            </p>
+            <p>
+                لقد تعرفت على عنصر <span dir="ltr" class="br-spec nw">meta</span> الخاص بمنطقة العرض (viewport) في دروس سابقة.
+            </p>
+            <p class="hinty">إليك مثال:</p>
+            <h5>نموذج للكود البرمجي</h5>
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+                </code></pre>
+            </div>
+            <br>
+           
+        </section>
+
+        <!-- STEP 14 -->
+        <section>
+            <h4>الخطوة 14</h4>
+            <p>
+                تمت إعادة توسيط النص، مما يعني أن الرابط المؤدي إلى ملف CSS يعمل بشكل صحيح. أضف نمطاً آخر إلى الملف يغير خاصية لون الخلفية <span dir="ltr" class="br-spec nw">background-color</span> إلى اللون البني <span dir="ltr" class="br-spec nw">brown</span> لعنصر الجسم <span dir="ltr" class="br-spec nw">body</span>.
+            </p>
+        </section>
+
+        <!-- STEP 15 -->
+        <section>
+            <h4>الخطوة 15</h4>
+            <p>
+                تجعل الخلفية البنية قراءة النص أمراً صعباً. غيّر لون خلفية عنصر <span dir="ltr" class="br-spec nw">body</span> إلى اللون <span dir="ltr" class="br-spec nw">burlywood</span>؛ ليصبح للخلفية لونٌ ما، مع الحفاظ على إمكانية قراءة النص.
+            </p>
+        </section>
+
+        <!-- STEP 16 -->
+        <section>
+            <h4>الخطوة 16</h4>
+            <p>
+                يُستخدم العنصر <span dir="ltr" class="br-spec nw">div</span> بشكل أساسي لأغراض تنسيق وتخطيط الصفحة، وذلك بخلاف عناصر المحتوى الأخرى التي استخدمتها حتى الآن. أضف عنصراً من نوع <span dir="ltr" class="br-spec nw">div</span> داخل العنصر <span dir="ltr" class="br-spec nw">body</span>، ثم انقل جميع العناصر الأخرى إلى داخل هذا العنصر <span dir="ltr" class="br-spec nw">div</span> الجديد.
+            </p>
+            <p>
+                داخل وسم <span dir="ltr" class="br-spec nw">div</span> الافتتاحي، أضف السمة <span dir="ltr" class="br-spec nw">id</span> بقيمة <span dir="ltr" class="br-spec nw">menu</span>.
+            </p>
+        </section>
+
+        <!-- STEP 17 -->
+        <section>
+            <h4>الخطوة 17</h4>
+            <p>
+                الهدف الآن هو جعل عنصر <span dir="ltr" class="br-spec nw">div</span> لا يشغل كامل عرض الصفحة؛ وتُعد خاصية <span dir="ltr" class="br-spec nw">width</span> في CSS مثالية لهذا الغرض.
+            </p>
+            <p>
+                يمكنك استخدام مُحدِّد المعرِّف <span dir="ltr" class="nw">(<span class="br-spec">id</span> selector)</span> لاستهداف عنصر محدد يحمل السمة <span dir="ltr" class="br-spec nw">id</span>.
+            </p>
+            <p>
+                لقد تعلمت كيفية التعامل مع مُحدِّد المعرِّف <span dir="ltr" class="nw">(<span class="br-spec">id</span> selector)</span> في الدروس السابقة على النحو التالي:
+            </p>
+            <h5>نموذج للكود البرمجي</h5>
+            <div class="code-block">
+                <pre><code>
+<span class="tag-b">#cat</span> <span class="attr">{
+ width: <span class="txt">250px</span>;
+}</span>
+                </code></pre>
+            </div>
+            <p>
+                استخدم المُحدِّد <span dir="ltr" class="br-spec nw">#menu</span> لمنح العنصر الخاص بك عرضاً قدره <span dir="ltr" class="br-spec nw">300px</span>.
+            </p>
+        </section>
+
+        <!-- STEP 18 -->
+        <section>
+            <h4>الخطوة 18</h4>
+            <p>
+                تبدو التعليقات في CSS هكذا:
+            </p>
+            <h5>نموذج للكود البرمجي</h5>
+            <div class="code-block">
+                <pre><code>
+<span class="value">/* اكتب تعليقاً هنا */</span>
+                </code></pre>
+            </div>
+            <p>
+                في ملف الأنماط (style sheet)، قم بتحويل السطر الذي يحتوي على الخاصية <span dir="ltr" class="br-spec nw">background-color</span> وقيمتها إلى تعليق، وذلك لتتمكن من رؤية تأثير تنسيق العنصر <span dir="ltr" class="br-spec nw">#menu</span> وحده؛ فهذا سيعيد لون الخلفية إلى الأبيض.
+            </p>
+            
+        </section>
+
+        <!-- STEP 19 -->
+        <section>
+            <h4>الخطوة 19</h4>
+            <p>
+                الآن، استخدم مُحدِّد <span dir="ltr" class="br-spec nw">#menu</span> الحالي لضبط لون خلفية عنصر <span dir="ltr" class="br-spec nw">div</span> ليكون <span dir="ltr" class="br-spec nw">burlywood</span>.
+            </p>
+            
+        </section>
+
+        <!-- STEP 20 -->
+        <section>
+            <h4>الخطوة 20</h4>
+            <p>
+                من السهل الآن ملاحظة أن النص يتوسط العنصر <span dir="ltr" class="br-spec nw">#menu</span>. وحالياً، تم تحديد عرض العنصر <span dir="ltr" class="br-spec nw">#menu</span> بوحدة البكسل <span dir="ltr" class="br-spec nw">px</span>.
+            </p>
+            <p>
+                غيّر قيمة الخاصية <span dir="ltr" class="br-spec nw">width</span> لتصبح <span dir="ltr" class="br-spec nw">80%</span> ، وذلك لجعل العرض مساوياً لـ <span dir="ltr" class="br-spec nw">80%</span> من عرض العنصر الأب <span dir="ltr" class="br-spec nw">body</span>.
+            </p>
+            
+        </section>
+
+        <!-- STEP 21 -->
+        <section>
+            <h4>الخطوة 21</h4>
+            <p>
+                بعد ذلك، ستحتاج إلى توسيط العنصر <span dir="ltr" class="br-spec nw">#menu</span> أفقياً. يمكنك القيام بذلك عن طريق ضبط خاصيتي الهامش الأيسر <span dir="ltr" class="br-spec nw">margin-left</span> والهامش الأيمن <span dir="ltr" class="br-spec nw">margin-right</span> على القيمة <span dir="ltr" class="br-spec nw">auto</span>. 
+                تخيّل الهامش (margin) على أنه مساحة غير مرئية تحيط بالعنصر؛ وباستخدام هاتين الخاصيتين، قم بتوسيط العنصر <span dir="ltr" class="br-spec nw">#menu</span> داخل العنصر <span dir="ltr" class="br-spec nw">body</span> .
+            </p>
+            
+        </section>
+
+        <!-- STEP 22 -->
+        <section>
+            <h4>الخطوة 22</h4>
+            <p>
+                لقد استخدمتَ حتى الآن مُحدِّدات النوع (type selectors) ومُحدِّدات المُعرِّف (id selectors) لتنسيق العناصر؛ ومع ذلك، فمن الشائع أكثر استخدام مُحدِّد مختلف لتنسيق العناصر.
+            </p>
+            <p>
+                لقد تعلمت كيفية التعامل مع مُحدِّدات الفئات <span dir="ltr" class="nw">(<span class="br-spec">class</span> selector)</span> في دروس سابقة، على النحو التالي:
+            </p>
+            <h5>نموذج للكود البرمجي</h5>
+            <div class="code-block">
+                <pre><code>
+<span class="tag-b">.class-name</span> <span class="attr">{
+ property: <span class="txt">value</span>;
+}</span>
+                </code></pre>
+            </div>
+            <p>
+                حوّل مُحدِّد <span dir="ltr" class="br-spec nw">#menu</span> الحالي إلى مُحدِّد فئة (class selector) عن طريق استبدال <span dir="ltr" class="br-spec nw">#menu</span> بمُحدِّد الفئة <span dir="ltr" class="br-spec nw">.menu</span>.
+            </p>
+        </section>
+
+        <!-- STEP 23 -->
+        <section>
+            <h4>الخطوة 23</h4>
+            <p>
+                لتطبيق تنسيق الفئة (class) على عنصر <span dir="ltr" class="br-spec nw">div</span> ، قم بإزالة السمة <span dir="ltr" class="br-spec nw">id</span> وأضف السمة <span dir="ltr" class="br-spec nw">class</span> إلى وسم البداية الخاص بالعنصر <span dir="ltr" class="br-spec nw">div</span> ؛ وتأكد من ضبط قيمة الفئة لتكون <span dir="ltr" class="br-spec nw">menu</span>.
+            </p>
+            
+        </section>
+
+        <!-- STEP 24 -->
+        <section>
+            <h4>الخطوة 24</h4>
+            <p>
+                بما أن المنتج الرئيسي الذي يبيعه المقهى هو القهوة، فيمكنك استخدام صورة لحبوب القهوة كـ"خلفية للصفحة" (page background).
+            </p>
+            <p>
+                احذف التعليق ومحتوياته الموجودة داخل مُحدِّد العنصر <span dir="ltr" class="br-spec nw">body</span>. بعد ذلك، أضف الخاصية <span dir="ltr" class="br-spec nw">background-image</span> واضبط قيمتها على <p style="overflow-x: auto;"><span dir="ltr" class="br-spec nw">url(https://openarabtech.github.io/CSSVerse/src/assets/beans.jpg)</span></p>
+            </p>
+            
+        </section>
+
+        <!-- STEP 25 -->
+        <section>
+            <h4>الخطوة 25</h4>
+            <p>
+                الآن وقد أصبحت الأمور تبدو جيدة، حان الوقت للبدء في إضافة بعض عناصر القائمة (menu items).
+            </p>
+            <p>
+                أضف عنصر <span dir="ltr" class="br-spec nw">article</span> فارغاً أسفل العنوان <span dir="rtl" class="br-spec nw">قهوة</span> . سيحتوي هذا العنصر على نكهة وسعر أحد أنواع القهوة التي تقدمها حالياً.
+            </p>
+            
+        </section>
+
+        <!-- STEP 26 -->
+        <section>
+            <h4>الخطوة 26</h4>
+            <p>
+                عادةً ما تشتمل عناصر المقال <span dir="ltr" class="br-spec nw">article</span> على عناصر متعددة تتضمن معلومات مترابطة؛ ففي هذه الحالة، سيحتوي العنصر على نكهة القهوة وسعر تلك النكهة.
+            </p>
+            <p>
+                ضع عنصرين من نوع <span dir="ltr" class="br-spec nw">p</span> داخل عنصر المقال <span dir="ltr" class="br-spec nw">article</span>. يجب أن يكون نص العنصر الأول <span dir="rtl" class="br-spec nw">فانيليا فرنسية</span> ، ونص العنصر الثاني <span dir="ltr" class="br-spec nw">3.00</span>.
+            </p>
+            
+        </section>
+
+        <!-- STEP 27 -->
+        <section>
+            <h4>الخطوة 27</h4>
+            <p>
+                بدءاً من أسفل زوج القهوة والسعر الحالي، أضف أنواع القهوة والأسعار التالية باستخدام عناصر <span dir="ltr" class="br-spec nw">article</span> بحيث يحتوي كل منها على عنصرَي <span dir="ltr" class="br-spec nw">p</span> "متداخلين" (nested).
+            </p>
+            
+            <h5>نموذج للكود البرمجي</h5>
+            <div class="code-block">
+                <pre><code>
+<span dir="rtl" class="txt">كاراميل ماكياتو 3.75</span>
+<span dir="rtl" class="txt">توابل اليقطين 3.50</span>
+<span dir="rtl" class="txt">بندق 4.00</span>
+<span dir="rtl" class="txt">موكا 4.50</span>
+                </code></pre>
+            </div>
+            <p>
+                كما في السابق، يجب أن يحتوي نص عنصر الفقرة <span dir="ltr" class="br-spec nw">p</span> الأول على نكهة القهوة، بينما يجب أن يحتوي نص عنصر الفقرة <span dir="ltr" class="br-spec nw">p</span> الثاني على السعر.
+            </p>
+            
+        </section>
+
+        <!-- STEP 28 -->
+        <section>
+            <h4>الخطوة 28</h4>
+            <p>
+                تظهر النكهات والأسعار حالياً مكدسة فوق بعضها البعض وتتوسط عناصر الفقرة <span dir="ltr" class="br-spec nw">p</span> الخاصة بها؛ وسيكون من الأفضل لو كانت  النكهة على اليمين والسعر على اليسار.
+            </p>
+            <p>
+                أضف اسم الفئة <span dir="ltr" class="br-spec nw">flavor</span> إلى عنصر <span dir="rtl" class="br-spec nw">فانيليا فرنسية</span>.
+            </p>
+            
+        </section>
+
+        <!-- STEP 29 -->
+        <section>
+            <h4>الخطوة 29</h4>
+            <p>
+               باستخدام فئة النكهة <span dir="ltr" class="nw">(<span class="br-spec">flavor</span> class)</span> الجديدة كمُحدِّد، اضبط قيمة الخاصية <span dir="ltr" class="br-spec nw">text-align</span> على <span dir="ltr" class="br-spec nw">right</span>. 
+            </p>        
+        </section>
+
+        <!-- STEP 30 -->
+        <section>
+            <h4>الخطوة 30</h4>
+            <p>
+                بعد ذلك، عليك محاذاة السعر إلى اليسار. أضف فئة (class) باسم <span dir="ltr" class="br-spec nw">price</span> إلى عنصر الفقرة <span dir="ltr" class="br-spec nw">p</span> الذي يحتوي على النص <span dir="ltr" class="br-spec nw">3.00</span>.
+            </p>       
+        </section>
+
+        <!-- STEP 31 -->
+        <section>
+            <h4>الخطوة 31</h4>
+            <p>
+                الآن، قم بمحاذاة النص إلى اليسار <span dir="ltr" class="br-spec nw">left</span> للعناصر التي تحمل فئة <span dir="ltr" class="br-spec nw">price</span>.
+            </p>       
+        </section>
+
+        <!-- STEP 32 -->
+        <section>
+            <h4>الخطوة 32</h4>
+            <p>
+                هذا هو ما تريده تقريباً، ولكن سيكون من الجيد الآن أن يظهر كل من النكهة والسعر على السطر نفسه؛ فالعناصر من النوع <span dir="ltr" class="br-spec nw">p</span> تُعد عناصر "مستوى الكتلة" (block-level elements)، ولذلك فهي تشغل العرض الكامل للعنصر الأب (parent element).
+            </p>
+            <p>
+                لجعلها على نفس الخط، تحتاج إلى تطبيق بعض التنسيقات على عناصر <span dir="ltr" class="br-spec nw">p</span> بحيث تتصرف بشكل أشبه بالعناصر المضمنة (inline elements).
+            </p>
+            <p>
+                للقيام بذلك، ابدأ بإضافة سمة <span dir="ltr" class="br-spec nw">class</span> بقيمة <span dir="ltr" class="br-spec nw">item</span> إلى عنصر <span dir="ltr" class="br-spec nw">article</span> الأول الموجود تحت العنوان <span dir="rtl" class="br-spec nw">قهوة</span>.
+            </p>       
+        </section>
+
+        <!-- STEP 33 -->
+        <section>
+            <h4>الخطوة 33</h4>
+            <p>
+                توجد عناصر <span dir="ltr" class="br-spec nw">p</span> متداخلةً داخل عنصر <span dir="ltr" class="br-spec nw">article</span> يحمل السمة <span dir="ltr" class="br-spec nw">class</span> بالقيمة <span dir="ltr" class="br-spec nw">item</span>. 
+ويمكنك تنسيق جميع عناصر <span dir="ltr" class="br-spec nw">p</span> المتداخلة في أي مكان داخل عناصر تحمل الفئة (class) المسماة <span dir="ltr" class="br-spec nw">item</span> على النحو التالي:
+            </p>
+
+            <h5>نموذج للكود البرمجي</h5>
+            <div class="code-block">
+                <pre><code>
+<span class="tag-b">.item p</span> <span class="attr">{ }</span>
+                </code></pre>
+            </div>
+
+            <p>
+                باستخدام المُحدِّد (selector) المذكور أعلاه، أضف الخاصية <span dir="ltr" class="br-spec nw">display</span> بقيمة <span dir="ltr" class="br-spec nw">inline-block</span> لتصبح عناصر <span dir="ltr" class="br-spec nw">p</span> أقرب في سلوكها إلى العناصر المضمنة (inline elements).
+            </p>
+        </section>
+
+        <!-- STEP 34 -->
+        <section>
+            <h4>الخطوة 34</h4>
+            <p>
+                هذا أقرب إلى النتيجة المطلوبة، لكن السعر لم يظل في جهة اليمين؛ والسبب في ذلك هو أن العناصر من النوع (inline-block) تشغل فقط مساحة العرض الخاصة بمحتواها.
+            </p>
+            <p>
+                لتوزيعها، أضف خاصية العرض <span dir="ltr" class="br-spec nw">width</span> بقيمة <span dir="ltr" class="br-spec nw">50%</span> إلى كل من محددات الفئة (class selectors) الخاصة بالنكهة <span dir="ltr" class="br-spec nw">flavor</span> والسعر <span dir="ltr" class="br-spec nw">price</span>.
+            </p>      
+        </section>
+
+        <!-- STEP 35 -->
+        <section>
+            <h4>الخطوة 35</h4>
+            <p>
+                حسناً، لم ينجح ذلك. إن ضبط نمط عناصر <span dir="ltr" class="br-spec nw">p</span> ليكون <span dir="ltr" class="br-spec nw">inline-block</span> ووضعها في أسطر منفصلة يُنشئ مسافة إضافية إلى يسار عنصر <span dir="ltr" class="br-spec nw">p</span> الأول، مما يؤدي إلى انتقال العنصر الثاني إلى السطر التالي.
+            </p>
+            <p>
+                إحدى طرق معالجة ذلك هي جعل عرض كل عنصر من عناصر الفقرة <span dir="ltr" class="br-spec nw">p</span> أقل بقليل من <span dir="ltr" class="br-spec nw">50%</span>؛ لذا، غيّر قيمة العرض <span dir="ltr" class="br-spec nw">width</span> إلى <span dir="ltr" class="br-spec nw">49%</span> لكل فئة (class) لترى النتيجة.
+            </p>     
+        </section>
+
+        <!-- STEP 36 -->
+        <section>
+            <h4>الخطوة 36</h4>
+            <p>
+                لقد نجح ذلك، ولكن لا تزال هناك مسافة صغيرة على يسار السعر.
+            </p>
+            <p>
+                يمكنك الاستمرار في تجربة نسب مئوية مختلفة للعرض، ولكن بدلاً من ذلك، استخدم مفتاح (Backspace) لنقل عنصر <span dir="ltr" class="br-spec nw">p</span> الذي يحمل الفئة <span dir="ltr" class="br-spec nw">price</span> ليصبح بجوار عنصر <span dir="ltr" class="br-spec nw">p</span> الذي يحمل الفئة <span dir="ltr" class="br-spec nw">flavor</span> ، بحيث يظهران على السطر نفسه في المحرر. تأكد من عدم وجود مسافة فاصلة بين العنصرين.
+            </p>   
+        </section>
+
+        <!-- STEP 37 -->
+        <section>
+            <h4>الخطوة 37</h4>
+            <p>الآن، قم بتغيير عرض كل من فئات النكهة <span dir="ltr" class="br-spec nw">flavor</span> وفئات السعر <span dir="ltr" class="br-spec nw">price</span> ليكون <span dir="ltr" class="br-spec nw">50%</span> مرة أخرى.</p>
+        </section>
+
+        <!-- STEP 38 -->
+        <section>
+            <h4>الخطوة 38</h4>
+            <p>
+                الآن بعد أن تأكدت من أن الأمر ينجح، يمكنك تعديل بقية عناصر <span dir="ltr" class="br-spec nw">article</span> و <span dir="ltr" class="br-spec nw">p</span> لتطابق المجموعة الأولى. ابدأ بإضافة الفئة (class) المسماة <span dir="ltr" class="br-spec nw">item</span> إلى عناصر <span dir="ltr" class="br-spec nw">article</span> الأخرى.
+            </p>
+        </section>
+
+        <!-- STEP 39 -->
+        <section>
+            <h4>الخطوة 39</h4>
+            <p>
+                بعد ذلك، ضع عناصر <span dir="ltr" class="br-spec nw">p</span> الأخرى على السطر نفسه بحيث لا توجد مسافة بينها.
+            </p>
+        </section>
+
+        <!-- STEP 40 -->
+        <section>
+            <h4>الخطوة 40</h4>
+            <p>
+                لإكمال عملية التنسيق، أضف أسماء الفئات (class names) المناسبة — <span dir="ltr" class="br-spec nw">flavor</span> و <span dir="ltr" class="br-spec nw">price</span> — إلى جميع عناصر <span dir="ltr" class="br-spec nw">p</span> المتبقية.
+            </p>
+        </section>
+
+        <!-- STEP 41 -->
+        <section>
+            <h4>الخطوة 41</h4>
+            <p>
+                إذا قمت بتقليل عرض معاينة الصفحة، فستلاحظ عند نقطة معينة أن بعض النصوص الموجودة على اليمين تبدأ في الانتقال إلى السطر التالي؛ ويعود ذلك إلى أن عرض عناصر الفقرة <span dir="ltr" class="br-spec nw">p</span> الموجودة على الجانب الأيمن لا يمكن أن يشغل سوى <span dir="ltr" class="br-spec nw">50%</span> من المساحة.
+            </p>
+            <p>
+                بما أن الأسعار الموجودة على اليسار تتكون من عدد أقل بكثير من الأحرف، قم بتعديل عرض <span dir="ltr" class="br-spec nw">width</span> فئة النكهة <span dir="ltr" class="br-spec nw">flavor</span> ليصبح <span dir="ltr" class="br-spec nw">75%</span> وعرض <span dir="ltr" class="br-spec nw">width</span> فئة السعر <span dir="ltr" class="br-spec nw">price</span> ليصبح <span dir="ltr" class="br-spec nw">25%</span>.
+            </p>
+        </section>
+
+        <!-- STEP 42 -->
+        <section>
+            <h4>الخطوة 42</h4>
+            <p>
+                ستعود لتنسيق القائمة (menu) بعد بضع خطوات، ولكن في الوقت الحالي، قم بإضافة عنصر قسم <span dir="ltr" class="br-spec nw">section</span> ثانٍ أسفل القسم الأول لعرض أصناف الحلوى التي يقدمها المقهى.
+            </p>
+        </section>
+
+        <!-- STEP 43 -->
+        <section>
+            <h4>الخطوة 43</h4>
+            <p>
+                أضف عنصر <span dir="ltr" class="br-spec nw">h2</span> في القسم الجديد واجعل نصه <span dir="rtl" class="br-spec nw">الحلويات</span>.
+            </p>
+        </section>
+
+        <!-- STEP 44 -->
+        <section>
+            <h4>الخطوة 44</h4>
+            <p>
+                أضف عنصر <span dir="ltr" class="br-spec nw">article</span> فارغاً أسفل العنوان <span dir="rtl" class="br-spec nw">الحلويات</span> ، وامنحه سمة <span dir="ltr" class="br-spec nw">class</span> بقيمة <span dir="ltr" class="br-spec nw">item</span>.
+            </p>
+        </section>
+
+        <!-- STEP 45 -->
+        <section>
+            <h4>الخطوة 45</h4>
+            <p>
+                ضع عنصرَي <span dir="ltr" class="br-spec nw">p</span> داخل عنصر <span dir="ltr" class="br-spec nw">article</span>. يجب أن يكون نص العنصر الأول <span dir="rtl" class="br-spec nw">كعكة محلاة</span> ، ونص العنصر الثاني <span dir="ltr" class="br-spec nw">1.50</span>. ضعهما معاً في السطر نفسه، مع الحرص على عدم وجود مسافة بينهما.
+            </p>
+        </section>
+
+        <!-- STEP 46 -->
+        <section>
+            <h4>الخطوة 46</h4>
+            <p>
+                بالنسبة لعنصري الفقرة <span dir="ltr" class="br-spec nw">p</span> اللذين أضفتهما للتو، اجعل القيمة <span dir="ltr" class="br-spec nw">dessert</span> هي قيمة السمة <span dir="ltr" class="br-spec nw">class</span> لعنصر الفقرة الأول، والقيمة <span dir="ltr" class="br-spec nw">price</span> هي قيمة السمة <span dir="ltr" class="br-spec nw">class</span> لعنصر الفقرة الثاني.
+            </p>
+        </section>
+
+        <!-- STEP 47 -->
+        <section>
+            <h4>الخطوة 47</h4>
+            <p>
+                يبدو أن هناك خطأً ما؛ فقد أضفتَ القيمة الصحيحة لسمة <span dir="ltr" class="br-spec nw">class</span> إلى عنصر <span dir="ltr" class="br-spec nw">p</span> الذي يحتوي على النص <span dir="rtl" class="br-spec nw">كعكة محلاة</span> ، لكنك لم تُعرِّف مُحدِّداً (selector) له.
+            </p>
+            <p>
+                تُحدِّد قاعدة CSS الخاصة بالفئة <span dir="ltr" class="br-spec nw">flavor</span> بالفعل الخصائص التي تريدها؛ لذا أضف الفئة <span dir="ltr" class="br-spec nw">dessert</span> كمُحدِّد إضافي لقاعدة CSS هذه.
+            </p>
+        </section>
+
+        <!-- STEP 48 -->
+        <section>
+            <h4>الخطوة 48</h4>
+            <p>
+                أسفل الحلوى التي أضفتها للتو، أضف بقية أصناف الحلوى وأسعارها باستخدام ثلاثة عناصر <span dir="ltr" class="br-spec nw">article</span> إضافية، بحيث يحتوي كل منها على عنصرَي <span dir="ltr" class="br-spec nw">p</span> متداخلين. يجب أن يتضمن كل عنصر النص الصحيح للصنف والسعر، وأن تحمل جميعها فئات (classes) صحيحة.
+            </p>
+            
+            <h5>نموذج للكود البرمجي</h5>
+            <div class="code-block">
+                <pre><code>
+<span dir="rtl" class="txt">فطيرة الكرز  2.75</span>
+<span dir="rtl" class="txt">تشيز كيك  3.00</span>
+<span dir="rtl" class="txt">لفائف القرفة 2.50</span>
+                </code></pre>
+            </div>
+            
+        </section>
+
+        <!-- STEP 49 -->
+        <section>
+            <h4>الخطوة 49</h4>
+            <p>
+                يمكنك إضافة مسافة بين المحتوى وجوانب القائمة (menu) باستخدام خصائص الهوامش الداخلية <span dir="ltr" class="br-spec nw">padding</span> المتنوعة.
+            </p>
+            <p>
+                امنح فئة القائمة <span dir="ltr" class="nw">(<span class="br-spec">menu</span> class)</span> هامشاً داخلياً من اليسار <span dir="ltr" class="br-spec nw">padding-left</span> ومن اليمين <span dir="ltr" class="br-spec nw">padding-right</span> بقيمة <span dir="ltr" class="br-spec nw">20px</span> لكل منهما.
+            </p>
+        </section>
+
+        <!-- STEP 50 -->
+        <section>
+            <h4>الخطوة 50</h4>
+            <p>
+                يبدو ذلك أفضل. الآن، حاول إضافة نفس الهامش الداخلي <span dir="ltr" class="br-spec nw">padding</span> بمقدار <span dir="ltr" class="br-spec nw">20px</span> إلى أعلى القائمة وأسفلها.
+            </p>
+        </section>
+
+        <!-- STEP 51 -->
+        <section>
+            <h4>الخطوة 51</h4>
+            <p>
+                بما أن جميع جوانب القائمة الأربعة لها نفس المسافة الداخلية، قم بإزالة الخصائص الأربع واستخدم خاصية حشوة <span dir="ltr" class="br-spec nw">padding</span> واحدة بقيمة <span dir="ltr" class="br-spec nw">20px</span>.
+            </p>
+        </section>
+
+        <!-- STEP 52 -->
+        <section>
+            <h4>الخطوة 52</h4>
+            <p>سيشغل العرض الحالي للقائمة (menu) دائمًا 80% من عرض عنصر الجسم <span dir="ltr" class="br-spec nw">body</span>. وفي الشاشات العريضة للغاية، تظهر أصناف القهوة والحلوى بعيدةً جدًا عن أسعارها.</p>
+            <p>أضف خاصية <span dir="ltr" class="br-spec nw">max-width</span> إلى الفئة <span dir="ltr" class="br-spec nw">menu</span> بقيمة <span dir="ltr" class="br-spec nw">500px</span> لمنعها من أن تصبح عريضة للغاية.</p>
+        </section>
+
+        <!-- STEP 53 -->
+        <section>
+            <h4>الخطوة 53</h4>
+            <p>
+                يمكنك تغيير نوع الخط <span dir="ltr" class="br-spec nw">font-family</span> للنص لجعله يبدو مختلفاً عن الخط الافتراضي للمتصفح؛ إذ تتوفر لدى كل متصفح مجموعة من الخطوط الشائعة.
+            </p>
+            <p>
+                قم بتغيير النص بالكامل في عنصر <span dir="ltr" class="br-spec nw">body</span> عن طريق إضافة الخاصية <span dir="ltr" class="br-spec nw">font-family</span> بقيمة <span dir="ltr" class="br-spec nw">sans-serif</span>؛ إذ يُعد هذا الخط شائعاً للغاية وسهل القراءة
+            </p>
+        </section>
+
+        <!-- STEP 54 -->
+        <section>
+            <h4>الخطوة 54</h4>
+            <p>
+                قد يبدو الأمر مملاً بعض الشيء إذا استُخدم نوع الخط <span dir="ltr" class="br-spec nw">font-family</span> نفسه لجميع النصوص؛ إذ يمكنك الإبقاء على معظم النصوص بخط <span dir="ltr" class="br-spec nw">sans-serif</span> ، مع تمييز عنصري العنوان <span dir="ltr" class="br-spec nw">h1</span> و <span dir="ltr" class="br-spec nw">h2</span> فقط باستخدام مُحدِّد (selector) مختلف.
+            </p>
+            <p>
+                نسّق عنصري <span dir="ltr" class="br-spec nw">h1</span> و <span dir="ltr" class="br-spec nw">h2</span> باستخدام قائمة مُحدِّدات واحدة، بحيث يظهر النص فيهما بخط <span dir="ltr" class="br-spec nw">Impact</span>.
+            </p>
+        </section>
+
+        <!-- STEP 55 -->
+        <section>
+            <h4>الخطوة 55</h4>
+            <p>
+                يمكنك إضافة خط بديل (fallback value) لخاصية <span dir="ltr" class="br-spec nw">font-family</span> عن طريق إضافة اسم خط آخر مفصول بفاصلة (comma)؛ حيث يُستخدم هذا الخط البديل (fallback font) في حال عدم توفر الخط الأول.
+            </p>
+            <p>
+                أضف الخط البديل من نوع <span dir="ltr" class="br-spec nw">serif</span> بعد خط <span dir="ltr" class="br-spec nw">Impact</span>.
+            </p>
+        </section>
+
+        <!-- STEP 56 -->
+        <section>
+            <h4>الخطوة 56</h4>
+            <p>
+                اجعل عبارة <span dir="rtl" class="br-spec nw">تأسست عام 2025</span> مائلةً (Italic) عن طريق إنشاء مُحدِّد فئة (class selector) باسم <span dir="ltr" class="br-spec nw">established</span> وتعيين الخاصية <span dir="ltr" class="br-spec nw">font-style</span> له بقيمة <span dir="ltr" class="br-spec nw">italic</span>.
+            </p>
+        </section>
+
+        <!-- STEP 57 -->
+        <section>
+            <h4>الخطوة 57</h4>
+            <p>
+                الآن، طبّق الفئة المُعَدَّة مسبقاً <span dir="ltr" class="br-spec nw">established</span> على النص <span dir="rtl" class="br-spec nw">تأسست عام 2025</span>.
+            </p>
+        </section>
+
+        <!-- STEP 58 -->
+        <section>
+            <h4>الخطوة 58</h4>
+            <p>
+                يتم تحديد خصائص الخط (typography) لعناصر العناوين (مثل <span dir="ltr" class="br-spec nw">h1</span> و <span dir="ltr" class="br-spec nw">h2</span>) وفقاً للقيم الافتراضية في متصفحات المستخدمين.
+            </p>
+            <p>
+                أضف مُحدِّدي نوع (type selectors) جديدين ( <span dir="ltr" class="br-spec nw">h1</span> و <span dir="ltr" class="br-spec nw">h2</span> ). استخدم الخاصية <span dir="ltr" class="br-spec nw">font-size</span> لكليهما، ولكن استخدم القيمة <span dir="ltr" class="br-spec nw">40px</span> للعنصر <span dir="ltr" class="br-spec nw">h1</span> والقيمة <span dir="ltr" class="br-spec nw">30px</span> للعنصر <span dir="ltr" class="br-spec nw">h2</span>.
+            </p>
+        </section>
+
+        <!-- STEP 59 -->
+        <section>
+            <h4>الخطوة 59</h4>
+            <p>
+                أضف عنصراً تذييلياً <span dir="ltr" class="br-spec nw">footer</span> أسفل العنصر الرئيسي <span dir="ltr" class="br-spec nw">main</span> ، حيث يمكنك إضافة بعض المعلومات الإضافية.
+            </p>
+        </section>
+
+        <!-- STEP 60 -->
+        <section>
+            <h4>الخطوة 60</h4>
+            <p>
+                أضف عنصر عنوان <span dir="ltr" class="br-spec nw">address</span> داخل التذييل <span dir="ltr" class="br-spec nw">footer</span>. وستقوم بإضافة معلومات الاتصال إلى هذا العنصر في الخطوات القليلة التالية.
+            </p>
+        </section>
+
+        <!-- STEP 61 -->
+        <section>
+            <h4>الخطوة 61</h4>
+            <p>
+                أضف عنصر <span dir="ltr" class="br-spec nw">p</span> داخل عنصر <span dir="ltr" class="br-spec nw">address</span>. ثم قم بتضمين عنصر رابط <span dir="ltr" class="br-spec nw">a</span> داخل عنصر <span dir="ltr" class="br-spec nw">p</span> هذا، بحيث يشير الرابط إلى <span dir="ltr" class="br-spec nw">https://openarabtech.github.io</span> ويحمل النص <span dir="rtl" class="br-spec nw">تفضل بزيارة موقعنا الإلكتروني</span>.
+            </p>
+            <p>
+                تأكد من فتح الرابط في علامة تبويب جديدة عن طريق إضافة السمة <span dir="ltr" class="br-spec nw">target</span> بقيمة <span dir="ltr" class="br-spec nw">_blank</span>.
+            </p>
+        </section>
+
+        <!-- STEP 62 -->
+        <section>
+            <h4>الخطوة 62</h4>
+            <p>
+                أضف عنصر <span dir="ltr" class="br-spec nw">p</span> ثانياً أسفل العنصر الذي يحتوي على الرابط، واجعل نصه: <span dir="rtl" class="br-spec nw">123 مبادرة التقنية العربية المفتوحة</span>.
+            </p>
+        </section>
+
+        <!-- STEP 63 -->
+        <section>
+            <h4>الخطوة 63</h4>
+            <p>
+                يمكنك استخدام عنصر <span dir="ltr" class="br-spec nw">hr</span> لعرض فاصل بين أقسام ذات محتوى مختلف.
+            </p>
+            
+            <h5>نموذج للكود البرمجي</h5>
+            <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;section&gt;
+ &lt;h2&gt;<span dir="rtl" class="txt">أشياء تحبها القطط</span>&lt;/h2&gt;
+ &lt;hr&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">تحب القطط اللازانيا.</span>&lt;/p&gt;
+&lt;/section&gt;</span>
+                </code></pre>
+            </div>
+            <p>
+                أولاً، أضف عنصر <span dir="ltr" class="br-spec nw">hr</span> بين عنصر <span dir="ltr" class="br-spec nw">p</span> الذي يحمل الفئة <span dir="ltr" class="br-spec nw">established</span> وعنصر <span dir="ltr" class="br-spec nw">section</span> الأول.
+            </p>
+            <p>
+                لاحظ أن العنصر <span dir="ltr" class="br-spec nw">hr</span> هو عنصر فارغ (void element).
+            </p>
+            
+        </section>
+
+        <!-- STEP 64 -->
+        <section>
+            <h4>الخطوة 64</h4>
+            <p>
+                تؤدي الخصائص الافتراضية (default properties) لعنصر <span dir="ltr" class="br-spec nw">hr</span> إلى ظهوره كخط رفيع باللون الرمادي الفاتح. ويمكنك تغيير ارتفاع الخط عن طريق تحديد قيمة للخاصية <span dir="ltr" class="br-spec nw">height</span>.
+            </p>
+            <p>
+                غيّر ارتفاع عنصر <span dir="ltr" class="br-spec nw">hr</span> إلى <span dir="ltr" class="br-spec nw">3px</span>.
+            </p>
+        </section>
+
+        <!-- STEP 65 -->
+        <section>
+            <h4>الخطوة 65</h4>
+            <p>
+                غيّر لون خلفية (background color) العنصر <span dir="ltr" class="br-spec nw">hr</span> إلى اللون البني <span dir="ltr" class="br-spec nw">brown</span> ليتماشى مع لون حبوب القهوة.
+            </p>
+        </section>
+
+        <!-- STEP 66 -->
+        <section>
+            <h4>الخطوة 66</h4>
+            <p>
+                لاحظ اللون الرمادي على طول حواف الخط؛ وتُعرف هذه الحواف باسم "الحدود" (borders). يمكن أن يكون لكل جانب من جوانب العنصر لون مختلف، أو يمكن أن تكون جميعها بنفس اللون.
+            </p>
+            <p>
+                اجعل جميع حواف العنصر <span dir="ltr" class="br-spec nw">hr</span> بنفس لون خلفيته باستخدام الخاصية <span dir="ltr" class="br-spec nw">border-color</span>.
+            </p>
+        </section>
+
+        <!-- STEP 67 -->
+        <section>
+            <h4>الخطوة 67</h4>
+            <p>
+                لاحظ كيف يبدو سُمك (thickness) الخط أكبر؟ تبلغ القيمة الافتراضية للخاصية المسماة <span dir="ltr" class="br-spec nw">border-width</span> بكسلًا واحدًا <span dir="ltr" class="br-spec nw">1px</span> لجميع حواف عناصر <span dir="ltr" class="br-spec nw">hr</span>. 
+                لقد كان الارتفاع الإجمالي للخط دائمًا <span dir="ltr" class="br-spec nw">5px</span> (3 بكسلات مضافاً إليها بكسل واحد لكل من الحدين العلوي والسفلي)؛ وقد أدى تلوين الحدود إلى جعل تلك الحواف مرئية.
+            </p>
+            <p>
+                غيّر خاصية الارتفاع <span dir="ltr" class="br-spec nw">height</span> للعنصر <span dir="ltr" class="br-spec nw">hr</span> لتصبح <span dir="ltr" class="br-spec nw">2px</span> ، بحيث يصبح إجمالي ارتفاعه <span dir="ltr" class="br-spec nw">4px</span> .
+            </p>
+        </section>
+
+        <!-- STEP 68 -->
+        <section>
+            <h4>الخطوة 68</h4>
+            <p>
+                تفضل بإضافة عنصر <span dir="ltr" class="br-spec nw">hr</span> آخر بين العنصر الرئيسي <span dir="ltr" class="br-spec nw">main</span> وعنصر التذييل <span dir="ltr" class="br-spec nw">footer</span>.
+            </p>
+        </section>
+
+        <!-- STEP 69 -->
+        <section>
+            <h4>الخطوة 69</h4>
+            <p>
+                لتوفير مساحة إضافية قليلاً حول القائمة، أضف مسافة قدرها <span dir="ltr" class="br-spec nw">20px</span> داخل عنصر الجسم <span dir="ltr" class="br-spec nw">body</span> باستخدام خاصية الحشو <span dir="ltr" class="br-spec nw">padding</span>.
+            </p>
+        </section>
+
+        <!-- STEP 70 -->
+        <section>
+            <h4>الخطوة 70</h4>
+            <p>
+                عند التركيز على أصناف القائمة (menu items) والأسعار (prices)، نجد فجوة كبيرة نوعاً ما بين كل سطر وآخر.
+            </p>
+            <p>
+                استخدم المُحدِّد الحالي الذي يستهدف جميع عناصر <span dir="ltr" class="br-spec nw">p</span> المتداخلة داخل عناصر تحمل الفئة (class) المسماة <span dir="ltr" class="br-spec nw">item</span> ، واضبط الهامش (margin) العلوي والسفلي لها ليصبح <span dir="ltr" class="br-spec nw">5px</span>.
+            </p>
+        </section>
+
+        <!-- STEP 71 -->
+        <section>
+            <h4>الخطوة 71</h4>
+            <p>
+                باستخدام مُحدِّد النمط (style selector) نفسه المُستخدم في الخطوة السابقة، اجعل حجم خط (font size) العناصر والأسعار (items and prices) أكبر بتعيين القيمة <span dir="ltr" class="br-spec nw">18px</span>.
+            </p>
+        </section>
+
+        <!-- STEP 72 -->
+        <section>
+            <h4>الخطوة 72</h4>
+            <p>
+                يبدو تغيير قيمة <span dir="ltr" class="br-spec nw">margin-bottom</span> إلى <span dir="ltr" class="br-spec nw">5px</span> رائعاً. ومع ذلك، فإن المسافة بين عنصر القائمة <span dir="rtl" class="br-spec nw">لفائف القرفة</span> وعنصر <span dir="ltr" class="br-spec nw">hr</span> الثاني لا تتطابق الآن مع المسافة بين عنصر <span dir="ltr" class="br-spec nw">hr</span> العلوي وعنوان <span dir="rtl" class="br-spec nw">قهوة</span>.
+            </p>
+            <p>
+                أضف المزيد من المساحة عن طريق إنشاء فئة (class) باسم <span dir="ltr" class="br-spec nw">bottom-line</span> وتعيين القيمة <span dir="ltr" class="br-spec nw">25px</span> للخاصية <span dir="ltr" class="br-spec nw">margin-top</span>.
+            </p>
+        </section>
+
+        <!-- STEP 73 -->
+        <section>
+            <h4>الخطوة 73</h4>
+            <p>
+                الآن، أضف الفئة <span dir="ltr" class="br-spec nw">bottom-line</span> إلى عنصر <span dir="ltr" class="br-spec nw">hr</span> الثاني ليتم تطبيق التنسيق.
+            </p>
+        </section>
+
+        <!-- STEP 74 -->
+        <section>
+            <h4>الخطوة 74</h4>
+            <p>
+                بعد ذلك، ستقوم بتنسيق عنصر التذييل <span dir="ltr" class="br-spec nw">footer</span>. وللحفاظ على تنظيم ملف CSS، أضف تعليقاً في نهاية ملف <span dir="ltr" class="br-spec nw">styles.css</span> يحتوي على النص <span dir="ltr" class="br-spec nw">FOOTER</span>.
+            </p>
+        </section>
+
+        <!-- STEP 75 -->
+        <section>
+            <h4>الخطوة 75</h4>
+            <p>
+                بالانتقال إلى عنصر التذييل <span dir="ltr" class="br-spec nw">footer</span> ، اجعل حجم الخط (font size) لجميع النصوص 14 بكسل <span dir="ltr" class="br-spec nw">14px</span>.
+            </p>
+        </section>
+
+        <!-- STEP 76 -->
+        <section>
+            <h4>الخطوة 76</h4>
+            <p>
+                يتمثل التنسيق الافتراضي لعنصر العنوان <span dir="ltr" class="br-spec nw">address</span> في ضبط نمط الخط <span dir="ltr" class="br-spec nw">font-style</span> ليكون مائلاً <span dir="ltr" class="br-spec nw">italic</span>. أضف مُحدِّداً (selector) لعنصر العنوان <span dir="ltr" class="br-spec nw">address</span> واضبط نمط الخط <span dir="ltr" class="br-spec nw">font-style</span> فيه ليكون عادياً <span dir="ltr" class="br-spec nw">normal</span>.
+            </p>
+        </section>
+
+        <!-- STEP 77 -->
+        <section>
+            <h4>الخطوة 77</h4>
+            <p>
+                عادةً ما يكون اللون الافتراضي للرابط (link) الذي لم يُنقر عليه بعد هو الأزرق (blue)، بينما يكون اللون الافتراضي للرابط (link) الذي سبق زيارته من الصفحة هو الأرجواني (purple).
+            </p>
+            <p>
+                لجعل روابط التذييل <span dir="ltr" class="nw">(<span class="br-spec">footer</span> link)</span> تظهر بنفس اللون بغض النظر عما إذا كان الرابط قد تمت زيارته أم لا، استخدم مُحدِّد النوع (type selector) لعنصر الرابط <span dir="ltr" class="br-spec nw">a</span> واضبط قيمة الخاصية <span dir="ltr" class="br-spec nw">color</span> على اللون الأسود <span dir="ltr" class="br-spec nw">black</span>.
+            </p>
+        </section>
+
+        <!-- STEP 78 -->
+        <section>
+            <h4>الخطوة 78</h4>
+            <p>
+                يمكنك تغيير خصائص الرابط بعد زيارته باستخدام مُحدِّد زائف (pseudo-selector) يأخذ الصيغة: <span dir="ltr" class="br-spec nw">a:visited { propertyName: propertyValue; }</span>.
+            </p>
+            <p>
+                غيّر لون رابط <span dir="rtl" class="br-spec nw">تفضل بزيارة موقعنا الإلكتروني</span> الموجود في التذييل إلى اللون الرمادي <span dir="ltr" class="br-spec nw">gray</span> بعد أن يقوم المستخدم بزيارة الرابط.
+            </p>
+        </section>
+
+        <!-- STEP 79 -->
+        <section>
+            <h4>الخطوة 79</h4>
+            <p>
+                يمكنك تغيير خصائص الرابط عند تحريك مؤشر الفأرة (hovers) فوقه باستخدام مُحدِّد زائف (pseudo-selector) يأخذ الصيغة: <span dir="ltr" class="br-spec nw">a:hover { propertyName: propertyValue; }</span>.
+            </p>
+            <p>
+                غيّر لون رابط <span dir="rtl" class="br-spec nw">تفضل بزيارة موقعنا الإلكتروني</span> الموجود في التذييل (footer) ليصبح بنيّاً <span dir="ltr" class="br-spec nw">brown</span> عند تمرير المستخدم مؤشر الماوس (hovers) فوقه.
+            </p>
+        </section>
+
+        <!-- STEP 80 -->
+        <section>
+            <h4>الخطوة 80</h4>
+            <p>
+                يمكنك تغيير خصائص الرابط عند النقر عليه (clicked) باستخدام مُحدِّد زائف (pseudo-selector) يأخذ الصيغة: <span dir="ltr" class="br-spec nw">a:active { propertyName: propertyValue; }</span>.
+            </p>
+            <p>
+                غيّر لون رابط <span dir="rtl" class="br-spec nw">تفضل بزيارة موقعنا الإلكتروني</span> الموجود في التذييل (footer) إلى اللون الأبيض <span dir="ltr" class="br-spec nw">white</span> عند النقر (clicked) عليه.
+            </p>
+        </section>
+
+        <!-- STEP 81 -->
+        <section>
+            <h4>الخطوة 81</h4>
+            <p>
+                للحفاظ على نسق الألوان الأسود (black) والبني (brown) الحالي، غيّر لون الرابط (link) عند زيارته (visited) إلى الأسود <span dir="ltr" class="br-spec nw">black</span> ، واستخدم اللون البني <span dir="ltr" class="br-spec nw">brown</span> عند النقر الفعلي (clicked) عليه.
+            </p>
+        </section>
+
+        <!-- STEP 82 -->
+        <section>
+            <h4>الخطوة 82</h4>
+            <p>
+                المسافة الموجودة أعلى نص القائمة <span dir="rtl" class="br-spec nw">مقهى التقنية</span> لا تتطابق مع المسافة الموجودة أسفل العنوان (address) في ذيل القائمة (bottom of the menu)؛ ويعود ذلك إلى وجود هامش علوي افتراضي (default top margin) يطبقه المتصفح على عنصر <span dir="ltr" class="br-spec nw">h1</span>.
+            </p>
+            <p>
+                غيّر الهامش العلوي (top margin) للعنصر <span dir="ltr" class="br-spec nw">h1</span> إلى <span dir="ltr" class="br-spec nw">0</span> لإزالة الهامش العلوي بالكامل.
+            </p>
+        </section>
+
+        <!-- STEP 83 -->
+        <section>
+            <h4>الخطوة 83</h4>
+            <p>
+                لتقليل بعض المساحة العمودية (vertical space) بين عنصر <span dir="ltr" class="br-spec nw">h1</span> والنص <span dir="rtl" class="br-spec nw">تأسست عام 2025</span> ، غيّر الهامش السفلي (bottom margin) للعنصر <span dir="ltr" class="br-spec nw">h1</span> إلى <span dir="ltr" class="br-spec nw">15px</span>.
+            </p>
+        </section>
+
+        <!-- STEP 84 -->
+        <section>
+            <h4>الخطوة 84</h4>
+            <p>
+                تبدو المسافة العلوية (top spacing) جيدة الآن؛ أما المسافة الموجودة أسفل العنوان (address) في ذيل القائمة (bottom of the menu) فهي أكبر قليلاً من المسافة الواقعة بين أعلى القائمة وعنصر <span dir="ltr" class="br-spec nw">h1</span>.
+            </p>
+            <p>
+                لتقليل مساحة الهامش الافتراضية (default margin space) أسفل عنصر الفقرة <span dir="ltr" class="br-spec nw">p</span> الذي يحتوي عنصر (address)، قم بإنشاء مُحدِّد فئة (class selector) باسم <span dir="ltr" class="br-spec nw">address</span> واستخدم القيمة <span dir="ltr" class="br-spec nw">5px</span> لخاصية الهامش السفلي <span dir="ltr" class="br-spec nw">margin-bottom</span>.
+            </p>
+        </section>
+
+        <!-- STEP 85 -->
+        <section>
+            <h4>الخطوة 85</h4>
+            <p>
+                الآن قم بتطبيق فئة العنوان <span dir="ltr" class="nw">(<span class="br-spec">address</span> class)</span> على عنصر <span dir="ltr" class="br-spec nw">p</span> الذي يحتوي على عنوان الشارع <span dir="rtl" class="br-spec nw">123 مبادرة التقنية العربية المفتوحة</span>.
+            </p>
+        </section>
+
+        <!-- STEP 86 -->
+        <section>
+            <h4>الخطوة 86</h4>
+            <p>
+                تبدو قائمة الطعام جيدة، ولكن باستثناء صورة الخلفية التي تظهر حبوب القهوة، فهي تتكون في الغالب من نصوص فقط.
+            </p>
+            <p>
+                تحت العنوان <span dir="rtl" class="br-spec nw">قهوة</span> ، أضف صورة باستخدام الرابط <p class="long-link"><span dir="ltr" class="br-spec nw">https://openarabtech.github.io/CSSVerse/src/assets/coffee.jpg</span></p> ، واجعل النص البديل <span dir="ltr" class="br-spec nw">alt</span> للصورة هو <span dir="rtl" class="br-spec nw">أيقونة القهوة</span>.
+            </p>
+        </section>
+
+        <!-- STEP 87 -->
+        <section>
+            <h4>الخطوة 87</h4>
+            <p>
+                الصورة التي أضفتها ليست متمركزة أفقيًا (not centered horizontally) مثل عنوان <span dir="rtl" class="br-spec nw">قهوة</span> الموجود فوقها؛ إذ تُعد عناصر <span dir="ltr" class="br-spec nw">img</span> عناصر من نوع "inline-level" (عناصر ضمن السطر)، ولذلك فهي تقع ضمن تدفق النص.
+            </p>
+            <p>
+                لجعل الصورة تتصرف كعنصر على مستوى الكتلة (block-level element) — مثل العنوان — قم بإنشاء مُحدِّد (selector) من النوع <span dir="ltr" class="br-spec nw">img</span>. 
+اضبط خاصية العرض <span dir="ltr" class="br-spec nw">display</span> على القيمة <span dir="ltr" class="br-spec nw">block</span> ، 
+واستخدم الخاصيتين <span dir="ltr" class="br-spec nw">margin-left</span> و <span dir="ltr" class="br-spec nw">margin-right</span> لمحاذاتها في المنتصف أفقيًا.
+            </p>
+        </section>
+
+        <!-- STEP 88 -->
+        <section>
+            <h4>الخطوة 88</h4>
+            <p>
+                أضف صورة أخيرة أسفل العنوان <span dir="rtl" class="br-spec nw">الحلويات</span> باستخدام الرابط <p class="long-link"><span dir="ltr" class="br-spec nw">https://openarabtech.github.io/CSSVerse/src/assets/pie.jpg</span></p> ، واجعل النص البديل <span dir="ltr" class="br-spec nw">alt</span> للصورة هو <span dir="rtl" class="br-spec nw">أيقونة فطيرة</span>.
+            </p>
+        </section>
+
+        <!-- STEP 89 -->
+        <section>
+            <h4>الخطوة 89</h4>
+            <p>
+                سيكون من الأفضل لو كانت المسافة العمودية (vertical space) بين عناصر <span dir="ltr" class="br-spec nw">h2</span> والأيقونات (icons) المرتبطة بها أقل؛ إذ تحتوي عناصر <span dir="ltr" class="br-spec nw">h2</span> افتراضياً على هوامش علوية وسفلية (default top and bottom margin space)، لذا يمكنك تعديل الهامش السفلي (bottom margin) لهذه العناصر <span dir="ltr" class="br-spec nw">h2</span> ليصبح صفراً <span dir="ltr" class="br-spec nw">0</span> أو أي قيمة أخرى.
+            </p>
+            <p>
+               هناك طريقة أسهل؛ ما عليك سوى إضافة هامش علوي سالب (negative top margin) إلى عناصر <span dir="ltr" class="br-spec nw">img</span> لسحبها للأعلى من مواقعها الحالية. 
+تُنشأ القيم السالبة بوضع علامة <span dir="ltr" class="br-spec nw">-</span> قبل القيمة. 
+ولإتمام هذه الورشة، استخدم هامشاً علوياً سالباً (negative top margin) بمقدار <span dir="ltr" class="br-spec nw">25px</span> ضمن مُحدِّد النوع <span dir="ltr" class="br-spec nw">img</span>. 
+            </p>
+            <p class="hinty">
+                تهانينا! لقد أتممت ورشة عمل قائمة مقهى.
+            </p>
+        </section>
+
+
+        
+    </section>
+
+    <section>
+        <br>
+		<h3>حل التطبيق :</h3>
+        <br>
+        <div class="codeFiles">
+        <p class="file-name">index.html</p>
+        <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span>قائمة المقهى<span class="tag">&lt;/title&gt;</span>
+  
+  <span class="value">&lt;!-- STEP 8 الخطوة 
+   &lt;style&gt;
+    h1, h2, p {
+     text-align: center;
+    }
+    h2 {
+     text-align: center;
+    }
+    p {
+     text-align: center;
+    }
+   &lt;/style&gt;
+  STEP 8 الخطوة --&gt;</span>
+  
+  <span class="value">&lt;!-- STEP 9 الخطوة 
+   &lt;style&gt;
+    h1, h2, p {
+     text-align: center;
+    }
+   &lt;/style&gt;
+  STEP 9 الخطوة --&gt;</span>
+
+  <span class="value">&lt;!-- STEP 12 الخطوة --&gt;</span>
+  <span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;</span>
+  <span class="value">&lt;!-- STEP 12 الخطوة --&gt;</span>
+
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+  <span class="tag">&lt;div <span class="attr">class=<span class="value">"menu"</span></span>&gt;
+   &lt;main&gt;
+    &lt;h1&gt;<span dir="rtl" class="txt">مقهى التقنية</span>&lt;/h1&gt;
+    &lt;p <span class="attr">class=<span class="value">"established"</span></span>&gt;<span dir="rtl" class="txt">تأسست عام 2025</span>&lt;/p&gt;
+    &lt;hr&gt;
+    &lt;section&gt;
+     &lt;h2&gt;<span dir="rtl" class="txt">قهوة</span>&lt;/h2&gt;
+     &lt;img <span class="attr">src=<span class="value">"https://openarabtech.github.io/CSSVerse/src/assets/coffee.jpg"</span> alt=<span class="value">"أيقونة القهوة"</span></span>&gt;
+     &lt;article <span class="attr">class=<span class="value">"item"</span></span>&gt;
+      &lt;p <span class="attr">class=<span class="value">"flavor"</span></span>&gt;<span dir="rtl" class="txt">فانيليا فرنسية</span>&lt;/p&gt;&lt;p <span class="attr">class=<span class="value">"price"</span></span>&gt;<span dir="rtl" class="txt">3.00</span>&lt;/p&gt;
+     &lt;/article&gt;
+     &lt;article <span class="attr">class=<span class="value">"item"</span></span>&gt;
+      &lt;p <span class="attr">class=<span class="value">"flavor"</span></span>&gt;<span dir="rtl" class="txt">كاراميل ماكياتو</span>&lt;/p&gt;&lt;p <span class="attr">class=<span class="value">"price"</span></span>&gt;<span dir="rtl" class="txt">3.75</span>&lt;/p&gt;
+     &lt;/article&gt;
+     &lt;article <span class="attr">class=<span class="value">"item"</span></span>&gt;
+      &lt;p <span class="attr">class=<span class="value">"flavor"</span></span>&gt;<span dir="rtl" class="txt">توابل اليقطين</span>&lt;/p&gt;&lt;p <span class="attr">class=<span class="value">"price"</span></span>&gt;<span dir="rtl" class="txt">3.50</span>&lt;/p&gt;
+     &lt;/article&gt;
+     &lt;article <span class="attr">class=<span class="value">"item"</span></span>&gt;
+      &lt;p <span class="attr">class=<span class="value">"flavor"</span></span>&gt;<span dir="rtl" class="txt">بندق</span>&lt;/p&gt;&lt;p <span class="attr">class=<span class="value">"price"</span></span>&gt;<span dir="rtl" class="txt">4.00</span>&lt;/p&gt;
+     &lt;/article&gt;
+     &lt;article <span class="attr">class=<span class="value">"item"</span></span>&gt;
+      &lt;p <span class="attr">class=<span class="value">"flavor"</span></span>&gt;<span dir="rtl" class="txt">موكا</span>&lt;/p&gt;&lt;p <span class="attr">class=<span class="value">"price"</span></span>&gt;<span dir="rtl" class="txt">4.50</span>&lt;/p&gt;
+     &lt;/article&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+     &lt;h2&gt;<span dir="rtl" class="txt">الحلويات</span>&lt;/h2&gt;
+     &lt;img <span class="attr">src=<span class="value">"https://openarabtech.github.io/CSSVerse/src/assets/pie.jpg"</span> alt=<span class="value">"أيقونة فطيرة"</span></span>&gt;
+     &lt;article <span class="attr">class=<span class="value">"item"</span></span>&gt;
+      &lt;p <span class="attr">class=<span class="value">"dessert"</span></span>&gt;<span dir="rtl" class="txt">كعكة محلاة</span>&lt;/p&gt;&lt;p <span class="attr">class=<span class="value">"price"</span></span>&gt;<span dir="rtl" class="txt">1.50</span>&lt;/p&gt;
+     &lt;/article&gt;
+     &lt;article <span class="attr">class=<span class="value">"item"</span></span>&gt;
+      &lt;p <span class="attr">class=<span class="value">"dessert"</span></span>&gt;<span dir="rtl" class="txt">فطيرة الكرز</span>&lt;/p&gt;&lt;p <span class="attr">class=<span class="value">"price"</span></span>&gt;<span dir="rtl" class="txt">2.75</span>&lt;/p&gt;
+     &lt;/article&gt;
+     &lt;article <span class="attr">class=<span class="value">"item"</span></span>&gt;
+      &lt;p <span class="attr">class=<span class="value">"dessert"</span></span>&gt;<span dir="rtl" class="txt">تشيز كيك</span>&lt;/p&gt;&lt;p <span class="attr">class=<span class="value">"price"</span></span>&gt;<span dir="rtl" class="txt">3.00</span>&lt;/p&gt;
+     &lt;/article&gt;
+     &lt;article <span class="attr">class=<span class="value">"item"</span></span>&gt;
+      &lt;p <span class="attr">class=<span class="value">"dessert"</span></span>&gt;<span dir="rtl" class="txt">لفائف القرفة</span>&lt;/p&gt;&lt;p <span class="attr">class=<span class="value">"price"</span></span>&gt;<span dir="rtl" class="txt">2.50</span>&lt;/p&gt;
+     &lt;/article&gt;
+    &lt;/section&gt;
+   &lt;/main&gt;
+   &lt;hr <span class="attr">class=<span class="value">"bottom-line"</span></span>&gt;
+   &lt;footer&gt;
+    &lt;address&gt;
+     &lt;p&gt;
+      &lt;a <span class="attr">href=<span class="value">"https://openarabtech.github.io"</span> target=<span class="value">"_blank"</span></span>&gt;<span dir="rtl" class="txt">تفضل بزيارة موقعنا الإلكتروني</span>&lt;/a&gt;
+     &lt;/p&gt;
+     &lt;p <span class="attr">class=<span class="value">"address"</span></span>&gt;
+      <span dir="rtl" class="txt">123 مبادرة التقنية العربية المفتوحة</span>
+     &lt;/p&gt;
+    &lt;/address&gt;
+   &lt;/footer&gt;
+  &lt;/div&gt;</span>
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+        </div>
+        <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">body</span> <span class="attr">{
+ background-image: <span class="txt">url(https://openarabtech.github.io/CSSVerse/src/assets/beans.jpg)</span>;
+ font-family: <span class="txt">sans-serif</span>;
+ padding: <span class="txt">20px</span>;
+}</span>
+
+<span class="tag-b">h1</span> <span class="attr">{
+ font-size: <span class="txt">40px</span>;
+ margin-top: <span class="txt">0</span>;
+ margin-bottom: <span class="txt">15px</span>;
+}</span>
+
+<span class="tag-b">h2</span> <span class="attr">{
+ font-size: <span class="txt">30px</span>;
+}</span>
+
+<span class="tag-b">.established</span> <span class="attr">{
+ font-style: <span class="txt">italic</span>;
+}</span>
+
+<span class="tag-b">h1, h2, p</span> <span class="attr">{
+ text-align: <span class="txt">center</span>;
+}</span>
+
+<span class="tag-b">.menu</span> <span class="attr">{
+ <span class="value">/* width: 300px; */</span>
+ width: <span class="txt">80%</span>;
+ background-color: <span class="txt">burlywood</span>;
+ margin-left: <span class="txt">auto</span>;
+ margin-right: <span class="txt">auto</span>;
+ padding: <span class="txt">20px</span>;
+ max-width: <span class="txt">500px</span>;
+}</span>
+
+<span class="tag-b">img</span> <span class="attr">{
+ display: <span class="txt">block</span>;
+ margin-left: <span class="txt">auto</span>;
+ margin-right: <span class="txt">auto</span>;
+ margin-top: <span class="txt">25px</span>;
+}</span>
+
+<span class="tag-b">hr</span> <span class="attr">{
+ height: <span class="txt">2px</span>;
+ background-color: <span class="txt">brown</span>;
+ border-color: <span class="txt">brown</span>;
+}</span>
+
+<span class="tag-b">.bottom-line</span> <span class="attr">{
+ margin-top: <span class="txt">25px</span>;
+}</span>
+
+<span class="tag-b">h1, h2</span> <span class="attr">{
+ font-family: <span class="txt">Impact, serif</span>;
+}</span>
+
+<span class="tag-b">.item p</span> <span class="attr">{
+ display: <span class="txt">inline-block</span>;
+ margin-top: <span class="txt">5px</span>;
+ margin-bottom: <span class="txt">5px</span>;
+ font-size: <span class="txt">18px</span>;
+}</span>
+
+<span class="tag-b">.flavor, .dessert</span> <span class="attr">{
+ text-align: <span class="txt">right</span>;
+ width: <span class="txt">75%</span>;
+}</span>
+
+<span class="tag-b">.price</span> <span class="attr">{
+ text-align: <span class="txt">left</span>;
+ width: <span class="txt">25%</span>;
+}</span>
+
+<span class="value">/* FOOTER */</span>
+
+<span class="tag-b">footer</span> <span class="attr">{
+ font-size: <span class="txt">14px</span>;
+}</span>
+
+<span class="tag-b">address</span> <span class="attr">{
+ font-style: <span class="txt">normal</span>;
+}</span>
+
+<span class="tag-b">.address</span> <span class="attr">{
+ margin-bottom: <span class="txt">5px</span>;
+}</span>
+
+<span class="tag-b">a</span> <span class="attr">{
+ color: <span class="txt">black</span>;
+}</span>
+
+<span class="tag-b">a:visited</span> <span class="attr">{
+ color: <span class="txt">black</span>;
+}</span>
+
+<span class="tag-b">a:hover</span> <span class="attr">{
+ color: <span class="txt">brown</span>;
+}</span>
+
+<span class="tag-b">a:active</span> <span class="attr">{
+ color: <span class="txt">brown</span>;
+}</span>
+            </code></pre></div>
+            </div>
+    </section>
+
+
+    <section>
+        <br>
+		<h3>معاينة التطبيق :</h3>
+        <br>
+
+        <div class="preview" role="presentation">
+            <div class="body1">
+                <div class="menu1">
+                    <div class="main1">
+                        <h1>مقهى التقنية</h1>
+                        <p class="established1">تأسست عام 2025</p>
+                        <hr class="hr1">
+                        <section>
+                            <h2>قهوة</h2>
+                            <img class="img1" src="../../assets/coffee.jpg" alt="أيقونة القهوة">
+                            <article class="item1">
+                                <p class="flavor1">فانيليا فرنسية</p><p class="price1">3.00</p>
+                            </article>
+                            <article class="item1">
+                                <p class="flavor1">كاراميل ماكياتو</p><p class="price1">3.75</p>
+                            </article>
+                            <article class="item1">
+                                <p class="flavor1">توابل اليقطين</p><p class="price1">3.50</p>
+                            </article>
+                            <article class="item1">
+                                <p class="flavor1">بندق</p><p class="price1">4.00</p>
+                            </article>
+                            <article class="item1">
+                                <p class="flavor1">موكا</p><p class="price1">4.50</p>
+                            </article>
+                        </section>
+                        <section>
+                            <h2>الحلويات</h2>
+                            <img class="img1" src="../../assets/pie.jpg" alt="أيقونة فطيرة">
+                            <article class="item1">
+                                <p class="dessert1">كعكة محلاة</p><p class="price1">1.50</p>
+                            </article>
+                            <article class="item1">
+                                <p class="dessert1">فطيرة الكرز</p><p class="price1">2.75</p>
+                            </article>
+                            <article class="item1">
+                                <p class="dessert1">تشيز كيك</p><p class="price1">3.00</p>
+                            </article>
+                            <article class="item1">
+                                <p class="dessert1">لفائف القرفة</p><p class="price1">2.50</p>
+                            </article>
+                        </section>
+                    </div>
+
+                    <hr class="hr1 bottom-line1">
+                    
+                    <div class="footer1">
+                        <address class="address1">
+                            <p>
+                                <a class="a1" target="_blank" href="https://openarabtech.github.io">تفضل بزيارة موقعنا الإلكتروني</a>
+                            </p>
+                            <p class="address2">
+                            123 مبادرة التقنية العربية المفتوحة
+                            </p>
+                        </address>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+   
+
+    
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="../what-is-css/What-Are-Margins-and-Padding-and-How-Do-They-Work.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+
+</body>
+</html>
