@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS |  تصميم بطاقة عمل (Business Card)"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/basicsStyles/designBusinessCard/Design-a-Business-Card.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>الأساسيات</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+		<h2>تصميم بطاقة عمل (Business Card)</h2>
+		<span class="hint">مختبر</span>
+		<p>الهدف: تنفيذ قصص المستخدم الموضحة أدناه واجتياز جميع الاختبارات لإتمام المختبر.</p>
+    </section>
+
+    <!-- HTML boilerplate -->
+	<section>
+        <br>
+        <h3>نموذج "اتش.تي.إم.إل" The HTML boilerplate.</h3>
+        <br>
+        <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span>بطاقة عمل<span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+ <span class="value">&lt;!-- هنا تضع اكواد التطبيق --&gt;</span>
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+            </div>
+            <br><br>
+    </section>
+
+    <!-- User stories -->
+    <section>
+        <h3>قصص المستخدم User stories :</h3>
+
+        <ol>
+            <li>
+                <p class="hinty">
+                    يجب أن يكون لديك عنصر <span dir="ltr" class="br-spec nw">div</span> يحمل سمة <span dir="ltr" class="br-spec nw">class</span> بقيمة <span dir="ltr" class="br-spec nw">business-card</span> ، بحيث يحتوي على جميع العناصر الأخرى.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    داخل العنصر <span dir="ltr" class="br-spec nw">.business-card</span> ، يجب أن يوجد عنصر <span dir="ltr" class="br-spec nw">img</span> يحتوي على سمة <span dir="ltr" class="br-spec nw">class</span> بقيمة <span dir="ltr" class="br-spec nw">profile-image</span>. 
+                    يمكنك تعيين مصدر الصورة (src) ليكون <div class="long-link"><span dir="ltr" class="br-spec nw">https://openarabtech.github.io/CSSVerse/src/assets/flower.jpg</span></div>
+                    <p class="hinty">
+                         إذا أردت، 
+                    كما يجب توفير سمة <span dir="ltr" class="br-spec nw">alt</span> تتضمن وصفاً ذا دلالة واضحة.
+                    </p>
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    داخل العنصر <span dir="ltr" class="br-spec nw">.business-card</span> ، وبعد عنصر <span dir="ltr" class="br-spec nw">img</span> ، يجب أن تضع ثلاثة عناصر <span dir="ltr" class="br-spec nw">p</span> تحتوي على سمة <span dir="ltr" class="br-spec nw">class</span> بقيم <span dir="ltr" class="br-spec nw">full-name</span> و <span dir="ltr" class="br-spec nw">designation</span> و <span dir="ltr" class="br-spec nw">company</span> على التوالي.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب أن يحتوي عنصر <span dir="ltr" class="br-spec nw">p</span> الأول على اسمك.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب أن يحتوي عنصر <span dir="ltr" class="br-spec nw">p</span> الثاني على المسمى الوظيفي الخاص بك.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب أن يحتوي عنصر الفقرة <span dir="ltr" class="br-spec nw">p</span> الثالث على اسم شركتك.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب أن يكون هناك عنصر <span dir="ltr" class="br-spec nw">hr</span> أسفل عنصر <span dir="ltr" class="br-spec nw">p</span> الثالث.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    بعد عنصر <span dir="ltr" class="br-spec nw">hr</span> ، يجب أن يكون هناك عنصران من نوع <span dir="ltr" class="br-spec nw">p</span>. في العنصر الأول، يجب أن يكون النص عبارة عن عنوان بريد إلكتروني (email address)، وفي العنصر الثاني، يجب أن يكون النص عبارة عن رقم هاتف (phone number).
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    بعد عنصري الفقرة <span dir="ltr" class="br-spec nw">p</span> ، يجب أن يكون هناك عنصر رابط <span dir="ltr" class="br-spec nw">a</span> يحمل الفئة <span dir="ltr" class="br-spec nw">portfolio-link</span> والنص <span dir="rtl" class="br-spec nw">ملف أعمال</span> ، على أن يشير إلى رابط (URL) صالح.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب أن يكون هناك عنصر <span dir="ltr" class="br-spec nw">hr</span> بعد عنصر <span dir="ltr" class="br-spec nw">a</span> الذي يحتوي على رابط <span dir="rtl" class="br-spec nw">ملف أعمال</span>.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب أن يكون لديك عنصر <span dir="ltr" class="br-spec nw">div</span> آخر يحمل سمة <span dir="ltr" class="br-spec nw">class</span> بقيمة <span dir="ltr" class="br-spec nw">social-media</span>. 
+                    وداخل هذا العنصر، يجب أن يوجد عنصر <span dir="ltr" class="br-spec nw">h2</span> يحتوي على النص <span dir="rtl" class="br-spec nw">تواصل معي</span>.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب أن تحتوي عناصر <span dir="ltr" class="br-spec nw">.social-media</span> على ثلاثة عناصر <span dir="ltr" class="br-spec nw">a</span>. 
+                    وينبغي أن تحمل عناصر <span dir="ltr" class="br-spec nw">a</span> هذه النصوص <span dir="ltr" class="br-spec nw">Facebook</span> و <span dir="ltr" class="br-spec nw">LinkedIn</span> و <span dir="ltr" class="br-spec nw">GitHub</span> على التوالي، مع روابط تؤدي إلى مواقع ويب صالحة.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب عليك ربط ملف الأنماط <span dir="ltr" class="br-spec nw">styles.css</span> باستخدام الوسم <span dir="ltr" class="br-spec nw">link</span> في قسم <span dir="ltr" class="br-spec nw">head</span> من ملف HTML.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب أن تكون خلفية الصفحة باللون <span dir="ltr" class="br-spec nw">rosybrown</span> . ويجب أن يكون الخط العام هو <span dir="ltr" class="br-spec nw">Arial</span>، مع استخدام <span dir="ltr" class="br-spec nw">sans-serif</span> كخيار بديل (fallback).
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب أن يتضمن المُحدِّد <span dir="ltr" class="br-spec nw">.business-card</span> خصائص لضبط عرض (wide) العنصر عند <span dir="ltr" class="br-spec nw">300px</span> وتحديد لون خلفية (background color) من اختيارك. 
+                    كما ينبغي تعيين هامش داخلي <span dir="ltr" class="br-spec nw">padding</span> بمقدار <span dir="ltr" class="br-spec nw">20px</span> من جميع الجهات، 
+                    وهامش علوي <span dir="ltr" class="nw">(<span class="br-spec">margin</span> top)</span> بمقدار <span dir="ltr" class="br-spec nw">100px</span>. 
+                    يجب محاذاة النص في المنتصف (be center aligned) وضبط حجم الخط (font size) عند <span dir="ltr" class="br-spec nw">16px</span>، مع تعيين الهوامش اليمنى واليسرى (left and right margins) على القيمة <span dir="ltr" class="br-spec nw">auto</span>.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب أن يحتوي المُحدِّد <span dir="ltr" class="br-spec nw">.profile-image</span> على خاصية <span dir="ltr" class="br-spec nw">max-width</span> بقيمة <span dir="ltr" class="br-spec nw">100%</span>.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب أن تحتوي جميع عناصر <span dir="ltr" class="br-spec nw">p</span> على هامش علوي وسفلي <span dir="ltr" class="nw">(top and bottom <span class="br-spec">margin</span>)</span> بمقدار <span dir="ltr" class="br-spec nw">5px</span>.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب ألا تكون جميع الروابط (links) الموجودة في الصفحة مسطرة (not be underlined).
+                </p>
+            </li>
+        </ol>
+
+    </section>
+
+
+    <section>
+        <br>
+		<h3>حل التطبيق :</h3>
+        <br>
+        <div class="codeFiles">
+        <p class="file-name">index.html</p>
+        <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span>بطاقة عمل<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ 
+ <span class="tag">&lt;body&gt;</span>
+  <span class="tag">&lt;div <span class="attr">class=<span class="value">"business-card"</span></span>&gt;
+   &lt;img <span class="attr">class=<span class="value">"profile-image"</span> src=<span class="value">"https://openarabtech.github.io/CSSVerse/src/assets/flower.jpg"</span> alt=<span class="value">"أيقونة زهرة"</span></span>&gt;
+   &lt;p <span class="attr">class=<span class="value">"full-name"</span></span>&gt;<span class="txt">اسمك</span>&lt;/p&gt;
+   &lt;p <span class="attr">class=<span class="value">"designation"</span></span>&gt;<span class="txt">مطور برمجيات</span>&lt;/p&gt;
+   &lt;p <span class="attr">class=<span class="value">"company"</span></span>&gt;<span class="txt">التقنية العربية المفتوحة</span>&lt;/p&gt;
+   &lt;hr&gt;
+   &lt;p&gt;<span dir="rtl" class="txt">البريد الإلكتروني: <span dir="ltr"><span class="tag">&lt;span <span class="attr">dir=<span class="value">"ltr"</span></span>&gt;<span class="txt">email@example.com</span>&lt;/span&gt;</span></span></span>&lt;/p&gt;
+   &lt;p&gt;<span dir="rtl" class="txt">الهاتف: <span dir="ltr"><span class="tag">&lt;span <span class="attr">dir=<span class="value">"ltr"</span></span>&gt;<span class="txt">(123) 456-7890</span>&lt;/span&gt;</span></span></span>&lt;/p&gt;
+   &lt;a <span class="attr">class=<span class="value">"portfolio-link"</span> href=<span class="value">"https://openarabtech.github.io/"</span></span>&gt;<span class="txt">ملف أعمال</span>&lt;/a&gt;
+   &lt;hr&gt;
+   &lt;div <span class="attr">class=<span class="value">"social-media"</span></span>&gt;
+    &lt;h2&gt;<span class="txt">تواصل معي</span>&lt;/h2&gt;
+    &lt;a <span class="attr">href=<span class="value">"https://facebook.com/openarabtech"</span></span>&gt;<span class="txt">Facebook</span>&lt;/a&gt;
+    &lt;a <span class="attr">href=<span class="value">"https://www.linkedin.com/company/openarabtech/"</span></span>&gt;<span class="txt">LinkedIn</span>&lt;/a&gt;
+    &lt;a <span class="attr">href=<span class="value">"https://github.com/openarabtech"</span></span>&gt;<span class="txt">GitHub</span>&lt;/a&gt;
+   &lt;/div&gt;
+  &lt;/div&gt;</span>
+ <span class="tag">&lt;/body&gt;</span>
+
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+        </div>
+        <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">body</span> <span class="attr">{
+ background-color: <span class="txt">rosybrown</span>;
+ font-family: <span class="txt">Arial, sans-serif</span>;
+}</span>
+
+<span class="tag-b">.business-card</span> <span class="attr">{
+ width: <span class="txt">300px</span>;
+ background-color: <span class="txt">brown</span>;
+ padding: <span class="txt">20px</span>;
+ margin-top: <span class="txt">100px</span>;
+ text-align: <span class="txt">center</span>;
+ font-size: <span class="txt">16px</span>;
+ margin-left: <span class="txt">auto</span>;
+ margin-right: <span class="txt">auto</span>;
+}</span>
+
+<span class="tag-b">.profile-image</span> <span class="attr">{
+ width: <span class="txt">100%</span>;
+}</span>
+
+<span class="tag-b">p</span> <span class="attr">{
+ margin-top: <span class="txt">5px</span>;
+ margin-bottom: <span class="txt">5px</span>;
+}</span>
+
+<span class="tag-b">a</span> <span class="attr">{
+ text-decoration: <span class="txt">none</span>;
+}</span>
+            </code></pre></div>
+            </div>
+    </section>
+
+
+    <section>
+        <br>
+		<h3>معاينة التطبيق :</h3>
+        <br>
+
+        <div class="preview" role="presentation">
+            <div class="body1">
+                <div class="business-card1">
+                    <img class="profile-image1" src="../../assets/flower.jpg" alt="أيقونة زهرة ">
+                    <p class="full-name1 p1">اسمك</p>
+                    <p class="designation1 p1">مطور برمجيات</p>
+                    <p class="company1 p1">التقنية العربية المفتوحة</p>
+                    <hr>
+                    <p class="p1">البريد الإلكتروني: <span dir="ltr">email@example.com</span></p>
+                    <p class="p1">الهاتف: <span dir="ltr">(123) 456-7890</span></p>
+                    <a class="portfolio-link1 a1" href="https://openarabtech.github.io/">ملف أعمال</a>
+                    <hr>
+                <div class="social-media1">
+                    <h2>تواصل معي</h2>
+                    <a class="a1" href="https://facebook.com/openarabtech">Facebook</a>
+                    <a class="a1" href="https://www.linkedin.com/company/openarabtech">LinkedIn</a>
+                    <a class="a1" href="https://github.com/openarabtech/">GitHub</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="../design-a-cafe-menu/Design-a-Cafe-Menu.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
