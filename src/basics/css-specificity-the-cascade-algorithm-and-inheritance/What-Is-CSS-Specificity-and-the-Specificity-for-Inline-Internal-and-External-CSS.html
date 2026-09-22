@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS |  ما هي أولوية CSS ، وما درجة أولوية CSS المضمَّنة والداخلية والخارجية؟"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/basicsStyles/css-specificity-the-cascade-algorithm-and-inheritance/What-Is-CSS-Specificity-and-the-Specificity-for-Inline-Internal-and-External-CSS.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>أولوية CSS ، وخوارزمية التتابع (Cascade) ، والوراثة (Inheritance)</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+		<h2>ما هي أولوية CSS ، وما درجة أولوية CSS المضمَّنة والداخلية والخارجية؟</h2>
+		<span class="hint">نظري</span>
+        <p></p>
+    </section>
+
+    
+    <section>
+        <p>
+            تُعد "خصوصية سي.اس.اس" (CSS specificity) مفهوماً أساسياً يحدد الأنماط التي تُطبَّق على عنصر ما عندما تكون هناك قواعد متعددة قابلة للتطبيق عليه.
+        </p>
+        <p>
+            يساعد فهم "الخصوصية" (specificity) المطورين على حل التعارضات بين قواعد CSS المختلفة، ويضمن تطبيق الأنماط المطلوبة بشكل متسق.
+        </p>
+        <p>
+            يتم حساب خصوصية CSS بناءً على نوع المُحدِّدات (type selectors) المُستخدَمة.
+        </p>
+
+        <section>
+            <h3>الأنماط المضمنة Inline Styles :</h3>
+            <p>
+                تُعزى أعلى درجات التحديد إلى الأنماط المضمنة (inline styles)، التي تُطبَّق مباشرةً على العنصر من خلال السمة <span dir="ltr" class="br-spec nw">style</span>.
+            </p>
+
+            <p class="hinty">
+                في هذا المثال، ستظهر الفقرة الأولى باللون الأحمر، بينما ستظهر بقية عناصر الفقرات <span dir="ltr" class="br-spec nw">p</span> باللون الأزرق؛ ويعود ذلك إلى أن الأنماط المضمنة (inline styles) تتمتع بأولوية تحديد أعلى مقارنةً بمحددات النوع (type selectors)، مثل محدد <span dir="ltr" class="br-spec nw">p</span> الموضّح في ملف <span dir="ltr" class="br-spec nw">styles.css</span>.
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span> &gt;
+
+&lt;p <span class="attr">style=<span class="value">"color: red;"</span></span>&gt;<span class="txt">فقرة حمراء</span>&lt;/p&gt;
+&lt;p&gt;<span class="txt">فقرة أخرى</span>&lt;/p&gt;
+&lt;p&gt;<span class="txt">فقرة أخرى</span>&lt;/p&gt;
+&lt;p&gt;<span class="txt">فقرة أخرى أخرى</span>&lt;/p&gt;
+</span>
+            </code></pre></div>
+
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag">p</span> <span class="attr"> {
+  color: <span class="txt">blue</span>;
+}</span>
+            </code></pre></div>
+            </div>
+
+            <p class="hinty">معاينة:</p>
+
+            <div class="preview" role="presentation">
+                <div class="preview1">
+                    <p style="color: red;">فقرة حمراء</p>
+                    <p>فقرة أخرى</p>
+                    <p>فقرة أخرى</p>
+                    <p>فقرة أخرى أخرى</p>
+                </div>
+            </div>
+
+            <br>
+
+
+
+        </section>
+
+        <section>
+            <h3>محددات المُعرِّف ID Selectors :</h3>
+            <p class="hinty">
+                وعليه، تتمتع مُحدِّدات المُعرِّف (ID selectors) بمستوى عالٍ من التخصيص.
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span> &gt;
+
+&lt;p <span class="attr">id=<span class="value">"para-1"</span></span>&gt;<span class="txt">فقرة حمراء</span>&lt;/p&gt;
+&lt;p&gt;<span class="txt">فقرة أخرى</span>&lt;/p&gt;
+&lt;p&gt;<span class="txt">فقرة أخرى</span>&lt;/p&gt;
+&lt;p&gt;<span class="txt">فقرة أخرى أخرى</span>&lt;/p&gt;
+</span>
+            </code></pre></div>
+
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag">#para-1</span> <span class="attr"> {
+  color: <span class="txt">red</span>;
+}</span>
+
+<span class="tag">p</span> <span class="attr"> {
+  color: <span class="txt">blue</span>;
+}</span>
+            </code></pre></div>
+            </div>
+
+            <p class="hinty">معاينة:</p>
+
+            <div class="preview" role="presentation">
+                <div class="preview2">
+                    <p id="para-1">فقرة حمراء</p>
+                    <p>فقرة أخرى</p>
+                    <p>فقرة أخرى</p>
+                    <p>فقرة أخرى أخرى</p>
+                </div>
+            </div>
+
+            <br>
+        </section>
+
+        <section>
+            <h3>مُحدِّدات الفئة والسمة والفئة الزائفة Class, Attribute, and Pseudo-Class Selectors : </h3>
+            <p>
+                بعد ذلك، يأتي دور مُحدِّدات الفئات (class selectors)، ومُحدِّدات السمات (attribute selectors)، والفئات الزائفة (pseudo-classes).
+            </p>
+            <p>
+                تشمل الأمثلة محددات الفئات (class selectors) مثل <span dir="ltr" class="br-spec nw">.container</span> و <span dir="ltr" class="br-spec nw">.button</span> ، ومحددات السمات (attribute selectors) مثل <span dir="ltr" class="br-spec nw">[type="text"]</span> ، والفئات الزائفة (pseudo-classes) مثل 3 ؛ وتتميز هذه المحددات بمستوى متوسط ​​من التخصيص (specificity).
+            </p>
+            <p>
+                <b>ملاحظة:</b> ستتعرف على المزيد حول الفئات الزائفة (pseudo-classes) في الدروس القادمة.
+            </p>
+            <p class="hinty">في هذا المثال:</p>
+            <ul>
+                <li>
+                    <p class="hinty">
+                        ستكون الفقرة الأولى باللون الأحمر لأن محدد المعرف (ID selector) يتمتع بخصوصية أعلى من محددات الفئات والأنواع (classes and type selectors).
+                    </p>
+                </li>
+                <li>
+                    <p class="hinty">
+                        ستكون الفقرة الثانية، التي تحمل مُحدِّد الفئة <span dir="ltr" class="br-spec nw">.example-para</span> ، باللون الأخضر.
+                    </p>
+                </li>
+                <li>
+                    <p class="hinty">
+                        ستكون الفقرة الثالثة - التي تحمل كلاً من مُحدِّد المعرِّف <span dir="ltr" class="br-spec nw">#para-3</span> ومُحدِّد الفئة <span dir="ltr" class="br-spec nw">.example-para</span> - باللون الأرجواني.
+                    </p>
+                </li>
+                <li>
+                    <p class="hinty">سيكون لعنصر الفقرة المتبقي لون أزرق.</p>
+                </li>
+            </ul>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span> &gt;
+
+&lt;p <span class="attr">id=<span class="value">"para-1"</span></span>&gt;<span class="txt">فقرة نموذجية</span>&lt;/p&gt;
+&lt;p <span class="attr">class=<span class="value">"example-para"</span></span>&gt;<span class="txt">فقرة أخرى</span>&lt;/p&gt;
+&lt;p <span class="attr">id=<span class="value">"para-3"</span> class=<span class="value">"example-para"</span></span>&gt;<span class="txt">فقرة أخرى</span>&lt;/p&gt;
+&lt;p&gt;<span class="txt">فقرة أخرى أخرى</span>&lt;/p&gt;
+</span>
+            </code></pre></div>
+
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag">#para-1</span> <span class="attr"> {
+  color: <span class="txt">red</span>;
+}</span>
+
+<span class="tag">#para-3</span> <span class="attr"> {
+  color: <span class="txt">purple</span>;
+}</span>
+
+<span class="tag">.example-para</span> <span class="attr"> {
+  color: <span class="txt">green</span>;
+}</span>
+
+<span class="tag">p</span> <span class="attr"> {
+  color: <span class="txt">blue</span>;
+}</span>
+            </code></pre></div>
+            </div>
+
+            <p class="hinty">معاينة:</p>
+
+            <div class="preview" role="presentation">
+                <div class="preview3">
+                    <p id="para3-1">فقرة نموذجية</p>
+                    <p class="example-para">فقرة أخرى</p>
+                    <p id="para3-3" class="example-para">فقرة أخرى</p>
+                    <p>فقرة أخرى أخرى</p>
+                </div>
+            </div>
+            <br>
+
+        </section>
+
+        <section>
+            <h3>مُحدِّدات النوع والعناصر الزائفة Type Selectors and Pseudo-Elements :</h3>
+            <p>
+                تتمتع مُحدِّدات النوع (مثل <span dir="ltr" class="br-spec nw">div</span> و <span dir="ltr" class="br-spec nw">h1</span>) والعناصر الزائفة (مثل <span dir="ltr" class="br-spec nw">::before</span> و <span dir="ltr" class="br-spec nw">::after</span>) بخصوصية (specificity) أقل مقارنةً بالمجموعات السابقة.
+            </p>
+            <p class="hinty">
+                <b>ملاحظة:</b> ستتعرف على المزيد حول العناصر الزائفة (pseudo-elements) في دروس قادمة.
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span> &gt;
+
+&lt;p <span class="attr">id=<span class="value">"para-1"</span></span>&gt;<span class="txt">فقرة نموذجية</span>&lt;/p&gt;
+&lt;p&gt;<span class="txt">فقرة أخرى</span>&lt;/p&gt;
+&lt;p&gt;<span class="txt">فقرة أخرى</span>&lt;/p&gt;
+&lt;p&gt;<span class="txt">فقرة أخرى أخرى</span>&lt;/p&gt;
+</span>
+            </code></pre></div>
+
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag">#para-1</span> <span class="attr"> {
+  color: <span class="txt">red</span>;
+}</span>
+
+<span class="tag">p</span> <span class="attr"> {
+  color: <span class="txt">blue</span>;
+}</span>
+            </code></pre></div>
+            </div>
+
+            <p class="hinty">معاينة:</p>
+
+            <div class="preview" role="presentation">
+                <div class="preview4">
+                    <p id="para4-1">فقرة نموذجية</p>
+                    <p>فقرة أخرى</p>
+                    <p>فقرة أخرى</p>
+                    <p>فقرة أخرى أخرى</p>
+                </div>
+            </div>
+            <br>
+
+        </section>
+
+        <section>
+            <h3>المُحدِّد الشامل The Universal Selector :</h3>
+            <p>
+                وأخيراً، فإن المُحدِّد الشامل (universal selector) - الذي يُرمز إليه بعلامة النجمة <span dir="ltr" class="br-spec nw">*</span> - هو الأقل تحديداً (specificity) على الإطلاق.
+            </p>
+            <p class="hinty">
+                إليك مثال على تعيين اللون الأحمر لجميع العناصر باستخدام المُحدِّد <span dir="ltr" class="br-spec nw">*</span>. 
+ومع ذلك، لن تظهر أي عناصر باللون الأحمر؛ لأن هناك مُحدِّدات تعتمد على المُعرِّف (ID) والنوع (type) تتجاوز تلك الأنماط، مما يُبرز انخفاض مستوى التحديد (specificity) الخاص بالمُحدِّد <span dir="ltr" class="br-spec nw">*</span>.
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span> &gt;
+
+&lt;p <span class="attr">id=<span class="value">"para-1"</span></span>&gt;<span class="txt">فقرة نموذجية</span>&lt;/p&gt;
+&lt;p&gt;<span class="txt">فقرة أخرى</span>&lt;/p&gt;
+&lt;p&gt;<span class="txt">فقرة أخرى أخرى</span>&lt;/p&gt;
+</span>
+            </code></pre></div>
+
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag">*</span> <span class="attr"> {
+  color: <span class="txt">red</span>;
+}</span>
+
+<span class="tag">#para-1</span> <span class="attr"> {
+  color: <span class="txt">green</span>;
+}</span>
+
+<span class="tag">p</span> <span class="attr"> {
+  color: <span class="txt">blue</span>;
+}</span>
+            </code></pre></div>
+            </div>
+
+            <p class="hinty">معاينة:</p>
+
+            <div class="preview" role="presentation">
+                <div class="preview5">
+                    <p id="para5-1">فقرة نموذجية</p>
+                    <p>فقرة أخرى</p>
+                    <p>فقرة أخرى أخرى</p>
+                </div>
+            </div>
+            <br>
+
+        </section>
+
+        <section>
+            <h3>حساب قيم النوعية Calculating Specificity Values :</h3>
+            <p>
+                تُحسَب قيم النوعية كقيمة مكونة من أربعة أجزاء <span dir="ltr" class="br-spec nw">(a, b, c, d)</span> :
+            </p>
+            <ul>
+                <li>
+                    <p><span dir="ltr" class="br-spec nw">a</span> : الأنماط المضمنة Inline styles - (<span dir="ltr" class="br-spec nw">1</span> أو <span dir="ltr" class="br-spec nw">0</span>).</p>
+                </li>
+                <li>
+                    <p><span dir="ltr" class="br-spec nw">b</span> : عدد محددات المعرِّف (ID selectors).</p>
+                </li>
+                <li>
+                    <p><span dir="ltr" class="br-spec nw">c</span> : عدد محددات الفئات (class selectors)، ومحددات السمات (attribute selectors)، والفئات الزائفة (pseudo-classes).</p>
+                </li>
+                <li>
+                    <p><span dir="ltr" class="br-spec nw">d</span> : عدد محددات النوع (type selectors)، والعناصر الزائفة (pseudo-elements)، والمحددات الشاملة (universal selectors).</p>
+                </li>
+            </ul>
+            <p class="hinty">
+                يحمل كل جزء من قيمة التحديد وزناً مختلفاً:
+            </p>
+            <ul>
+                <li>
+                    <p>
+                        تتمتع <b>الأنماط المضمنة (Inline styles) <span dir="ltr" class="br-spec nw">a</span></b> بأعلى وزن، حيث تساهم بقيمة <span dir="ltr" class="br-spec nw">1</span> في الجزء الأول من قيمة التحديد (specificity value).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        تأتي <b>مُحدِّدات المُعرِّفات (ID selectors) <span dir="ltr" class="br-spec nw">b</span></b> في المرتبة التالية من حيث الوزن، حيث يُسهم كل مُعرِّف (ID) بمقدار <span dir="ltr" class="br-spec nw">1</span> في الجزء الثاني من قيمة التحديد (specificity value).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        تتمتع <b>محددات الفئات (class selectors)، ومحددات السمات (attribute selectors)، والفئات الزائفة (pseudo-classes) <span dir="ltr" class="br-spec nw">c</span></b> بوزن متوسط، حيث يساهم كل منها بمقدار <span dir="ltr" class="br-spec nw">1</span> في الجزء الثالث من قيمة التحديد (specificity value).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        تتمتع <b>مُحدِّدات النوع (Type selectors) والعناصر الزائفة (pseudo-elements) <span dir="ltr" class="br-spec nw">d</span></b> بأدنى وزن، حيث يُسهم كل منها بمقدار <span dir="ltr" class="br-spec nw">1</span> في الجزء الرابع من قيمة التحديد (specificity value).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>المُحدِّد الشامل Universal selector <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">*</span>)</span> :</b> يُسهم المُحدِّد العام بقيمة <span dir="ltr" class="br-spec nw">0</span> في حساب درجة التخصيص (specificity) ولا يؤثر عليها؛ إذ لا يؤدي تضمينه في المُحدِّد إلى تغيير قيمة درجة التخصيص.
+                    </p>
+                </li>
+            </ul>
+
+        </section>
+
+        <section>
+            <h3>"سي.اس.اس المضمنة" Inline CSS :</h3>
+            <p>
+                تتمتع أنماط CSS المضمنة (Inline CSS) بأعلى درجات التحديد (specificity) لأنها تُطبَّق مباشرةً على العنصر؛ فهي تتفوق على أي أنماط CSS داخلية (internal) أو خارجية (external). وتبلغ قيمة التحديد للأنماط المضمنة <span dir="ltr" class="br-spec nw">(1, 0, 0, 0)</span>.
+            </p>
+            <p class="hinty">
+                إليك مثال آخر على النمط المضمّن (inline style) :
+            </p>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;p <span class="attr">style=<span class="value">"color: red;"</span></span>&gt;<span class="txt">هذا النص أحمر.</span>&lt;/p&gt;</span>
+            </code></pre></div>
+            </div>
+
+            <p class="hinty">معاينة:</p>
+
+            <div class="preview" role="presentation">
+                <div class="preview6">
+                    <p style="color: red;">هذا النص أحمر.</p>
+                </div>
+            </div>
+            <br>
+        </section>
+
+        <section>
+            <h3>"سي.اس.اس الداخلي" Internal CSS :</h3>
+            <p>
+                يتم تعريف CSS الداخلي (Internal CSS) داخل عنصر <span dir="ltr" class="br-spec nw">style</span> في قسم <span dir="ltr" class="br-spec nw">head</span> من مستند HTML، 
+وتكون درجة تخصيصه (specificity) أقل من درجة تخصيص الأنماط المضمنة (inline styles). 
+أما CSS الداخلي والخارجي فيشتركان في نفس مستوى التخصيص؛ إذ تتحدد درجة التخصيص بناءً على المُحدِّدات (selectors) المستخدمة، وليس بناءً على مكان تعريف كود CSS. 
+وعندما تتساوى درجتا تخصيص قاعدتين، فإن القاعدة التي ترد لاحقاً في المستند هي التي تُطبَّق؛ 
+لذا، إذا تم ربط ملف أنماط خارجي بعد كتلة أنماط <span dir="ltr" class="br-spec nw">style</span> داخلية، تكون الأولوية للقواعد الخارجية، أما إذا تم ربطه قبلها، فتكون الأولوية للقواعد الداخلية.
+            </p>
+            <p class="hinty">
+                تُحدد قيمة "الخصوصية" (specificity) للأنماط الداخلية (internal styles) بناءً على المُحدِّدات المستخدمة؛ فعلى سبيل المثال، يمتلك مُحدِّد المُعرِّف (ID selector) ضمن كود CSS الداخلي قيمة خصوصية تبلغ <span dir="ltr" class="br-spec nw">(0, 1, 0, 0)</span>.
+            </p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;head&gt;
+ &lt;style&gt;
+  <span class="tag-b">#text</span> <span class="attr">{
+   color: <span class="txt">blue</span>;
+  }</span>
+ &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;div <span class="attr">id=<span class="value">"text"</span></span>&gt;<span dir="rtl" class="txt">هذا النص أزرق.</span>&lt;/div&gt;
+&lt;/body&gt;</span>
+            </code></pre></div>
+            </div>
+
+            <p class="hinty">معاينة:</p>
+
+            <div class="preview" role="presentation">
+                <div class="preview7">
+                    <div id="text">هذا النص أزرق.</div>
+                </div>
+            </div>
+            <p>
+                في هذا المثال، سيكون النص باللون الأزرق ما لم يتم تطبيق نمط مضمّن (inline style) أو مُحدِّد (selector) أكثر تحديداً.
+            </p>
+        </section>
+
+        <section>
+            <h3>"سي.اس.اس خارجي" External CSS :</h3>
+            <p>
+                يتم ربط ملفات CSS الخارجية (External CSS) عبر عنصر <span dir="ltr" class="br-spec nw">link</span> في قسم <span dir="ltr" class="br-spec nw">head</span> ، وتُكتب هذه الملفات في ملفات منفصلة ذات الامتداد <span dir="ltr" class="br-spec nw">.css</span>. 
+ومثل CSS الداخلية (internal)، تتحدد درجة أولوية (أو خصوصية) الأنماط الخارجية بناءً على المُحدِّدات (selectors) المستخدمة. وتوفر CSS الخارجية أفضل مستوى من سهولة الصيانة للمشاريع الكبيرة.
+            </p>
+            <p class="hinty">
+                تُحدَّد قيمة "الخصوصية" (specificity) للأنماط الخارجية أيضًا بناءً على المُحدِّدات المستخدمة؛ فعلى سبيل المثال، يمتلك مُحدِّد الفئة (class selector) داخل ملف CSS خارجي قيمة خصوصية تعادل <span dir="ltr" class="br-spec nw">(0, 0, 1, 0)</span>.
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;head&gt;
+ &lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;div <span class="attr">class=<span class="value">"text"</span></span>&gt;<span dir="rtl" class="txt">يتم تحديد لون هذا النص في ملف CSS خارجي.</span>&lt;/div&gt;
+&lt;/body&gt;</span>
+            </code></pre></div>
+
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag">.text</span> <span class="attr"> {
+  color: <span class="txt">purple</span>;
+}</span>
+            </code></pre></div>
+            </div>
+
+            <p class="hinty">معاينة:</p>
+
+            <div class="preview" role="presentation">
+                <div class="preview8">
+                    <div class="text">يتم تحديد لون هذا النص في ملف CSS خارجي.</div>
+                </div>
+            </div>
+            <p>
+                في هذا المثال، يتم تحديد لون النص في ملف <span dir="ltr" class="br-spec nw">styles.css</span> وسيتم تطبيقه ما لم يتم تجاوزه بواسطة مُحدِّد أكثر تحديداً أو نمط مُضمَّن (inline style).
+            </p>
+        </section>
+
+
+        <!-- QUESTIONS -->
+		<section class="questions">
+			<p class="pquestions">أسئلة :</p>
+				
+			<p class="userstory">أيُّ درجة تخصيص (Specificity) في CSS أعلى؟</p>
+
+			<p> 1. مُحدِّد فئة (Class selector). ❌</p>
+            <p><mark> 2. نمط مُضمَّن (Inline style). ✅</mark></p>
+            <p> 3. مُحدِّد مُعرِّف (ID selector). ❌</p>
+			<p> 4. مُحدِّد نوع (Type selector). ❌</p>
+
+            <br>
+
+            <p class="userstory">في التسلسل الهرمي لخصوصية CSS، ما هو العنصر الذي يحظى بأدنى أولوية؟</p>
+			
+			<p> 1. مُحدِّدات الفئات (Class selectors) . ❌</p>
+            <p> 2. الأنماط المضمنة (Inline styles) . ❌</p>
+            <p><mark> 3. المُحدِّدات الشاملة (Universal selectors) . ✅</mark></p>
+			<p> 4. مُحدِّدات المعرّفات (ID selector) . ❌</p>
+
+            <br>
+
+            <p class="userstory">ما لون النص في المثال التالي؟</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;head&gt;
+ &lt;style&gt;
+  <span class="tag-b">p</span> <span class="attr">{
+   color: <span class="txt">red</span>;
+  }</span>
+ &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;p <span class="attr">style=<span class="value">"color: blue;"</span></span>&gt;<span dir="rtl" class="txt">هذا النص</span>&lt;/p&gt;
+&lt;/body&gt;</span>
+            </code></pre></div>
+			
+			<p><mark> 1. أزرق <span dir="ltr" class="br-spec nw">blue</span>. ✅</mark></p>
+			<p> 2. أحمر <span dir="ltr" class="br-spec nw">red</span>. ❌</p>
+            <p> 3. أصفر <span dir="ltr" class="br-spec nw">yellow</span>. ❌</p>
+			<p> 4. أخضر <span dir="ltr" class="br-spec nw">green</span>. ❌</p>
+
+
+			
+		</section>
+
+
+
+    </section>
+
+
+
+
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="../design-a-business-card/Design-a-Business-Card.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>

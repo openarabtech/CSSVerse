@@ -1,0 +1,73 @@
+/* PREVIEW 1 */
+.preview1 p {
+    color: blue;
+}
+
+
+
+/* PREVIEW 2 */
+.preview2 #para-1 {
+    color: red;
+}
+
+.preview2 p {
+    color: blue;
+}
+
+
+
+/* PREVIEW 3 */
+.preview3 #para3-1 {
+    color: red;
+}
+
+.preview3 #para3-3 {
+    color: purple;
+}
+
+.preview3 .example-para  {
+  color: green;
+}
+
+.preview3 p {
+    color: blue;
+}
+
+
+
+/* PREVIEW 4 */
+.preview4 #para4-1 {
+    color: red;
+}
+
+.preview4 p {
+    color: blue;
+}
+
+
+
+/* PREVIEW 5 */
+.preview5 * {
+    color: red;
+}
+
+.preview5 #para5-1 {
+    color: green;
+}
+
+.preview5 p {
+    color: blue;
+}
+
+
+
+/* PREVIEW7 */
+.preview7 #text {
+    color: blue;
+}
+
+
+/* PREVIEW8 */
+.preview8 .text {
+    color: purple;
+}
