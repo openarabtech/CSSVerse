@@ -1,0 +1,19 @@
+/* PREVIEW 1 */
+.preview1 * {
+    margin: 0;
+    padding: 0;
+}
+
+/* PREVIEW2 */
+.preview2 * {
+   color: blue;
+  }
+.preview2 p {
+   color: red;
+  }
+.preview2 .highlight2 {
+   color: green;
+  }
+.preview2 #unique2 {
+   color: purple;
+  }

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS |  ما هو المُحدِّد الشامل (Universal Selector) ، وما درجة أفضليته؟"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/basicsStyles/css-specificity-the-cascade-algorithm-and-inheritance/What-Is-the-Universal-Selector-and-What-Is-Its-Specificity.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>أولوية CSS ، وخوارزمية التتابع (Cascade) ، والوراثة (Inheritance)</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+        <h2>ما هو المُحدِّد الشامل (Universal Selector) ، وما درجة أفضليته؟</h2>
+		<span class="hint">نظري</span>
+        <p></p>
+    </section>
+
+    
+    <section>
+        <p>
+            المُحدِّد الشامل <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">*</span>)</span> هو نوع خاص من مُحدِّدات CSS يطابق أي عنصر في المستند.
+        </p>
+        <p>
+            غالبًا ما يُستخدم لتطبيق نمطٍ (style) ما على جميع العناصر الموجودة في الصفحة، وهو ما قد يكون مفيدًا لإعادة ضبط الأنماط أو توحيدها عبر المتصفحات المختلفة.
+        </p>
+        <p>
+            يمكن استخدام المُحدِّد الشامل (universal selector) لاختيار جميع العناصر ضمن سياق محدد أو على مستوى المستند بأكمله.
+        </p>
+        <p class="hinty">
+            إليك مثال على استخدام المُحدِّد الشامل (universal selector) لضبط الهوامش <span dir="ltr" class="br-spec nw">margin</span> والهوامش الداخلية <span dir="ltr" class="br-spec nw">padding</span> لمستند HTML بأكمله:
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;h1&gt;<span class="txt">عنصر العنوان</span>&lt;/h1&gt;
+&lt;p&gt;<span class="txt">مثال على عنصر فقرة</span>&lt;/p&gt;</span>
+            </code></pre></div>
+
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag">*</span> <span class="attr"> {
+  margin: <span class="txt">0</span>;
+  padding: <span class="txt">0</span>;
+}</span>
+            </code></pre></div>
+            </div>
+
+            <p class="hinty">معاينة:</p>
+
+            <div class="preview" role="presentation">
+                <div class="preview1">
+                    <h1>عنصر العنوان</h1>
+                    <p>مثال على عنصر فقرة</p>
+                </div>
+            </div>
+            <p>
+                في مثال الكود هذا، يقوم المُحدِّد <span dir="ltr" class="br-spec nw">*</span> بإعادة تعيين الهوامش (margin) والهوامش الداخلية (padding) لجميع العناصر إلى الصفر، وهي تقنية شائعة الاستخدام في عمليات إعادة تعيين أنماط "سي.اس.اس" (CSS resets).
+            </p>
+            <p>
+                يتمتع المُحدِّد الشامل (universal selector) بأدنى قيمة "تخصيص" (specificity) مقارنةً بأي مُحدِّد آخر؛ إذ يساهم بالقيمة صفر في جميع أجزاء قيمة التخصيص <span dir="ltr" class="br-spec nw">(0, 0, 0, 0)</span>.
+            </p>
+            <p>
+                هذا يعني أن أي محدد آخر، بما في ذلك محددات النوع (type selectors)، ومحددات الفئة (class selectors)، ومحددات المعرف (ID selectors)، والأنماط المضمنة (inline styles)، سيتجاوز الأنماط التي تم تعيينها بواسطة المحدد الشامل (universal selector).
+            </p>
+            <p class="hinty">
+                لنلقِ نظرةً على مثال HTML و CSS التالي:
+            </p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;head&gt;
+ &lt;style&gt;
+  <span class="tag-b">*</span> <span class="attr">{
+   color: <span class="txt">blue</span>;
+  }</span>
+  <span class="tag-b">p</span> <span class="attr">{
+   color: <span class="txt">red</span>;
+  }</span>
+  <span class="tag-b">.highlight</span> <span class="attr">{
+   color: <span class="txt">green</span>;
+  }</span>
+  <span class="tag-b">#unique</span> <span class="attr">{
+   color: <span class="txt">purple</span>;
+  }</span>
+ &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;p <span class="attr">id=<span class="value">"unique"</span> class=<span class="value">"highlight"</span></span>&gt;<span dir="rtl" class="txt">تم تطبيق أنماط متعددة على هذا النص.</span>&lt;/p&gt;
+&lt;/body&gt;</span>
+            </code></pre></div>
+
+            <p class="hinty">معاينة:</p>
+
+            <div class="preview" role="presentation">
+                <div class="preview2">
+                     <p id="unique2" class="highlight2">تم تطبيق أنماط متعددة على هذا النص.</p>
+                </div>
+            </div>
+            <p>
+                يُعيّن المُحدِّد الشامل <span dir="ltr" class="br-spec nw">*</span> لون النص إلى الأزرق <span dir="ltr" class="br-spec nw">blue</span> لجميع العناصر.
+            </p>
+            <p>
+                ومع ذلك، يتجاوز مُحدِّد <span dir="ltr" class="br-spec nw">p</span> هذا الأمر من خلال تعيين لون النص إلى الأحمر <span dir="ltr" class="br-spec nw">red</span> خصيصاً لعناصر <span dir="ltr" class="br-spec nw">p</span>.
+            </p>
+            <p>
+                إذا كان العنصر يحمل الفئة <span dir="ltr" class="br-spec nw">highlight</span> ، فإن مُحدِّد الفئة (class selector) تكون له الأولوية، مما يغيّر لون النص إلى الأخضر <span dir="ltr" class="br-spec nw">green</span>.
+            </p>
+            <p>
+                وأخيراً، فإن مُحدِّد المعرِّف الفريد <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">#unique</span> ID selector)</span> — الذي يتمتع بأعلى درجات التخصيص — سيتفوق على جميع المُحدِّدات الأخرى، ليُعيّن لون النص باللون الأرجواني <span dir="ltr" class="br-spec nw">purple</span>.
+            </p>
+
+
+    </section>
+    
+    <!-- QUESTIONS -->
+	<section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما هي قيمة الخصوصية للمُحدِّد الشامل <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">*</span>)</span> ؟</p>
+
+		<p> 1. <span dir="ltr" class="br-spec nw">(1, 0, 0, 0)</span> ❌</p>
+		<p> 2. <span dir="ltr" class="br-spec nw">(0, 1, 0, 0)</span> ❌</p>
+		<p> 3. <span dir="ltr" class="br-spec nw">(0, 0, 1, 0)</span> ❌</p>
+        <p><mark> 4. <span dir="ltr" class="br-spec nw">(0, 0, 0, 0)</span> ✅</mark></p>
+        <br>
+
+        <p class="userstory">ما هي حالة الاستخدام الشائعة للمُحدِّد الشامل (universal selector) ؟</p>
+		
+		<p> 1. لتطبيق أنماط على عنصر محدد. ❌</p>
+        <p><mark> 2. لإعادة تعيين (reset) الأنماط أو توحيدها عبر جميع العناصر. ✅</mark></p>
+        <p> 3. لاستهداف العناصر التي تحمل فئة (class) محددة. ❌</p>
+		<p> 4. لتجاوز الأنماط المضمنة (inline styles) ❌</p>
+        <br>
+
+        <p class="userstory">بناءً على كود CSS التالي، ما هو لون النص؟</p>
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;head&gt;
+ &lt;style&gt;
+  <span class="tag-b">*</span> <span class="attr">{
+   color: <span class="txt">blue</span>;
+  }</span>
+  <span class="tag-b">p</span> <span class="attr">{
+   color: <span class="txt">red</span>;
+  }</span>
+  <span class="tag-b">.highlight</span> <span class="attr">{
+   color: <span class="txt">green</span>;
+  }</span>
+  <span class="tag-b">#unique</span> <span class="attr">{
+   color: <span class="txt">purple</span>;
+  }</span>
+ &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;p <span class="attr">id=<span class="value">"unique"</span> class=<span class="value">"highlight"</span></span>&gt;<span dir="rtl" class="txt">هذا النص</span>&lt;/p&gt;
+&lt;/body&gt;</span>
+            </code></pre></div>
+		
+		<p> 1. أزرق <span dir="ltr" class="br-spec nw">blue</span>. ❌</p>
+		<p> 2. أحمر <span dir="ltr" class="br-spec nw">red</span>. ❌</p>
+		<p> 3. أخضر <span dir="ltr" class="br-spec nw">green</span>. ❌</p>
+        <p><mark> 4. أرجواني <span dir="ltr" class="br-spec nw">purple</span>. ✅</mark></p>
+        
+		
+	</section>
+
+
+
+
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./What-Is-CSS-Specificity-and-the-Specificity-for-Inline-Internal-and-External-CSS.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
