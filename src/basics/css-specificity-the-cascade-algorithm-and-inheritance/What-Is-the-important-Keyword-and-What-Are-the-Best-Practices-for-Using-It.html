@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS | ما هي الكلمة المفتاحية المهمة (important Keyword) ، وما هي أفضل الممارسات لاستخدامها؟"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/basicsStyles/css-specificity-the-cascade-algorithm-and-inheritance/What-Is-the-important-Keyword-and-What-Are-the-Best-Practices-for-Using-It.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>أولوية CSS ، وخوارزمية التتابع (Cascade) ، والوراثة (Inheritance)</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+    <!-- sub-title -->
+	<section class="sub-title">
+        <h2>ما هي الكلمة المفتاحية المهمة (important Keyword) ، وما هي أفضل الممارسات لاستخدامها؟</h2>
+		<span class="hint">نظري</span>
+        <p></p>
+    </section>
+
+    <section>
+        <p>
+            تُستخدم الكلمة المفتاحية <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">!important</span> keyword)</span> في CSS لمنح قاعدة تنسيقٍ ما أعلى درجات الأولوية، مما يتيح لها تجاوز أي إعلانات (declarations) أخرى خاصة بخاصية معينة.
+        </p>
+        <p>
+            عند استخدامه، فإنه يُجبر المتصفح على تطبيق النمط (style) المحدد، بغض النظر عن درجة خصوصية (specificity) المُحدِّدات الأخرى (other selectors).
+        </p>
+
+        <p class="hinty">
+            لنفترض أن لديك عنصر فقرة HTML بتنسيقات مضمنة (inline styles) كهذا:
+        </p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;p <span class="attr">class=<span class="value">"para"</span> style=<span class="value">"background-color: lightblue; color: black;"</span></span>&gt;
+ <span dir="rtl" class="txt">هذه فقرة.</span>
+&lt;/p&gt;</span>
+        </code></pre></div>
+
+        <p class="hinty">معاينة:</p>
+
+        <div class="preview" role="presentation">
+                <div class="preview1">
+                    <p class="para1" style="background-color: lightblue; color: black;">هذه فقرة.</p>
+                </div>
+        </div>
+        <p>
+            في هذا المثال، تم ضبط لون خلفية (background color) عنصر الفقرة على الأزرق الفاتح <span dir="ltr" class="br-spec nw">lightblue</span> ، ولون النص (text color) على الأسود <span dir="ltr" class="br-spec nw">black</span>.
+        </p>
+        <p class="hinty">
+            يطبّق ملف CSS الأنماط التالية على عنصر الفقرة:
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;p <span class="attr">class=<span class="value">"para"</span> style=<span class="value">"background-color: lightblue; color: black;"</span></span>&gt;
+ <span dir="rtl" class="txt">هذه فقرة.</span>
+&lt;/p&gt;</span>
+        </code></pre></div>
+
+        <p class="file-name">styles.css</p>
+        <div class="code-block"><pre><code>
+<span class="tag">.para</span> <span class="attr"> {
+  background-color: <span class="txt">black</span>;
+  color: <span class="txt">white</span>;
+}</span>
+        </code></pre></div>
+        </div>
+
+        <p class="hinty">معاينة:</p>
+
+        <div class="preview" role="presentation">
+                <div class="preview2">
+                    <p class="para2" style="background-color: lightblue; color: black;">هذه فقرة.</p>
+                </div>
+        </div>
+        <p>
+            بما أن الأنماط المضمنة (inline styles) تتمتع بأولوية أعلى من محددات الفئة (class) والمُعرِّف (ID) والنوع (type)، فلن يتم تطبيق لون الخلفية الأسود (black background color) ولون النص الأبيض (white text color) على عنصر الفقرة ذاك.
+        </p>
+
+        <p class="hinty">
+            لتجاوز تلك الأنماط المضمنة (inline styles)، يمكنك استخدام الكلمة المفتاحية <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">!important</span> keyword)</span> على النحو التالي:
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;p <span class="attr">class=<span class="value">"para"</span> style=<span class="value">"background-color: lightblue; color: black;"</span></span>&gt;
+ <span dir="rtl" class="txt">هذه فقرة.</span>
+&lt;/p&gt;</span>
+        </code></pre></div>
+
+        <p class="file-name">styles.css</p>
+        <div class="code-block"><pre><code>
+<span class="tag">.para</span> <span class="attr"> {
+  background-color: <span class="txt">black</span> <span class="tag-b">!important</span>;
+  color: <span class="txt">white</span> <span class="tag-b">!important</span>;
+}</span>
+        </code></pre></div>
+        </div>
+
+        <p class="hinty">معاينة:</p>
+
+        <div class="preview" role="presentation">
+                <div class="preview3">
+                    <p class="para3" style="background-color: lightblue; color: black;">هذه فقرة.</p>
+                </div>
+        </div>
+        <p>
+            تُستخدم الكلمة المفتاحية <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">!important</span> keyword)</span> بعد قيمة CSS وقبل الفاصلة المنقوطة (semicolon).
+        </p>
+        <p>
+            الآن، سيتم تطبيق اللونين الأسود والأبيض على عنصر الفقرة؛ وذلك لأن الأنماط المضمنة (inline styles) قد تم تجاوزها باستخدام الكلمة المفتاحية <span dir="ltr" class="br-spec nw">!important</span>.
+        </p>
+        <p>
+            تُستخدم الكلمة المفتاحية <span dir="ltr" class="br-spec nw">!important</span> في CSS لمنح قاعدة التنسيق أعلى درجات الأولوية، مما يؤدي فعلياً إلى تجاوز الإعلانات الأخرى، بما في ذلك تلك التي تتمتع بخصوصية (specificity) أعلى أو التنسيقات المضمنة (inline styles).
+        </p>
+        <p>
+            ومع ذلك، فإن الكلمة المفتاحية <span dir="ltr" class="br-spec nw">!important</span> لا تُغيِّر من "خصوصية" (specificity) مُحدِّد CSS نفسه؛ فهي تضمن ببساطة تطبيق القاعدة التي تتضمن <span dir="ltr" class="br-spec nw">!important</span> حتى في حال وجود قواعد أخرى متعارضة ذات خصوصية أعلى.
+        </p>
+        <p>
+            من حالات الاستخدام المناسبة الأخرى للكلمة المفتاحية <span dir="ltr" class="br-spec nw">!important</span> هي تجاوز الأنماط (styles) القادمة من مكتبات (libraries) أو أطر عمل (frameworks) خارجية، وذلك عندما لا تملك صلاحية التحكم في ملفات CSS الأصلية.
+        </p>
+        <p>
+            ومع ذلك، فإن الإفراط في استخدام الكلمة المفتاحية !important يمكن أن يؤدي إلى صعوبات في صيانة وتصحيح أخطاء CSS الخاص بك، لأنه يكسر التتالي الطبيعي للأنماط (natural cascading of styles) ويمكن أن يؤدي إلى عواقب غير مقصودة (unintended consequences).
+        </p>
+        <p>
+            لذا، من الأفضل استخدام الكلمة المفتاحية <span dir="ltr" class="br-spec nw">!important</span> باعتدال.
+        </p>
+        
+
+    </section>
+
+    <!-- QUESTIONS -->
+    <section class="questions">
+			<p class="pquestions">أسئلة :</p>
+				
+			<p class="userstory">ما هي وظيفة الكلمة المفتاحية <span dir="ltr" class="br-spec nw">!important</span> في CSS؟</p>
+
+			<p> 1. يُزيد من قيمة التحديد (specificity) للمُحدِّد (selector). ❌</p>
+            <p><mark> 2. يُطبِّق النمط (style) بغض النظر عن قيمة التحديد الخاصة بالقواعد الأخرى. ✅</mark></p>
+            <p> 3. يُقلل من قيمة التحديد (specificity value) للمُحدِّد. ❌</p>
+			<p> 4. يتجاوز الأنماط المضمنة (inline styles) فقط. ❌</p>
+
+            <br>
+
+            <p class="userstory">متى ينبغي استخدام الكلمة المفتاحية <span dir="ltr" class="br-spec nw">!important</span> ؟</p>
+			
+			<p> 1. باعتبارها الطريقة الأساسية لتنسيق العناصر. ❌</p>
+            <p><mark> 2. لتجاوز تنسيقات الجهات الخارجية (third-party) أو كحل مؤقت. ✅</mark></p>
+            <p> 3. في كل قاعدة CSS لضمان الاتساق. ❌</p>
+			<p> 4. لزيادة مستوى التحديد (Specificity). ❌</p>
+
+            <br>
+
+            <p class="userstory">بناءً على كود CSS التالي، ما هو لون النص؟</p>
+			
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;head&gt;
+ &lt;style&gt;
+  <span class="tag-b">p</span> <span class="attr">{
+   color: <span class="txt">blue</span>;
+  }</span>
+  <span class="tag-b">.highlight</span> <span class="attr">{
+   color: <span class="txt">green</span> <span class="tag-b">!important</span>;
+  }</span>
+  <span class="tag-b">#unique</span> <span class="attr">{
+   color: <span class="txt">purple</span>;
+  }</span>
+ &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;p <span class="attr">id=<span class="value">"unique"</span> class=<span class="value">"highlight"</span></span>&gt;<span dir="rtl" class="txt">هذا النص</span>&lt;/p&gt;
+&lt;/body&gt;</span>
+            </code></pre></div>
+
+			<p> 1. أزرق <span dir="ltr" class="br-spec nw">blue</span>. ❌</p>
+            <p><mark> 2. أخضر <span dir="ltr" class="br-spec nw">green</span>. ✅</mark></p>
+            <p> 3. أرجواني <span dir="ltr" class="br-spec nw">purple</span>. ❌</p>
+			<p> 4. أحمر <span dir="ltr" class="br-spec nw">red</span>. ❌</p>
+		</section>
+
+    
+
+
+
+    
+    
+
+    
+    
+    
+
+
+
+
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./What-Is-the-Specificity-for-ID-Selectors.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
