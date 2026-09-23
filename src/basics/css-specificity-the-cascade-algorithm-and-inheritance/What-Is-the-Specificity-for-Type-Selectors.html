@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS |  ما درجة أولوية مُحدِّدات النوع (Type Selectors) ؟"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/basicsStyles/css-specificity-the-cascade-algorithm-and-inheritance/What-Is-the-Specificity-for-Type-Selectors.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>أولوية CSS ، وخوارزمية التتابع (Cascade) ، والوراثة (Inheritance)</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+        <h2>ما درجة أولوية مُحدِّدات النوع (Type Selectors) ؟</h2>
+		<span class="hint">نظري</span>
+        <p></p>
+    </section>
+
+    
+    <section>
+        <p>
+            تستهدف مُحدِّدات النوع (Type selectors) — المعروفة أيضاً باسم مُحدِّدات العناصر (Element selectors) — العناصرَ بناءً على اسم الوسم الخاص بها.
+        </p>
+        <p>
+            تُعد هذه المُحدِّدات أساسية في CSS، وتتيح لك تطبيق الأنماط على جميع حالات عنصر HTML محدد.
+        </p>
+        <p>
+            تتميز مُحدِّدات النوع (Type selectors) بسهولة الاستخدام، وتُكتب ببساطة على هيئة اسم الوسم الخاص بالعنصر الذي ترغب في تنسيقه.
+        </p>
+        <p class="hinty">
+            إليك مثال على مُحدِّد النوع (type selector) الذي يستهدف جميع عناصر الفقرة في الصفحة:
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;p&gt;<span class="txt">الفقرة الأولى</span>&lt;/p&gt;
+&lt;p&gt;<span class="txt">الفقرة الثانية</span>&lt;/p&gt;
+&lt;p&gt;<span class="txt">الفقرة الثالثة</span>&lt;/p&gt;</span>
+            </code></pre></div>
+
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag">p</span> <span class="attr"> {
+  color: <span class="txt">blue</span>;
+}</span>
+            </code></pre></div>
+            </div>
+
+            <p class="hinty">معاينة:</p>
+
+            <div class="preview" role="presentation">
+                <div class="preview1">
+                    <p>الفقرة الأولى</p>
+                    <p>الفقرة الثانية</p>
+                    <p>الفقرة الثالثة</p>
+                </div>
+            </div>
+            <p>
+                في هذا المثال، سيتم ضبط لون النص لجميع عناصر <span dir="ltr" class="br-spec nw">p</span> على اللون الأزرق <span dir="ltr" class="br-spec nw">blue</span>.
+            </p>
+            <p>
+                تتمتع مُحدِّدات النوع (Type selectors) بخصوصية منخفضة نسبياً مقارنةً بالمُحدِّدات الأخرى؛ إذ تبلغ قيمة الخصوصية لمُحدِّد النوع <span dir="ltr" class="br-spec nw">(0, 0, 0, 1)</span>.
+            </p>
+            <p>
+                هذا يعني أنه سيتم تجاوز محددات النوع (type selectors) بواسطة محددات الفئة (class selectors) ومحددات المعرف (ID selectors) والأنماط المضمنة (inline styles)، ولكن لا يزال بإمكانها تطبيق الأنماط (styles) ما لم تكن قواعد التحديد الأعلى موجودة.
+            </p>
+            <p>
+                لنلقِ نظرةً على مثالٍ تتجاوز فيه مُحدِّدات الفئة (class selectors) أنماطَ مُحدِّد النوع (type selector).
+            </p>
+
+            <p class="hinty">إليك مثال يتضمن عنصرين من نوع "فقرة":</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;p <span class="attr">class=<span class="value">"para"</span></span>&gt;<span class="txt">أنا فقرة</span>&lt;/p&gt;
+&lt;p <span class="attr">class=<span class="value">"para"</span></span>&gt;<span class="txt">إليك فقرة أخرى</span>&lt;/p&gt;</span>
+            </code></pre></div>
+
+            <div class="preview" role="presentation">
+                <div class="preview2">
+                    <p>أنا فقرة</p>
+                    <p>إليك فقرة أخرى</p>
+                </div>
+            </div>
+            <p>
+                يحمل كلا عنصري الفقرة فئةً (class) باسم <span dir="ltr" class="br-spec nw">para</span>.
+            </p>
+
+            <p class="hinty">
+                داخل ملف CSS، يستهدف مُحدِّد النوع (type selector) الفقرات، بينما يستهدف مُحدِّد الفئة (class selector) العناصر التي تحمل الفئة <span dir="ltr" class="br-spec nw">para</span>.
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;p <span class="attr">class=<span class="value">"para"</span></span>&gt;<span class="txt">أنا فقرة</span>&lt;/p&gt;
+&lt;p <span class="attr">class=<span class="value">"para"</span></span>&gt;<span class="txt">إليك فقرة أخرى</span>&lt;/p&gt;</span>
+            </code></pre></div>
+
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag">p</span> <span class="attr"> {
+  color: <span class="txt">blue</span>;
+}</span>
+
+<span class="tag">.para</span> <span class="attr"> {
+  color: <span class="txt">red</span>;
+}</span>
+            </code></pre></div>
+            </div>
+
+            <p class="hinty">معاينة:</p>
+
+            <div class="preview" role="presentation">
+                <div class="preview3">
+                    <p class="para3">أنا فقرة</p>
+                    <p class="para3">إليك فقرة أخرى</p>
+                </div>
+            </div>
+            <p>
+                سيتم ضبط لون النص لجميع الفقرات الموجودة في الصفحة والتي تحمل الفئة <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">para</span> class)</span> على اللون الأحمر <span dir="ltr" class="br-spec nw">red</span> بدلاً من الأزرق <span dir="ltr" class="br-spec nw">blue</span> ؛ 
+وذلك لأن محددات الفئات (class selectors) تتمتع بأولوية تحديد (specificity) أعلى من محددات الأنواع (type selectors).
+            </p>
+
+    </section>
+
+    <!-- QUESTIONS -->
+		<section class="questions">
+			<p class="pquestions">أسئلة :</p>
+				
+			<p class="userstory">ما هي قيمة التحديد (specificity) الخاصة بمُحدِّد النوع (مثل <span dir="ltr" class="br-spec nw">div</span>)؟</p>
+
+			<p> 1. <span dir="ltr" class="br-spec nw">(1, 0, 0, 0)</span> ❌</p>
+			<p> 2. <span dir="ltr" class="br-spec nw">(0, 1, 0, 0)</span> ❌</p>
+			<p> 3. <span dir="ltr" class="br-spec nw">(0, 0, 1, 0)</span> ❌</p>
+            <p><mark> 4. <span dir="ltr" class="br-spec nw">(0, 0, 0, 1)</span> ✅</mark></p>
+
+            <br>
+
+            <p class="userstory">أي مما يلي يمتلك خصوصية (specificity) أقل من مُحدِّد النوع (type selector) ؟</p>
+			
+			<p> 1. مُحدِّد فئة (Class selector). ❌</p>
+			<p> 2. مُحدِّد مُعرِّف (ID selector). ❌</p>
+			<p> 3. نمط مُضمَّن (Inline style). ❌</p>
+            <p><mark> 4. مُحدِّد شامل (Universal selector). ✅</mark></p>
+
+            <br>
+
+            <p class="userstory">بناءً على كود CSS التالي، ما هو لون النص؟</p>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;head&gt;
+ &lt;style&gt;
+  <span class="tag-b">*</span> <span class="attr">{
+   color: <span class="txt">blue</span>;
+  }</span>
+  <span class="tag-b">p</span> <span class="attr">{
+   color: <span class="txt">red</span>;
+  }</span>
+ &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">هذا النص</span>&lt;/p&gt;
+&lt;/body&gt;</span>
+            </code></pre></div>
+			
+			<p> 1. أزرق <span dir="ltr" class="br-spec nw">blue</span>. ❌</p>
+            <p><mark> 2. أحمر <span dir="ltr" class="br-spec nw">red</span>. ✅</mark></p>
+            <p> 3. أخضر <span dir="ltr" class="br-spec nw">green</span>. ❌</p>
+			<p> 4. أرجواني <span dir="ltr" class="br-spec nw">purple</span>. ❌</p>
+
+		</section>
+    
+    
+
+
+
+
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./What-Is-the-Universal-Selector-and-What-Is-Its-Specificity.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
