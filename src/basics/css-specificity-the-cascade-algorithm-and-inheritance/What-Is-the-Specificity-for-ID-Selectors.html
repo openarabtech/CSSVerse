@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS | ما درجة أولوية مُحدِّدات المعرّف (ID Selectors) ؟"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/basicsStyles/css-specificity-the-cascade-algorithm-and-inheritance/What-Is-the-Specificity-for-ID-Selectors.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>أولوية CSS ، وخوارزمية التتابع (Cascade) ، والوراثة (Inheritance)</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+    <!-- sub-title -->
+	<section class="sub-title">
+        <h2>ما درجة أولوية مُحدِّدات المعرّف (ID Selectors) ؟</h2>
+		<span class="hint">نظري</span>
+        <p></p>
+    </section>
+
+    <section>
+        <p>
+            تُعد مُحدِّدات المُعرِّفات (ID selectors) من أقوى المُحدِّدات في لغة CSS، إذ تتيح للمطورين تطبيق الأنماط (styles) على عناصر محددة ذات مُعرِّفات فريدة (unique identifiers).
+        </p>
+        <p>
+            وهذا يجعلها فعالة للغاية في استهداف العناصر الفردية التي تتطلب تنسيقاً فريداً (unique styling).
+        </p>
+        <p>
+            يتم تحديد مُحدِّدات المُعرِّف (ID selectors) باستخدام رمز المربع <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">#</span>)</span> متبوعاً باسم المُعرِّف (ID name). ويجب أن تكون هذه المُعرِّفات فريدةً داخل مستند HTML، مما يعني أنه لا يجوز أن يتشارك عنصران في المُعرِّف (ID) نفسه.
+        </p>
+
+        <p class="hinty">
+            إليك مثال يستخدم مُحدِّد المُعرِّف (ID selector) :
+        </p>
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;p <span class="attr">id=<span class="value">"unique"</span></span>&gt;<span class="txt">فقرة نموذجية</span>&lt;/p&gt;
+&lt;p&gt;<span class="txt">فقرة أخرى</span>&lt;/p&gt;
+&lt;p&gt;<span class="txt">فقرة أخرى أخرى</span>&lt;/p&gt;
+</span>
+        </code></pre></div>
+
+        <p class="file-name">styles.css</p>
+        <div class="code-block"><pre><code>
+<span class="tag">#unique</span> <span class="attr"> {
+  color: <span class="txt">purple</span>;
+}</span>
+        </code></pre></div>
+        </div>
+
+        <p class="hinty">معاينة:</p>
+
+        <div class="preview" role="presentation">
+                <div class="preview1">
+                    <p id="unique1">فقرة نموذجية</p>
+                    <p>فقرة أخرى</p>
+                    <p>فقرة أخرى أخرى</p>
+                </div>
+        </div>
+        <p>
+            في هذا المثال، سيتم تعيين لون النص للعنصر الذي يحمل المعرّف <span dir="ltr" class="br-spec nw">unique</span> إلى اللون الأرجواني <span dir="ltr" class="br-spec nw">purple</span>.
+        </p>
+        <p>
+            تتمتع محددات المعرّف (ID selectors) بمستوى تحديد عالٍ جداً؛ فهو أعلى من مستوى تحديد محددات النوع (Type selectors) ومحددات الفئة (Class selectors)، ولكنه أقل من مستوى تحديد الأنماط المضمنة (inline styles). وتبلغ قيمة مستوى التحديد لمحدد المعرّف <span dir="ltr" class="br-spec nw">(0, 1, 0, 0)</span>.
+        </p>
+        <p>
+            هذا يعني أن محددات المعرفات (ID selectors) يمكنها تجاوز محددات الفئة (Class selectors) ومحددات النوع (Type selectors)، ولكن يمكن تجاوزها بواسطة الأنماط المضمنة (inline styles).
+        </p>
+
+    </section>
+
+    <!-- QUESTIONS -->
+    <section class="questions">
+			<p class="pquestions">أسئلة :</p>
+				
+			<p class="userstory">ما هي قيمة التحديد (specificity) الخاصة بمُحدِّد المُعرِّف (ID selector) (على سبيل المثال: <span dir="ltr" class="br-spec nw">#example</span>)؟</p>
+
+			<p> 1. <span dir="ltr" class="br-spec nw">(1, 0, 0, 0)</span> ❌</p>
+            <p><mark> 2. <span dir="ltr" class="br-spec nw">(0, 1, 0, 0)</span> ✅</mark></p>
+            <p> 3. <span dir="ltr" class="br-spec nw">(0, 0, 1, 0)</span> ❌</p>
+			<p> 4. <span dir="ltr" class="br-spec nw">(0, 0, 0, 1)</span> ❌</p>
+
+            <br>
+
+            <p class="userstory">أي مما يلي يتمتع بخصوصية (specificity) أعلى من مُحدِّد المعرِّف (ID selector)؟</p>
+			
+			<p> 1. مُحدِّد الفئة (Class selector). ❌</p>
+            <p><mark> 2. نمط مُضمَّن (Inline style). ✅</mark></p>
+            <p> 3. مُحدِّد السمة (Attribute selector). ❌</p>
+			<p> 4. مُحدِّد النوع (Type selector). ❌</p>
+
+            <br>
+
+            <p class="userstory">بناءً على كود CSS التالي، ما هو لون النص؟</p>
+
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;head&gt;
+ &lt;style&gt;
+  <span class="tag-b">#unique</span> <span class="attr">{
+   color: <span class="txt">purple</span>;
+  }</span>
+  <span class="tag-b">.highlight</span> <span class="attr">{
+   color: <span class="txt">green</span>;
+  }</span>
+  <span class="tag-b">p</span> <span class="attr">{
+   color: <span class="txt">blue</span>;
+  }</span>
+ &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;p <span class="attr">id=<span class="value">"unique"</span> class=<span class="value">"highlight"</span></span>&gt;<span dir="rtl" class="txt">هذا النص</span>&lt;/p&gt;
+&lt;/body&gt;</span>
+            </code></pre></div>
+			
+			<p> 1. أخضر <span dir="ltr" class="br-spec nw">green</span>. ❌</p>
+			<p> 2. أزرق <span dir="ltr" class="br-spec nw">blue</span>. ❌</p>
+			<p> 3. أحمر <span dir="ltr" class="br-spec nw">red</span>. ❌</p>
+            <p><mark> 4. أرجواني <span dir="ltr" class="br-spec nw">purple</span>. ✅</mark></p>
+		</section>
+
+
+
+    
+    
+
+    
+    
+    
+
+
+
+
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./What-Is-the-Specificity-for-Class-Selectors.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
