@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS | كيف تعمل الوراثة (Inheritance) في CSS بشكل عام؟"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>أولوية CSS ، وخوارزمية التتابع (Cascade) ، والوراثة (Inheritance)</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+    <!-- sub-title -->
+	<section class="sub-title">
+        <h2>كيف تعمل الوراثة (Inheritance) في CSS بشكل عام؟</h2>
+		<span class="hint">نظري</span>
+        <p></p>
+    </section>
+
+    <section>
+        <p>
+            تُعد "الوراثة" (Inheritance) مفهوماً أساسياً في CSS، حيث تحدد كيفية انتقال الأنماط من العناصر الأب (parent elements) إلى العناصر الابنة (child elements) التابعة لها.
+        </p>
+        <p>
+            تماماً كما هو الحال في العالم الحقيقي، حيث غالباً ما يرث الأطفال سماتٍ من والديهم، يمكن في CSS لعناصر فرعية (child elements) أن ترث خصائصَ معينةً (certain properties) من العناصر الأصلية (parent elements).
+        </p>
+        <p>
+            يتيح ذلك طريقةً أكثر كفاءةً لتطبيق تنسيقٍ متسقٍ على المستند بأكمله.
+        </p>
+        <p>
+            في CSS، لا تُورَث جميع الخصائص (all properties) بشكل افتراضي (by default). 
+فعلى سبيل المثال، تُورَث خصائص مثل <span dir="ltr" class="br-spec nw">color</span> و <span dir="ltr" class="br-spec nw">font-family</span> و <span dir="ltr" class="br-spec nw">line-height</span>. 
+وهذا يعني أنه إذا قمت بتحديد لون النص لعنصر أب (parent element)، فإن جميع العناصر التابعة له سترث ذلك اللون ما لم تقم بتغييره (تجاوزه) بشكل صريح.
+        </p>
+
+        <p class="hinty">
+            على سبيل المثال، لننظر في الحالة التالية التي يتم فيها تحديد لون عنصر <span dir="ltr" class="br-spec nw">div</span> باستخدام نمط مضمّن (inline style)، ويرث العنصر الابن <span dir="ltr" class="br-spec nw">p</span> ذلك اللون:
+        </p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;div <span class="attr">style=<span class="value">"color: blue;"</span></span>&gt;
+ <span dir="rtl" class="txt">هذا هو العنصر الأب.</span>
+ &lt;p&gt;<span dir="rtl" class="txt">هذا هو العنصر الابن الذي يرث اللون.</span>&lt;/p&gt;
+&lt;/div&gt;</span>
+        </code></pre></div>
+
+        <p class="hinty">معاينة:</p>
+
+        <div class="preview" role="presentation">
+                <div style="color: blue;">
+                    هذا هو العنصر الأب.
+                    <p>هذا هو العنصر الابن الذي يرث اللون.</p>
+                </div>
+        </div>
+        <p>
+            في هذه الحالة، سيعرض كل من العنصر الأب <span dir="ltr" class="br-spec nw">div</span> والعنصر الابن <span dir="ltr" class="br-spec nw">p</span> النص باللون الأزرق؛ لأن اللون يُورَّث (the color is inherited).
+        </p>
+        <p>
+            من ناحية أخرى، لا يتم توريث خصائص مثل الهوامش <span dir="ltr" class="br-spec nw">margin</span> والهوامش الداخلية <span dir="ltr" class="br-spec nw">padding</span> والحدود <span dir="ltr" class="br-spec nw">border</span> والخلفية <span dir="ltr" class="br-spec nw">background</span> بشكل افتراضي. 
+وإذا أردت أن يرث عنصر فرعي هذه الأنماط (styles)، 
+فيجب عليك تحديدها صراحةً، سواءً مباشرةً على العنصر الفرعي نفسه أو باستخدام الكلمة المفتاحية <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">inherit</span> keyword)</span>.
+        </p>
+        <p>
+            يمكن استخدام الكلمة المفتاحية <span dir="ltr" class="br-spec nw">inherit</span> لفرض وراثة خاصية ما من العنصر الأب (parent element)، حتى وإن كانت تلك الخاصية لا تُورَّث عادةً.
+        </p>
+
+        <p class="hinty">
+            على سبيل المثال، إذا أردت أن يكون لعنصر فرعي محدد نفس مقدار الهامش الداخلي <span dir="ltr" class="br-spec nw">padding</span> الخاص بالعنصر الأب، يمكنك تعيين <span dir="ltr" class="br-spec nw">padding: inherit</span> للعنصر الفرعي:
+        </p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;div <span class="attr">style=<span class="value">"padding: 20px;"</span></span>&gt;
+ <span dir="rtl" class="txt">هذا هو العنصر الأب الذي يحتوي على هامش داخلي.</span>
+ &lt;p  <span class="attr">style=<span class="value">"padding: inherit;"</span></span>&gt;<span dir="rtl" class="txt">هذا هو العنصر الابن الذي يرث الهامش الداخلي.</span>&lt;/p&gt;
+&lt;/div&gt;</span>
+        </code></pre></div>
+
+        <p class="hinty">معاينة:</p>
+
+        <div class="preview" role="presentation">
+            <div style="padding: 20px;">
+                 هذا هو العنصر الأب الذي يحتوي على هامش داخلي.
+                <p  style="padding: inherit;">هذا هو العنصر الابن الذي يرث الهامش الداخلي.</p>
+            </div>                
+        </div>
+
+        <p>
+            في هذه الحالة، سيرث العنصر الابن <span dir="ltr" class="br-spec nw">p</span> قيمة الهامش الداخلي <span dir="ltr" class="br-spec nw">padding</span> البالغة <span dir="ltr" class="br-spec nw">20px</span> من العنصر الأب <span dir="ltr" class="br-spec nw">div</span>.
+        </p>
+        <p>
+            تُعد خاصية التوريث (Inheritance) مفيدة بشكل خاص للحفاظ على الاتساق وتقليل التكرار في ملفات الأنماط الخاصة بك.
+        </p>
+        <p>
+            بدلاً من كتابة قاعدة التنسيق نفسها لعناصر متعددة، يمكنك تعريفها مرة واحدة على عنصر أب (parent element)، وستقوم العناصر الابنة (child elements) بوراثتها (inherit it)؛ مما يجعل كود CSS أكثر إيجازاً وأسهل في الإدارة.
+        </p>
+        <p>
+            ومع ذلك، من المهم تذكر أن التوريث (inheritance) يعمل في اتجاه واحد فقط: من العنصر الأب إلى العنصر الابن. فإذا قمت بتجاوز (override) نمطٍ ما في عنصر ابن، فلن يؤثر ذلك على العنصر الأب.
+        </p>
+
+    </section>
+
+
+    <!-- QUESTIONS -->
+	<section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">أي من خصائص CSS التالية تُورَّث عادةً بشكل افتراضي؟</p>
+
+		<p> 1. <span dir="ltr" class="br-spec nw">padding</span> ❌</p>
+        <p> 2. <span dir="ltr" class="br-spec nw">border</span> ❌</p>
+        <p><mark> 3. <span dir="ltr" class="br-spec nw">color</span> ✅</mark></p>
+		<p> 4. <span dir="ltr" class="br-spec nw">background</span> ❌</p>
+        <br>
+
+        <p class="userstory">ما هي الكلمة المفتاحية التي يمكن استخدامها لإجبار عنصر فرعي (child element) على وراثة خاصية (inherit a property) من العنصر الأب (parent element) ؟</p>
+		
+		<p> 1. <span dir="ltr" class="br-spec nw">default</span> ❌</p>
+        <p><mark> 2. <span dir="ltr" class="br-spec nw">inherit</span> ✅</mark></p>
+        <p> 3. <span dir="ltr" class="br-spec nw">initial</span> ❌</p>
+		<p> 4. <span dir="ltr" class="br-spec nw">none</span> ❌</p>
+        <br>
+
+        <p class="userstory">بناءً على كود CSS التالي، ما هو لون نص العنصر <span dir="ltr" class="br-spec nw">span</span> الموجود داخل العنصر <span dir="ltr" class="br-spec nw">p</span> ؟</p>
+		
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;head&gt;
+ &lt;style&gt;
+  <span class="tag-b">p</span> <span class="attr">{
+   color: <span class="txt">blue</span>;
+  }</span>
+ &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;p&gt;
+  <span class="txt">هذا</span>
+  &lt;span&gt;<span class="txt">اختبار</span>&lt;/span&gt;
+ &lt;/p&gt;
+&lt;/body&gt;</span>
+            </code></pre></div>
+
+		<p><mark> 1. <span dir="ltr" class="br-spec nw">blue</span> ✅</mark></p>
+		<p> 2. <span dir="ltr" class="br-spec nw">red</span> ❌</p>
+        <p> 3. <span dir="ltr" class="br-spec nw">green</span> ❌</p>
+		<p> 4. <span dir="ltr" class="br-spec nw">black</span> ❌</p>
+	</section>
+
+    
+
+    
+
+    
+
+
+
+    
+    
+
+    
+    
+    
+
+
+
+
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./How-Does-the-Cascade-Algorithm-Work-at-a-High-Level.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
