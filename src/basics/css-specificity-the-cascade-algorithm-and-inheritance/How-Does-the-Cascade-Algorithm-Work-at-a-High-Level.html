@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS | كيف تعمل خوارزمية التتابع (Cascade) بشكل عام؟"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/basicsStyles/css-specificity-the-cascade-algorithm-and-inheritance/How-Does-the-Cascade-Algorithm-Work-at-a-High-Level.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>أولوية CSS ، وخوارزمية التتابع (Cascade) ، والوراثة (Inheritance)</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+    <!-- sub-title -->
+	<section class="sub-title">
+        <h2>كيف تعمل خوارزمية التتابع (Cascade) بشكل عام؟</h2>
+		<span class="hint">نظري</span>
+        <p></p>
+    </section>
+
+    <section>
+        <p>
+            تُعد "خوارزمية التتابع" (Cascade Algorithm) العملية التي يستخدمها المتصفح لتحديد قواعد CSS الواجب تطبيقها عند وجود أنماط متعددة (multiple styles) تستهدف العنصر نفسه؛ فهي تضمن استخدام الأنماط الأكثر ملاءمةً استناداً إلى مجموعة من القواعد (rules) المحددة بوضوح.
+        </p>
+        <p>
+            تبدأ العملية بمبدأ الصلة أو الملاءمة؛ إذ يقوم المتصفح أولاً بتصفية جميع قواعد CSS لتحديد تلك التي تنطبق فعلياً على العنصر المعني. ويشمل ذلك مطابقة المُحدِّدات (selectors) ومراعاة استعلامات الوسائط (media queries) التي قد تكون سارية المفعول.
+        </p>
+        <p>
+            استعلام الوسائط (Media Query) هو تقنية في CSS تُستخدم لتطبيق أنماط بناءً على خصائص الجهاز أو منطقة العرض (viewport)، مثل العرض (width) أو الارتفاع (height) أو الاتجاه (orientation).
+        </p>
+        <p>
+            بعد ذلك، تأخذ الخوارزمية (algorithm) في الاعتبار المصدر والأهمية؛ إذ يمكن أن تأتي أنماط CSS من مصادر مختلفة: الأنماط الافتراضية للمتصفح (user-agent)، والأنماط التي يحددها المستخدم (user)، والأنماط التي يكتبها المؤلف (أنت).
+        </p>
+        <p>
+            بعد النظر في المصدر، تُقيِّم الخوارزمية (algorithm) أهمية كل قاعدة، مانحةً الأولوية (priority) للقواعد المحددة بالوسم <span dir="ltr" class="br-spec nw">!important</span> ؛ إذ تتفوق هذه القواعد على غيرها بغض النظر عن مصدرها.
+        </p>
+        <p>
+            بعد التصفية (filtering) بناءً على المصدر والأهمية، ينظر الخوارزمي (algorithm) في مستوى التحديد (أو الخصوصية). وعندما تنطبق قاعدتان لهما المصدر ومستوى الأهمية ذاتهما، يتم تطبيق القاعدة الأكثر تحديداً.
+        </p>
+        <p>
+            تُعد "الخصوصية" (Specificity) مقياساً لمدى تحديد المُحدِّد (selector) لعنصر معين، حيث تحظى المُحدِّدات الأكثر تخصيصاً بالأولوية على تلك الأكثر عمومية.
+        </p>
+        <p>
+            وأخيراً، عند تساوي جميع العوامل الأخرى، يلعب ترتيب (order) الظهور دوراً في الأمر؛ فعندما تتساوى قاعدتان في درجة التحديد، يتم تطبيق القاعدة التي تظهر في النهاية ضمن ملف CSS.
+        </p>
+        <p>
+            ولهذا السبب، قد يؤثر أحياناً الترتيب الذي تكتب به أنماطك (your styles) على النتيجة.
+        </p>
+        <p class="hinty">
+            لنلقِ نظرةً على مثال.
+        </p>
+        <p class="hinty">
+            يحتوي ملف HTML على عنصر فقرة واحد، بينما توجد في ملف CSS قاعدتان تستهدف كل منهما عنصر الفقرة هذا.
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;p&gt;<span dir="rtl" class="txt">فقرة نموذجية</span>&lt;/p&gt;</span>
+        </code></pre></div>
+
+        <p class="file-name">styles.css</p>
+        <div class="code-block"><pre><code>
+<span class="tag">p</span> <span class="attr"> {
+  color: <span class="txt">blue</span>;
+}</span>
+
+<span class="tag">p</span> <span class="attr"> {
+  color: <span class="txt">green</span>;
+}</span>
+        </code></pre></div>
+        </div>
+
+        <p class="hinty">معاينة:</p>
+
+        <div class="preview" role="presentation">
+                <div class="preview1">
+                    <p>فقرة نموذجية</p>
+                </div>
+        </div>
+        <p>
+            تُعيّن القاعدة الأولى لون نص جميع عناصر الفقرة باللون الأزرق، بينما تُعيّن القاعدة الثانية لون نص جميع عناصر الفقرة باللون الأخضر.
+        </p>
+        <p>
+            إذن، أي لون سيتم تطبيقه؟ سيتم تطبيق اللون الأخضر على عناصر الفقرة.
+        </p>
+        <p>
+            من خلال مراعاة عوامل الأولوية (relevance)، والمصدر والأهمية، والتخصيص، وترتيب الظهور، تضمن "خوارزمية التتابع" (Cascade Algorithm) أن تتصرف شيفرة CSS الخاصة بك بطريقة يمكن التنبؤ بها، مما يتيح لك تصميم صفحات ويب أكثر تعقيداً وتفصيلاً.
+
+        </p>
+
+    </section>
+
+    <!-- QUESTIONS -->
+	<section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما هي الخطوة الأولى التي تتخذها خوارزمية التتابع (Cascade Algorithm) عند تحديد الأنماط التي سيتم تطبيقها؟</p>
+
+		<p> 1. يتحقق من مدى خصوصية القواعد (the specificity of the rules). ❌</p>
+        <p><mark> 2. يُصنِّف (filters) القواعد بناءً على مدى صلتها بالعنصر. ✅</mark></p>
+        <p> 3. يبحث عن التصريحات (declarations) التي تحمل الوسم <span dir="ltr" class="br-spec nw">!important</span>. ❌</p>
+		<p> 4. يطبِّق القاعدة الأخيرة (last rule) الواردة في ملف CSS. ❌</p>
+        <br>
+
+        <p class="userstory">ماذا سيحدث إذا حاولت تطبيق مجموعة متعارضة من الأنماط (styles) على قاعدتي فقرة؟</p>
+		
+		<p> 1. سيتم تطبيق أجزاء من الأنماط (styles) الخاصة بكل قاعدة. ❌</p>
+        <p> 2. سيتوقف البرنامج عن العمل (crash). ❌</p>
+        <p><mark> 3. سيتم تطبيق الأنماط الأخيرة (last styles). ✅</mark></p>
+		<p> 4. لن يتم تطبيق أي من الأنماط (styles). ❌</p>
+        <br>
+
+        <p class="userstory">أي من العوامل التالية لا يؤثر على قرار "خوارزمية التتابع" (Cascade Algorithm) بشأن قاعدة CSS التي سيتم تطبيقها؟</p>
+		
+		<p> 1. خصوصية المُحدِّدات (Selectors). ❌</p>
+		<p> 2. ترتيب (order) ورود القواعد. ❌</p>
+		<p> 3. ما إذا كانت الكلمة المفتاحية <span dir="ltr" class="br-spec nw">!important</span> مستخدمة. ❌</p>
+        <p><mark> 4. خاصية اللون <span dir="ltr" class="br-spec nw">color</span> في قاعدة CSS. ✅</mark></p>
+	</section>
+
+    
+
+    
+
+
+
+    
+    
+
+    
+    
+    
+
+
+
+
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./What-Is-the-important-Keyword-and-What-Are-the-Best-Practices-for-Using-It.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
