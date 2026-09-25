@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS | مراجعة أساسيات CSS"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/basicsStyles/css-fundamentals-review/CSS-Fundamentals-Review.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>الأساسيات</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+    <!-- sub-title -->
+	<section class="sub-title">
+        <h2>مراجعة أساسيات CSS</h2>
+		<span class="hint">مراجعة</span>
+        <p></p>
+    </section>
+
+
+    <section>
+        <!-- CSS Basics -->
+        <section>
+            <h3>أساسيات سي.اس.اس CSS Basics</h3>
+            <ul>
+                <li>
+                    <p>
+                        <b>ما هي CSS؟ :</b> تُعد "أوراق الأنماط المتتالية" (CSS) لغةً لتنسيق الصفحات تُستخدم لتطبيق الأنماط (styles) على عناصر HTML. وتُستخدم CSS لتحديد الألوان، وصور الخلفية، وتخطيطات الصفحة (layouts)، وغيرها.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>البنية الأساسية لقاعدة سي.اس.اس Basic Anatomy of a CSS Rule :</b> تتكون قاعدة CSS من جزأين رئيسيين: المُحدِّد (Selector) وكتلة الإعلان (Declaration block). المُحدِّد هو نمط يُستخدم في CSS لتحديد عناصر HTML معينة واستهدافها بغرض تطبيق التنسيق عليها، بينما تقوم كتلة الإعلان بتطبيق مجموعة من التنسيقات على المُحدِّد (أو المُحدِّدات) المعني.
+                    </p>
+                    <p>
+                        إليك الصيغة العامة لقاعدة CSS:
+                    </p>
+                    <div class="code-block"><pre><code>
+<span class="tag-b">selector</span> <span class="attr"> {
+property: <span class="txt">value</span>;
+}</span>
+                    </code></pre></div>
+                </li>
+                <li>
+                    <p>
+                        <b>عنصر <span dir="ltr" class="br-spec nw">meta name="viewport"</span> :</b> يزوّد هذا العنصر <span dir="ltr" class="br-spec nw">meta</span> المتصفح بتعليمات حول كيفية التحكم في أبعاد الصفحة (page's dimensions) ومقياس عرضها عبر الأجهزة المختلفة، ولا سيما الهواتف المحمولة والأجهزة اللوحية.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>أنماط المتصفح الافتراضية Default Browser Styles :</b> تُطبَّق أنماط المتصفح الافتراضية على كل عنصر من عناصر HTML؛ وعادةً ما تشمل هذه الأنماط خصائص مثل الهوامش (margins) والهوامش الداخلية (paddings) الافتراضية.
+                    </p>
+                </li>
+            </ul>
+            <br>
+        </section>
+
+        <!-- Inline, Internal, and External CSS -->
+        <section>
+            <h3>سي.اس.اس المضمّن والداخلي والخارجي Inline, Internal, and External CSS</h3>
+            <ul>
+                <li>
+                    <p>
+                        <b>سي.اس.اس المضمّن Inline CSS :</b> تُكتب هذه الأنماط مباشرةً داخل عنصر HTML باستخدام السمة <span dir="ltr" class="br-spec nw">style</span>. وفي معظم الحالات، لن تستخدم هذا النوع من CSS نظراً لمبدأ فصل المهام (separation of concerns).
+                    </p>
+                    <p>إليك مثال على سي.اس.اس المضمن (Inline CSS) :</p>
+                    <div class="code-block"><pre><code>
+<span class="tag">&lt;p <span class="attr">style=<span class="value">"color: red;"</span></span>&gt;<span dir="rtl" class="txt">هذه فقرة حمراء.</span>&lt;/p&gt;</span>
+                    </code></pre></div>
+                    <p class="hinty">معاينة:</p>
+                    <div class="preview" role="presentation">
+                        <p style="color: red;">هذه فقرة حمراء.</p>
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <b>سي.اس.اس الداخلية Internal CSS :</b> تُكتب هذه الأنماط داخل وسوم <span dir="ltr" class="br-spec nw">&lt;style&gt;</span> الموجودة في قسم الرأس <span dir="ltr" class="br-spec nw">head</span> من مستند HTML. قد يكون هذا الأسلوب مفيداً عند إنشاء أمثلة برمجية قصيرة، ولكنك عادةً لن تحتاج إلى استخدام CSS الداخلي.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>سي.اس.اس الخرجي External CSS :</b> تُكتب أنماط التنسيق (styles) هذه في ملف CSS منفصل وتُربط بمستند HTML باستخدام عنصر <span dir="ltr" class="br-spec nw">link</span> الموجود في قسم الرأس <span dir="ltr" class="br-spec nw">head</span>. وفي معظم المشاريع، ستعتمد على ملف CSS خارجي بدلاً من استخدام CSS الداخلي أو المضمّن (inline).
+                    </p>
+                </li>
+            </ul>
+            <br>
+        </section>
+
+        <!-- Working With the width and height Properties -->
+        <section>
+            <h3>التعامل مع خاصيتي العرض <span dir="ltr" class="br-spec nw">width</span> والارتفاع <span dir="ltr" class="br-spec nw">height</span></h3>
+            <ul>
+                <li>
+                    <p>
+                        <b>خاصية <span dir="ltr" class="br-spec nw">width</span> :</b> تحدد هذه الخاصية عرض العنصر. وفي حال عدم تحديد العرض، تُضبط القيمة الافتراضية على <span dir="ltr" class="br-spec nw">auto</span>؛ مما يتيح للمتصفح تحديد عرض العنصر بناءً على محتواه (its content)، وعنصره الأب (its parent)، ونوع العرض (display type).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>خاصية <span dir="ltr" class="br-spec nw">min-width</span> :</b> تحدد هذه الخاصية الحد الأدنى لعرض العنصر.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>خاصية <span dir="ltr" class="br-spec nw">max-width</span> :</b> تحدد هذه الخاصية الحد الأقصى لعرض العنصر.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>خاصية <span dir="ltr" class="br-spec nw">height</span> :</b> تحدد هذه الخاصية ارتفاع العنصر. وبالمثل، تكون قيمة الارتفاع تلقائية <span dir="ltr" class="br-spec nw">auto</span> بشكل افتراضي، مما يعني أنها تتكيف مع المحتوى الموجود بداخل العنصر.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>خاصية <span dir="ltr" class="br-spec nw">min-height</span> :</b> تحدد هذه الخاصية الحد الأدنى لارتفاع العنصر.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>خاصية <span dir="ltr" class="br-spec nw">max-height</span> :</b> تحدد هذه الخاصية الحد الأقصى لارتفاع العنصر.
+                    </p>
+                </li>
+            </ul>
+            <br>
+
+        </section>
+
+        <!-- Different Types of CSS Combinators -->
+        <section>
+            <h3>أنواع مختلفة من مُجمِّعات سي.اس.اس Different Types of CSS Combinators</h3>
+            <ul>
+                <li>
+                    <p>
+                        <b>مُركِّب العناصر التابعة Descendant Combinator :</b> يُستخدم هذا المُركِّب لاستهداف العناصر التي تُعد تابعةً لعنصر أبٍ مُحدَّد (specified parent element). يستهدف المثال التالي جميع عناصر القائمة <span dir="ltr" class="br-spec nw">li</span> الموجودة داخل عناصر القائمة غير المرتبة <span dir="ltr" class="br-spec nw">ul</span>.
+                    </p>
+                    <div class="codeFiles">
+                        <p class="file-name">index.html</p>
+                        <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">مثال رقم 1</span>&lt;/li&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">مثال رقم 2</span>&lt;/li&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">مثال رقم 3</span>&lt;/li&gt;
+&lt;/ul&gt;</span>
+                        </code></pre></div>
+
+                        <p class="file-name">styles.css</p>
+                        <div class="code-block"><pre><code>
+<span class="tag-b">ul li</span> <span class="attr"> {
+  background-color: <span class="txt">yellow</span>;
+}</span>
+                        </code></pre></div>
+                    </div>
+
+                        <p class="hinty">معاينة:</p>
+
+                        <div class="preview" role="presentation">
+                            <div class="preview1">
+                                <ul>
+                                    <li>مثال رقم 1</li>
+                                    <li>مثال رقم 2</li>
+                                    <li>مثال رقم 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                </li>
+
+                <li>
+                    <p>
+                        <b>مُركِّب الابن <span dir="ltr" class="nw">Child Combinator (<span dir="ltr" class="br-spec nw">&gt;</span>)</span> :</b> يُستخدم هذا المُركِّب لاختيار العناصر التي تُعد أبناءً مباشرةً (direct children) لعنصر أبٍ مُحدَّد (specified parent element). يستهدف المثال التالي جميع عناصر <span dir="ltr" class="br-spec nw">p</span> التي تُمثّل أبناءً مباشرةً للعنصر الذي يحمل الفئة (class) المسماة <span dir="ltr" class="br-spec nw">container</span>.
+                    </p>
+                    <div class="codeFiles">
+                        <p class="file-name">index.html</p>
+                        <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"container"</span></span>&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">سيتم تنسيق هذا.</span>&lt;/p&gt;
+
+ &lt;div&gt;
+  &lt;p&gt;<span dir="rtl" class="txt">لن يتم تطبيق تنسيق على هذا.</span>&lt;/p&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</span>
+                        </code></pre></div>
+
+                        <p class="file-name">styles.css</p>
+                        <div class="code-block"><pre><code>
+<span class="tag-b">.container &gt; p</span> <span class="attr"> {
+  background-color: <span class="txt">black</span>;
+  color: <span class="txt">white</span>;
+}</span>
+                        </code></pre></div>
+                        </div>
+
+                        <p class="hinty">معاينة:</p>
+
+                        <div class="preview" role="presentation">
+                            <div class="preview2">
+                                <div class="container2">
+                                    <p>سيتم تنسيق هذا.</p>
+
+                                    <div>
+                                        <p>لن يتم تطبيق تنسيق على هذا.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </li>
+                <li>
+                    <p>
+                        <b>مُركِّب الأخ التالي <span dir="ltr" class="nw">Next-sibling Combinator (<span dir="ltr" class="br-spec nw">+</span>)</span> :</b> يختار هذا المُركِّب العنصر الذي يلي مباشرةً عنصراً شقيقاً محدداً. سيقوم المثال التالي باختيار عنصر الفقرة <span dir="ltr" class="br-spec nw">p</span> الذي يلي مباشرةً عنصر العنوان <span dir="ltr" class="br-spec nw">h2</span>.
+                    </p>
+                    <div class="codeFiles">
+                        <p class="file-name">index.html</p>
+                        <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;h2&gt;<span class="txt">أنا عنوان فرعي</span>&lt;/h2&gt;
+
+&lt;p&gt;<span dir="rtl" class="txt">سيحصل عنصر الفقرة هذا على خلفية حمراء.</span>&lt;/p&gt;</span>
+                        </code></pre></div>
+
+                        <p class="file-name">styles.css</p>
+                        <div class="code-block"><pre><code>
+<span class="tag-b">h2 + p</span> <span class="attr"> {
+  background-color: <span class="txt">red</span>;
+}</span>
+                        </code></pre></div>
+                        </div>
+
+                        <p class="hinty">معاينة:</p>
+
+                        <div class="preview" role="presentation">
+                            <div class="preview3">
+                                <h2>أنا عنوان فرعي</h2>
+                                <p>سيحصل عنصر الفقرة هذا على خلفية حمراء.</p>
+                            </div>
+                        </div>
+                </li>
+                <li>
+                    <p>
+                        <b>مُجمِّع الأشقاء اللاحقين <span dir="ltr" class="nw">Subsequent-sibling Combinator (<span dir="ltr" class="br-spec nw">~</span>)</span> :</b> يختار هذا المُركِّب جميع الأشقاء (العناصر التي تشترك في نفس العنصر الأب) لعنصرٍ مُحدَّدٍ والذين يقعون بعده. سيُطبِّق المثال التالي التنسيق على عنصر الفقرة الثاني فقط؛ لأنه العنصر الوحيد الذي يُعد شقيقاً لعنصر القائمة غير المرتبة <span dir="ltr" class="br-spec nw">ul</span> ويشترك معه في نفس العنصر الأب.
+                    </p>
+                    <div class="codeFiles">
+                        <p class="file-name">index.html</p>
+                        <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"container"</span></span>&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">لن يتم تطبيق تنسيق على هذا.</span>&lt;/p&gt;
+ &lt;ul&gt;
+  &lt;li&gt;<span dir="rtl" class="txt">مثال رقم 1</span>&lt;/li&gt;
+  &lt;li&gt;<span dir="rtl" class="txt">مثال رقم 2</span>&lt;/li&gt;
+  &lt;li&gt;<span dir="rtl" class="txt">مثال رقم 3</span>&lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">سيتم تنسيق هذا.</span>&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;<span dir="rtl" class="txt">لن يتم تطبيق تنسيق على هذا.</span>&lt;/p&gt;</span>
+                        </code></pre></div>
+
+                        <p class="file-name">styles.css</p>
+                        <div class="code-block"><pre><code>
+<span class="tag-b">ul ~ p</span> <span class="attr"> {
+  background-color: <span class="txt">green</span>;
+}</span>
+                        </code></pre></div>
+                        </div>
+
+                        <p class="hinty">معاينة:</p>
+
+                        <div class="preview" role="presentation">
+                            <div class="preview4">
+                                <div class="container4">
+                                    <p>لن يتم تطبيق تنسيق على هذا.</p>
+                                    <ul>
+                                        <li>مثال رقم 1</li>
+                                        <li>مثال رقم 2</li>
+                                        <li>مثال رقم 3</li>
+                                    </ul>
+                                    <p>سيتم تنسيق هذا.</p>
+                                </div>
+                                <p>لن يتم تطبيق تنسيق على هذا.</p>
+                            </div>
+                        </div>
+                </li>
+            </ul>
+            <br>
+
+        </section>
+
+        <!-- Inline, Block, and Inline-Block Level Elements -->
+        <section>
+            <h3>الهامش الداخلي والخارجي Margin and Padding</h3>
+            <ul>
+                <li>
+                    <p><b>خاصية <span dir="ltr" class="br-spec nw">margin</span> :</b> تُستخدم هذه الخاصية لإضافة مسافة (space) خارج العنصر، وتحديداً بين حدود العنصر والعناصر المحيطة به.</p>
+                </li>
+                <li>
+                    <p>
+                        <b>خاصية <span dir="ltr" class="br-spec nw">padding</span> :</b> تُستخدم هذه الخاصية لإضافة مساحة (space) داخل العنصر، بين المحتوى والحدود الخاصة به.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>إختصار الهامش <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">margin</span> Shorthand)</span> :</b> يمكنك تحديد قيمة واحدة إلى أربع قيم لضبط جوانب الهامش (margin sides). 
+تُطبَّق قيمة واحدة (One value) على الجوانب الأربعة؛ 
+وتُحدِّد قيمتان (two values) الهامش العلوي <span dir="ltr" class="br-spec nw">top</span> والسفلي <span dir="ltr" class="br-spec nw">bottom</span>، ثم الأيمن <span dir="ltr" class="br-spec nw">right</span> والأيسر <span dir="ltr" class="br-spec nw">left</span> ؛ 
+وتُحدِّد ثلاث قيم (three values) الهامش العلوي <span dir="ltr" class="br-spec nw">top</span>، والأفقي (الأيمن والأيسر) <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">right</span> and <span dir="ltr" class="br-spec nw">left</span> )</span>، ثم السفلي <span dir="ltr" class="br-spec nw">bottom</span>؛ 
+بينما تُحدِّد أربع قيم (four values) الهوامش العلوية <span dir="ltr" class="br-spec nw">top</span>، واليمنى <span dir="ltr" class="br-spec nw">right</span>، والسفلية <span dir="ltr" class="br-spec nw">bottom</span>، واليسرى <span dir="ltr" class="br-spec nw">left</span> على التوالي.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <b>إختصار الهوامش الداخلية <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">padding</span> Shorthand)</span> :</b> يمكنك تحديد قيمة واحدة إلى أربع قيم لضبط هوامش الداخلية (padding) للجهات المختلفة. 
+تُطبَّق قيمة واحدة (One value) على الجهات الأربع؛ 
+وتُحدِّد قيمتان (two values) الجهتين العلوية والسفلية <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">top</span> and <span dir="ltr" class="br-spec nw">bottom</span>)</span>، ثم اليمنى واليسرى <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">right</span> and <span dir="ltr" class="br-spec nw">left</span>)</span>؛ 
+وتُحدِّد ثلاث قيم (three values) الجهة العلوية <span dir="ltr" class="br-spec nw">top</span>، والجهة الأفقية (اليمنى واليسرى) <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">right</span> and <span dir="ltr" class="br-spec nw">left</span>)</span>، ثم الجهة السفلية <span dir="ltr" class="br-spec nw">bottom</span>؛ 
+بينما تُحدِّد أربع قيم (four values) الجهات: العلوية <span dir="ltr" class="br-spec nw">top</span>، واليمنى <span dir="ltr" class="br-spec nw">right</span>، والسفلية <span dir="ltr" class="br-spec nw">bottom</span>، واليسرى <span dir="ltr" class="br-spec nw">left</span> بالترتيب.
+                    </p>
+                </li>
+            </ul>
+            <br>
+
+        </section>
+
+        <!-- CSS Specificity -->
+        <section>
+            <h3>تحديد الأولوية في سي.اس.اس CSS Specificity</h3>
+            <ul>
+                <li>
+                    <p>
+                        <b>خصوصية سي.اس.اس المضمنة Inline CSS Specificity :</b> تتمتع CSS المضمنة بأعلى درجات الخصوصية؛ لأنها تُطبَّق مباشرةً على العنصر، وتتفوق بذلك على أي تنسيقات CSS داخلية أو خارجية. وتبلغ قيمة الخصوصية لأنماط CSS المضمنة <span dir="ltr" class="br-spec nw">(1, 0, 0, 0)</span>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>خصوصية سي.اس.اس الداخلية Internal CSS Specificity :</b> تُعرَّف CSS الداخلية داخل عنصر <span dir="ltr" class="br-spec nw">style</span> في قسم <span dir="ltr" class="br-spec nw">head</span> من مستند HTML، وتكون درجة خصوصيتها أقل من تلك الخاصة بأنماط CSS المضمنة (Inline styles). وتشترك كل من CSS الداخلية والخارجية في مستوى الخصوصية نفسه، حيث يتحدد هذا المستوى بناءً على المُحدِّدات (selectors) المستخدمة، وليس بناءً على موقع الكود.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>خصوصية سي.اس.اس الخارجية External CSS Specificity :</b> يتم ربط ملفات CSS الخارجية عبر عنصر <span dir="ltr" class="br-spec nw">link</span> في قسم الرأس <span dir="ltr" class="br-spec nw">head</span>، وتُكتب في ملفات منفصلة بامتداد <span dir="ltr" class="br-spec nw">.css</span>. 
+ومثل CSS الداخلية، تتحدد درجة الخصوصية بناءً على المُحدِّدات (selectors) المستخدمة. وعندما تتساوى قاعدتان في درجة الخصوصية، فإن ترتيب ورود الكود هو الذي يحسم الأمر؛ حيث تكون الأولوية للقاعدة التي تظهر لاحقاً في المستند. وتوفر ملفات CSS الخارجية أفضل مستوى من سهولة الصيانة للمشاريع الكبيرة.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>المحدد الشامل <span dir="ltr" class="nw">Universal Selector (<span dir="ltr" class="br-spec nw">*</span>)</span> :</b> هو نوع خاص من مُحدِّدات CSS يطابق أي عنصر في المستند. وغالباً ما يُستخدم لتطبيق نمط (style) على جميع العناصر الموجودة في الصفحة، مما قد يكون مفيداً لإعادة ضبط الأنماط أو توحيدها عبر المتصفحات المختلفة. يتميز هذا المُحدِّد بأدنى قيمة "تخصيص" (specificity) مقارنةً بغيره من المُحدِّدات؛ إذ يساهم بالقيمة <span dir="ltr" class="br-spec nw">0</span> في جميع أجزاء قيمة التخصيص <span dir="ltr" class="br-spec nw">(0, 0, 0, 0)</span>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>مُحدِّدات النوع  Type Selectors :</b> تستهدف هذه المُحدِّدات العناصر بناءً على اسم الوسم (tag name) الخاص بها. وتتميز مُحدِّدات النوع بدرجة تخصيص (specificity) منخفضة نسبياً مقارنةً بالمُحدِّدات الأخرى؛ إذ تبلغ قيمة التخصيص لمُحدِّد النوع <span dir="ltr" class="br-spec nw">(0, 0, 0, 1)</span>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>مُحدِّدات الفئة  Class Selectors :</b> تُعرَّف هذه المُحدِّدات باستخدام نقطة <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">.</span>)</span> تليها تسمية الفئة. وتبلغ قيمة التحديد (specificity) لمُحدِّد الفئة <span dir="ltr" class="br-spec nw">(0, 0, 1, 0)</span>؛ وهذا يعني أن مُحدِّدات الفئة يمكنها تجاوز مُحدِّدات النوع (type selectors)، ولكن يمكن تجاوزها هي نفسها بواسطة مُحدِّدات المُعرِّف (ID selectors) والأنماط المضمنة (inline styles).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>مُحدِّدات المعرّف ID Selectors :</b> تُعرَّف مُحدِّدات المعرّف برمز التجزئة <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">#</span>)</span> متبوعًا باسم المعرّف. تتميز مُحدِّدات المعرّف بدرجة عالية من التحديد، أعلى من مُحدِّدات النوع ومُحدِّدات الفئة، ولكنها أقل من الأنماط المضمنة. قيمة التحديد لمُحدِّد المعرّف هي <span dir="ltr" class="br-spec nw">(0, 1, 0, 0)</span>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الكلمة المفتاحية <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">!important</span> keyword)</span> :</b> تُستخدم لمنح قاعدة تنسيقٍ ما أعلى درجات الأولوية، مما يتيح لها تجاوز أي إعلانات أخرى لنفس الخاصية. فعند استخدامها، يُجبر المتصفح على تطبيق التنسيق المحدد بغض النظر عن مستوى التخصيص (specificity) الخاص بالمحددات الأخرى. ينبغي توخي الحذر عند استخدام <span dir="ltr" class="br-spec nw">!important</span>؛ لأنها قد تجعل صيانة كود CSS وتصحيح الأخطاء فيه أكثر صعوبة.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>خوارزمية التتابع Cascade Algorithm :</b> خوارزمية تُستخدم لتحديد قواعد CSS التي سيتم تطبيقها عند وجود أنماط متعددة تستهدف العنصر نفسه؛ وهي تضمن استخدام الأنماط الأنسب بناءً على مجموعة من القواعد المحددة بوضوح.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الوراثة في سي.اس.اس CSS Inheritance :</b> هي العملية التي تنتقل من خلالها الأنماط من العناصر الأب (parent elements) إلى العناصر الابن (child elements). تتيح لك الوراثة (Inheritance) تحديد الأنماط على مستوى أعلى في شجرة المستند (document tree) وتطبيقها على عناصر متعددة دون الحاجة إلى تحديدها بشكل صريح لكل عنصر على حدة.
+                    </p>
+                </li>
+            </ul>
+
+        </section>
+    </section>
+
+    
+
+    
+
+    
+
+    
+
+
+
+    
+    
+
+    
+    
+    
+
+
+
+
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="../css-specificity-the-cascade-algorithm-and-inheritance/How-Does-Inheritance-Work-with-CSS-at-a-High-Level.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>

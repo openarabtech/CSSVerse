@@ -1,0 +1,21 @@
+/* PREVIEW 1 */
+.preview1 ul li {
+    background-color: yellow;
+}
+
+
+/* PREVIEW 2 */
+.preview2 .container2 > p  {
+  background-color: black;
+  color: white;
+}
+
+/* PREVIEW 3 */
+.preview3 h2 + p  {
+  background-color: red;
+}
+
+/* PREVIEW 4 */
+.preview4 ul ~ p {
+  background-color: green;
+}
