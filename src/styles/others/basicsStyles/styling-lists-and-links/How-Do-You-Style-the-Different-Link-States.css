@@ -1,0 +1,24 @@
+/* PREVIEW 1  */
+.preview1 a:link {
+ color: red;
+}
+
+/* PREVIEW 2  */
+.preview2 a:visited {
+ color: green;
+}
+
+/* PREVIEW 3  */
+.preview3 a:hover {
+ color: green;
+}
+
+/* PREVIEW 4  */
+.preview4 a:focus {
+ outline: 2px solid orange;
+}
+
+/* PREVIEW 5  */
+.preview5 a:active {
+ color: pink;
+}

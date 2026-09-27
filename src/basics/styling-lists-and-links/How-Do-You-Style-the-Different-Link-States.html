@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS | كيف تُنسّق حالات الروابط المختلفة (Different Link States) ؟"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/basicsStyles/styling-lists-and-links/How-Do-You-Style-the-Different-Link-States.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>تنسيق القوائم (Lists) والروابط (Links)</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+    <!-- sub-title -->
+	<section class="sub-title">
+        <h2>كيف تُنسّق حالات الروابط المختلفة (Different Link States) ؟</h2>
+		<span class="hint">نظري</span>
+        <p></p>
+    </section>
+
+    <section>
+        <p>
+            توجد حالات مختلفة للرابط (different states of a link)، منها: 
+رابط <span dir="ltr" class="br-spec nw">link</span> ، تمت زيارته <span dir="ltr" class="br-spec nw">visited</span> ، تمرير المؤشر فوقه <span dir="ltr" class="br-spec nw">hover</span> ، التركيز عليه <span dir="ltr" class="br-spec nw">focus</span> ، ونشط <span dir="ltr" class="br-spec nw">active</span>. 
+هذه الحالات (states) مهمة لمساعدة المستخدمين على التعرف على الروابط (links) وتوفير ملاحظات واضحة (clear feedback) بعد التفاعل معها، مما يحسن سهولة الاستخدام (usability) وإمكانية الوصول (accessibility).
+        </p>
+        <p>
+            يُعد تنسيق (Styling) حالات الرابط المختلفة (different link states) أمراً بالغ الأهمية لسهولة الاستخدام وإمكانية الوصول (usability and accessibility)، إذ يوفر مؤشرات بصرية حول الحالة الراهنة للرابط (current state of the link)؛ مما يساعد المستخدمين على معرفة الروابط (links) التي زاروها، والرابط الذي يتفاعلون معه حالياً، وما سيحدث عند النقر عليه.
+        </p>
+        <p>
+            بالنسبة للمستخدمين الذين يعانون من ضعف البصر أو إعاقات إدراكية، يمكن لهذه الأنماط المميزة (distinct styles) أن تجعل التنقل (navigation) أسهل بكثير وأكثر بديهية (intuitive).
+        </p>
+        <p>
+            علاوة على ذلك، تُعزز حالات الروابط الواضحة (clear link states) تجربة المستخدم الشاملة من خلال توفير تغذية راجعة (feedback) فورية حول تفاعلات المستخدم، مما يقلل من الارتباك ويُحسّن سهولة التنقل (navigability) في الموقع.
+        </p>
+        <p>
+            يمكن تنسيق هذه الحالات (states) باستخدام ما يُعرف بـ "الفئات الزائفة" <span dir="ltr" class="br-spec nw">pseudo-classes</span> في CSS.
+        </p>
+        <p>
+            الفئة الزائفة (pseudo-class) هي كلمة مفتاحية تُضاف إلى المُحدِّد (selector) لتحديد حالة خاصة (special state) للعنصر المُحدَّد.
+        </p>
+        <p>
+            على سبيل المثال، يمكن لـ <span dir="ltr" class="br-spec nw">:hover</span> تغيير لون الزر (button's color) عند تحريك مؤشر المستخدم فوقه، بينما يمكن لـ <span dir="ltr" class="br-spec nw">:visited</span> تغيير لون الرابط (color of a link) الذي تمت زيارته مسبقاً.
+        </p>
+        <p>
+            تتيح لك الفئات الزائفة (pseudo-classes) تنسيق العناصر بناءً على حالتها (their state) أو تفاعل المستخدم (user's interaction) معها، دون الحاجة إلى ترميز إضافي (additional markup) في كود HTML.
+        </p>
+
+        <p class="hinty">
+            تبدو صيغة "الفئة الزائفة" <span dir="ltr" class="br-spec nw">pseudo-class</span> على النحو التالي، حيث يمثل <span dir="ltr" class="br-spec nw">A</span> المُحدِّد (selector) ويمثل <span dir="ltr" class="br-spec nw">:B</span> الفئة الزائفة <span dir="ltr" class="br-spec nw">pseudo-class</span> :
+        </p>
+
+        <div class="code-block"><pre><code>
+<span class="tag-b">A:B</span> <span class="attr">{
+ property: <span class="txt">value</span>;
+}</span>
+        </code></pre></div>
+        <p>
+            لفهم كيفية تنسيق حالات الرابط المختلفة (different link states) بشكل أفضل، دعنا نلقي نظرة على بعض الأمثلة.
+        </p>
+        <p>
+            تُستخدم الفئة الزائفة <span dir="ltr" class="br-spec nw">:link</span> لتنسيق الروابط غير المُزارة (unvisited links)، مما يشير إلى أنها قابلة للنقر (clickable).
+        </p>
+
+        <p class="hinty">إليك مثال على استهداف عنصر الرابط (anchor element) واستخدام الفئة الزائفة <span dir="ltr" class="br-spec nw">:link</span> :</p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;a <span class="attr">href=<span class="value">"/"</span></span>&gt;<span class="txt">رابط مثال</span>&lt;/a&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="value">/* Normal state (unvisited link) الحالة العادية (رابط لم تتم زيارته) */</span>
+<span class="tag-b">a:link</span> <span class="attr">{
+ color: <span class="txt">red</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview1">
+                    <a href="#">رابط مثال</a>
+                </div>
+            </div>
+            <p>
+                سيُغيِّر المثال أعلاه اللون الأزرق الافتراضي للرابط (link's default blue color) إلى اللون الأحمر <span dir="ltr" class="br-spec nw">red</span> عندما يكون الرابط غير مُزار (unvisited).
+            </p>
+
+            <p class="hinty">
+                تُستخدم السمة <span dir="ltr" class="br-spec nw">:visited</span> لتنسيق الروابط التي تمت زيارتها أو النقر عليها مسبقاً (visited or clicked)، مما يساعد المستخدمين على تتبع الروابط (links) التي سبق لهم النقر عليها. إليك مثال على استخدام الفئة الزائفة <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">:visited</span> pseudo-class)</span> :
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;a <span class="attr">href=<span class="value">"https://openarabtech.github.io"</span></span>&gt;<span class="txt">التقنية العربية المفتوحة</span>&lt;/a&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="value">/* Visited link رابط تمت زيارته */</span>
+<span class="tag-b">a:visited</span> <span class="attr">{
+ color: <span class="txt">green</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview2">
+                    <a href="https://openarabtech.github.io" target="_blank">التقنية العربية المفتوحة</a>
+                </div>
+            </div>
+            <p>
+                سيقوم هذا الكود بتلوين الرابط باللون الأخضر <span dir="ltr" class="br-spec nw">green</span> عند النقر عليه.
+            </p>
+
+            <p class="hinty">
+                تُغيِّر الخاصية <span dir="ltr" class="br-spec nw">:hover</span> نمط الرابط (link's style) عندما يُمرِّر المستخدم مؤشر الفأرة فوقه، مما يوفر إشارة بصرية تدل على أن الرابط تفاعلي (link is interactive). إليك مثال على استخدام الفئة الزائفة <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">:hover</span> pseudo-class)</span> :
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;a <span class="attr">href=<span class="value">"/"</span></span>&gt;<span class="txt">رابط مثال</span>&lt;/a&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="value">/* Hover state حالة التمرير */</span>
+<span class="tag-b">a:hover</span> <span class="attr">{
+ color: <span class="txt">green</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview3">
+                    <a href="#3">رابط مثال</a>
+                </div>
+            </div>
+            <p>
+                سيقوم هذا الكود بتلوين الروابط باللون الأخضر <span dir="ltr" class="br-spec nw">green</span> عند تمرير مؤشر الفأرة فوقها.
+            </p>
+
+            <p>
+                تُضيف السمة <span dir="ltr" class="br-spec nw">:focus</span> أنماطاً (styles) حول الرابط عند التركيز عليه (focused)، مثلما يحدث عند التنقل (navigating) باستخدام لوحة المفاتيح (keyboard) أو لتعزيز إمكانية الوصول.
+            </p>
+
+            <p class="hinty">
+                إليك مثال يستخدم الخاصية <span dir="ltr" class="br-spec nw">:focus</span> لتطبيق إطار برتقالي مصمت (solid orange outline) عند التركيز على الرابط (link is focused).
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;a <span class="attr">href=<span class="value">"/"</span></span>&gt;<span class="txt">رابط مثال</span>&lt;/a&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="value">/* Focus state حالة التركيز */</span>
+<span class="tag-b">a:focus</span> <span class="attr">{
+ outline: <span class="txt">2px solid orange</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview4">
+                    <a href="#4">رابط مثال</a>
+                </div>
+            </div>
+
+            <p class="hinty">
+                تُغيِّر الحالة <span dir="ltr" class="br-spec nw">:active</span> أنماط الرابط (link's styles) أثناء النقر عليه، مما يوفر للمستخدم تغذية راجعة (feedback) فورية تفيد بأن إجراءه قيد التسجيل. إليك مثال على استخدام الفئة الزائفة <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">:active</span> pseudo-class)</span> :
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;a <span class="attr">href=<span class="value">"/"</span></span>&gt;<span class="txt">رابط مثال</span>&lt;/a&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="value">/* Active state حالة نشطة */</span>
+<span class="tag-b">a:active</span> <span class="attr">{
+ color: <span class="txt">pink</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview5">
+                    <a href="#5">رابط مثال</a>
+                </div>
+            </div>
+            <p>
+                سيجعل مثال الكود هذا لون الرابط وردياً <span dir="ltr" class="br-spec nw">pink</span> بمجرد النقر عليه.
+            </p>
+
+    </section>
+
+    <!-- QUESTIONS -->
+	<section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما هي الفئة الزائفة (pseudo-class) في CSS المستخدمة لتنسيق الروابط التي لم تتم زيارتها (not been visited) ؟</p>
+
+		<p> 1. <span dir="ltr" class="br-spec nw">:visited</span> ❌</p>
+        <p><mark> 2. <span dir="ltr" class="br-spec nw">:link</span> ✅</mark></p>
+        <p> 3. <span dir="ltr" class="br-spec nw">:hover</span> ❌</p>
+		<p> 4. <span dir="ltr" class="br-spec nw">:active</span> ❌</p>
+        <br>
+
+        <p class="userstory">ما هو التغيير البصري الذي تتضمنه عادةً حالة التمرير (hover state) في CSS؟</p>
+		
+		<p> 1. يصبح الرابط أكبر حجماً. ❌</p>
+        <p><mark> 2. يتغير لون نص الرابط. ✅</mark></p>
+        <p> 3. يصبح نص الرابط عريضاً. ❌</p>
+		<p> 4. يُوضع خط تحت نص الرابط. ❌</p>
+        <br>
+
+        <p class="userstory">أي فئة زائفة (pseudo-class) في CSS ستستخدمها لإضافة إطار خارجي مرئي (visible outline) حول رابط عند الانتقال إليه باستخدام لوحة المفاتيح (keyboard) ؟</p>
+		
+		<p> 1. <span dir="ltr" class="br-spec nw">:link</span> ❌</p>
+        <p> 2. <span dir="ltr" class="br-spec nw">:hover</span> ❌</p>
+        <p><mark> 3. <span dir="ltr" class="br-spec nw">:focus</span> ✅</mark></p>
+		<p> 4. <span dir="ltr" class="br-spec nw">:active</span> ❌</p>
+        
+	</section>
+    
+
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./Why-Are-Default-Link-Styles-Important-for-Usability-on-the-Web.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
