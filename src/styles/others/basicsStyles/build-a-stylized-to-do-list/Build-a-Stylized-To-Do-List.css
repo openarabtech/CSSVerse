@@ -1,0 +1,43 @@
+/* PREVIEW 1 */
+.preview1 h1{
+    text-align: center;
+}
+
+.preview1 .todo-list {
+    list-style-type: none;
+}
+
+.preview1 .sub-item {
+    list-style-type: square;
+}
+
+.preview1 ul li {
+    margin-bottom: 20px
+}
+
+.preview1 a{
+    text-decoration: none;
+}
+
+.preview1 a:link{
+    color: green;
+}
+
+.preview1 a:visited{
+    color: darkgrey;
+}
+
+.preview1 a:hover{
+    color: red;
+}
+
+.preview1 a:focus{
+    outline: 2px solid blue;
+}
+
+
+.preview1 a:active{
+    color: purple;
+}
+
+
