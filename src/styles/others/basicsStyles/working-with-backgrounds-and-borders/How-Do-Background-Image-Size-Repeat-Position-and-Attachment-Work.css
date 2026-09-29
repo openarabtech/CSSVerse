@@ -1,0 +1,71 @@
+/* PREVIEW 1 */
+.preview1 {
+    height: 50vh;
+    background-image: url("../../../../assets/relaxing-cat.jpg");
+}
+
+/* PREVIEW 2 */
+.preview2 {
+    background-image: url("../../../../assets/relaxing-cat.jpg");
+    background-size: contain;
+    min-height: 100px;
+}
+
+/* PREVIEW 3 */
+.preview3 {
+    height: 75vh;
+    background-image: url("../../../../assets/relaxing-cat.jpg");
+    background-size: cover;
+    min-height: 100px;
+}
+
+/* PREVIEW 4 */
+.preview4 {
+    background-image: url("../../../../assets/relaxing-cat.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 100px;
+}
+
+/* PREVIEW 5 */
+.preview5 {
+    background-image: url("../../../../assets/relaxing-cat.jpg");
+    background-size: contain;
+    background-repeat: repeat-x;
+    min-height: 100px;
+}
+
+/* PREVIEW 6 */
+.preview6 {
+    background-image: url("../../../../assets/relaxing-cat.jpg");
+    background-size: 200px auto;
+    background-repeat: repeat-y;
+    min-height: 600px;
+}
+
+/* PREVIEW 7 */
+.preview7 {
+    background-image: url("../../../../assets/relaxing-cat.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 100px;
+}
+
+
+/* PREVIEW 8 */
+.preview8 {
+    background-image: url("../../../../assets/relaxing-cat.jpg");
+    background-position: center top;
+    background-attachment: fixed;
+}
+
+/* PREVIEW 9 */
+.preview9 {
+    background: center top fixed
+     url("../../../../assets/relaxing-cat.jpg");
+}
+
+.test {
+    min-height: 50vh;
+}

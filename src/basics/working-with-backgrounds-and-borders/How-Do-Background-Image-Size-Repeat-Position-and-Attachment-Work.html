@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS |كيف تعمل خصائص حجم صورة الخلفية (Background Image Size) ، وتكرارها (Repeat) ، وموقعها (Position) ، وثباتها (Attachment) ؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/basicsStyles/working-with-backgrounds-and-borders/How-Do-Background-Image-Size-Repeat-Position-and-Attachment-Work.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>التعامل مع الخلفيات (Backgrounds) والحدود (Borders)</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+		<h2>كيف تعمل خصائص حجم صورة الخلفية (Background Image Size) ، وتكرارها (Repeat) ، وموقعها (Position) ، وثباتها (Attachment) ؟</h2>
+		<span class="hint">نظري</span>
+        <p></p>
+    </section>
+
+    <section>
+        <p>
+            عند التعامل مع صور الخلفية (background images) في CSS، تتوفر لديك عدة خصائص للتحكم في كيفية عرض هذه الصور.
+        </p>
+        <p>
+            الخصائص الرئيسية التي سنركز عليها هي <span dir="ltr" class="br-spec nw">background-size</span> و <span dir="ltr" class="br-spec nw">background-repeat</span> و <span dir="ltr" class="br-spec nw">background-position</span> و <span dir="ltr" class="br-spec nw">background-attachment</span>.
+        </p>
+        <p class="hinty">
+            لنلقِ نظرةً أولاً على الخاصية <span dir="ltr" class="br-spec nw">background-image</span> :
+        </p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">body</span> <span class="attr">{
+  background-image: <span class="tag-b">url</span>("<span class="txt">https://openarabtech.github.io/CSSVerse/src/assets/relaxing-cat.jpg</span>");
+ }</span>
+&lt;/style&gt;</span>
+        </code></pre></div>
+
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <div class="preview1"></div>       
+        </div>
+
+        <p>
+            يُعيّن كود CSS المذكور أعلاه صورة قطة كخلفية (background image) لعنصر <span dir="ltr" class="br-spec nw">body</span>.
+        </p>
+
+        <p>
+            إذا كنت ترغب في تحديد حجم صورة الخلفية (size for the background image)، يمكنك استخدام الخاصية <span dir="ltr" class="br-spec nw">background-size</span>.
+        </p>
+        <p>
+            يمكنك استخدام الخيار <span dir="ltr" class="br-spec nw">contain</span> لتكبير (scale) الصورة إلى أقصى حد ممكن دون قصها أو تمديدها.
+        </p>
+
+        <p class="hinty">
+            إليك مثال باستخدام <span dir="ltr" class="br-spec nw">background-size: contain</span> :
+        </p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">body</span> <span class="attr">{
+  background-image: <span class="tag-b">url</span>("<span class="txt">https://openarabtech.github.io/CSSVerse/src/assets/relaxing-cat.jpg</span>");
+  background-size: <span class="txt">contain</span> ;
+  min-height: <span class="txt">100px</span> ;
+ }</span>
+&lt;/style&gt;</span>
+        </code></pre></div>
+
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <div class="preview2">
+                
+            </div>       
+        </div>
+        <p>
+            نحن نضبط الحد الأدنى للارتفاع <span dir="ltr" class="br-spec nw">min-height</span> عند <span dir="ltr" class="br-spec nw">100px</span> لضمان ظهور صورة الخلفية (background image) وحفاظ التخطيط (layout) على حد أدنى للارتفاع، مما يضمن أن يبدو التصميم متوازناً وجذاباً بصرياً حتى في حال وجود محتوى قليل.
+        </p>
+
+        <p class="hinty">
+            إذا قمنا بتغيير الخاصية <span dir="ltr" class="br-spec nw">background-size</span> لـ استخدام القيمة <span dir="ltr" class="br-spec nw">cover</span>، فسيتم تغيير حجم صورة الخلفية لتغطي عنصر <span dir="ltr" class="br-spec nw">body</span> بالكامل مع الحفاظ على نسبة أبعادها.
+        </p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">body</span> <span class="attr">{
+  background-image: <span class="tag-b">url</span>("<span class="txt">https://openarabtech.github.io/CSSVerse/src/assets/relaxing-cat.jpg</span>");
+  background-size: <span class="txt">cover</span> ;
+  min-height: <span class="txt">100px</span> ;
+ }</span>
+&lt;/style&gt;</span>
+        </code></pre></div>
+
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <div class="preview3">
+                
+            </div>       
+        </div>
+        <p>
+            في الأمثلة السابقة، ربما لاحظت أن صورة الخلفية (background image) تتكرر باستمرار (continuously repeat).
+        </p>
+        <p>
+            بشكل افتراضي، تتكرر (repeat) صور الخلفية (background images) أفقيًا وعموديًا لملء العنصر بالكامل؛ ومع ذلك، يمكنك التحكم في هذا السلوك.
+        </p>
+        <p class="hinty">
+            يمكنك استخدام الخاصية <span dir="ltr" class="br-spec nw">background-repeat</span> مع ضبط قيمتها على <span dir="ltr" class="br-spec nw">no-repeat</span>.
+        </p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">body</span> <span class="attr">{
+  background-image: <span class="tag-b">url</span>("<span class="txt">https://openarabtech.github.io/CSSVerse/src/assets/relaxing-cat.jpg</span>");
+  background-size: <span class="txt">contain</span> ;
+  background-repeat: <span class="txt">no-repeat</span> ;
+  min-height: <span class="txt">100px</span> ;
+ }</span>
+&lt;/style&gt;</span>
+        </code></pre></div>
+
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <div class="preview4">
+                
+            </div>       
+        </div>
+        <p>
+            عند ضبط الخاصية <span dir="ltr" class="br-spec nw">background-size</span> على القيمة <span dir="ltr" class="br-spec nw">contain</span> والخاصية <span dir="ltr" class="br-spec nw">background-repeat</span> على القيمة <span dir="ltr" class="br-spec nw">no-repeat</span>، لن تتكرر الصورة على الشاشة.
+        </p>
+
+        <p class="hinty">
+            إذا أردت تكرار صورة الخلفية أفقيًا (repeat the background image horizontally)، يمكنك استخدام القيمة <span dir="ltr" class="br-spec nw">repeat-x</span> للخاصية <span dir="ltr" class="br-spec nw">background-repeat</span>.
+        </p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">body</span> <span class="attr">{
+  background-image: <span class="tag-b">url</span>("<span class="txt">https://openarabtech.github.io/CSSVerse/src/assets/relaxing-cat.jpg</span>");
+  background-size: <span class="txt">contain</span> ;
+  background-repeat: <span class="txt">repeat-x</span> ;
+  min-height: <span class="txt">100px</span> ;
+ }</span>
+&lt;/style&gt;</span>
+        </code></pre></div>
+
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <div class="preview5">
+                
+            </div>       
+        </div>
+
+        <p class="hinty">
+            إذا أردت تكرار صورة الخلفية عمودياً (repeat the background image vertically)، يمكنك استخدام القيمة <span dir="ltr" class="br-spec nw">repeat-y</span> للخاصية <span dir="ltr" class="br-spec nw">background-repeat</span>.
+        </p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">body</span> <span class="attr">{
+  background-image: <span class="tag-b">url</span>("<span class="txt">https://openarabtech.github.io/CSSVerse/src/assets/relaxing-cat.jpg</span>");
+  background-size: <span class="txt">contain</span> ;
+  background-repeat: <span class="txt">repeat-y</span> ;
+  min-height: <span class="txt">100px</span> ;
+ }</span>
+&lt;/style&gt;</span>
+        </code></pre></div>
+
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <div class="preview6">
+                
+            </div>       
+        </div>
+
+        <p>
+            لتحديد موضع (position) صورة الخلفية (background image) على الشاشة، يمكنك استخدام الخاصية <span dir="ltr" class="br-spec nw">background-position</span>.
+        </p>
+        <p>
+            تتيح لك الخاصية <span dir="ltr" class="br-spec nw">background-position</span> تحديد موضع ظهور صورة الخلفية داخل العنصر؛ 
+إذ يمكنك استخدام كلمات مفتاحية مثل <span dir="ltr" class="br-spec nw">top</span> و <span dir="ltr" class="br-spec nw">bottom</span> و <span dir="ltr" class="br-spec nw">left</span> و <span dir="ltr" class="br-spec nw">right</span> و <span dir="ltr" class="br-spec nw">center</span> ، أو استخدام قيم محددة بوحدة البكسل (pixel) أو النسبة المئوية (percentage values).
+        </p>
+
+        <p class="hinty">
+            إليك مثال يستخدم القيمتين <span dir="ltr" class="br-spec nw">center</span> و <span dir="ltr" class="br-spec nw">top</span> للخاصية <span dir="ltr" class="br-spec nw">background-position</span> :
+        </p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">body</span> <span class="attr">{
+  background-image: <span class="tag-b">url</span>("<span class="txt">https://openarabtech.github.io/CSSVerse/src/assets/relaxing-cat.jpg</span>");
+  background-size: <span class="txt">contain</span> ;
+  background-repeat: <span class="txt">no-repeat</span> ;
+  background-position: <span class="txt">center top</span> ;
+  min-height: <span class="txt">100px</span> ;
+ }</span>
+&lt;/style&gt;</span>
+        </code></pre></div>
+
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <div class="preview7">
+                <div class="test"></div>
+            </div>       
+        </div>
+        <p>
+            يُحدد كود CSS هذا موقع صورة الخلفية في منتصف العنصر أفقيًا وفي الجزء العلوي عموديًا.
+        </p>
+        <p>
+            وأخيراً، تحدد الخاصية <span dir="ltr" class="br-spec nw">background-attachment</span> ما إذا كانت صورة الخلفية تتمرر (scrolls) مع المحتوى أم تظل ثابتة (fixed) عند تمرير الصفحة.
+        </p>
+        <p>
+            تتمثل القيم الرئيسية في <span dir="ltr" class="br-spec nw">scroll</span> (وهي القيمة الافتراضية)، حيث تتحرك صورة الخلفية مع المحتوى، و <span dir="ltr" class="br-spec nw">fixed</span> ، حيث تظل صورة الخلفية ثابتة في مكانها على الشاشة.
+        </p>
+
+        <p class="hinty">
+            إليك مثال يستخدم القيمة الثابتة <span dir="ltr" class="br-spec nw">fixed</span> للخاصية <span dir="ltr" class="br-spec nw">background-attachment</span> :
+        </p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">body</span> <span class="attr">{
+  background-image: <span class="tag-b">url</span>("<span class="txt">https://openarabtech.github.io/CSSVerse/src/assets/relaxing-cat.jpg</span>");
+  background-position: <span class="txt">center top</span> ;
+  background-attachment: <span class="txt">fixed</span> ;
+ }</span>
+&lt;/style&gt;</span>
+        </code></pre></div>
+
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <div class="preview8">
+                <div class="test"></div>
+            </div>       
+        </div>
+
+        <p>
+            يُحدد كود CSS هذا صورة الخلفية بحيث تظل ثابتة (fixed) في مكانها حتى عند تمرير (scroll) الصفحة.
+        </p>
+        <p>
+            إذا أردت دمج (combine) بعض الخصائص في سطر واحد، يمكنك القيام بذلك باستخدام الخاصية المختصرة <span dir="ltr" class="br-spec nw">background</span>.
+        </p>
+
+        <p class="hinty">إليك مثال:</p>
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">body</span> <span class="attr">{
+  background: <span class="txt">center top fixed</span>
+   <span class="tag-b">url</span>("<span class="txt">https://openarabtech.github.io/CSSVerse/src/assets/relaxing-cat.jpg</span>");
+ }</span>
+&lt;/style&gt;</span>
+        </code></pre></div>
+
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <div class="preview9">
+                <div class="test"></div>
+            </div>       
+        </div>
+        <p>
+            يجمع المثال أعلاه بين الخصائص <span dir="ltr" class="br-spec nw">background-image</span> و <span dir="ltr" class="br-spec nw">background-position</span> و <span dir="ltr" class="br-spec nw">background-attachment</span>  في سطر واحد.
+        </p>
+
+        <p>
+            من خلال إتقان هذه الخصائص، ستحظى بتحكم كبير في كيفية عرض صور الخلفية في تصميمات الويب الخاصة بك، مما يتيح لك إنشاء تخطيطات أكثر جاذبية من الناحية البصرية وفعالية من حيث الأداء الوظيفي.
+        </p>
+
+    </section>
+
+    <!-- QUESTIONS -->
+	<section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما هي قيمة <span dir="ltr" class="br-spec nw">background-size</span> التي ستستخدمها لضمان ظهور صورة الخلفية (background image) بالكامل دون أي قص، حتى وإن لم تكن تغطي العنصر بأكمله؟</p>
+
+		<p> 1. <span dir="ltr" class="br-spec nw">cover</span> ❌</p>
+        <p><mark> 2. <span dir="ltr" class="br-spec nw">contain</span> ✅</mark></p>
+        <p> 3. <span dir="ltr" class="br-spec nw">auto</span> ❌</p>
+		<p> 4. <span dir="ltr" class="br-spec nw">100%</span> ❌</p>
+        <br>
+
+        <p class="userstory">إذا كنت ترغب في تكرار صورة الخلفية أفقيًا وليس عموديًا، فأي قيمة للخاصية <span dir="ltr" class="br-spec nw">background-repeat</span> ستستخدم؟</p>
+		
+		<p> 1. <span dir="ltr" class="br-spec nw">repeat</span> ❌</p>
+        <p> 2. <span dir="ltr" class="br-spec nw">no-repeat</span> ❌</p>
+        <p><mark> 3. <span dir="ltr" class="br-spec nw">repeat-x</span> ✅</mark></p>
+		<p> 4. <span dir="ltr" class="br-spec nw">repeat-y</span> ❌</p>
+        <br>
+
+        <p class="userstory">أي قيمة للخاصية <span dir="ltr" class="br-spec nw">background-attachment</span> ستستخدمها لجعل صورة الخلفية ثابتة في مكانها عند قيام المستخدم بتمرير الصفحة؟</p>
+		
+		<p> 1. <span dir="ltr" class="br-spec nw">scroll</span> ❌</p>
+        <p><mark> 2. <span dir="ltr" class="br-spec nw">fixed</span> ✅</mark></p>
+        <p> 3. <span dir="ltr" class="br-spec nw">local</span> ❌</p>
+		<p> 4. <span dir="ltr" class="br-spec nw">static</span> ❌</p>
+        
+	</section>
+
+
+
+
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="../build-a-stylized-to-do-list/Build-a-Stylized-To-Do-List.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
