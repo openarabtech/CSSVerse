@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS |ما هي الطرق المختلفة لإضافة حدود حول الصور (Borders Around Images) ؟"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/basicsStyles/working-with-backgrounds-and-borders/What-Are-the-Different-Ways-You-Can-Add-Borders-Around-Images.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>التعامل مع الخلفيات (Backgrounds) والحدود (Borders)</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+		<h2>ما هي الطرق المختلفة لإضافة حدود حول الصور (Borders Around Images) ؟</h2>
+		<span class="hint">نظري</span>
+        <p></p>
+  </section>
+
+  <section>
+    <p>
+        توجد في CSS طرق متعددة لإضافة حدود حول الصور (borders around images)، وتوفر كل منها خيارات تنسيق ومستويات تحكم مختلفة.
+    </p>
+    <p>
+        لِنستكشف بعضاً من أكثر الطرق شيوعاً وتعدداً في الاستخدامات.
+    </p>
+    <p class="hinty">
+        تُعدّ إضافة إطار (border) إلى صورة باستخدام الخاصية <span dir="ltr" class="br-spec nw">border</span> الطريقة الأبسط؛ إذ تُتيح لك هذه الخاصية المختصرة تحديد عرض (width) الإطار ونمطه (style) ولونه(color) دفعةً واحدة.
+    </p>
+
+    <div class="codeFiles">
+        <p class="file-name">index.html</p>
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;img <span class="attr">src=<span class="value">"https://openarabtech.github.io/CSSVerse/src/assets/relaxing-cat.jpg"</span> alt=<span class="value">"قطة لطيفة مستلقية على ظهرها"</span></span>&gt;</span>
+        </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">img</span> <span class="attr">{
+ border: <span class="txt">2px solid red</span>;
+}</span>
+        </code></pre></div>
+    </div>
+        
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+        <div class="preview1">
+            <img src="../../assets/relaxing-cat.jpg" alt="قطة لطيفة مستلقية على ظهرها">
+        </div>
+    </div>
+
+    <p>
+        تُضيف قاعدة CSS هذه إطاراً أحمر متصلاً (solid red border) بعرض 2 بكسل (2-pixel wide) حول جميع عناصر <span dir="ltr" class="br-spec nw">img</span>. ويمكنك تعديل العرض والنمط (مثل متقطع <span dir="ltr" class="br-spec nw">dashed</span>، أو منقط <span dir="ltr" class="br-spec nw">dotted</span>، أو مزدوج <span dir="ltr" class="br-spec nw">double</span>) واللون بما يتناسب مع متطلبات تصميمك.
+    </p>
+    <p class="hinty">
+        إذا كنت بحاجة إلى مزيد من التحكم في جوانب الحدود بشكل منفصل، فيمكنك استخدام خصائص الحدود المحددة (specific border properties) لكل جانب:
+    </p>
+
+    <div class="codeFiles">
+        <p class="file-name">index.html</p>
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;img <span class="attr">src=<span class="value">"https://openarabtech.github.io/CSSVerse/src/assets/relaxing-cat.jpg"</span> alt=<span class="value">"قطة لطيفة مستلقية على ظهرها"</span></span>&gt;</span>
+        </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">img</span> <span class="attr">{
+ border-top: <span class="txt">10px solid red</span>;
+ border-right: <span class="txt">10px dashed green</span>;
+ border-bottom: <span class="txt">10px dotted blue</span>;
+ border-left: <span class="txt">10px double purple</span>;
+}</span>
+        </code></pre></div>
+    </div>
+        
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+        <div class="preview2">
+            <img src="../../assets/relaxing-cat.jpg" alt="قطة لطيفة مستلقية على ظهرها">
+        </div>
+    </div>
+
+    <p>
+        يتيح لك ذلك إنشاء أنماط حدود فريدة (unique border styles) لكل جانب من جوانب الصورة.
+    </p>
+
+    <p class="hinty">هناك طريقة أخرى لإنشاء تأثير إطار (border) وهي استخدام الخاصية <span dir="ltr" class="br-spec nw">outline</span>. ورغم تشابهها مع الخاصية <span dir="ltr" class="br-spec nw">border</span>، إلا أن <span dir="ltr" class="br-spec nw">outline</span> لا تؤثر في أبعاد العنصر أو تخطيطه:</p>
+
+    <div class="codeFiles">
+        <p class="file-name">index.html</p>
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;img <span class="attr">src=<span class="value">"https://openarabtech.github.io/CSSVerse/src/assets/relaxing-cat.jpg"</span> alt=<span class="value">"قطة لطيفة مستلقية على ظهرها"</span></span>&gt;</span>
+        </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">img</span> <span class="attr">{
+ outline: <span class="txt">3px solid gold</span>;
+}</span>
+        </code></pre></div>
+    </div>
+        
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+        <div class="preview3">
+            <img src="../../assets/relaxing-cat.jpg" alt="قطة لطيفة مستلقية على ظهرها">
+        </div>
+    </div>
+
+    <p>
+        يُنشئ هذا إطاراً ذهبياً (gold outline) حول الصورة دون تغيير حجمها (size) أو موقعها (position).
+    </p>
+
+    <p class="hinty">
+        إذا كنت ترغب في إنشاء زوايا مستديرة (rounded corners) للإطار، يمكنك استخدام الخاصية <span dir="ltr" class="br-spec nw">border-radius</span> بالتزامن مع الخاصية <span dir="ltr" class="br-spec nw">border</span> :
+    </p>
+
+    <div class="codeFiles">
+        <p class="file-name">index.html</p>
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;img <span class="attr">src=<span class="value">"https://openarabtech.github.io/CSSVerse/src/assets/relaxing-cat.jpg"</span> alt=<span class="value">"قطة لطيفة مستلقية على ظهرها"</span></span>&gt;</span>
+        </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">img</span> <span class="attr">{
+ border: <span class="txt">2px solid black</span>;
+ border-radius: <span class="txt">10px</span>;
+}</span>
+        </code></pre></div>
+    </div>
+        
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+        <div class="preview4">
+            <img src="../../assets/relaxing-cat.jpg" alt="قطة لطيفة مستلقية على ظهرها">
+        </div>
+    </div>
+
+    <p>
+        تذكر أنه يمكن دمج هذه التقنيات وتخصيصها لابتكار تأثيرات فريدة للحواف؛ ويعتمد اختيار الطريقة على متطلبات التصميم الخاصة بك ومستوى التعقيد المطلوب.
+    </p>
+
+  </section>
+
+
+  <!-- QUESTIONS -->
+	<section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما هي خاصية CSS التي تتيح لك إنشاء إطار (border) لا يؤثر على أبعاد العنصر (element's dimensions) ؟</p>
+
+		<p> 1. <span dir="ltr" class="br-spec nw">border</span> ❌</p>
+        <p><mark> 2. <span dir="ltr" class="br-spec nw">outline</span> ✅</mark></p>
+        <p> 3. <span dir="ltr" class="br-spec nw">box-shadow</span> ❌</p>
+		<p> 4. <span dir="ltr" class="br-spec nw">border-image</span> ❌</p>
+        <br>
+
+        <p class="userstory">كيف يمكنك إنشاء إطار أحمر متقطع بعرض 3 بكسل (3-pixel wide, dashed, red border) على الجانب الأيسر (on the left side) للصورة فقط؟</p>
+		
+		<p> 1. <div class="code-block"><pre><code>
+<span class="tag-b">img</span> <span class="attr">{
+ border: <span class="txt">3px dashed red left</span>;
+}</span>
+        </code></pre></div> ❌</p>
+
+        <p><mark> 2. <div class="code-block"><pre><code>
+<span class="tag-b">img</span> <span class="attr">{
+ border-left: <span class="txt">3px dashed red</span>;
+}</span>
+        </code></pre></div> ✅</mark></p>
+
+        <p> 3. <div class="code-block"><pre><code>
+<span class="tag-b">img</span> <span class="attr">{
+ left-border: <span class="txt">3px dashed red</span>;
+}</span>
+        </code></pre></div> ❌</p>
+
+		<p> 4. <div class="code-block"><pre><code>
+<span class="tag-b">img</span> <span class="attr">{
+ border: <span class="txt">left 3px dashed red</span>;
+}</span>
+        </code></pre></div> ❌</p>
+        <br>
+
+        <p class="userstory">ما هي خاصية CSS التي ستستخدمها لجعل زوايا الحدود مستديرة (round the corners of a border) ؟</p>
+		
+		<p> 1. <span dir="ltr" class="br-spec nw">border-style</span> ❌</p>
+        <p><mark> 2. <span dir="ltr" class="br-spec nw">border-radius</span> ✅</mark></p>
+        <p> 3. <span dir="ltr" class="br-spec nw">border-spacing</span> ❌</p>
+		<p> 4. <span dir="ltr" class="br-spec nw">border-bottom</span> ❌</p>
+	</section>
+
+    
+
+
+
+
+
+  <!-- Pages -->
+  <section class="page-nav">
+        <a class="prev" href="./What-Are-Some-Accessibility-Considerations-for-Backgrounds.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+  </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>

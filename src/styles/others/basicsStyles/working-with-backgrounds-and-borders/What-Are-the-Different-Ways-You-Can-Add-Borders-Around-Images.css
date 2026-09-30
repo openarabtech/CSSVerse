@@ -1,0 +1,23 @@
+/* PREVIEW 1 */
+.preview1 img {
+ border: 2px solid red;
+}
+
+/* PREVIEW 2 */
+.preview2 img {
+ border-top: 10px solid red;
+ border-right: 10px dashed green;
+ border-bottom: 10px dotted blue;
+ border-left: 10px double purple;
+}
+
+/* PREVIEW 3 */
+.preview3 img {
+ outline: 3px solid gold;
+}
+
+/* PREVIEW 4 */
+.preview4 img {
+ border: 2px solid black;
+ border-radius: 10px;
+}
