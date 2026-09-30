@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS |ما هو التدرّج اللوني للخلفية (Background Gradient) ، وكيف يعمل؟"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/basicsStyles/working-with-backgrounds-and-borders/What-Is-a-Background-Gradient-and-How-Does-It-Work.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>التعامل مع الخلفيات (Backgrounds) والحدود (Borders)</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+		<h2>ما هو التدرّج اللوني للخلفية (Background Gradient) ، وكيف يعمل؟</h2>
+		<span class="hint">نظري</span>
+        <p></p>
+  </section>
+
+  <section>
+      <p>
+        يُعد تدرج الخلفية (background gradient) في CSS انتقالاً سلساً بين لونين أو أكثر، ويمكن تطبيقه على خلفية عنصر ما. وتتيح لك التدرجات (Gradients) إنشاء خلفيات جذابة بصرياً دون الحاجة إلى استخدام صور (images).
+      </p>
+      <p>
+        هناك نوعان رئيسيان من التدرجات (gradients) في CSS: التدرجات الخطية (linear gradients) والتدرجات الشعاعية (radial gradients).
+      </p>
+      <p>
+        يعمل التدرج الخطي (linear gradient) على الانتقال بين الألوان على طول خط مستقيم، ويمكنك تحديد الاتجاه (direction) والألوان المستخدمة.
+      </p>
+
+      <p class="hinty">
+        إليك الصيغة الأساسية (basic syntax) :
+      </p>
+      <div class="code-block"><pre><code>
+<span class="attr">background: <span class="tag-b">linear-gradient</span>(<span class="txt">direction, color-stop1, color-stop2, ...</span>);</span>
+      </code></pre></div>
+      <p>
+        في هذا المثال، نستخدم خاصية CSS المسماة <span dir="ltr" class="br-spec nw">background</span> بقيمة تدرج خطي <span dir="ltr" class="br-spec nw">linear-gradient</span>.
+      </p>
+      <p>
+        يُحدِّد هذا الخيار اتجاه التدرج؛ إذ يمكن أن يكون زاوية (مثل <span dir="ltr" class="br-spec nw">45deg</span>)، أو كلمة مفتاحية (مثل <span dir="ltr" class="br-spec nw">to right</span> أو <span dir="ltr" class="br-spec nw">to bottom</span>)، أو جانباً أو زاوية (side/corner).
+      </p>
+      <p>
+        تُحدِّد <span dir="ltr" class="br-spec nw">color-stop</span> الألوان والمواقع التي تحدث عندها انتقالات التدرج اللوني (gradient transitions).
+      </p>
+
+      <p class="hinty">
+        لفهم كيفية عمل التدرجات الخطية (linear gradients) بشكل أفضل، دعنا نلقي نظرة على المثال التالي:
+      </p>
+      <div class="codeFiles">
+          <p class="file-name">index.html</p>
+          <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"linear-gradient"</span></span>&gt;&lt;/div&gt;</span>
+          </code></pre></div>
+            
+          <p class="file-name">styles.css</p>
+          <div class="code-block"><pre><code>
+<span class="tag-b">.linear-gradient</span> <span class="attr">{
+ background: <span class="tag-b">linear-gradient</span>(<span class="txt">to right, red, yellow</span>);
+ height: <span class="txt">40vh</span>;
+}</span>
+          </code></pre></div>
+      </div>
+        
+      <p class="hinty">معاينة:</p>
+        
+      <div class="preview" role="presentation">
+            <div class="preview1">
+                <div class="linear-gradient"></div>
+            </div>
+      </div>
+
+      <p>
+        ينشئ كود CSS هذا تدرجاً لونياً خطياً (linear gradient) ينتقل من اللون الأحمر <span dir="ltr" class="br-spec nw">red</span> على اليسار <span dir="ltr" class="br-spec nw">left</span> إلى اللون الأصفر <span dir="ltr" class="br-spec nw">yellow</span> على اليمين <span dir="ltr" class="br-spec nw">right</span>. 
+يُطبَّق هذا التدرج على عنصر يبلغ ارتفاعه <span dir="ltr" class="br-spec nw">40%</span> من ارتفاع منطقة العرض (viewport). وسوف تتعرف أكثر على وحدات <span dir="ltr" class="br-spec nw">vh</span> في درس قادم.
+      </p>
+      <p>
+        يعني الاتجاه "إلى اليمين" <span dir="ltr" class="br-spec nw">to right</span> أن التدرج (gradient) يمتد أفقياً من اليسار إلى اليمين.
+      </p>
+      <p>
+        نوع آخر من التدرجات هو التدرج الشعاعي <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">radial</span> gradient)</span>.
+      </p>
+      <p>
+        يُحدث التدرج الشعاعي (radial gradient) انتقالاً لونياً (transitions colors) ينطلق من نقطة أصل (عادةً ما تكون المركز) نحو الخارج، متخذاً شكلاً دائرياً أو إهليلجياً (circular or elliptical shape).
+      </p>
+
+      <p class="hinty">
+        إليك الصيغة الأساسية (basic syntax) :
+      </p>
+      <div class="code-block"><pre><code>
+<span class="attr">background: <span class="tag-b">radial-gradient</span>(<span class="txt">shape size at position, color-stop1, color-stop2, ...</span>);</span>
+      </code></pre></div>
+
+      <p>
+        فيما يتعلق بالصيغة، يحدد المعامل <span dir="ltr" class="br-spec nw">shape</span> شكل التدرج، والذي يمكن أن يكون دائرياً <span dir="ltr" class="br-spec nw">circle</span> أو بيضاوياً <span dir="ltr" class="br-spec nw">ellipse</span>.
+      </p>
+      <p>
+        يُحدِّد الحجمُ <span dir="ltr" class="br-spec nw">size</span> أبعادَ الشكل النهائي للتدرج، والذي يمكن أن يكون الجانب الأقرب <span dir="ltr" class="br-spec nw">closest-side</span> ، أو الزاوية الأقرب <span dir="ltr" class="br-spec nw">closest-corner</span> ، أو الجانب الأبعد <span dir="ltr" class="br-spec nw">farthest-side</span> ، أو الزاوية الأبعد <span dir="ltr" class="br-spec nw">farthest-corner</span>.
+      </p>
+      <p>
+        تُحدِّد الخاصية <span dir="ltr" class="br-spec nw">position</span> موقع مركز التدرج، 
+والذي يمكن تعيينه باستخدام كلمات مفتاحية (مثل <span dir="ltr" class="br-spec nw">center</span> أو <span dir="ltr" class="br-spec nw">top left</span> أو <span dir="ltr" class="br-spec nw">bottom right</span>) 
+أو قيم دقيقة (مثل <span dir="ltr" class="br-spec nw">50% 50%</span> أو <span dir="ltr" class="br-spec nw">10px 20px</span>).
+      </p>
+      <p>
+        وأخيراً، تُعد "نقاط توقف اللون" (color stops) قائمةً بالألوان التي يمر عبرها التدرج اللوني؛ ويمكن لكل نقطة منها أن تتضمن - اختيارياً - قيمةً للموقع (سواء كانت نسبة مئوية أو وحدة قياس طول) تحدد الموضع الذي يجب وضع اللون فيه.
+      </p>
+
+      <p class="hinty">على سبيل المثال:</p>
+      <div class="codeFiles">
+          <p class="file-name">index.html</p>
+          <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"radial-gradient"</span></span>&gt;&lt;/div&gt;</span>
+          </code></pre></div>
+            
+          <p class="file-name">styles.css</p>
+          <div class="code-block"><pre><code>
+<span class="tag-b">.radial-gradient</span> <span class="attr">{
+ background: <span class="tag-b">radial-gradient</span>(<span class="txt">circle closest-side at center, red, yellow 50%, green</span>);
+ height: <span class="txt">60vh</span>;
+}</span>
+          </code></pre></div>
+      </div>
+        
+      <p class="hinty">معاينة:</p>
+        
+      <div class="preview" role="presentation">
+            <div class="preview2">
+                <div class="radial-gradient"></div>
+            </div>
+      </div>
+      <p>
+        ينشئ كود CSS هذا تدرجاً شعاعياً دائرياً (circular radial gradient) يتمركز في العنصر؛ 
+إذ يبدأ باللون الأحمر <span dir="ltr" class="br-spec nw">red</span> في المركز، وينتقل إلى اللون الأصفر <span dir="ltr" class="br-spec nw">yellow</span> عند <span dir="ltr" class="br-spec nw">50%</span> من نصف القطر، وينتهي باللون الأخضر <span dir="ltr" class="br-spec nw">green</span>.
+      </p>
+      <p>
+        تجعل الكلمة المفتاحية <span dir="ltr" class="br-spec nw">closest-side</span> الشكل النهائي للتدرج اللوني يتناسب مع أقرب جانب من جوانب العنصر. ويُطبَّق التدرج على عنصر يبلغ ارتفاعه <span dir="ltr" class="br-spec nw">60%</span> من ارتفاع منطقة العرض (viewport).
+      </p>
+      <p>
+        إن فهم كيفية التعامل مع التدرجات اللونية في CSS يمكن أن يعزز تصاميمك بشكل كبير، وذلك من خلال توفير خلفيات جذابة بصرياً دون الحاجة إلى استخدام الصور.
+      </p>
+      <p>
+        مع توفر خيارات مثل التدرجات الخطية (linear gradients) للانتقالات السلسة والتدرجات الشعاعية (radial gradients) لتأثيرات دائرية، فإنها تتيح المرونة والإبداع في تصميم الويب.
+      </p>
+
+  </section>
+
+  <!-- QUESTIONS -->
+	<section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما الذي تحدده الكلمة المفتاحية <span dir="ltr" class="br-spec nw">circle</span> في الدالة <span dir="ltr" class="br-spec nw">radial-gradient()</span> ؟</p>
+
+		<p> 1. سيكون للتدرج شكل مربع (square shape). ❌</p>
+    <p> 2. سيمتد التدرج في اتجاه قطري (diagonal direction). ❌</p>
+    <p><mark> 3. سيكون للتدرج شكل دائري (circular shape). ✅</mark></p>
+		<p> 4. سيتم تطبيق التدرج على النص. ❌</p>
+    <br>
+        
+    <p class="userstory">ما هي وظيفة الكلمة المفتاحية <span dir="ltr" class="br-spec nw">farthest-corner</span> ضمن معامل الحجم (size parameter) في دالة <span dir="ltr" class="br-spec nw">radial-gradient()</span> ؟</p>
+		
+		<p> 1. يجعل التدرج (gradient) يمتد إلى أقرب زاوية (nearest corner) في العنصر. ❌</p>
+    <p> 2. يجعل التدرج (gradient) يغطي كامل عرض <span dir="ltr" class="br-spec nw">width</span> العنصر. ❌</p>
+    <p><mark> 3. يجعل التدرج (gradient) يمتد إلى أبعد زاوية (farthest corner) في العنصر. ✅</mark></p>
+		<p> 4. يجعل التدرج (gradient) يظهر فقط ضمن مساحة الهامش الداخلي <span dir="ltr" class="br-spec nw">padding</span> الخاصة بالعنصر. ❌</p>
+    <br>
+        
+    <p class="userstory">في الدالة <span dir="ltr" class="br-spec nw">radial-gradient(circle at center, red, yellow 50%, green)</span> ، أين يقع مركز التدرج اللوني؟</p>
+		
+		<p> 1. عند الزاوية العلوية اليمنى (top right corner) للعنصر. ❌</p>
+    <p> 2. عند الزاوية السفلية اليسرى (bottom left corner) للعنصر. ❌</p>
+    <p><mark> 3. في مركز (center) العنصر. ✅</mark></p>
+		<p> 4. عند الحافة الخارجية (outer edge) للعنصر. ❌</p>
+	</section>
+
+
+    
+
+
+
+
+
+  <!-- Pages -->
+  <section class="page-nav">
+        <a class="prev" href="./How-Do-Background-Image-Size-Repeat-Position-and-Attachment-Work.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+  </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
