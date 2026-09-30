@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS |ما هي بعض اعتبارات إمكانية الوصول المتعلقة بالخلفيات (Accessibility Considerations for Backgrounds) ؟"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>التعامل مع الخلفيات (Backgrounds) والحدود (Borders)</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+		<h2>ما هي بعض اعتبارات إمكانية الوصول المتعلقة بالخلفيات (Accessibility Considerations for Backgrounds) ؟</h2>
+		<span class="hint">نظري</span>
+        <p></p>
+  </section>
+
+  <section>
+    <p>
+        في تصميم الويب (web design)، تلعب الخلفيات (backgrounds) دوراً حيوياً في تحديد المظهر والطابع العام لصفحة الويب.
+    </p>
+    <p>
+        ومع ذلك، عند التصميم باستخدام الخلفيات (designing with backgrounds)، من الضروري مراعاة إمكانية الوصول (accessibility) لضمان أن يكون المحتوى قابلاً للاستخدام والقراءة من قِبَل جميع المستخدمين، بما في ذلك ذوي الإعاقات البصرية.
+    </p>
+    <p>
+        تتمثل إحدى الاعتبارات الرئيسية المتعلقة بإمكانية الوصول فيما يخص الخلفيات في ضمان وجود تباين كافٍ (sufficient contrast) بين الخلفية والنص (background and the text).
+    </p>
+    <p>
+        في غياب التباين الكافي، قد يواجه المستخدمون ذوو الإعاقات البصرية - بما في ذلك من يعانون من ضعف البصر أو عمى الألوان - صعوبةً في قراءة المحتوى الموجود على صفحتك.
+    </p>
+    <p>
+        يشير التباين إلى الفرق في درجات الفتح (lightness) أو القتامة (darkness) بين لونين. ويُعد وجود تباين كافٍ (Sufficient contrast) بين لون الخلفية ولون النص (background color and the text color) أمراً ضرورياً لضمان سهولة القراءة (readability).
+    </p>
+    <p>
+        توصي إرشادات إتاحة محتوى الويب (Web Content Accessibility Guidelines - WCAG) بحد أدنى لنسبة التباين يبلغ <b dir="ltr">4.5:1</b> للنصوص العادية، و <b dir="ltr">3:1</b> للنصوص الكبيرة.
+    </p>
+    <p>
+        على سبيل المثال، فإن وضع نص أبيض (white text) على خلفية رمادية فاتحة (light-gray background) سيؤدي إلى تباين ضعيف (poor contrast)، مما يجعل قراءة النص صعبة. في المقابل، يوفر النص الأبيض (white text) على خلفية زرقاء داكنة (dark-blue background) تبايناً جيداً (good contrast)، مما يعزز سهولة القراءة لجميع المستخدمين.
+    </p>
+
+    <p class="hinty">إليك مثال على ضعف التباين (poor contrast) :</p>
+    <div class="code-block"><pre><code>
+<span class="tag">&lt;p <span class="attr">style=<span class="value">"color: <span class="tag-b">lightgray</span>; background-color: <span class="tag-b">whitesmoke</span>;"</span></span>&gt;
+ <span dir="rtl" class="txt">هذا مثال على تباين ضعيف.</span>
+&lt;/p&gt;</span>
+    </code></pre></div>
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+        <p style="color: lightgray; background-color: whitesmoke;">
+            هذا مثال على تباين ضعيف.
+        </p>      
+    </div>
+
+    <p class="hinty">إليك الآن مثال على التباين الجيد (good contrast) :</p>
+    <div class="code-block"><pre><code>
+<span class="tag">&lt;p <span class="attr">style=<span class="value">"color: <span class="tag-b">white</span>; background-color: <span class="tag-b">darkslategray</span>;"</span></span>&gt;
+ <span dir="rtl" class="txt">هذا مثال على تباين جيد.</span>
+&lt;/p&gt;</span>
+    </code></pre></div>
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+        <p style="color: white; background-color: darkslategray;">
+           هذا مثال على تباين جيد.
+        </p>      
+    </div>
+
+    <p>
+        ثمة اعتبار آخر يتمثل في تجنب وضع النصوص فوق خلفيات مزدحمة أو معقدة، مثل الصور أو التدرجات اللونية متعددة الألوان؛ إذ قد تجعل هذه الخلفيات من الصعب تمييز النص عن الخلفية، بغض النظر عن مستوى التباين.
+    </p>
+    <p>
+        عند تصميم الخلفيات، تجنَّب استخدام اللون كوسيلة وحيدة لنقل المعلومات؛ فعلى سبيل المثال، قد يواجه المستخدمون المصابون بعمى الألوان صعوبةً إذا اعتمدتَ على اللون وحده للإشارة إلى رسالة خطأ أو نجاح (مثل استخدام اللون الأحمر للخطأ أو الأخضر للنجاح).
+    </p>
+    <p>
+        بالإضافة إلى اللون، ينبغي عليك استخدام الرموز أو النصوص لنقل المعلومات؛ فعلى سبيل المثال، يمكنك استخدام أيقونة أو نص عريض إلى جانب رسالة خطأ حمراء لتوضيح وجود خطأ ما.
+    </p>
+    <p>
+        على الرغم من أنها أقل شيوعاً، إلا أن الصوت أو مقاطع الفيديو في الخلفية يمكن أن تؤثر أيضاً على إمكانية الوصول.
+    </p>
+    <p>
+        قد تتسبب الموسيقى الخلفية أو مقاطع الفيديو التي تعمل تلقائياً في تشتيت انتباه بعض المستخدمين، ولا سيما ذوي الإعاقات الإدراكية. لذا، إذا قمت بتضمين صوت في الخلفية، فاحرص دائماً على توفير وسيلة تتيح للمستخدمين كتم الصوت أو إيقافه مؤقتاً.
+    </p>
+    <p>
+        من خلال مراعاة اعتبارات إمكانية الوصول هذه، يمكنك إنشاء تصاميم أكثر شمولاً تضمن أن يكون محتواك قابلاً للقراءة والاستخدام من قِبَل جميع المستخدمين، بغض النظر عن قدراتهم.
+    </p>
+
+
+  </section>
+
+  <!-- QUESTIONS -->
+	<section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">لماذا من المهم الحفاظ على تباين كافٍ (sufficient contrast) بين النص والخلفية؟</p>
+
+		<p> 1. لجعل الصفحة تبدو أكثر حيويةً وتنوعاً في الألوان. ❌</p>
+        <p><mark> 2. لجعل النص أكثر قابلية للقراءة (readable) لجميع المستخدمين. ✅</mark></p>
+        <p> 3. لتقليل أوقات تحميل (loading times) صفحة الويب. ❌</p>
+		<p> 4. لإبراز النص بطرق مختلفة. ❌</p>
+        <br>
+
+        <p class="userstory">ما الذي ينبغي تجنبه (avoided) عند وضع نص فوق خلفية (text over a background) ؟</p>
+		
+		<p> 1. تطبيق خلفية ذات تباين عالٍ (high-contrast background). ❌</p>
+        <p><mark> 2. استخدام خلفية مزدحمة أو معقدة دون أي طبقة تراكب (overlay). ✅</mark></p>
+        <p> 3. استخدام نص أبيض على خلفية سوداء. ❌</p>
+		<p> 4. استخدام لون خلفية مصمت خلف النص (solid background color behind text). ❌</p>
+        <br>
+
+        <p class="userstory">ما هي المشكلة في استخدام اللون كمؤشر وحيد للمعلومات، مثل عرض رسالة خطأ باللون الأحمر؟</p>
+		
+		<p> 1. يجعل الموقع يبدو أقل غنىً بالألوان. ❌</p>
+        <p> 2. لا يؤثر على المستخدمين الذين يعانون من ضعف البصر. ❌</p>
+        <p><mark> 3. قد يسبب مشاكل للمستخدمين المصابين بعمى الألوان. ✅</mark></p>
+		<p> 4. يتطلب المزيد من أكواد CSS. ❌</p>
+	</section>
+
+
+    
+
+
+
+
+
+  <!-- Pages -->
+  <section class="page-nav">
+        <a class="prev" href="./What-Is-a-Background-Gradient-and-How-Does-It-Work.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+  </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
