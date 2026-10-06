@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS | تصميم بطاقة لمنشور مدونة (Blog Post Card) "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/basicsStyles/design-a-blog-post-card/Design-a-Blog-Post-Card.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>الأساسيات</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+		<h2>تصميم بطاقة لمنشور مدونة (Blog Post Card)</h2>
+		<span class="hint">مختبر</span>
+        <p>في هذا المختبر، ستتدرب على تنسيق الخلفيات والحدود من خلال إنشاء بطاقة لمنشور مدونة.</p>
+    </section>
+
+    <!-- HTML boilerplate -->
+	<section>
+        <br>
+        <h3>نموذج "اتش.تي.إم.إل" The HTML boilerplate.</h3>
+        <br>
+        <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span>بطاقة تدوينة<span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+ <span class="value">&lt;!-- هنا تضع اكواد التطبيق --&gt;</span>
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+            </div>
+            <br><br>
+    </section>
+
+    <!-- User stories -->
+    <section>
+        <h3>قصص المستخدم User stories :</h3>
+
+        <ol>
+            <li>
+                <p class="hinty">
+                    يجب أن يكون لديك عنصر <span dir="ltr" class="br-spec nw">div</span> يحمل الفئة <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">blog-post-card</span> class)</span> لاحتواء جميع عناصر البطاقة الخاصة بك.
+                </p>
+            </li>
+            <li>
+                <p class="hinty">
+                    داخل العنصر <span dir="ltr" class="br-spec nw">.blog-post-card</span> ، يجب أن يتوفر لديك عنصر صورة (image) يحمل السمة <span dir="ltr" class="br-spec nw">alt</span> (مع نص صالح) وفئة (class) باسم <span dir="ltr" class="br-spec nw">post-img</span>. 
+ويمكنك استخدام الرابط <p class="long-link"><span dir="ltr" class="br-spec nw">https://openarabtech.github.io/CSSVerse/src/assets/cover-photo.jpg</span></p> للسمة <span dir="ltr" class="br-spec nw">src</span> الخاصة بالصورة.
+                </p>
+            </li>
+            <li>
+                <p class="hinty">
+                    يجب أن يحتوي العنصر <span dir="ltr" class="br-spec nw">.blog-post-card</span> على عنصر <span dir="ltr" class="br-spec nw">div</span> يحمل الفئة <span dir="ltr" class="br-spec nw">post-content</span> ويتضمن ما يلي:
+                </p>
+                <ul>
+                    <li>
+                        <p class="hinty">
+                            عنصر <span dir="ltr" class="br-spec nw">h2</span> يحمل الفئة <span dir="ltr" class="br-spec nw">post-title</span> ويحتوي على نص عنوان تدوينتك.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="hinty">
+                            عنصر <span dir="ltr" class="br-spec nw">p</span> يحمل الفئة <span dir="ltr" class="br-spec nw">post-excerpt</span> ويحتوي على نص يلخّص تدوينتك.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="hinty">
+                            عنصر <span dir="ltr" class="br-spec nw">a</span> يحمل الفئة <span dir="ltr" class="br-spec nw">read-more</span> والنص <span dir="rtl" class="br-spec nw">اقرأ المزيد</span>.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p class="hinty">
+                    يجب عليك تعيين لون خلفية عنصر <span dir="ltr" class="br-spec nw">body</span> إلى قيمة غير اللون الأبيض.
+                </p>
+            </li>
+            <li>
+                <p class="hinty">
+                    يجب عليك تطبيق الأنماط التالية على العنصر <span dir="ltr" class="br-spec nw">.blog-post-card</span> :
+                </p>
+                <ul>
+                    <li>
+                        <p class="hinty">خلفية بيضاء (A white background).</p>
+                    </li>
+                    <li>
+                        <p class="hinty">زوايا مستديرة (Rounded corners).</p>
+                    </li>
+                    <li>
+                        <p class="hinty">عرض من اختيارك (A width of your choice).</p>
+                    </li>
+                    <li>
+                        <p class="hinty">محاذاة النص من اختيارك (The text alignment of your choice).</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p class="hinty">
+                    يجب تنسيق العنصر <span dir="ltr" class="br-spec nw">.post-img</span> بحيث تملأ الصورة العرض الكامل للبطاقة، مع إضافة حد سفلي لها.
+                </p>
+            </li>
+            <li>
+                <p class="hinty">يجب تنسيق العنصر <span dir="ltr" class="br-spec nw">.post-content</span> بحيث تتوفر مساحة داخلية (padding) داخل البطاقة.</p>
+            </li>
+            <li>
+                <p class="hinty">يجب أن يكون للعنصرين <span dir="ltr" class="br-spec nw">.post-title</span> و <span dir="ltr" class="br-spec nw">.post-excerpt</span> لون نص يختلف عن اللون الافتراضي، بالإضافة إلى هوامش (margins) من جميع الجهات.</p>
+            </li>
+            <li>
+                <p class="hinty">
+                    يجب تنسيق العنصر <span dir="ltr" class="br-spec nw">.read-more</span> ليبدو كزر (button)، وأن يحتوي على:
+                </p>
+                <ul>
+                    <li>
+                        <p class="hinty">لون نص (text color) يختلف عن اللون الافتراضي.</p>
+                    </li>
+                    <li>
+                        <p class="hinty">لون خلفية (background color).</p>
+                    </li>
+                    <li>
+                        <p class="hinty">هوامش (Margins) من جميع الجهات.</p>
+                    </li>
+                    <li>
+                        <p class="hinty">مسافات داخلية (Padding) من جميع الجهات.</p>
+                    </li>
+                    <li>
+                        <p class="hinty">زوايا مستديرة (Rounded corners).</p>
+                    </li>
+                    <li>
+                        <p class="hinty">خاصية عرض (display) مضبوطة على القيمة <span dir="ltr" class="br-spec nw">inline-block</span>.</p>
+                    </li>
+                    <li>
+                        <p class="hinty">تأثير عند تمرير المؤشر (hover) يغير لون الخلفية (background color).</p>
+                    </li>
+                </ul>
+            </li>
+            
+
+        </ol>
+        <p>
+            <b>ملاحظة:</b> تأكد من ربط ملف الأنماط (stylesheet) في ملف HTML وتطبيق قواعد CSS.
+        </p>
+        
+
+    </section>
+
+
+    <section>
+        <br>
+		<h3>حل التطبيق :</h3>
+        <br>
+        <div class="codeFiles">
+        <p class="file-name">index.html</p>
+        <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span>قائمة مهام منسقة<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ 
+ <span class="tag">&lt;body&gt;
+  &lt;div <span class="attr">class=<span class="value">"blog-post-card"</span></span>&gt;
+   &lt;img <span class="attr">class=<span class="value">"post-img"</span> src=<span class="value">"https://openarabtech.github.io/CSSVerse/src/assets/cover-photo.jpg"</span> alt=<span class="value">"تدوين اونلاين"</span></span>&gt;
+   &lt;div <span class="attr">class=<span class="value">"post-content"</span></span>&gt;
+    &lt;h2 <span class="attr">class=<span class="value">"post-title"</span></span>&gt;<span dir="rtl" class="txt">تعلم تطوير الويب في عام 2026</span>&lt;/h2&gt;
+    &lt;p <span class="attr">class=<span class="value">"post-excerpt"</span></span>&gt;<span dir="rtl" class="txt">واكب أحدث الاتجاهات في مجال تطوير الويب وكن في الطليعة؛ اكتشف كل ما هو جديد ومثير لعام 2026.</span>&lt;/p&gt;
+    &lt;a <span class="attr">class=<span class="value">"read-more"</span> href=<span class="value">"#"</span></span>&gt;<span dir="rtl" class="txt">اقرأ المزيد</span>&lt;/a&gt;
+   &lt;/div&gt;
+  &lt;/div&gt;
+ &lt;/body&gt;</span>
+
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+        </div>
+        <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">body</span> <span class="attr">{
+ background-color: <span class="txt">#f1f5f9</span>;
+ padding: <span class="txt">20px</span>;
+}</span>
+
+<span class="tag-b">.blog-post-card</span> <span class="attr">{
+ background-color: <span class="txt">white</span>;
+ border-radius: <span class="txt">16px</span>;
+ width: <span class="txt">600px</span>;
+ text-align: <span class="txt">center</span>;
+ overflow: <span class="txt">hidden</span>;
+ margin: <span class="txt">auto</span>;
+}</span>
+
+<span class="tag-b">.post-img</span> <span class="attr">{
+ width: <span class="txt">100%</span>;
+ border-bottom: <span class="txt">4px solid #2563eb</span>;
+}</span>
+
+<span class="tag-b">.post-content</span> <span class="attr">{
+ padding: <span class="txt">20px</span>;
+}</span>
+
+<span class="tag-b">.post-title</span> <span class="attr">{
+ color: <span class="txt">#0f172a</span>;
+ margin: <span class="txt">10px</span>;
+}</span>
+
+<span class="tag-b">.post-excerpt</span> <span class="attr">{
+ color: <span class="txt">#64748b</span>;
+ margin: <span class="txt">10px</span>;
+ line-height: <span class="txt">1.6</span>;
+}</span>
+
+<span class="tag-b">.read-more</span> <span class="attr">{
+ color: <span class="txt">white</span>;
+ background-color: <span class="txt">#2563eb</span>;
+ margin: <span class="txt">10px</span>;
+ padding: <span class="txt">10px</span>;
+ border-radius: <span class="txt">10px</span>;
+ display: <span class="txt">inline-block</span>;
+ text-decoration: <span class="txt">none</span>;
+}</span>
+
+<span class="tag-b">.read-more:hover</span> <span class="attr">{
+ background-color: <span class="txt">#1d4ed8</span>;
+}</span>
+
+            </code></pre></div>
+            </div>
+    </section>
+
+
+    <section>
+        <br>
+		<h3>معاينة التطبيق :</h3>
+        <br>
+
+        <div class="preview" role="presentation">
+            <div class="preview1">
+                <div class="blog-post-card">
+                <img class="post-img" src="../../assets/cover-photo.jpg" alt="تدوين اونلاين">
+                <div class="post-content">
+                    <h2 class="post-title">تعلم تطوير الويب في عام 2026</h2>
+                    <p class="post-excerpt">واكب أحدث الاتجاهات في مجال تطوير الويب وكن في الطليعة؛ اكتشف كل ما هو جديد ومثير لعام 2026.</p>
+                    <a class="read-more" href="#">اقرأ المزيد</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="../working-with-backgrounds-and-borders/What-Are-the-Different-Ways-You-Can-Add-Borders-Around-Images.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
