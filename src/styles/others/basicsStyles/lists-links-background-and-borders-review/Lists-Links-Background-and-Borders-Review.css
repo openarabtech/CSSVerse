@@ -1,0 +1,145 @@
+/* PREVIEW 1 */
+.preview1 ul {
+ list-style-type: square;
+}
+
+
+/* PREVIEW 2 */
+.preview2 .inside-list {
+ list-style-position: inside;
+}
+.preview2 .outside-list {
+ list-style-position: outside;
+}
+
+
+/* PREVIEW 3 */
+.preview3 .list li {
+ margin-bottom: 20px;
+}
+
+/* PREVIEW 4 */
+.preview4 a:link {
+ color: red;
+}
+
+/* PREVIEW 5 */
+.preview5 a:hover {
+ color: green;
+ text-decoration: underline;
+}
+
+/* PREVIEW 6 */
+.preview6 a:focus {
+ outline: 2px solid orange;
+}
+
+/* PREVIEW 7 */
+.preview7 a:active {
+ color: pink;
+}
+
+/* PREVIEW X */
+.previewX {
+ min-height: 50vh ;
+}
+
+
+/* PREVIEW 8 */
+.preview8 {
+ min-height: 75vh;
+ background-image: url("../../../../assets/relaxing-cat.jpg");
+ background-size: cover;
+ background-repeat: no-repeat;
+ 
+}
+
+/* PREVIEW 9 */
+.preview9 {
+ min-height: 100px;
+ background-image: url("../../../../assets/relaxing-cat.jpg");
+ background-size: contain;
+ background-repeat: no-repeat;
+ 
+}
+
+/* PREVIEW 10 */
+.preview10 {
+ min-height: 100px;
+ background-image: url("../../../../assets/relaxing-cat.jpg");
+ background-size: contain;
+ background-repeat: no-repeat;
+ background-position: center top;
+ 
+}
+
+/* PREVIEW 11 */
+.preview11 {
+ min-height: 500px;
+ background-image: url("../../../../assets/relaxing-cat.jpg");
+ 
+}
+
+/* PREVIEW 12 */
+.preview12 {
+ min-height: 300px;
+ background: center top no-repeat url("../../../../assets/relaxing-cat.jpg");
+ 
+}
+
+/* PREVIEW 13 */
+.preview13 {
+ border-top: 3px solid blue;
+ border-right: 2px solid red;
+ border-bottom: 1px dashed green;
+ border-left: 4px dotted orange;
+ padding: 20px;
+}
+
+/* PREVIEW 14 */
+.preview14 img {
+ border: 2px solid red;
+}
+
+/* PREVIEW 15 */
+.preview15 img {
+ border: 2px solid black;
+ border-radius: 10px;
+}
+
+
+/* PREVIEW 16 */
+.preview16 .solid-border {
+ border: 3px solid blue;
+ margin-bottom: 10px;
+ padding: 10px;
+}
+
+.preview16 .dashed-border {
+ border: 3px dashed red;
+ margin-bottom: 10px;
+ padding: 10px;
+}
+
+.preview16 .dotted-border {
+ border: 3px dotted green;
+ padding: 10px;
+}
+
+.preview16 .double-border {
+ border: 3px double blueviolet;
+ padding: 10px;
+}
+
+
+/* PREVIEW 17 */
+.preview17 {
+ background: linear-gradient(to right, red, blue);
+ height: 40vh;
+}
+
+/* PREVIEW 18 */
+.preview18 {
+ background: radial-gradient(circle, red, blue);
+ height: 40vh;
+}

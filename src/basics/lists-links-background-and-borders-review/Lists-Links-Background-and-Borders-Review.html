@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS | مراجعة القوائم والروابط وخلفيات CSS وحدودها "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/basicsStyles/lists-links-background-and-borders-review/Lists-Links-Background-and-Borders-Review.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>الأساسيات</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+		<h2>مراجعة القوائم والروابط وخلفيات CSS وحدودها</h2>
+		<span class="hint">مراجعة</span>
+        <p></p>
+    </section>
+
+
+    <!-- Styling Lists -->
+    <section>
+      <h3>تنسيق القوائم Styling Lists</h3>
+      <ul>
+        <li>
+          <p>
+            <b>خاصية <span dir="ltr" class="br-spec nw">line-height</span> :</b> تُستخدم هذه الخاصية لإنشاء مسافة بين أسطر النص. 
+وتشمل القيم المقبولة لهذه الخاصية <span dir="ltr" class="br-spec nw">line-height</span> الكلمة المفتاحية <span dir="ltr" class="br-spec nw">normal</span> ، والأرقام (numbers)، والنسب المئوية (percentages)، ووحدات القياس مثل وحدة <span dir="ltr" class="br-spec nw">em</span>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <b>الخاصية <span dir="ltr" class="br-spec nw">list-style-type</span> :</b> تُستخدم هذه الخاصية لتحديد الرمز المميز لعنصر القائمة؛ وتشمل القيم المقبولة: دائرة <span dir="ltr" class="br-spec nw">circle</span> ، أو قرص <span dir="ltr" class="br-spec nw">disc</span>، أو أرقام عشرية <span dir="ltr" class="br-spec nw">decimal</span>.
+          </p>
+          <p>إليك مثال يستخدم الخاصية <span dir="ltr" class="br-spec nw">list-style-type</span> لتغيير نمط الرموز النقطية:</p>
+          <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">العنصر 1</span>&lt;/li&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">العنصر 2</span>&lt;/li&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">العنصر 3</span>&lt;/li&gt;
+&lt;/ul&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">ul</span> <span class="attr">{
+ list-style-type: <span class="txt">square</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview1">
+                  <ul>
+                    <li>العنصر 1</li>
+                    <li>العنصر 2</li>
+                    <li>العنصر 3</li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+
+        <li>
+          <p>
+            <b>خاصية <span dir="ltr" class="br-spec nw">list-style-position</span> :</b> تُستخدم هذه الخاصية لتحديد موضع علامة القائمة. والقيمتان المقبولتان الوحيدتان هما <span dir="ltr" class="br-spec nw">inside</span> و <span dir="ltr" class="br-spec nw">outside</span>.
+          </p>
+          <p>إليك مثال يوضح الفرق بين الداخل <span dir="ltr" class="br-spec nw">inside</span> والخارج <span dir="ltr" class="br-spec nw">outside</span> :</p>
+          <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;ul <span class="attr">class=<span class="value">"inside-list"</span></span>&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">عنصر ذو موقع داخلي</span>&lt;/li&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">عنصر ذو موقع داخلي</span>&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul <span class="attr">class=<span class="value">"outside-list"</span></span>&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">عنصر ذو موقع خارجي</span>&lt;/li&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">عنصر ذو موقع خارجي</span>&lt;/li&gt;
+&lt;/ul&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.inside-list</span> <span class="attr">{
+ list-style-position: <span class="txt">inside</span>;
+}</span>
+
+<span class="tag-b">.outside-list</span> <span class="attr">{
+ list-style-position: <span class="txt">outside</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview2">
+                  <ul class="inside-list">
+                  <li>عنصر ذو موقع داخلي</li>
+                  <li>عنصر ذو موقع داخلي</li>
+                  </ul>
+                  <ul class="outside-list">
+                  <li>عنصر ذو موقع خارجي</li>
+                  <li>عنصر ذو موقع خارجي</li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+
+        <li>
+          <p>
+            <b>الخاصية <span dir="ltr" class="br-spec nw">list-style-image</span> :</b> تُستخدم هذه الخاصية لتعيين صورة كعلامة لعنصر القائمة. ومن حالات الاستخدام الشائعة لها استخدام الدالة <span dir="ltr" class="br-spec nw">url</span> مع قيمة تشير إلى مسار صحيح لصورة.
+          </p>
+        </li>
+      </ul>
+
+      <br>
+    </section>
+
+    <!-- Spacing list items using margin -->
+    <section>
+      <h3>ضبط المسافات بين عناصر القائمة باستخدام الهوامش <span dir="ltr" class="br-spec nw">margin</span></h3>
+      <ul>
+        <li>
+          <p>
+            إلى جانب خاصية ارتفاع السطر <span dir="ltr" class="br-spec nw">line-height</span> ، يمكن أيضاً استخدام الهوامش (margins) في CSS لتحسين التباعد وقابلية القراءة لعناصر القائمة (list items).
+          </p>
+        </li>
+
+        <li>
+          <p>
+            تُنشئ الهوامش (margins) مساحةً خارج كل عنصر <span dir="ltr" class="br-spec nw">li</span> ، مما يتيح التحكم في الفراغ الفاصل بين عناصر القائمة.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            تُستخدم الخاصية <span dir="ltr" class="br-spec nw">margin-bottom</span> لإنشاء مسافة أسفل كل عنصر من عناصر القائمة. على سبيل المثال، ستؤدي القاعدة <span dir="ltr" class="br-spec nw">margin-bottom: 10px;</span> إلى إنشاء فجوة بمقدار 10 بكسل (10-pixel gap) أسفل كل عنصر.
+          </p>
+          <p>إليك مثال يستخدم الخاصية <span dir="ltr" class="br-spec nw">margin-bottom</span> لترك مسافة بين عناصر القائمة:</p>
+
+          <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;ul <span class="attr">class=<span class="value">"list"</span></span>&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">العنصر 1</span>&lt;/li&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">العنصر 2</span>&lt;/li&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">العنصر 3</span>&lt;/li&gt;
+&lt;/ul&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.list li</span> <span class="attr">{
+ margin-bottom: <span class="txt">20px</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview3">
+                  <ul class="list">
+                    <li>العنصر 1</li>
+                    <li>العنصر 2</li>
+                    <li>العنصر 3</li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+      </ul>
+
+
+      <br>
+    
+    </section>
+
+    <!-- Styling Links -->
+    <section>
+      <h3>تنسيق الروابط Styling Links</h3>
+      <ul>
+        <li>
+          <p>
+            <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">pseudo-class</span> :</b> هي كلمة مفتاحية تُضاف إلى المُحدِّد (selector) وتتيح لك اختيار العناصر بناءً على حالة معينة. ومن الأمثلة الشائعة على هذه الحالات: <span dir="ltr" class="br-spec nw">:hover</span> و <span dir="ltr" class="br-spec nw">:visited</span> و <span dir="ltr" class="br-spec nw">:focus</span>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:link</span> :</b> تُستخدم هذه الفئة الزائفة لتنسيق الروابط التي لم يقم المستخدم بزيارتها.
+          </p>
+          <p>إليك مثال يستخدم الفئة الزائفة <span dir="ltr" class="br-spec nw">:link</span> :</p>
+          <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;a <span class="attr">href="/"</span>&gt;<span class="txt">رابط مثال</span>&lt;/a&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">a:link</span> <span class="attr">{
+ color: <span class="txt">red</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview4">
+                  <a href="#">رابط مثال</a>
+                </div>
+            </div>
+        </li>
+
+        <li>
+          <p>
+            <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:visited</span> :</b> تُستخدم هذه الفئة الزائفة لتنسيق الروابط التي زارها المستخدم بالفعل.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:hover</span> :</b> تُستخدم هذه الفئة الزائفة لتنسيق العناصر التي يمرر المستخدم مؤشر الفأرة فوقها.
+          </p>
+          <p>إليك مثال يستخدم الفئة الزائفة <span dir="ltr" class="br-spec nw">:hover</span> :</p>
+          <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;a <span class="attr">href="/"</span>&gt;<span dir="rtl" class="txt">مرّر المؤشر فوقي!</span>&lt;/a&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">a:hover</span> <span class="attr">{
+ color: <span class="txt">green</span>;
+ text-decoration: <span class="txt">underline</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview5">
+                  <a href="#1">مرّر المؤشر فوقي!</a>
+                </div>
+            </div>
+        </li>
+
+        <li>
+          <p>
+            <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:focus</span> :</b> تُستخدم هذه الفئة الزائفة لتنسيق عنصر ما عندما يكتسب التركيز (focus). ومن الأمثلة على ذلك عناصر الإدخال <span dir="ltr" class="br-spec nw">input</span> أو القوائم المنسدلة <span dir="ltr" class="br-spec nw">select</span> ، حيث يقوم المستخدم بالنقر على العنصر أو التنقل إليه باستخدام مفتاح "Tab" لتركيزه.
+          </p>
+          <p>إليك مثال يستخدم الفئة الزائفة <span dir="ltr" class="br-spec nw">:focus</span> :</p>
+          <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;a <span class="attr">href="/"</span>&gt;<span dir="rtl" class="txt">رابط مثال</span>&lt;/a&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">a:focus</span> <span class="attr">{
+ outline: <span class="txt">2px solid orange</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview6">
+                  <a href="#2">رابط مثال</a>
+                </div>
+            </div>
+
+        </li>
+
+        <li>
+          <p><b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:active</span> :</b> تُستخدم هذه الفئة الزائفة لتنسيق عنصر قام المستخدم بتفعيله؛ ومن الأمثلة الشائعة على ذلك قيام المستخدم بالنقر على زر.</p>
+          <p>إليك مثال يستخدم الفئة الزائفة <span dir="ltr" class="br-spec nw">:active</span> :</p>
+          <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;a <span class="attr">href="/"</span>&gt;<span dir="rtl" class="txt">اضغط عليّ!</span>&lt;/a&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">a:active</span> <span class="attr">{
+ color: <span class="txt">pink</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview7">
+                  <a href="#3">اضغط عليّ!</a>
+                </div>
+            </div>
+        </li>
+      </ul>
+      <br>
+    </section>
+
+    <!-- Working with Backgrounds and Borders -->
+    <section>
+      <h3>التعامل مع الخلفيات والحدود Backgrounds and Borders</h3>
+      <ul>
+        <li>
+          <p>
+            <b>خاصية <span dir="ltr" class="br-spec nw">background-size</span> :</b> تُستخدم هذه الخاصية لتحديد حجم خلفية العنصر (background size). 
+ومن القيم الشائعة لها: <span dir="ltr" class="br-spec nw">cover</span> لجعل صورة الخلفية تغطي العنصر بالكامل، 
+و <span dir="ltr" class="br-spec nw">contain</span> لجعل صورة الخلفية تتناسب مع أبعاد العنصر.
+          </p>
+          <p>إليك مثال يستخدم <span dir="ltr" class="br-spec nw">background-size: cover</span> :</p>
+          
+          <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">body</span> <span class="attr">{
+   background-image: <span class="tag-b">url</span>(<span class="value">"https://openarabtech.github.io/CSSVerse/src/assets/relaxing-cat.jpg"</span>);
+   background-size: <span class="txt">cover</span>;
+   background-repeat: <span class="txt">no-repeat</span>;
+   min-height: <span class="txt">100px</span>;
+  }</span>
+&lt;/style&gt;</span>
+            </code></pre></div>
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+              <div class="preview8"></div>
+            </div>
+            <p>إليك مثال يستخدم <span dir="ltr" class="br-spec nw">background-size: contain</span> :</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">body</span> <span class="attr">{
+   background-image: <span class="tag-b">url</span>(<span class="value">"https://openarabtech.github.io/CSSVerse/src/assets/relaxing-cat.jpg"</span>);
+   background-size: <span class="txt">contain</span>;
+   background-repeat: <span class="txt">no-repeat</span>;
+   min-height: <span class="txt">100px</span>;
+  }</span>
+&lt;/style&gt;</span>
+            </code></pre></div>
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="previewX">
+                  <div class="preview9"></div>
+                </div>
+            </div>
+        </li>
+
+        <li>
+          <p>
+            <b>خاصية <span dir="ltr" class="br-spec nw">background-repeat</span> :</b> تُستخدم هذه الخاصية لتحديد كيفية تكرار صور الخلفية على طول المحورين الأفقي والرأسي (horizontal and vertical axes). 
+القيمة الافتراضية لهذه الخاصية <span dir="ltr" class="br-spec nw">background-repeat</span> هي <span dir="ltr" class="br-spec nw">repeat</span> ، مما يعني أن الصورة ستتكرر أفقيًا ورأسيًا؛ 
+كما يمكنك تحديد عدم تكرار الصورة باستخدام القيمة <span dir="ltr" class="br-spec nw">no-repeat</span>.
+          </p>
+          <p>إليك مثال يستخدم <span dir="ltr" class="br-spec nw">background-repeat: no-repeat</span> :</p>
+          <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">body</span> <span class="attr">{
+   background-image: <span class="tag-b">url</span>(<span class="value">"https://openarabtech.github.io/CSSVerse/src/assets/relaxing-cat.jpg"</span>);
+   background-size: <span class="txt">contain</span>;
+   background-repeat: <span class="txt">no-repeat</span>;
+   min-height: <span class="txt">100px</span>;
+  }</span>
+&lt;/style&gt;</span>
+            </code></pre></div>
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="previewX">
+                  <div class="preview9"></div>
+                </div>
+            </div>
+        </li>
+
+        <li>
+          <p>
+            <b>خاصية <span dir="ltr" class="br-spec nw">background-position</span> :</b> تُستخدم هذه الخاصية لتحديد موضع صورة الخلفية. 
+ويمكن ضبطها باستخدام قيم تعبّر عن طول محدد أو نسبة مئوية، أو قيم نصية (كلمات مفتاحية) مثل <span dir="ltr" class="br-spec nw">top</span> و <span dir="ltr" class="br-spec nw">bottom</span> و <span dir="ltr" class="br-spec nw">left</span> و <span dir="ltr" class="br-spec nw">right</span> و <span dir="ltr" class="br-spec nw">center</span>.
+          </p>
+          <p>إليك مثال يستخدم الخاصية <span dir="ltr" class="br-spec nw">background-position</span> :</p>
+          <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">body</span> <span class="attr">{
+   background-image: <span class="tag-b">url</span>(<span class="value">"https://openarabtech.github.io/CSSVerse/src/assets/relaxing-cat.jpg"</span>);
+   background-size: <span class="txt">contain</span>;
+   background-repeat: <span class="txt">no-repeat</span>;
+   background-position: <span class="txt">center top</span>;
+   min-height: <span class="txt">100px</span>;
+  }</span>
+&lt;/style&gt;</span>
+            </code></pre></div>
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="previewX">
+                  <div class="preview10"></div>
+                </div>
+            </div>
+        </li>
+
+        <li>
+          <p>
+            <b>خاصية <span dir="ltr" class="br-spec nw">background-attachment</span> :</b> تُستخدم هذه الخاصية لتحديد ما إذا كانت صورة الخلفية ستتحرك (تُمرَّر) مع المحتوى أم ستظل ثابتة في مكانها. 
+وتتمثل القيم الرئيسية في <span dir="ltr" class="br-spec nw">scroll</span> (وهي القيمة الافتراضية)، حيث تتحرك صورة الخلفية مع المحتوى، و <span dir="ltr" class="br-spec nw">fixed</span> ، حيث تظل صورة الخلفية في الموقع نفسه على الشاشة.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <b>خاصية <span dir="ltr" class="br-spec nw">background-image</span> :</b> تُستخدم هذه الخاصية لتعيين صورة الخلفية لعنصر ما. يمكنك تعيين صور خلفية متعددة في آنٍ واحد، واستخدام الدوال <span dir="ltr" class="br-spec nw">url</span> أو <span dir="ltr" class="br-spec nw">radial-gradient</span> أو <span dir="ltr" class="br-spec nw">linear-gradient</span> كقيم لها.
+          </p>
+          <p>إليك مثال يستخدم <span dir="ltr" class="br-spec nw">background-image</span> :</p>
+          <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">body</span> <span class="attr">{
+   background-image: <span class="tag-b">url</span>(<span class="value">"https://openarabtech.github.io/CSSVerse/src/assets/relaxing-cat.jpg"</span>);
+   min-height: <span class="txt">100px</span>;
+  }</span>
+&lt;/style&gt;</span>
+            </code></pre></div>
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="previewX">
+                  <div class="preview11"></div>
+                </div>
+            </div>
+        </li>
+
+        <li>
+          <p>
+            <b>خاصية <span dir="ltr" class="br-spec nw">background</span> :</b> هي خاصية مختصرة لضبط جميع خصائص الخلفية في إعلان واحد. 
+إليك مثال على تعيين صورة للخلفية وضبطها بحيث لا تتكرر: <span dir="ltr" class="br-spec nw">background: no-repeat url("example-url-goes-here");</span>
+          </p>
+          <p>إليك مثال يستخدم خاصية الاختصار <span dir="ltr" class="br-spec nw">background</span> :</p>
+          <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">body</span> <span class="attr">{
+   background: <span class="tag-b">center top no-repeat url</span>(<span class="value">"https://openarabtech.github.io/CSSVerse/src/assets/relaxing-cat.jpg"</span>);
+   min-height: <span class="txt">100px</span>;
+  }</span>
+&lt;/style&gt;</span>
+            </code></pre></div>
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="previewX">
+                  <div class="preview12"></div>
+                </div>
+            </div>
+        </li>
+
+        <li>
+          <p>
+            <b>تباين جيد بين ألوان الخلفية والعناصر الأمامية:</b> من المهم ضمان وجود تباين جيد بين ألوان الخلفية والعناصر الأمامية (مثل لون النص) لجعل النص قابلاً للقراءة. وتوصي "إرشادات إتاحة محتوى الويب" (WCAG) بحد أدنى لنسبة التباين يبلغ <span dir="ltr">4.5:1</span> للنصوص العادية، و <span dir="ltr">3:1</span> للنصوص الكبيرة.
+          </p>
+        </li>
+      </ul>
+      <br>
+    </section>
+
+    <!-- Borders -->
+    <section>
+      <h3>الحدود Borders</h3>
+      <ul>
+        <li>
+          <p>
+            <b>الخاصية <span dir="ltr" class="br-spec nw">border-top</span> :</b> تُستخدم هذه الخاصية لتحديد أنماط الحد العلوي للعنصر. فالقيمة <span dir="ltr" class="br-spec nw">border-top: 3px solid blue;</span> تُنشئ حداً علوياً للعنصر بلون أزرق ونمط متصل (solid) وبعرض 3 بكسل.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <b>الخاصية <span dir="ltr" class="br-spec nw">border-right</span> :</b> تُستخدم هذه الخاصية لتحديد أنماط الحد الأيمن للعنصر. فالأمر <span dir="ltr" class="br-spec nw">border-right: 2px solid red;</span> يُنشئ حداً أحمر اللون ومُصمتاً (غير متقطع) بعرض 2 بكسل على الجانب الأيمن من العنصر.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <b>الخاصية <span dir="ltr" class="br-spec nw">border-bottom</span> :</b> تُستخدم هذه الخاصية لتحديد أنماط الحد السفلي للعنصر. فالقيمة <span dir="ltr" class="br-spec nw">border-bottom: 1px dashed green;</span> تُنشئ حداً سفلياً للعنصر بلون أخضر، ونمط متقطع (dashed)، وعرض يبلغ بكسلاً واحداً.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <b>الخاصية <span dir="ltr" class="br-spec nw">border-left</span> :</b> تُستخدم هذه الخاصية لتحديد أنماط الحد الأيسر للعنصر. فالقيمة <span dir="ltr" class="br-spec nw">border-left: 4px dotted orange;</span> تُنشئ حداً برتقالياً منقطاً بعرض 4 بكسلات على الجانب الأيسر للعنصر.
+          </p>
+        </li>
+
+        <p>إليك مثال يستخدم خصائص الحدود الفردية (individual border properties) :</p>
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"bordered-box"</span></span>&gt;<span class="txt">صندوق بحدود مختلفة</span>&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.bordered-box</span> <span class="attr">{
+ border-top: <span class="txt">3px solid blue</span>;
+ border-right: <span class="txt">2px solid red</span>;
+ border-bottom: <span class="txt">1px dashed green</span>;
+ border-left: <span class="txt">4px dotted orange</span>;
+ padding: <span class="txt">20px</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview13">صندوق بحدود مختلفة</div>
+            </div>
+
+        <li>
+          <p>
+            <b>خاصية <span dir="ltr" class="br-spec nw">border</span> :</b> هي خاصية مختصرة لتحديد عرض ونمط ولون حدود العنصر. فالأمر <span dir="ltr" class="br-spec nw">border: 1px solid black;</span> يُنشئ حدوداً سوداء مصمتة بعرض بكسل واحد.
+          </p>
+          <p>إليك مثال يستخدم خاصية <span dir="ltr" class="br-spec nw">border</span> المختصرة:</p>
+          <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;img <span class="attr">src=<span class="value">"https://openarabtech.github.io/CSSVerse/src/assets/relaxing-cat.jpg"</span> alt=<span class="value">"قطة لطيفة مستلقية على ظهرها"</span></span>&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">img</span> <span class="attr">{
+ border: <span class="txt">2px solid red</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+              <div class="preview14">
+                <img src="../../assets/relaxing-cat.jpg" alt="قطة لطيفة مستلقية على ظهرها">
+              </div>
+            </div>
+        </li>
+
+        <li>
+          <p><b>خاصية <span dir="ltr" class="br-spec nw">border-radius</span> :</b> تُستخدم هذه الخاصية لإنشاء زوايا مستديرة لحدود العنصر.</p>
+          <p>إليك مثال يستخدم <span dir="ltr" class="br-spec nw">border-radius</span> :</p>
+          <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;img <span class="attr">src=<span class="value">"https://openarabtech.github.io/CSSVerse/src/assets/relaxing-cat.jpg"</span> alt=<span class="value">"قطة لطيفة مستلقية على ظهرها"</span></span>&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">img</span> <span class="attr">{
+ border: <span class="txt">2px solid black</span>;
+ border-radius: <span class="txt">10px</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+              <div class="preview15">
+                <img src="../../assets/relaxing-cat.jpg" alt="قطة لطيفة مستلقية على ظهرها">
+              </div>
+            </div>
+        </li>
+
+        <li>
+          <p>
+            <b>الخاصية <span dir="ltr" class="br-spec nw">border-style</span> :</b> تُستخدم هذه الخاصية لتحديد نمط حدود العنصر. ومن القيم المقبولة لها: <span dir="ltr" class="br-spec nw">solid</span> (متصل)، و <span dir="ltr" class="br-spec nw">dashed</span> (متقطع)، و <span dir="ltr" class="br-spec nw">dotted</span> (منقّط)، و <span dir="ltr" class="br-spec nw">double</span> (مزدوج).
+          </p>
+          <p>إليك مثال يستخدم قيمًا مختلفة لنمط الحدود <span dir="ltr" class="br-spec nw">border-style</span> :</p>
+          <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">solid-border</span></span>&gt;<span class="txt">حد متصل</span>&lt;/div&gt;
+&lt;div <span class="attr">class=<span class="value">dashed-border</span></span>&gt;<span class="txt">حد متقطع</span>&lt;/div&gt;
+&lt;div <span class="attr">class=<span class="value">dotted-border</span></span>&gt;<span class="txt">حد منقط</span>&lt;/div&gt;
+&lt;div <span class="attr">class=<span class="value">double-border</span></span>&gt;<span class="txt">حد مزدوج</span>&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.solid-border</span> <span class="attr">{
+ border: <span class="txt">3px solid blue</span>;
+ margin-bottom: <span class="txt">10px</span>;
+ padding: <span class="txt">10px</span>;
+}</span>
+
+<span class="tag-b">.dashed-border</span> <span class="attr">{
+ border: <span class="txt">3px dashed red</span>;
+ margin-bottom: <span class="txt">10px</span>;
+ padding: <span class="txt">10px</span>;
+}</span>
+
+<span class="tag-b">.dotted-border</span> <span class="attr">{
+ border: <span class="txt">3px dotted green</span>;
+ padding: <span class="txt">10px</span>;
+}</span>
+
+<span class="tag-b">.double-border</span> <span class="attr">{
+ border: <span class="txt">3px double blueviolet</span>;
+ padding: <span class="txt">10px</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview16">
+                  <div class=solid-border>حد متصل</div>
+                  <div class=dashed-border>حد متقطع</div>
+                  <div class=dotted-border>حد منقط</div>
+                  <div class=double-border>حد مزدوج</div>
+                </div>
+            </div>
+        </li>
+      </ul>
+      <br>
+    </section>
+
+    <section>
+      <h3>التدرجات Gradients</h3>
+      <ul>
+        <li>
+          <p>
+            <b>دالة <span dir="ltr" class="br-spec nw">linear-gradient()</span> :</b> تُستخدم دالة CSS هذه لإنشاء تدرج لوني (انتقال بين ألوان متعددة) على طول خط مستقيم.
+          </p>
+          <p>إليك مثال يستخدم <span dir="ltr" class="br-spec nw">linear-gradient()</span> :</p>
+          <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"linear-gradient"</span></span>&gt;&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.linear-gradient</span> <span class="attr">{
+ background: <span class="txt">linear-gradient(to right, red, blue)</span>;
+ height: <span class="txt">40vh</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="previewX">
+                  <div class="preview17"></div>
+                </div>
+            </div>
+        </li>
+
+        <li>
+          <p>
+            <b>دالة <span dir="ltr" class="br-spec nw">radial-gradient()</span> :</b> تُنشئ دالة CSS هذه صورةً تتدرج شعاعياً انطلاقاً من نقطة محددة -على شكل دائرة (circle) أو قطع ناقص (ellipse) - وتنتقل تدريجياً بين ألوان متعددة.
+          </p>
+          <p>إليك مثال يستخدم <span dir="ltr" class="br-spec nw">radial-gradient()</span> :</p>
+          <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"linear-gradient"</span></span>&gt;&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.radial-gradient</span> <span class="attr">{
+ background: <span class="txt">radial-gradient(circle, red, blue)</span>;
+ height: <span class="txt">40vh</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="previewX">
+                  <div class="preview18"></div>
+                </div>
+            </div>
+        </li>
+      </ul>
+    </section>
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="../design-a-blog-post-card/Design-a-Blog-Post-Card.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
