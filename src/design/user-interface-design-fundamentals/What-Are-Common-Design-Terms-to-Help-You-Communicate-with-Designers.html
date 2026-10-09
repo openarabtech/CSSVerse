@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS | ما هي مصطلحات التصميم الشائعة التي تساعدك على التواصل مع المصممين Designers ؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/designStyles/user-interface-design-fundamentals/What-Are-Common-Design-Terms-to-Help-You-Communicate-with-Designers.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>أساسيات تصميم واجهة المستخدم User Interface</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+		<h2>ما هي مصطلحات التصميم الشائعة التي تساعدك على التواصل مع المصممين Designers ؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+  </section>
+
+  <section>
+    <p>
+        <b>ملاحظة:</b> قد تستخدم بعض الأمثلة التفاعلية أكواد CSS لم تتعلمها بعد. لا تقلق بشأن محاولة فهم الكود بالكامل؛ فالهدف من هذه الأمثلة هو عرض نماذج لمفاهيم التصميم هذه، لتتمكن من فهم آلية عملها بشكل أفضل.
+    </p>
+    <p>
+        بصفتك مطوراً (developer)، قد تحتاج إلى العمل عن كثب مع المصممين (designers)؛ فإذا كنت على دراية بمصطلحات التصميم الأساسية (basic design terminology)، فستمتلك لغة مشتركة تتيح لك المشاركة بفعالية أكبر في عملية التصميم (design process)، مما يجعل سير العمل أكثر كفاءة ويؤدي إلى تقديم تجربة مستخدم أفضل (better user experience).
+    </p>
+  </section>
+
+  <!-- Layout -->
+  <section>
+    <h3>التخطيط Layout</h3>
+    <p>
+        لنبدأ الخوض في التفاصيل؛ سنستهل حديثنا بمصطلح "التخطيط" (Layout). يُقصد بالتخطيط كيفية ترتيب العناصر البصرية على الصفحة أو الشاشة لإيصال رسالة ما، وقد تشمل هذه العناصر النصوص والصور والمساحات الفارغة. ويُعد التخطيط بمثابة المخطط الأساسي للتصميم، إذ يتعين على المصممين مراعاة موضع كل عنصر وحجمه وتسلسله الهرمي.
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;header&gt;
+ &lt;div <span class="attr">class=<span class="value">"container"</span></span>&gt;
+  &lt;h1&gt;<span class="txt">متجر الرفيق</span>&lt;/h1&gt;
+  &lt;nav&gt;
+   &lt;ul&gt;
+    &lt;li&gt;&lt;a <span class="attr">href=<span class="value">"#"</span></span>&gt;<span class="txt">الرئيسية</span>&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a <span class="attr">href=<span class="value">"#"</span></span>&gt;<span class="txt">تسوق</span>&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a <span class="attr">href=<span class="value">"#"</span></span>&gt;<span class="txt">نبذة عنا</span>&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a <span class="attr">href=<span class="value">"#"</span></span>&gt;<span dir="rtl" class="txt">عربة التسوق (2)</span>&lt;/a&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+  &lt;/nav&gt;
+ &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+ &lt;section <span class="attr">class=<span class="value">"hero"</span></span>&gt;
+  &lt;h2&gt;<span dir="rtl" class="txt">مجموعة خريف 2026</span>&lt;/h2&gt;
+  &lt;p&gt;<span dir="rtl" class="txt">اكتشف أحدث الصيحات</span>&lt;/p&gt;
+  &lt;a <span class="attr">href=<span class="value">"#"</span> class=<span class="value">"btn"</span></span>&gt;<span dir="rtl" class="txt">تسوق الآن</span>&lt;/a&gt;
+ &lt;/section&gt;
+
+ &lt;section <span class="attr">class=<span class="value">"products container"</span></span>&gt;
+  &lt;h3&gt;<span dir="rtl" class="txt">منتجات مميزة</span>&lt;/h3&gt;
+  &lt;div <span class="attr">class=<span class="value">"product-grid"</span></span>&gt;
+   &lt;div <span class="attr">class=<span class="value">"product-card"</span></span>&gt;
+    &lt;img <span class="attr">src=<span class="value">"https://placehold.co/300x200"</span> alt=<span class="value">"المنتج 1"</span></span>&gt;
+    &lt;h4&gt;<span dir="rtl" class="txt">المنتج 1</span>&lt;/h4&gt;
+    &lt;p&gt;<span dir="rtl" class="txt">49.99 دولاراً</span>&lt;/p&gt;
+    &lt;button&gt;<span dir="rtl" class="txt">أضف إلى السلة</span>&lt;/button&gt;
+   &lt;/div&gt;
+   &lt;div <span class="attr">class=<span class="value">"product-card"</span></span>&gt;
+    &lt;img <span class="attr">src=<span class="value">"https://placehold.co/300x200"</span> alt=<span class="value">"المنتج 2"</span></span>&gt;
+    &lt;h4&gt;<span dir="rtl" class="txt">المنتج 2</span>&lt;/h4&gt;
+    &lt;p&gt;<span dir="rtl" class="txt">59.99 دولاراً</span>&lt;/p&gt;
+    &lt;button&gt;<span dir="rtl" class="txt">أضف إلى السلة</span>&lt;/button&gt;
+   &lt;/div&gt;
+   &lt;div <span class="attr">class=<span class="value">"product-card"</span></span>&gt;
+    &lt;img <span class="attr">src=<span class="value">"https://placehold.co/300x200"</span> alt=<span class="value">"المنتج 3"</span></span>&gt;
+    &lt;h4&gt;<span dir="rtl" class="txt">المنتج 3</span>&lt;/h4&gt;
+    &lt;p&gt;<span dir="rtl" class="txt">29.99 دولاراً</span>&lt;/p&gt;
+    &lt;button&gt;<span dir="rtl" class="txt">أضف إلى السلة</span>&lt;/button&gt;
+   &lt;/div&gt;
+  &lt;/div&gt;
+ &lt;/section&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+ &lt;div <span class="attr">class=<span class="value">"container"</span></span>&gt;
+  &lt;p&gt;
+  <span dir="rtl" class="txt">&copy;
+    2025 متجر الرفيق. جميع الحقوق محفوظة.</span>
+  &lt;/p&gt;
+ &lt;/div&gt;
+&lt;/footer&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">*</span> <span class="attr">{
+ box-sizing: <span class="txt">border-box</span>;
+ margin: <span class="txt">0</span>;
+ padding: <span class="txt">0</span>;
+}</span>
+
+<span class="tag-b">body</span> <span class="attr">{
+ font-family: <span class="txt">'Segoe UI', Tahoma, Geneva, Verdana, sans-serif</span>;
+ line-height: <span class="txt">1.6</span>;
+ background: <span class="txt">#f9f9f9</span>;
+ color: <span class="txt">#333</span>;
+}</span>
+
+<span class="tag-b">.container</span> <span class="attr">{
+ width: <span class="txt">90%</span>;
+ max-width: <span class="txt">1200px</span>;
+ margin: <span class="txt">auto</span>;
+}</span>
+
+<span class="tag-b">header .container</span> <span class="attr">{
+ display: <span class="txt">flex</span>;
+ justify-content: <span class="txt">space-between</span>;
+ align-items: <span class="txt">center</span>;
+}</span>
+
+<span class="tag-b">header</span> <span class="attr">{
+ background: <span class="txt">#fff</span>;
+ border-bottom: <span class="txt">1px solid #ddd</span>;
+ padding: <span class="txt">1rem 0</span>;
+}</span>
+
+<span class="tag-b">header h1</span> <span class="attr">{
+ color: <span class="txt">#2c3e50</span>;
+}</span>
+
+<span class="tag-b">nav ul</span> <span class="attr">{
+ list-style: <span class="txt">none</span>;
+ display: <span class="txt">flex</span>;
+ gap: <span class="txt">1.5rem</span>;
+ justify-content: <span class="txt">flex-end</span>;
+}</span>
+
+<span class="tag-b">nav a</span> <span class="attr">{
+ text-decoration: <span class="txt">none</span>;
+ color: <span class="txt">#2c3e50</span>;
+ font-weight: <span class="txt">500</span>;
+}</span>
+
+<span class="tag-b">.hero</span> <span class="attr">{
+ background-color: <span class="txt">lightgrey</span>;
+ text-align: <span class="txt">center</span>;
+ padding: <span class="txt">4rem 1rem</span>;
+ margin-bottom: <span class="txt">2rem</span>;
+}</span>
+
+<span class="tag-b">.hero h2</span> <span class="attr">{
+ font-size: <span class="txt">2.5rem</span>;
+ margin-bottom: <span class="txt">0.5rem</span>;
+}</span>
+
+<span class="tag-b">.hero .btn</span> <span class="attr">{
+ display: <span class="txt">inline-block</span>;
+ margin-top: <span class="txt">1rem</span>;
+ padding: <span class="txt">0.75rem 1.5rem</span>;
+ background: <span class="txt">#2c3e50</span>;
+ color: <span class="txt">white</span>;
+ text-decoration: <span class="txt">none</span>;
+ border-radius: <span class="txt">4px</span>;
+}</span>
+
+<span class="tag-b">.products h3</span> <span class="attr">{
+ margin-bottom: <span class="txt">0.5rem</span>;
+ font-size: <span class="txt">1.8rem</span>;
+ color: <span class="txt">#2c3e50</span>;
+}</span>
+
+<span class="tag-b">.product-grid</span> <span class="attr">{
+ display: <span class="txt">grid</span>;
+ grid-template-columns: <span class="tag-b">repeat</span>(<span class="txt">auto-fit</span>, <span class="tag-b">minmax</span>(<span class="txt">240px, 1fr</span>));
+ gap: <span class="txt">2rem</span>;
+}</span>
+
+<span class="tag-b">.product-card</span> <span class="attr">{
+ background: <span class="txt">white</span>;
+ padding: <span class="txt">1rem</span>;
+ border-radius: <span class="txt">8px</span>;
+ text-align: <span class="txt">center</span>;
+ box-shadow: <span class="txt">0 2px 6px</span> <span class="tag-b">rgba</span>(<span class="txt">0</span>,<span class="txt">0</span>,<span class="txt">0</span>,<span class="txt">0.1</span>);
+}</span>
+
+<span class="tag-b">.product-card img</span> <span class="attr">{
+ max-width: <span class="txt">100%</span>;
+ border-radius: <span class="txt">6px</span>;
+ margin-bottom: <span class="txt">1rem</span>;
+}</span>
+
+<span class="tag-b">.product-card h4</span> <span class="attr">{
+ margin: <span class="txt">0.5rem 0</span>;
+}</span>
+
+<span class="tag-b">.product-card button</span> <span class="attr">{
+ background: <span class="txt">#27ae60</span>;
+ color: <span class="txt">white</span>;
+ border: <span class="txt">none</span>;
+ padding: <span class="txt">0.5rem 1rem</span>;
+ cursor: <span class="txt">pointer</span>;
+ border-radius: <span class="txt">4px</span>;
+}</span>
+
+<span class="tag-b">.product-card button:hover</span> <span class="attr">{
+ background: <span class="txt">#219150</span>;
+}</span>
+
+<span class="tag-b">footer</span> <span class="attr">{
+ background: <span class="txt">#2c3e50</span>;
+ color: <span class="txt">white</span>;
+ text-align: <span class="txt">center</span>;
+ padding: <span class="txt">1rem 0</span>;
+ margin-top: <span class="txt">2rem</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview1">
+                    <div class="body1">
+                        <div class="header">
+                            <div class="container">
+                            <h1>متجر الرفيق</h1>
+                            <nav>
+                            <ul>
+                                <li><a href="#">الرئيسية</a></li>
+                                <li><a href="#">تسوق</a></li>
+                                <li><a href="#">نبذة عنا</a></li>
+                                <li><a href="#">عربة التسوق (2)</a></li>
+                            </ul>
+                            </nav>
+                            </div>
+                        </div>
+
+                            <div class="main">
+                            <section class="hero">
+                            <h2>مجموعة خريف 2026</h2>
+                            <p>اكتشف أحدث الصيحات</p>
+                            <a href="#" class="btn">تسوق الآن</a>
+                            </section>
+
+                            <section class="products container">
+                            <h3>منتجات مميزة</h3>
+                            <div class="product-grid">
+                            <div class="product-card">
+                                <img src="https://placehold.co/300x200" alt="المنتج 1">
+                                <h4>المنتج 1</h4>
+                                <p>49.99 دولاراً</p>
+                                <button>أضف إلى السلة</button>
+                            </div>
+                            <div class="product-card">
+                                <img src="https://placehold.co/300x200" alt="المنتج 2">
+                                <h4>المنتج 2</h4>
+                                <p>59.99 دولاراً</p>
+                                <button>أضف إلى السلة</button>
+                            </div>
+                            <div class="product-card">
+                                <img src="https://placehold.co/300x200" alt="المنتج 3">
+                                <h4>المنتج 3</h4>
+                                <p>29.99 دولاراً</p>
+                                <button>أضف إلى السلة</button>
+                            </div>
+                            </div>
+                            </section>
+                        </div>
+
+                            <div class="footer">
+                            <div class="container">
+                            <p>
+                            ©
+                                2025 متجر الرفيق. جميع الحقوق محفوظة.
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+  </section>
+
+
+  <!-- Alignment -->
+  <section>
+    <h3>المحاذاة Alignment</h3>
+    <p>
+        يُعد "المحاذاة" (Alignment) مصطلحاً وثيق الصلة بمفهوم "التخطيط" (Layout)  (أو التنسيق العام للعناصر)؛ فالمحاذاة تشير إلى كيفية وضع العناصر بالنسبة لبعضها البعض. ويُسهم الاستخدام الصحيح للمحاذاة في إضفاء مظهرٍ يتسم بالنظام والترتيب على التصميم، إذ يعمل المصممون على خلق نظام بصري من خلال محاذاة العناصر استناداً إلى خطوط وهمية (imaginary lines) أو حواف (edges) أو نقطة مركزية (central point).
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">container</span></span>&gt;
+ &lt;section <span class="attr">class=<span class="value">alignment right"</span></span>&gt;
+  &lt;h2&gt;<span dir="rtl" class="txt">محاذاة لليمين</span>&lt;/h2&gt;
+  &lt;p&gt;<span dir="rtl" class="txt">هذا المحتوى مُحاذاة لليمين. يمكن استخدام المحاذاة لليمين لإضفاء طابع أسلوبي مميز أو عند محاذاة المحتوى مع الحافة اليمنى للحاوية.</span>&lt;/p&gt;
+ &lt;/section&gt;
+
+ &lt;section <span class="attr">class=<span class="value">"alignment center"</span></span>&gt;
+  &lt;h2&gt;<span dir="rtl" class="txt">محاذاة للوسط</span>&lt;/h2&gt;
+  &lt;p&gt;<span dir="rtl" class="txt">هذا المحتوى مُحاذٍ للمنتصف. وتُعد المحاذاة المركزية مفيدة للعناوين الرئيسية والفرعية، وللمحتوى الذي ينبغي أن يشكّل نقطة التركيز.</span>&lt;/p&gt;
+ &lt;/section&gt;
+
+ &lt;section <span class="attr">class=<span class="value">"alignment left"</span></span>&gt;
+  &lt;h2&gt;<span dir="rtl" class="txt">محاذاة لليسار</span>&lt;/h2&gt;
+  &lt;p&gt;<span dir="rtl" class="txt">هذا المحتوى مُحاذاة لليسار. وتُعد المحاذاة لليسار هي الأكثر شيوعاً للنصوص الأساسية؛ لأنها تتبع مسار القراءة الطبيعي في اللغات التي تُكتب من اليسار إلى اليمين</span>&lt;/p&gt;
+ &lt;/section&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">*</span> <span class="attr">{
+ box-sizing: <span class="txt">border-box</span>;
+ margin: <span class="txt">0</span>;
+ padding: <span class="txt">0</span>;
+}</span>
+
+<span class="tag-b">body</span> <span class="attr">{
+ font-family: <span class="txt">'Segoe UI', Tahoma, Geneva, Verdana, sans-serif</span>;
+ line-height: <span class="txt">1.6</span>;
+ background: <span class="txt">#f4f4f4</span>;
+ color: <span class="txt">#333</span>;
+ padding: <span class="txt">2rem</span>;
+}</span>
+
+<span class="tag-b">.container</span> <span class="attr">{
+ max-width: <span class="txt">800px</span>;
+ margin: <span class="txt">0 auto</span>;
+}</span>
+
+<span class="tag-b">.alignment</span> <span class="attr">{
+ background: <span class="txt">#fff</span>;
+ border-right: <span class="txt">4px solid #3498db</span>;
+ padding: <span class="txt">1.5rem</span>;
+ margin-bottom: <span class="txt">2rem</span>;
+ box-shadow: <span class="txt">0 2px 6px rgba(0, 0, 0, 0.05)</span>;
+ transition: <span class="txt">ll 0.3s ease</span>;
+}</span>
+
+<span class="tag-b">.alignment:hover</span> <span class="attr">{
+ transform: <span class="value">scale</span>(<span class="txt">1.02</span>);
+}</span>
+
+<span class="tag-b">.alignment h2</span> <span class="attr">{
+ margin-bottom: <span class="txt">0.5rem</span>;
+ color: <span class="txt">#3498db</span>;
+}</span>
+
+<span class="tag-b">.right</span> <span class="attr">{
+ text-align: <span class="txt">right</span>;
+}</span>
+
+<span class="tag-b">.center</span> <span class="attr">{
+ text-align: <span class="txt">center</span>;
+}</span>
+
+<span class="tag-b">.left</span> <span class="attr">{
+ text-align: <span class="txt">left</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview2">
+                    <div class="body2">
+                        <div class=container>
+                            <section class=alignment right">
+                            <h2>محاذاة لليمين</h2>
+                            <p>هذا المحتوى مُحاذاة لليمين. يمكن استخدام المحاذاة لليمين لإضفاء طابع أسلوبي مميز أو عند محاذاة المحتوى مع الحافة اليمنى للحاوية.</p>
+                            </section>
+
+                            <section class="alignment center">
+                            <h2>محاذاة للوسط</h2>
+                            <p>هذا المحتوى مُحاذٍ للمنتصف. وتُعد المحاذاة المركزية مفيدة للعناوين الرئيسية والفرعية، وللمحتوى الذي ينبغي أن يشكّل نقطة التركيز.</p>
+                            </section>
+
+                            <section class="alignment left">
+                            <h2>محاذاة لليسار</h2>
+                            <p>هذا المحتوى مُحاذاة لليسار. وتُعد المحاذاة لليسار هي الأكثر شيوعاً للنصوص الأساسية؛ لأنها تتبع مسار القراءة الطبيعي في اللغات التي تُكتب من اليسار إلى اليمين</p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+  </section>
+
+
+  <!-- Composition and Balance -->
+  <section>
+    <h3>التكوين والتوازن Composition and Balance</h3>
+    <p>
+        رائع. لننتقل الآن للحديث عن التكوين (Composition). 
+التكوين هو فن ترتيب العناصر لابتكار تصميم متناغم؛ 
+فهو يحدد كيفية ترابط العناصر - مثل الصور والنصوص والأشكال - ببعضها البعض ومساهمتها في التصميم بأسلوب فني. 
+وفي حين يركز "التخطيط" (Layout) في الغالب على أماكن وضع العناصر، فإن "التكوين" يأخذ في الاعتبار أيضاً الأثر الفني الذي سيُحدثه هذا التوزيع في التصميم ككل.
+    </p>
+    <p>
+        ترتبط عملية التكوين ارتباطاً وثيقاً بمفاهيم التوازن؛ 
+فالتوازن (Balance) هو كيفية توزيع الوزن البصري داخل التكوين. ويسعى المصممون إلى تحقيق حالة من التوازن من خلال ترتيبات متناظرة أو غير متناظرة، 
+إذ يبعث التصميم المتوازن شعوراً بالانسجام.
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;h1&gt;<span dir="rtl" class="txt">التكوين <span dir="ltr">&amp;</span> التوازن</span>&lt;/h1&gt;
+
+&lt;div <span class="attr">class=<span class="value">"section symmetrical"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"box-container"</span></span>&gt;
+  &lt;div <span class="attr">class=<span class="value">"box"</span></span>&gt;<span class="txt">أ</span>&lt;/div&gt;
+  &lt;div <span class="attr">class=<span class="value">"box"</span></span>&gt;<span class="txt">ب</span>&lt;/div&gt;
+  &lt;div <span class="attr">class=<span class="value">"box"</span></span>&gt;<span class="txt">ت</span>&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"description"</span></span>&gt;<span dir="rtl" class="txt">التوازن المتماثل (Symmetrical Balance) – ثقل متساوٍ على كلا الجانبين.</span>&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div <span class="attr">class=<span class="value">"section asymmetrical"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"box-container"</span></span>&gt;
+  &lt;div <span class="attr">class=<span class="value">"box"</span></span>&gt;<span class="txt">أ</span>&lt;/div&gt;
+  &lt;div <span class="attr">class=<span class="value">"box"</span></span>&gt;<span class="txt">ب</span>&lt;/div&gt;
+  &lt;div <span class="attr">class=<span class="value">"box"</span></span>&gt;<span class="txt">ت</span>&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"description"</span></span>&gt;<span dir="rtl" class="txt">التوازن غير المتماثل (Asymmetrical Balance) – غير متكافئ ولكنه متناغم.</span>&lt;/div&gt;
+&lt;/div&gt;
+</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">body</span> <span class="attr">{
+ font-family: <span class="txt">Arial, sans-serif</span>;
+ margin: <span class="txt">0</span>;
+ padding: <span class="txt">40px</span>;
+ background: <span class="txt">#f4f4f4</span>;
+}</span>
+
+<span class="tag-b">h1</span> <span class="attr">{
+ text-align: <span class="txt">center</span>;
+ margin-bottom: <span class="txt">40px</span>;
+}</span>
+
+<span class="tag-b">.section</span> <span class="attr">{
+ margin-bottom: <span class="txt">60px</span>;
+}</span>
+
+<span class="tag-b">.box-container</span> <span class="attr">{
+ display: <span class="txt">flex</span>;
+ justify-content: <span class="txt">center</span>;
+ align-items: <span class="txt">center</span>;
+ gap: <span class="txt">20px</span>;
+}</span>
+
+<span class="tag-b">.box</span> <span class="attr">{
+ width: <span class="txt">100px</span>;
+ height: <span class="txt">100px</span>;
+ background: <span class="txt">#3498db</span>;
+ display: <span class="txt">flex</span>;
+ justify-content: <span class="txt">center</span>;
+ align-items: <span class="txt">center</span>;
+ color: <span class="txt">white</span>;
+ font-weight: <span class="txt">bold</span>;
+ font-size: <span class="txt">18px</span>;
+ border-radius: <span class="txt">8px</span>;
+}</span>
+
+<span class="tag-b">.asymmetrical .box:nth-child(2)</span> <span class="attr">{
+ transform: <span class="value">scale</span>(<span class="txt">1.5</span>);
+ background: <span class="txt">#e74c3c</span>;
+}</span>
+
+<span class="tag-b">.description</span> <span class="attr">{
+ tex-align: <span class="txt">center</span>;
+ margin-top: <span class="txt">50px</span>;
+ font-style: <span class="txt">italic</span>;
+ color: <span class="txt">#333</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview3">
+                    <div class="body3">
+                        <h1>التكوين & التوازن</h1>
+
+                        <div class="section symmetrical">
+                            <div class="box-container">
+                            <div class="box">أ</div>
+                            <div class="box">ب</div>
+                            <div class="box">ت</div>
+                            </div>
+                            <div class="description">التوازن المتماثل (Symmetrical Balance) – ثقل متساوٍ على كلا الجانبين.</div>
+                        </div>
+
+                        <div class="section asymmetrical">
+                            <div class="box-container">
+                            <div class="box">أ</div>
+                            <div class="box">ب</div>
+                            <div class="box">ت</div>
+                            </div>
+                            <div class="description">التوازن غير المتماثل (Asymmetrical Balance) – غير متكافئ ولكنه متناغم.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+  </section>
+
+
+  <!-- Hierarchy -->
+  <section>
+    <h3>التسلسل الهرمي Hierarchy</h3>
+    <p>
+        يُعد "التسلسل الهرمي" (Hierarchy) مفهوماً مهماً آخر ينبغي عليك معرفته؛ فهو يحدد ترتيب الأهمية للعناصر داخل التصميم، 
+ويهدف إلى ضمان لفت الانتباه إلى المعلومات الأكثر أهمية في المقام الأول. 
+ويمكنك تحقيق التسلسل الهرمي البصري من خلال استخدام الحجم، واللون، والتباين، والمحاذاة، والمساحات البيضاء، وحتى أساليب الطباعة "التايبوغرافيا" (typography).
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"card"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"headline"</span></span>&gt;<span dir="rtl" class="txt">الترقية إلى الإصدار الاحترافي</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"subheadline"</span></span>&gt;<span dir="rtl" class="txt">احصل على المزيد من الميزات ومساحة التخزين</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"body-text"</span></span>&gt;
+  <span dir="rtl" class="txt">توفر خطة "Pro" أدوات متقدمة، ودعماً ذا أولوية، وسعة تخزين أكبر بعشرة أضعاف؛ وهي الخيار الأمثل للمحترفين والفرق التي تسعى لتعزيز إنتاجيتها.</span>
+ &lt;/div&gt;
+ &lt;a <span class="attr">href=<span class="value">"#"</span> class=<span class="value">"call-to-action"</span></span>&gt;<span dir="rtl" class="txt">ابدأ فترة تجريبية مجانية</span>&lt;/a&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">body</span> <span class="attr">{
+ font-family: <span class="txt">'Segoe UI', Tahoma, Geneva, Verdana, sans-serif</span>;
+ background-color: <span class="txt">#fefefe</span>;
+ margin: <span class="txt">40px</span>;
+ line-height: <span class="txt">1.6</span>;
+ color: <span class="txt">#333</span>;
+}</span>
+
+<span class="tag-b">.card</span> <span class="attr">{
+ max-width: <span class="txt">600px</span>;
+ margin: <span class="txt">0 auto</span>;
+ background: <span class="txt">#ffffff</span>;
+ border: <span class="txt">1px solid #ddd</span>;
+ border-radius: <span class="txt">10px</span>;
+ padding: <span class="txt">30px</span>;
+ box-shadow: <span class="txt">0 4px 10px</span> <span class="value">rgba</span>(<span class="txt">0, 0, 0, 0.05</span>);
+}</span>
+
+<span class="tag-b">.headline</span> <span class="attr">{
+ font-size: <span class="txt">32px</span>;
+ color: <span class="txt">#2c3e50</span>;
+ font-weight: <span class="txt">bold</span>;
+ margin-bottom: <span class="txt">10px</span>;
+}</span>
+
+<span class="tag-b">.subheadline</span> <span class="attr">{
+ font-size: <span class="txt">20px</span>;
+ color: <span class="txt">#555</span>;
+ margin-bottom: <span class="txt">20px</span>;
+}</span>
+
+<span class="tag-b">.body-text</span> <span class="attr">{
+ font-size: <span class="txt">16px</span>;
+ color: <span class="txt">#666</span>;
+ margin-bottom: <span class="txt">20px</span>;
+}</span>
+
+<span class="tag-b">.call-to-action</span> <span class="attr">{
+ display: <span class="txt">inline-block</span>;
+ background-color: <span class="txt">#3498db</span>;
+ color: <span class="txt">white</span>;
+ text-decoration: <span class="txt">none</span>;
+ padding: <span class="txt">12px 24px</span>;
+ border-radius: <span class="txt">5px</span>;
+ font-weight: <span class="txt">bold</span>;
+ transition: <span class="txt">background 0.3s ease</span>;
+}</span>
+
+<span class="tag-b">.call-to-action:hover</span> <span class="attr">{
+ background-color: <span class="txt">#2980b9</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview4">
+                    <div class="body4">
+                       <div class="card">
+                        <div class="headline">الترقية إلى الإصدار الاحترافي</div>
+                        <div class="subheadline">احصل على المزيد من الميزات ومساحة التخزين</div>
+                        <div class="body-text">
+                        توفر خطة "Pro" أدوات متقدمة، ودعماً ذا أولوية، وسعة تخزين أكبر بعشرة أضعاف؛ وهي الخيار الأمثل للمحترفين والفرق التي تسعى لتعزيز إنتاجيتها.
+                        </div>
+                        <a href="#" class="call-to-action">ابدأ فترة تجريبية مجانية</a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <br>
+  </section>
+
+
+  <!-- Contrast -->
+  <section>
+    <h3>التباين Contrast</h3>
+    <p>
+        يمكنك استخدام التباين (Contrast) لإيجاد فروق واضحة بين العناصر؛ 
+إذ يساعد التباين في توجيه انتباه المستخدم نحو ما تود التركيز عليه. 
+ويمكن تحقيق ذلك من خلال التفاوت في اللون أو الحجم أو الشكل أو الملمس أو أي سمة بصرية أخرى، كما أن التباين القوي يسهم أيضاً في تحسين القابلية للقراءة (readability).
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"container"</span></span>&gt;
+ &lt;h1&gt;<span dir="rtl" class="txt">التباين في التصميم</span>&lt;/h1&gt;
+ &lt;p&gt;
+  <span dir="rtl" class="txt">يساعد التباين في لفت الانتباه إلى العناصر المهمة، كما يجعل المحتوى أسهل قراءةً وأكثر جاذبيةً من الناحية البصرية.</span>
+ &lt;/p&gt;
+
+ &lt;div <span class="attr">class=<span class="value">"highlight-box"</span></span>&gt;
+  <span dir="rtl" class="txt">يتميز هذا الصندوق بتباين لوني قوي.</span>
+ &lt;/div&gt;
+
+ &lt;button <span class="attr">class=<span class="value">"high-contrast-button"</span></span>&gt;<span dir="rtl" class="txt">زر نموذجي</span>&lt;/button&gt;
+ 
+ &lt;p <span class="attr">class=<span class="value">"low-contrast-text"</span></span>&gt;
+  <span dir="rtl" class="txt">يصعب قراءة هذا النص بسبب ضعف التباين مع الخلفية.</span>
+ &lt;/p&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">body</span> <span class="attr">{
+ font-family: <span class="txt">Arial, sans-serif</span>;
+ background-color: <span class="txt">#f6f6f6</span>;
+ margin: <span class="txt">40px</span>;
+ color: <span class="txt">#333</span>;
+}</span>
+
+<span class="tag-b">.container</span> <span class="attr">{
+ max-width: <span class="txt">700px</span>;
+ margin: <span class="txt">0 auto</span>;
+ padding: <span class="txt">30px</span>;
+ background-color: <span class="txt">#ffffff</span>;
+ border-radius: <span class="txt">10px</span>;
+ box-shadow: <span class="txt">0 4px 12px</span> <span class="value">rgba</span>(<span class="txt">0, 0, 0, 0.05</span>);
+}</span>
+
+<span class="tag-b">h1</span> <span class="attr">{
+ font-size: <span class="txt">36px</span>;
+ margin-bottom: <span class="txt">10px</span>;
+ color: <span class="txt">#111</span>;
+}</span>
+
+<span class="tag-b">p</span> <span class="attr">{
+ font-size: <span class="txt">18px</span>;
+ line-height: <span class="txt">1.6</span>;
+ margin-bottom: <span class="txt">25px</span>;
+}</span>
+
+<span class="tag-b">.highlight-box</span> <span class="attr">{
+ background-color: <span class="txt">#222</span>;
+ color: <span class="txt">#ffffff</span>;
+ padding: <span class="txt">20px</span>;
+ border-radius: <span class="txt">8px</span>;
+ font-size: <span class="txt">20px</span>;
+ font-weight: <span class="txt">bold</span>;
+ text-align: <span class="txt">center</span>;
+}</span>
+
+<span class="tag-b">.low-contrast-text</span> <span class="attr">{
+ color: <span class="txt">#999999</span>;
+ font-size: <span class="txt">16px</span>;
+ margin-top: <span class="txt">30px</span>;
+}</span>
+
+<span class="tag-b">.high-contrast-button</span> <span class="attr">{
+ background-color: <span class="txt">#e74c3c</span>;
+ color: <span class="txt">white</span>;
+ border: <span class="txt">none</span>;
+ padding: <span class="txt">12px 24px</span>;
+ font-size: <span class="txt">16px</span>;
+ font-weight: <span class="txt">bold</span>;
+ border-radius: <span class="txt">5px</span>;
+ cursor: <span class="txt">pointer</span>;
+ margin-top: <span class="txt">20px</span>;
+ transition: <span class="txt">background 0.3s ease</span>;
+}</span>
+
+<span class="tag-b">.high-contrast-button:hover</span> <span class="attr">{
+ background-color: <span class="txt">#c0392b</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview5">
+                    <div class="body5">
+                        <div class="container">
+                            <h1>التباين في التصميم</h1>
+                            <p>
+                            يساعد التباين في لفت الانتباه إلى العناصر المهمة، كما يجعل المحتوى أسهل قراءةً وأكثر جاذبيةً من الناحية البصرية.
+                            </p>
+
+                            <div class="highlight-box">
+                            يتميز هذا الصندوق بتباين لوني قوي.
+                            </div>
+
+                            <button class="high-contrast-button">زر نموذجي</button>
+                            
+                            <p class="low-contrast-text">
+                            يصعب قراءة هذا النص بسبب ضعف التباين مع الخلفية.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+  </section>
+
+  <!-- White Space -->
+  <section>
+    <h3>المساحة البيضاء White Space</h3>
+    <p>
+        من المصطلحات المفيدة أيضاً مصطلح "المساحة البيضاء" (White Space). 
+تُعرف هذه المساحة أيضاً باسم "المساحة السلبية" (Negative Space)، 
+وهي المساحة الفارغة في التصميم، أي المنطقة المحيطة بالعناصر. 
+قد تتفاجأ عند معرفة أن المساحة البيضاء ليست بالضرورة بيضاء اللون؛ 
+إذ يمكن أن تكون مساحة بأي لون أو ملمس. 
+وتتمثل وظيفتها في تحسين قابلية القراءة وتعزيز التسلسل الهرمي البصري للتصميم.
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"container"</span></span>&gt;
+ &lt;h1&gt;<span dir="rtl" class="txt">قوة المساحة البيضاء</span>&lt;/h1&gt;
+ &lt;p&gt;
+ <span dir="rtl" class="txt">المساحة البيضاء (أو المساحة السلبية) هي المساحة الفارغة المحيطة بالعناصر. وهي ليست مجرد "فراغ" فحسب، بل تمنح المحتوى مساحةً للتنفس، وتعزز التركيز، وتضفي لمسةً من الأناقة على التصميم.</span>
+ &lt;/p&gt;
+ &lt;a <span class="attr">href=<span class="value">"#"</span> class=<span class="value">"button"</span></span>&gt;<span dir="rtl" class="txt">إقرأ المزيد</span>&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div <span class="attr">class=<span class="value">"no-whitespace"</span></span>&gt;
+ &lt;strong&gt;<span dir="rtl" class="txt">بدون مساحات بيضاء:</span>&lt;/strong&gt;
+ <span dir="rtl" class="txt">تتميز هذه الكتلة بهوامش داخلية ضئيلة (minimal padding)، مما يجعل المحتوى يبدو مزدحماً وأصعب في القراءة وأقل جاذبية.</span>
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">body</span> <span class="attr">{
+ font-family: <span class="txt">'Segoe UI', Tahoma, Geneva, Verdana, sans-serif</span>;
+ background-color: <span class="txt">#f0f0f0</span>;
+ margin: <span class="txt">0</span>;
+ padding: <span class="txt">0</span>;
+}</span>
+
+<span class="tag-b">.container</span> <span class="attr">{
+ max-width: <span class="txt">800px</span>;
+ margin: <span class="txt">60px auto</span>;
+ padding: <span class="txt">60px</span>;
+ background-color: <span class="txt">#ffffff</span>;
+ border-radius: <span class="txt">10px</span>;
+ box-shadow: <span class="txt">0 8px 20px</span> <span class="value">rgba</span>(<span class="txt">0, 0, 0, 0.08</span>);
+}</span>
+
+<span class="tag-b">h1</span> <span class="attr">{
+ font-size: <span class="txt">36px</span>;
+ margin-bottom: <span class="txt">20px</span>;
+ color: <span class="txt">#2c3e50</span>;
+}</span>
+
+<span class="tag-b">p</span> <span class="attr">{
+ font-size: <span class="txt">18px</span>;
+ line-height: <span class="txt">1.8</span>;
+ margin-bottom: <span class="txt">30px</span>;
+ color: <span class="txt">#555</span>;
+}</span>
+
+<span class="tag-b">.button</span> <span class="attr">{
+ display: <span class="txt">inline-block</span>;
+ padding: <span class="txt">14px 28px</span>;
+ background-color: <span class="txt">#27ae60</span>;
+ color: <span class="txt">white</span>;
+ font-size: <span class="txt">16px</span>;
+ font-weight: <span class="txt">bold</span>;
+ border: <span class="txt">none</span>;
+ border-radius: <span class="txt">5px</span>;
+ text-decoration: <span class="txt">none</span>;
+ transition: <span class="txt">background 0.3s ease</span>;
+}</span>
+
+<span class="tag-b">.button:hover</span> <span class="attr">{
+ background-color: <span class="txt">#219150</span>;
+}</span>
+
+<span class="tag-b">.no-whitespace</span> <span class="attr">{
+ background-color: <span class="txt">#ffffff</span>;
+ padding: <span class="txt">10px</span>;
+ margin: <span class="txt">60px auto</span>;
+ width: <span class="txt">800px</span>;
+ box-shadow: <span class="txt">0 0 0 1px #ccc</span>;
+ font-size: <span class="txt">16px</span>;
+ color: <span class="txt">#222</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview6">
+                    <div class="body6">
+                        <div class="container">
+                        <h1>قوة المساحة البيضاء</h1>
+                        <p>
+                        المساحة البيضاء (أو المساحة السلبية) هي المساحة الفارغة المحيطة بالعناصر. وهي ليست مجرد "فراغ" فحسب، بل تمنح المحتوى مساحةً للتنفس، وتعزز التركيز، وتضفي لمسةً من الأناقة على التصميم.
+                        </p>
+                        <a href="#" class="button">إقرأ المزيد</a>
+                        </div>
+
+                        <div class="no-whitespace">
+                        <strong>بدون مساحات بيضاء:</strong>
+                        تتميز هذه الكتلة بهوامش داخلية ضئيلة (minimal padding)، مما يجعل المحتوى يبدو مزدحماً وأصعب في القراءة وأقل جاذبية.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+  </section>
+
+
+  <!-- UI and UX -->
+  <section>
+    <h3>واجهة المستخدم وتجربة المستخدم UI and UX</h3>
+    <p>
+        هذه مفاهيم تصميم عامة ستصادفها كثيراً، ولكن قد تجد أيضاً مصطلحات تصميم ترتبط ارتباطاً وثيقاً بتطوير البرمجيات.
+    </p>
+    <p>
+        تُعد واجهة المستخدم (أو ما يُعرف اختصاراً بـ UI) الوسيلة التي يتفاعل من خلالها البشر مع أجهزة الكمبيوتر؛ فهي تشمل العناصر المرئية والتفاعلية التي يراها المستخدمون على شاشاتهم، مثل الأيقونات والصور والنصوص والقوائم والروابط والأزرار.
+    </p>
+    <p>
+        تتمحور تجربة المستخدم (أو ما يُعرف بـ UX) حول شعور المستخدمين عند التعامل مع منتج أو خدمة ما. فالتطبيق الذي يتمتع بتجربة مستخدم مصممة بإتقان يتسم بكونه بديهياً وسهل الاستخدام وفعالاً ومتاحاً للجميع وممتعاً. وتؤدي واجهة المستخدم دوراً جوهرياً في جعل تجربة المستخدم سهلة وممتعة قدر الإمكان؛ ولذا فإن العلاقة بينهما وثيقة للغاية.
+    </p>
+    <p>
+        هذه بعض المصطلحات الشائعة التي ينبغي عليك معرفتها للتواصل مع المصممين. وبفضل هذه المعرفة، أصبح بإمكانك الآن أداء دور أكثر فاعلية في عملية التصميم.
+    </p>
+  </section>
+
+    <!-- QUESTIONS -->
+	<section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">أي مبدأ من مبادئ التصميم يشير إلى توزيع الوزن البصري (visual weight distribution) داخل التخطيط (layout)؟</p>
+
+		<p> 1. المحاذاة Alignment. ❌</p>
+        <p><mark> 2. التوازن Balance. ✅</mark></p>
+        <p> 3. التسلسل الهرمي Hierarchy. ❌</p>
+		<p> 4. التباين Contrast. ❌</p>
+        <br>
+
+        <p class="userstory">ما هو المصطلح الذي يُطلق على المساحة الفارغة المحيطة بالعناصر في التصميم؟</p>
+		
+		<p> 1. التخطيط Layout. ❌</p>
+        <p> 2. التسلسل الهرمي Hierarchy. ❌</p>
+        <p><mark> 3. المساحات البيضاء White Space. ✅</mark></p>
+		<p> 4. التباين Contrast. ❌</p>
+        <br>
+
+        <p class="userstory">ما هو مبدأ التصميم الذي يحدد ترتيب أهمية العناصر في التصميم؟</p>
+		
+		<p> 1. المحاذاة Alignment. ❌</p>
+        <p> 2. التباين Contrast. ❌</p>
+        <p><mark> 3. التسلسل الهرمي Hierarchy. ✅</mark></p>
+		<p> 4. التقارب Proximity. ❌</p>
+        
+	</section>
+
+
+
+
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="../index.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
