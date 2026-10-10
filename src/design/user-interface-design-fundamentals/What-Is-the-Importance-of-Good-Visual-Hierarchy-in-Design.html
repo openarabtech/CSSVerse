@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="ما أهمية التسلسل الهرمي البصري الجيد (Good Visual Hierarchy) في التصميم؟"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/designStyles/user-interface-design-fundamentals/What-Is-the-Importance-of-Good-Visual-Hierarchy-in-Design.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | التصميم</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>أساسيات تصميم واجهة المستخدم User Interface</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+		<h2>ما أهمية التسلسل الهرمي البصري الجيد (Good Visual Hierarchy) في التصميم؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+  </section>
+
+  <section>
+    <p>
+        <b>ملاحظة:</b> قد تستخدم بعض الأمثلة التفاعلية أكواد CSS لم تتعلمها بعد. 
+لا تقلق بشأن محاولة فهم الكود بالكامل؛ 
+فالهدف من هذه الأمثلة هو عرض نماذج لمفاهيم التصميم هذه، 
+لتتمكن من فهم آلية عملها بشكل أفضل.
+    </p>
+    <p>
+        يشير التسلسل الهرمي البصري (Visual hierarchy) إلى الطريقة التي تُنظّم وتُعرض بها محتويات الصفحة لتوجيه انتباه المشاهد.
+    </p>
+    <p>
+        يمكن للتسلسل الهرمي القوي أن يوفر مساراً واضحاً تتبعه العين، مما يضمن استيعاب المعلومات التي تنقلها بالترتيب الذي قصدته.
+    </p>
+    <p>
+        لِننظر في تخطيط أساسي لصفحة، حيث تكون شيفرة HTML الخاصة بها صحيحة دلالياً (semantically)، إلا أن التنسيق المطبّق لا يُنشئ تسلسلاً هرمياً بصرياً قوياً.
+    </p>
+
+    <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">body</span> <span class="attr">{
+  font-family: <span class="txt">sans-serif</span>;
+  color: <span class="txt">#333</span>;
+  background-color: <span class="txt">#fff</span>;
+ }</span>
+
+ <span class="tag-b">header, nav, main, section, footer</span> <span class="attr">{
+  padding: <span class="txt">10px</span>;
+  margin-bottom: <span class="txt">10px</span>;
+  border: <span class="txt">1px solid #ccc</span>;
+ }</span>
+
+ <span class="tag-b">h1, h2, h3</span> <span class="attr">{
+  font-weight: <span class="txt">normal</span>;
+  font-size: <span class="txt">16px</span>;
+ }</span>
+
+ <span class="tag-b">nav a</span> <span class="attr">{
+  text-decoration: <span class="txt">none</span>;
+  color: <span class="txt">#333</span>;
+  margin-left: <span class="txt">10px</span>;
+  font-size: <span class="txt">14px</span>;
+ }</span>
+
+ <span class="tag-b">p</span> <span class="attr">{
+  font-size: <span class="txt">14px</span>;
+  margin: <span class="txt">5px 0</span>;
+ }</span>
+&lt;/style&gt;
+
+&lt;header&gt;
+ &lt;h1&gt;<span dir="rtl" class="txt">موقعي الإلكتروني</span>&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;nav&gt;
+ &lt;a <span class="attr">href=<span class="value">"#"</span></span>&gt;<span dir="rtl" class="txt">الرئيسية</span>&lt;/a&gt;
+ &lt;a <span class="attr">href=<span class="value">"#"</span></span>&gt;<span dir="rtl" class="txt">نبذة عنا</span>&lt;/a&gt;
+ &lt;a <span class="attr">href=<span class="value">"#"</span></span>&gt;<span dir="rtl" class="txt">الخدمات</span>&lt;/a&gt;
+ &lt;a <span class="attr">href=<span class="value">"#"</span></span>&gt;<span dir="rtl" class="txt">الاتصال</span>&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;main&gt;
+ &lt;section&gt;
+  &lt;h2&gt;<span dir="rtl" class="txt">مرحباً</span>&lt;/h2&gt;
+  &lt;p&gt;<span dir="rtl" class="txt">هذا هو قسم الترحيب في الصفحة الرئيسية.</span>&lt;/p&gt;
+ &lt;/section&gt;
+
+ &lt;section&gt;
+  &lt;h2&gt;<span dir="rtl" class="txt">خدماتنا</span>&lt;/h2&gt;
+  &lt;p&gt;<span dir="rtl" class="txt">نستعرض هنا ما نقدمه.</span>&lt;/p&gt;
+ &lt;/section&gt;
+
+ &lt;section&gt;
+  &lt;h2&gt;<span dir="rtl" class="txt">تواصل معنا</span>&lt;/h2&gt;
+  &lt;p&gt;<span dir="rtl" class="txt">تواصل معنا لمزيد من المعلومات.</span>&lt;/p&gt;
+ &lt;/section&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+ &lt;p&gt;
+ <span dir="rtl" class="txt">&copy;</span>
+ <span class="txt">موقعي الإلكتروني 2025</span>
+ &lt;/p&gt;
+&lt;/footer&gt;</span>
+    </code></pre></div>
+
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+      <div class="preview1">
+        <div class="body1">
+            <div class="header">
+                <h1>موقعي الإلكتروني</h1>
+            </div>
+
+            <div class="nav">
+                <a href="#">الرئيسية</a>
+                <a href="#">نبذة عنا</a>
+                <a href="#">الخدمات</a>
+                <a href="#">الاتصال</a>
+            </div>
+
+            <div class="main">
+                <div class="section">
+                    <h2>مرحباً</h2>
+                    <p>هذا هو قسم الترحيب في الصفحة الرئيسية.</p>
+                </div>
+
+                <div class="section">
+                    <h2>خدماتنا</h2>
+                    <p>نستعرض هنا ما نقدمه.</p>
+                </div>
+
+                <div class="section">
+                    <h2>تواصل معنا</h2>
+                    <p>تواصل معنا لمزيد من المعلومات.</p>
+                </div>
+                
+            </div>
+
+            <div class="footer">
+                <p>
+                    ©
+                    موقعي الإلكتروني 2025
+                </p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <p>
+        إذا لم يكن حجم الخط مميزاً، فلن تكون هناك دلالة مرئية على تسلسل تدفق المستند، رغم أن المحتوى مقسّم بواسطة العناوين.
+    </p>
+
+    <p>
+        لإنشاء تدرج هرمي بصري، ينبغي عليك استخدام أحجام خطوط مختلفة لمستويات العناوين. كما يمكنك استخدام عناصر مثل "مربع الإبراز" (callout box) لتسليط الضوء على قسم محدد.
+    </p>
+
+    <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">body</span> <span class="attr">{
+  font-family: <span class="txt">sans-serif</span>;
+  line-height: <span class="txt">1.6</span>;
+  padding: <span class="txt">20px</span>;
+  color: <span class="txt">#333</span>;
+  background: <span class="txt">#f9f9f9</span>;
+ }</span>
+
+ <span class="tag-b">h1</span> <span class="attr">{
+  font-size: <span class="txt">32px</span>;
+  margin-bottom: <span class="txt">10px</span>;
+ }</span>
+
+ <span class="tag-b">h2</span> <span class="attr">{
+  font-size: <span class="txt">24px</span>;
+  margin-top: <span class="txt">20px</span>;
+  margin-bottom: <span class="txt">8px</span>;
+ }</span>
+
+ <span class="tag-b">h3</span> <span class="attr">{
+  font-size: <span class="txt">18px</span>;
+  margin-top: <span class="txt">15px</span>;
+  margin-bottom: <span class="txt">6px</span>;
+ }</span>
+
+ <span class="tag-b">p</span> <span class="attr">{
+  font-size: <span class="txt">16px</span>;
+  margin-bottom: <span class="txt">12px</span>;
+ }</span>
+
+ <span class="tag-b">.callout</span> <span class="attr">{
+  background-color: <span class="txt">#fff3cd</span>;
+  border-right: <span class="txt">5px solid #ffc107</span>;
+  padding: <span class="txt">15px</span>;
+  margin: <span class="txt">20px 0</span>;
+ }</span>
+&lt;/style&gt;
+
+
+&lt;h1&gt;<span dir="rtl" class="txt">فهم التسلسل الهرمي البصري</span>&lt;/h1&gt;
+&lt;p&gt;<span dir="rtl" class="txt">يساعد التسلسل الهرمي البصري المستخدمين على تصفح المحتوى وفهمه من خلال توجيه انتباههم.</span>&lt;/p&gt;
+
+&lt;h2&gt;<span dir="rtl" class="txt">مستويات العناوين</span>&lt;/h2&gt;
+&lt;p&gt;<span dir="rtl" class="txt">يؤدي استخدام أحجام خطوط مختلفة للعناوين إلى خلق هيكلية للمحتوى وتسهيل مسحه بصرياً.</span>&lt;/p&gt;
+
+&lt;h3&gt;<span dir="rtl" class="txt">عنوان من المستوى الثالث</span>&lt;/h3&gt;
+&lt;p&gt;<span dir="rtl" class="txt">يعمل هذا العنوان الفرعي الأصغر على تقسيم القسم بشكلٍ إضافي دون أن يطغى عليه.</span>&lt;/p&gt;
+
+&lt;div <span class="attr">class=<span class="value">"callout"</span></span>&gt;
+ &lt;strong&gt;<span dir="rtl" class="txt">نصيحة: </span>&lt;/strong&gt;
+ <span dir="rtl" class="txt">استخدم مربعاً بارزاً كهذا لتسليط الضوء على الملاحظات المهمة أو النقاط الجوهرية.</span>
+&lt;/div&gt;</span>
+    </code></pre></div>
+
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+      <div class="preview2">
+        <div class="body2">
+            <h1>فهم التسلسل الهرمي البصري</h1>
+            <p>يساعد التسلسل الهرمي البصري المستخدمين على تصفح المحتوى وفهمه من خلال توجيه انتباههم.</p>
+
+            <h2>مستويات العناوين</h2>
+            <p>يؤدي استخدام أحجام خطوط مختلفة للعناوين إلى خلق هيكلية للمحتوى وتسهيل مسحه بصرياً.</p>
+
+            <h3>عنوان من المستوى الثالث</h3>
+            <p>يعمل هذا العنوان الفرعي الأصغر على تقسيم القسم بشكلٍ إضافي دون أن يطغى عليه.</p>
+
+            <div class="callout">
+            <strong>نصيحة: </strong>
+            استخدم مربعاً بارزاً كهذا لتسليط الضوء على الملاحظات المهمة أو النقاط الجوهرية.
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <p>
+        يمكن أن يساعد التسلسل الهرمي البصري أيضاً في زيادة معدل تحويل المستخدمين؛ فعلى سبيل المثال، يمكنك الاستفادة من مربع التمييز (callout box) لجذب المزيد من الانتباه إلى زر "الدعوة لاتخاذ إجراء" (CTA).
+    </p>
+
+    <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">body</span> <span class="attr">{
+  font-family: <span class="txt">sans-serif</span>;
+  padding: <span class="txt">20px</span>;
+  color: <span class="txt">#333</span>;
+  background: <span class="txt">#f4f4f4</span>;
+ }</span>
+
+ <span class="tag-b">h2</span> <span class="attr">{
+  font-size: <span class="txt">24px</span>;
+  margin-bottom: <span class="txt">10px</span>;
+ }</span>
+
+ <span class="tag-b">p</span> <span class="attr">{
+  font-size: <span class="txt">16px</span>;
+  margin-bottom: <span class="txt">12px</span>;
+ }</span>
+
+ <span class="tag-b">.callout</span> <span class="attr">{
+  background-color: <span class="txt">#e0f7fa</span>;
+  border-right: <span class="txt">5px solid #00acc1</span>;
+  padding: <span class="txt">20px</span>;
+  margin-top: <span class="txt">20px</span>;
+  text-align: <span class="txt">center</span>;
+ }</span>
+
+ <span class="tag-b">.cta-button</span> <span class="attr">{
+  display: <span class="txt">inline-block</span>;
+  background-color: <span class="txt">#00acc1</span>;
+  color: <span class="txt">white</span>;
+  padding: <span class="txt">12px 20px</span>;
+  font-size: <span class="txt">16px</span>;
+  text-decoration: <span class="txt">none</span>;
+  border-radius: <span class="txt">4px</span>;
+  margin-top: <span class="txt">10px</span>;
+ }</span>
+
+ <span class="tag-b">.cta-button:hover</span> <span class="attr">{
+  background-color: <span class="txt">#008b9a</span>;
+ }</span>
+&lt;/style&gt;
+
+&lt;h2&gt;<span dir="rtl" class="txt">هل أنت مستعد لتعزيز إنتاجيتك؟</span>&lt;/h2&gt;
+&lt;p&gt;<span dir="rtl" class="txt">انضم إلى آلاف المستخدمين الذين ينجزون المزيد من المهام باستخدام أدواتنا البسيطة والفعالة.</span>&lt;/p&gt;
+
+&lt;div <span class="attr">class=<span class="value">"callout"</span></span>&gt;
+ &lt;strong&gt;<span dir="rtl" class="txt">لا تنتظر!</span>&lt;/strong&gt;
+ <span dir="rtl" class="txt">ابدأ تجربتك المجانية اليوم واكتشف الفرق.</span>
+ &lt;br&gt;
+ &lt;a <span class="attr">href=<span class="value">"#"</span> class=<span class="value">"cta-button"</span></span>&gt;<span dir="rtl" class="txt">ابدأ فترة تجريبية مجانية</span>&lt;/a&gt;
+&lt;/div&gt;</span>
+    </code></pre></div>
+
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+      <div class="preview3">
+        <div class="body3">
+            <h2>هل أنت مستعد لتعزيز إنتاجيتك؟</h2>
+            <p>انضم إلى آلاف المستخدمين الذين ينجزون المزيد من المهام باستخدام أدواتنا البسيطة والفعالة.</p>
+
+            <div class="callout">
+            <strong>لا تنتظر!</strong>
+            ابدأ تجربتك المجانية اليوم واكتشف الفرق.
+            <br>
+            <a href="#" class="cta-button">ابدأ فترة تجريبية مجانية</a>
+        </div>
+      </div>
+    </div>
+
+    <p>
+        وأخيراً، يمكن أن يكون التسلسل الهرمي البصري (visual hierarchy) مهماً لنقل عناصر أخرى، مثل شريط التنقل (navigation bar) أو التذييل (footer).
+    </p>
+    <p>
+        وهذا يسهّل على المستخدمين العثور على المعلومات الأساسية التي قد يبحثون عنها.
+    </p>
+
+
+  </section>
+
+
+   <!-- QUESTIONS -->
+	<section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما هو الغرض الأساسي من التسلسل الهرمي البصري (visual hierarchy) في تصميم الويب؟</p>
+
+		<p> 1. لإضفاء المزيد من الألوان على الموقع الإلكتروني. ❌</p>
+        <p><mark> 2. لتوجيه انتباه الزائر بترتيب محدد. ✅</mark></p>
+        <p> 3. لتقليل كمية المحتوى في الصفحة. ❌</p>
+		<p> 4. لزيادة سرعة تحميل الموقع الإلكتروني. ❌</p>
+        <br>
+
+        <p class="userstory">أيٌّ مما يلي لم يُذكر في المقال كأسلوب لإنشاء التسلسل الهرمي البصري؟</p>
+		
+		<p> 1. استخدام أحجام خطوط مختلفة للعناوين. ❌</p>
+        <p> 2. إدراج مربع تمييز (callout box) للمعلومات المهمة. ❌</p>
+        <p><mark> 3. تطبيق تأثيرات حركية (animation effects) على العناصر. ✅</mark></p>
+		<p> 4. إنشاء أقسام متميزة للتنقل والتذييل (navigation and footer). ❌</p>
+        <br>
+
+        <p class="userstory">كيف يمكن للتسلسل الهرمي البصري القوي أن يؤثر على معدل تحويل المستخدمين؟</p>
+		
+		<p> 1. من خلال جعل الموقع أكثر جاذبية من الناحية الجمالية. ❌</p>
+        <p> 2. من خلال تقليل عدد النقرات اللازمة للتنقل في الموقع. ❌</p>
+        <p><mark> 3. من خلال لفت الانتباه إلى المعلومات المهمة وأزرار الدعوة لاتخاذ إجراء (CTA). ✅</mark></p>
+		<p> 4. من خلال تحسين ترتيب الموقع في محركات البحث. ❌</p>
+        
+	</section>
+
+
+  
+
+
+
+
+
+
+  <!-- Pages -->
+  <section class="page-nav">
+        <a class="prev" href="./How-Do-You-Create-Good-Background-and-Foreground-Contrast-in-Your-Designs.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+  </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
