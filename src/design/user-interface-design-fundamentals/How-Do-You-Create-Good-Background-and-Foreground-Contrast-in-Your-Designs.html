@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="كيف تحقق تبايناً (Contrast) جيداً بين الخلفية (Background) والمقدمة (Foreground) في تصاميمك؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/designStyles/user-interface-design-fundamentals/How-Do-You-Create-Good-Background-and-Foreground-Contrast-in-Your-Designs.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | التصميم</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>أساسيات تصميم واجهة المستخدم User Interface</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+		<h2>كيف تحقق تبايناً (Contrast) جيداً بين الخلفية (Background) والمقدمة (Foreground) في تصاميمك؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+  </section>
+
+  <section>
+    <p>
+        <b>ملاحظة:</b> قد تستخدم بعض الأمثلة التفاعلية أكواد CSS لم تتعلمها بعد. 
+لا تقلق بشأن محاولة فهم الكود بالكامل؛ 
+فالهدف من هذه الأمثلة هو عرض نماذج لمفاهيم التصميم هذه، لتتمكن من فهم آلية عملها بشكل أفضل.
+    </p>
+    <br>
+  </section>
+
+  <!-- Understanding Contrast -->
+  <section>
+    <h3>فهم التباين Understanding Contrast</h3>
+    <p>
+      أولاً، قد تحتاج إلى التعرف على مفهوم التباين. التباين هو الفرق بين لونين، أو مدى سهولة التمييز بينهما.
+    </p>
+    <p>
+      تكون الألوان ذات التباين العالي أكثر تميزاً من الناحية البصرية، 
+في حين تبدو الألوان ذات التباين المنخفض أكثر تشابهاً بصرياً. 
+فعلى سبيل المثال، يتمتع اللونان الأسود والأبيض (black and white) بنسبة تباين عالية جداً، 
+بينما يقل التباين بين اللونين الأزرق الفاتح والأرجواني الفاتح (light blue and light purple).
+    </p>
+
+    <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">.example</span> <span class="attr">{
+  padding: <span class="txt">20px</span>;
+  margin-bottom: <span class="txt">20px</span>;
+  font-size: <span class="txt">18px</span>;
+  font-family: <span class="txt">sans-serif</span>;
+ }</span>
+
+ <span class="tag-b">.high-contrast</span> <span class="attr">{
+  background-color: <span class="txt">black</span>;
+  color: <span class="txt">white</span>;
+ }</span>
+
+ <span class="tag-b">.low-contrast</span> <span class="attr">{
+  background-color: <span class="txt">#add8e6</span>;
+  color: <span class="txt">#dda0dd</span>;
+ }</span>
+
+ <span class="tag-b">.label</span> <span class="attr">{
+  font-weight: <span class="txt">bold</span>;
+  margin-bottom: <span class="txt">5px</span>;
+ }</span>
+&lt;/style&gt;
+
+&lt;div <span class="attr">class=<span class="value">"example high-contrast"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"label"</span></span>&gt;<span dir="rtl" class="txt">تباين عالٍ</span>&lt;/div&gt;
+ <span dir="rtl" class="txt">يتميز هذا النص بتباين عالٍ (خلفية سوداء ونص أبيض).</span>
+&lt;/div&gt;
+
+&lt;div <span class="attr">class=<span class="value">"example low-contrast"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"label"</span></span>&gt;<span dir="rtl" class="txt">تباين منخفض</span>&lt;/div&gt;
+ <span dir="rtl" class="txt">يتميز هذا النص بتباين منخفض (خلفية زرقاء فاتحة ونص أرجواني فاتح).</span>
+&lt;/div&gt;</span>
+    </code></pre></div>
+
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+      <div class="preview1">
+        <div class="example high-contrast">
+        <div class="label">تباين عالٍ</div>
+        يتميز هذا النص بتباين عالٍ (خلفية سوداء ونص أبيض).
+        </div>
+
+        <div class="example low-contrast">
+        <div class="label">تباين منخفض</div>
+        يتميز هذا النص بتباين منخفض (خلفية زرقاء فاتحة ونص أرجواني فاتح).
+        </div>
+      </div>
+    </div>
+    <br>
+  </section>
+
+  <!-- Applying Contrast to Text -->
+  <section>
+    <h3>تطبيق التباين على النص Applying Contrast to Text</h3>
+    <p>
+      بالطبع، قد يكون التمييز في هذه الأمثلة أكثر وضوحاً بفضل طريقة التنسيق. ولكن ماذا عن تطبيق هذه الألوان على النصوص؟ 
+يمكنك استخدام نص أسود (black text) عالي التباين على خلفية بيضاء (white background)، 
+أو نص بنفسجي (purple text) منخفض التباين على خلفية زرقاء (blue background).
+    </p>
+
+    <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">.text-example</span> <span class="attr">{
+  padding: <span class="txt">10px</span>;
+  margin-bottom: <span class="txt">20px</span>;
+  font-size: <span class="txt">18px</span>;
+  font-family: <span class="txt">sans-serif</span>;
+ }</span>
+
+ <span class="tag-b">.text-high-contrast</span> <span class="attr">{
+  background-color: <span class="txt">white</span>;
+  color: <span class="txt">black</span>;
+ }</span>
+
+ <span class="tag-b">.text-low-contrast</span> <span class="attr">{
+  background-color: <span class="txt">#add8e6</span>;
+  color: <span class="txt">#dda0dd</span>;
+ }</span>
+
+ <span class="tag-b">.label</span> <span class="attr">{
+  font-weight: <span class="txt">bold</span>;
+  margin-bottom: <span class="txt">5px</span>;
+  display: <span class="txt">block</span>;
+ }</span>
+&lt;/style&gt;
+
+&lt;div <span class="attr">class=<span class="value">"text-example text-high-contrast"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"label"</span></span>&gt;<span dir="rtl" class="txt">نص عالي التباين</span>&lt;/div&gt;
+ <span dir="rtl" class="txt">هذا نص عالي التباين: نص أسود على خلفية بيضاء.</span>
+&lt;/div&gt;
+
+&lt;div <span class="attr">class=<span class="value">"text-example text-low-contrast"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"label"</span></span>&gt;<span dir="rtl" class="txt">نص منخفض التباين</span>&lt;/div&gt;
+ <span dir="rtl" class="txt">هذا نص منخفض التباين: نص أرجواني على خلفية زرقاء فاتحة.</span>
+&lt;/div&gt;</span>
+    </code></pre></div>
+
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+      <div class="preview2">
+        <div class="text-example text-high-contrast">
+        <div class="label">نص عالي التباين</div>
+        هذا نص عالي التباين: نص أسود على خلفية بيضاء.
+        </div>
+
+        <div class="text-example text-low-contrast">
+        <div class="label">نص منخفض التباين</div>
+        هذا نص منخفض التباين: نص أرجواني على خلفية زرقاء فاتحة.
+        </div>
+      </div>
+    </div>
+    <br>
+
+  </section>
+
+  <!-- WCAG Contrast Standards -->
+  <section>
+    <h3>معايير التباين الخاصة بـ WCAG</h3>
+    <p>
+      ولكن، كيف تحدد ما يُعتبر تباينًا "جيدًا بما يكفي"؟ لا يمكنك الاعتماد فقط على كيفية ظهور النص أمامك، إذ أن تجربة كل مستخدم تختلف عن الآخر. ولحسن الحظ، توفر "إرشادات إتاحة محتوى الويب" (WCAG) معيارًا لهذا الأمر.
+    </p>
+    <p>
+      يُعتبر النص الذي تبلغ نسبة التباين فيه <b dir="ltr">4.5:1</b> مطابقاً لمعيار "AA"، 
+وهو الحد الأدنى الذي ينبغي الالتزام به لضمان إتاحة المحتوى لمعظم المستخدمين؛ 
+في حين يُعتبر النص الذي تبلغ نسبة التباين فيه <b dir="ltr">7:1</b> مطابقاً لمعيار "AAA"، 
+مما يضمن توفير أفضل مستوى من الإتاحة.
+    </p>
+
+    <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">.contrast-example</span> <span class="attr">{
+  padding: <span class="txt">15px</span>;
+  margin-bottom: <span class="txt">20px</span>;
+  font-size: <span class="txt">18px</span>;
+  font-family: <span class="txt">sans-serif</span>;
+ }</span>
+
+ <span class="tag-b">.aa-contrast</span> <span class="attr">{
+  background-color: <span class="txt">#ffffff</span>;
+  color: <span class="txt">#4b4b4b</span>;
+ }</span>
+
+ <span class="tag-b">.aaa-contrast</span> <span class="attr">{
+  background-color: <span class="txt">#ffffff</span>;
+  color: <span class="txt">#1a1a1a</span>;
+ }</span>
+
+ <span class="tag-b">.label</span> <span class="attr">{
+  font-weight: <span class="txt">bold</span>;
+  margin-bottom: <span class="txt">8px</span>;
+  display: <span class="txt">block</span>;
+ }</span>
+&lt;/style&gt;
+
+&lt;div <span class="attr">class=<span class="value">"contrast-example aa-contrast"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"label"</span></span>&gt;<span dir="rtl" class="txt">معيار AA (نسبة التباين ~4.5:1)</span>&lt;/div&gt;
+ <span dir="rtl" class="txt">يفي هذا النص بالحد الأدنى لمعيار إمكانية الوصول المتعلق بالتباين.</span>
+&lt;/div&gt;
+
+&lt;div <span class="attr">class=<span class="value">"contrast-example aaa-contrast"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"label"</span></span>&gt;<span dir="rtl" class="txt">معيار AAA (نسبة التباين ~7:1)</span>&lt;/div&gt;
+ <span dir="rtl" class="txt">يستوفي هذا النص أعلى معايير سهولة الوصول فيما يتعلق بالتباين.</span>
+&lt;/div&gt;</span>
+    </code></pre></div>
+
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+      <div class="preview3">
+        <div class="contrast-example aa-contrast">
+        <div class="label">معيار AA (نسبة التباين ~4.5:1)</div>
+        يفي هذا النص بالحد الأدنى لمعيار إمكانية الوصول المتعلق بالتباين.
+        </div>
+
+        <div class="contrast-example aaa-contrast">
+        <div class="label">معيار AAA (نسبة التباين ~7:1)</div>
+        يستوفي هذا النص أعلى معايير سهولة الوصول فيما يتعلق بالتباين.
+        </div>
+      </div>
+    </div>
+    <br>
+  </section>
+
+  <!-- Comparing High and Low Contrast Ratios -->
+  <section>
+    <h3>مقارنة نسب التباين العالية والمنخفضة Comparing High and Low Contrast Ratios</h3>
+    <p>
+      هناك العديد من المواقع الإلكترونية التي يمكنها التحقق من نسبة التباين بين لونين، إلا أن معظم المتصفحات تتيح لك القيام بذلك مباشرةً عبر أدوات المطورين (developer tools) في موقعك.
+    </p>
+    <p>
+      لنلقِ نظرة على بضعة أمثلة أخرى حول نسبة التباين لفهم المفهوم بشكل أفضل.
+    </p>
+    <p>
+      إليك مثال على نص أسود (black text) على خلفية بيضاء (white background) بنسبة تباين تبلغ <b>21:1</b>.
+    </p>
+
+    <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">.contrast-21</span> <span class="attr">{
+  background-color: <span class="txt">white</span>;
+  color: <span class="txt">black</span>;
+  padding: <span class="txt">15px</span>;
+  margin-bottom: <span class="txt">20px</span>;
+  font-size: <span class="txt">18px</span>;
+  font-family: <span class="txt">sans-serif</span>;
+ }</span>
+
+ <span class="tag-b">.label</span> <span class="attr">{
+  font-weight: <span class="txt">bold</span>;
+  margin-bottom: <span class="txt">8px</span>;
+  display: <span class="txt">block</span>;
+ }</span>
+&lt;/style&gt;
+
+&lt;div <span class="attr">class=<span class="value">"contrast-21"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"label"</span></span>&gt;<span dir="rtl" class="txt">نسبة التباين 21:1</span>&lt;/div&gt;
+ <span dir="rtl" class="txt">هذا نص أسود على خلفية بيضاء، وهو ما يمثل أعلى نسبة تباين تبلغ 21:1.</span>
+&lt;/div&gt;</span>
+    </code></pre></div>
+
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+      <div class="preview4">
+        <div class="contrast-21">
+        <div class="label">نسبة التباين 21:1</div>
+        هذا نص أسود على خلفية بيضاء، وهو ما يمثل أعلى نسبة تباين تبلغ 21:1.
+        </div>
+      </div>
+    </div>
+    <p>
+      يتجاوز هذا المثال معيار AAA. والآن، دعونا نلقي نظرة على نص باللون الأرجواني (purple text) على خلفية زرقاء (blue background).
+    </p>
+
+    <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">.contrast-21</span> <span class="attr">{
+  background-color: <span class="txt">white</span>;
+  color: <span class="txt">black</span>;
+  padding: <span class="txt">15px</span>;
+  margin-bottom: <span class="txt">20px</span>;
+  font-size: <span class="txt">18px</span>;
+  font-family: <span class="txt">sans-serif</span>;
+ }</span>
+
+ <span class="tag-b">.label</span> <span class="attr">{
+  font-weight: <span class="txt">bold</span>;
+  margin-bottom: <span class="txt">8px</span>;
+  display: <span class="txt">block</span>;
+ }</span>
+
+ <span class="tag-b">.purple-on-blue</span> <span class="attr">{
+  background-color: <span class="txt">#0000cc</span>;
+  color: <span class="txt">#800080</span>;
+  padding: <span class="txt">15px</span>;
+  margin-bottom: <span class="txt">20px</span>;
+  font-size: <span class="txt">18px</span>;
+  font-family: <span class="txt">sans-serif</span>;
+ }</span>
+&lt;/style&gt;
+
+&lt;div <span class="attr">class=<span class="value">"contrast-21"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"label"</span></span>&gt;<span dir="rtl" class="txt">نسبة التباين 21:1</span>&lt;/div&gt;
+ <span dir="rtl" class="txt">هذا نص أسود على خلفية بيضاء، وهو ما يمثل أعلى نسبة تباين تبلغ 21:1.</span>
+&lt;/div&gt;
+
+&lt;div <span class="attr">class=<span class="value">"purple-on-blue"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"label"</span></span>&gt;<span dir="rtl" class="txt">بنفسجي على أزرق (تباين منخفض)</span>&lt;/div&gt;
+ <span dir="rtl" class="txt">هذا لا يفي بمعيار AA.</span>
+&lt;/div&gt;</span>
+    </code></pre></div>
+
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+      <div class="preview5">
+        <div class="contrast-21">
+        <div class="label">نسبة التباين 21:1</div>
+        هذا نص أسود على خلفية بيضاء، وهو ما يمثل أعلى نسبة تباين تبلغ 21:1.
+        </div>
+
+        <div class="purple-on-blue">
+        <div class="label">بنفسجي على أزرق (تباين منخفض)</div>
+        هذا لا يفي بمعيار AA.
+        </div>
+      </div>
+    </div>
+
+    <p>
+      يبلغ معدل التباين في هذا المثال 1.48:1، وهو ما لا يفي حتى بمعيار AA.
+    </p>
+
+  </section>
+
+
+  <!-- Adjusting Color Properties -->
+  <section>
+    <h3>ضبط خصائص الألوان Adjusting Color Properties</h3>
+    <p>كيف يمكنك معالجة هذه المشكلة؟ حسناً، هناك ثلاثة جوانب تؤثر على نسبة التباين.</p>
+
+    <!-- Adjusting Hue -->
+    <section>
+      <h4>ضبط تدرج اللون Adjusting Hue</h4>
+      <p>
+        أولاً، هناك "درجة اللون" (Hue)، التي تمثل النوع العام للون، مثل الأحمر والأزرق والبرتقالي. لننتقل إلى درجة لونية أبعد عن اللون الأزرق؛ وفي هذه الحالة، دعنا نستخدم اللون الأحمر.
+      </p>
+
+      <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">.contrast-21</span> <span class="attr">{
+  background-color: <span class="txt">white</span>;
+  color: <span class="txt">black</span>;
+  padding: <span class="txt">15px</span>;
+  margin-bottom: <span class="txt">20px</span>;
+  font-size: <span class="txt">18px</span>;
+  font-family: <span class="txt">sans-serif</span>;
+ }</span>
+
+ <span class="tag-b">.label</span> <span class="attr">{
+  font-weight: <span class="txt">bold</span>;
+  margin-bottom: <span class="txt">8px</span>;
+  display: <span class="txt">block</span>;
+ }</span>
+
+ <span class="tag-b">.red-on-blue</span> <span class="attr">{
+  background-color: <span class="txt">#0000cc</span>;
+  color: <span class="txt">#ff0000</span>;
+  padding: <span class="txt">15px</span>;
+  margin-bottom: <span class="txt">20px</span>;
+  font-size: <span class="txt">18px</span>;
+  font-family: <span class="txt">sans-serif</span>;
+ }</span>
+&lt;/style&gt;
+
+&lt;div <span class="attr">class=<span class="value">"contrast-21"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"label"</span></span>&gt;<span dir="rtl" class="txt">نسبة التباين 21:1</span>&lt;/div&gt;
+ <span dir="rtl" class="txt">هذا نص أسود على خلفية بيضاء، وهو ما يمثل أعلى نسبة تباين تبلغ 21:1.</span>
+&lt;/div&gt;
+
+&lt;div <span class="attr">class=<span class="value">"red-on-blue"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"label"</span></span>&gt;<span dir="rtl" class="txt">أحمر على أزرق (تغيير في تدرج اللون مع تباين أعلى)</span>&lt;/div&gt;
+ <span dir="rtl" class="txt">هذا لا يفي بمعايير إمكانية الوصول.</span>
+&lt;/div&gt;</span>
+    </code></pre></div>
+
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+      <div class="preview6">
+        <div class="contrast-21">
+        <div class="label">نسبة التباين 21:1</div>
+        هذا نص أسود على خلفية بيضاء، وهو ما يمثل أعلى نسبة تباين تبلغ 21:1.
+        </div>
+
+        <div class="red-on-blue">
+        <div class="label">أحمر على أزرق (تغيير في تدرج اللون مع تباين أعلى)</div>
+        هذا لا يفي بمعايير إمكانية الوصول.
+        </div>
+      </div>
+    </div>
+    <br>
+
+    </section>
+
+
+    <!-- Adjusting Saturation -->
+    <section>
+      <h4>ضبط التشبع Adjusting Saturation</h4>
+      <p>
+        للأسف، لم يؤدِّ هذا التغيير إلا إلى رفع نسبة التباين لتصل إلى <span dir="ltr">1.49:1</span>، 
+مما يعني أنك بحاجة إلى تعديل التشبع، 
+أو "كمية" اللون الموجودة. 
+لنقم بزيادة نسبة اللون الأحمر في النص؛ 
+فهذا يقرّبنا كثيراً من الهدف، إذ تصبح نسبة التباين <span dir="ltr">3.54:1</span>.
+      </p>
+
+      <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">.contrast-21</span> <span class="attr">{
+  background-color: <span class="txt">white</span>;
+  color: <span class="txt">black</span>;
+  padding: <span class="txt">15px</span>;
+  margin-bottom: <span class="txt">20px</span>;
+  font-size: <span class="txt">18px</span>;
+  font-family: <span class="txt">sans-serif</span>;
+ }</span>
+
+ <span class="tag-b">.label</span> <span class="attr">{
+  font-weight: <span class="txt">bold</span>;
+  margin-bottom: <span class="txt">8px</span>;
+  display: <span class="txt">block</span>;
+ }</span>
+
+ <span class="tag-b">.low-sat-red-on-blue</span> <span class="attr">{
+  background-color: <span class="txt">#0000cc</span>;
+  color: <span class="txt">#b23333</span>;
+  padding: <span class="txt">15px</span>;
+  margin-bottom: <span class="txt">20px</span>;
+  font-size: <span class="txt">18px</span>;
+  font-family: <span class="txt">sans-serif</span>;
+ }</span>
+
+ <span class="tag-b">.high-sat-red-on-blue</span> <span class="attr">{
+  background-color: <span class="txt">#0000cc</span>;
+  color: <span class="txt">#ff4d4d</span>;
+  padding: <span class="txt">15px</span>;
+  margin-bottom: <span class="txt">20px</span>;
+  font-size: <span class="txt">18px</span>;
+  font-family: <span class="txt">sans-serif</span>;
+ }</span>
+&lt;/style&gt;
+
+&lt;div <span class="attr">class=<span class="value">"contrast-21"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"label"</span></span>&gt;<span dir="rtl" class="txt">نسبة التباين 21:1</span>&lt;/div&gt;
+ <span dir="rtl" class="txt">هذا نص أسود على خلفية بيضاء، وهو ما يمثل أعلى نسبة تباين تبلغ 21:1.</span>
+&lt;/div&gt;
+
+&lt;div <span class="attr">class=<span class="value">"low-sat-red-on-blue"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"label"</span></span>&gt;<span dir="rtl" class="txt">لون أحمر منخفض التشبع على خلفية زرقاء (التباين ~1.49:1)</span>&lt;/div&gt;
+ <span dir="rtl" class="txt">يتميز هذا اللون الأحمر بانخفاض درجة التشبع، مما يؤدي إلى ضعف نسبة التباين.</span>
+&lt;/div&gt;
+
+&lt;div <span class="attr">class=<span class="value">"high-sat-red-on-blue"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"label"</span></span>&gt;<span dir="rtl" class="txt">لون أحمر عالي التشبع على خلفية زرقاء (التباين ~3.54:1)</span>&lt;/div&gt;
+ <span dir="rtl" class="txt">تؤدي زيادة تشبع اللون الأحمر إلى تحسين التباين، لكنه يظل دون معيار AA.</span>
+&lt;/div&gt;</span>
+    </code></pre></div>
+
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+      <div class="preview7">
+        <div class="contrast-21">
+        <div class="label">نسبة التباين 21:1</div>
+        هذا نص أسود على خلفية بيضاء، وهو ما يمثل أعلى نسبة تباين تبلغ 21:1.
+        </div>
+
+        <div class="low-sat-red-on-blue">
+        <div class="label">لون أحمر منخفض التشبع على خلفية زرقاء (التباين ~1.49:1)</div>
+        يتميز هذا اللون الأحمر بانخفاض درجة التشبع، مما يؤدي إلى ضعف نسبة التباين.
+        </div>
+
+        <div class="high-sat-red-on-blue">
+        <div class="label">لون أحمر عالي التشبع على خلفية زرقاء (التباين ~3.54:1)</div>
+        تؤدي زيادة تشبع اللون الأحمر إلى تحسين التباين، لكنه يظل دون معيار AA.
+        </div>
+      </div>
+    </div>
+    <br>
+
+    </section>
+
+    <!-- Adjusting Lightness -->
+    <section>
+      <h4>ضبط السطوع Adjusting Lightness</h4>
+      <p>
+        ومع ذلك، يمكنك الاقتراب أكثر من النتيجة المطلوبة عن طريق تغيير القيمة الأخيرة، وهي "السطوع" (Lightness)؛ إذ تعبّر هذه القيمة عن مقدار اللون الأبيض الموجود في اللون.
+      </p>
+      <p>
+        لنُقلّل من درجة سطوع اللون الأحمر؛ فأصبح لدينا الآن لون أحمر داكن للغاية مقابل الخلفية الزرقاء الفاتحة، مما يجعل نسبة التباين <span dir="ltr">10.34:1</span>.
+      </p>
+
+      <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">.contrast-21</span> <span class="attr">{
+  background-color: <span class="txt">white</span>;
+  color: <span class="txt">black</span>;
+  padding: <span class="txt">15px</span>;
+  margin-bottom: <span class="txt">20px</span>;
+  font-size: <span class="txt">18px</span>;
+  font-family: <span class="txt">sans-serif</span>;
+ }</span>
+
+ <span class="tag-b">.label</span> <span class="attr">{
+  font-weight: <span class="txt">bold</span>;
+  margin-bottom: <span class="txt">8px</span>;
+  display: <span class="txt">block</span>;
+ }</span>
+
+ <span class="tag-b">.blue-bg</span> <span class="attr">{
+  background-color: <span class="txt">#add8e6</span>;
+  padding: <span class="txt">15px</span>;
+  font-family: <span class="txt">sans-serif</span>;
+  font-size: <span class="txt">18px</span>;
+  margin-bottom: <span class="txt">20px</span>;
+ }</span>
+
+ <span class="tag-b">.low-sat-red-on-blue</span> <span class="attr">{
+  background-color: <span class="txt">#0000cc</span>;
+  color: <span class="txt">#b23333</span>;
+  margin-bottom: <span class="txt">20px</span>;
+ }</span>
+
+ <span class="tag-b">.high-sat-red-on-blue</span> <span class="attr">{
+  background-color: <span class="txt">#0000cc</span>;
+  color: <span class="txt">#ff4d4d</span>;
+  margin-bottom: <span class="txt">20px</span>;
+ }</span>
+
+ <span class="tag-b">.dark-red-on-light-blue</span> <span class="attr">{
+  background-color: <span class="txt">#add8e6</span>;
+  color: <span class="txt">#8b0000</span>;
+ }</span>
+&lt;/style&gt;
+
+&lt;div <span class="attr">class=<span class="value">"contrast-21"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"label"</span></span>&gt;<span dir="rtl" class="txt">نسبة التباين 21:1</span>&lt;/div&gt;
+ <span dir="rtl" class="txt">هذا نص أسود على خلفية بيضاء، وهو ما يمثل أعلى نسبة تباين تبلغ 21:1.</span>
+&lt;/div&gt;
+
+&lt;div <span class="attr">class=<span class="value">"low-sat-red-on-blue blue-bg"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"label"</span></span>&gt;<span dir="rtl" class="txt">لون أحمر منخفض التشبع على خلفية زرقاء (التباين ~1.49:1)</span>&lt;/div&gt;
+ <span dir="rtl" class="txt">يتميز هذا اللون الأحمر بانخفاض درجة التشبع، مما يؤدي إلى ضعف نسبة التباين.</span>
+&lt;/div&gt;
+
+&lt;div <span class="attr">class=<span class="value">"high-sat-red-on-blue blue-bg"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"label"</span></span>&gt;<span dir="rtl" class="txt">لون أحمر عالي التشبع على خلفية زرقاء (التباين ~3.54:1)</span>&lt;/div&gt;
+ <span dir="rtl" class="txt">تؤدي زيادة تشبع اللون الأحمر إلى تحسين التباين، لكنه يظل دون معيار AA.</span>
+&lt;/div&gt;
+
+&lt;div <span class="attr">class=<span class="value">"dark-red-on-light-blue"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"label"</span></span>&gt;<span dir="rtl" class="txt">أحمر داكن على أزرق فاتح (التباين ~10.34:1)</span>&lt;/div&gt;
+ <span dir="rtl" class="txt">يؤدي تقليل درجة سطوع اللون الأحمر إلى زيادة كبيرة في نسبة التباين.</span>
+&lt;/div&gt;</span>
+    </code></pre></div>
+
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+      <div class="preview8">
+        <div class="contrast-21">
+        <div class="label">نسبة التباين 21:1</div>
+        هذا نص أسود على خلفية بيضاء، وهو ما يمثل أعلى نسبة تباين تبلغ 21:1.
+        </div>
+
+        <div class="low-sat-red-on-blue blue-bg">
+        <div class="label">لون أحمر منخفض التشبع على خلفية زرقاء (التباين ~1.49:1)</div>
+        يتميز هذا اللون الأحمر بانخفاض درجة التشبع، مما يؤدي إلى ضعف نسبة التباين.
+        </div>
+
+        <div class="high-sat-red-on-blue blue-bg">
+        <div class="label">لون أحمر عالي التشبع على خلفية زرقاء (التباين ~3.54:1)</div>
+        تؤدي زيادة تشبع اللون الأحمر إلى تحسين التباين، لكنه يظل دون معيار AA.
+        </div>
+
+        <div class="dark-red-on-light-blue">
+        <div class="label">أحمر داكن على أزرق فاتح (التباين ~10.34:1)</div>
+        يؤدي تقليل درجة سطوع اللون الأحمر إلى زيادة كبيرة في نسبة التباين.
+        </div>
+      </div>
+    </div>
+
+    </section>
+    <p>
+      يمكنك الاستمرار في تعديل الألوان لإيجاد التوازن بين التأثير البصري الذي تريده ونسبة تباين تضمن سهولة الوصول؛ ولكن من المهم أن تتذكر أن سهولة الوصول يجب أن تحظى دائمًا بالأولوية.
+    </p>
+  </section>
+
+
+  <!-- QUESTIONS -->
+	<section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما هو التباين (contrast) في سياق تصميم الويب؟</p>
+
+		<p> 1. سطوع الألوان في صفحة الويب. ❌</p>
+    <p><mark> 2. الفرق بين لونين ومدى سهولة التمييز بينهما. ✅</mark></p>
+    <p> 3. عدد الألوان المستخدمة في صفحة الويب. ❌</p>
+		<p> 4. حدة الصور في صفحة الويب. ❌</p>
+    <br>
+
+    <p class="userstory">وفقاً لإرشادات إتاحة محتوى الويب (WCAG)، ما هو الحد الأدنى لنسبة التباين للنص لكي يستوفي معيار المستوى "AA"؟</p>
+		
+		<p> 1. <span dir="ltr">3:1</span> ❌</p>
+    <p><mark> 2. <span dir="ltr">4.5:1</span> ✅</mark></p>
+    <p> 3. <span dir="ltr">7:1</span> ❌</p>
+		<p> 4. <span dir="ltr">21:1</span> ❌</p>
+    <br>
+        
+    <p class="userstory">أيٌّ مما يلي لم يُذكر كعامل يؤثر على نسبة التباين؟</p>
+
+		<p> 1. درجة اللون Hue. ❌</p>
+		<p> 2. التشبع Saturation. ❌</p>
+		<p> 3. السطوع Lightness. ❌</p>
+    <p><mark> 4. الشفافية Opacity. ✅</mark></p>
+   
+        
+    
+	</section>
+
+
+  
+
+
+
+
+
+
+  <!-- Pages -->
+  <section class="page-nav">
+        <a class="prev" href="./What-Are-Common-Design-Terms-to-Help-You-Communicate-with-Designers.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+  </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
