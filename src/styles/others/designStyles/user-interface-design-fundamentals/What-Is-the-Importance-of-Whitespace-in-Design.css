@@ -1,0 +1,10 @@
+/* PREVIEW 1 */
+.preview1 {
+    margin: 25px auto;
+    max-width: 1000px;
+    border: 2px solid #333;
+}
+
+.preview1 img {
+    width: 100%;
+}
