@@ -1,0 +1,127 @@
+/* PREVIEW1  */
+  .body1 {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #fff;
+    color: #222;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .body1 h1, .body1 h2, .body1 h3, .body1 p {
+    text-align: right;
+    margin: 10px 0;
+  }
+
+  .body1 p {
+    line-height: 1.5;
+  }
+
+/* PREVIEW 2 */
+.body2 {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #fff;
+    color: #222;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .body2 h1, .body2 h2, .body2 h3, .body2 p {
+    text-align: left;
+    margin: 10px 0;
+  }
+
+  .body2 p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+/* PREVIEW 3 */
+.body3 {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #fff;
+    color: #222;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .body3 h1, .body3 h2, .body3 h3, .body3 p {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .body3 p {
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+/* PREVIEW 4 */
+
+.body4 {
+    font-family: Georgia, serif;
+    padding: 20px;
+    background-color: #fff;
+    color: #222;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .body4 h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .body4 p {
+    text-align: justify;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+
+/* PREVIEW 5 */
+
+.body5 {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #fff;
+    color: #222;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .body5 form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .body5 label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .body5 input, .body5 textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .body5 button {
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .body5 button:hover {
+    background-color: #0056b3;
+  }

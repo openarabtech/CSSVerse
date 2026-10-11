@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" كيف تعمل المحاذاة Alignment في التصميم؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/designStyles/user-interface-design-fundamentals/How-Does-Alignment-Work-in-Design.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | التصميم</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>أساسيات تصميم واجهة المستخدم User Interface</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+		<h2>كيف تعمل المحاذاة Alignment في التصميم؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+  </section>
+
+  <section>
+    <p>
+        <b>ملاحظة:</b> قد تستخدم بعض الأمثلة التفاعلية أكواد CSS لم تتعلمها بعد. لا تقلق بشأن محاولة فهم الكود بالكامل؛ فالهدف من هذه الأمثلة هو عرض نماذج لمفاهيم التصميم هذه، لتتمكن من فهم آلية عملها بشكل أفضل.
+    </p>
+    <p>
+        عند تصميم صفحات الويب، من المهم إنشاء تصاميم متناسقة وجذابة بصرياً، وتُعد المحاذاة (alignment) إحدى الطرق لتحقيق ذلك.
+    </p>
+    <p>
+        المحاذاة هي عملية ترتيب النصوص والصور بطريقة تخلق رابطاً بصرياً بين العناصر.
+    </p>
+    <p>
+        يساعد ذلك في خلق شعور بالنظام والتنظيم في الصفحة، مما يسهل على المستخدمين تصفح المحتوى وفهمه.
+    </p>
+
+    <p class="hinty">هناك عدة أنواع من المحاذاة يمكنك استخدامها، ولكن الأنواع الأساسية هي:</p>
+    <ul>
+        <li>
+            <p class="hinty">محاذاة لليمين right alignment.</p>
+        </li>
+        <li>
+            <p class="hinty">محاذاة للوسط center alignment.</p>
+        </li>
+        <li>
+            <p class="hinty">محاذاة لليسار left alignment.</p>
+        </li>
+        <li>
+            <p class="hinty">محاذاة مضبوطة justified alignment.</p>
+        </li>
+        <li>
+            <p class="hinty">محاذاة عمودية vertical alignment.</p>
+        </li>
+    </ul>
+
+    <p>
+        تُعد المحاذاة لليسار ولليمين وللوسط أنواعاً فرعية للمحاذاة الأفقية (horizontal alignment)، 
+في حين تُستخدم المحاذاة الرأسية (vertical alignment) لمحاذاة العناصر على طول محور رأسي (vertical axis).
+    </p>
+    <p>
+        لنلقِ نظرة فاحصة على كل نوع من أنواع المحاذاة وكيفية استخدامها في تصميماتك.
+    </p>
+
+    <p>
+        يُشاع استخدام المحاذاة إلى اليمين (Right alignment) مع النصوص، حيث تتم محاذاة كل عنصر مع الهامش الأيمن (right margin)؛ 
+إذ إن محاذاة جميع العناوين والفقرات في صفحة الويب مع الهامش الأيمن تُسهّل على المستخدم قراءة المحتوى ومتابعته.
+    </p>
+
+    <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">body</span> <span class="attr">{
+  font-family: <span class="txt">Arial, sans-serif</span>;
+  padding: <span class="txt">20px</span>;
+  background-color: <span class="txt">#fff</span>;
+  color: <span class="txt">#222</span>;
+  max-width: <span class="txt">700px</span>;
+  margin: <span class="txt">0 auto</span>;
+ }</span>
+
+ <span class="tag-b">h1, h2, h3</span> <span class="attr">{
+  text-align: <span class="txt">right</span>;
+  margin: <span class="txt">10px 0</span>;
+ }</span>
+
+ <span class="tag-b">p</span> <span class="attr">{
+  line-height: <span class="txt">1.6</span>;
+ }</span>
+&lt;/style&gt;
+
+&lt;h1&gt;<span dir="rtl" class="txt">لماذا يُعدّ التوجه اليميني مهماً؟</span>&lt;/h1&gt;
+&lt;p&gt;<span dir="rtl" class="txt">يُعد المحاذاة إلى اليمين من أكثر الطرق شيوعاً وفعالية لعرض النصوص على صفحات الويب.</span>&lt;/p&gt;
+
+&lt;h2&gt;<span dir="rtl" class="txt">تناسق</span>&lt;/h2&gt;
+&lt;p&gt;<span dir="rtl" class="txt">تُحقق محاذاة جميع العناوين والفقرات مع الهامش الأيمن تدفقاً منظماً ومتسقاً للقراءة.</span>&lt;/p&gt;
+
+&lt;h3&gt;<span dir="rtl" class="txt">سهل الاتباع</span>&lt;/h3&gt;
+&lt;p&gt;<span dir="rtl" class="txt">يمكن للمستخدمين مسح المحتوى ومتابعته بسهولة، دون أي ارتباك أو اختلال في المحاذاة.</span>&lt;/p&gt;</span>
+    </code></pre></div>
+
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+      <div class="preview1">
+        <div class="body1">
+            <h1>لماذا يُعدّ التوجه اليميني مهماً؟</h1>
+            <p>يُعد المحاذاة إلى اليمين من أكثر الطرق شيوعاً وفعالية لعرض النصوص على صفحات الويب.</p>
+
+            <h2>تناسق</h2>
+            <p>تُحقق محاذاة جميع العناوين والفقرات مع الهامش الأيمن تدفقاً منظماً ومتسقاً للقراءة.</p>
+
+            <h3>سهل الاتباع</h3>
+            <p>يمكن للمستخدمين مسح المحتوى ومتابعته بسهولة، دون أي ارتباك أو اختلال في المحاذاة.</p>
+        </div>
+      </div>
+    </div>
+
+    <p>
+        عكس المحاذاة إلى اليمين هو المحاذاة إلى اليسار (Left alignment)، 
+حيث تتم محاذاة كل عنصر مع الهامش الأيسر (left margin). 
+وغالباً ما يُستخدم هذا الأسلوب في مواقع الويب لعرض محتوى إضافي، مثل اللافتات الترويجية (promotional banners) أو الإعلانات (advertisements).
+    </p>
+
+    <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">body</span> <span class="attr">{
+  font-family: <span class="txt">Arial, sans-serif</span>;
+  padding: <span class="txt">20px</span>;
+  background-color: <span class="txt">#fff</span>;
+  color: <span class="txt">#222</span>;
+  max-width: <span class="txt">700px</span>;
+  margin: <span class="txt">0 auto</span>;
+ }</span>
+
+ <span class="tag-b">h1, h2, h3 ,p</span> <span class="attr">{
+  text-align: <span class="txt">left</span>;
+  margin: <span class="txt">10px 0</span>;
+ }</span>
+
+ <span class="tag-b">p</span> <span class="attr">{
+  font-size: <span class="txt">16px</span>;
+  line-height: <span class="txt">1.5</span>;
+ }</span>
+&lt;/style&gt;
+
+&lt;h1&gt;<span dir="rtl" class="txt">المحاذاة لليسار في تصميم الويب</span>&lt;/h1&gt;
+&lt;p&gt;<span dir="rtl" class="txt">يُستخدم المحاذاة إلى اليسار بشكل شائع لعرض محتوى إضافي أو ترويجي على مواقع الويب.</span>&lt;/p&gt;
+
+&lt;h2&gt;<span dir="rtl" class="txt">محتوى ثانوي</span>&lt;/h2&gt;
+&lt;p&gt;<span dir="rtl" class="txt">يمكن أن تساعد محاذاة النص مع الهامش الأيسر في فصله بصرياً عن المحتوى الرئيسي.</span>&lt;/p&gt;
+
+&lt;h3&gt;<span dir="rtl" class="txt">استخدام ترويجي</span>&lt;/h3&gt;
+&lt;p&gt;<span dir="rtl" class="txt">غالباً ما يُختار هذا المحاذاة للافتات، أو الإعلانات، أو الرسائل الموجودة في الشريط الجانبي.</span>&lt;/p&gt;</span>
+    </code></pre></div>
+
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+      <div class="preview2">
+        <div class="body2">
+            <h1>المحاذاة لليسار في تصميم الويب</h1>
+            <p>يُستخدم المحاذاة إلى اليسار بشكل شائع لعرض محتوى إضافي أو ترويجي على مواقع الويب.</p>
+
+            <h2>محتوى ثانوي</h2>
+            <p>يمكن أن تساعد محاذاة النص مع الهامش الأيسر في فصله بصرياً عن المحتوى الرئيسي.</p>
+
+            <h3>استخدام ترويجي</h3>
+            <p>غالباً ما يُختار هذا المحاذاة للافتات، أو الإعلانات، أو الرسائل الموجودة في الشريط الجانبي.</p>
+                
+        </div>
+      </div>
+    </div>
+    <p>
+        على سبيل المثال، يجعل محاذاة الإعلان إلى الهامش الأيسر منه بارزاً ومتميزاً عن بقية محتوى الصفحة، دون أن يصرف انتباه المستخدم عن المحتوى الرئيسي.
+    </p>
+
+    <p>
+        يُقصد بالمحاذاة المركزية (Center alignment) وضع العناصر في منتصف الصفحة؛ 
+وغالباً ما تُستخدم هذه الطريقة للعناوين (headings) والشعارات (logos) وغيرها من العناصر المهمة التي ترغب في لفت الانتباه إليها.
+    </p>
+
+    <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">body</span> <span class="attr">{
+  font-family: <span class="txt">Arial, sans-serif</span>;
+  padding: <span class="txt">20px</span>;
+  background-color: <span class="txt">#fff</span>;
+  color: <span class="txt">#222</span>;
+  max-width: <span class="txt">700px</span>;
+  margin: <span class="txt">0 auto</span>;
+ }</span>
+
+ <span class="tag-b">h1, h2, h3, p</span> <span class="attr">{
+  text-align: <span class="txt">center</span>;
+  margin: <span class="txt">10px 0</span>;
+ }</span>
+
+ <span class="tag-b">p</span> <span class="attr">{
+  font-size: <span class="txt">16px</span>;
+  line-height: <span class="txt">1.5</span>;
+  max-width: <span class="txt">600px</span>;
+  margin-left: <span class="txt">auto</span>;
+  margin-right: <span class="txt">auto</span>;
+ }</span>
+&lt;/style&gt;
+
+&lt;h1&gt;<span dir="rtl" class="txt">محاذاة مركزية لإحداث تأثير</span>&lt;/h1&gt;
+&lt;p&gt;<span dir="rtl" class="txt">يُعد المحاذاة إلى المنتصف خياراً مثالياً لجذب الانتباه إلى العناوين والعناصر المهمة.</span>&lt;/p&gt;
+
+&lt;h2&gt;<span dir="rtl" class="txt">تصميم لافت للنظر</span>&lt;/h2&gt;
+&lt;p&gt;<span dir="rtl" class="txt">من خلال توسيط المحتوى الرئيسي، فإنك تبرزه وتخلق جاذبية بصرية متوازنة.</span>&lt;/p&gt;
+
+&lt;h3&gt;<span dir="rtl" class="txt">الاستخدامات الشائعة</span>&lt;/h3&gt;
+&lt;p&gt;<span dir="rtl" class="txt">غالباً ما تُستخدم هذه التقنية للشعارات، والعناوين الرئيسية البارزة، ورسائل الحث على اتخاذ إجراء.</span>&lt;/p&gt;</span>
+    </code></pre></div>
+
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+      <div class="preview3">
+        <div class="body3">
+               
+            <h1>محاذاة مركزية لإحداث تأثير</h1>
+            <p>يُعد المحاذاة إلى المنتصف خياراً مثالياً لجذب الانتباه إلى العناوين والعناصر المهمة.</p>
+
+            <h2>تصميم لافت للنظر</h2>
+            <p>من خلال توسيط المحتوى الرئيسي، فإنك تبرزه وتخلق جاذبية بصرية متوازنة.</p>
+
+            <h3>الاستخدامات الشائعة</h3>
+            <p>غالباً ما تُستخدم هذه التقنية للشعارات، والعناوين الرئيسية البارزة، ورسائل الحث على اتخاذ إجراء.</p>
+                
+        </div>
+      </div>
+    </div>
+
+    <p>
+        يُقصد بمحاذاة الضبط (Justified alignment) محاذاة النص مع كل من الهامشين الأيسر والأيمن؛ وعادةً ما تُستخدم هذه الطريقة في الفقرات الوصفية (descriptive passages) أو المقالات (articles)، حيث تضفي على النص مظهراً مرتباً واحترافياً.
+    </p>
+
+    <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">body</span> <span class="attr">{
+  font-family: <span class="txt">Georgia, serif</span>;
+  padding: <span class="txt">20px</span>;
+  background-color: <span class="txt">#fff</span>;
+  color: <span class="txt">#222</span>;
+  max-width: <span class="txt">700px</span>;
+  margin: <span class="txt">0 auto</span>;
+ }</span>
+
+ <span class="tag-b">h1</span> <span class="attr">{
+  text-align: <span class="txt">center</span>;
+  margin-bottom: <span class="txt">20px</span>;
+ }</span>
+
+ <span class="tag-b">p</span> <span class="attr">{
+  text-align: <span class="txt">justify</span>;
+  line-height: <span class="txt">1.7</span>;
+  margin-bottom: <span class="txt">20px</span>;
+ }</span>
+&lt;/style&gt;
+
+&lt;h1&gt;<span dir="rtl" class="txt">محاذاة مضبوطة (من الجانبين) لكتل ​​النصوص المنسقة</span>&lt;/h1&gt;
+&lt;p&gt;
+ <span dir="rtl" class="txt">
+    يضمن محاذاة النص بنمط "الضبط" (Justified) امتداد كل سطر بشكل متساوٍ بين الهامشين الأيسر والأيمن؛ 
+مما يضفي على النص مظهراً انسيابياً يشبه الكتلة المتماسكة، ويبدو في غاية الإتقان والاحترافية. 
+ويُستخدم هذا النمط عادةً في الصحف والمجلات والوثائق الرسمية التي تتطلب مظهراً موحداً ومنظماً.
+ </span>
+&lt;/p&gt;
+&lt;p&gt;
+<span dir="rtl" class="txt">
+    مع ذلك، ينبغي توخي الحذر عند استخدام النص المضبوط لتجنب التباعد غير المتساوي أو المساحات البيضاء الواسعة، 
+خاصةً في الأعمدة أو الشاشات الضيقة. 
+ويمكن أن يساعد استخدام الواصلات المناسبة والتصميم المتجاوب في الحفاظ على سهولة القراءة.
+</span>
+&lt;/p&gt;</span>
+    </code></pre></div>
+
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+      <div class="preview4">
+        <div class="body4">
+               
+            <h1>محاذاة مضبوطة (من الجانبين) لكتل ​​النصوص المنسقة</h1>
+            <p>
+            
+                يضمن محاذاة النص بنمط "الضبط" (Justified) امتداد كل سطر بشكل متساوٍ بين الهامشين الأيسر والأيمن؛ 
+            مما يضفي على النص مظهراً انسيابياً يشبه الكتلة المتماسكة، ويبدو في غاية الإتقان والاحترافية. 
+            ويُستخدم هذا النمط عادةً في الصحف والمجلات والوثائق الرسمية التي تتطلب مظهراً موحداً ومنظماً.
+            
+            </p>
+            <p>
+
+                مع ذلك، ينبغي توخي الحذر عند استخدام النص المضبوط لتجنب التباعد غير المتساوي أو المساحات البيضاء الواسعة، 
+            خاصةً في الأعمدة أو الشاشات الضيقة. 
+            ويمكن أن يساعد استخدام الواصلات المناسبة والتصميم المتجاوب في الحفاظ على سهولة القراءة.
+
+            </p>
+        </div>
+      </div>
+    </div>
+
+    <p>
+        النوع الأخير من المحاذاة هو المحاذاة الرأسية (vertical alignment)، التي تُستخدم لمحاذاة العناصر على طول محور رأسي.
+    </p>
+    <p>
+        يمكن استخدام المحاذاة الرأسية، على سبيل المثال، في نموذج الاتصال على الموقع الإلكتروني؛ 
+إذ إن محاذاة جميع حقول النموذج — مثل حقول الاسم والبريد الإلكتروني والرسالة — على محور رأسي تُسهّل على المستخدم تعبئة النموذج.
+    </p>
+
+    <div class="code-block"><pre><code>
+<span class="tag">&lt;style&gt;
+ <span class="tag-b">body</span> <span class="attr">{
+  font-family: <span class="txt">Arial, sans-serif</span>;
+  padding: <span class="txt">20px</span>;
+  background-color: <span class="txt">#fff</span>;
+  color: <span class="txt">#222</span>;
+  max-width: <span class="txt">400px</span>;
+  margin: <span class="txt">0 auto</span>;
+ }</span>
+
+ <span class="tag-b">form</span> <span class="attr">{
+  display: <span class="txt">flex</span>;
+  flex-direction: <span class="txt">column</span>;
+  gap: <span class="txt">15px</span>;
+ }</span>
+
+ <span class="tag-b">label</span> <span class="attr">{
+  font-weight: <span class="txt">bold</span>;
+  margin-bottom: <span class="txt">5px</span>;
+ }</span>
+
+ <span class="tag-b">input, textarea</span> <span class="attr">{
+  padding: <span class="txt">8px</span>;
+  border: <span class="txt">1px solid #ccc</span>;
+  border-radius: <span class="txt">4px</span>;
+  width: <span class="txt">100%</span>;
+  box-sizing: <span class="txt">border-box</span>;
+ }</span>
+
+ <span class="tag-b">button</span> <span class="attr">{
+  padding: <span class="txt">10px</span>;
+  background-color: <span class="txt">#007bff</span>;
+  border: <span class="txt">none</span>;
+  border-radius: <span class="txt">4px</span>;
+  color: <span class="txt">white</span>;
+  cursor: <span class="txt">pointer</span>;
+ }</span>
+
+ <span class="tag-b">button:hover</span> <span class="attr">{
+  background-color: <span class="txt">#0056b3</span>;
+ }</span>
+&lt;/style&gt;
+
+&lt;form&gt;
+ &lt;label <span class="attr">for=<span class="value">"name"</span></span>&gt;<span dir="rtl" class="txt">الإسم</span>&lt;/label&gt;
+ &lt;input <span class="attr">type=<span class="value">"text"</span> id=<span class="value">"name"</span> name=<span class="value">"name"</span> placeholder=<span dir="rtl" class="value">"على سبيل المثال: جين دو"</span></span>&gt;
+
+ &lt;label <span class="attr">for=<span class="value">"email"</span></span>&gt;<span dir="rtl" class="txt">البريد الإلكتروني</span>&lt;/label&gt;
+ &lt;input <span class="attr">type=<span class="value">"email"</span> id=<span class="value">"email"</span> name=<span class="value">"email"</span> placeholder=<span dir="rtl" class="value">"janedoe@example.com"</span></span>&gt;
+
+ &lt;label <span class="attr">for=<span class="value">"message"</span></span>&gt;<span dir="rtl" class="txt">الرسالة</span>&lt;/label&gt;
+ &lt;textarea <span class="attr">id=<span class="value">"message"</span> name=<span class="value">"message"</span> rows=<span class="value">"4"</span> placeholder=<span dir="rtl" class="value">"اكتب رسالتك هنا"</span></span>&gt;&lt;/textarea&gt;
+
+ &lt;button <span class="attr">type=<span class="value">"submit"</span></span>&gt;<span dir="rtl" class="txt">قدم</span>&lt;/button&gt;
+&lt;/form&gt;</span>
+    </code></pre></div>
+
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+      <div class="preview5">
+        <div class="body5">
+               <form>
+                <label for="name">الإسم</label>
+                <input type="text" id="name" name="name" placeholder="على سبيل المثال: جين دو">
+
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" name="email" placeholder="janedoe@example.com">
+
+                <label for="message">الرسالة</label>
+                <textarea id="message" name="message" rows="4" placeholder="اكتب رسالتك هنا"></textarea>
+
+                <button type="submit">قدم</button>
+                </form>
+        </div>
+      </div>
+    </div>
+
+
+    <p>
+        من خلال استخدام أنواع مختلفة من المحاذاة (alignment)، يمكنك خلق شعور بالنظام والتنظيم في الصفحة، مما يسهل على المستخدمين تصفح المحتوى وفهمه.
+    </p>
+
+  </section>
+
+      <!-- QUESTIONS -->
+	<section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما المقصود بالمحاذاة (Alignment) في التصميم؟</p>
+
+		<p> 1. عملية إضافة حدود للعناصر الموجودة على الصفحة. ❌</p>
+        <p><mark> 2. عملية ترتيب النصوص والصور بطريقة تخلق رابطاً بصرياً بين العناصر. ✅</mark></p>
+        <p> 3. عملية إضافة الألوان إلى التصميم. ❌</p>
+		<p> 4. عملية إنشاء تخطيط لصفحة ويب. ❌</p>
+        <br>
+
+        <p class="userstory">فيما يُستخدم المحاذاة لليسار (left alignment) عادةً؟</p>
+		
+		<p> 1. يُستخدم عادةً مع مقاطع الفيديو. ❌</p>
+        <p> 2. يُستخدم عادةً مع عناصر التذييل. ❌</p>
+        <p><mark> 3. يُستخدم عادةً مع النصوص التي تتم محاذاة كل عنصر فيها إلى الهامش الأيسر. ✅</mark></p>
+		<p> 4. يُستخدم عادةً مع القوائم. ❌</p>
+        <br>
+        
+        <p class="userstory">ما هو المحاذاة الرأسية (vertical alignment) ؟</p>
+		
+		<p><mark> 1. يُستخدم لمحاذاة العناصر على طول محور عمودي. ✅</mark></p>
+		<p> 2. يُستخدم لمحاذاة العناصر على طول محور مائل. ❌</p>
+        <p> 3. يُستخدم لمحاذاة العناصر على طول محور أفقي. ❌</p>
+		<p> 4. يُستخدم لمحاذاة العناصر على طول محور دائري. ❌</p>
+        
+	</section>
+
+
+
+
+  <!-- Pages -->
+  <section class="page-nav">
+        <a class="prev" href="./How-Does-Scale-Work-in-Design.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+  </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
