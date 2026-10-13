@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هي أفضل الممارسات لتصميم مسارات التنقل Breadcrumbs ؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/designStyles/user-centered-design/What-Are-Best-Practices-for-Designing-Breadcrumbs.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | التصميم</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>التصميم المتمحور حول المستخدم User-Centered Design</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+  <section class="sub-title">
+        <h2>ما هي أفضل الممارسات لتصميم مسارات التنقل Breadcrumbs ؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+  </section>
+
+  <section>
+
+    <section>
+    <p>
+        <b>ملاحظة:</b> قد تستخدم بعض الأمثلة التفاعلية أكواد CSS لم تتعلمها بعد. لا تقلق بشأن محاولة فهم الكود بالكامل؛ فالهدف من هذه الأمثلة هو عرض نماذج لمفاهيم التصميم هذه، لتتمكن من فهم آلية عملها بشكل أفضل.
+    </p>
+    <p>
+        عند الحديث عن تصميم المواقع الإلكترونية، 
+        تتوفر أنواع عديدة من أدوات المساعدة في التصفح التي يمكنك استخدامها؛ 
+        ومن الأمثلة على ذلك أشرطة التنقل العلوية (top navigation bars)، والأشرطة الجانبية (sidebars)، وتذييلات الصفحة (footers). 
+        ولكن إذا كان موقعك يتسم بالتعقيد ويحتوي على مستويات تصفح متعددة ومتعمقة، فقد ترغب في التفكير باستخدام "مسار التصفح" (breadcrumbs).
+    </p>
+    <p>
+        تُعد "مسارات التنقل" (Breadcrumbs) أداةً مساعدةً في التصفح توضح للمستخدم موقعه ضمن التسلسل الهرمي للموقع (the site's hierarchy). 
+        وإليك مثال يوضح شكل هذه المسارات في نموذج لموقع إلكتروني لبيع الأجهزة الإلكترونية:
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"breadcrumbs"</span></span>&gt;
+ <span dir="rtl" class="txt">الرئيسية / الإلكترونيات / الهواتف / الهاتف الذكي XYZ</span>
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.breadcrumbs</span> <span class="attr">{
+ font-size: <span class="txt">0.9rem</span>;
+ color: <span class="txt">#555</span>;
+ margin: <span class="txt">1rem 0</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview1">
+                    <div class="breadcrumbs">
+                    الرئيسية / الإلكترونيات / الهواتف / الهاتف الذكي XYZ
+                    </div>
+                </div>
+            </div>
+
+    <p>
+        تُعرض "مسارات التصفح" (breadcrumbs) في معظم المواقع الإلكترونية أعلى الصفحة، 
+لتُظهر للمستخدم المسار الذي سلكه للوصول إلى الصفحة الحالية؛ 
+فعلى سبيل المثال، قد يبدأ المستخدم من <span dir="rtl" class="br-spec nw">الصفحة الرئيسية</span> ، 
+ثم ينتقل إلى فئة <span dir="rtl" class="br-spec nw">الإلكترونيات</span> ، 
+ومنها إلى فئة <span dir="rtl" class="br-spec nw">الهواتف</span> ، 
+وصولاً في النهاية إلى منتج <span dir="rtl" class="br-spec nw">الهاتف الذكي XYZ</span>. 
+ومن المرجح أنك قد تعاملت مع هذه المسارات أثناء تصفحك لأحد المواقع بحثاً عن منتج معين أو معلومة محددة.
+    </p>
+    <p>
+        يُعد استخدام "مسار التصفح" (breadcrumbs) مفيداً؛ 
+إذ يساعد المستخدمين على معرفة موقعهم ضمن التسلسل الهرمي للموقع وكيفية العودة إلى الصفحات السابقة. 
+وتبرز أهمية ذلك بشكل خاص عندما يصل المستخدم إلى الصفحة عبر نتيجة بحث أو رابط خارجي، ويحتاج إلى فهم سياق الصفحة التي يتواجد فيها.
+    </p>
+    </section>
+
+    <!-- Choosing a Separator -->
+    <section>
+        <h3>اختيار الفاصل (Separator)</h3>
+        <p>
+            عند تصميم مسارات التصفح (breadcrumbs)، ثمة اعتبارات عدة ينبغي وضعها في الحسبان. 
+            أولها تحديد الرمز الفاصل (separator)؛ 
+            وهو الرمز الذي يفصل بين المستويات المختلفة في التسلسل الهرمي. 
+            ومن بين الفواصل الشائعة الاستخدام: 
+            علامة "أكبر من" (<span dir="rtl" class="br-spec nw">&gt;</span>)، وعلامات الاقتباس الزاوية (<span dir="rtl" class="br-spec nw">»</span>)، والشرطة المائلة (<span dir="rtl" class="br-spec nw">/</span>).
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"breadcrumbs"</span></span>&gt;
+ <span dir="rtl" class="txt">الرئيسية &gt; الإلكترونيات &gt; الهواتف &gt; الهاتف الذكي XYZ</span>
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.breadcrumbs</span> <span class="attr">{
+ font-size: <span class="txt">0.9rem</span>;
+ color: <span class="txt">#555</span>;
+ margin: <span class="txt">1rem 0</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview2">
+                    <div class="breadcrumbs">
+                    الرئيسية &gt; الإلكترونيات &gt; الهواتف &gt; الهاتف الذكي XYZ
+                    </div>
+                </div>
+            </div>
+            <br>
+    </section>
+
+    <!-- Placement -->
+    <section>
+        <h3>الموضع Placement</h3>
+        <p>
+            يتمثل الاعتبار الثاني في "موضع مسار التنقل" (the placement of the breadcrumbs). 
+            عادةً ما يوضع هذا المسار في أعلى الصفحة، 
+            إما فوق شريط التنقل الرئيسي أو تحته. 
+            ينبغي ألا يواجه المستخدمون صعوبة في العثور عليه، 
+            لذا احرص على أن يكون ظاهراً ويسهل تحديد مكانه.
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;nav <span class="attr">class=<span class="value">"main-nav"</span></span>&gt;
+ &lt;a <span class="attr">href=<span class="value">"#"</span></span>&gt;<span class="txt">الرئيسية</span>&lt;/a&gt;
+ &lt;a <span class="attr">href=<span class="value">"#"</span></span>&gt;<span class="txt">الإلكترونيات</span>&lt;/a&gt;
+ &lt;a <span class="attr">href=<span class="value">"#"</span></span>&gt;<span class="txt">الهواتف</span>&lt;/a&gt;
+&lt;/nav&gt;
+&lt;div <span class="attr">class=<span class="value">"breadcrumbs"</span></span>&gt;
+ <span dir="rtl" class="txt">الرئيسية &gt; الإلكترونيات &gt; الهواتف &gt; الهاتف الذكي XYZ</span>
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.main-nav</span> <span class="attr">{
+ background-color: <span class="txt">#333</span>;
+ padding: <span class="txt">1rem</span>;
+}</span>
+
+<span class="tag-b">.main-nav a</span> <span class="attr">{
+ color: <span class="txt">white</span>;
+ margin-left: <span class="txt">1rem</span>;
+ text-decoration: <span class="txt">none</span>;
+}</span>
+
+<span class="tag-b">.breadcrumbs</span> <span class="attr">{
+ font-size: <span class="txt">0.9rem</span>;
+ color: <span class="txt">#555</span>;
+ margin: <span class="txt">1rem 0</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview3">
+                    <nav class="main-nav3">
+                    <a href="#">الرئيسية</a>
+                    <a href="#">الإلكترونيات</a>
+                    <a href="#">الهواتف</a>
+                    </nav>
+                    <div class="breadcrumbs">
+                    الرئيسية > الإلكترونيات > الهواتف > الهاتف الذكي XYZ
+                    </div>
+                </div>
+            </div>
+            <br>
+
+    </section>
+
+    <!-- Size -->
+    <section>
+        <h3>الحجم Size</h3>
+        <p>
+            ثمة اعتبار آخر يتمثل في "حجم مسار التصفح" (the size of the breadcrumbs)؛ 
+            إذ ينبغي الحرص على أن يكون حجمه مناسباً لضمان سهولة قراءته، 
+            دون أن يكون كبيراً لدرجة تشغل حيزاً مفرطاً من مساحة الصفحة. 
+            وتجدر الإشارة إلى أن مسار التصفح (breadcrumbs) ليس مصمماً ليكون أداة التنقل الرئيسية (primary navigation tool)، 
+            بل يُعد وسيلة مساعدة ثانوية للتنقل. 
+            ففي المواقع التي تتضمن صفحاتها قدراً كبيراً من المعلومات، يتيح هذا المسار للمستخدمين معرفة موقعهم الحالي ضمن التسلسل الهرمي للموقع بسهولة، والعودة إلى الصفحات السابقة.
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"breadcrumbs"</span></span>&gt;
+ <span dir="rtl" class="txt">الرئيسية &gt; الإلكترونيات &gt; الهواتف &gt; الهاتف الذكي XYZ</span>
+&lt;/div&gt;
+&lt;p&gt;
+ <span dir="rtl" class="txt">لوريم إيبسوم دولور سيت أميت، كونسبتيتور أديبيبسينغ إليت، سيغ ديو إيوسمود تيمبور إينسيديْدونت أوت لابوري إيت دولوري مغنا أليكوث.</span>
+&lt;/p&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.breadcrumbs</span> <span class="attr">{
+ font-size: <span class="txt">0.9rem</span>;
+ color: <span class="txt">#555</span>;
+ margin: <span class="txt">1rem 0</span>;
+}</span>
+
+<span class="tag-b">p</span> <span class="attr">{
+ font-size: <span class="txt">1.2rem</span>;
+ line-height: <span class="txt">1.6</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview4">
+                    <div class="breadcrumbs">
+                    الرئيسية &gt; الإلكترونيات &gt; الهواتف &gt; الهاتف الذكي XYZ
+                    </div>
+                    <p>
+                    لوريم إيبسوم دولور سيت أميت، كونسبتيتور أديبيبسينغ إليت، سيغ ديو إيوسمود تيمبور إينسيديْدونت أوت لابوري إيت دولوري مغنا أليكوث.
+                    </p>
+                </div>
+            </div>
+            <br>
+
+    </section>
+
+    <!-- When to Use Breadcrumbs -->
+    <section>
+        <h3>متى تستخدم مسار التنقل (Breadcrumbs)</h3>
+        <p>
+            إذن، متى ينبغي عليك استخدام "مسارات التصفح" (breadcrumbs) في موقعك؟ 
+إذا كان موقعك بسيطاً ويتميز بهيكل تصفح ضحل (أي يتكون من مستويات قليلة)، 
+فقد لا تكون هذه المسارات ضرورية؛ 
+إذ إن الهيكل الضحل (shallow hierarchy) يعني أن الموقع لا يحتوي إلا على عدد محدود من مستويات التنقل (levels of navigation)، 
+وبالتالي قد لا تضيف هذه المسارات قيمة كبيرة. 
+وعادةً ما تظهر مسارات التصفح في مواقع التجارة الإلكترونية والمواقع الإخبارية، وغيرها من المواقع التي تعتمد هيكلاً عميقاً للتصفح، مثل مواقع التوثيق الفني (technical documentation sites).
+        </p>
+    </section>
+
+  </section>
+
+  <!-- QUESTIONS -->
+  <section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما هي مسارات التنقل (Breadcrumbs)؟</p>
+
+		<p><mark> 1. أداة مساعدة للتنقل توضح للمستخدم موقعه ضمن التسلسل الهرمي للموقع. ✅</mark></p>
+		<p> 2. نوع من الحاويات المخصصة للصور. ❌</p>
+        <p> 3. أداة مساعدة للتنقل توجد فقط في مواقع الأجهزة المحمولة. ❌</p>
+		<p> 4. نوع من الحاويات المخصصة للنصوص. ❌</p>
+        <br>
+
+        <p class="userstory">متى يجب عليك استخدام مسار التصفح (breadcrumbs) في موقعك؟</p>
+		
+		<p> 1. لا ينبغي لك استخدام مسارات التصفح (breadcrumbs) مطلقاً. ❌</p>
+        <p><mark> 2. إذا كان موقعك يتمتع بهيكل تنقّل عميق. ✅</mark></p>
+        <p> 3. إذا كان موقعك بسيطاً وذا هيكل تنقّل ضحل. ❌</p>
+		<p> 4. يجب عليك استخدامها فقط في مواقع الأجهزة المحمولة. ❌</p>
+        <br>
+
+        <p class="userstory">أي مما يلي يُعد فاصلاً شائعاً (common separator) لمسارات التصفح (breadcrumbs) ؟</p>
+		
+		<p> 1. <span dir="rtl" class="br-spec nw">&gt;&gt;&gt;&gt;</span> ❌</p>
+        <p> 2. <span dir="rtl" class="br-spec nw">||||</span> ❌</p>
+        <p><mark> 3. <span dir="rtl" class="br-spec nw">/</span> ✅</mark></p>
+		<p> 4. <span dir="rtl" class="br-spec nw">&&&</span> ❌</p>
+        
+	</section>
+  
+
+
+
+
+  <!-- Pages -->
+  <section class="page-nav">
+        <a class="prev" href="./What-Are-Best-Practices-for-Designing-a-Dark-Mode-Feature.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+  </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+<script src="../../js/design/user-centered-design/What-Are-Best-Practices-for-Designing-a-Dark-Mode-Feature.js"></script>
+
+</body>
+</html>

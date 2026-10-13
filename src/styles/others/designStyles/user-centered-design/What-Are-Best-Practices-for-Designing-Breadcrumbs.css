@@ -1,0 +1,59 @@
+/* PREVIEW 1 */
+.preview1 {
+ min-height: 40vh;
+}
+
+.preview1 .breadcrumbs {
+ font-size: 0.9rem;
+ color: #555;
+ margin: 1rem 0;
+}
+
+/* PREVIEW 2 */
+.preview2 {
+ min-height: 40vh;
+}
+
+.preview2 .breadcrumbs {
+ font-size: 0.9rem;
+ color: #555;
+ margin: 1rem 0;
+}
+
+/* PREVIEW 3 */
+.preview3 {
+ min-height: 40vh;
+}
+
+.preview3 .main-nav3 {
+ background-color: #333;
+ padding: 1rem;
+}
+
+.preview3 .main-nav3 a {
+ color: white;
+ margin-left: 1rem;
+ text-decoration: none;
+}
+
+.preview3 .breadcrumbs {
+ font-size: 0.9rem;
+ color: #555;
+ margin: 1rem 0;
+}
+
+/* PREVIEW 4 */
+.preview4 {
+ min-height: 40vh;
+}
+
+.preview4 .breadcrumbs {
+  font-size: 1rem;
+  color: #555;
+  margin: 1rem 0;
+}   
+
+.preview4 p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
