@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هي أفضل الممارسات لتصميم ميزة الوضع الداكن Dark Mode Feature ؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/designStyles/user-centered-design/What-Are-Best-Practices-for-Designing-a-Dark-Mode-Feature.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | التصميم</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>التصميم المتمحور حول المستخدم User-Centered Design</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+  <section class="sub-title">
+		<h2>ما هي أفضل الممارسات لتصميم ميزة الوضع الداكن Dark Mode Feature ؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+  </section>
+
+  <section>
+    <p>
+        <b>ملاحظة:</b> قد تستخدم بعض الأمثلة التفاعلية أكواد CSS لم تتعلمها بعد. لا تقلق بشأن محاولة فهم الكود بالكامل؛ فالهدف من هذه الأمثلة هو عرض نماذج لمفاهيم التصميم هذه، لتتمكن من فهم آلية عملها بشكل أفضل.
+    </p>
+    <p>
+        يُعد "الوضع الداكن" (Dark mode) ميزة خاصة في تطبيقات الويب تتيح تغيير نظام الألوان الافتراضي الفاتح (default light color scheme) إلى نظام ألوان داكن (dark color scheme)؛ 
+        مما يساعد في تقليل إجهاد العين وتحسين القراءة في ظروف الإضاءة المنخفضة. 
+        وعند تصميم ميزات الوضع الداكن، من المهم فهم أفضل الممارسات لضمان أن تكون هذه الميزة فعالة وسهلة الاستخدام.
+    </p>
+    <p class="hinty">
+        انقر على زر "تبديل الوضع الداكن" <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">Toggle Dark Mode</span> button)</span> في المثال أدناه لمعرفة كيفية عمل الوضع الداكن.
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;button <span class="attr">id=<span class="value">"theme-toggle"</span></span>&gt;<span dir="rtl" class="txt">تبديل الوضع الداكن</span>&lt;/button&gt;
+
+&lt;div <span class="attr">class=<span class="value">"content"</span></span>&gt;
+ &lt;p&gt;
+  <span dir="rtl" class="txt">هذا مثال بسيط للوضع الداكن.</span>
+ &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script <span class="attr">src=<span class="value">"index.js"</span></span>&gt;&lt;/script&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">body</span> <span class="attr">{
+ background: <span class="txt">#f5f5f5</span>;
+ color: <span class="txt">#222</span>;
+ font-family: <span class="txt">Arial, sans-serif</span>;
+ transition: <span class="value">background<span class="txt"> 0.3s</span>, color</span><span class="txt"> 0.3s</span>;
+}</span>
+
+<span class="tag-b">button</span> <span class="attr">{
+ margin: <span class="txt">1rem</span>;
+ padding: <span class="txt">0.5rem 1rem</span>;
+ cursor: <span class="txt">pointer</span>;
+}</span>
+
+<span class="tag-b">body.dark</span> <span class="attr">{
+ background: <span class="txt">#121212</span>;
+ color: <span class="txt">#e0e0e0</span>;
+}</span>
+            </code></pre></div>
+
+            <p class="file-name">index.js</p>
+            <div class="code-block"><pre><code>
+<span class="txt">document.</span><span class="tag-b">getElementById</span><span class="attr">(<span class="value">'theme-toggle'</span>)<span class="txt">.</span><span class="tag-b">addEventListener</span>(<span class="value">'click'</span><span class="txt">, </span>() <span class="value">=></span> {
+ <span class="txt">document.body.classList.</span><span class="tag-b">toggle</span>((<span class="value">'dark'</span>));
+});</span>
+            </code></pre></div>
+            </div>
+        
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+        <div class="preview1">
+            <div class="body1">
+                <button id="theme-toggle1">تبديل الوضع الداكن</button>
+                <div class="content1">
+                <p>
+                هذا مثال بسيط للوضع الداكن.
+                </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p>
+        يتمثل الاعتبار الأول في تجنب استخدام الألوان المشبعة (saturated colors) عند تفعيل الوضع الداكن (dark mode)؛ 
+فالألوان المشبعة هي ألوان زاهية وقوية للغاية. 
+على سبيل المثال، قد يبدو زر باللون الأرجواني الزاهي (bright magenta) على خلفية رمادية داكنة (dark gray background) فاقعاً جداً، 
+مما قد يسبب إجهاداً للعين. وبدلاً من ذلك، يُنصح باستخدام ألوان أقل تشبعاً؛ 
+فهذه الألوان تتميز بحدة أقل ومستوى تشبع منخفض، مما يجعل النظر إليها أكثر راحة في الوضع الداكن.
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;button <span class="attr">id=<span class="value">"theme-toggle"</span></span>&gt;<span dir="rtl" class="txt">تبديل الوضع الداكن</span>&lt;/button&gt;
+
+&lt;div <span class="attr">class=<span class="value">"content"</span></span>&gt;
+ &lt;h1&gt;<span dir="rtl" class="txt">تشبع الألوان في الوضع الداكن</span>&lt;/h1&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">
+  قارن بين الزرين أدناه؛ يستخدم الأول لوناً مشبعاً، 
+بينما يتميز الثاني بلون أقل تشبعاً لضمان سهولة أكبر في الاستخدام عند تفعيل الوضع الداكن.</span>
+ &lt;/p&gt;
+
+ &lt;div <span class="attr">class=<span class="value">"buttons"</span></span>&gt;
+  &lt;button <span class="attr">class=<span class="value">"saturated"</span></span>&gt;<span dir="rtl" class="txt">زر مشبع</span>&lt;/button&gt;
+  &lt;button <span class="attr">class=<span class="value">"desaturated"</span></span>&gt;<span dir="rtl" class="txt">زر باهت اللون</span>&lt;/button&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script <span class="attr">src=<span class="value">"index.js"</span></span>&gt;&lt;/script&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">body</span> <span class="attr">{
+ background: <span class="txt">#f0f0f0</span>;
+ color: <span class="txt">#111</span>;
+ font-family: <span class="txt">Arial, sans-serif</span>;
+ transition: <span class="value">background<span class="txt"> 0.3s</span>, color</span><span class="txt"> 0.3s</span>;
+ padding: <span class="txt">1rem</span>;
+}</span>
+
+<span class="tag-b">button</span> <span class="attr">{
+ padding: <span class="txt">0.6rem 1.2rem</span>;
+ font-size: <span class="txt">1rem</span>;
+ border-radius: <span class="txt">5px</span>;
+ cursor: <span class="txt">pointer</span>;
+ margin-left: <span class="txt">1rem</span>;
+ transition: <span class="value">background<span class="txt"> 0.3s</span>, color</span><span class="txt"> 0.3s</span>;
+}</span>
+
+<span class="tag-b">.buttons button</span> <span class="attr">{
+ border: <span class="txt">none</span>;
+}</span>
+
+<span class="tag-b">.saturated</span> <span class="attr">{
+ background-color: <span class="txt">#ff00ff</span>;
+ color: <span class="txt">white</span>;
+}</span>
+
+<span class="tag-b">.desaturated</span> <span class="attr">{
+ background-color: <span class="txt">#c472b5</span>;
+ color: <span class="txt">white</span>;
+}</span>
+
+<span class="tag-b">body.dark</span> <span class="attr">{
+ background-color: <span class="txt">#121212</span>;
+ color: <span class="txt">#e0e0e0</span>;
+}</span>
+
+<span class="tag-b">body.dark .saturated</span> <span class="attr">{
+ background-color: <span class="txt">#ff00ff</span>;
+ color: <span class="txt">black</span>;
+}</span>
+
+<span class="tag-b">body.dark .desaturated</span> <span class="attr">{
+ background-color: <span class="txt">#925f88</span>;
+ color: <span class="txt">white</span>;
+}</span>
+            </code></pre></div>
+
+            <p class="file-name">index.js</p>
+            <div class="code-block"><pre><code>
+<span class="txt">document.</span><span class="tag-b">getElementById</span><span class="attr">(<span class="value">'theme-toggle'</span>)<span class="txt">.</span><span class="tag-b">addEventListener</span>(<span class="value">'click'</span><span class="txt">, </span>() <span class="value">=></span> {
+ <span class="txt">document.body.classList.</span><span class="tag-b">toggle</span>((<span class="value">'dark'</span>));
+});</span>
+            </code></pre></div>
+            </div>
+        
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+        <div class="preview2">
+            <div class="body2">
+                <button id="theme-toggle2">تبديل الوضع الداكن</button>
+
+                <div class="content2">
+                <h1>تشبع الألوان في الوضع الداكن</h1>
+                <p>
+                قارن بين الزرين أدناه؛ يستخدم الأول لوناً مشبعاً، 
+                بينما يتميز الثاني بلون أقل تشبعاً لضمان سهولة أكبر في الاستخدام عند تفعيل الوضع الداكن.
+                </p>
+
+                <div class="buttons2">
+                <button class="saturated2">زر مشبع</button>
+                <button class="desaturated2">زر باهت اللون</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p>
+        ثمة اعتبار آخر يتعلق بالوضع الداكن، 
+        وهو استخدام خلفيات سوداء تماماً (pure black backgrounds) مع نصوص بيضاء (white text)؛ 
+        ففي حين أن هذا التباين العالي (high contrast) قد يكون فعالاً، 
+        إلا أنه قد يسبب إجهاداً للعينين. 
+        لذا، يُفضل استخدام خلفية رمادية داكنة (dark gray background) مع نصوص رمادية فاتحة (light gray text) لتحقيق تباين أكثر سلاسة (softer contrast)؛ 
+        إذ يجعل ذلك النص أكثر راحة للعينين وأسهل في القراءة عند استخدام الوضع الداكن.
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;button <span class="attr">id=<span class="value">"theme-toggle"</span></span>&gt;<span dir="rtl" class="txt">تبديل الوضع الداكن</span>&lt;/button&gt;
+
+&lt;div <span class="attr">class=<span class="value">"content"</span></span>&gt;
+ &lt;h1&gt;<span dir="rtl" class="txt">مقارنة التباين في الوضع الداكن</span>&lt;/h1&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">
+    قارن بين القسمين أدناه؛ يستخدم أحدهما اللونين الأسود والأبيض الخالصين، 
+    بينما يستخدم الآخر اللونين الرمادي الداكن والفاتح لتحسين القراءة.</span>
+ &lt;/p&gt;
+
+ &lt;div <span class="attr">class=<span class="value">"dark-mode-examples"</span></span>&gt;
+  &lt;div <span class="attr">class=<span class="value">"box harsh-dark"</span></span>&gt;
+   &lt;h2&gt;<span dir="rtl" class="txt">تباين عالٍ</span>&lt;/h2&gt;
+   &lt;p&gt;<span dir="rtl" class="txt">
+    خلفية سوداء تماماً مع نص أبيض. ورغم أن النص مقروء، إلا أن هذا التباين قد يكون مزعجاً للعينين.</span>
+   &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div <span class="attr">class=<span class="value">"box soft-dark"</span></span>&gt;
+   &lt;h2&gt;<span dir="rtl" class="txt">تباين ناعم</span>&lt;/h2&gt;
+   &lt;p&gt;<span dir="rtl" class="txt">
+    خلفية رمادية داكنة مع نص رمادي فاتح؛ فهي أسهل في القراءة وأكثر راحة عند الاستخدام لفترات طويلة.</span>
+   &lt;/p&gt;
+  &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script <span class="attr">src=<span class="value">"index.js"</span></span>&gt;&lt;/script&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">body</span> <span class="attr">{
+ background: <span class="txt">#f0f0f0</span>;
+ color: <span class="txt">#111</span>;
+ font-family: <span class="txt">Arial, sans-serif</span>;
+ padding: <span class="txt">1rem</span>;
+ transition: <span class="value">background<span class="txt"> 0.3s</span>, color</span><span class="txt"> 0.3s</span>;
+}</span>
+
+<span class="tag-b">button</span> <span class="attr">{
+ padding: <span class="txt">0.5rem 1rem</span>;
+ margin-bottom: <span class="txt">1rem</span>;
+ cursor: <span class="txt">pointer</span>; 
+}</span>
+
+<span class="tag-b">.dark-mode-examples</span> <span class="attr">{
+ display: <span class="txt">flex</span>;
+ gap: <span class="txt">2rem</span>;
+ flex-wrap: <span class="txt">wrap</span>;
+}</span>
+
+<span class="tag-b">.box</span> <span class="attr">{
+ padding: <span class="txt">1rem</span>;
+ border-radius: <span class="txt">8px</span>;
+ width: <span class="txt">300px</span>;
+ transition: <span class="value">background<span class="txt"> 0.3s</span>, color</span><span class="txt"> 0.3s</span>;
+}</span>
+
+<span class="tag-b">.box</span> <span class="attr">{
+ background-color: <span class="txt">#ffffff</span>;
+ color: <span class="txt">#111</span>;
+ box-shadow: <span class="txt">0 2px 4px</span> <span class="tag-b">rgba</span>(<span class="txt">0,0,0,0.1</span>);
+}</span>
+
+<span class="tag-b">body.dark .box.harsh-dark</span> <span class="attr">{
+ background-color: <span class="txt">#000000</span>;
+ color: <span class="txt">#ffffff</span>;
+}</span>
+
+<span class="tag-b">body.dark .box.soft-dark</span> <span class="attr">{
+ background-color: <span class="txt">#1e1e1e</span>;
+ color: <span class="txt">#cccccc</span>;
+}</span>
+
+<span class="tag-b">body.dark</span> <span class="attr">{
+ background-color: <span class="txt">#121212</span>;
+ color: <span class="txt">#e0e0e0</span>;
+}</span>
+
+            </code></pre></div>
+
+            <p class="file-name">index.js</p>
+            <div class="code-block"><pre><code>
+<span class="txt">document.</span><span class="tag-b">getElementById</span><span class="attr">(<span class="value">'theme-toggle'</span>)<span class="txt">.</span><span class="tag-b">addEventListener</span>(<span class="value">'click'</span><span class="txt">, </span>() <span class="value">=></span> {
+ <span class="txt">document.body.classList.</span><span class="tag-b">toggle</span>((<span class="value">'dark'</span>));
+});</span>
+            </code></pre></div>
+            </div>
+        
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+        <div class="preview3">
+            <div class="body3">
+                <button id="theme-toggle3">تبديل الوضع الداكن</button>
+
+                <div class="content3">
+                <h1>مقارنة التباين في الوضع الداكن</h1>
+                <p>
+                    قارن بين القسمين أدناه؛ يستخدم أحدهما اللونين الأسود والأبيض الخالصين، 
+                    بينما يستخدم الآخر اللونين الرمادي الداكن والفاتح لتحسين القراءة.
+                </p>
+
+                <div class="dark-mode-examples3">
+                <div class="box3 harsh-dark3">
+                <h2>تباين عالٍ</h2>
+                <p>
+                    خلفية سوداء تماماً مع نص أبيض. ورغم أن النص مقروء، إلا أن هذا التباين قد يكون مزعجاً للعينين.
+                </p>
+                </div>
+
+                <div class="box3 soft-dark3">
+                <h2>تباين ناعم</h2>
+                <p>
+                    خلفية رمادية داكنة مع نص رمادي فاتح؛ فهي أسهل في القراءة وأكثر راحة عند الاستخدام لفترات طويلة.
+                </p>
+                </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p>
+        ثمة اعتبار آخر يتمثل في استخدام "الوضع الداكن" (Dark Mode) بما يتماشى مع الهوية البصرية (brand identity) للعلامة التجارية. 
+وتُعرف الهوية البصرية بأنها مجموعة من العناصر المرئية التي تعبّر عن العلامة التجارية، 
+مثل الشعار والألوان والخطوط. 
+لذا، عند تطبيق الوضع الداكن، ينبغي مراعاة مدى انسجام هذه الميزة مع ألوان علامتك التجارية وأسلوبها؛ 
+إذ لا بأس بأن تظهر أيقونة العلامة التجارية والأزرار بأقصى درجات التشبع اللوني، في حين تكون العناصر المحيطة بها أقل تشبعاً.
+    </p>
+    <p>
+        بشكل عام، عند الحديث عن التصميم، ينبغي دائمًا مراعاة تجربة المستخدم (user experience) ومستويات التباين (contrast levels). 
+ولا يُعد "الوضع الداكن" استثناءً من ذلك؛ إذ يمكنك - باتباع أفضل الممارسات هذه - إنشاء ميزة للوضع الداكن (dark mode feature) تتسم بالفعالية وسهولة الاستخدام.
+    </p>
+
+
+
+  </section>
+
+  <!-- QUESTIONS -->
+  <section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما هو الوضع الداكن (dark mode) ؟</p>
+
+		<p><mark> 1. ميزة تُغيّر نظام الألوان الافتراضي الفاتح إلى نظام ألوان داكن. ✅</mark></p>
+		<p> 2. ميزة تُغيّر نظام الألوان الافتراضي الداكن إلى نظام ألوان فاتح. ❌</p>
+        <p> 3. ميزة تُغيّر حجم الخط الافتراضي إلى حجم أكبر. ❌</p>
+		<p> 4. ميزة تُغيّر التخطيط الافتراضي لصفحة الويب. ❌</p>
+        <br>
+
+        <p class="userstory">لماذا لا يُعد استخدام خلفيات سوداء تماماً (pure black backgrounds) مع نصوص بيضاء (white text) في "الوضع الداكن" (dark mode) فكرةً جيدة؟</p>
+		
+		<p> 1. قد تتسبب الخلفيات السوداء تماماً في مشكلات أمنية. ❌</p>
+		<p> 2. قد تتسبب الخلفيات السوداء تماماً في مشكلات تتعلق بالأداء. ❌</p>
+		<p> 3. تُعد الخلفيات السوداء تماماً مع النصوص البيضاء باهتة للغاية. ❌</p>
+        <p><mark> 4. قد تكون الخلفيات السوداء تماماً مع النصوص البيضاء قاسية جداً على العينين. ✅</mark></p>
+
+        <p class="userstory">ما هي أنواع الألوان (colors) المقترح استخدامها في الوضع الداكن (dark mode) ؟</p>
+		
+		<p> 1. ألوان حمراء Red colors. ❌</p>
+        <p><mark> 2. ألوان باهتة (منخفضة التشبع) Desaturated colors. ✅</mark></p>
+        <p> 3. ألوان زاهية Bright colors. ❌</p>
+		<p> 4. ألوان باستيل Pastel colors. ❌</p>
+
+        
+	</section>	
+  
+
+
+
+
+  <!-- Pages -->
+  <section class="page-nav">
+        <a class="prev" href="./What-Are-User-Requirements-User-Research-and-Testing.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+  </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+<script src="../../js/design/user-centered-design/What-Are-Best-Practices-for-Designing-a-Dark-Mode-Feature.js"></script>
+
+</body>
+</html>
