@@ -1,0 +1,60 @@
+/* PREVIEW 1 */
+.preview1 {
+width: 100%;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.preview1 iframe {
+  display: block;
+  width: 100%;
+  height: 450px;
+  border: none;
+}
+
+/* PREVIEW 2 */
+.preview2 {
+width: 100%;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.preview2 iframe {
+  display: block;
+  width: 100%;
+  height: 450px;
+  border: none;
+}
+
+/* PREVIEW 3 */
+.preview3 {
+width: 100%;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.preview3 iframe {
+  display: block;
+  width: 100%;
+  height: 450px;
+  border: none;
+}
+
+
+/* PREVIEW 4 */
+.preview4 {
+width: 100%;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.preview4 iframe {
+  display: block;
+  width: 100%;
+  height: 450px;
+  border: none;
+}

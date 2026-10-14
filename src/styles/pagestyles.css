@@ -125,7 +125,7 @@ margin: 10px 0px;
 }
 
 .code-block code .attr {
-  color: #feca57;
+  color: #fdb71f;
 }
 
 .code-block code .value {
@@ -133,7 +133,7 @@ margin: 10px 0px;
 }
 
 .code-block code .txt {
-  color: whitesmoke;
+  color: lightgray;
 }
 
 .code-block code .jsblue {
@@ -195,7 +195,7 @@ margin: 10px 0px;
   background: #0c0c25;
   padding: 10px;
   border-radius: 6px;
-  font-family: "Fira Code", monospace;
+  font-family: Arial, Helvetica, sans-serif;
   color: #ffffff;
   direction: ltr;
   overflow-x: auto;
@@ -214,10 +214,11 @@ margin: 10px 0px;
 }
 
 .code-block code {
-  color: #fff;
+  color: lightgray;
   line-height: 1.8;
   font-size: 1.1rem;
-  
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 2px;
 }
 
 

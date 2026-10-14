@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هي أفضل الممارسات لتصميم التمرير اللانهائي Designing Infinite Scrolls ؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/designStyles/user-centered-design/What-Are-Best-Practices-for-Designing-Infinite-Scrolls.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | التصميم</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>التصميم المتمحور حول المستخدم User-Centered Design</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+  <section class="sub-title">
+        <h2>ما هي أفضل الممارسات لتصميم التمرير اللانهائي Designing Infinite Scrolls ؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+  </section>
+
+  <section>
+    <p>
+        <b>ملاحظة:</b> قد تستخدم بعض الأمثلة التفاعلية أكواد CSS لم تتعلمها بعد. لا تقلق بشأن محاولة فهم الكود بالكامل؛ فالهدف من هذه الأمثلة هو عرض نماذج لمفاهيم التصميم هذه، لتتمكن من فهم آلية عملها بشكل أفضل.
+    </p>
+    <p>
+        يُعد التمرير اللانهائي (Infinite scrolling) نمطاً تصميمياً يعمل على تحميل المزيد من المحتوى كلما قام المستخدم بالتمرير إلى أسفل الصفحة (scrolls down the page). 
+        وغالباً ما يُستخدم هذا النمط في مواقع التواصل الاجتماعي مثل "تويتر"؛ 
+        فعلى سبيل المثال، إذا كنت قد سجلت دخولك وترغب في الاطلاع على المزيد من التغريدات، 
+        يمكنك التمرير للأسفل ليتم تحميل تغريدات إضافية، وهذا مثال على التمرير اللانهائي (Infinite scrolling).
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"infinite-scroll"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 1</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 2</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 3</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 4</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 5</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 6</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 7</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 8</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 9</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 10</span>&lt;/div&gt;
+ <span class="value">&lt;!-- سيتم تحميل المزيد من المنشورات هنا كلما قام المستخدم بالتمرير للأسفل --&gt;</span>
+&lt;/div&gt;
+
+&lt;script <span class="attr">src=<span class="value">"index.js"</span></span>&gt;&lt;/script&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.infinite-scroll</span> <span class="attr">{
+ display: <span class="txt">flex</span>;
+ flex-direction: <span class="txt">column</span>;
+ gap: <span class="txt">12px</span>;
+}</span>
+
+<span class="tag-b">.post</span> <span class="attr">{
+ padding: <span class="txt">12px</span>;
+ border: <span class="txt">1px solid #ccc</span>;
+ border-radius: <span class="txt">4px</span>;
+}</span>
+            </code></pre></div>
+
+            <p class="file-name">index.js</p>
+            <div class="code-block"><pre><code>
+<span class="value">// محاكاة تحميل المزيد من المحتوى أثناء تمرير المستخدم</span>
+<span class="txt">window.</span><span class="tag-b">addEventListener</span><span class="attr">(<span class="value">'scroll'</span>, () <span class="tag-b">=></span> {
+ <span class="tag-b">if</span> (<span class="txt">window.innerHeight + window.scrollY >= document.body.offsetHeight</span>) {
+  <span class="tag-b">loadMorePosts</span>();
+ }
+});</span>
+
+<span class="tag-b">function loadMorePosts</span><span class="attr">() {
+ <span class="tag-b">const</span> <span class="txt">container = document.</span><span class="tag-b">querySelector</span>(<span class="value">'.infinite-scroll'</span>);
+ <span class="tag-b">for</span> (<span class="tag-b">let i = 0</span>; <span class="tag-b">i &lt; 3</span>; <span class="tag-b">i ++</span>) {
+  <span class="tag-b">const</span> <span class="txt">post = document.</span><span class="tag-b">createElement</span>(<span class="value">'div'</span>);
+  <span class="txt">post.className =</span><span class="value"> 'post'</span>;
+  <span class="txt">post.textContent =</span><span class="value"> `المنشور</span> ${<span class="txt">container.children.length</span><span class="tag-b"> + 1</span>}<span class="value">`</span>;
+  <span class="txt">container.</span><span class="tag-b">appendChild</span>(<span class="txt">post</span>);
+ }
+}</span>
+            </code></pre></div>
+            </div>
+        
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+        <div class="preview1">
+          <iframe
+          src="../../examples/design/user-centered-design/What-Are-Best-Practices-for-Designing-Infinite-Scrolls/example1.html"
+          title="Infinite Scroll Example 1"
+          loading="lazy"
+        ></iframe>
+        </div>
+    </div>
+
+    <p>
+        يُستخدم التمرير اللانهائي (Infinite scrolling) أيضاً كبديل لنظام تقسيم المحتوى إلى صفحات (Pagination). 
+        ويُعد هذا التقسيم نمطاً تصميمياً يعمل على تجزئة المحتوى إلى صفحات متعددة، وغالباً ما يُستخدم عندما تكون هناك كمية كبيرة من المحتوى المراد عرضه؛ 
+        ومن الأمثلة عليه ما يحدث عند البحث عن شيء ما في "جوجل"، 
+        حيث تظهر نتائج البحث موزعة على صفحات متعددة. 
+        ففي نظام تقسيم الصفحات (pagination)، يتعين عليك النقر على زر للانتقال إلى الصفحة التالية، 
+        بينما يتيح لك التمرير اللانهائي مواصلة التمرير للأسفل (scrolling down) ليتم تحميل المزيد من المحتوى تلقائياً.
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"pagination"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 1</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 2</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 3</span>&lt;/div&gt;
+ <span class="value">&lt;!-- ستتوفر المزيد من المنشورات في الصفحات التالية. --&gt;</span>
+&lt;/div&gt;
+
+&lt;div <span class="attr">class=<span class="value">"pagination-controls"</span></span>&gt;
+ &lt;button <span class="attr">class=<span class="value">"prev"</span> disabled</span>&gt;<span class="txt">السابق</span>&lt;/button&gt;
+ &lt;button <span class="attr">class=<span class="value">"next"</span></span>&gt;<span class="txt">التالي</span>&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;script <span class="attr">src=<span class="value">"index.js"</span></span>&gt;&lt;/script&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.pagination</span> <span class="attr">{
+ display: <span class="txt">flex</span>;
+ flex-direction: <span class="txt">column</span>;
+ gap: <span class="txt">12px</span>;
+}</span>
+
+<span class="tag-b">.post</span> <span class="attr">{
+ padding: <span class="txt">12px</span>;
+ border: <span class="txt">1px solid #ccc</span>;
+ border-radius: <span class="txt">4px</span>;
+}</span>
+
+<span class="tag-b">.pagination-controls</span> <span class="attr">{
+ margin-top: <span class="txt">12px</span>;
+}</span>
+
+<span class="tag-b">.pagination-controls button</span> <span class="attr">{
+ padding: <span class="txt">8px 16px</span>;
+ margin-right: <span class="txt">8px</span>;
+}</span>
+            </code></pre></div>
+
+            <p class="file-name">index.js</p>
+            <div class="code-block"><pre><code><span class="tag-b">let <span class="txt">currentPage</span> = 1</span><span class="attr">;</span>
+<span class="tag-b">const <span class="txt">postsPerPage</span> = 3</span><span class="attr">;</span>
+<span class="tag-b">const <span class="txt">totalPosts</span> = 9</span><span class="attr">;</span>
+<span class="tag-b">const <span class="txt">totalPages</span> = <span class="txt">Math</span>.<span class="txt">ceil</span></span><span class="attr">(</span><span class="txt">totalPosts</span> / <span class="txt">postsPerPage</span><span class="attr">);</span>
+<span class="tag-b">const <span class="txt">container</span> = <span class="txt">document</span>.<span class="txt">querySelector</span></span><span class="attr">(</span><span class="txt">'.pagination'</span><span class="attr">);</span>
+<span class="tag-b">const <span class="txt">prevButton</span> = <span class="txt">document</span>.<span class="txt">querySelector</span></span><span class="attr">(</span><span class="txt">'.prev'</span><span class="attr">);</span>
+<span class="tag-b">const <span class="txt">nextButton</span> = <span class="txt">document</span>.<span class="txt">querySelector</span></span><span class="attr">(</span><span class="txt">'.next'</span><span class="attr">);</span>
+
+<span class="tag-b">function <span class="txt">renderPosts</span></span><span class="attr">() {</span>
+  <span class="txt">container</span>.<span class="txt">innerHTML</span> = <span class="txt">''</span><span class="attr">;</span>
+  <span class="tag-b">const <span class="txt">start</span> = (</span><span class="txt">currentPage</span> - 1<span class="attr">)</span> * <span class="txt">postsPerPage</span><span class="attr">;</span>
+  <span class="tag-b">const <span class="txt">end</span> = <span class="txt">start</span> + <span class="txt">postsPerPage</span></span><span class="attr">;</span>
+
+  <span class="tag-b">for (</span><span class="tag-b">let <span class="txt">i</span> = <span class="txt">start</span><span class="attr">;</span> <span class="txt">i</span> < <span class="txt">end</span> && <span class="txt">i</span> < <span class="txt">totalPosts</span><span class="attr">;</span> <span class="txt">i</span>++<span class="attr">) {</span>
+    <span class="tag-b">const <span class="txt">post</span> = <span class="txt">document</span>.<span class="txt">createElement</span></span><span class="attr">(</span><span class="txt">'div'</span><span class="attr">);</span>
+    <span class="txt">post</span>.<span class="txt">className</span> = <span class="txt">'post'</span><span class="attr">;</span>
+    <span class="txt">post</span>.<span class="txt">textContent</span> = <span class="txt">`المنشور ${i + 1}`</span><span class="attr">;</span>
+    <span class="txt">container</span>.<span class="txt">appendChild</span><span class="attr">(</span><span class="txt">post</span><span class="attr">);</span>
+  <span class="attr">}</span>
+
+  <span class="txt">prevButton</span>.<span class="txt">disabled</span> = <span class="txt">currentPage</span> === 1<span class="attr">;</span>
+  <span class="txt">nextButton</span>.<span class="txt">disabled</span> = <span class="txt">currentPage</span> === <span class="txt">totalPages</span><span class="attr">;</span>
+<span class="attr">}</span>
+
+<span class="txt">prevButton</span>.<span class="txt">addEventListener</span><span class="attr">(</span><span class="txt">'click'</span><span class="attr">, () => {</span>
+  <span class="tag-b">if (</span><span class="txt">currentPage</span> > 1<span class="attr">) {</span>
+    <span class="txt">currentPage</span>--<span class="attr">;</span>
+    <span class="txt">renderPosts</span><span class="attr">();</span>
+  <span class="attr">}</span>
+<span class="attr">});</span>
+
+<span class="txt">nextButton</span>.<span class="txt">addEventListener</span><span class="attr">(</span><span class="txt">'click'</span><span class="attr">, () => {</span>
+  <span class="tag-b">if (</span><span class="txt">currentPage</span> < <span class="txt">totalPages</span><span class="attr">) {</span>
+    <span class="txt">currentPage</span>++<span class="attr">;</span>
+    <span class="txt">renderPosts</span><span class="attr">();</span>
+  <span class="attr">}</span>
+<span class="attr">});</span>
+
+<span class="txt">renderPosts</span><span class="attr">();</span>
+            </code></pre></div>
+            </div>
+        
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+      <div class="preview2">
+          <iframe
+          src="../../examples/design/user-centered-design/What-Are-Best-Practices-for-Designing-Infinite-Scrolls/example2.html"
+          title="Infinite Scroll Example 2"
+          loading="lazy"
+        ></iframe>
+        </div>
+        
+    </div>
+
+    <p>
+      عند دمج ميزة التمرير اللانهائي (infinite scrolling) في تصميمك، 
+      هناك بعض الممارسات المثلى التي ينبغي وضعها في الاعتبار. وتتمثل الخطوة الأولى في توفير زر "تحميل المزيد" (Load More) يقوم بتحميل المجموعة التالية من النتائج عند النقر عليه؛ 
+      إذ تُعد هذه وسيلة فعالة لمنح المستخدم حرية التحكم في توقيت رغبته في عرض المزيد من المحتوى.
+    </p>
+
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"infinite-scroll"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 1</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 2</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 3</span>&lt;/div&gt;
+ <span class="value">&lt;!-- سيتم تحميل المزيد من المنشورات عندما ينقر المستخدم على "تحميل المزيد". --&gt;</span>
+&lt;/div&gt;
+
+&lt;button <span class="attr">class=<span class="value">"load-more"</span></span>&gt;<span class="txt">تحميل المزيد</span>&lt;/button&gt;
+
+&lt;script <span class="attr">src=<span class="value">"index.js"</span></span>&gt;&lt;/script&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.infinite-scroll</span> <span class="attr">{
+ display: <span class="txt">flex</span>;
+ flex-direction: <span class="txt">column</span>;
+ gap: <span class="txt">12px</span>;
+}</span>
+
+<span class="tag-b">.post</span> <span class="attr">{
+ padding: <span class="txt">12px</span>;
+ border: <span class="txt">1px solid #ccc</span>;
+ border-radius: <span class="txt">4px</span>;
+}</span>
+
+<span class="tag-b">.load-more</span> <span class="attr">{
+ margin-top: <span class="txt">12px</span>;
+ padding: <span class="txt">8px 16px</span>;
+}</span>
+            </code></pre></div>
+
+            <p class="file-name">index.js</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">const <span class="txt">loadMoreButton</span> = <span class="txt">document</span>.<span class="txt">querySelector</span></span><span class="attr">(</span><span class="txt">'.load-more'</span><span class="attr">);</span>
+<span class="tag-b">const <span class="txt">container</span> = <span class="txt">document</span>.<span class="txt">querySelector</span></span><span class="attr">(</span><span class="txt">'.infinite-scroll'</span><span class="attr">);</span>
+
+<span class="txt">loadMoreButton</span>.<span class="txt">addEventListener</span><span class="attr">(</span><span class="txt">'click'</span><span class="attr">, () => {</span>
+  <span class="txt">loadMorePosts</span><span class="attr">();</span>
+<span class="attr">});</span>
+
+<span class="tag-b">function <span class="txt">loadMorePosts</span></span><span class="attr">() {</span>
+  <span class="tag-b">for (</span><span class="tag-b">let <span class="txt">i</span> = 0</span><span class="attr">;</span> <span class="txt">i</span> <span class="attr">&lt;</span> 3<span class="attr">;</span> <span class="txt">i</span>++<span class="attr">) {</span>
+    <span class="tag-b">const <span class="txt">post</span> = <span class="txt">document</span>.<span class="txt">createElement</span></span><span class="attr">(</span><span class="txt">'div'</span><span class="attr">);</span>
+    <span class="txt">post</span>.<span class="txt">className</span> = <span class="txt">'post'</span><span class="attr">;</span>
+    <span class="txt">post</span>.<span class="txt">textContent</span> = <span class="txt">`المنشور ${container.children.length + 1}`</span><span class="attr">;</span>
+    <span class="txt">container</span>.<span class="txt">appendChild</span><span class="attr">(</span><span class="txt">post</span><span class="attr">);</span>
+  <span class="attr">}</span>
+<span class="attr">}</span>
+            </code></pre></div>
+            </div>
+        
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+       <div class="preview3">
+          <iframe
+          src="../../examples/design/user-centered-design/What-Are-Best-Practices-for-Designing-Infinite-Scrolls/example3.html"
+          title="Infinite Scroll Example 3"
+          loading="lazy"
+        ></iframe>
+        </div>
+    </div>
+
+    <p>
+      من الأمور الأخرى التي يمكن أخذها بعين الاعتبار إضافة زر "رجوع" ؛ 
+      إذ يتيح ذلك للمستخدمين العودة إلى الصفحة السابقة دون الحاجة إلى التمرير صعوداً إلى أعلى الصفحة بالكامل، 
+      مما يعزز تجربة المستخدم ويمنحهم تحكماً أكبر في تجربة التصفح.
+    </p>
+    <p>
+      قد تلاحظ أحياناً تصاميم تتضمن زر "العودة إلى الأعلى" (Back to the top)، 
+      والذي يعيد المستخدمين إلى بداية صفحة النتائج. 
+      ومن الأمور الأخرى التي ينبغي مراعاتها توفير مؤشر للتحميل (loading indicator)؛ 
+      إذ يجب أن يدرك المستخدمون بوضوح أنه يجري تحميل المزيد من المحتوى، وإلا فقد يظنون أن الصفحة معطلة.
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"infinite-scroll"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 1</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 2</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 3</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 4</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 5</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 6</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 7</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 8</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 9</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"post"</span></span>&gt;<span dir="rtl" class="txt">المنشور 10</span>&lt;/div&gt;
+ <span class="value">&lt;!-- سيتم تحميل المزيد من المنشورات هنا كلما قام المستخدم بالتمرير للأسفل --&gt;</span>
+&lt;/div&gt;
+
+&lt;div <span class="attr">class=<span class="value">"loading-indicator"</span> style=<span class="value">"display: none"</span></span>&gt;<span dir="rtl" class="txt">تحميل...</span>&lt;/div&gt;
+
+&lt;button <span class="attr">id=<span class="value">"back-to-top"</span> class=<span class="value">"back-to-top"</span></span>&gt;<span dir="rtl" class="txt">↑ العودة إلى الأعلى</span>&lt;/div&gt;
+
+&lt;script <span class="attr">src=<span class="value">"index.js"</span></span>&gt;&lt;/script&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.infinite-scroll</span> <span class="attr">{
+ display: <span class="txt">flex</span>;
+ flex-direction: <span class="txt">column</span>;
+ gap: <span class="txt">12px</span>;
+}</span>
+
+<span class="tag-b">.post</span> <span class="attr">{
+ padding: <span class="txt">12px</span>;
+ border: <span class="txt">1px solid #ccc</span>;
+ border-radius: <span class="txt">4px</span>;
+}</span>
+
+<span class="tag-b">.loading-indicator</span> <span class="attr">{
+ margin-top: <span class="txt">12px</span>;
+ font-weight: <span class="txt">bold</span>;
+}</span>
+
+<span class="tag-b">.back-to-top</span> <span class="attr">{
+ position: <span class="txt">fixed</span>;
+ bottom: <span class="txt">30px</span>;
+ right: <span class="txt">30px</span>;
+ display: <span class="txt">none</span>;
+ padding: <span class="txt">10px 15px</span>;
+ background-color: <span class="txt">#007BFF</span>;
+ color: <span class="txt">white</span>;
+ border: <span class="txt">none</span>;
+ border-radius: <span class="txt">4px</span>;
+ cursor: <span class="txt">pointer</span>;
+ font-size: <span class="txt">14px</span>;
+ box-shadow: <span class="txt">0 2px 6px</span> <span class="value">rgba</span>(<span class="txt">0, 0, 0, 0.2</span>);
+}</span>
+
+<span class="tag-b">.back-to-top:hover</span> <span class="attr">{
+ background-color: <span class="txt">#0056b3</span>;
+}</span>
+            </code></pre></div>
+
+            <p class="file-name">index.js</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">const <span class="txt">container</span> = <span class="txt">document</span>.<span class="txt">querySelector</span></span><span class="attr">(</span><span class="txt">'.infinite-scroll'</span><span class="attr">);</span>
+<span class="tag-b">const <span class="txt">loadingIndicator</span> = <span class="txt">document</span>.<span class="txt">querySelector</span></span><span class="attr">(</span><span class="txt">'.loading-indicator'</span><span class="attr">);</span>
+<span class="tag-b">const <span class="txt">backToTopBtn</span> = <span class="txt">document</span>.<span class="txt">getElementById</span></span><span class="attr">(</span><span class="txt">'back-to-top'</span><span class="attr">);</span>
+
+<span class="txt">window</span>.<span class="txt">addEventListener</span><span class="attr">(</span><span class="txt">'scroll'</span><span class="attr">, () => {</span>
+  <span class="tag-b">if (</span><span class="txt">window</span>.<span class="txt">scrollY</span> <span class="attr">&gt;</span> 400<span class="attr">) {</span>
+    <span class="txt">backToTopBtn</span>.<span class="txt">style</span>.<span class="txt">display</span> = <span class="txt">'block'</span><span class="attr">;</span>
+  <span class="attr">} else {</span>
+    <span class="txt">backToTopBtn</span>.<span class="txt">style</span>.<span class="txt">display</span> = <span class="txt">'none'</span><span class="attr">;</span>
+  <span class="attr">}</span>
+
+  <span class="tag-b">if (</span><span class="txt">window</span>.<span class="txt">innerHeight</span> + <span class="txt">window</span>.<span class="txt">scrollY</span> <span class="attr">&gt;=</span> <span class="txt">document</span>.<span class="txt">body</span>.<span class="txt">offsetHeight</span><span class="attr">) {</span>
+    <span class="txt">loadMorePosts</span><span class="attr">();</span>
+  <span class="attr">}</span>
+<span class="attr">});</span>
+
+<span class="txt">backToTopBtn</span>.<span class="txt">addEventListener</span><span class="attr">(</span><span class="txt">'click'</span><span class="attr">, () => {</span>
+  <span class="txt">window</span>.<span class="txt">scrollTo</span><span class="attr">({</span> <span class="txt">top</span><span class="attr">:</span> 0<span class="attr">,</span> <span class="txt">behavior</span><span class="attr">:</span> <span class="txt">'smooth'</span> <span class="attr">});</span>
+<span class="attr">});</span>
+
+<span class="tag-b">function <span class="txt">loadMorePosts</span></span><span class="attr">() {</span>
+  <span class="txt">loadingIndicator</span>.<span class="txt">style</span>.<span class="txt">display</span> = <span class="txt">'block'</span><span class="attr">;</span>
+
+  <span class="txt">setTimeout</span><span class="attr">(() => {</span>
+    <span class="tag-b">for (</span><span class="tag-b">let <span class="txt">i</span> = 0</span><span class="attr">;</span> <span class="txt">i</span> <span class="attr">&lt;</span> 3<span class="attr">;</span> <span class="txt">i</span>++<span class="attr">) {</span>
+      <span class="tag-b">const <span class="txt">post</span> = <span class="txt">document</span>.<span class="txt">createElement</span></span><span class="attr">(</span><span class="txt">'div'</span><span class="attr">);</span>
+      <span class="txt">post</span>.<span class="txt">className</span> = <span class="txt">'post'</span><span class="attr">;</span>
+      <span class="txt">post</span>.<span class="txt">textContent</span> = <span class="txt">`المنشور ${container.children.length + 1}`</span><span class="attr">;</span>
+      <span class="txt">container</span>.<span class="txt">appendChild</span><span class="attr">(</span><span class="txt">post</span><span class="attr">);</span>
+    <span class="attr">}</span>
+
+    <span class="txt">loadingIndicator</span>.<span class="txt">style</span>.<span class="txt">display</span> = <span class="txt">'none'</span><span class="attr">;</span>
+  <span class="attr">},</span> 1000<span class="attr">);</span>
+<span class="attr">}</span>
+            </code></pre></div>
+            </div>
+        
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+        <div class="preview4">
+          <iframe
+          src="../../examples/design/user-centered-design/What-Are-Best-Practices-for-Designing-Infinite-Scrolls/example4.html"
+          title="Infinite Scroll Example 4"
+          loading="lazy"
+        ></iframe>
+        </div>
+    </div>
+    <p>
+      من الاعتبارات الأخيرة الحرصُ على إبقاء تذييل الصفحة (footer) متاحاً للمستخدم؛ 
+      فإذا كان التذييل (footer) يحتوي على معلومات مهمة، 
+      فينبغي أن يكون في متناول المستخدم في جميع الأوقات.
+    </p>
+    <p>
+      ختاماً، يُعد التمرير اللانهائي (infinite scrolling) وسيلةً ممتازةً لعرض المحتوى على موقعك الإلكتروني؛ 
+      ومع ذلك، ينبغي عليك مراعاة أفضل الممارسات عند تصميم هذه الميزة لضمان توفير أفضل تجربة ممكنة للمستخدم.
+    </p>
+
+  </section>
+  
+  <!-- QUESTIONS -->
+	<section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما هو التمرير اللانهائي (infinite scrolling) ؟</p>
+
+		<p> 1. نمط تصميم يغير شريط التمرير في الصفحة. ❌</p>
+		<p> 2. نمط تصميم يغير حجم الصفحة. ❌</p>
+		<p> 3. نمط تصميم لتغيير لون خلفية الصفحة. ❌</p>
+    <p><mark> 4. نمط تصميم يقوم بتحميل المزيد من المحتوى أثناء قيام المستخدم بالتمرير لأسفل الصفحة. ✅</mark></p>
+    <br>
+
+    <p class="userstory">ما هو دور زر "تحميل المزيد" في خاصية التمرير اللانهائي؟</p>
+		
+		<p> 1. يُعيد تحميل الصفحة. ❌</p>
+    <p><mark> 2. يمنح المستخدمين التحكم في توقيت رغبتهم في رؤية المزيد من المحتوى. ✅</mark></p>
+    <p> 3. يتيح للمستخدمين العودة إلى المحتوى الذي تم تحميله سابقاً. ❌</p>
+		<p> 4. يُقيّد كمية البيانات التي يمكن تحميلها. ❌</p>
+    <br>
+
+    <p class="userstory">لماذا من المهم الحفاظ على إمكانية الوصول إلى تذييل الصفحة (footer) عند استخدام خاصية التمرير اللانهائي؟</p>
+		
+		<p> 1. يساعد ذلك في إبراز الألوان بشكل أكبر على الصفحة. ❌</p>
+		<p> 2. يساعد ذلك في تسريع تحميل الصفحة. ❌</p>
+		<p> 3. ليس من الضروري جعل تذييل الصفحة متاحاً وسهل الوصول إليه. ❌</p>
+    <p><mark> 4. لكي يتمكن المستخدم من الوصول إلى الروابط والمعلومات المهمة الموجودة في تذييل الصفحة في جميع الأوقات. ✅</mark></p>
+	</section>
+
+
+
+
+  <!-- Pages -->
+  <section class="page-nav">
+        <a class="prev" href="./What-Are-Best-Practices-for-Designing-Cards.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+  </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
