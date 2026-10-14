@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هي أفضل الممارسات لتصميم مربعات الحوار المشروطة Modal Dialogs ؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/designStyles/user-centered-design/What-Are-Best-Practices-for-Designing-Modal-Dialogs.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | التصميم</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>التصميم المتمحور حول المستخدم User-Centered Design</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+  <section class="sub-title">
+        <h2>ما هي أفضل الممارسات لتصميم مربعات الحوار المشروطة Modal Dialogs ؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+  </section>
+
+  <section>
+    <p>
+        <b>ملاحظة:</b> قد تستخدم بعض الأمثلة التفاعلية أكواد CSS و JavaScript لم تتعلمها بعد. لا تقلق بشأن محاولة فهم الكود بالكامل؛ فالهدف من هذه الأمثلة هو عرض نماذج لمفاهيم التصميم هذه، لتتمكن من فهم آلية عملها بشكل أفضل.
+    </p>
+    <p>
+        ما هو الـ "Modal" ؟ إنه نوع من النوافذ المنبثقة التي قد يعرضها الموقع الإلكتروني فوق محتواه. 
+        وتوفر لغة HTML عنصراً مخصصاً للحوار <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">dialog</span> element)</span> يمكنك استخدامه لإنشاء هذه النوافذ.
+    </p>
+    <p>
+        عادةً ما يتم تعتيم المحتوى الموجود خلف النافذة المنبثقة (Modal)؛ 
+        إذ يساعد ذلك المستخدم على التركيز بصرياً على المنطقة التي تريده أن يتفاعل معها، وهي في هذه الحالة النافذة المنبثقة نفسها (the modal).
+    </p>
+    <p>
+        من المستحسن دائمًا السماح للمستخدم بالنقر خارج النافذة المنبثقة (modal) لإغلاقها.
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;button <span class="attr">id=<span class="value">"open-modal"</span></span>&gt;<span dir="rtl" class="txt">فتح النافذة المنبثقة</span>&lt;/button&gt;
+
+&lt;dialog&gt;
+ &lt;h2&gt;<span dir="rtl" class="txt">اشترك في نشرتنا الإخبارية!</span>&lt;/h2&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">احصل على أحدث التحديثات والعروض.</span>&lt;/p&gt;
+ &lt;button&gt;<span dir="rtl" class="txt">إشتراك</span>&lt;/button&gt;
+ &lt;button&gt;<span dir="rtl" class="txt">إغلاق</span>&lt;/button&gt;
+&lt;/dialog&gt;
+
+&lt;script <span class="attr">src=<span class="value">"index.js"</span></span>&gt;&lt;/script&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">dialog</span> <span class="attr">{
+ border: <span class="txt">none</span>;
+ border-radius: <span class="txt">8px</span>;
+ padding: <span class="txt">20px</span>;
+ box-shadow: <span class="txt">0 4px 8px</span> <span class="value">rgba</span>(<span class="txt">0, 0, 0, 0.2</span>);
+}</span>
+
+<span class="tag-b">dialog::backdrop</span> <span class="attr">{
+ background: <span class="value">rgba</span>(<span class="txt">0, 0, 0, 0.5</span>);
+}</span>
+    </code></pre></div>
+
+    <p class="file-name">index.js</p>
+    <div class="code-block"><pre><code>
+<span class="tag-b">const <span class="txt">dialog</span> = <span class="txt">document</span>.<span class="txt">querySelector</span></span><span class="attr">(</span><span class="txt">'dialog'</span><span class="attr">);</span>
+<span class="tag-b">const <span class="txt">closeButton</span> = <span class="txt">dialog</span>.<span class="txt">querySelector</span></span><span class="attr">(</span><span class="txt">'button:last-of-type'</span><span class="attr">);</span>
+<span class="tag-b">const <span class="txt">openModalButton</span> = <span class="txt">document</span>.<span class="txt">getElementById</span></span><span class="attr">(</span><span class="txt">'open-modal'</span><span class="attr">);</span>
+
+<span class="txt">closeButton</span>.<span class="txt">addEventListener</span><span class="attr">(</span><span class="txt">'click'</span><span class="attr">, () => {</span>
+  <span class="txt">dialog</span>.<span class="txt">close</span><span class="attr">();</span>
+<span class="attr">});</span>
+
+<span class="txt">openModalButton</span>.<span class="txt">addEventListener</span><span class="attr">(</span><span class="txt">'click'</span><span class="attr">, () => {</span>
+  <span class="txt">dialog</span>.<span class="txt">showModal</span><span class="attr">();</span>
+<span class="attr">});</span>
+
+<span class="tag-b">// Close the modal when clicking outside of it</span>
+<span class="txt">dialog</span>.<span class="txt">addEventListener</span><span class="attr">(</span><span class="txt">'click'</span><span class="attr">, (</span><span class="txt">event</span><span class="attr">) => {</span>
+  <span class="tag-b">const <span class="txt">rect</span> = <span class="txt">dialog</span>.<span class="txt">getBoundingClientRect</span></span><span class="attr">();</span>
+  <span class="tag-b">const <span class="txt">isInDialog</span> = (</span>
+    <span class="txt">event</span>.<span class="txt">clientX</span> <span class="attr">&gt;=</span> <span class="txt">rect</span>.<span class="txt">left</span> <span class="attr">&amp;&amp;</span>
+    <span class="txt">event</span>.<span class="txt">clientX</span> <span class="attr">&lt;=</span> <span class="txt">rect</span>.<span class="txt">right</span> <span class="attr">&amp;&amp;</span>
+    <span class="txt">event</span>.<span class="txt">clientY</span> <span class="attr">&gt;=</span> <span class="txt">rect</span>.<span class="txt">top</span> <span class="attr">&amp;&amp;</span>
+    <span class="txt">event</span>.<span class="txt">clientY</span> <span class="attr">&lt;=</span> <span class="txt">rect</span>.<span class="txt">bottom</span>
+  <span class="attr">);</span>
+
+  <span class="tag-b">if (</span><span class="attr">!</span><span class="txt">isInDialog</span><span class="attr">) {</span>
+    <span class="txt">dialog</span>.<span class="txt">close</span><span class="attr">();</span>
+  <span class="attr">}</span>
+<span class="attr">});</span>
+    </code></pre></div>
+            </div>
+        
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+        <div class="preview1">
+            <iframe
+          src="../../examples/design/user-centered-design/What-Are-Best-Practices-for-Designing-Modal-Dialogs/example1.html"
+          title="Infinite Scroll Example 1"
+          loading="lazy"
+        ></iframe>
+        </div>
+    </div>
+
+    <p>
+        غالبًا ما تلاحظ وجود أزرار بارزة للغاية في النوافذ المنبثقة (modals)؛ 
+وتُعرف هذه الأزرار بـ "عبارات الحث على اتخاذ إجراء" (CTAs). 
+ومن الضروري أن تكون هذه الأزرار سهلة التمييز، 
+لأن الهدف من مقاطعة مسار المستخدم باستخدام نافذة منبثقة هو حثه على اتخاذ إجراء محدد.
+    </p>
+    <p>
+        يجب أن تتضمن النوافذ المنبثقة (Modals) أيضاً زر إغلاق؛ 
+        فمع أنك قد ترغب بشدة في أن ينقر المستخدم على عناصر الحث على اتخاذ إجراء (CTAs)، 
+        إلا أنه من المهم منحه خيار الخروج من النافذة المنبثقة والعودة إلى ما كان يفعله سابقاً.
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;button <span class="attr">id=<span class="value">"open-modal"</span></span>&gt;<span dir="rtl" class="txt">فتح النافذة المنبثقة</span>&lt;/button&gt;
+
+&lt;dialog&gt;
+ &lt;h2&gt;<span dir="rtl" class="txt">اشترك في نشرتنا الإخبارية!</span>&lt;/h2&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">احصل على أحدث التحديثات والعروض.</span>&lt;/p&gt;
+ &lt;button <span class="attr">class=<span class="value">"cta"</span></span>&gt;<span dir="rtl" class="txt">إشتراك</span>&lt;/button&gt;
+ &lt;button <span class="attr">class=<span class="value">"close"</span></span>&gt;<span dir="rtl" class="txt">إغلاق</span>&lt;/button&gt;
+&lt;/dialog&gt;
+
+&lt;script <span class="attr">src=<span class="value">"index.js"</span></span>&gt;&lt;/script&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.cta</span> <span class="attr">{
+ background-color: <span class="txt">#007BF</span>;
+ color: <span class="txt">white</span>;
+ border: <span class="txt">none</span>;
+ padding: <span class="txt">10px 20px</span>;
+ border-radius: <span class="txt">4px</span>;
+ cursor: <span class="txt">pointer</span>;
+}</span>
+
+<span class="tag-b">.close</span> <span class="attr">{
+ background-color: <span class="txt">transparent</span>;
+ color: <span class="txt">#007BFF</span>;
+ border: <span class="txt">none</span>;
+ padding: <span class="txt">10px 20px</span>;
+ cursor: <span class="txt">pointer</span>;
+}</span>
+    </code></pre></div>
+
+    <p class="file-name">index.js</p>
+    <div class="code-block"><pre><code>
+<span class="tag-b">const <span class="txt">dialog</span> = <span class="txt">document</span>.<span class="txt">querySelector</span></span><span class="attr">(</span><span class="txt">'dialog'</span><span class="attr">);</span>
+<span class="tag-b">const <span class="txt">closeButton</span> = <span class="txt">dialog</span>.<span class="txt">querySelector</span></span><span class="attr">(</span><span class="txt">'.close'</span><span class="attr">);</span>
+<span class="tag-b">const <span class="txt">openModalButton</span> = <span class="txt">document</span>.<span class="txt">getElementById</span></span><span class="attr">(</span><span class="txt">'open-modal'</span><span class="attr">);</span>
+
+<span class="txt">closeButton</span>.<span class="txt">addEventListener</span><span class="attr">(</span><span class="txt">'click'</span><span class="attr">, () => {</span>
+  <span class="txt">dialog</span>.<span class="txt">close</span><span class="attr">();</span>
+<span class="attr">});</span>
+
+<span class="txt">openModalButton</span>.<span class="txt">addEventListener</span><span class="attr">(</span><span class="txt">'click'</span><span class="attr">, () => {</span>
+  <span class="txt">dialog</span>.<span class="txt">showModal</span><span class="attr">();</span>
+<span class="attr">});</span>
+
+<span class="tag-b">// Close the modal when clicking outside of it</span>
+<span class="txt">dialog</span>.<span class="txt">addEventListener</span><span class="attr">(</span><span class="txt">'click'</span><span class="attr">, (</span><span class="txt">event</span><span class="attr">) => {</span>
+  <span class="tag-b">const <span class="txt">rect</span> = <span class="txt">dialog</span>.<span class="txt">getBoundingClientRect</span></span><span class="attr">();</span>
+  <span class="tag-b">const <span class="txt">isInDialog</span> = (</span>
+    <span class="txt">event</span>.<span class="txt">clientX</span> <span class="attr">&gt;=</span> <span class="txt">rect</span>.<span class="txt">left</span> <span class="attr">&amp;&amp;</span>
+    <span class="txt">event</span>.<span class="txt">clientX</span> <span class="attr">&lt;=</span> <span class="txt">rect</span>.<span class="txt">right</span> <span class="attr">&amp;&amp;</span>
+    <span class="txt">event</span>.<span class="txt">clientY</span> <span class="attr">&gt;=</span> <span class="txt">rect</span>.<span class="txt">top</span> <span class="attr">&amp;&amp;</span>
+    <span class="txt">event</span>.<span class="txt">clientY</span> <span class="attr">&lt;=</span> <span class="txt">rect</span>.<span class="txt">bottom</span>
+  <span class="attr">);</span>
+
+  <span class="tag-b">if (</span><span class="attr">!</span><span class="txt">isInDialog</span><span class="attr">) {</span>
+    <span class="txt">dialog</span>.<span class="txt">close</span><span class="attr">();</span>
+  <span class="attr">}</span>
+<span class="attr">});</span>
+    </code></pre></div>
+            </div>
+        
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+        <div class="preview2">
+            <iframe
+          src="../../examples/design/user-centered-design/What-Are-Best-Practices-for-Designing-Modal-Dialogs/example2.html"
+          title="Infinite Scroll Example 2"
+          loading="lazy"
+        ></iframe>
+        </div>
+    </div>
+
+    <p>
+        بطبيعة الحال، تثير النوافذ المنبثقة (modals) مخاوف تتعلق بإمكانية الوصول، 
+مثل الإدارة الصحيحة للتركيز على العناصر. 
+ومع ذلك، إذا اتخذت هذه الممارسات العامة نقطة انطلاق لك، فستمتلك أساساً متيناً يمكنك البناء عليه.
+    </p>
+
+  </section>
+
+
+  <section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما الغرض من تعتيم المحتوى الموجود خلف النافذة المنبثقة (modal dialog) ؟</p>
+
+		<p> 1. للحفاظ على عمر البطارية في الأجهزة المحمولة. ❌</p>
+        <p><mark> 2. لمساعدة المستخدمين على تحديد المنطقة التي يجب التفاعل معها بصرياً. ✅</mark></p>
+        <p> 3. لجعل الموقع الإلكتروني يُحمَّل بشكل أسرع. ❌</p>
+		<p> 4. لمنع المستخدمين من رؤية معلومات حساسة. ❌</p>
+        <br>
+
+        <p class="userstory">ماذا يعني اختصار CTA في سياق تصميم النوافذ المنبثقة (Modal Design) ؟</p>
+		
+		<p> 1. انقر لتفعيل Click To Activate. ❌</p>
+        <p> 2. أكمل الإجراء Complete The Action. ❌</p>
+        <p><mark> 3. دعوة لاتخاذ إجراء Call-to-Action. ✅</mark></p>
+		<p> 4. أغلق التطبيق Close The Application. ❌</p>
+        <br>
+
+        <p class="userstory">لماذا من المهم تضمين زر إغلاق في مربع الحوار المنبثق (Modal Dialog) ؟</p>
+		
+		<p> 1. يُعد ذلك مطلباً قانونياً في بعض البلدان. ❌</p>
+        <p> 2. لمنع النافذة المنبثقة (modal) من التسبب في تعطل المتصفح. ❌</p>
+        <p><mark> 3. لمنح المستخدمين خيار الخروج من النافذة المنبثقة واستئناف نشاطهم السابق. ✅</mark></p>
+		<p> 4. لإضفاء مظهر أكثر احترافية على النافذة المنبثقة. ❌</p>
+
+	</section>
+  
+
+
+
+
+  <!-- Pages -->
+  <section class="page-nav">
+        <a class="prev" href="./What-Are-Best-Practices-for-Designing-Infinite-Scrolls.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+  </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
