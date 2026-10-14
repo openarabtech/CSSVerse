@@ -1,0 +1,120 @@
+/* PREVIEW 1 */
+
+.preview1 .card1 {
+ border: 1px solid #ccc;
+ padding: 16px;
+ width: 300px;
+}
+
+.preview1 .card1 img {
+ max-width: 100%;
+ height: auto;
+}
+
+.preview1 .card1 h2 {
+ font-size: 1.5em;
+ margin: 8px 0;
+}
+
+.preview1 .card1 p {
+ font-size: 1em;
+ margin: 8px 0;
+}
+
+.preview1 .card1 button {
+ background-color: #007BFF;
+ color: white;
+ padding: 10px 16px;
+ border: none;
+ cursor: pointer;
+}
+
+
+/* PREVIEW 2 */
+.preview2 .card2 {
+ border: 1px solid #ccc;
+ padding: 16px;
+ width: 200px;
+ text-align: center;
+}
+
+.preview2 .card2 img {
+ max-width: 100%;
+ height: auto;
+}
+
+.preview2 .card2 h2 {
+ font-size: 1.5em;
+ margin: 8px 0;
+}
+
+.preview2 .card2 button {
+ background-color: #007BFF;
+ color: white;
+ padding: 10px 16px;
+ border: none;
+ cursor: pointer;
+}
+
+
+/* PREVIEW 3 */
+.preview3 .card3 {
+ border: 1px solid #ccc;
+ padding: 16px;
+ width: 300px;
+ cursor: pointer;
+}
+
+.preview3 .card3:hover {
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.preview3 .card3 a {
+ text-decoration: none;
+ color: inherit;
+}
+
+.preview3 .card3 img {
+ max-width: 100%;
+ height: auto;
+}
+
+.preview3 .card3 h2 {
+ font-size: 1.5em;
+ margin: 8px 0;
+}
+
+.preview3 .card3 button {
+ background-color: #007BFF;
+ color: white;
+ padding: 10px 16px;
+ border: none;
+ cursor: pointer;
+}
+
+
+/* PREVIEW 4 */
+.preview4 .card4 {
+ border: 1px solid #ccc;
+ padding: 16px;
+ width: 300px;
+ text-align: center;
+}
+
+.preview4 .card4 img {
+ max-width: 100%;
+ height: auto;
+}
+
+.preview4 .card4 h2 {
+ font-size: 1.5em;
+ margin: 8px 0;
+}
+
+.preview4 .card4 button {
+ background-color: #28a745;
+ color: white;
+ padding: 10px 16px;
+ border: none;
+ cursor: pointer;
+}

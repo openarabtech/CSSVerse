@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هي أفضل الممارسات لتصميم البطاقات Cards ؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/designStyles/user-centered-design/What-Are-Best-Practices-for-Designing-Cards.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | التصميم</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>التصميم المتمحور حول المستخدم User-Centered Design</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+  <section class="sub-title">
+        <h2>ما هي أفضل الممارسات لتصميم البطاقات Cards ؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+  </section>
+
+  <section>
+    <p>
+        <b>ملاحظة:</b> قد تستخدم بعض الأمثلة التفاعلية أكواد CSS لم تتعلمها بعد. لا تقلق بشأن محاولة فهم الكود بالكامل؛ فالهدف من هذه الأمثلة هو عرض نماذج لمفاهيم التصميم هذه، لتتمكن من فهم آلية عملها بشكل أفضل.
+    </p>
+    <p>
+      تُعد "مكونات البطاقات" (Card components) عنصراً شائعاً للغاية في مواقع التجارة الإلكترونية وشبكات التواصل الاجتماعي والمواقع الإخبارية؛ 
+      إذ تُستخدم للمساعدة في عرض المعلومات بطريقة منظمة. 
+      وعند تصميم هذه البطاقات، من المهم استيعاب أفضل الممارسات لضمان تمكّن المستخدمين من فهم المعلومات التي تسعى لإيصالها بسهولة.
+    </p>
+    <p>
+      يجب أن تكون البساطة (simplicity) هي الاعتبار الأول عند تصميم البطاقة؛ 
+      إذ لا ينبغي أن يبدو التصميم مزدحماً بصرياً (visually cluttered) أو يحتوي على قدر مفرط من المعلومات. 
+      فعلى سبيل المثال، إذا كان تصميم البطاقة مزدحماً، فسيجد المستخدم صعوبة في استيعاب كل تلك المعلومات دفعة واحدة.
+    </p>
+
+    <p class="hinty">
+      إليك مثال على تصميم بطاقة مزدحم (cluttered card design) :
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"card"</span></span>&gt;
+ &lt;img <span class="attr">src=<span class="value">"https://placehold.co/150x150"</span> alt=<span class="value">"صورة نموذجية للمنتج"</span></span>&gt;
+ &lt;h2&gt;&lt;strong&gt;&lt;em&gt;<span dir="rtl" class="txt">اسم المنتج: الإصدار النهائي</span>&lt;/em&gt;&lt;/strong&gt;&lt;/h2&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">
+    إنه منتج رائع سينال إعجابك بالتأكيد! 
+فهو يتمتع بالعديد من المزايا والفوائد التي ستجعل حياتك أسهل وأكثر متعة. 
+وسواء كنت في المنزل أو تتنقل، فإن هذا المنتج مثالي لجميع الأوقات والمواقف. 
+لا تفوّت هذا العرض المذهل؛ اشترِ الآن واختبر الفرق بنفسك!</span>
+ &lt;/p&gt;
+ &lt;button&gt;<span dir="rtl" class="txt">اشتري الآن</span>&lt;/button&gt;
+ &lt;button&gt;<span dir="rtl" class="txt">إقرأ المزيد</span>&lt;/button&gt;
+ &lt;button&gt;<span dir="rtl" class="txt">أضف إلى قائمة الرغبات</span>&lt;/button&gt;
+ &lt;p&gt;&lt;strong&gt;<span dir="rtl" class="txt">لم يتبقَّ سوى 3 قطع في المخزون!</span>&lt;/strong&gt;&lt;/p&gt;
+ &lt;p&gt;&lt;em&gt;<span dir="rtl" class="txt">حاصل على تقييم 4.8 نجوم من قِبَل 2,391 عميلاً</span>&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.card</span> <span class="attr">{
+ border: <span class="txt">1px solid #ccc</span>;
+ padding: <span class="txt">16px</span>;
+ width: <span class="txt">300px</span>;
+}</span>
+
+<span class="tag-b">.card img</span> <span class="attr">{
+ max-width: <span class="txt">100%</span>;
+ height: <span class="txt">auto</span>;
+}</span>
+
+<span class="tag-b">.card h2</span> <span class="attr">{
+ font-size: <span class="txt">1.5em</span>;
+ margin: <span class="txt">8px 0</span>;
+}</span>
+
+<span class="tag-b">.card p</span> <span class="attr">{
+ font-size: <span class="txt">1em</span>;
+ margin: <span class="txt">8px 0</span>;
+}</span>
+
+<span class="tag-b">.card button</span> <span class="attr">{
+ background-color: <span class="txt">#007BFF</span>;
+ color: <span class="txt">white</span>;
+ padding: <span class="txt">10px 16px</span>;
+ border: <span class="txt">none</span>;
+ cursor: <span class="txt">pointer</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview1">
+                  <div class="card1">
+                    <img src="https://placehold.co/150x150" alt="صورة نموذجية للمنتج">
+                    <h2><strong><em>اسم المنتج: الإصدار النهائي</em></strong></h2>
+                    <p>
+                        إنه منتج رائع سينال إعجابك بالتأكيد! 
+                    فهو يتمتع بالعديد من المزايا والفوائد التي ستجعل حياتك أسهل وأكثر متعة. 
+                    وسواء كنت في المنزل أو تتنقل، فإن هذا المنتج مثالي لجميع الأوقات والمواقف. 
+                    لا تفوّت هذا العرض المذهل؛ اشترِ الآن واختبر الفرق بنفسك!
+                    </p>
+                    <button>اشتري الآن</button>
+                    <button>إقرأ المزيد</button>
+                    <button>أضف إلى قائمة الرغبات</button>
+                    <p><strong>لم يتبقَّ سوى 3 قطع في المخزون!</strong></p>
+                    <p><em>حاصل على تقييم 4.8 نجوم من قِبَل 2,391 عميلاً</em></p>
+                  </div>
+                </div>
+            </div>
+
+    <p>
+      يُسهّل تقليل كمية المعلومات وتوفير مسافات مناسبة بين العناصر الموجودة على البطاقة على المستخدم استيعاب المعلومات، 
+      كما يتيح عرض بطاقات متعددة في الصفحة الواحدة.
+    </p>
+    
+    <p class="hinty">
+      إليك مثال على تصميم بطاقة بسيط (simple card design) :
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"card"</span></span>&gt;
+ &lt;img <span class="attr">src=<span class="value">"https://placehold.co/150x150"</span> alt=<span class="value">"صورة نموذجية للمنتج"</span></span>&gt;
+ &lt;h2&gt;<span dir="rtl" class="txt">اسم المنتج</span>&lt;/h2&gt;
+ &lt;button&gt;<span dir="rtl" class="txt">اشتري الآن</span>&lt;/button&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.card</span> <span class="attr">{
+ border: <span class="txt">1px solid #ccc</span>;
+ padding: <span class="txt">16px</span>;
+ width: <span class="txt">200px</span>;
+ text-align: <span class="txt">center</span>;
+}</span>
+
+<span class="tag-b">.card img</span> <span class="attr">{
+ max-width: <span class="txt">100%</span>;
+ height: <span class="txt">auto</span>;
+}</span>
+
+<span class="tag-b">.card h2</span> <span class="attr">{
+ font-size: <span class="txt">1.5em</span>;
+ margin: <span class="txt">8px 0</span>;
+}</span>
+
+<span class="tag-b">.card button</span> <span class="attr">{
+ background-color: <span class="txt">#007BFF</span>;
+ color: <span class="txt">white</span>;
+ padding: <span class="txt">10px 16px</span>;
+ border: <span class="txt">none</span>;
+ cursor: <span class="txt">pointer</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview2">
+                  <div class="card2">
+                    <img src="https://placehold.co/150x150" alt="صورة نموذجية للمنتج">
+                    <h2>اسم المنتج</h2>
+                    <button>اشتري الآن</button>
+                  </div>
+                </div>
+            </div>
+
+    <p>
+      ثمة أمر آخر ينبغي مراعاته، وهو تحديد المواقع التي يمكن للمستخدم النقر عليها داخل البطاقة؛ 
+      فبعض التصاميم تشتمل على زر واحد يوضح بوضوح مكان النقر، 
+      بينما تتيح تصاميم أخرى النقر على مساحة البطاقة بأكملها. 
+      وفي هذه الحالة، يتغير لون البطاقة أو يظهر عليها تأثير ظل عند تمرير المؤشر فوق أي جزء منها، وذلك للإشارة إلى قابليتها للنقر. 
+      ومهما كان التصميم الذي تختاره، يجب أن يتسم بالاتساق في جميع أرجاء الموقع وأن يكون سهل الفهم بالنسبة للمستخدم.
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"card"</span></span>&gt;
+ &lt;a <span class="attr">href=<span class="value">"#"</span></span>&gt;
+  &lt;img <span class="attr">src=<span class="value">"https://placehold.co/150x150"</span> alt=<span class="value">"صورة نموذجية للمنتج"</span></span>&gt;
+  &lt;h2&gt;<span dir="rtl" class="txt">اسم المنتج</span>&lt;/h2&gt;
+  &lt;button&gt;<span dir="rtl" class="txt">اشتري الآن</span>&lt;/button&gt;
+ &lt;/a&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.card</span> <span class="attr">{
+ border: <span class="txt">1px solid #ccc</span>;
+ padding: <span class="txt">16px</span>;
+ width: <span class="txt">300px</span>;
+ cursor: <span class="txt">pointer</span>;
+}</span>
+
+<span class="tag-b">.card:hover</span> <span class="attr">{
+ box-shadow: <span class="txt">0 4px 8px</span> <span class="value">rgba</span>(<span class="txt">0, 0, 0, 0.2</span>);
+}</span>
+
+<span class="tag-b">.card a</span> <span class="attr">{
+ text-decoration: <span class="txt">none</span>;
+ color: <span class="txt">inherit</span>;
+}</span>
+
+<span class="tag-b">.card img</span> <span class="attr">{
+ max-width: <span class="txt">100%</span>;
+ height: <span class="txt">auto</span>;
+}</span>
+
+<span class="tag-b">.card h2</span> <span class="attr">{
+ font-size: <span class="txt">1.5em</span>;
+ margin: <span class="txt">8px 0</span>;
+}</span>
+
+<span class="tag-b">.card button</span> <span class="attr">{
+ background-color: <span class="txt">#007BFF</span>;
+ color: <span class="txt">white</span>;
+ padding: <span class="txt">10px 16px</span>;
+ border: <span class="txt">none</span>;
+ cursor: <span class="txt">pointer</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview3">
+                  <div class="card3">
+                    <a href="#">
+                      <img src="https://placehold.co/150x150" alt="صورة نموذجية للمنتج">
+                      <h2>اسم المنتج</h2>
+                      <button>اشتري الآن</button>
+                    </a>
+                  </div>
+                </div>
+            </div>
+    
+    <p>
+      ثمة عامل آخر يجب مراعاته، وهو استخدام الوسائط (media) في البطاقات؛ 
+      إذ يمكن لاختيار وسائط عالية الجودة أن يعزز تجربة المستخدم بشكل ملحوظ. 
+      فعلى سبيل المثال، عند استخدام صور أو مقاطع فيديو لبطاقة تعرض منتجاً ما، كلما ارتفعت جودة هذه الوسائط، 
+      زاد اهتمام المستخدم بذلك المنتج؛ 
+      في المقابل، قد يؤدي استخدام وسائط رديئة الجودة إلى زعزعة ثقة المستخدم في جودة منتجاتك وخدماتك.
+    </p>
+    <p>
+      من الأمور الأخيرة التي ينبغي مراعاتها استخدام التدرج الهرمي للألوان (color hierarchy)؛ 
+      إذ يجب التأكد من أن المعلومات الأكثر أهمية على البطاقة هي الأكثر بروزاً. 
+      ويمكنك استخدام ألوان زاهية (bright colors) للعناصر المهمة - مثل زر "الدعوة لاتخاذ إجراء" (Call-to-Action) - 
+      وألوان فاتحة (light colors) للعناصر الأقل أهمية على البطاقة.
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"card"</span></span>&gt;
+ &lt;img <span class="attr">src=<span class="value">"https://placehold.co/150x150"</span> alt=<span class="value">"صورة نموذجية للمنتج"</span></span>&gt;
+ &lt;h2&gt;<span dir="rtl" class="txt">اسم المنتج</span>&lt;/h2&gt;
+ &lt;button&gt;<span dir="rtl" class="txt">اشتري الآن</span>&lt;/button&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.card</span> <span class="attr">{
+ border: <span class="txt">1px solid #ccc</span>;
+ padding: <span class="txt">16px</span>;
+ width: <span class="txt">300px</span>;
+ text-align: <span class="txt">center</span>;
+}</span>
+
+<span class="tag-b">.card img</span> <span class="attr">{
+ max-width: <span class="txt">100%</span>;
+ height: <span class="txt">auto</span>;
+}</span>
+
+<span class="tag-b">.card h2</span> <span class="attr">{
+ font-size: <span class="txt">1.5em</span>;
+ margin: <span class="txt">8px 0</span>;
+}</span>
+
+<span class="tag-b">.card button</span> <span class="attr">{
+ background-color: <span class="txt">#28a745</span>;
+ color: <span class="txt">white</span>;
+ padding: <span class="txt">10px 16px</span>;
+ border: <span class="txt">none</span>;
+ cursor: <span class="txt">pointer</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview4">
+                  <div class="card4">
+                    <img src="https://placehold.co/150x150" alt="صورة نموذجية للمنتج">
+                    <h2>اسم المنتج</h2>
+                    <button>اشتري الآن</button>
+                  </div>
+                </div>
+            </div>
+
+    <p>
+      أثناء مواصلتك العمل على تطبيقات الويب، ضع في اعتبارك أفضل الممارسات المختلفة لتصميم البطاقات؛
+      فهذا سيساعدك على توفير تجارب مستخدم (user experiences) أفضل للمستخدمين.
+    </p>
+  </section>
+
+
+  <!-- QUESTIONS -->
+  	<section class="questions">
+
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">لماذا يُعد تصميم البطاقة البسيط (simple card design) أمراً مهماً؟</p>
+
+		<p><mark> 1. تريد أن يحظى المستخدمون بتجربة استخدام جيدة وأن يستوعبوا المعلومات بسهولة. ✅</mark></p>
+		<p> 2. تريد أن يشعر المستخدمون بالارتباك. ❌</p>
+    <p> 3. تريد أن يشعر المستخدمون بالإرهاق (أو الغرق في كثرة المعلومات). ❌</p>
+		<p> 4. تريد أن يشعر المستخدمون بالإحباط. ❌</p>
+    <br>
+
+    <p class="userstory">لماذا يُعد وجود تدرج لوني (color hierarchy) جيد في تصميم بطاقتك أمراً مهماً؟</p>
+		
+		<p> 1. لجعل فهم المعلومات أمراً صعباً على المستخدمين. ❌</p>
+    <p> 2. لتحسين أداء الموقع. ❌</p>
+    <p><mark> 3. لإبراز أهم المعلومات الموجودة على البطاقة. ✅</mark></p>
+		<p> 4. لجعل البطاقة مزدحمة بصرياً. ❌</p>
+    <br>
+
+    <p class="userstory">ما هي مزايا استخدام وسائط عالية الجودة (high quality media) في تصميم بطاقتك؟</p>
+		
+		<p> 1. لا توجد أي مزايا. ❌</p>
+		<p> 2. سيغادر المستخدمون الموقع على الفور. ❌</p>
+		<p> 3. سيؤدي ذلك إلى تسريع أداء الموقع. ❌</p>
+    <p><mark> 4. سيثق المستخدمون في جودة منتجاتك وخدماتك. ✅</mark></p>
+
+	</section>
+  
+  
+
+
+
+
+  <!-- Pages -->
+  <section class="page-nav">
+        <a class="prev" href="./What-Are-Best-Practices-for-Designing-Breadcrumbs.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+  </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+<script src="../../js/design/user-centered-design/What-Are-Best-Practices-for-Designing-a-Dark-Mode-Feature.js"></script>
+
+</body>
+</html>
