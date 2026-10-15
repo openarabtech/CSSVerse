@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هي أفضل الممارسات لتصميم عربات التسوق Designing Shopping Carts ؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/designStyles/user-centered-design/What-Are-Best-Practices-for-Designing-Shopping-Carts.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | التصميم</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>التصميم المتمحور حول المستخدم User-Centered Design</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+  <section class="sub-title">
+        <h2>ما هي أفضل الممارسات لتصميم عربات التسوق Designing Shopping Carts ؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+  </section>
+
+  <section>
+    <p>
+        <b>ملاحظة:</b> قد تستخدم بعض الأمثلة التفاعلية أكواد CSS لم تتعلمها بعد. لا تقلق بشأن محاولة فهم الكود بالكامل؛ فالهدف من هذه الأمثلة هو عرض نماذج لمفاهيم التصميم هذه، لتتمكن من فهم آلية عملها بشكل أفضل.
+    </p>
+    <p>
+       هناك آلاف مواقع التجارة الإلكترونية على الإنترنت، 
+        و"عربة التسوق" (shopping cart) جزء أساسي من تجربة التجارة الإلكترونية. 
+        التصميم الجيد يجعل تجربة عربة التسوق أكثر متعة ويزيد المبيعات. 
+        التصميم السيء قد يؤدي إلى ترك العربات وخسارة المبيعات. 
+    </p>
+
+    <!-- Keeping the Cart Visible -->
+    <section>
+        <h3>إبقاء عربة التسوق (Shopping Cart) ظاهرة (Visible)</h3>
+        <p>
+            في هذا الدرس، سنناقش بعض أفضل الممارسات لتصميم عربات التسوق. أول اعتبار تصميمي هو التأكد من أن عربة التسوق مرئية للمستخدمين في جميع الأوقات. 
+معظم تصاميم عربات التسوق تعرض العربة في الزاوية العلوية اليسرى من الصفحة. 
+يجب أن يرى المستخدمون عدد العناصر في عربتهم بجانب أيقونة العربة (cart icon)، ويجب أن يتمكنوا من النقر على العربة لرؤية تفاصيل أكثر عن العناصر التي يشترونها.
+        </p>
+
+        <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview1">
+                    <iframe
+          src="../../examples/design/user-centered-design/What-Are-Best-Practices-for-Designing-Shopping-Carts/example1.html"
+          title="Shopping Carts Example 1"
+          loading="lazy"
+        ></iframe>
+                </div>
+            </div>
+        <br>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"shopping-cart"</span></span>&gt;
+ &lt;button <span class="attr">id=</span><span class="value">"cart-btn"</span> <span class="attr">aria-label=</span><span class="value">"Shopping cart"</span>&gt;
+  &lt;svg
+    <span class="attr">xmlns=</span><span class="value">"http://www.w3.org/2000/svg"</span>
+    <span class="attr">width=</span><span class="value">"24"</span>
+    <span class="attr">height=</span><span class="value">"24"</span>
+    <span class="attr">fill=</span><span class="value">"none"</span>
+    <span class="attr">stroke=</span><span class="value">"currentColor"</span>
+    <span class="attr">stroke-width=</span><span class="value">"2"</span>
+    <span class="attr">stroke-linecap=</span><span class="value">"round"</span>
+    <span class="attr">stroke-linejoin=</span><span class="value">"round"</span>
+    <span class="attr">class=</span><span class="value">"feather feather-shopping-cart"</span>
+    <span class="attr">viewBox=</span><span class="value">"0 0 24 24"</span>
+    <span class="attr">aria-hidden=</span><span class="value">"true"</span>
+    <span class="attr">focusable=</span><span class="value">"false"</span>
+  &gt;
+    &lt;circle <span class="attr">cx=</span><span class="value">"9"</span> <span class="attr">cy=</span><span class="value">"21"</span> <span class="attr">r=</span><span class="value">"1"</span>&gt;&lt;/circle&gt;
+    &lt;circle <span class="attr">cx=</span><span class="value">"20"</span> <span class="attr">cy=</span><span class="value">"21"</span> <span class="attr">r=</span><span class="value">"1"</span>&gt;&lt;/circle&gt;
+    &lt;path <span class="attr">d=</span><span class="value">"M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"</span>&gt;&lt;/path&gt;
+  &lt;/svg&gt;
+  &lt;span <span class="attr">id=</span><span class="value">"item-count"</span>&gt;<span class="txt">2</span>&lt;/span&gt;
+ &lt;/button&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.shopping-cart</span> <span class="attr">{</span>
+<span class="attr">position:</span> <span class="txt">fixed</span>;
+<span class="attr">top:</span> <span class="txt">20px</span>;
+<span class="attr">left:</span> <span class="txt">20px</span>;
+<span class="attr">font-family:</span> <span class="txt">sans-serif</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">#cart-btn</span> <span class="attr">{</span>
+<span class="attr">background:</span> <span class="txt">none</span>;
+<span class="attr">border:</span> <span class="txt">none</span>;
+<span class="attr">cursor:</span> <span class="txt">default</span>;
+<span class="attr">position:</span> <span class="txt">relative</span>;
+<span class="attr">display:</span> <span class="txt">flex</span>;
+<span class="attr">align-items:</span> <span class="txt">center</span>;
+<span class="attr">padding:</span> <span class="txt">4px</span>;
+<span class="attr">color:</span> <span class="txt">#333</span>;
+<span class="attr">font-size:</span> <span class="txt">24px</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">#item-count</span> <span class="attr">{</span>
+<span class="attr">background:</span> <span class="txt">red</span>;
+<span class="attr">color:</span> <span class="txt">white</span>;
+<span class="attr">border-radius:</span> <span class="txt">50%</span>;
+<span class="attr">padding:</span> <span class="txt">2px 6px</span>;
+<span class="attr">font-size:</span> <span class="txt">13px</span>;
+<span class="attr">position:</span> <span class="txt">absolute</span>;
+<span class="attr">top:</span> <span class="txt">-6px</span>;
+<span class="attr">left:</span> <span class="txt">-6px</span>;
+<span class="attr">min-width:</span> <span class="txt">18px</span>;
+<span class="attr">height:</span> <span class="txt">18px</span>;
+<span class="attr">line-height:</span> <span class="txt">14px</span>;
+<span class="attr">text-align:</span> <span class="txt">center</span>;
+<span class="attr">font-weight:</span> <span class="txt">700</span>;
+<span class="attr">user-select:</span> <span class="txt">none</span>;
+<span class="attr">box-sizing:</span> <span class="txt">border-box</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">#cart-details</span> <span class="attr">{</span>
+<span class="attr">background:</span> <span class="txt">white</span>;
+<span class="attr">border:</span> <span class="txt">1px solid #ccc</span>;
+<span class="attr">max-height:</span> <span class="txt">300px</span>;
+<span class="attr">overflow-y:</span> <span class="txt">auto</span>;
+<span class="attr">box-shadow:</span> <span class="txt">0 4px 8px rgba(0,0,0,0.1)</span>;
+<span class="attr">margin-top:</span> <span class="txt">10px</span>;
+<span class="attr">padding:</span> <span class="txt">10px</span>;
+<span class="attr">position:</span> <span class="txt">relative</span>;
+<span class="attr">z-index:</span> <span class="txt">1000</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">#cart-items</span> <span class="attr">{</span>
+<span class="attr">list-style:</span> <span class="txt">none</span>;
+<span class="attr">padding:</span> <span class="txt">0</span>;
+<span class="attr">margin:</span> <span class="txt">0</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">#cart-items li</span> <span class="attr">{</span>
+<span class="attr">padding:</span> <span class="txt">5px 0</span>;
+<span class="attr">border-bottom:</span> <span class="txt">1px solid #eee</span>;
+<span class="attr">}</span>
+            </code></pre></div>
+            </div>
+        
+            
+
+            <br>
+    
+    </section>
+
+    <!-- Managing Item Quantity and Removal -->
+    <section>
+        <h3>إدارة كمية العناصر (Item Quantity) وإزالتها (Removal)</h3>
+        <p>
+            اعتبار آخر هو توفير طريقة واضحة للمستخدمين لتحديث كمية العناصر في عربتهم (update the quantity of items in their cart). 
+يمكن تحقيق ذلك بتوفير حقل إدخال للكمية (quantity input field) بجانب كل عنصر في العربة. 
+يمكن للمستخدمين تحديث كمية العنصر بسهولة بتغيير الرقم في حقل الإدخال (the input field).
+        </p>
+        <p>
+            يجب أيضًا توفير زر "إزالة" <span dir="ltr">("Remove" button)</span> بجانب كل عنصر في العربة. 
+هذا يسمح للمستخدمين بإزالة العناصر بسهولة من عربتهم. 
+لا تريد أن تجعل إزالة العناصر صعبة على المستخدمين، لأن ذلك قد يسبب إحباطًا وترك العربات.
+        </p>
+
+        <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview1">
+                    <iframe
+          src="../../examples/design/user-centered-design/What-Are-Best-Practices-for-Designing-Shopping-Carts/example2.html"
+          title="Shopping Carts Example 2"
+          loading="lazy"
+        ></iframe>
+                </div>
+            </div>
+            <br>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"shopping-cart"</span></span>&gt;
+ &lt;h2&gt;<span dir="rtl" class="txt">عربة التسوق الخاصة بك</span>&lt;/h2&gt;
+ &lt;ul <span class="attr">class=</span><span class="value">"cart-items"</span>&gt;
+  &lt;li <span class="attr">class=</span><span class="value">"cart-item"</span>&gt;
+    &lt;span <span class="attr">class=</span><span class="value">"item-name"</span>&gt;<span dir="rtl" class="txt">تيشيرت</span>&lt;/span&gt;
+    &lt;input <span class="attr">type=</span><span class="value">"number"</span> <span class="attr">min=</span><span class="value">"1"</span> <span class="attr">value=</span><span class="value">"2"</span> <span class="attr">class=</span><span class="value">"quantity-input"</span> <span class="attr">aria-label=</span><span class="value">"Quantity for T-Shirt"</span> /&gt;
+    &lt;button <span class="attr">class=</span><span class="value">"remove-btn"</span>&gt;<span dir="rtl" class="txt">إزالة</span>&lt;/button&gt;
+  &lt;/li&gt;
+  &lt;li <span class="attr">class=</span><span class="value">"cart-item"</span>&gt;
+    &lt;span <span class="attr">class=</span><span class="value">"item-name"</span>&gt;<span dir="rtl" class="txt">قبعة</span>&lt;/span&gt;
+    &lt;input <span class="attr">type=</span><span class="value">"number"</span> <span class="attr">min=</span><span class="value">"1"</span> <span class="attr">value=</span><span class="value">"1"</span> <span class="attr">class=</span><span class="value">"quantity-input"</span> <span class="attr">aria-label=</span><span class="value">"Quantity for Hat"</span> /&gt;
+    &lt;button <span class="attr">class=</span><span class="value">"remove-btn"</span>&gt;<span dir="rtl" class="txt">إزالة</span>&lt;/button&gt;
+  &lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.shopping-cart</span> <span class="attr">{</span>
+<span class="attr">max-width:</span> <span class="txt">400px</span>;
+<span class="attr">margin:</span> <span class="txt">20px auto</span>;
+<span class="attr">font-family:</span> <span class="txt">sans-serif</span>;
+<span class="attr">border:</span> <span class="txt">1px solid #ccc</span>;
+<span class="attr">padding:</span> <span class="txt">15px</span>;
+<span class="attr">background:</span> <span class="txt">white</span>;
+<span class="attr">box-shadow:</span> <span class="txt">0 4px 8px rgba(0,0,0,0.1)</span>;
+<span class="attr">border-radius:</span> <span class="txt">6px</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.shopping-cart h2</span> <span class="attr">{</span>
+<span class="attr">margin-top:</span> <span class="txt">0</span>;
+<span class="attr">font-weight:</span> <span class="txt">600</span>;
+<span class="attr">font-size:</span> <span class="txt">1.4rem</span>;
+<span class="attr">border-bottom:</span> <span class="txt">1px solid #ddd</span>;
+<span class="attr">padding-bottom:</span> <span class="txt">8px</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.cart-items</span> <span class="attr">{</span>
+<span class="attr">list-style:</span> <span class="txt">none</span>;
+<span class="attr">padding:</span> <span class="txt">0</span>;
+<span class="attr">margin:</span> <span class="txt">0</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.cart-item</span> <span class="attr">{</span>
+<span class="attr">display:</span> <span class="txt">flex</span>;
+<span class="attr">align-items:</span> <span class="txt">center</span>;
+<span class="attr">justify-content:</span> <span class="txt">space-between</span>;
+<span class="attr">padding:</span> <span class="txt">10px 0</span>;
+<span class="attr">border-bottom:</span> <span class="txt">1px solid #eee</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.item-name</span> <span class="attr">{</span>
+<span class="attr">flex:</span> <span class="txt">1</span>;
+<span class="attr">font-size:</span> <span class="txt">1rem</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.quantity-input</span> <span class="attr">{</span>
+<span class="attr">width:</span> <span class="txt">50px</span>;
+<span class="attr">padding:</span> <span class="txt">4px 6px</span>;
+<span class="attr">font-size:</span> <span class="txt">1rem</span>;
+<span class="attr">margin:</span> <span class="txt">0 10px</span>;
+<span class="attr">border:</span> <span class="txt">1px solid #ccc</span>;
+<span class="attr">border-radius:</span> <span class="txt">4px</span>;
+<span class="attr">text-align:</span> <span class="txt">center</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.remove-btn</span> <span class="attr">{</span>
+<span class="attr">background:</span> <span class="txt">#e74c3c</span>;
+<span class="attr">border:</span> <span class="txt">none</span>;
+<span class="attr">color:</span> <span class="txt">white</span>;
+<span class="attr">padding:</span> <span class="txt">6px 12px</span>;
+<span class="attr">border-radius:</span> <span class="txt">4px</span>;
+<span class="attr">font-size:</span> <span class="txt">0.9rem</span>;
+<span class="attr">cursor:</span> <span class="txt">pointer</span>;
+<span class="attr">transition:</span> <span class="txt">background-color 0.2s ease</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.remove-btn:hover,
+.remove-btn:focus</span> <span class="attr">{</span>
+<span class="attr">background:</span> <span class="txt">#c0392b</span>;
+<span class="attr">outline:</span> <span class="txt">none</span>;
+<span class="attr">}</span>
+            </code></pre></div>
+            </div>
+        
+            
+            <br>
+
+    </section>
+
+
+    <!-- Choosing a Recognizable Cart Icon -->
+    <section>
+        <h3>اختيار أيقونة عربة تسوق معروفة (Recognizable Cart Icon)</h3>
+        <p>
+            اعتبار آخر هو أيقونة عربة التسوق (shopping cart icon) نفسها. 
+            يجب أن تكون الأيقونة سهلة التعرف عليها لجميع المستخدمين. 
+            الأيقونة الشائعة هي عربة تسوق بمقبض (handle) وعجلات (wheels). 
+            قد تكون الأيقونات الأخرى حقيبة تسوق (shopping bag) أو سلة (basket). 
+            لكن لا تختار أيقونة مجردة جدًا (too abstract) أو يصعب فهمها.
+        </p>
+    </section>
+
+    <!-- Displaying the Cart Total -->
+    <section>
+        <h3>عرض إجمالي العربة (Cart Total)</h3>
+        <p>
+            عندما يريد المستخدم مراجعة المجموع في عربته، يجب أن يتمكن من العثور بسهولة على التكلفة الإجمالية (the total) لكل العناصر في العربة. 
+            يجب عرض ذلك بشكل بارز (displayed prominently) في الصفحة، حتى لا يضطر المستخدمون للبحث عنه.
+        </p>
+
+        <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview1">
+				 <iframe
+					src="../../examples/design/user-centered-design/What-Are-Best-Practices-for-Designing-Shopping-Carts/example3.html"
+					title="Shopping Carts Example 3"
+					loading="lazy"
+				 ></iframe>
+				</div>
+            </div>
+            <br>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=</span><span class="value">"shopping-cart"</span>&gt;
+  &lt;button <span class="attr">id=</span><span class="value">"cart-btn"</span> <span class="attr">aria-label=</span><span class="value">"Shopping cart"</span>&gt;
+    &lt;svg
+      <span class="attr">xmlns=</span><span class="value">"http://www.w3.org/2000/svg"</span>
+      <span class="attr">width=</span><span class="value">"28"</span>
+      <span class="attr">height=</span><span class="value">"28"</span>
+      <span class="attr">fill=</span><span class="value">"none"</span>
+      <span class="attr">stroke=</span><span class="value">"currentColor"</span>
+      <span class="attr">stroke-width=</span><span class="value">"2"</span>
+      <span class="attr">stroke-linecap=</span><span class="value">"round"</span>
+      <span class="attr">stroke-linejoin=</span><span class="value">"round"</span>
+      <span class="attr">class=</span><span class="value">"feather feather-shopping-cart"</span>
+      <span class="attr">viewBox=</span><span class="value">"0 0 24 24"</span>
+      <span class="attr">aria-hidden=</span><span class="value">"true"</span>
+      <span class="attr">focusable=</span><span class="value">"false"</span>
+    &gt;
+      &lt;circle <span class="attr">cx=</span><span class="value">"9"</span> <span class="attr">cy=</span><span class="value">"21"</span> <span class="attr">r=</span><span class="value">"1"</span>&gt;&lt;/circle&gt;
+      &lt;circle <span class="attr">cx=</span><span class="value">"20"</span> <span class="attr">cy=</span><span class="value">"21"</span> <span class="attr">r=</span><span class="value">"1"</span>&gt;&lt;/circle&gt;
+      &lt;path <span class="attr">d=</span><span class="value">"M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"</span>&gt;&lt;/path&gt;
+    &lt;/svg&gt;
+    &lt;span <span class="attr">id=</span><span class="value">"item-count"</span>&gt;<span class="txt">3</span>&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;div <span class="attr">id=</span><span class="value">"cart-details"</span>&gt;
+    &lt;ul <span class="attr">id=</span><span class="value">"cart-items"</span>&gt;
+      &lt;li&gt;<span dir="rtl" class="txt">قميص (2x) - $40.00</span>&lt;/li&gt;
+      &lt;li&gt;<span dir="rtl" class="txt">قبعة (1x) - $15.00</span>&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div <span class="attr">id=</span><span class="value">"cart-total"</span>&gt;
+      <span dir="rtl" class="txt">المجموع: </span>&lt;strong&gt;<span dir="rtl" class="txt">55.00$</span>&lt;/strong&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.shopping-cart</span> <span class="attr">{</span>
+<span class="attr">position:</span> <span class="txt">fixed</span>;
+<span class="attr">top:</span> <span class="txt">20px</span>;
+<span class="attr">right:</span> <span class="txt">20px</span>;
+<span class="attr">font-family:</span> <span class="txt">sans-serif</span>;
+<span class="attr">width:</span> <span class="txt">280px</span>;
+<span class="attr">background:</span> <span class="txt">white</span>;
+<span class="attr">border:</span> <span class="txt">1px solid #ccc</span>;
+<span class="attr">padding:</span> <span class="txt">10px</span>;
+<span class="attr">box-shadow:</span> <span class="txt">0 4px 8px rgba(0,0,0,0.1)</span>;
+<span class="attr">border-radius:</span> <span class="txt">6px</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">#cart-btn</span> <span class="attr">{</span>
+<span class="attr">background:</span> <span class="txt">none</span>;
+<span class="attr">border:</span> <span class="txt">none</span>;
+<span class="attr">cursor:</span> <span class="txt">default</span>;
+<span class="attr">position:</span> <span class="txt">relative</span>;
+<span class="attr">display:</span> <span class="txt">flex</span>;
+<span class="attr">align-items:</span> <span class="txt">center</span>;
+<span class="attr">padding:</span> <span class="txt">4px</span>;
+<span class="attr">color:</span> <span class="txt">#333</span>;
+<span class="attr">font-size:</span> <span class="txt">28px</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">#item-count</span> <span class="attr">{</span>
+<span class="attr">background:</span> <span class="txt">red</span>;
+<span class="attr">color:</span> <span class="txt">white</span>;
+<span class="attr">border-radius:</span> <span class="txt">50%</span>;
+<span class="attr">padding:</span> <span class="txt">2px 7px</span>;
+<span class="attr">font-size:</span> <span class="txt">14px</span>;
+<span class="attr">position:</span> <span class="txt">absolute</span>;
+<span class="attr">top:</span> <span class="txt">-6px</span>;
+<span class="attr">right:</span> <span class="txt">-6px</span>;
+<span class="attr">min-width:</span> <span class="txt">18px</span>;
+<span class="attr">height:</span> <span class="txt">18px</span>;
+<span class="attr">line-height:</span> <span class="txt">14px</span>;
+<span class="attr">text-align:</span> <span class="txt">center</span>;
+<span class="attr">font-weight:</span> <span class="txt">700</span>;
+<span class="attr">user-select:</span> <span class="txt">none</span>;
+<span class="attr">box-sizing:</span> <span class="txt">border-box</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">#cart-details</span> <span class="attr">{</span>
+<span class="attr">margin-top:</span> <span class="txt">10px</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">#cart-items</span> <span class="attr">{</span>
+<span class="attr">list-style:</span> <span class="txt">none</span>;
+<span class="attr">padding:</span> <span class="txt">0</span>;
+<span class="attr">margin:</span> <span class="txt">0 0 10px 0</span>;
+<span class="attr">font-size:</span> <span class="txt">1rem</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">#cart-items li</span> <span class="attr">{</span>
+<span class="attr">padding:</span> <span class="txt">5px 0</span>;
+<span class="attr">border-bottom:</span> <span class="txt">1px solid #eee</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">#cart-total</span> <span class="attr">{</span>
+<span class="attr">font-size:</span> <span class="txt">1.2rem</span>;
+<span class="attr">font-weight:</span> <span class="txt">700</span>;
+<span class="attr">text-align:</span> <span class="txt">left</span>;
+<span class="attr">color:</span> <span class="txt">#111</span>;
+<span class="attr">}</span>
+            </code></pre></div>
+            </div>
+        
+            
+            <br>
+    </section>
+
+    <!-- Adding a Checkout Call-to-Action -->
+    <section>
+        <h3>إضافة زر دعوة لاتخاذ إجراء لإتمام الشراء (Checkout Call-to-Action)</h3>
+        <p>
+            أخيرًا، يجب توفير زر دعوة لاتخاذ إجراء واضح (clear call-to-action button) للمستخدمين للمتابعة إلى الدفع (checkout). 
+            يجب أن يكون هذا الزر بارزًا في الصفحة، حتى لا يضطر المستخدمون للبحث عنه.
+        </p>
+        <p>
+            لا تريد وجود الكثير من الأزرار في الصفحة، لأن ذلك قد يسبب ارتباكًا. 
+يجب أن يكون زر الدعوة لاتخاذ إجراء (call-to-action button) هو الزر الأكثر بروزًا في الصفحة، حتى يعرف المستخدمون بالضبط ما يجب فعله بعد ذلك. 
+يجب استخدام اللون الأساسي للعلامة التجارية للزر (brand's primary color for the button)، ليبرز عن بقية الصفحة.
+        </p>
+
+        <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview1">
+				 <iframe
+					src="../../examples/design/user-centered-design/What-Are-Best-Practices-for-Designing-Shopping-Carts/example4.html"
+					title="Shopping Carts Example 4"
+					loading="lazy"
+				 ></iframe>
+				</div>
+            </div>
+
+            <br>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=</span><span class="value">"shopping-cart"</span>&gt;
+  &lt;button <span class="attr">id=</span><span class="value">"cart-btn"</span> <span class="attr">aria-label=</span><span class="value">"Shopping cart"</span>&gt;
+    &lt;svg
+      <span class="attr">xmlns=</span><span class="value">"http://www.w3.org/2000/svg"</span>
+      <span class="attr">width=</span><span class="value">"28"</span>
+      <span class="attr">height=</span><span class="value">"28"</span>
+      <span class="attr">fill=</span><span class="value">"none"</span>
+      <span class="attr">stroke=</span><span class="value">"currentColor"</span>
+      <span class="attr">stroke-width=</span><span class="value">"2"</span>
+      <span class="attr">stroke-linecap=</span><span class="value">"round"</span>
+      <span class="attr">stroke-linejoin=</span><span class="value">"round"</span>
+      <span class="attr">class=</span><span class="value">"feather feather-shopping-cart"</span>
+      <span class="attr">viewBox=</span><span class="value">"0 0 24 24"</span>
+      <span class="attr">aria-hidden=</span><span class="value">"true"</span>
+      <span class="attr">focusable=</span><span class="value">"false"</span>
+    &gt;
+      &lt;circle <span class="attr">cx=</span><span class="value">"9"</span> <span class="attr">cy=</span><span class="value">"21"</span> <span class="attr">r=</span><span class="value">"1"</span>&gt;&lt;/circle&gt;
+      &lt;circle <span class="attr">cx=</span><span class="value">"20"</span> <span class="attr">cy=</span><span class="value">"21"</span> <span class="attr">r=</span><span class="value">"1"</span>&gt;&lt;/circle&gt;
+      &lt;path <span class="attr">d=</span><span class="value">"M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"</span>&gt;&lt;/path&gt;
+    &lt;/svg&gt;
+    &lt;span <span class="attr">id=</span><span class="value">"item-count"</span>&gt;<span class="txt">3</span>&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;div <span class="attr">id=</span><span class="value">"cart-details"</span>&gt;
+    &lt;ul <span class="attr">id=</span><span class="value">"cart-items"</span>&gt;
+      &lt;li&gt;<span dir="rtl" class="txt">قميص (2x) - $40.00</span>&lt;/li&gt;
+      &lt;li&gt;<span dir="rtl" class="txt">قبعة (1x) - $15.00</span>&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div <span class="attr">id=</span><span class="value">"cart-total"</span>&gt;
+      <span dir="rtl" class="txt">المجموع: </span>&lt;strong&gt;<span dir="rtl" class="txt">55.00$</span>&lt;/strong&gt;
+    &lt;/div&gt;
+    &lt;button <span class="attr">id=</span><span class="value">"checkout-btn"</span>&gt;<span dir="rtl" class="txt">الشروع في الدفع</span>&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">:root</span> <span class="attr">{</span>
+<span class="attr">--primary-color:</span> <span class="txt">#007bff</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.shopping-cart</span> <span class="attr">{</span>
+<span class="attr">position:</span> <span class="txt">fixed</span>;
+<span class="attr">top:</span> <span class="txt">20px</span>;
+<span class="attr">right:</span> <span class="txt">20px</span>;
+<span class="attr">font-family:</span> <span class="txt">sans-serif</span>;
+<span class="attr">width:</span> <span class="txt">280px</span>;
+<span class="attr">background:</span> <span class="txt">white</span>;
+<span class="attr">border:</span> <span class="txt">1px solid #ccc</span>;
+<span class="attr">padding:</span> <span class="txt">10px</span>;
+<span class="attr">box-shadow:</span> <span class="txt">0 4px 8px rgba(0,0,0,0.1)</span>;
+<span class="attr">border-radius:</span> <span class="txt">6px</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">#cart-btn</span> <span class="attr">{</span>
+<span class="attr">background:</span> <span class="txt">none</span>;
+<span class="attr">border:</span> <span class="txt">none</span>;
+<span class="attr">cursor:</span> <span class="txt">default</span>;
+<span class="attr">position:</span> <span class="txt">relative</span>;
+<span class="attr">display:</span> <span class="txt">flex</span>;
+<span class="attr">align-items:</span> <span class="txt">center</span>;
+<span class="attr">padding:</span> <span class="txt">4px</span>;
+<span class="attr">color:</span> <span class="txt">#333</span>;
+<span class="attr">font-size:</span> <span class="txt">28px</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">#item-count</span> <span class="attr">{</span>
+<span class="attr">background:</span> <span class="txt">red</span>;
+<span class="attr">color:</span> <span class="txt">white</span>;
+<span class="attr">border-radius:</span> <span class="txt">50%</span>;
+<span class="attr">padding:</span> <span class="txt">2px 7px</span>;
+<span class="attr">font-size:</span> <span class="txt">14px</span>;
+<span class="attr">position:</span> <span class="txt">absolute</span>;
+<span class="attr">top:</span> <span class="txt">-6px</span>;
+<span class="attr">right:</span> <span class="txt">-6px</span>;
+<span class="attr">min-width:</span> <span class="txt">18px</span>;
+<span class="attr">height:</span> <span class="txt">18px</span>;
+<span class="attr">line-height:</span> <span class="txt">14px</span>;
+<span class="attr">text-align:</span> <span class="txt">center</span>;
+<span class="attr">font-weight:</span> <span class="txt">700</span>;
+<span class="attr">user-select:</span> <span class="txt">none</span>;
+<span class="attr">box-sizing:</span> <span class="txt">border-box</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">#cart-details</span> <span class="attr">{</span>
+<span class="attr">margin-top:</span> <span class="txt">10px</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">#cart-items</span> <span class="attr">{</span>
+<span class="attr">list-style:</span> <span class="txt">none</span>;
+<span class="attr">padding:</span> <span class="txt">0</span>;
+<span class="attr">margin:</span> <span class="txt">0 0 10px 0</span>;
+<span class="attr">font-size:</span> <span class="txt">1rem</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">#cart-items li</span> <span class="attr">{</span>
+<span class="attr">padding:</span> <span class="txt">5px 0</span>;
+<span class="attr">border-bottom:</span> <span class="txt">1px solid #eee</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">#cart-total</span> <span class="attr">{</span>
+<span class="attr">font-size:</span> <span class="txt">1.2rem</span>;
+<span class="attr">font-weight:</span> <span class="txt">700</span>;
+<span class="attr">text-align:</span> <span class="txt">left</span>;
+<span class="attr">color:</span> <span class="txt">#111</span>;
+<span class="attr">margin-bottom:</span> <span class="txt">15px</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">#checkout-btn</span> <span class="attr">{</span>
+<span class="attr">width:</span> <span class="txt">100%</span>;
+<span class="attr">background-color:</span> <span class="txt">var(--primary-color)</span>;
+<span class="attr">color:</span> <span class="txt">white</span>;
+<span class="attr">border:</span> <span class="txt">none</span>;
+<span class="attr">padding:</span> <span class="txt">12px 0</span>;
+<span class="attr">font-size:</span> <span class="txt">1.1rem</span>;
+<span class="attr">font-weight:</span> <span class="txt">700</span>;
+<span class="attr">border-radius:</span> <span class="txt">6px</span>;
+<span class="attr">cursor:</span> <span class="txt">pointer</span>;
+<span class="attr">transition:</span> <span class="txt">background-color 0.3s ease</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">#checkout-btn:hover,
+#checkout-btn:focus</span> <span class="attr">{</span>
+<span class="attr">background-color:</span> <span class="txt">#0056b3</span>;
+<span class="attr">outline:</span> <span class="txt">none</span>;
+<span class="attr">}</span>
+            </code></pre></div>
+            </div>
+        
+            
+    </section>
+
+    <p>
+        هذه مجرد بعض أفضل الممارسات لتصميم عربات التسوق. باتباع هذه الإرشادات، يمكنك إنشاء عربة تسوق سهلة الاستخدام وتساعد على زيادة المبيعات لموقع التجارة الإلكترونية الخاص بك.
+    </p>
+  </section>
+
+  <!-- QUESTIONS -->
+  <section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما هو الجانب الحاسم في تصميم عربة التسوق الذي يمكن أن يؤثر على تجربة التسوق والمبيعات؟</p>
+
+		<p> 1. لون أيقونة عربة التسوق. ❌</p>
+        <p><mark> 2. موقع عربة التسوق في الصفحة. ✅</mark></p>
+        <p> 3. عدد العناصر في العربة. ❌</p>
+		<p> 4. علامة موقع التجارة الإلكترونية. ❌</p>
+        <br>
+
+        <p class="userstory">كيف يجب أن يتمكن المستخدمون من تحديث كمية العناصر في عربتهم؟</p>
+		
+		<p> 1. عن طريق الاتصال بخدمة العملاء. ❌</p>
+        <p> 2. باستخدام قائمة منسدلة. ❌</p>
+        <p><mark> 3. عن طريق إدخال رقم جديد في حقل إدخال الكمية. ✅</mark></p>
+		<p> 4. بإضافة عنصر جديد بالكمية المطلوبة. ❌</p>
+        <br>
+
+        <p class="userstory">ما هي الميزة المهمة التي يجب تضمينها في عربة التسوق لمساعدة المستخدمين على إتمام عملية الشراء؟</p>
+		
+		<p> 1. خيار "حفظ للوقت لاحق". ❌</p>
+        <p> 2. وجود عدة أزرار دعوة لاتخاذ إجراء. ❌</p>
+        <p><mark> 3. زر دفع واضح وبارز. ✅</mark></p>
+		<p> 4. خيار للدردشة مع ممثل مبيعات. ❌</p>
+
+	</section>
+  
+
+
+
+
+  <!-- Pages -->
+  <section class="page-nav">
+        <a class="prev" href="./What-Are-Best-Practices-for-Progress-Indication-on-Forms-Registration-and-Setup.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+  </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
