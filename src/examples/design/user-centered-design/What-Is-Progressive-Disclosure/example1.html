@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Progressive Disclosure"/>
+	<link rel="icon" type="image/x-icon" href="../../../../../favicon.png">
+	<title>EXAMPLE 1</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<style>
+body {
+
+  font-family: "Noto Kufi Arabic", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  
+
+} 
+
+.progressive-disclosure {
+  font-family: sans-serif;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+#show-details-btn {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#show-details-btn:hover,
+#show-details-btn:focus {
+  background-color: #0056b3;
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+#extra-content {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f7f9fcff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+
+
+
+
+</style>
+
+<body>
+
+<div class="progressive-disclosure">
+  <button id="show-details-btn" aria-expanded="false" aria-controls="extra-content">
+    عرض المزيد من التفاصيل
+  </button>
+  <div id="extra-content" class="hidden" tabindex="-1">
+    <p>
+      إليك تفاصيل إضافية لا تظهر إلا عندما ترغب في رؤيتها.
+وهذا يحافظ على واجهة نظيفة ويقلل من العبء الإدراكي.
+    </p>
+  </div>
+</div>
+
+
+
+<script>
+
+const btn = document.getElementById('show-details-btn');
+const content = document.getElementById('extra-content');
+
+btn.addEventListener('click', () => {
+  const isHidden = content.classList.toggle('hidden');
+  btn.setAttribute('aria-expanded', !isHidden);
+
+  if (!isHidden) {
+    content.focus();
+  }
+});
+
+</script>
+
+</body>
+</html>
