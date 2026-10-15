@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هي أفضل الممارسات للإشارة إلى التقدم Progress Indication في النماذج Forms والتسجيل Registration  والإعداد Setup ؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/designStyles/user-centered-design/What-Are-Best-Practices-for-Designing-Modal-Dialogs.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | التصميم</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>التصميم المتمحور حول المستخدم User-Centered Design</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+  <section class="sub-title">
+        <h2>ما هي أفضل الممارسات للإشارة إلى التقدم Progress Indication في النماذج Forms والتسجيل Registration  والإعداد Setup ؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+  </section>
+
+  <section>
+    <p>
+        <b>ملاحظة:</b> قد تستخدم بعض الأمثلة التفاعلية أكواد CSS و JavaScript لم تتعلمها بعد. لا تقلق بشأن محاولة فهم الكود بالكامل؛ فالهدف من هذه الأمثلة هو عرض نماذج لمفاهيم التصميم هذه، لتتمكن من فهم آلية عملها بشكل أفضل.
+    </p>
+    <p>
+        الإشارة إلى التقدم هي طريقة لعرض مدى تقدم المستخدم في عملية ما. يمكن استخدامها في النماذج، والتسجيل، وعمليات الإعداد. الهدف هو مساعدة المستخدم على فهم موقعه في العملية وكم تبقى عليه من خطوات.
+    </p>
+    <p>
+        على سبيل المثال، يمكنك استخدام شريط إشارة التقدم لتوضيح ما تبقى للمستخدم عند ملء النماذج. لا تريد أن تضع المستخدم في موقف يحتاج فيه لملء نموذج طويل ولا يعرف كم خطوة متبقية. الشفافية مهمة ليعرف المستخدم إذا كان لديه وقت كافٍ للجلوس وإكمال النموذج أو إذا كان عليه العودة لاحقًا.
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;form <span class="attr">id=</span><span class="value">"multiStepForm"</span>&gt;
+  &lt;div <span class="attr">class=</span><span class="value">"form-progress"</span>&gt;
+    &lt;label <span class="attr">class=</span><span class="value">"progress-label"</span>&gt;<span dir="rtl" class="txt">تقدم النموذج</span>&lt;/label&gt;
+    &lt;div <span class="attr">class=</span><span class="value">"progress-container"</span>&gt;
+      &lt;div <span class="attr">class=</span><span class="value">"progress-bar"</span>&gt;&lt;/div&gt;
+      &lt;div <span class="attr">class=</span><span class="value">"progress-text"</span>&gt;<span dir="rtl" class="txt">الخطوة 1 من 3</span>&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  <span class="value">&lt;!-- Step 1 --&gt;</span>
+  &lt;fieldset <span class="attr">class=</span><span class="value">"form-step active"</span>&gt;
+    &lt;legend&gt;<span dir="rtl" class="txt">معلومات شخصية</span>&lt;/legend&gt;
+    &lt;label <span class="attr">for=</span><span class="value">"name"</span>&gt;<span dir="rtl" class="txt">الاسم الكامل:</span>&lt;/label&gt;
+    &lt;input <span class="attr">type=</span><span class="value">"text"</span> <span class="attr">id=</span><span class="value">"name"</span> <span class="attr">name=</span><span class="value">"name"</span> <span class="attr">required</span>&gt;
+
+    &lt;label <span class="attr">for=</span><span class="value">"email"</span>&gt;<span dir="rtl" class="txt">البريد الإلكتروني:</span>&lt;/label&gt;
+    &lt;input <span class="attr">type=</span><span class="value">"email"</span> <span class="attr">id=</span><span class="value">"email"</span> <span class="attr">name=</span><span class="value">"email"</span> <span class="attr">required</span>&gt;
+
+    &lt;button <span class="attr">type=</span><span class="value">"button"</span> <span class="attr">class=</span><span class="value">"next-btn"</span>&gt;<span dir="rtl" class="txt">التالي</span>&lt;/button&gt;
+  &lt;/fieldset&gt;
+
+  <span class="value">&lt;!-- Step 2 --&gt;</span>
+  &lt;fieldset <span class="attr">class=</span><span class="value">"form-step"</span>&gt;
+    &lt;legend&gt;<span dir="rtl" class="txt">العنوان</span>&lt;/legend&gt;
+    &lt;label <span class="attr">for=</span><span class="value">"address"</span>&gt;<span dir="rtl" class="txt">عنوان الشارع:</span>&lt;/label&gt;
+    &lt;input <span class="attr">type=</span><span class="value">"text"</span> <span class="attr">id=</span><span class="value">"address"</span> <span class="attr">name=</span><span class="value">"address"</span> <span class="attr">required</span>&gt;
+
+    &lt;label <span class="attr">for=</span><span class="value">"city"</span>&gt;<span dir="rtl" class="txt">المدينة:</span>&lt;/label&gt;
+    &lt;input <span class="attr">type=</span><span class="value">"text"</span> <span class="attr">id=</span><span class="value">"city"</span> <span class="attr">name=</span><span class="value">"city"</span> <span class="attr">required</span>&gt;
+
+    &lt;button <span class="attr">type=</span><span class="value">"button"</span> <span class="attr">class=</span><span class="value">"prev-btn"</span>&gt;<span dir="rtl" class="txt">السابق</span>&lt;/button&gt;
+    &lt;button <span class="attr">type=</span><span class="value">"button"</span> <span class="attr">class=</span><span class="value">"next-btn"</span>&gt;<span dir="rtl" class="txt">التالي</span>&lt;/button&gt;
+  &lt;/fieldset&gt;
+
+  <span class="value">&lt;!-- Step 3 --&gt;</span>
+  &lt;fieldset <span class="attr">class=</span><span class="value">"form-step"</span>&gt;
+    &lt;legend&gt;<span dir="rtl" class="txt">مراجعة &amp; إرسال</span>&lt;/legend&gt;
+    &lt;p&gt;<span dir="rtl" class="txt">يُرجى مراجعة بياناتك قبل الإرسال.</span>&lt;/p&gt;
+
+    &lt;button <span class="attr">type=</span><span class="value">"button"</span> <span class="attr">class=</span><span class="value">"prev-btn"</span>&gt;<span dir="rtl" class="txt">السابق</span>&lt;/button&gt;
+    &lt;button <span class="attr">type=</span><span class="value">"submit"</span>&gt;<span dir="rtl" class="txt">تسليم</span>&lt;/button&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+
+&lt;script <span class="attr">src=<span class="value">"index.js"</span></span>&gt;&lt;/script&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.form-progress</span> <span class="attr">{</span>
+<span class="attr">max-width:</span> <span class="txt">500px</span>;
+<span class="attr">margin:</span> <span class="txt">20px auto 30px</span>;
+<span class="attr">font-family:</span> <span class="txt">Arial, sans-serif</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.progress-label</span> <span class="attr">{</span>
+<span class="attr">display:</span> <span class="txt">block</span>;
+<span class="attr">margin-bottom:</span> <span class="txt">8px</span>;
+<span class="attr">font-size:</span> <span class="txt">16px</span>;
+<span class="attr">font-weight:</span> <span class="txt">600</span>;
+<span class="attr">color:</span> <span class="txt">#333</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.progress-container</span> <span class="attr">{</span>
+<span class="attr">position:</span> <span class="txt">relative</span>;
+<span class="attr">background-color:</span> <span class="txt">#555</span>;
+<span class="attr">border-radius:</span> <span class="txt">8px</span>;
+<span class="attr">height:</span> <span class="txt">30px</span>;
+<span class="attr">overflow:</span> <span class="txt">hidden</span>;
+<span class="attr">box-shadow:</span> <span class="txt">inset 0 1px 3px rgba(0,0,0,0.3)</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.progress-bar</span> <span class="attr">{</span>
+<span class="attr">background-color:</span> <span class="txt">#4caf50</span>;
+<span class="attr">height:</span> <span class="txt">100%</span>;
+<span class="attr">width:</span> <span class="txt">0</span>;
+<span class="attr">border-radius:</span> <span class="txt">8px 0 0 8px</span>;
+<span class="attr">transition:</span> <span class="txt">width 0.3s ease</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.progress-text</span> <span class="attr">{</span>
+<span class="attr">position:</span> <span class="txt">absolute</span>;
+<span class="attr">top:</span> <span class="txt">0</span>;
+<span class="attr">left:</span> <span class="txt">0</span>;
+<span class="attr">width:</span> <span class="txt">100%</span>;
+<span class="attr">height:</span> <span class="txt">30px</span>;
+<span class="attr">line-height:</span> <span class="txt">30px</span>;
+<span class="attr">text-align:</span> <span class="txt">center</span>;
+<span class="attr">font-weight:</span> <span class="txt">bold</span>;
+<span class="attr">color:</span> <span class="txt">#fff</span>;
+<span class="attr">pointer-events:</span> <span class="txt">none</span>;
+<span class="attr">user-select:</span> <span class="txt">none</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">form</span> <span class="attr">{</span>
+<span class="attr">max-width:</span> <span class="txt">500px</span>;
+<span class="attr">margin:</span> <span class="txt">0 auto</span>;
+<span class="attr">font-family:</span> <span class="txt">Arial, sans-serif</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">fieldset</span> <span class="attr">{</span>
+<span class="attr">border:</span> <span class="txt">none</span>;
+<span class="attr">padding:</span> <span class="txt">0</span>;
+<span class="attr">margin:</span> <span class="txt">0 0 20px</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">legend</span> <span class="attr">{</span>
+<span class="attr">font-size:</span> <span class="txt">1.2em</span>;
+<span class="attr">font-weight:</span> <span class="txt">700</span>;
+<span class="attr">margin-bottom:</span> <span class="txt">10px</span>;
+<span class="attr">color:</span> <span class="txt">#222</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">label</span> <span class="attr">{</span>
+<span class="attr">display:</span> <span class="txt">block</span>;
+<span class="attr">margin-bottom:</span> <span class="txt">6px</span>;
+<span class="attr">font-weight:</span> <span class="txt">600</span>;
+<span class="attr">color:</span> <span class="txt">#333</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">input[type="text"],
+input[type="email"]</span> <span class="attr">{</span>
+<span class="attr">width:</span> <span class="txt">100%</span>;
+<span class="attr">padding:</span> <span class="txt">8px 10px</span>;
+<span class="attr">font-size:</span> <span class="txt">1em</span>;
+<span class="attr">border:</span> <span class="txt">1px solid #ccc</span>;
+<span class="attr">border-radius:</span> <span class="txt">4px</span>;
+<span class="attr">margin-bottom:</span> <span class="txt">15px</span>;
+<span class="attr">box-sizing:</span> <span class="txt">border-box</span>;
+<span class="attr">transition:</span> <span class="txt">border-color 0.2s ease</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">input[type="text"]:focus,
+input[type="email"]:focus</span> <span class="attr">{</span>
+<span class="attr">outline:</span> <span class="txt">none</span>;
+<span class="attr">border-color:</span> <span class="txt">#4caf50</span>;
+<span class="attr">box-shadow:</span> <span class="txt">0 0 5px rgba(76, 175, 80, 0.5)</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.form-step</span> <span class="attr">{</span>
+<span class="attr">display:</span> <span class="txt">none</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.form-step.active</span> <span class="attr">{</span>
+<span class="attr">display:</span> <span class="txt">block</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">button</span> <span class="attr">{</span>
+<span class="attr">background-color:</span> <span class="txt">#4caf50</span>;
+<span class="attr">border:</span> <span class="txt">none</span>;
+<span class="attr">color:</span> <span class="txt">white</span>;
+<span class="attr">padding:</span> <span class="txt">10px 18px</span>;
+<span class="attr">font-size:</span> <span class="txt">1em</span>;
+<span class="attr">border-radius:</span> <span class="txt">5px</span>;
+<span class="attr">cursor:</span> <span class="txt">pointer</span>;
+<span class="attr">margin-right:</span> <span class="txt">10px</span>;
+<span class="attr">transition:</span> <span class="txt">background-color 0.2s ease</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">button:hover:not(:disabled)</span> <span class="attr">{</span>
+<span class="attr">background-color:</span> <span class="txt">#45a049</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">button:disabled</span> <span class="attr">{</span>
+<span class="attr">background-color:</span> <span class="txt">#9e9e9e</span>;
+<span class="attr">cursor:</span> <span class="txt">not-allowed</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">@media (max-width: 600px)</span> <span class="attr">{</span>
+<span class="tag-b">.form-progress, form</span> <span class="attr">{</span>
+<span class="attr">max-width:</span> <span class="txt">90%</span>;
+<span class="attr">margin:</span> <span class="txt">20px auto</span>;
+<span class="attr">}</span>
+<span class="attr">}</span>
+    </code></pre></div>
+
+    <p class="file-name">index.js</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">const <span class="txt">form</span> = <span class="txt">document</span>.<span class="txt">getElementById</span></span><span class="attr">(</span><span class="txt">'multiStepForm'</span><span class="attr">);</span>
+<span class="tag-b">const <span class="txt">steps</span> = <span class="txt">form</span>.<span class="txt">querySelectorAll</span></span><span class="attr">(</span><span class="txt">'.form-step'</span><span class="attr">);</span>
+<span class="tag-b">const <span class="txt">progressBar</span> = <span class="txt">form</span>.<span class="txt">querySelector</span></span><span class="attr">(</span><span class="txt">'.progress-bar'</span><span class="attr">);</span>
+<span class="tag-b">const <span class="txt">progressText</span> = <span class="txt">form</span>.<span class="txt">querySelector</span></span><span class="attr">(</span><span class="txt">'.progress-text'</span><span class="attr">);</span>
+<span class="tag-b">const <span class="txt">totalSteps</span> = <span class="txt">steps</span>.<span class="txt">length</span></span><span class="attr">;</span>
+
+<span class="tag-b">let <span class="txt">currentStep</span> = 0</span><span class="attr">;</span>
+
+<span class="tag-b">function <span class="txt">updateProgress</span></span><span class="attr">() {</span>
+  <span class="tag-b">const <span class="txt">percent</span> = ((</span><span class="txt">currentStep</span> + 1<span class="attr">)</span> / <span class="txt">totalSteps</span><span class="attr">)</span> * 100<span class="attr">;</span>
+  <span class="txt">progressBar</span>.<span class="txt">style</span>.<span class="txt">width</span> = <span class="txt">percent</span> + <span class="txt">'%'</span><span class="attr">;</span>
+  <span class="txt">progressText</span>.<span class="txt">textContent</span> = <span class="txt">`الخطوة ${currentStep + 1} من ${totalSteps}`</span><span class="attr">;</span>
+<span class="attr">}</span>
+
+<span class="tag-b">function <span class="txt">showStep</span></span><span class="attr">(</span><span class="txt">index</span><span class="attr">) {</span>
+  <span class="txt">steps</span>.<span class="txt">forEach</span><span class="attr">((</span><span class="txt">step</span><span class="attr">,</span> <span class="txt">i</span><span class="attr">) => {</span>
+    <span class="txt">step</span>.<span class="txt">classList</span>.<span class="txt">toggle</span><span class="attr">(</span><span class="txt">'active'</span><span class="attr">,</span> <span class="txt">i</span> === <span class="txt">index</span><span class="attr">);</span>
+  <span class="attr">});</span>
+  <span class="txt">updateProgress</span><span class="attr">();</span>
+<span class="attr">}</span>
+
+<span class="txt">form</span>.<span class="txt">querySelectorAll</span><span class="attr">(</span><span class="txt">'.next-btn'</span><span class="attr">).</span><span class="txt">forEach</span><span class="attr">(</span><span class="txt">btn</span> <span class="attr">=&gt;</span> <span class="txt">btn</span>.<span class="txt">addEventListener</span><span class="attr">(</span><span class="txt">'click'</span><span class="attr">, () => {</span>
+  <span class="tag-b">if (</span><span class="txt">currentStep</span> <span class="attr">&lt;</span> <span class="txt">totalSteps</span> - 1<span class="attr">) {</span>
+    <span class="txt">currentStep</span>++<span class="attr">;</span>
+    <span class="txt">showStep</span><span class="attr">(</span><span class="txt">currentStep</span><span class="attr">);</span>
+  <span class="attr">}</span>
+<span class="attr">}));</span>
+
+<span class="txt">form</span>.<span class="txt">querySelectorAll</span><span class="attr">(</span><span class="txt">'.prev-btn'</span><span class="attr">).</span><span class="txt">forEach</span><span class="attr">(</span><span class="txt">btn</span> <span class="attr">=&gt;</span> <span class="txt">btn</span>.<span class="txt">addEventListener</span><span class="attr">(</span><span class="txt">'click'</span><span class="attr">, () => {</span>
+  <span class="tag-b">if (</span><span class="txt">currentStep</span> <span class="attr">&gt;</span> 0<span class="attr">) {</span>
+    <span class="txt">currentStep</span>--<span class="attr">;</span>
+    <span class="txt">showStep</span><span class="attr">(</span><span class="txt">currentStep</span><span class="attr">);</span>
+  <span class="attr">}</span>
+<span class="attr">}));</span>
+
+<span class="txt">showStep</span><span class="attr">(</span><span class="txt">currentStep</span><span class="attr">);</span>
+
+<span class="txt">form</span>.<span class="txt">addEventListener</span><span class="attr">(</span><span class="txt">'submit'</span><span class="attr">,</span> <span class="txt">e</span> <span class="attr">=&gt;</span> <span class="attr">{</span>
+  <span class="txt">e</span>.<span class="txt">preventDefault</span><span class="attr">();</span>
+  <span class="txt">alert</span><span class="attr">(</span><span class="txt">'تم إرسال النموذج!'</span><span class="attr">);</span>
+<span class="attr">});</span>
+            </code></pre></div>
+    </div>
+
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+        <div class="preview1">
+            <iframe
+          src="../../examples/design/user-centered-design/What-Are-Best-Practices-for-Progress-Indication-on-Forms-Registration-and-Setup/example1.html"
+          title="Progress-Indication Example 1"
+          loading="lazy"
+        ></iframe>
+        </div>
+    </div>
+
+    <p>
+      عند تصميم قسم إشارة التقدم، هناك بعض أفضل الممارسات التي يجب مراعاتها. الاعتبار الأول هو الحفاظ على البساطة. لا تريد إرباك المستخدم بمعلومات كثيرة تجعله يشعر بالإحباط ويغادر الموقع.
+    </p>
+    <p>
+      الاعتبار الثاني هو جعل العودة إلى الخطوات السابقة ممكنة. هذا مهم لأن المستخدمين قد يرغبون في مراجعة إجاباتهم السابقة أو تعديلها.
+    </p>
+    <p>
+      اعتبار آخر هو جعل قسم إشارة التقدم سهل العثور عليه. إذا لم يجد المستخدم القسم، فلن يعرف مدى تقدمه في العملية.
+    </p>
+    <p>
+      الاعتبار الأخير هو وجود عناوين أقسام واضحة، أو نسب مئوية، أو خطوات. إذا كان لديك فقط شريط تقدم بدون سياق، فلن يعرف المستخدم ما يعنيه.
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;form <span class="attr">id=</span><span class="value">"progressForm"</span>&gt;
+  &lt;div <span class="attr">class=</span><span class="value">"form-progress"</span> <span class="attr">aria-label=</span><span class="value">"Form progress"</span>&gt;
+    &lt;label <span class="attr">class=</span><span class="value">"progress-label"</span>&gt;<span dir="rtl" class="txt">الخطوة </span>&lt;span <span class="attr">id=</span><span class="value">"currentStep"</span>&gt;<span class="txt">1</span>&lt;/span&gt; <span class="txt">من </span>&lt;span <span class="attr">id=</span><span class="value">"totalSteps"</span>&gt;<span class="txt">4</span>&lt;/span&gt; <span class="txt">(</span>&lt;span <span class="attr">id=</span><span class="value">"percentage"</span>&gt;<span class="txt">25%</span>&lt;/span&gt;<span class="txt">)</span>&lt;/label&gt;
+    &lt;div <span class="attr">class=</span><span class="value">"progress-container"</span> <span class="attr">role=</span><span class="value">"progressbar"</span> <span class="attr">aria-valuemin=</span><span class="value">"0"</span> <span class="attr">aria-valuemax=</span><span class="value">"100"</span> <span class="attr">aria-valuenow=</span><span class="value">"25"</span>&gt;
+      &lt;div <span class="attr">class=</span><span class="value">"progress-bar"</span>&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  <span class="value">&lt;!-- Step 1 --&gt;</span>
+  &lt;fieldset <span class="attr">class=</span><span class="value">"form-step active"</span>&gt;
+    &lt;legend&gt;<span dir="rtl" class="txt">معلومات أساسية</span>&lt;/legend&gt;
+    &lt;p&gt;<span dir="rtl" class="txt">يُرجى إدخال معلوماتك الأساسية.</span>&lt;/p&gt;
+    &lt;label <span class="attr">for=</span><span class="value">"name"</span>&gt;<span dir="rtl" class="txt">الاسم:</span>&lt;/label&gt;
+    &lt;input <span class="attr">type=</span><span class="value">"text"</span> <span class="attr">id=</span><span class="value">"name"</span> <span class="attr">name=</span><span class="value">"name"</span> <span class="attr">required</span>&gt;
+
+    &lt;button <span class="attr">type=</span><span class="value">"button"</span> <span class="attr">class=</span><span class="value">"next-btn"</span>&gt;<span dir="rtl" class="txt">التالي</span>&lt;/button&gt;
+  &lt;/fieldset&gt;
+
+  <span class="value">&lt;!-- Step 2 --&gt;</span>
+  &lt;fieldset <span class="attr">class=</span><span class="value">"form-step"</span>&gt;
+    &lt;legend&gt;<span dir="rtl" class="txt">بيانات الاتصال</span>&lt;/legend&gt;
+    &lt;p&gt;<span dir="rtl" class="txt">كيف يمكننا التواصل معك؟</span>&lt;/p&gt;
+    &lt;label <span class="attr">for=</span><span class="value">"email"</span>&gt;<span dir="rtl" class="txt">البريد الإلكتروني:</span>&lt;/label&gt;
+    &lt;input <span class="attr">type=</span><span class="value">"email"</span> <span class="attr">id=</span><span class="value">"email"</span> <span class="attr">name=</span><span class="value">"email"</span> <span class="attr">required</span>&gt;
+
+    &lt;button <span class="attr">type=</span><span class="value">"button"</span> <span class="attr">class=</span><span class="value">"prev-btn"</span>&gt;<span dir="rtl" class="txt">السابق</span>&lt;/button&gt;
+    &lt;button <span class="attr">type=</span><span class="value">"button"</span> <span class="attr">class=</span><span class="value">"next-btn"</span>&gt;<span dir="rtl" class="txt">التالي</span>&lt;/button&gt;
+  &lt;/fieldset&gt;
+
+  <span class="value">&lt;!-- Step 3 --&gt;</span>
+  &lt;fieldset <span class="attr">class=</span><span class="value">"form-step"</span>&gt;
+    &lt;legend&gt;<span dir="rtl" class="txt">العنوان</span>&lt;/legend&gt;
+    &lt;p&gt;<span dir="rtl" class="txt">أين تعيش؟</span>&lt;/p&gt;
+    &lt;label <span class="attr">for=</span><span class="value">"address"</span>&gt;<span dir="rtl" class="txt">الشارع:</span>&lt;/label&gt;
+    &lt;input <span class="attr">type=</span><span class="value">"text"</span> <span class="attr">id=</span><span class="value">"address"</span> <span class="attr">name=</span><span class="value">"address"</span> <span class="attr">required</span>&gt;
+
+    &lt;button <span class="attr">type=</span><span class="value">"button"</span> <span class="attr">class=</span><span class="value">"prev-btn"</span>&gt;<span dir="rtl" class="txt">السابق</span>&lt;/button&gt;
+    &lt;button <span class="attr">type=</span><span class="value">"button"</span> <span class="attr">class=</span><span class="value">"next-btn"</span>&gt;<span dir="rtl" class="txt">التالي</span>&lt;/button&gt;
+  &lt;/fieldset&gt;
+
+  <span class="value">&lt;!-- Step 4 --&gt;</span>
+  &lt;fieldset <span class="attr">class=</span><span class="value">"form-step"</span>&gt;
+    &lt;legend&gt;<span dir="rtl" class="txt">مراجعة</span>&lt;/legend&gt;
+    &lt;p&gt;<span dir="rtl" class="txt">راجع إجاباتك قبل الإرسال.</span>&lt;/p&gt;
+
+    &lt;button <span class="attr">type=</span><span class="value">"button"</span> <span class="attr">class=</span><span class="value">"prev-btn"</span>&gt;<span dir="rtl" class="txt">السابق</span>&lt;/button&gt;
+    &lt;button <span class="attr">type=</span><span class="value">"submit"</span>&gt;<span dir="rtl" class="txt">تسليم</span>&lt;/button&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+
+&lt;script <span class="attr">src=<span class="value">"index.js"</span></span>&gt;&lt;/script&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.form-progress</span> <span class="attr">{</span>
+<span class="attr">max-width:</span> <span class="txt">500px</span>;
+<span class="attr">margin:</span> <span class="txt">20px auto 30px</span>;
+<span class="attr">font-family:</span> <span class="txt">Arial, sans-serif</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.progress-label</span> <span class="attr">{</span>
+<span class="attr">display:</span> <span class="txt">block</span>;
+<span class="attr">margin-bottom:</span> <span class="txt">8px</span>;
+<span class="attr">font-size:</span> <span class="txt">16px</span>;
+<span class="attr">font-weight:</span> <span class="txt">600</span>;
+<span class="attr">color:</span> <span class="txt">#333</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.progress-container</span> <span class="attr">{</span>
+<span class="attr">position:</span> <span class="txt">relative</span>;
+<span class="attr">background-color:</span> <span class="txt">#555</span>;
+<span class="attr">border-radius:</span> <span class="txt">8px</span>;
+<span class="attr">height:</span> <span class="txt">30px</span>;
+<span class="attr">overflow:</span> <span class="txt">hidden</span>;
+<span class="attr">box-shadow:</span> <span class="txt">inset 0 1px 3px rgba(0,0,0,0.3)</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.progress-bar</span> <span class="attr">{</span>
+<span class="attr">background-color:</span> <span class="txt">#4caf50</span>;
+<span class="attr">height:</span> <span class="txt">100%</span>;
+<span class="attr">width:</span> <span class="txt">0</span>;
+<span class="attr">border-radius:</span> <span class="txt">8px 0 0 8px</span>;
+<span class="attr">transition:</span> <span class="txt">width 0.3s ease</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.progress-text</span> <span class="attr">{</span>
+<span class="attr">position:</span> <span class="txt">absolute</span>;
+<span class="attr">top:</span> <span class="txt">0</span>;
+<span class="attr">left:</span> <span class="txt">0</span>;
+<span class="attr">width:</span> <span class="txt">100%</span>;
+<span class="attr">height:</span> <span class="txt">30px</span>;
+<span class="attr">line-height:</span> <span class="txt">30px</span>;
+<span class="attr">text-align:</span> <span class="txt">center</span>;
+<span class="attr">font-weight:</span> <span class="txt">bold</span>;
+<span class="attr">color:</span> <span class="txt">#fff</span>;
+<span class="attr">pointer-events:</span> <span class="txt">none</span>;
+<span class="attr">user-select:</span> <span class="txt">none</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">form</span> <span class="attr">{</span>
+<span class="attr">max-width:</span> <span class="txt">500px</span>;
+<span class="attr">margin:</span> <span class="txt">0 auto</span>;
+<span class="attr">font-family:</span> <span class="txt">Arial, sans-serif</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">fieldset</span> <span class="attr">{</span>
+<span class="attr">border:</span> <span class="txt">none</span>;
+<span class="attr">padding:</span> <span class="txt">0</span>;
+<span class="attr">margin:</span> <span class="txt">0 0 20px</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">legend</span> <span class="attr">{</span>
+<span class="attr">font-size:</span> <span class="txt">1.2em</span>;
+<span class="attr">font-weight:</span> <span class="txt">700</span>;
+<span class="attr">margin-bottom:</span> <span class="txt">10px</span>;
+<span class="attr">color:</span> <span class="txt">#222</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">label</span> <span class="attr">{</span>
+<span class="attr">display:</span> <span class="txt">block</span>;
+<span class="attr">margin-bottom:</span> <span class="txt">6px</span>;
+<span class="attr">font-weight:</span> <span class="txt">600</span>;
+<span class="attr">color:</span> <span class="txt">#333</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">input[type="text"],
+input[type="email"]</span> <span class="attr">{</span>
+<span class="attr">width:</span> <span class="txt">100%</span>;
+<span class="attr">padding:</span> <span class="txt">8px 10px</span>;
+<span class="attr">font-size:</span> <span class="txt">1em</span>;
+<span class="attr">border:</span> <span class="txt">1px solid #ccc</span>;
+<span class="attr">border-radius:</span> <span class="txt">4px</span>;
+<span class="attr">margin-bottom:</span> <span class="txt">15px</span>;
+<span class="attr">box-sizing:</span> <span class="txt">border-box</span>;
+<span class="attr">transition:</span> <span class="txt">border-color 0.2s ease</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">input[type="text"]:focus,
+input[type="email"]:focus</span> <span class="attr">{</span>
+<span class="attr">outline:</span> <span class="txt">none</span>;
+<span class="attr">border-color:</span> <span class="txt">#4caf50</span>;
+<span class="attr">box-shadow:</span> <span class="txt">0 0 5px rgba(76, 175, 80, 0.5)</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.form-step</span> <span class="attr">{</span>
+<span class="attr">display:</span> <span class="txt">none</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.form-step.active</span> <span class="attr">{</span>
+<span class="attr">display:</span> <span class="txt">block</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">button</span> <span class="attr">{</span>
+<span class="attr">background-color:</span> <span class="txt">#4caf50</span>;
+<span class="attr">border:</span> <span class="txt">none</span>;
+<span class="attr">color:</span> <span class="txt">white</span>;
+<span class="attr">padding:</span> <span class="txt">10px 18px</span>;
+<span class="attr">font-size:</span> <span class="txt">1em</span>;
+<span class="attr">border-radius:</span> <span class="txt">5px</span>;
+<span class="attr">cursor:</span> <span class="txt">pointer</span>;
+<span class="attr">margin-right:</span> <span class="txt">10px</span>;
+<span class="attr">transition:</span> <span class="txt">background-color 0.2s ease</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">button:hover:not(:disabled)</span> <span class="attr">{</span>
+<span class="attr">background-color:</span> <span class="txt">#45a049</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">button:disabled</span> <span class="attr">{</span>
+<span class="attr">background-color:</span> <span class="txt">#9e9e9e</span>;
+<span class="attr">cursor:</span> <span class="txt">not-allowed</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">@media (max-width: 600px)</span> <span class="attr">{</span>
+<span class="tag-b">.form-progress, form</span> <span class="attr">{</span>
+<span class="attr">max-width:</span> <span class="txt">90%</span>;
+<span class="attr">margin:</span> <span class="txt">20px auto</span>;
+<span class="attr">}</span>
+<span class="attr">}</span>
+            </code></pre></div>
+
+    <p class="file-name">index.js</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">const <span class="txt">form</span> = <span class="txt">document</span>.<span class="txt">getElementById</span></span><span class="attr">(</span><span class="txt">'progressForm'</span><span class="attr">);</span>
+<span class="tag-b">const <span class="txt">steps</span> = <span class="txt">form</span>.<span class="txt">querySelectorAll</span></span><span class="attr">(</span><span class="txt">'.form-step'</span><span class="attr">);</span>
+<span class="tag-b">const <span class="txt">progressBar</span> = <span class="txt">form</span>.<span class="txt">querySelector</span></span><span class="attr">(</span><span class="txt">'.progress-bar'</span><span class="attr">);</span>
+<span class="tag-b">const <span class="txt">currentStepSpan</span> = <span class="txt">document</span>.<span class="txt">getElementById</span></span><span class="attr">(</span><span class="txt">'currentStep'</span><span class="attr">);</span>
+<span class="tag-b">const <span class="txt">totalStepsSpan</span> = <span class="txt">document</span>.<span class="txt">getElementById</span></span><span class="attr">(</span><span class="txt">'totalSteps'</span><span class="attr">);</span>
+<span class="tag-b">const <span class="txt">percentageSpan</span> = <span class="txt">document</span>.<span class="txt">getElementById</span></span><span class="attr">(</span><span class="txt">'percentage'</span><span class="attr">);</span>
+
+<span class="tag-b">const <span class="txt">totalSteps</span> = <span class="txt">steps</span>.<span class="txt">length</span></span><span class="attr">;</span>
+<span class="tag-b">let <span class="txt">currentStep</span> = 0</span><span class="attr">;</span>
+
+<span class="txt">totalStepsSpan</span>.<span class="txt">textContent</span> = <span class="txt">totalSteps</span><span class="attr">;</span>
+
+<span class="tag-b">function <span class="txt">updateProgress</span></span><span class="attr">() {</span>
+  <span class="tag-b">const <span class="txt">percent</span> = <span class="txt">Math</span>.<span class="txt">round</span></span><span class="attr">(((</span><span class="txt">currentStep</span> + 1<span class="attr">)</span> / <span class="txt">totalSteps</span><span class="attr">)</span> * 100<span class="attr">);</span>
+  <span class="txt">progressBar</span>.<span class="txt">style</span>.<span class="txt">width</span> = <span class="txt">percent</span> + <span class="txt">'%'</span><span class="attr">;</span>
+  <span class="txt">currentStepSpan</span>.<span class="txt">textContent</span> = <span class="txt">currentStep</span> + 1<span class="attr">;</span>
+  <span class="txt">percentageSpan</span>.<span class="txt">textContent</span> = <span class="txt">percent</span> + <span class="txt">'%'</span><span class="attr">;</span>
+
+  <span class="tag-b">// Update ARIA attribute</span>
+  <span class="txt">form</span>.<span class="txt">querySelector</span><span class="attr">(</span><span class="txt">'.progress-container'</span><span class="attr">).</span><span class="txt">setAttribute</span><span class="attr">(</span><span class="txt">'aria-valuenow'</span><span class="attr">,</span> <span class="txt">percent</span><span class="attr">);</span>
+<span class="attr">}</span>
+
+<span class="tag-b">function <span class="txt">showStep</span></span><span class="attr">(</span><span class="txt">index</span><span class="attr">) {</span>
+  <span class="txt">steps</span>.<span class="txt">forEach</span><span class="attr">((</span><span class="txt">step</span><span class="attr">,</span> <span class="txt">i</span><span class="attr">) => {</span>
+    <span class="txt">step</span>.<span class="txt">classList</span>.<span class="txt">toggle</span><span class="attr">(</span><span class="txt">'active'</span><span class="attr">,</span> <span class="txt">i</span> === <span class="txt">index</span><span class="attr">);</span>
+  <span class="attr">});</span>
+  <span class="txt">updateProgress</span><span class="attr">();</span>
+<span class="attr">}</span>
+
+<span class="txt">form</span>.<span class="txt">querySelectorAll</span><span class="attr">(</span><span class="txt">'.next-btn'</span><span class="attr">).</span><span class="txt">forEach</span><span class="attr">(</span><span class="txt">btn</span> <span class="attr">=&gt;</span> <span class="txt">btn</span>.<span class="txt">addEventListener</span><span class="attr">(</span><span class="txt">'click'</span><span class="attr">, () => {</span>
+  <span class="tag-b">if (</span><span class="txt">currentStep</span> <span class="attr">&lt;</span> <span class="txt">totalSteps</span> - 1<span class="attr">) {</span>
+    <span class="txt">currentStep</span>++<span class="attr">;</span>
+    <span class="txt">showStep</span><span class="attr">(</span><span class="txt">currentStep</span><span class="attr">);</span>
+  <span class="attr">}</span>
+<span class="attr">}));</span>
+
+<span class="txt">form</span>.<span class="txt">querySelectorAll</span><span class="attr">(</span><span class="txt">'.prev-btn'</span><span class="attr">).</span><span class="txt">forEach</span><span class="attr">(</span><span class="txt">btn</span> <span class="attr">=&gt;</span> <span class="txt">btn</span>.<span class="txt">addEventListener</span><span class="attr">(</span><span class="txt">'click'</span><span class="attr">, () => {</span>
+  <span class="tag-b">if (</span><span class="txt">currentStep</span> <span class="attr">&gt;</span> 0<span class="attr">) {</span>
+    <span class="txt">currentStep</span>--<span class="attr">;</span>
+    <span class="txt">showStep</span><span class="attr">(</span><span class="txt">currentStep</span><span class="attr">);</span>
+  <span class="attr">}</span>
+<span class="attr">}));</span>
+
+<span class="txt">form</span>.<span class="txt">addEventListener</span><span class="attr">(</span><span class="txt">'submit'</span><span class="attr">,</span> <span class="txt">e</span> <span class="attr">=&gt; {</span>
+  <span class="txt">e</span>.<span class="txt">preventDefault</span><span class="attr">();</span>
+  <span class="txt">alert</span><span class="attr">(</span><span dir="rtl" class="txt">'تم إرسال النموذج! شكرًا لك!'</span><span class="attr">);</span>
+<span class="attr">});</span>
+
+<span class="txt">showStep</span><span class="attr">(</span><span class="txt">currentStep</span><span class="attr">);</span>
+            </code></pre></div>
+    </div>
+
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+        <div class="preview2">
+            <iframe
+          src="../../examples/design/user-centered-design/What-Are-Best-Practices-for-Progress-Indication-on-Forms-Registration-and-Setup/example2.html"
+          title="Progress-Indication Example 2"
+          loading="lazy"
+        ></iframe>
+        </div>
+    </div>
+
+    <p>
+      هذه بعض أفضل الممارسات التي يجب مراعاتها عند تصميم إشارة التقدم في النماذج، والتسجيل، وعمليات الإعداد. ادرس بعض الأمثلة في المواقع الكبيرة لترى كيف ينفذون إشارة التقدم. ثم اختبر تصميمك مع مستخدمين حقيقيين لترى مدى فعاليته.
+    </p>
+
+  </section>
+
+   <!-- QUESTIONS -->
+	<section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما هو الهدف الأساسي من استخدام إشارة التقدم في النماذج أو عمليات التسجيل؟</p>
+
+		<p> 1. لترفيه المستخدمين أثناء إكمال النموذج. ❌</p>
+    <p><mark> 2. لإعلام المستخدمين بمدى تقدمهم في العملية وما تبقى عليهم فعله. ✅</mark></p>
+    <p> 3. لتقليل عدد الخطوات في العملية. ❌</p>
+		<p> 4. لتسريع عملية إرسال النموذج. ❌</p>
+    <br>
+
+    <p class="userstory">لماذا من المهم السماح للمستخدمين بالعودة إلى الخطوات السابقة في نموذج أو عملية تسجيل؟</p>
+		
+		<p><mark> 1. للسماح للمستخدمين بتغيير إجاباتهم أو مراجعة المدخلات السابقة. ✅</mark></p>
+		<p> 2. لجعل النموذج أكثر تعقيدًا. ❌</p>
+    <p> 3. لتقليل عدد الخطوات في العملية. ❌</p>
+		<p> 4. لزيادة الوقت الذي يقضيه المستخدمون في الموقع. ❌</p>
+    <br>
+
+    <p class="userstory">ما الذي يجب مراعاته عند وضع قسم إشارة التقدم في صفحة ويب؟</p>
+		
+		<p> 1. يجب أن يكون صغيرًا قدر الإمكان لتجنب تشتيت المستخدم. ❌</p>
+    <p><mark> 2. يجب أن يكون سهل العثور عليه وموسومًا بوضوح مع سياق مثل عناوين الأقسام أو النسب المئوية. ✅</mark></p>
+    <p> 3. يجب أن يكون مخفيًا حتى يصل المستخدم إلى الخطوة النهائية. ❌</p>
+		<p> 4. يجب أن يتضمن فقط شريط تقدم بصري بدون نص. ❌</p>
+    
+	</section>
+  
+
+
+
+
+  <!-- Pages -->
+  <section class="page-nav">
+        <a class="prev" href="./What-Are-Best-Practices-for-Designing-Modal-Dialogs.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+  </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>

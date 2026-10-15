@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Progress Indication on Forms, Registration, and Setup"/>
+	<link rel="icon" type="image/x-icon" href="../../../../../favicon.png">
+	<title>EXAMPLE 2</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<style>
+body {
+
+  font-family: "Noto Kufi Arabic", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  
+
+} 
+
+.form-progress {
+max-width: 500px;
+margin: 20px auto 30px;
+font-family: Arial, sans-serif;
+}
+
+.progress-label {
+display: block;
+margin-bottom: 8px;
+font-size: 16px;
+font-weight: 600;
+color: #333;
+}
+
+.progress-container {
+position: relative;
+background-color: #555;
+border-radius: 8px;
+height: 30px;
+overflow: hidden;
+box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.progress-bar {
+background-color: #4caf50;
+height: 100%;
+width: 0;
+border-radius: 8px 0 0 8px;
+transition: width 0.3s ease;
+}
+
+.progress-text {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 30px;
+line-height: 30px;
+text-align: center;
+font-weight: bold;
+color: #fff;
+pointer-events: none;
+user-select: none;
+}
+
+form {
+max-width: 500px;
+margin: 0 auto;
+font-family: Arial, sans-serif;
+}
+
+fieldset {
+border: none;
+padding: 0;
+margin: 0 0 20px;
+}
+
+legend {
+font-size: 1.2em;
+font-weight: 700;
+margin-bottom: 10px;
+color: #222;
+}
+
+label {
+display: block;
+margin-bottom: 6px;
+font-weight: 600;
+color: #333;
+}
+
+input[type="text"],
+input[type="email"] {
+width: 100%;
+padding: 8px 10px;
+font-size: 1em;
+border: 1px solid #ccc;
+border-radius: 4px;
+margin-bottom: 15px;
+box-sizing: border-box;
+transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+outline: none;
+border-color: #4caf50;
+box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.form-step {
+display: none;
+}
+
+.form-step.active {
+display: block;
+}
+
+button {
+background-color: #4caf50;
+border: none;
+color: white;
+padding: 10px 18px;
+font-size: 1em;
+border-radius: 5px;
+cursor: pointer;
+margin-right: 10px;
+transition: background-color 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+background-color: #45a049;
+}
+
+button:disabled {
+background-color: #9e9e9e;
+cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+.form-progress, form {
+max-width: 90%;
+margin: 20px auto;
+}
+}
+
+
+
+</style>
+
+<body>
+
+<form id="progressForm">
+  <div class="form-progress" aria-label="Form progress">
+    <label class="progress-label">الخطوة <span id="currentStep">1</span> من <span id="totalSteps">4</span> (<span id="percentage">25%</span>)</label>
+    <div class="progress-container" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25">
+      <div class="progress-bar"></div>
+    </div>
+  </div>
+
+  <!-- Step 1 -->
+  <fieldset class="form-step active">
+    <legend>معلومات أساسية</legend>
+    <p>يُرجى إدخال معلوماتك الأساسية.</p>
+    <label for="name">الاسم:</label>
+    <input type="text" id="name" name="name" required>
+
+    <button type="button" class="next-btn">التالي</button>
+  </fieldset>
+
+  <!-- Step 2 -->
+  <fieldset class="form-step">
+    <legend>بيانات الاتصال</legend>
+    <p>كيف يمكننا التواصل معك؟</p>
+    <label for="email">البريد الإلكتروني:</label>
+    <input type="email" id="email" name="email" required>
+
+    <button type="button" class="prev-btn">السابق</button>
+    <button type="button" class="next-btn">التالي</button>
+  </fieldset>
+
+  <!-- Step 3 -->
+  <fieldset class="form-step">
+    <legend>العنوان</legend>
+    <p>أين تعيش؟</p>
+    <label for="address">الشارع:</label>
+    <input type="text" id="address" name="address" required>
+
+    <button type="button" class="prev-btn">السابق</button>
+    <button type="button" class="next-btn">التالي</button>
+  </fieldset>
+
+  <!-- Step 4 -->
+  <fieldset class="form-step">
+    <legend>مراجعة</legend>
+    <p>راجع إجاباتك قبل الإرسال.</p>
+
+    <button type="button" class="prev-btn">السابق</button>
+    <button type="submit">تسليم</button>
+  </fieldset>
+</form>
+
+
+
+<script>
+const form = document.getElementById('progressForm');
+const steps = form.querySelectorAll('.form-step');
+const progressBar = form.querySelector('.progress-bar');
+const currentStepSpan = document.getElementById('currentStep');
+const totalStepsSpan = document.getElementById('totalSteps');
+const percentageSpan = document.getElementById('percentage');
+
+const totalSteps = steps.length;
+let currentStep = 0;
+
+totalStepsSpan.textContent = totalSteps;
+
+function updateProgress() {
+  const percent = Math.round(((currentStep + 1) / totalSteps) * 100);
+  progressBar.style.width = percent + '%';
+  currentStepSpan.textContent = currentStep + 1;
+  percentageSpan.textContent = percent + '%';
+
+  // Update ARIA attribute
+  form.querySelector('.progress-container').setAttribute('aria-valuenow', percent);
+}
+
+function showStep(index) {
+  steps.forEach((step, i) => {
+    step.classList.toggle('active', i === index);
+  });
+  updateProgress();
+}
+
+form.querySelectorAll('.next-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (currentStep < totalSteps - 1) {
+      currentStep++;
+      showStep(currentStep);
+    }
+  });
+});
+
+form.querySelectorAll('.prev-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (currentStep > 0) {
+      currentStep--;
+      showStep(currentStep);
+    }
+  });
+});
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  alert('تم إرسال النموذج! شكرًا لك!');
+});
+
+showStep(currentStep);
+
+
+</script>
+
+</body>
+</html>
