@@ -1,0 +1,34 @@
+/* PREVIEW 1 */
+.preview1 {
+    max-height: 75vh;
+}
+.body1 {
+margin: 0;
+font-family: sans-serif;
+border: 5px dashed #333;
+}
+
+.body1 .hero {
+height: 100vh;
+width: 100vw;
+background-color: #add8e6;
+padding: 2em;
+}
+
+.body1 .hero h1 {
+font-size: 2em;
+margin-bottom: 0.5em;
+}
+
+.body1 .hero p {
+font-size: 1em;
+}
+
+/* PREVIEW 2 */
+.preview2 {
+    min-height: 30vh;
+}
+
+.preview2 h1 {
+    font-size: 5vw;
+}
