@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هي وحدات em و rem في CSS، ومتى يجب استخدامها؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/absolute-and-relative-units-Styles/working-with-relative-and-absolute-units/What-Are-ems-and-rems-in-CSS-and-When-Should-You-Use-Them.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الوحدات المطلقة والنسبية</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>العمل مع الوحدات النسبية والمطلقة Absolute and Relative Units</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+		<h2>ما هي وحدات em و rem في CSS، ومتى يجب استخدامها؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+  </section>
+
+  <section>
+    <p>
+        في الدرس السابق، تعلّمنا عن وحدات الطول المطلقة (absolute length units) مثل البكسل (pixels). 
+رغم أن الوحدات المطلقة (absolute units) قد تكون مفيدة في بعض الحالات، إلا أنه ستكون هناك أوقات تريد فيها استخدام وحدات نسبية (relative units).
+    </p>
+
+    <p>
+        في هذا الدرس، سنتعلم عن وحدتين نسبيتين (two relative units) : هما <span dir="ltr" class="nw"><span dir="ltr" class="br-spec nw">em</span>s</span> و <span dir="ltr" class="nw"><span dir="ltr" class="br-spec nw">rem</span>s</span>.
+    </p>
+
+    <!-- How Do (em) Units Work? -->
+    <section>
+        <h3>كيف تعمل وحدات <span dir="ltr" class="br-spec nw">em</span> ؟</h3>
+
+        <p>
+            وحدات <span dir="ltr" class="br-spec nw">em</span> تعتمد على حجم الخط للعنصر. 
+إذا كنت تستخدم ems لخاصية <span dir="ltr" class="br-spec nw">font-size</span>، 
+سيكون حجم النص نسبيًا (relative) لحجم الخط في العنصر الأب (parent element).
+        </p>
+
+        <p>
+            لفهم كيفية عمل ذلك بشكل أفضل، دعنا نلقي نظرة على مثال:
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;p <span class="attr">class=<span class="value">"para"</span></span>&gt;<span dir="rtl" class="txt">أنا عنصر فقرة</span>&lt;/p&gt;
+
+&lt;div <span class="attr">class=<span class="value">"blue-box"</span></span>&gt;&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.para</span> <span class="attr">{
+ font-size: <span class="txt">20px</span>;
+ margin-bottom: <span class="txt">1.5em</span>;
+ border: <span class="txt">2px solid red</span>;
+}</span>
+
+<span class="tag-b">.blue-box</span> <span class="attr">{
+ background-color: <span class="txt">blue</span>;
+ color: <span class="txt">white</span>;
+ padding: <span class="txt">10px</span>;
+ width: <span class="txt">100px</span>;
+ height: <span class="txt">100px</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview1">
+				    <p class="para">أنا عنصر فقرة</p>
+                    <div class="blue-box"></div>
+				</div>
+            </div>
+        <p>
+            في HTML، لدينا فقرة وعنصر <span dir="ltr" class="br-spec nw">div</span>. 
+عنصر الفقرة يحمل فئة <span dir="ltr" class="br-spec nw">para</span>، 
+وعنصر الـ <span dir="ltr" class="br-spec nw">div</span> يحمل فئة <span dir="ltr" class="br-spec nw">blue-box</span>.
+        </p>
+
+        <p>
+            بالنسبة لفئة <span dir="ltr" class="br-spec nw">para</span> 
+            عرّفنا <span dir="ltr" class="br-spec nw">font-size</span> إلى <span dir="ltr" class="br-spec nw">20px</span> 
+            و <span dir="ltr" class="br-spec nw">bottom</span> إلى <span dir="ltr" class="br-spec nw">1.5em</span>. 
+            هذا يعني أن الهامش سيكون 1.5 ضعف حجم الخط لعنصر الفقرة. 
+            قيمة <span dir="ltr" class="br-spec nw">1.5em</span> تعادل 30 بكسل من الهامش في أسفل الفقرة. 
+            كما عرّفنا <span dir="ltr" class="br-spec nw">border</span> بقيمة <span dir="ltr" class="br-spec nw">2px solid red</span> لتتمكن من رؤية الهوامش بشكل أوضح.
+        </p>
+
+        <p>
+            لصنف <span dir="ltr" class="br-spec nw">blue-box</span>، عيّنا لون الخلفية إلى <span dir="ltr" class="br-spec nw">blue</span>، ولون النص إلى <span dir="ltr" class="br-spec nw">white</span>، و <span dir="ltr" class="br-spec nw">padding</span> إلى <span dir="ltr" class="br-spec nw">10px</span> على جميع الجوانب الأربعة.
+        </p>
+        <p>
+            ن المثال، سيكون هناك مساحة واضحة بين أسفل عنصر الفقرة والصندوق الأزرق.
+        </p>
+        <p>
+            فماذا يحدث إذا أزلنا خاصية <span dir="ltr" class="br-spec nw">font-size</span> من صنف <span dir="ltr" class="br-spec nw">para</span> ؟
+        </p>
+        <p>
+            سيكون الهامش السفلي (bottom margin) نسبيًا relative لحجم الخط في العنصر الأب (parent element). 
+في هذه الحالة، العنصر الأب هو عنصر body، الذي له حجم خط افتراضي <span dir="ltr" class="br-spec nw">16px</span>.
+        </p>
+
+    </section>
+
+    <!-- When Should You Use em Units? -->
+    <section>
+        <h3>متى يجب استخدام وحدات <span dir="ltr" class="br-spec nw">em</span> ؟</h3>
+        <p>
+            تُعد وحدات القياس <span dir="ltr" class="br-spec nw">em</span> خياراً جيداً عند العمل على عناصر معيارية (modular components)، مثل الأزرار أو البطاقات. 
+            فمن خلال استخدام هذه الوحدات <span dir="ltr" class="br-spec nw">em</span> ، يمكنك ضمان أن تتناسب جميع أجزاء العنصر (كالهوامش الداخلية والخارجية والحدود) طردياً مع حجم الخط، مما يحافظ على تناسق الأبعاد.
+        </p>
+        <p>
+            حتى هذه النقطة، كنا نعيّن حجم الخط لعنصر باستخدام البكسل. لكن هذا يسبب بعض التحديات للمستخدمين.
+        </p>
+        <p>
+            داخل إعدادات المتصفح (browser settings)، يمكنك التحكم في حجم الخط الافتراضي.
+        </p>
+        <p>
+            بالنسبة لمن لديهم إعاقة بصرية، قد يزيدون حجم الخط لتسهيل القراءة. لكن إذا كنت تستخدم البكسل لتحديد أحجام الخطوط في تصاميم الويب، فلن يتناسب النص نسبيًا مع بقية المحتوى.
+        </p>
+
+
+    </section>
+
+    <!-- Why Use rem Units for Typography? -->
+    <section>
+        <h3>لماذا نستخدم وحدات <span dir="ltr" class="br-spec nw">rem</span> في تنسيق النصوص Typography ؟</h3>
+
+        <p>
+           تتمثل إحدى طرق معالجة هذه المسألة في استخدام وحدات <span dir="ltr" class="br-spec nw">rem</span> لتنسيق النصوص (typography). 
+وتعتمد وحدة <span dir="ltr" class="br-spec nw">rem</span> على حجم الخط الخاص بالعنصر الجذري (root element)، وهو عنصر <span dir="ltr" class="br-spec nw">html</span>. 
+        </p>
+        <p>
+            افتراضيًا، حجم الخط في عنصر <span dir="ltr" class="br-spec nw">html</span> هو <span dir="ltr" class="br-spec nw">16px</span>. 
+إذا زاد المستخدم حجم الخط في إعدادات المتصفح، سيزداد حجم الخط في عنصر <span dir="ltr" class="br-spec nw">html</span>، وستتغير جميع وحدات rem نسبيًا.
+        </p>
+
+        <p>
+            إليك مثالًا على استخدام وحدة <span dir="ltr" class="br-spec nw">rem</span> لحجم الخط بدلًا من البكسل:
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;p&gt;<span dir="rtl" class="txt">هذا نص عادي.</span>&lt;/p&gt;
+&lt;p <span class="attr">class=<span class="value">"para"</span></span>&gt;<span dir="rtl" class="txt">هذا النص أكبر قليلاً.</span>&lt;/p&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.para</span> <span class="attr">{
+ font-size: <span class="txt">1.2rem</span>;
+ margin-bottom: <span class="txt">1.5em</span>;
+ border: <span class="txt">2px solid red</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview2">
+                    <p>هذا نص عادي.</p>
+                    <p class="para">هذا النص أكبر قليلاً.</p>
+				</div>
+            </div>
+            <p>
+                بتعيين حجم الخط إلى <span dir="ltr" class="br-spec nw">1.2rem</span>، 
+سيكون حجم الخط لعنصر الفقرة 1.2 ضعف حجم الخط في العنصر الجذري (root element). 
+إذا لم يغير المستخدم حجم الخط الافتراضي، سيكون حجم الخط لعنصر الفقرة <span dir="ltr" class="br-spec nw">19.2px</span> لأنه 1.2 ضعف <span dir="ltr" class="br-spec nw">16px</span>.
+            </p>
+
+    </section>
+
+    <!-- When Should You Use rem Units? -->
+    <section>
+        <h3>متى يجب استخدام وحدات <span dir="ltr" class="br-spec nw">rem</span> ؟</h3>
+        <p>
+            إذًا، متى ينبغي عليك استخدام وحدات <span dir="ltr" class="br-spec nw">rem</span> ؟ 
+تُفضَّل وحدات <span dir="ltr" class="br-spec nw">rem</span> على وحدات البكسل (pixels) في تنسيق النصوص (typography)؛ 
+لأنها تتناسب في الحجم طرديًا مع إعدادات متصفح المستخدم، مما يجعل المحتوى أكثر سهولة في الوصول إليه بالنسبة للمستخدمين الذين يعانون من ضعف في البصر.
+        </p>
+        <p>
+            يمكن لوحدات <span dir="ltr" class="br-spec nw">rem</span> أيضًا المساعدة في الحفاظ على تباعد وتخطيط متناسق عبر العناصر المختلفة.
+        </p>
+
+    </section>
+
+
+  </section>
+
+  <section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+	
+
+        <p class="userstory">إلى ماذا تُنسب وحدة <span dir="ltr" class="br-spec nw">em</span> ؟</p>
+		
+		<p> 1. حجم الخط <span dir="ltr" class="br-spec nw">font-size</span> لعنصر الشكل <span dir="ltr" class="br-spec nw">figure</span>. ❌</p>
+        <p><mark> 2. حجم الخط <span dir="ltr" class="br-spec nw">font-size</span> للعنصر أو للعنصر الأب (parent element). ✅</mark></p>
+        <p> 3. حجم الخط <span dir="ltr" class="br-spec nw">font-size</span> للعنصر الجذري (root element). ❌</p>
+		<p> 4. حجم الخط <span dir="ltr" class="br-spec nw">font-size</span> لعنصر الصورة <span dir="ltr" class="br-spec nw">img</span>. ❌</p>
+        <br>
+
+        <p class="userstory">لماذا يُفضَّل استخدام وحدات <span dir="ltr" class="br-spec nw">rem</span> بدلاً من البكسل (pixels) في التعامل مع النصوص (typography)؟</p>
+		
+		<p> 1. يجب دائمًا استخدام البكسل للطباعة. ❌</p>
+        <p> 2. تجعل تصاميمك أكثر ألوانًا. ❌</p>
+        <p><mark> 3. تتغير نسبيًا مع إعدادات المتصفح لدى المستخدم. ✅</mark></p>
+		<p> 4. فهي تساهم في تحسين أداء الموقع الإلكتروني. ❌</p>
+        <br>
+
+        <p class="userstory">إلى ماذا تُنسب وحدات <span dir="ltr" class="br-spec nw">rem</span> ؟</p>
+		
+		<p> 1. حجم الخط <span dir="ltr" class="br-spec nw">font-size</span> لعنصر <span dir="ltr" class="br-spec nw">figure</span>. ❌</p>
+		<p> 2. حجم الخط <span dir="ltr" class="br-spec nw">font-size</span> للعنصر نفسه أو للعنصر الأب (parent element). ❌</p>
+		<p> 3. حجم الخط <span dir="ltr" class="br-spec nw">font-size</span> لعنصر <span dir="ltr" class="br-spec nw">img</span>. ❌</p>
+        <p><mark> 4. حجم الخط <span dir="ltr" class="br-spec nw">font-size</span> للعنصر الجذري (root element). ✅</mark></p>
+	</section>
+
+ 
+
+  
+
+
+  <!-- Pages -->
+  <section class="page-nav">
+    <a class="prev" href="./What-Are-Percentages-in-CSS-and-When-Should-You-Use-Them.html">&#8594; السابق</a>
+    <a class="next" href="#">التالي &#8592;</a>
+  </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
