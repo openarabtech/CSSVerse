@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هي النسب المئوية Percentages في CSS، ومتى يجب استخدامها؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/absolute-and-relative-units-Styles/working-with-relative-and-absolute-units/What-Are-Percentages-in-CSS-and-When-Should-You-Use-Them.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الوحدات المطلقة والنسبية</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>العمل مع الوحدات النسبية والمطلقة Absolute and Relative Units</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+		<h2>ما هي النسب المئوية Percentages في CSS، ومتى يجب استخدامها؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+  </section>
+
+ 
+
+  <section>
+    <p>
+        النسب المئوية (Percentages) في CSS هي وحدات نسبية (relative units) تتيح لك تحديد الأحجام (sizes) والأبعاد (dimensions) وخصائص أخرى كنسبة (proportion) من العنصر الأصل (parent element). 
+        عند استخدام قيمة نسبة مئوية (percentage value)، فأنت تقول أساسًا: 
+        "اجعل هذا العنصر يشغل X% من حاويته (its container)."
+    </p>
+    <p>
+        على سبيل المثال، إذا ضبطت <span dir="ltr" class="br-spec nw">width: 50%</span> على عنصر، فسيشغل نصف عرض (width) الحاوية الأصلية له (its parent container). 
+هذا يجعل النسب المئوية (percentages) مفيدة جدًا لإنشاء تصميمات متجاوبة (responsive designs) تتكيف مع أحجام الشاشات المختلفة.
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"container"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"box"</span></span>&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.container</span> <span class="attr">{
+ width: <span class="txt">400px</span>;
+ height: <span class="txt">200px</span>;
+ background-color: <span class="txt">lightgray</span>;
+}</span>
+
+<span class="tag-b">.box</span> <span class="attr">{
+ width: <span class="txt">50%</span>;
+ height: <span class="txt">100%</span>;
+ background-color: <span class="txt">red</span>;
+}</span>
+            </code></pre></div>
+    </div>
+        
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+        <div class="preview1">
+		 <div class="container">
+            <div class="box"></div>
+         </div>
+		</div>
+    </div>
+
+    <p>
+        النسب المئوية (Percentages) مثالية لإنشاء تخطيطات مرنة (fluid layouts) تتكيف مع أحجام الشاشات المختلفة. 
+على سبيل المثال، ضبط حاوية (container) على <span dir="ltr" class="br-spec nw">width: 80%</span> يضمن أن تشغل 80% من عرض الحاوية الأصلية its parent's width)، بغض النظر عن الجهاز (device).
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"parent"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"child"</span></span>&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.parent</span> <span class="attr">{
+ width: <span class="txt">100%</span>;
+ height: <span class="txt">300px</span>;
+ background-color: <span class="txt">lightgray</span>;
+}</span>
+
+<span class="tag-b">.box</span> <span class="attr">{
+ width: <span class="txt">80%</span>;
+ height: <span class="txt">100%</span>;
+ background-color: <span class="txt">red</span>;
+}</span>
+            </code></pre></div>
+    </div>
+        
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+        <div class="preview2">
+		 <div class="parent">
+            <div class="child"></div>
+         </div>
+		</div>
+    </div>
+
+    <p>
+        استخدام النسب المئوية (percentages) للصور المرنة (flexible images) هو ممارسة شائعة أخرى. 
+بتطبيق <span dir="ltr" class="br-spec nw">max-width: 100%</span> على الصور، تسمح لها بالتقلص (scale down) على الشاشات الصغيرة مع الحفاظ على نسبة أبعادها (aspect ratio).
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;img <span class="attr">src=<span class="value">"https://placehold.co/150x150"</span> alt=<span class="value">"صورة نموذجية للمنتج"</span></span> &gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">img</span> <span class="attr">{
+ max-width: <span class="txt">100%</span>;
+ height: <span class="txt">auto</span>;
+}</span>
+            </code></pre></div>
+    </div>
+        
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+        <div class="preview3">
+		  <img src="https://placehold.co/150x150" alt="صورة نموذجية للمنتج" >
+		</div>
+    </div>
+
+    <p>
+        رغم أنه أقل شيوعًا، يمكن أيضًا استخدام النسب المئوية (percentages) لأحجام الخطوط (font sizes) لإنشاء نصوص قابلة للتوسع (scalable typography). 
+على سبيل المثال، <span dir="ltr" class="br-spec nw">font-size: 120%</span> يجعل النص أكبر بنسبة 20% من حجم الخط في الحاوية الأصل (its parent's font size).
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"text-container"</span></span>&gt;
+ <span dir="rtl" class="txt">النص الأصلي.</span>
+ &lt;p <span class="attr">class=<span class="value">"text"</span></span>&gt;<span dir="rtl" class="txt">هذا نص نموذجي.</span>&lt;/p&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.text-container</span> <span class="attr">{
+ font-size: <span class="txt">16px</span>;
+}</span>
+
+<span class="tag-b">.text</span> <span class="attr">{
+ font-size: <span class="txt">120%</span>;
+}</span>
+            </code></pre></div>
+    </div>
+        
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+        <div class="preview4">
+            <div class="text-container">
+             النص الأصلي.
+             <p class="text">هذا نص نموذجي.</p>
+            </div>
+		</div>
+    </div>
+
+    <p>
+        النسب المئوية (Percentages) مفيدة جدًا للتمركز العمودي (vertical centering). 
+إليك مثالًا على كيفية استخدام النسب مع خاصية <span dir="ltr" class="br-spec nw">transform</span> لتمركز عنصر عموديًا.
+    </p>
+    <p>
+        يضع هذا المثال العنصر على بعد 50% من أعلى الحاوية (top of its container)، 
+ثم يستخدم <span dir="ltr" class="br-spec nw">transform</span> لتحريكه للأعلى بمقدار نصف ارتفاعه، مما يحقق تمركزًا عموديًا فعّالًا.
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"centered"</span></span>&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.centered</span> <span class="attr">{
+ position: <span class="txt">absolute</span>;
+ top: <span class="txt">50%</span>;
+ transform: <span class="txt">translateY(-50%)</span>;
+ width: <span class="txt">300px</span>;
+ height: <span class="txt">300px</span>;
+ background-color: <span class="txt">red</span>;
+}</span>
+            </code></pre></div>
+    </div>
+        
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+        <div class="preview5">
+		  <div class="centered"></div>
+		</div>
+    </div>
+
+    <p>
+        سوف تتعلم المزيد عن كيفية عمل التمركز المطلق (absolute positioning) وخصائص التحويل (transform properties) بتفصيل أكبر في الدروس القادمة.
+    </p>
+    <p>
+        تذكر، النسب المئوية (percentages) دائمًا نسبية لشيء ما (relative to something). 
+بالنسبة للخصائص الأفقية (horizontal) مثل <span dir="ltr" class="br-spec nw">width</span>، فهي نسبية لعرض الحاوية الأصل (relative to the parent's width). 
+أما الخصائص العمودية (vertical) مثل <span dir="ltr" class="br-spec nw">height</span>، فعادة ما تكون نسبية لارتفاع الحاوية الأصل (relative to the parent's height) (إذا كان محددًا).
+    </p>
+    <p>
+        كن كن حذرًا عند تسكين العناصر (nesting elements) ذات الأبعاد المعتمدة على النسب المئوية، إذ قد يؤدي ذلك إلى نتائج غير متوقعة. 
+أيضًا، ضع في اعتبارك أن ارتفاعات النسب المئوية (percentage-based heights) قد تكون معقدة إذا لم يكن للحاوية الأصل ارتفاع محدد (defined height).
+    </p>
+    <p>
+        باختصار، النسب المئوية في CSS أدوات قوية لإنشاء تصميمات مرنة ومتجاوبة. استخدمها عندما تريد أن تتناسب العناصر تناسبيًا مع حاوياتها أو عندما تحتاج إلى تخطيطات تتكيف بسلاسة مع أحجام الشاشات المختلفة.
+    </p>
+
+
+
+
+  </section>
+
+  <!-- QUESTIONS -->
+  <section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ماذا يحدث إذا ضبطت <span dir="ltr" class="br-spec nw">width: 50%</span> على عنصر حاويته الأصلية لها <span dir="ltr" class="br-spec nw">width</span> بقيمة <span dir="ltr" class="br-spec nw">300px</span> ؟</p>
+
+		<p><mark> 1. سيكون عرض العنصر <span dir="ltr" class="br-spec nw">150px</span>. ✅</mark></p>
+		<p> 2. سيكون عرض العنصر <span dir="ltr" class="br-spec nw">50px</span>. ❌</p>
+        <p> 3. سيكون عرض العنصر <span dir="ltr" class="br-spec nw">600px</span>. ❌</p>
+		<p> 4. لن يكون للعنصر أي عرض. ❌</p>
+        <br>
+
+        <p class="userstory">
+            في قاعدة CSS التالية، ما الخاصية التي تؤثر عليها القيمة النسبية (percentage value) ؟
+        </p>
+        <div class="code-block"><pre><code>
+<span class="tag-b">.box</span> <span class="attr">{
+ margin-top: <span class="txt">10%</span>;
+}</span>
+        </code></pre></div>
+		
+		<p> 1. عرض العنصر. ❌</p>
+        <p> 2. ارتفاع العنصر. ❌</p>
+        <p><mark> 3. الهامش العلوي للعنصر. ✅</mark></p>
+		<p> 4. حجم الخط للعنصر. ❌</p>
+        <br>
+
+        <p class="userstory">أي مما يلي ليس حالة استخدام جيدة لقيم النسب المئوية (percentage values) في CSS؟</p>
+		
+		<p> 1. تعيين <span dir="ltr" class="br-spec nw">width</span> لحاوية متجاوبة. ❌</p>
+		<p> 2. تحديد <span dir="ltr" class="br-spec nw">border-radius</span> لعنصر دائري. ❌</p>
+		<p> 3. تغيير حجم صورة داخل حاويتها. ❌</p>
+        <p><mark> 4. تحديد <span dir="ltr" class="br-spec nw">line-height</span> للنص. ✅</mark></p>
+	</section>
+
+
+  <!-- Pages -->
+  <section class="page-nav">
+    <a class="prev" href="./What-Are-Absolute-Units-in-CSS-and-When-Should-You-Use-Them.html">&#8594; السابق</a>
+    <a class="next" href="#">التالي &#8592;</a>
+  </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
