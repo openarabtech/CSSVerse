@@ -1,0 +1,22 @@
+/* PREVIEW 1 */
+.preview1 {
+    min-height: 25vh;
+}
+
+.preview1 .box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+/* PREVIEW 2 */
+.preview2 {
+    min-height: 25vh;
+}
+
+.preview2 .box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin: 10px;
+}

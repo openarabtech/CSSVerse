@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هي الوحدات المطلقة Absolute Units في CSS، ومتى يجب استخدامها؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/absolute-and-relative-units-Styles/working-with-relative-and-absolute-units/What-Are-Absolute-Units-in-CSS-and-When-Should-You-Use-Them.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الوحدات المطلقة والنسبية</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>العمل مع الوحدات النسبية والمطلقة Absolute and Relative Units</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+		<h2>ما هي الوحدات المطلقة Absolute Units في CSS، ومتى يجب استخدامها؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+  </section>
+
+ 
+
+  <section>
+    <p>
+      أثناء تصميم صفحاتك، ستتعامل مع خصائص مختلفة مثل العرض (widths)، الارتفاع (heights)، الحشو (padding)، الهامش (margins)، والمزيد. 
+عند تعريف هذه الخصائص، ستحتاج إلى تحديد وحدات الطول التي تريد استخدامها.
+    </p>
+    <p>
+      هناك نوعان من الوحدات (units) يمكنك استخدامها لتعريف هذه الخصائص: الوحدات النسبية (relative units) والوحدات المطلقة (absolute units). 
+في هذا الدرس، سنركز فقط على الوحدات المطلقة (absolute units).
+    </p>
+    <p>
+      الوحدات المطلقة للطول (Absolute length units) هي وحدات ذات طول ثابت (fixed length) وليست نسبية لشيء آخر. 
+النسبية (Relative) تعني أن الطول مرتبط بشيء آخر، 
+مثل حجم الشاشة (size of the screen) أو حجم العنصر الأب (size of the parent element). 
+سنتحدث أكثر عن الوحدات النسبية في الدروس القادمة.
+    </p>
+    <p>
+      الوحدة المطلقة (absolute unit) الأكثر شيوعًا هي البكسل <span dir="ltr" class="nw">(<span dir="ltr" class="br-spec nw">px</span>)</span>. 
+البكسلات (Pixels) هي وحدة قياس ذات حجم ثابت في CSS، 
+توفر تحكمًا دقيقًا في الأبعاد. 
+هذا يعني أن 1px دائمًا يساوي 1/96 من البوصة (inch).
+    </p>
+    <p>
+      من المهم ملاحظة أنه بينما تم توحيد 1px كـ 1/96 من البوصة لأغراض تخطيط CSS، 
+قد يختلف الحجم الفعلي للبكسل حسب الشاشة.
+    </p>
+    <p>
+      لنلقِ نظرة على مثال لاستخدام البكسلات (pixels) لتحديد العرض والارتفاع (width and height) لصندوق (box) :
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"box"</span></span>&gt;&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.box</span> <span class="attr">{
+ width: <span class="txt">100px</span>;
+ height: <span class="txt">100px</span>;
+ background-color: <span class="txt">red</span>;
+}</span>
+      </code></pre></div>
+    </div>
+        
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+        <div class="preview1">
+          <div class="box"></div>
+		    </div>
+    </div>
+    
+    <p>
+      في هذا المثال، لدينا صندوق أحمر (red box) بعرض وارتفاع محددين بـ <span dir="ltr" class="br-spec nw">100px</span>. 
+ستظل أبعاد هذا الصندوق كما هي بغض النظر عن تغييرات حجم الشاشة.
+    </p>
+    <p>
+      لذا، إذا كنت تستخدم جهازًا بشاشة صغيرة، سيظل عرض الصندوق <span dir="ltr" class="br-spec nw">100px</span>. 
+وإذا كنت على شاشة سطح مكتب كبيرة، سيظل عرض الصندوق <span dir="ltr" class="br-spec nw">100px</span>.
+    </p>
+    <p>
+      فمتى يجب استخدام الوحدات المطلقة (absolute units) مثل البكسلات (pixels)؟ يعتمد ذلك على الحالة. 
+لكن عمومًا تستخدم البكسلات عندما تحتاج إلى تحكم دقيق في أبعاد العنصر (element dimensions)، التباعد (spacing)، والتخطيط (layout). 
+أحيانًا قد تستخدم البكسلات للهامش (margins)، الحشو (padding)، والحدود (borders).
+    </p>
+    <p>
+      إليك مثالًا لاستخدام البكسلات (pixels) لتحديد الهامش (margin) لصندوقين (two boxes) :
+    </p>
+
+    <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"box"</span></span>&gt;&lt;/div&gt;
+&lt;div <span class="attr">class=<span class="value">"box"</span></span>&gt;&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.box</span> <span class="attr">{
+ width: <span class="txt">100px</span>;
+ height: <span class="txt">100px</span>;
+ background-color: <span class="txt">red</span>;
+ margin: <span class="txt">10px</span>;
+}</span>
+      </code></pre></div>
+    </div>
+        
+    <p class="hinty">معاينة:</p>
+    <div class="preview" role="presentation">
+        <div class="preview2">
+          <div class="box"></div>
+          <div class="box"></div>
+		    </div>
+    </div>
+
+    <p>
+      تذكر أن الهامش (margin) هو المساحة خارج الصندوق. 
+لذا، في هذا المثال، سيكون للصندوق هامش <span dir="ltr" class="br-spec nw">10px</span> من جميع الجهات.
+    </p>
+
+    <p>تشمل أنواع الوحدات المطلقة (absolute units) الأخرى ما يلي:</p>
+    <ul>
+      <li>
+        <p>
+          وحدة <span dir="ltr" class="br-spec nw">in</span> (بوصة inches)، تساوي 96px
+        </p>
+      </li>
+      <li>
+        <p>
+          وحدة <span dir="ltr" class="br-spec nw">cm</span> (سنتيمتر centimeters)، تساوي 25.2/64 من البوصة
+        </p>
+      </li>
+      <li>
+        <p>
+          وحدة <span dir="ltr" class="br-spec nw">mm</span> (مليمتر millimeters)، تساوي 1/10 من السنتيمتر
+        </p>
+      </li>
+      <li>
+        <p>
+          وحدة <span dir="ltr" class="br-spec nw">q</span> (ربع مليمتر quarter-millimeters)، تساوي 1/40 من السنتيمتر
+        </p>
+      </li>
+      <li>
+        <p>
+          وحدة <span dir="ltr" class="br-spec nw">pc</span> (بيكا picas)، تساوي 1/6 من البوصة
+        </p>
+      </li>
+      <li>
+        <p>
+          وحدة <span dir="ltr" class="br-spec nw">pt</span> (نقطة points)، تساوي 1/72 من البوصة
+        </p>
+      </li>
+    </ul>
+    <p>معظم هذه الوحدات (units) تُستخدم للطباعة (print) وليس للشاشات (screens).</p>
+
+    <p>
+      بينما الوحدة الأكثر شيوعًا التي ستستخدمها هي البكسلات (pixels)، 
+من المهم أن تعرف أن الوحدات المطلقة (absolute units) الأخرى موجودة.
+    </p>
+
+  </section>
+
+  <!-- QUESTIONS -->
+	<section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما هو البكسل (pixel) ؟</p>
+
+		<p><mark> 1. وحدة قياس ذات حجم ثابت مطلقة (absolute fixed-size unit) في CSS، توفر تحكمًا دقيقًا في الأبعاد (dimensions). ✅</mark></p>
+		<p> 2. وحدة قياس نسبية (relative unit) في CSS. ❌</p>
+    <p> 3. وحدة قياس نسبية (relative unit) لحجم الشاشة (screen). ❌</p>
+		<p> 4. وحدة قياس نسبية (relative unit) لحجم العنصر الأب (parent element). ❌</p>
+    <br>
+
+
+    <p class="userstory"></p>
+		
+		<p> 1. <span dir="ltr" class="br-spec nw">margins</span> و <span dir="ltr" class="br-spec nw">padding</span>. ❌</p>
+    <p> 2. <span dir="ltr" class="br-spec nw">cm</span> و <span dir="ltr" class="br-spec nw">mm</span>. ❌</p>
+    <p><mark> 3. الوحدات <span dir="ltr" class="br-spec nw">absolute</span> و <span dir="ltr" class="br-spec nw">relative</span>. ✅</mark></p>
+		<p> 4. <span dir="ltr" class="br-spec nw">picas</span> و <span dir="ltr" class="br-spec nw">points</span>. ❌</p>
+    <br>
+
+    <p class="userstory">أي مما يلي ليس وحدة قياس مطلقة (absolute unit) في CSS ؟</p>
+		
+		<p> 1. pt ❌</p>
+    <p><mark> 2. rem ✅</mark></p>
+    <p> 3. in ❌</p>
+		<p> 4. px ❌</p>
+  
+	</section>
+
+
+  <!-- Pages -->
+  <section class="page-nav">
+    <a class="prev" href="../index.html">&#8594; السابق</a>
+    <a class="next" href="#">التالي &#8592;</a>
+  </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>

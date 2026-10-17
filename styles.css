@@ -88,7 +88,7 @@ header {
   color:#ff3131;
   font-weight: bold;
   transition: color 0.3s;
-  font-size: xx-large;
+  font-size: x-large;
 }
 
 .nav-links a:hover {
@@ -196,7 +196,7 @@ footer .support a{
   }
 
   .nav-links a {
-  font-size: x-large;
+  font-size: large;
   }
 
   footer {
