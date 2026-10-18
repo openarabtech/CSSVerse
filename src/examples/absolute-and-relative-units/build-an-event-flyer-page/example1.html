@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" بناء صفحة منشور حدث Event Flyer Page"/>
+	<link rel="icon" type="image/x-icon" href="../../../../../favicon.png">
+	<title> فعالية التقنية العربية المفتوحة</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<style>
+body{
+  padding-top:50px;
+  padding-bottom:50px;
+  margin: 0 auto;
+  width: 100vw;
+  min-height: calc(100vh - 100px);
+  font-family:Arial, sans-serif;
+}
+
+header {
+  text-align: center;
+  margin-bottom:20px;
+}
+
+header img {
+  max-width: 90%;
+  height:auto;
+}
+
+main {
+  display:flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  margin: 20px auto;
+  justify-content:center;
+  
+  
+}
+
+section {
+  flex: 1;
+  width: 100%;
+  max-width:300px;
+  min-height:180px;
+  background-color: #f0f0f0;
+  color:111;
+  border-radius:16px;
+  margin:auto;
+  padding: 2px;
+}
+
+
+
+
+
+ul li {
+  padding: 4px 0;
+}
+
+hr {
+  width: 80%;
+  height: 2px;
+  background-color: #333;
+}
+
+
+
+footer{
+  text-align:center;
+  margin-top:50px;
+  
+}
+
+@media (min-width: 781px) {
+.section1 h2 {
+  text-align:right;
+}
+
+.section2 h2 {
+  text-align:center;
+  
+}
+
+.section3 h2 {
+  text-align:left;
+}
+
+}
+
+
+@media (max-width: 780px) {
+ main {
+  flex-direction: column;
+ }
+ section {
+  text-align:center;
+ }
+
+ ul {
+  list-style-type: none;
+  padding: 0;
+ }
+
+}
+
+</style>
+
+<body>
+
+  <header>
+   <img src="../../../assets/event.jpg" alt="صورة الفعالية">
+   <h1>مهرجان التقنية العربية المفتوحة</h1>
+   <p>انضموا إلينا في النسخة السنوية الأولى من مهرجان التقنية العربية المفتوحة!</p>
+   <p>
+    <strong>التاريخ</strong>
+    : 3 أكتوبر 
+    <strong>المكان</strong>
+    : حديقة بُولدر
+   </p>
+  </header>
+
+  <hr>
+
+  <main>
+   <section class="section1">
+    <h2>أبرز فعاليات المهرجان</h2>
+    <ul>
+     <li>عروض ومشاريع تقنية مبتكرة</li>
+     <li>مسابقة أفضل مشروع تقني مفتوح المصدر</li>
+     <li>تحديات البرمجة والابتكار التقني</li>
+    </ul>
+   </section>
+
+   <section class="section2">
+    <h2>الضيوف المميزون</h2>
+    <ul>
+     <li>خبراء التقنية والبرمجيات الحرة</li>
+     <li>مطورون ورواد في مجال المصادر المفتوحة</li>
+    </ul>
+   </section>
+
+   <section class="section3">
+    <h2>المأكولات والمشروبات</h2>
+    <ul>
+     <li>مأكولات متنوعة من عربات الطعام</li>
+     <li>مشاوي وأطباق شهية</li>
+     <li>عصائر ومشروبات منعشة</li>
+    </ul>
+   </section>
+  </main>
+
+  <hr>
+
+  <footer>
+   <p>
+    © 2025 مهرجان التقنية العربية المفتوحة
+   </p>
+  </footer>
+  
+ </body>
+</html>
