@@ -1,0 +1,83 @@
+/* PREVIEW 1 */
+.preview1 {
+    min-height: 40vh;
+}
+
+.preview1 .units {
+ display: flex;
+ gap: 12px;
+ flex-wrap: wrap;
+ align-items: flex-end;
+}
+
+.preview1 .unit {
+ background-color: steelblue;
+ color: white;
+ text-align: center;
+ padding: 4px;
+}
+
+.preview1 .px {
+ width: 40px;
+ height: 40px;
+}
+
+.preview1 .inch {
+ width: 0.5in;
+ height: 0.5in;
+}
+
+.preview1 .cm {
+ width: 1cm;
+ height: 1cm;
+}
+
+.preview1 .mm {
+ width: 10mm;
+ height: 10mm;
+}
+
+.preview1 .q {
+ width: 40q;
+ height: 40q;
+}
+
+.preview1 .pc {
+ width: 6pc;
+ height: 6pc;
+}
+
+.preview1 .pt {
+ width: 36pt;
+ height: 36pt;
+}
+
+/* PREVIEW 2 */
+.preview2 {
+width: 100%;
+overflow: hidden;
+border: 1px solid #ddd;
+border-radius: 8px;
+}
+
+.preview2 iframe {
+  display: block;
+  width: 100%;
+  min-height: 50vh;
+  border: none;
+}
+
+
+/* PREVIEW 3 */
+.preview3 {
+    min-height: 20vh;
+}
+
+.preview3 .calc-box {
+ width: calc(100% - 40px);
+ padding: 10px;
+ background: steelblue;
+ color: white;
+ text-align: center;
+ border: 2px solid black;
+}

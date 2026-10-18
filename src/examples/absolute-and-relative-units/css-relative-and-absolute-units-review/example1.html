@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="CSS Relative and Absolute Units Review"/>
+	<link rel="icon" type="image/x-icon" href="../../../../../favicon.png">
+	<title>Relative example</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<style>
+html {
+ font-size: 16px;
+}
+
+.parent {
+ width: 200px;
+ font-size: 20px;
+ border: 2px dashed #555;
+ padding: 10px;
+ display: flex;
+ flex-direction: column;
+ gap: 12px;
+}
+
+.box {
+ background-color: seagreen;
+ color: white;
+ text-align: center;
+ padding: 6px;
+}
+
+.percent {
+ width: 50%;
+}
+
+.em {
+ font-size: 2em;
+}
+
+.rem {
+ font-size: 2rem;
+}
+
+.vh {
+ height: 10vh;
+}
+
+.vw {
+ width: 10vw;
+}
+</style>
+
+<body>
+<div class="parent">
+ <div class="box percent">50%</div>
+ <div class="box em">2em</div>
+ <div class="box rem">2rem</div>
+ <div class="box vh">10vh</div>
+ <div class="box vw">10vw</div>
+</div>
+  
+  
+ </body>
+</html>

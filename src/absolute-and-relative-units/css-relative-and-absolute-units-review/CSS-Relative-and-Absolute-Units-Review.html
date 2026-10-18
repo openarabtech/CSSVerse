@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" مراجعة وحدات CSS النسبية Relative والمطلقة Absolute "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/absolute-and-relative-units-Styles/css-relative-and-absolute-units-review/CSS-Relative-and-Absolute-Units-Review.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الوحدات المطلقة والنسبية</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>الوحدات المطلقة والنسبية</h1>
+</header>
+
+
+
+
+
+
+<main class="box">
+
+
+    <!-- sub-title -->
+    <section class="sub-title">
+        <h2>مراجعة وحدات CSS النسبية Relative والمطلقة Absolute</h2>
+		<span class="hint">مراجعة</span>
+		<p></p>
+    </section>
+
+    <!-- Absolute Units -->
+    <section>
+        <h3>الوحدات المطلقة Absolute Units</h3>
+        <ul>
+            <li>
+                <p>
+                    <b><span dir="ltr" class="br-spec nw">px</span> (بكسل Pixels) :</b> هذه الوحدة المطلقة هي وحدة قياس بحجم ثابت في CSS. 
+                    هي أكثر الوحدات المطلقة شيوعًا وتوفر تحكمًا دقيقًا في الأبعاد. 
+                    <span dir="ltr" class="br-spec nw">1px</span> دائمًا يساوي 1/96 من البوصة (inch).
+                </p>
+            </li>
+            <li>
+                <p>
+                    <b><span dir="ltr" class="br-spec nw">in</span> (بوصة Inch) :</b> هذه الوحدة المطلقة تساوي 96 بكسل.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <b><span dir="ltr" class="br-spec nw">cm</span> (سنتيمتر Centimeters) :</b> هذه الوحدة المطلقة تساوي 25.2/64 من البوصة (inch).
+                </p>
+            </li>
+            <li>
+                <p>
+                    <b><span dir="ltr" class="br-spec nw">mm</span> (ميليمتر Millimeters) :</b> هذه الوحدة المطلقة تساوي 1/10 من السنتيمتر (centimeter).
+                </p>
+            </li>
+            <li>
+                <p>
+                    <b><span dir="ltr" class="br-spec nw">q</span> (ربع ميليمتر Quarter-Millimeters) :</b> هذه الوحدة المطلقة تساوي 1/40 من السنتيمتر (centimeter).
+                </p>
+            </li>
+            <li>
+                <p>
+                    <b><span dir="ltr" class="br-spec nw">pc</span> (بيكا Picas) :</b> هذه الوحدة المطلقة تساوي 1/6 من البوصة (inch).
+                </p>
+            </li>
+            <li>
+                <p><b><span dir="ltr" class="br-spec nw">pt</span> (نقطة Points) :</b> هذه الوحدة المطلقة تساوي 1/72 من البوصة (inch).</p>
+            </li>
+        </ul>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"units"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"unit px"</span></span>&gt;<span class="txt">px</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"unit inch"</span></span>&gt;<span class="txt">in</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"unit cm"</span></span>&gt;<span class="txt">cm</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"unit mm"</span></span>&gt;<span class="txt">mm</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"unit q"</span></span>&gt;<span class="txt">q</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"unit pc"</span></span>&gt;<span class="txt">pc</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"unit pt"</span></span>&gt;<span class="txt">pt</span>&lt;/div&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.units</span> <span class="attr">{
+ display: <span class="txt">flex</span>;
+ gap: <span class="txt">12px</span>;
+ flex-wrap: <span class="txt">wrap</span>;
+ align-items: <span class="txt">flex-end</span>;
+}</span>
+
+<span class="tag-b">.unit</span> <span class="attr">{
+ background-color: <span class="txt">steelblue</span>;
+ color: <span class="txt">white</span>;
+ text-align: <span class="txt">center</span>;
+ padding: <span class="txt">4px</span>;
+}</span>
+
+<span class="tag-b">.px</span> <span class="attr">{
+ width: <span class="txt">40px</span>;
+ height: <span class="txt">40px</span>;
+}</span>
+
+<span class="tag-b">.inch</span> <span class="attr">{
+ width: <span class="txt">0.5in</span>;
+ height: <span class="txt">0.5in</span>;
+}</span>
+
+<span class="tag-b">.cm</span> <span class="attr">{
+ width: <span class="txt">1cm</span>;
+ height: <span class="txt">1cm</span>;
+}</span>
+
+<span class="tag-b">.mm</span> <span class="attr">{
+ width: <span class="txt">10mm</span>;
+ height: <span class="txt">10mm</span>;
+}</span>
+
+<span class="tag-b">.q</span> <span class="attr">{
+ width: <span class="txt">40q</span>;
+ height: <span class="txt">40q</span>;
+}</span>
+
+<span class="tag-b">.pc</span> <span class="attr">{
+ width: <span class="txt">6pc</span>;
+ height: <span class="txt">6pc</span>;
+}</span>
+
+<span class="tag-b">.pt</span> <span class="attr">{
+ width: <span class="txt">36pt</span>;
+ height: <span class="txt">36pt</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview1">
+				 <div class="units">
+                    <div class="unit px">px</div>
+                    <div class="unit inch">in</div>
+                    <div class="unit cm">cm</div>
+                    <div class="unit mm">mm</div>
+                    <div class="unit q">q</div>
+                    <div class="unit pc">pc</div>
+                    <div class="unit pt">pt</div>
+                    </div>
+				</div>
+            </div>
+
+    </section>
+    <br>
+
+    <!-- Relative Units -->
+    <section>
+        <h3>الوحدات النسبية Relative Units</h3>
+        <ul>
+            <li>
+                <p>
+                    <b>النسب المئوية Percentages :</b> تتيح لك هذه الوحدات النسبية تعريف الأحجام والأبعاد وخصائص أخرى كنسبة (proportion) من عنصرها الأصل. 
+                    على سبيل المثال، إذا ضبطت <span dir="ltr" class="br-spec nw">width: 50%;</span> على عنصر، فسيشغل نصف عرض حاويته الأصل.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <b>الوحدة <span dir="ltr" class="br-spec nw">em</span> :</b> هذه الوحدات نسبية إلى حجم خط العنصر. 
+                    إذا كنت تستخدم <span dir="ltr" class="br-spec nw">ems</span> للخاصية <span dir="ltr" class="br-spec nw">font-size</span> ، فسيكون حجم النص نسبيًا إلى حجم خط العنصر الأصل.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <b>الوحدة <span dir="ltr" class="br-spec nw">rem</span> :</b> هذه الوحدات نسبية إلى حجم خط العنصر الجذر (root element)، وهو عنصر <span dir="ltr" class="br-spec nw">html</span>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <b>الوحدة <span dir="ltr" class="br-spec nw">vh</span> :</b> ترمز <span dir="ltr" class="br-spec nw">vh</span> إلى (viewport height) (ارتفاع إطار العرض) وتساوي <span dir="ltr" class="br-spec nw">1vh</span> نسبة 1% من ارتفاع إطار العرض.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <b>الوحدة <span dir="ltr" class="br-spec nw">vw</span> :</b> ترمز <span dir="ltr" class="br-spec nw">vw</span> إلى (viewport width) (عرض إطار العرض) وتساوي <span dir="ltr" class="br-spec nw">1vw</span> نسبة 1% من عرض إطار العرض.
+                </p>
+            </li>
+        </ul>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"parent"</span></span>&gt;
+ &lt;div <span class="attr">class=<span class="value">"box percent"</span></span>&gt;<span class="txt">50%</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"box em"</span></span>&gt;<span class="txt">2em</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"box rem"</span></span>&gt;<span class="txt">2rem</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"box vh"</span></span>&gt;<span class="txt">10vh</span>&lt;/div&gt;
+ &lt;div <span class="attr">class=<span class="value">"box vw"</span></span>&gt;<span class="txt">10vw</span>&lt;/div&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">html</span> <span class="attr">{
+ font-size: <span class="txt">16px</span>;
+}</span>
+
+<span class="tag-b">.parent</span> <span class="attr">{
+ width: <span class="txt">200px</span>;
+ font-size: <span class="txt">20px</span>;
+ border: <span class="txt">2px dashed #555</span>;
+ padding: <span class="txt">10px</span>;
+ display: <span class="txt">flex</span>;
+ flex-direction: <span class="txt">column</span>;
+ gap: <span class="txt">12px</span>;
+}</span>
+
+<span class="tag-b">.box</span> <span class="attr">{
+ background-color: <span class="txt">seagreen</span>;
+ color: <span class="txt">white</span>;
+ text-align: <span class="txt">center</span>;
+ padding: <span class="txt">6px</span>;
+}</span>
+
+<span class="tag-b">.percent</span> <span class="attr">{
+ width: <span class="txt">50%</span>;
+}</span>
+
+<span class="tag-b">.em</span> <span class="attr">{
+ font-size: <span class="txt">2em</span>;
+}</span>
+
+<span class="tag-b">.rem</span> <span class="attr">{
+ font-size: <span class="txt">2rem</span>;
+}</span>
+
+<span class="tag-b">.vh</span> <span class="attr">{
+ height: <span class="txt">10vh</span>;
+}</span>
+
+<span class="tag-b">.vw</span> <span class="attr">{
+ width: <span class="txt">10vw</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview2">
+				 <iframe
+					src="../../examples/absolute-and-relative-units/css-relative-and-absolute-units-review/example1.html"
+					title="Relative Units Example 1"
+					loading="lazy"
+				 ></iframe>
+				</div>
+            </div>
+
+    </section>
+    <br>
+
+    <!-- calc Function -->
+    <section>
+        <h3>دالة <span dir="ltr" class="br-spec nw">calc</span></h3>
+        <ul>
+            <li>
+                <p>
+                    <b>دالة <span dir="ltr" class="br-spec nw">calc()</span></b> باستخدام دالة <span dir="ltr" class="br-spec nw">calc()</span> ، يمكنك إجراء حسابات مباشرة داخل أوراق الأنماط (stylesheets) لتحديد قيم الخصائص بشكل ديناميكي. 
+هذا يعني أنه يمكنك إنشاء واجهات مستخدم مرنة ومتجاوبة بحساب الأبعاد بناءً على حجم إطار العرض (viewport) أو عناصر أخرى.
+                </p>
+            </li>
+        </ul>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"calc-box"</span></span>&gt;<span class="txt">calc()</span>&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.calc-box</span> <span class="attr">{
+ width: <span class="value">calc(100% <span class="txt">-</span> 40px)</span>;
+ padding: <span class="txt">10px</span>;
+ background: <span class="txt">steelblue</span>;
+ color: <span class="txt">white</span>;
+ text-align: <span class="txt">center</span>;
+ border: <span class="txt">2px solid black</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview3">
+                    <div dir="ltr" class="calc-box">calc()</div>
+				</div>
+            </div>
+    </section>
+    <br>
+
+    
+
+  
+
+
+  <!-- Pages -->
+  <section class="page-nav">
+    <a class="prev" href="../build-an-event-flyer-page/Build-an-Event-Flyer-Page.html">&#8594; السابق</a>
+    <a class="next" href="#">التالي &#8592;</a>
+  </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
