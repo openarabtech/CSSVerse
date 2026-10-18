@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هي دالة ()calc، وكيف تعمل؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/absolute-and-relative-units-Styles/working-with-relative-and-absolute-units/What-Is-the-calc-Function-and-How-Does-It-Work.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الوحدات المطلقة والنسبية</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>العمل مع الوحدات النسبية والمطلقة Absolute and Relative Units</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+    <!-- sub-title -->
+    <section class="sub-title">
+		<h2>ما هي دالة <span dir="ltr">calc()</span> ، وكيف تعمل؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+    </section>
+
+    <section>
+        <p>
+            تتيح لك الدالة <span dir="ltr" class="br-spec nw">calc()</span> إجراء عمليات حسابية مباشرةً داخل ملفات التنسيق (stylesheets) لتحديد قيم الخصائص بشكل ديناميكي. 
+وهذا يعني إمكانية إنشاء واجهات مستخدم مرنة ومتجاوبة، من خلال حساب الأبعاد (by calculating dimensions) استناداً إلى حجم إطار العرض (viewport) أو عناصر أخرى.
+        </p>
+
+        <!-- Understanding Functions -->
+        <section>
+            <h3>فهم الدوال Functions</h3>
+            <p>
+                تُعدّ <span dir="ltr" class="br-spec nw">calc()</span> دالةً (function) من دوال CSS. 
+                ستتعرف على المزيد حول الدوال عندما تبدأ في تعلم لغة JavaScript، 
+                لكنك في هذا الدرس ستتعلم الأساسيات التي تحتاج إلى معرفتها لفهم كيفية عمل <span dir="ltr" class="br-spec nw">calc()</span>.
+            </p>
+            <p>
+                الدالة (Function) هي كتلة من التعليمات البرمجية التي تؤدي مهمة محددة. 
+                وتوجد في لغة CSS دوال مُعرَّفة مسبقاً، 
+                يمكنك استخدامها مباشرةً وتمرير القيم اللازمة إليها لتخصيص كيفية تنفيذ مهامها.
+            </p>
+            <p>
+                في عالم البرمجة، عندما نقوم بتنفيذ المهمة التي تؤديها دالة ما، فإننا نقول إننا "نستدعي" (call) هذه الدالة. 
+                أما القيم (values) التي نمررها إلى الدالة فتُعرف باسم "المعاملات" (arguments).
+            </p>
+            <p>
+                كما ترى في الكود أدناه، لاستدعاء دالة، تكتب اسمها متبوعًا بالمعلمات داخل أقواس عادية، مفصولة بفواصل. 
+                لا يجب وجود فراغ بين اسم الدالة وفتح القوس.
+            </p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">function</span><span class="attr">(<span class="txt">argument1</span>, <span class="txt">argument2</span>, <span class="txt">argument3</span>)</span>
+            </code></pre></div>
+
+            <p>
+                قد تحتاج الدالة (function) إلى قيمة واحدة فقط لتعرف ما ينبغي عليها فعله؛ 
+                وفي هذه الحالة، فإنها تأخذ وسيطاً (argument) واحداً فقط. 
+                وهذا هو الحال مع الدالة <span dir="ltr" class="br-spec nw">calc()</span> ، 
+                فهي تأخذ وسيطاً واحداً لأنها تحتاج إلى معرفة ما يجب عليها حسابه.
+            </p>
+            <p>
+                للقيام بذلك، تقوم بتمرير ما يُسمى "تعبيرًا" (expression) كمعامل. 
+                والتعبير هو مزيج من القيم (values) والعوامل (operators) التي تُنتج نتيجةً ما.
+            </p>
+            <p>
+                هكذا يمكنك استدعاء دالة <span dir="ltr" class="br-spec nw">calc()</span>. 
+                تكتب الاسم calc، متبوعًا بأقواس عادية، وداخل الأقواس تكتب التعبير (expression) :
+            </p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">calc</span><span class="attr">(<span class="txt">expression</span>)</span>
+            </code></pre></div>
+            <p>
+                يتم تقييم التعبير (Expression) لاحتساب النتيجة النهائية. 
+                والمقصود بـ "التقييم" (Evaluated) هنا هو أن القيم والعوامل (Operators) تُحوَّل - خلف الكواليس - إلى قيمة واحدة. 
+                وتُسند هذه النتيجة إلى خاصية CSS التي يجري فيها الحساب.
+            </p>
+
+
+
+        </section>
+
+        <!-- Supported Values and Operators -->
+        <section>
+            <h3>القيم والعمليات المدعومة Supported Values and Operators</h3>
+            <p>
+                يمكنك إجراء عمليات حسابية على قيم تمثل الطول (length)، والزاوية (angle)، والزمن (time)، والنسب المئوية (percentages)، والأرقام (numbers). 
+                كما يمكنك الجمع بين وحدات مختلفة، مثل البكسل (pixels) والنسب المئوية (percentages) ووحدات "em".
+            </p>
+            <p>
+                بالنسبة للجمع والطرح (addition and subtraction)، 
+                يجب أن تحمل كل القيم في التعبير، والتي تُسمى أيضًا المعاملات، وحداتها المقابلة مثل <span dir="ltr" class="br-spec nw">px</span> و <span dir="ltr" class="br-spec nw">em</span> و النسبة المئوية (<span dir="ltr" class="br-spec nw">%</span>). 
+                حسب العامل (operator)، قد تحمل المعاملات وحدات مختلفة (different units).
+            </p>
+            <p>
+                يمكنك استخدام عوامل الجمع (<span dir="ltr" class="br-spec nw">+</span>)، الطرح (<span dir="ltr" class="br-spec nw">-</span>)، الضرب (<span dir="ltr" class="br-spec nw">*</span>)، والقسمة (<span dir="ltr" class="br-spec nw">/</span>) في التعبير (expression).
+            </p>
+            <p>
+                إذا كان هناك عدة معاملات وعوامل (operands and operators)، 
+                تتبع <span dir="ltr" class="br-spec nw">calc()</span> قاعدة أسبقية العوامل القياسية (standard operator precedence rule). 
+                يمكنك أيضًا إضافة أقواس عادية لتحديد ترتيب العمليات إذا لزم الأمر.
+            </p>
+
+        </section>
+
+        <!-- Calculating a Responsive Width -->
+        <section>
+            <h3>حساب عرض متجاوب Responsive Width</h3>
+            <p>في المثال أدناه، ترى عنصر <span dir="ltr" class="br-spec nw">div</span> يحتوي على النص <span dir="rtl" class="br-spec nw">مرحبا بالعالم!</span>.</p>
+            <p>
+                باستخدام محدد النوع (type selector) في CSS لاختيار <span dir="ltr" class="br-spec nw">div</span>، 
+                يمكنك تنسيقه بنص أبيض (white text) وخلفية زرقاء داكنة (dark blue background) :
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div&gt;<span dir="rtl" class="txt">مرحبا بالعالم!</span>&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">div</span> <span class="attr">{
+ color: <span class="txt">white</span>;
+ background-color: <span class="txt">#1b1b32</span>;
+ width: <span class="value">calc(50% <span class="txt">-</span> 20px)</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview1">
+                    <div>مرحبا بالعالم!</div>
+				</div>
+            </div>
+
+            <p>
+                الجديد هنا هو أن العرض (width) يُحسَب ديناميكيًا (dynamically). 
+                لاحظ كيف نستدعي الدالة <span dir="ltr" class="br-spec nw">calc()</span> ونمرر لها تعبيرًا (expression) كمعامل (argument)؛ 
+                إذ يحتوي هذا التعبير على متعاملَين (operands) بوحدات قياس مختلفة، بالإضافة إلى عامل (operator) واحد، وهو عامل الطرح.
+            </p>
+            <p>
+                تُعد النسبة المئوية وحدةً نسبية (relative unit)؛ 
+إذ تتحدد القيمة (<span dir="ltr" class="br-spec nw">50%</span>) بناءً على عرض الحاوية الأب (parent container)،
+ ثم تُطرح 20 بكسل <span dir="ltr" class="br-spec nw">20px</span> من هذه القيمة. 
+وتحدد نتيجة هذه العملية الحسابية عرض عنصر الـ <span dir="ltr" class="br-spec nw">div</span>.
+            </p>
+            <p>
+                يبلغ عرض عنصر <span dir="ltr" class="br-spec nw">div</span> حوالي نصف العرض الإجمالي للحاوية التي تحتويه، 
+                وإذا قمت بتغيير حجم الحاوية الأصلية، 
+                فسيتم إعادة حساب العرض تلقائيًا (automatically).
+            </p>
+            <p>
+                تلك هي الميزة الأساسية لاستخدام الدالة <span dir="ltr" class="br-spec nw">calc()</span>؛ 
+                إذ تتيح لك تحديد قيمة خاصية CSS بشكل ديناميكي بناءً على جوانب مختلفة من التطبيق أو إطار العرض (viewport).
+            </p>
+            <p>
+                يمكن أن يتضمن التعبير (expression) أيضًا دوال ومتغيرات CSS إذا كنت بحاجة إلى استخدامها في حساباتك. 
+                ستتعرف على المزيد حول متغيرات CSS في الدروس التالية.
+            </p>
+
+        </section>
+
+        <!-- Best Practices -->
+        <section>
+            <h3>أفضل الممارسات</h3>
+            <p>
+                رائع. الآن بعد أن عرفت أساسيات دالة <span dir="ltr" class="br-spec nw">calc()</span> ، دعنا نغطي بعض أفضل الممارسات الخاصة بها.
+            </p>
+            <p>
+                أولًا، يجب أن تحيط عوامل الجمع (<span dir="ltr" class="br-spec nw">+</span>) والطرح (<span dir="ltr" class="br-spec nw">-</span>) بمسافات فارغة.
+            </p>
+            <p>
+                على سبيل المثال، التعبير (expression) أدناه لن يكون تعبيرًا صالحًا لأن عامل الطرح (subtraction operator) يأتي مباشرة قبل المعامل الثاني (second operand).
+            </p>
+
+            <div class="code-block"><pre><code>
+<span class="tag-b">calc</span><span class="attr">(<span class="tag">100% -30px</span>)</span>
+            </code></pre></div>
+
+            <p>
+                يجب أن يُحاط عامل الطرح (<span dir="ltr" class="br-spec nw">-</span>) بمسافات فارغة، هكذا. إضافة المسافات ستجعل التعبير صالحًا.
+            </p>
+
+            <div class="code-block"><pre><code>
+<span class="tag-b">calc</span><span class="attr">(<span class="value">100%</span> - <span class="value">30px</span>)</span>
+            </code></pre></div>
+
+            <p>
+                هذا غير ضروري لعوامل الضرب والقسمة لكنه موصى به بشدة.
+            </p>
+            <p>
+                يمكنك أيضاً تضمين (nest) استدعاءات دالة <span dir="ltr" class="br-spec nw">calc()</span> داخل بعضها البعض إذا كنت بحاجة إلى إجراء عمليات حسابية واستخدام نتائجها في عمليات حسابية أخرى.
+            </p>
+            <p>
+                علاوةً على ذلك، إذا استخدمت القيمة صفر لتمثيل الطول في التعبير الذي تمرره إلى الدالة <span dir="ltr" class="br-spec nw">calc()</span> ، 
+                فيجب عليك تضمين الوحدات (units). 
+                على سبيل المثال، لن يكون هذا التعبير صالحاً:
+            </p>
+
+            <div class="code-block"><pre><code>
+<span class="tag-b">calc</span><span class="attr">(<span class="tag">100% - 0</span>)</span>
+            </code></pre></div>
+
+            <p>ستحتاج إلى إضافة الوحدات، مثل px.</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">calc</span><span class="attr">(<span class="value">100%</span> - <span class="value">0px</span>)</span>
+            </code></pre></div>
+
+            <p>
+                يجب أن تعرف أيضًا أنه إذا استخدمت عامل الضرب، 
+                يجب أن يكون أحد المعاملات بلا وحدة (unit). 
+                هذا التعبير لن يكون صالحًا لأن كلا المعاملتين تحملان وحدات (pixels) :
+            </p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">calc</span><span class="attr">(<span class="tag">5px * 50px</span>)</span>
+            </code></pre></div>
+
+            <p>
+                يجب عليك حذف الوحدة في واحدة منهما. كلا هذين الخيارين سيكونان صالحين:
+            </p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">calc</span><span class="attr">(<span class="value">5</span> * <span class="value">50px</span>)</span>
+<span class="tag-b">calc</span><span class="attr">(<span class="value">5px</span> * <span class="value">50</span>)</span>
+            </code></pre></div>
+
+            <p>
+                بالنسبة لعامل القسمة، تؤدي القسمة على عددٍ بلا وحدات (unitless number) إلى تغيير القيمة مع الحفاظ على وحدتها (its unit) :
+            </p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">calc</span><span class="attr">(<span class="value">50%</span> / <span class="value">5</span>)</span>
+            </code></pre></div>
+
+            <p>
+                يُعدّ تقسيم قيمتين لهما وحدات قياس متطابقة أمراً جائزاً أيضاً، 
+لكنه يؤدي إلى إلغاء الوحدات، 
+مما ينتج عنه رقمٌ مجرّد من أي وحدة (مثل الرقم <span dir="ltr" class="br-spec nw">10</span>).
+ تجدر الإشارة إلى أن القيم الخالية من الوحدات لا يمكن استخدامها إلا مع خصائص معيّنة في لغة CSS (مثل <span dir="ltr" class="br-spec nw">line-height</span> أو <span dir="ltr" class="br-spec nw">flex-grow</span>):
+            </p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">calc</span><span class="attr">(<span class="value">50%</span> / <span class="value">5%</span>)</span>
+            </code></pre></div>
+
+        </section>
+
+        <p>
+            يمكن أن تكون دالة <span dir="ltr" class="br-spec nw">calc()</span> مفيدة جدًا لك كمطور ويب. 
+باستخدام هذه الدالة، يمكنك تعيين قيم الخصائص بشكل ديناميكي لإنشاء تصاميم مرنة ومتجاوبة (flexible and responsive designs).
+        </p>
+
+    </section>
+
+
+    <!-- QUESTIONS -->
+    <section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">أي من العمليات التالية يمكن تنفيذها باستخدام دالة <span dir="ltr" class="br-spec nw">calc()</span> في CSS ؟</p>
+
+		<p> 1. الجمع والطرح فقط. ❌</p>
+        <p> 2. الضرب والقسمة فقط. ❌</p>
+        <p><mark> 3. الجمع، الطرح، الضرب، والقسمة. ✅</mark></p>
+		<p> 4. الجمع فقط. ❌</p>
+        <br>
+
+        <p class="userstory">ما أنواع القيم التي يمكن استخدامها كمعاملات داخل التعبير الممرر إلى دالة <span dir="ltr" class="br-spec nw">calc()</span> ؟</p>
+		
+		<p> 1. البكسل فقط. ❌</p>
+        <p> 2. النسب المئوية فقط. ❌</p>
+        <p><mark> 3. البكسل، النسب المئوية، <span dir="ltr" class="br-spec nw">em</span> ، وغيرها من الوحدات المدعومة. ✅</mark></p>
+		<p> 4. الأعداد الصحيحة فقط. ❌</p>
+        <br>
+
+        <p class="userstory">كيف يمكنك استخدام دالة <span dir="ltr" class="br-spec nw">calc()</span> لإنشاء تصميم متجاوب؟</p>
+		
+		<p> 1. بتعيين عرض ثابت للعناصر. ❌</p>
+        <p> 2. باستخدام استعلامات الوسائط فقط. ❌</p>
+        <p><mark> 3. بحساب أبعاد العناصر بناءً على حجم إطار العرض أو عناصر أخرى. ✅</mark></p>
+		<p> 4. باستخدام HTML لضبط أحجام العناصر ديناميكيًا. ❌</p>
+    
+	</section>
+
+  
+
+ 
+
+  
+
+
+  <!-- Pages -->
+  <section class="page-nav">
+    <a class="prev" href="./What-Are-vh-and-vw-Units-and-When-Should-You-Use-Them.html">&#8594; السابق</a>
+    <a class="next" href="#">التالي &#8592;</a>
+  </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+/* PREVIEW 1 */
+.preview1 {
+    min-height: 25vh;
+}
+
+.preview1 div {
+ color: white;
+ background-color: #1b1b32;
+ width: calc(50% - 20px);
+}
