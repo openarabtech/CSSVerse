@@ -1,0 +1,52 @@
+/* PREVIEW 1 */
+.preview1 {
+    min-height: 20vh;
+}
+.preview1 button:active {
+ background: greenyellow;
+}
+
+/* PREVIEW 2 */
+.preview2 {
+    min-height: 20vh;
+}
+.preview2 a:hover {
+ text-decoration: none;
+ color: white;
+ background: crimson;
+}
+     
+
+/* PREVIEW 3 */
+.preview3 {
+    min-height: 20vh;
+}
+.preview3 .container p:first-child {
+ background: lightcoral;
+ padding: 0.4rem;
+}
+
+/* PREVIEW 4 */
+.preview4 {
+    min-height: 20vh;
+}
+.preview4 .container p:last-child {
+ background: lightcoral;
+ padding: 0.4rem;
+}
+
+/* PREVIEW 5 */
+.preview5 {
+    min-height: 20vh;
+}
+.preview5 a:visited {
+ color: purple;
+}
+
+/* PREVIEW 6 */
+.preview6 {
+    min-height: 20vh;
+}
+.preview6 button:disabled {
+ background-color: lightgray;
+}

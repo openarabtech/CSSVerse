@@ -48,6 +48,7 @@ header h1 {
   margin-top: 50px;
   text-align: center;
   color:#ff3131;
+  font-size: xx-large;
 }
 /* ENDS HEADER */
 
@@ -314,6 +315,10 @@ footer .support a{
 @media (max-width: 768px) {
   body {
     font-size: medium;
+  }
+
+  header h1 {
+    font-size: x-large;
   }
 
   .br-spec {

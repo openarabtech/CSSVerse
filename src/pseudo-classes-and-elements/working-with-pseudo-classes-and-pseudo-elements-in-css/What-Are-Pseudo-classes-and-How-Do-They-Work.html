@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هي الفئات الزائفة Pseudo-classes ، وكيف تعمل؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/pseudo-classes-and-elements-Styles/working-with-pseudo-classes-and-pseudo-elements-in-css/What-Are-Pseudo-classes-and-How-Do-They-Work.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الفئات والعناصر الزائفة</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>العمل مع الفئات الزائفة Pseudo-Classes والعناصر الزائفة Pseudo-Elements في CSS</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+    <section class="sub-title">
+		<h2>ما هي الفئات الزائفة Pseudo-classes ، وكيف تعمل؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+    </section>
+
+    <section>
+        <p>
+            تُعد الفئات الزائفة (Pseudo-classes) كلماتٍ مفتاحيةً خاصةً في لغة CSS، 
+            تتيح لك اختيار عنصرٍ ما بناءً على حالته (state) أو موقعه (position) المحددين. 
+            وقد تتضمن حالة العنصر أو موقعه ما يلي:
+        </p>
+
+        <ul>
+            <li>
+                <p>عندما يكون في حالة نشطة (active).</p>
+            </li>
+            <li>
+                <p>عندما يتم تمرير مؤشر الفأرة فوقه (hovered).</p>
+            </li>
+            <li>
+                <p>عندما يكون الابن الأول (first child) لعنصر أب (parent).</p>
+            </li>
+            <li>
+                <p>عندما يكون الابن الأخير (last child) لعنصر أب (parent).</p>
+            </li>
+            <li>
+                <p>عندما يكون الرابط قد تمت زيارته (visited).</p>
+            </li>
+            <li>
+                <p>عندما يكون في حالة معطّلة (disabled).</p>
+            </li>
+        </ul>
+
+        <p>
+            لاستخدام فئة زائفة (pseudo-class)، 
+قم بإضافتها إلى المُحدِّد (selector) باستخدام علامة النقطتين (<span dir="ltr" class="br-spec nw">:</span>) متبوعةً باسم الفئة الزائفة:
+        </p>
+
+        <div class="code-block"><pre><code>
+<span class="tag-b">selector:pseudo-class</span> <span class="attr">{
+ <span class="value">/* CSS properties */</span>
+}</span>
+        </code></pre></div>
+
+        <p>
+            لنستعرض كيف يمكنك استخدام فئة زائفة (pseudo-class) لتمثيل كل حالة من الحالات والمواضع التي ذكرناها سابقاً.
+        </p>
+        <p>
+            تتيح لك الفئة الزائفة <span dir="ltr" class="br-spec nw">:active</span> تحديد الحالة النشطة (the active state) لعنصر ما، مثل النقر على زر:
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;button&gt;<span dir="rtl" class="txt">زر تجريبي</span>&lt;/button&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">button:active</span> <span class="attr">{
+ background: <span class="txt">greenyellow</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+                <div class="preview1">
+                    <button>زر تجريبي</button>
+				</div>
+        </div>
+        <br>
+
+        <p>
+            تُحدد الفئة الزائفة <span dir="ltr" class="br-spec nw">:hover</span> حالة العنصر عند تمرير مؤشر الفأرة فوقه. 
+            ومن الأمثلة على ذلك تمرير المؤشر فوق زر أو رابط:
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;a <span class="attr">href=<span class="value">"#"</span></span>&gt;<span dir="rtl" class="txt">مرِّر مؤشر الفأرة فوقي!</span>&lt;/a&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">a:hover</span> <span class="attr">{
+ text-decoration: <span class="txt">none</span>;
+ color: <span class="txt">white</span>;
+ background: <span class="txt">crimson</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+                <div class="preview2">
+                    <a href="#1">مرِّر مؤشر الفأرة فوقي!</a>
+				</div>
+        </div>
+        <br>
+
+        <p>
+            تُستخدم الفئة الزائفة <span dir="ltr" class="br-spec nw">:first-child</span> لاختيار عنصر يُمثّل الابن الأول (first child) لعنصره الأب (its parent element). 
+            إليك مثال على استهداف عنصر الفقرة الأول (first paragraph element) داخل حاوية (container) من نوع <span dir="ltr" class="br-spec nw">div</span> :
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"container"</span></span>&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">الابن الأول first child</span>&lt;/p&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">الابن الثاني second child</span>&lt;/p&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">الابن الثالث third child</span>&lt;/p&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">الابن الأخير last child</span>&lt;/p&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.container p:first-child</span> <span class="attr">{
+ background: <span class="txt">lightcoral</span>;
+ padding: <span class="txt">0.4rem</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+                <div class="preview3">
+                    <div class="container">
+                        <p>الابن الأول first child</p>
+                        <p>الابن الثاني second child</p>
+                        <p>الابن الثالث third child</p>
+                        <p>الابن الأخير last child</p>
+                    </div>
+				</div>
+        </div>
+        <p>
+            سيحصل أول عنصر فقرة (first paragraph element) داخل ذلك الـ <span dir="ltr" class="br-spec nw">div</span> على لون خلفية (background color) بدرجة <span dir="ltr" class="br-spec nw">lightcoral</span> ، 
+            بالإضافة إلى هامش داخلي <span dir="ltr" class="br-spec nw">padding</span> مقداره <span dir="ltr" class="br-spec nw">0.4rem</span> من الجهات الأربع.
+        </p>
+
+        <p>
+            تستهدف الفئة الزائفة <span dir="ltr" class="br-spec nw">:last-child</span> العنصر الأخير (the last element) الذي يمثل ابناً لعنصره الأب. 
+إليك مثالًا على استهداف آخر عنصر فقرة (last paragraph element) داخل حاوية (container) من نوع <span dir="ltr" class="br-spec nw">div</span> :
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"container"</span></span>&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">الابن الأول first child</span>&lt;/p&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">الابن الثاني second child</span>&lt;/p&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">الابن الثالث third child</span>&lt;/p&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">الابن الأخير last child</span>&lt;/p&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.container p:last-child</span> <span class="attr">{
+ background: <span class="txt">lightcoral</span>;
+ padding: <span class="txt">0.4rem</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+                <div class="preview4">
+                    <div class="container">
+                        <p>الابن الأول first child</p>
+                        <p>الابن الثاني second child</p>
+                        <p>الابن الثالث third child</p>
+                        <p>الابن الأخير last child</p>
+                    </div>
+				</div>
+        </div>
+        <br>
+
+        <p>
+            تتيح لك الفئة الزائفة <span dir="ltr" class="br-spec nw">:visited</span> تنسيق رابط سبق للمستخدم زيارته:
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;a <span class="attr">href=<span class="value">"https://www.example.com"</span> target=<span class="value">"_blank"</span></span>&gt;<span dir="rtl" class="txt">تفضل بزيارة Example.com</span>&lt;/a&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">a:visited</span> <span class="attr">{
+ color: <span class="txt">purple</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+                <div class="preview5">
+                    <a href="https://www.example.com" target="_blank">تفضل بزيارة Example.com</a>
+				</div>
+        </div>
+        <br>
+
+        <p>
+            تتيح لك الفئة الزائفة <span dir="ltr" class="br-spec nw">:disabled</span> تنسيق عنصر تفاعلي في وضع التعطيل (disabled mode) :
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;button <span class="attr">disabled</span>&gt;<span dir="rtl" class="txt">زر معطَّل</span>&lt;/button&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">button:disabled</span> <span class="attr">{
+ background-color: <span class="txt">lightgray</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+                <div class="preview6">
+                    <button disabled>زر معطَّل</button>
+				</div>
+        </div>
+        <br>
+
+        <p>
+            كما تلاحظ، تتيح لك الفئات الزائفة (pseudo-classes) تنسيق العناصر بناءً على تفاعلات المستخدم، 
+مثل تمرير مؤشر الفأرة فوق عنصر ما أو زيارة رابط؛ 
+مما يضفي طابعاً تفاعلياً أكبر على موقعك الإلكتروني.
+        </p>
+
+        <p>
+            بصرف النظر عن الفئات الزائفة (pseudo-classes) التي ذُكرت سابقاً، توجد فئات أخرى مثل:
+        </p>
+
+        <ul>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:focus</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:first-of-type</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:last-of-type</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:nth-of-type</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:modal</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:enabled</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:checked</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:required</span> ، وأكثر.</p>
+            </li>
+        </ul>
+        
+        <br>
+
+    </section>
+
+    <section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ماذا تفعل الفئة الزائفة <span dir="ltr" class="br-spec nw">:hover</span> في CSS ؟</p>
+
+		<p> 1. تختار عنصرًا عندما يتم النقر عليه. ❌</p>
+        <p><mark> 2. تختار عنصرًا عندما يتم التمرير فوقه بواسطة الماوس. ✅</mark></p>
+        <p> 3. تختار الطفل الأول لعنصر أب. ❌</p>
+		<p> 4. تختار رابطًا بعد زيارته. ❌</p>
+        <br>
+
+        <p class="userstory">ما هي الفئات الزائفة (pseudo-classes) ؟</p>
+		
+		<p><mark> 1. هي كلمات مفتاحية خاصة في CSS تتيح لك اختيار عنصر بناءً على حالته أو موقعه. ✅</mark></p>
+		<p> 2. تُستخدم لإنشاء عناصر HTML جديدة. ❌</p>
+        <p> 3. تغير محتوى العنصر. ❌</p>
+		<p> 4. هي بدائل للصنف في HTML. ❌</p>
+        <br>
+
+        <p class="userstory">ماذا تفعل الفئة الزائفة <span dir="ltr" class="br-spec nw">:disabled</span> في CSS ؟</p>
+		
+		<p><mark> 1. تنسق عنصرًا عندما يكون معطلاً. ✅</mark></p>
+		<p> 2. تنسق عنصرًا عندما يتم التمرير فوقه. ❌</p>
+        <p> 3. تنسق الطفل الأول لعنصر أب. ❌</p>
+		<p> 4. تنسق رابطًا بعد زيارته. ❌</p>
+
+	</section>
+
+ 
+
+  
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="../index.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
