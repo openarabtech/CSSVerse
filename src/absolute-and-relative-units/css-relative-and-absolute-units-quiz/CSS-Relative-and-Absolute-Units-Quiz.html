@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" اختبار وحدات CSS النسبية Relative والمطلقة Absolute "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/absolute-and-relative-units-Styles/css-relative-and-absolute-units-quiz/CSS-Relative-and-Absolute-Units-Quiz.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الوحدات المطلقة والنسبية</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>الوحدات المطلقة والنسبية</h1>
+</header>
+
+
+
+
+
+
+<main class="box">
+
+
+    <!-- sub-title -->
+    <section class="sub-title">
+        <h2>اختبار وحدات CSS النسبية Relative والمطلقة Absolute</h2>
+		<span class="hint">إختبار</span>
+		<p></p>
+    </section>
+
+
+    <section>
+        <ol>
+            <!-- Q1 -->
+            <li>
+                <h3>ما هي الوحدة المطلقة (absolute unit) ؟</h3>
+                <form>
+				<label><input type="radio" name="q1" value="">وحدات تتغير ديناميكيًا (dynamically) بناءً على حجم الشاشة (screen size).</label><br>
+				<label><input type="radio" name="q1" value="">وحدات تُقاس كنسب مئوية (percentages) من إطار العرض (viewport).</label><br>
+				<label><input type="radio" name="q1" value="">وحدات طول ثابتة (Fixed length units) لا تعتمد على أي شيء آخر.</label><br>
+				<label><input type="radio" name="q1" value="">وحدات تعتمد على حجم الخط (font size) للعنصر الأصل.</label>
+			</form>
+			<h4>وحدات طول ثابتة (Fixed length units) لا تعتمد على أي شيء آخر.</h4>
+            </li>
+
+            <!-- Q2 -->
+            <li>
+                <h3>ماذا يغطي <span dir="ltr" class="br-spec nw">100vw</span> من عرض الشاشة (screen width) ؟</h3>
+                <form>
+				<label><input type="radio" name="q2" value=""><span dir="ltr" class="br-spec nw">100%</span> من عرض العنصر الأصل (parent's width).</label><br>
+				<label><input type="radio" name="q2" value=""><span dir="ltr" class="br-spec nw">100%</span> من عرض إطار العرض (viewport width).</label><br>
+				<label><input type="radio" name="q2" value=""><span dir="ltr" class="br-spec nw">100%</span> من عرض الشاشة (screen width).</label><br>
+				<label><input type="radio" name="q2" value=""><span dir="ltr" class="br-spec nw">100%</span> من ارتفاع إطار العرض (viewport height).</label>
+			</form>
+			<h4>0 من عرض إطار العرض (viewport width).</h4>
+            </li>
+
+            <!-- Q3 -->
+            <li>
+                <h3>أي من التالي وحدة نسبية (relative unit) ؟</h3>
+                <form>
+				<label><input type="radio" name="q3" value=""><span dir="ltr" class="br-spec nw">em</span></label><br>
+				<label><input type="radio" name="q3" value=""><span dir="ltr" class="br-spec nw">cm</span></label><br>
+				<label><input type="radio" name="q3" value=""><span dir="ltr" class="br-spec nw">mm</span></label><br>
+				<label><input type="radio" name="q3" value=""><span dir="ltr" class="br-spec nw">pt</span></label>
+			</form>
+			<h4><span dir="ltr" class="br-spec nw">em</span></h4>
+            </li>
+
+            <!-- Q4 -->
+            <li>
+                <h3>إذا كان حجم الخط الجذري <span dir="ltr" class="br-spec nw">20px</span> ، فما قيمة <span dir="ltr" class="br-spec nw">1rem</span> ؟</h3>
+                <form>
+				<label><input type="radio" name="q4" value=""><span dir="ltr" class="br-spec nw">18px</span></label><br>
+				<label><input type="radio" name="q4" value=""><span dir="ltr" class="br-spec nw">16px</span></label><br>
+				<label><input type="radio" name="q4" value=""><span dir="ltr" class="br-spec nw">20px</span></label><br>
+				<label><input type="radio" name="q4" value=""><span dir="ltr" class="br-spec nw">10px</span></label>
+			</form>
+			<h4><span dir="ltr" class="br-spec nw">20px</span></h4>
+            </li>
+
+            <!-- Q5 -->
+            <li>
+                <h3>ماذا يمكن أن تفعل دالة <span dir="ltr" class="br-spec nw">calc()</span> في CSS ؟</h3>
+                <form>
+				<label><input type="radio" name="q5" value="">تعيين عرض ثابت (fixed width).</label><br>
+				<label><input type="radio" name="q5" value="">العمل فقط مع النسب المئوية (percentages).</label><br>
+				<label><input type="radio" name="q5" value="">الجمع (Add) والطرح (subtract) والضرب (multiply) أو القسمة (divide) بين وحدات مختلفة.</label><br>
+				<label><input type="radio" name="q5" value="">تعديل الألوان ديناميكيًا (dynamically).</label>
+			</form>
+			<h4>الجمع (Add) والطرح (subtract) والضرب (multiply) أو القسمة (divide) بين وحدات مختلفة.</h4>
+            </li>
+
+            <!-- Q6 -->
+            <li>
+                <h3>ما هي الوحدة المطلقة (absolute unit) الأكثر استخدامًا في CSS ؟</h3>
+                <form>
+				<label><input type="radio" name="q6" value=""><span dir="ltr" class="br-spec nw">inch</span></label><br>
+				<label><input type="radio" name="q6" value=""><span dir="ltr" class="br-spec nw">%</span></label><br>
+				<label><input type="radio" name="q6" value=""><span dir="ltr" class="br-spec nw">rem</span></label><br>
+				<label><input type="radio" name="q6" value=""><span dir="ltr" class="br-spec nw">px</span></label>
+			</form>
+			<h4><span dir="ltr" class="br-spec nw">px</span></h4>
+            </li>
+
+            <!-- Q7 -->
+            <li>
+                <h3>إذا كان ارتفاع إطار العرض <span dir="ltr" class="br-spec nw">800px</span> ، فما قيمة <span dir="ltr" class="br-spec nw">50vh</span> ؟</h3>
+                <form>
+				<label><input type="radio" name="q7" value=""><span dir="ltr" class="br-spec nw">400px</span></label><br>
+				<label><input type="radio" name="q7" value=""><span dir="ltr" class="br-spec nw">200px</span></label><br>
+				<label><input type="radio" name="q7" value=""><span dir="ltr" class="br-spec nw">50px</span></label><br>
+				<label><input type="radio" name="q7" value=""><span dir="ltr" class="br-spec nw">100px</span></label>
+			</form>
+			<h4><span dir="ltr" class="br-spec nw">400px</span></h4>
+            </li>
+
+            <!-- Q8 -->
+            <li>
+                <h3>ماذا يعني تعيين عرض عنصر (element's width) إلى <span dir="ltr" class="br-spec nw">100%</span> ؟</h3>
+                <form>
+				<label><input type="radio" name="q8" value="">يشغل العرض الكامل للوثيقة (full width of the document).</label><br>
+				<label><input type="radio" name="q8" value="">يشغل العرض الكامل للشاشة (full width of the screen).</label><br>
+				<label><input type="radio" name="q8" value="">يشغل <span dir="ltr" class="br-spec nw">100px</span>.</label><br>
+				<label><input type="radio" name="q8" value="">يشغل العرض الكامل لعنصر الأصل (full width of its parent).</label>
+			</form>
+			<h4>يشغل العرض الكامل لعنصر الأصل (full width of its parent).</h4>
+            </li>
+
+            <!-- Q9 -->
+            <li>
+                <h3>ماذا يحدث مع <span dir="ltr" class="br-spec nw">calc(10px + 20%)</span> في CSS ؟</h3>
+                <form>
+				<label><input type="radio" name="q9" value="">يضيف <span dir="ltr" class="br-spec nw">10px</span> إلى <span dir="ltr" class="br-spec nw">10%</span> من عرض الوثيقة.</label><br>
+				<label><input type="radio" name="q9" value="">يضيف <span dir="ltr" class="br-spec nw">10px</span> إلى <span dir="ltr" class="br-spec nw">20%</span> من عرض الشاشة.</label><br>
+				<label><input type="radio" name="q9" value="">يضيف <span dir="ltr" class="br-spec nw">10px</span> إلى <span dir="ltr" class="br-spec nw">20%</span> من عرض العنصر الأصل.</label><br>
+				<label><input type="radio" name="q9" value="">دائمًا يساوي <span dir="ltr" class="br-spec nw">30px</span>.</label>
+			</form>
+			<h4>يضيف <span dir="ltr" class="br-spec nw">10px</span> إلى <span dir="ltr" class="br-spec nw">20%</span> من عرض العنصر الأصل.</h4>
+            </li>
+
+            <!-- Q10 -->
+            <li>
+                <h3>أي وحدة (unit) تعتمد على حجم الخط (font size) للعنصر الجذري (the root element) ؟</h3>
+                <form>
+				<label><input type="radio" name="q10" value=""><span dir="ltr" class="br-spec nw">%</span></label><br>
+				<label><input type="radio" name="q10" value=""><span dir="ltr" class="br-spec nw">px</span></label><br>
+				<label><input type="radio" name="q10" value=""><span dir="ltr" class="br-spec nw">pt</span></label><br>
+				<label><input type="radio" name="q10" value=""><span dir="ltr" class="br-spec nw">rem</span></label>
+			</form>
+			<h4><span dir="ltr" class="br-spec nw">rem</span></h4>
+            </li>
+
+            <!-- Q11 -->
+            <li>
+                <h3>مع حجم خط جذري <span dir="ltr" class="br-spec nw">16px</span> ، ما حجم <span dir="ltr" class="br-spec nw">10rem</span> ؟</h3>
+                <form>
+				<label><input type="radio" name="q11" value=""><span dir="ltr" class="br-spec nw">140px</span></label><br>
+				<label><input type="radio" name="q11" value=""><span dir="ltr" class="br-spec nw">100px</span></label><br>
+				<label><input type="radio" name="q11" value=""><span dir="ltr" class="br-spec nw">10px</span></label><br>
+				<label><input type="radio" name="q11" value=""><span dir="ltr" class="br-spec nw">160px</span></label>
+			</form>
+			<h4><span dir="ltr" class="br-spec nw">160px</span></h4>
+            </li>
+
+            <!-- Q12 -->
+            <li>
+                <h3>لماذا قد تستخدم وحدة <span dir="ltr" class="br-spec nw">point</span> بدلًا من <span dir="ltr" class="br-spec nw">pixels</span> في التصميم؟</h3>
+                <form>
+				<label><input type="radio" name="q12" value="">النقاط أفضل للتصاميم المتجاوبة (responsive layouts).</label><br>
+				<label><input type="radio" name="q12" value="">النقاط قابلة للتكبير (scalable).</label><br>
+				<label><input type="radio" name="q12" value="">النقاط أسهل في الإدارة على الشاشات (screens).</label><br>
+				<label><input type="radio" name="q12" value="">النقاط مخصصة لتصميم الطباعة (print design).</label>
+			</form>
+			<h4>النقاط مخصصة لتصميم الطباعة (print design).</h4>
+            </li>
+
+            <!-- Q13 -->
+            <li>
+                <h3>لماذا تُفضل وحدات <span dir="ltr" class="br-spec nw">rem</span> على <span dir="ltr" class="br-spec nw">pixels</span> في الطباعة (typography) ؟</h3>
+                <form>
+				<label><input type="radio" name="q13" value="">لأنها توفر حجمًا ثابتًا بغض النظر عن دقة الشاشة (screen resolution).</label><br>
+				<label><input type="radio" name="q13" value="">لأنها أسهل في التنفيذ في التصاميم المتجاوبة (responsive designs).</label><br>
+				<label><input type="radio" name="q13" value="">لأنها تتناسب تناسبيًا مع إعدادات متصفح المستخدم (user’s browser settings).</label><br>
+				<label><input type="radio" name="q13" value="">لأنها تضمن التوافق مع المتصفحات القديمة (older browsers).</label>
+			</form>
+			<h4>لأنها تتناسب تناسبيًا مع إعدادات متصفح المستخدم (user’s browser settings).</h4>
+            </li>
+
+            <!-- Q14 -->
+            <li>
+                <h3>كم من مساحة الشاشة يشغل <span dir="ltr" class="br-spec nw">80vw</span> ؟</h3>
+                <form>
+				<label><input type="radio" name="q14" value=""><span dir="ltr" class="br-spec nw">80%</span> من عرض إطار العرض (viewport width).</label><br>
+				<label><input type="radio" name="q14" value=""><span dir="ltr" class="br-spec nw">80px</span></label><br>
+				<label><input type="radio" name="q14" value=""><span dir="ltr" class="br-spec nw">100%</span> من ارتفاع إطار العرض (viewport height).</label><br>
+				<label><input type="radio" name="q14" value=""><span dir="ltr" class="br-spec nw">80%</span> من عرض العنصر الأصل (parent width).</label>
+			</form>
+			<h4><span dir="ltr" class="br-spec nw">80%</span> من عرض إطار العرض (viewport width).</h4>
+            </li>
+
+            <!-- Q15 -->
+            <li>
+                <h3>أي الوحدات (units) يجب أن تستخدم إذا أردت أن يشغل عنصر عرضًا أو ارتفاعًا (width or height) معينًا بنسبة مئوية (percentage) من الشاشة؟</h3>
+                <form>
+				<label><input type="radio" name="q15" value=""><span dir="ltr" class="br-spec nw">vw</span> و <span dir="ltr" class="br-spec nw">vh</span></label><br>
+				<label><input type="radio" name="q15" value=""><span dir="ltr" class="br-spec nw">rem</span> و <span dir="ltr" class="br-spec nw">em</span></label><br>
+				<label><input type="radio" name="q15" value=""><span dir="ltr" class="br-spec nw">pt</span> و <span dir="ltr" class="br-spec nw">px</span></label><br>
+				<label><input type="radio" name="q15" value=""><span dir="ltr" class="br-spec nw">pt</span> و <span dir="ltr" class="br-spec nw">pc</span></label>
+			</form>
+			<h4><span dir="ltr" class="br-spec nw">vw</span> و <span dir="ltr" class="br-spec nw">vh</span></h4>
+            </li>
+
+            <!-- Q16 -->
+            <li>
+                <h3>ماذا تعني <span dir="ltr" class="br-spec nw">vw</span> ؟</h3>
+                <form>
+				<label><input type="radio" name="q16" value="">العرض الافتراضي Virtual Width.</label><br>
+				<label><input type="radio" name="q16" value="">العرض المتغير Variable Width.</label><br>
+				<label><input type="radio" name="q16" value="">عرض إطار العرض Viewport Width.</label><br>
+				<label><input type="radio" name="q16" value="">العرض العمودي Vertical Width.</label>
+			</form>
+			<h4>عرض إطار العرض Viewport Width.</h4>
+            </li>
+
+            <!-- Q17 -->
+            <li>
+                <h3>ما الفرق الرئيسي بين <span dir="ltr" class="br-spec nw">rem</span> و <span dir="ltr" class="br-spec nw">em</span> في CSS ؟</h3>
+                <form>
+				<label><input type="radio" name="q17" value=""><span dir="ltr" class="br-spec nw">em</span> تعتمد على حجم الخط للعنصر الأصل، بينما <span dir="ltr" class="br-spec nw">rem</span> تعتمد على العنصر الجذري.</label><br>
+				<label><input type="radio" name="q17" value=""><span dir="ltr" class="br-spec nw">rem</span> تعتمد على العرض المحدد من المستخدم، بينما <span dir="ltr" class="br-spec nw">em</span> تعتمد على عرض المتصفح.</label><br>
+				<label><input type="radio" name="q17" value=""><span dir="ltr" class="br-spec nw">em</span> تعتمد على العنصر الجذري، بينما <span dir="ltr" class="br-spec nw">rem</span> تعتمد على العنصر الأصل.</label><br>
+				<label><input type="radio" name="q17" value=""><span dir="ltr" class="br-spec nw">rem</span> تعتمد على عرض سطح المكتب، بينما <span dir="ltr" class="br-spec nw">em</span> تعتمد على عرض الهاتف المحمول.</label>
+			</form>
+			<h4><span dir="ltr" class="br-spec nw">em</span> تعتمد على حجم الخط للعنصر الأصل، بينما <span dir="ltr" class="br-spec nw">rem</span> تعتمد على العنصر الجذري.</h4>
+            </li>
+
+            <!-- Q18 -->
+            <li>
+                <h3>ما هي وحدة <span dir="ltr" class="br-spec nw">vh</span> ؟</h3>
+                <form>
+				<label><input type="radio" name="q18" value="">وحدة تتغير بناءً على حجم الخط.</label><br>
+				<label><input type="radio" name="q18" value="">وحدة تعتمد على ارتفاع العنصر.</label><br>
+				<label><input type="radio" name="q18" value="">وحدة تساوي 1% من ارتفاع إطار العرض</label><br>
+				<label><input type="radio" name="q18" value="">وحدة تعتمد على عرض إطار العرض.</label>
+			</form>
+			<h4>وحدة تساوي 1% من ارتفاع إطار العرض.</h4>
+            </li>
+
+            <!-- Q19 -->
+            <li>
+                <h3>ماذا يفعل تعيين عرض عنصر (element's width) إلى <span dir="ltr" class="br-spec nw">auto</span> في CSS ؟</h3>
+                <form>
+				<label><input type="radio" name="q19" value="">يعين العرض إلى <span dir="ltr" class="br-spec nw">50%</span> من إطار العرض ما لم تتجاوزها أنماط أخرى.</label><br>
+				<label><input type="radio" name="q19" value="">يسمح للمتصفح بتحديد العرض بناءً على المحتوى والحاوية.</label><br>
+				<label><input type="radio" name="q19" value="">يعين العرض إلى <span dir="ltr" class="br-spec nw">0px</span> إذا لم يكن هناك محتوى أو حشو.</label><br>
+				<label><input type="radio" name="q19" value="">يعين العرض إلى <span dir="ltr" class="br-spec nw">100%</span> من العنصر الأصل افتراضيًا.</label>
+			</form>
+			<h4>يسمح للمتصفح بتحديد العرض بناءً على المحتوى والحاوية.</h4>
+            </li>
+
+            <!-- Q20 -->
+            <li>
+                <h3>ما ميزة رئيسية لدالة <span dir="ltr" class="br-spec nw">calc()</span> ؟</h3>
+                <form>
+				<label><input type="radio" name="q20" value="">تسمح بتضمين تعبيرات JavaScript مباشرة داخل قواعد CSS.</label><br>
+				<label><input type="radio" name="q20" value="">تمكنك من تحديد قيمة خاصية CSS ديناميكيًا بناءً على جوانب مختلفة من التطبيق أو إطار العرض.</label><br>
+				<label><input type="radio" name="q20" value="">تقوم بتصغير ملفات CSS تلقائيًا لأداء أفضل.</label><br>
+				<label><input type="radio" name="q20" value="">تمكن من استخدام المتغيرات داخل CSS بدون معالجات مسبقة.</label>
+			</form>
+			<h4>تمكنك من تحديد قيمة خاصية CSS ديناميكيًا بناءً على جوانب مختلفة من التطبيق أو إطار العرض.</h4>
+            </li>
+        </ol>
+
+        <!-- Centered button -->
+		<div class="btn-container">
+		<button class="show-btn" onclick="showAllAnswers()">Show All Answers</button>
+		</div>
+		
+	</section>
+
+    
+
+  
+
+
+  <!-- Pages -->
+  <section class="page-nav">
+    <a class="prev" href="../css-relative-and-absolute-units-review/CSS-Relative-and-Absolute-Units-Review.html">&#8594; السابق</a>
+    <a class="next" href="#">التالي &#8592;</a>
+  </section>
+
+
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+<script>
+function showAllAnswers() {
+  const allAnswers = document.querySelectorAll('h4');
+  allAnswers.forEach(ans => ans.style.display = 'block');
+}
+</script>
+
+</body>
+</html>
