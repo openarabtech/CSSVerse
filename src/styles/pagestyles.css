@@ -10,6 +10,8 @@ ul, ol {
   margin-inline-start: 20px;
 }
 
+
+
 blockquote {
   margin-block: 1em;
   padding-inline-start: 40px;
@@ -78,7 +80,8 @@ margin: 25px 0px;
 }
 
 .sub-title h2 {
-margin: 10px 0px;
+  font-size: x-large;
+  margin: 10px 0px;
 }
 
 .sub-title .hint {
@@ -88,6 +91,15 @@ margin: 10px 0px;
   font-size: smaller;
   font-weight: bold;
   border-radius: 4px;
+}
+
+.special-code{
+  border: 2px solid darkgray;
+  background-color: lightgray;
+  font-size: 1em;
+  color: black;
+  padding: 0 4px;
+  font-weight: 600;
 }
 
 
@@ -218,8 +230,9 @@ margin: 10px 0px;
   color: lightgray;
   line-height: 1.8;
   font-size: 1.1rem;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   letter-spacing: 2px;
+  
 }
 
 
@@ -319,6 +332,10 @@ footer .support a{
 
   header h1 {
     font-size: x-large;
+  }
+
+  .sub-title h2 {
+  font-size: larger;
   }
 
   .br-spec {

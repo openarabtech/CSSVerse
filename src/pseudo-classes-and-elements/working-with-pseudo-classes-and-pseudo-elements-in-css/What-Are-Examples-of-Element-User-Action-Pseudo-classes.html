@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هي أمثلة الفئات الزائفة Pseudo-classes المرتبطة بإجراءات المستخدم User Action على العناصر؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/pseudo-classes-and-elements-Styles/working-with-pseudo-classes-and-pseudo-elements-in-css/What-Are-Examples-of-Element-User-Action-Pseudo-classes.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الفئات والعناصر الزائفة</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>العمل مع الفئات الزائفة Pseudo-Classes والعناصر الزائفة Pseudo-Elements في CSS</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+    <section class="sub-title">
+		<h2>ما هي أمثلة الفئات الزائفة Pseudo-classes المرتبطة بإجراءات المستخدم User Action على العناصر؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+    </section>
+
+    <section>
+        <p>
+            تُعد ملاحظات المستخدم (User feedback) عنصراً جوهرياً (crucial element) في تصميم المواقع الإلكترونية. 
+            فعلى سبيل المثال، من المهم أن يتلقى المستخدمون إشارات مرئية (visual cues) عند تفاعلهم مع عناصر الموقع، 
+            كتحريك مؤشر الفأرة فوق زر معين أو النقر على رابط. 
+            وتساعد هذه الإشارات المستخدمين على فهم حالة العناصر التفاعلية؛ 
+            كتوضيح ما إذا كان الرابط قد تمت زيارته مسبقاً أم لا.
+        </p>
+
+        <!-- Understanding User Action Pseudo-Classes -->
+        <section>
+            <h3>فهم الفئات الزائفة الخاصة بإجراءات المستخدم <span class="nw" dir="ltr">Understanding User Action Pseudo-Classes</span></h3>
+            <p>تُعد الفئات الزائفة المرتبطة بإجراءات المستخدم (User action pseudo-classes) في لغة CSS كلماتٍ مفتاحيةً خاصةً تتيح لك تقديم هذا النوع من التغذية الراجعة (feedback) دون الحاجة إلى استخدام JavaScript أو لغات برمجة أخرى.</p>
+            <p>
+                تتضمن هذه الفئات الزائفة (pseudo-classes) كلاً من 
+                <span dir="ltr" class="br-spec nw">:hover</span> و <span dir="ltr" class="br-spec nw">:active</span> و <span dir="ltr" class="br-spec nw">:focus</span> و <span dir="ltr" class="br-spec nw">:visited</span> ، وغيرها. 
+                وهي تتيح لك تغيير مظهر العناصر بناءً على تفاعلات المستخدم (user interactions)، 
+                مما يعزز تجربة المستخدم (user experience) بشكل عام.
+            </p>
+            <p>
+               لنستعرض بعض الفئات الزائفة (pseudo-classes) المتعلقة بإجراءات المستخدم، 
+                ولنرى كيف تعمل. 
+            </p>
+
+        </section>
+
+        <!-- Common User Action Pseudo-Classes -->
+        <section>
+            <h3>الفئات الزائفة المرتبطة بإجراءات المستخدم الشائعة <span class="nw" dir="ltr">Common User Action Pseudo-Classes</span></h3>
+            <br>
+            
+            <section>
+                <h4><span dir="ltr" class="special-code">:active</span></h4>
+                <p>
+                    تطبق الفئة الزائفة <span dir="ltr" class="br-spec nw">:active</span> الأنماط (styles) عندما يُفعّل المستخدم عنصرًا. 
+                    على سبيل المثال، عندما ينقر المستخدم على زر أو رابط، توفر رد فعل بصري فوري، 
+                    تُشعِر المستخدم بأن إجراءاته قد تم رصدها.
+                </p>
+
+                <div class="codeFiles">
+                <p class="file-name">index.html</p>
+                <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;a <span class="attr">href=<span class="value">"#"</span></span>&gt;<span dir="rtl" class="txt">رابط مثال</span>&lt;/a&gt;</span>
+                </code></pre></div>
+                
+                <p class="file-name">styles.css</p>
+                <div class="code-block"><pre><code>
+<span class="tag-b">a:active</span> <span class="attr">{
+ color: <span class="txt">crimson</span>;
+}</span>
+                </code></pre></div>
+                </div>
+            
+                <p class="hinty">معاينة:</p>
+                <div class="preview" role="presentation">
+                    <div class="preview1">
+                    <a href="#1">رابط مثال</a>
+                    </div>
+                </div>
+                <br>
+            </section>
+
+            <section>
+                <h4><span dir="ltr" class="special-code">:hover</span></h4>
+                <p>
+                    يتم تفعيل الفئة الزائفة <span dir="ltr" class="br-spec nw">:hover</span> عندما يمرر المستخدم مؤشر الفأرة - أو أي أداة تأشير أخرى - فوق أحد العناصر. 
+                    وغالباً ما يستخدمها المطورون لإضافة استجابة مرئية للأزرار، أو الروابط، أو أي عنصر ينبغي أن يتفاعل مع تركيز المستخدم عليه. 
+                    إليك مثال على زر يمكن للمستخدم تمرير المؤشر فوقه قبل النقر عليه:
+                </p>
+
+                <div class="codeFiles">
+                <p class="file-name">index.html</p>
+                <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;button <span class="attr">class=<span class="value">"btn"</span></span>&gt;<span dir="rtl" class="txt">مرِّر مؤشر الفأرة فوقي</span>&lt;/button&gt;</span>
+                </code></pre></div>
+                
+                <p class="file-name">styles.css</p>
+                <div class="code-block"><pre><code>
+<span class="tag-b">.btn:hover</span> <span class="attr">{
+ background-color: <span class="txt">darkgreen</span>;
+ color: <span class="txt">white</span>;
+ cursor: <span class="txt">pointer</span>;
+}</span>
+                </code></pre></div>
+                </div>
+            
+                <p class="hinty">معاينة:</p>
+                <div class="preview" role="presentation">
+                    <div class="preview2">
+                        <button class="btn">مرِّر مؤشر الفأرة فوقي</button>
+                    </div>
+                </div>
+                <br>
+
+            </section>
+
+            <section>
+                <h4><span dir="ltr" class="special-code">:focus</span></h4>
+                <p>
+                    تُطبّق الفئة الزائفة <span dir="ltr" class="br-spec nw">:focus</span> أنماطًا عند اكتساب عنصر ما للتركيز، 
+عادةً عبر التنقل باستخدام لوحة المفاتيح أو عند نقر المستخدم داخل حقل إدخال في نموذج (form input). 
+لا يقتصر هذا على تقديم ملاحظات (feedback) فحسب، بل هو ضروري أيضًا لسهولة الوصول (accessibility). 
+فهو يضمن للمستخدمين الذين يعتمدون بشكل كبير على لوحات المفاتيح تحديد العنصر الذي يتفاعلون معه بسهولة.
+                </p>
+                <p>
+                    إليك مثالًا على حقل إدخال (input field) يكتسب التركيز عند النقر عليه أو التنقل إليه عبر لوحة المفاتيح (keyboard) :
+                </p>
+
+                <div class="codeFiles">
+                <p class="file-name">index.html</p>
+                <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;form&gt;
+ &lt;input <span class="attr">type=<span class="value">"text"</span></span>&gt;
+&lt;/form&gt;</span>
+                </code></pre></div>
+                
+                <p class="file-name">styles.css</p>
+                <div class="code-block"><pre><code>
+<span class="tag-b">input:focus</span> <span class="attr">{
+ outline: <span class="txt">2px solid darkgreen</span>;
+ border-radius: <span class="txt">4px</span>;
+}</span>
+                </code></pre></div>
+                </div>
+            
+                <p class="hinty">معاينة:</p>
+                <div class="preview" role="presentation">
+                    <div class="preview3">
+                        <form>
+                            <input type="text">
+                        </form>
+                    </div>
+                </div>
+                <br>
+
+            </section>
+
+            <section>
+                <h4><span dir="ltr" class="special-code">:visited</span></h4>
+                <p>
+                    تستهدف الفئة الزائفة <span dir="ltr" class="br-spec nw">:visited</span> الروابط التي زارها المستخدم. 
+                    ويمكن أن يكون هذا مفيداً لمساعدة المستخدمين على التمييز بين الصفحات التي زاروها بالفعل وتلك التي لم يزوروها بعد. 
+                    إليك مثال على تغيير لون نص الرابط (anchor text color) إلى اللون السماوي (cyan) عند زيارة الرابط:
+                </p>
+
+                <div class="codeFiles">
+                <p class="file-name">index.html</p>
+                <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;a <span class="attr">href=<span class="value">"https://www.example.com"</span> target=<span class="value">"_blank"</span></span>&gt;<span dir="rtl" class="txt">تفضل بزيارة Example.com</span>&lt;/a&gt;</span>
+                </code></pre></div>
+                
+                <p class="file-name">styles.css</p>
+                <div class="code-block"><pre><code>
+<span class="tag-b">a:visited</span> <span class="attr">{
+ color: <span class="txt">cyan</span>;
+}</span>
+                </code></pre></div>
+                </div>
+            
+                <p class="hinty">معاينة:</p>
+                <div class="preview" role="presentation">
+                    <div class="preview4">
+                        <a href="https://www.example.com/#2" target="_blank">تفضل بزيارة Example.com</a>
+                    </div>
+                </div>
+                <br>
+
+            </section>
+
+            <section>
+                <h4><span dir="ltr" class="special-code">:checked</span></h4>
+                <p>
+                   تتيح لك الفئة الزائفة <span dir="ltr" class="br-spec nw">:checked</span> في لغة CSS تنسيق عناصر النماذج - مثل مربعات الاختيار (checkboxes) وأزرار الاختيار (radio buttons) - عند تحديدها (اختيارها checked). 
+                    وتُعد هذه الفئة الزائفة مفيدة لتخصيص مظهر تلك العناصر بهدف تحسين تجربة المستخدم، 
+                    وذلك على الرغم من أن المتصفحات توفر تنسيقات افتراضية لها. 
+                </p>
+                <p>
+                    إليك مثالًا مع مربع اختيار (checkbox) للموافقة على الشروط في موقع ويب.
+                </p>
+                <p>
+                    <b>ملاحظة:</b> يستخدم بعض كود CSS في هذا المثال خصائص لم نتناولها بعد. 
+                    الغرض من ذلك هو فقط إعطاؤك فكرة عن كيفية إنشاء مربع اختيار (checkbox) مخصص. 
+                    ستتعلم تفاصيل عمل كل هذا في الدروس وورش العمل القادمة.
+                </p>
+
+
+                <div class="codeFiles">
+                <p class="file-name">index.html</p>
+                <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;form&gt;
+ &lt;label&gt;
+  <span dir="rtl" class="txt">موافق</span>
+  &lt;input <span class="attr">class=<span class="value">"checkbox"</span> type=<span class="value">"checkbox"</span></span> /&gt;
+ &lt;/label&gt;
+&lt;/form&gt;</span>
+                </code></pre></div>
+                
+                <p class="file-name">styles.css</p>
+                <div class="code-block"><pre><code>
+<span class="tag-b">.checkbox</span> <span class="attr">{</span>
+<span class="attr">appearance:</span> <span class="txt">none</span>;
+<span class="attr">width:</span> <span class="txt">18px</span>;
+<span class="attr">height:</span> <span class="txt">18px</span>;
+<span class="attr">border:</span> <span class="txt">2px solid #ccc</span>;
+<span class="attr">border-radius:</span> <span class="txt">4px</span>;
+<span class="attr">display:</span> <span class="txt">inline-block</span>;
+<span class="attr">position:</span> <span class="txt">relative</span>;
+<span class="attr">cursor:</span> <span class="txt">pointer</span>;
+<span class="attr">transition:</span> <span class="txt">all 0.25s ease</span>;
+<span class="attr">vertical-align:</span> <span class="txt">middle</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.checkbox:hover</span> <span class="attr">{</span>
+<span class="attr">border-color:</span> <span class="txt">#888</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.checkbox:checked</span> <span class="attr">{</span>
+<span class="attr">background-color:</span> <span class="txt">#4caf50</span>;
+<span class="attr">border-color:</span> <span class="txt">#4caf50</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.checkbox:checked::after</span> <span class="attr">{</span>
+<span class="attr">content:</span> <span class="txt">""</span>;
+<span class="attr">position:</span> <span class="txt">absolute</span>;
+<span class="attr">left:</span> <span class="txt">4px</span>;
+<span class="attr">top:</span> <span class="txt">0px</span>;
+<span class="attr">width:</span> <span class="txt">5px</span>;
+<span class="attr">height:</span> <span class="txt">10px</span>;
+<span class="attr">border:</span> <span class="txt">solid white</span>;
+<span class="attr">border-width:</span> <span class="txt">0 2px 2px 0</span>;
+<span class="attr">transform:</span> <span class="txt">rotate(45deg)</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.checkbox:focus</span> <span class="attr">{</span>
+<span class="attr">outline:</span> <span class="txt">2px solid #90caf9</span>;
+<span class="attr">outline-offset:</span> <span class="txt">2px</span>;
+<span class="attr">}</span>
+                </code></pre></div>
+                </div>
+            
+                <p class="hinty">معاينة:</p>
+                <div class="preview" role="presentation">
+                    <div class="preview5">
+                        <form>
+                            <label>
+                                موافق
+                                <input class="checkbox" type="checkbox" />
+                            </label>
+                        </form>
+                    </div>
+                </div>
+
+                <p>
+                    في هذا المثال، نستخدم الخاصية <span dir="ltr" class="br-spec nw">appearance</span> مضبوطة على <span dir="ltr" class="br-spec nw">none</span> لإزالة التنسيق الافتراضي الذي يطبقه المتصفح على مربعات الاختيار. عندما يحدد المستخدم المربع، سيكون له لون خلفية <span dir="ltr" class="br-spec nw">green</span>.
+                </p>
+            </section>
+
+        </section>
+
+        <!-- Other Action Pseudo-Classes -->
+        <section>
+            <h3>فئات زائفة أخرى متعلقة بالإجراءات <span class="nw" dir="ltr">Other Action Pseudo-Classes</span></h3>
+
+            <p>
+                من الأمثلة الأخرى على الفئات الزائفة المرتبطة بالإجراءات (action pseudo-classes) :
+            </p>
+            <ul>
+                <li>
+                    <p>
+                        <span dir="ltr" class="br-spec nw">:focus-within</span> : تُستخدم لتطبيق أنماط على عنصر ما عندما يكتسب هو أو أي من العناصر المتفرعة عنه التركيز (focus).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span dir="ltr" class="br-spec nw">:enabled</span> : لاستهداف أزرار النماذج أو العناصر الأخرى المُمكَّنة حالياً (currently enabled).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span dir="ltr" class="br-spec nw">:disabled</span> : لاستهداف أزرار النماذج أو العناصر الأخرى المعطّلة (disabled).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span dir="ltr" class="br-spec nw">:target</span> : تُستخدم لتطبيق أنماط على عنصر يُمثّل هدفاً لجزء من رابط URL (وهو الجزء الذي يلي رمز <span dir="ltr" class="br-spec nw">#</span> في الرابط).
+                    </p>
+                </li>
+            </ul>
+            <br>
+
+        </section>
+
+    </section>
+
+    
+
+    <section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما الذي تتيح لك القيام به الفئات الزائفة الخاصة بإجراءات المستخدم (user action pseudo-classes) ؟</p>
+
+		<p> 1. تتيح لك إنشاء الرسوم المتحركة والانتقالات. ❌</p>
+        <p> 2. تسمح لك بتعديل هيكل DOM ديناميكيًا. ❌</p>
+        <p><mark> 3. تتيح لك تقديم ملاحظات للمستخدم دون الاعتماد على JavaScript. ✅</mark></p>
+		<p> 4. تسمح لك بتنسيق العنصر الأخير في قائمة. ❌</p>
+        <br>
+
+
+        <p class="userstory">ما الذي تقوم به الفئة الزائفة <span dir="ltr" class="br-spec nw">:checked</span> في لغة CSS ؟</p>
+		
+		<p> 1. تحدد عنصرًا عندما يكون معطلاً. ❌</p>
+        <p> 2. تحدد عنصرًا عندما يتم التمرير فوقه بالفأرة. ❌</p>
+        <p><mark> 3. تنسق عناصر مثل مربعات الاختيار أو أزرار الاختيار (checkboxes or radio buttons) التي تم تحديدها (checked). ✅</mark></p>
+		<p> 4. تنسق عنصرًا عندما يكتسب التركيز. ❌</p>
+        <br>
+
+        <p class="userstory">ما الذي تقوم به الفئة الزائفة <span dir="ltr" class="br-spec nw">:focus</span> ؟</p>
+		
+		<p> 1. تحدد عنصرًا عندما يتم التمرير فوقه بالفأرة. ❌</p>
+        <p><mark> 2. تطبق الأنماط عندما يكتسب عنصر التركيز، عادةً عبر التنقل بلوحة المفاتيح أو النقر. ✅</mark></p>
+        <p> 3. تحدد عنصرًا بعد إرسال نموذج. ❌</p>
+		<p> 4. تطبق الأنماط على عنصر عندما يكون معطلاً. ❌</p>
+        
+	</section>
+
+ 
+
+  
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./What-Are-Pseudo-classes-and-How-Do-They-Work.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>

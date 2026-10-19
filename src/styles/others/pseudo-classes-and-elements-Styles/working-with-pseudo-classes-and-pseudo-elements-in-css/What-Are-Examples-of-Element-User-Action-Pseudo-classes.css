@@ -1,0 +1,85 @@
+/* PREVIEW 1 */
+.preview1 {
+    min-height:10vh;
+}
+
+.preview1 a:active {
+ color: crimson;
+}
+
+
+
+/* PREVIEW 2 */
+.preview2 {
+    min-height:10vh;
+}
+
+.preview2 .btn:hover {
+ background-color: darkgreen;
+ color: white;
+ cursor: pointer;
+}
+
+/* PREVIEW 3 */
+.preview3 {
+    min-height:10vh;
+}
+
+.preview3 input:focus {
+ outline: 2px solid darkgreen;
+ border-radius: 4px;
+}
+
+/* PREVIEW 4 */
+.preview4 {
+    min-height:10vh;
+}
+
+.preview4 a:visited {
+ color: cyan;
+}
+
+
+/* PREVIEW 5 */
+.preview5 {
+    min-height:10vh;
+}
+
+.preview5 .checkbox {
+appearance: none;
+width: 18px;
+height: 18px;
+border: 2px solid #ccc;
+border-radius: 4px;
+display: inline-block;
+position: relative;
+cursor: pointer;
+transition: all 0.25s ease;
+vertical-align: middle;
+}
+
+.preview5 .checkbox:hover {
+border-color: #888;
+}
+
+.preview5 .checkbox:checked {
+background-color: #4caf50;
+border-color: #4caf50;
+}
+
+.preview5 .checkbox:checked::after {
+content: "";
+position: absolute;
+left: 4px;
+top: 0px;
+width: 5px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+
+.preview5 .checkbox:focus {
+outline: 2px solid #90caf9;
+outline-offset: 2px;
+}

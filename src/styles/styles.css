@@ -4,9 +4,14 @@
   box-sizing: border-box;
 }
 
-ul, ol {
+/* ul, ol {
   margin-block: 1em;
   padding-inline-start: 15px;
+} */
+
+ul, ol {
+  list-style-position: inside;
+  
 }
 
 
@@ -102,13 +107,15 @@ main {
 }
 
 .navbar .nav-links a:hover {
-  color: red;
+  color: #ff3131;
 }
 
 .navbar .nav-links  .second-navlinks a:hover {
-  background-color: #ff3131;
+  background-color: crimson;
+  color: white;
   border-radius: 4px;
 }
+
 /* ENDS NAVBAR */
 /* ENDS MAIN */
 
