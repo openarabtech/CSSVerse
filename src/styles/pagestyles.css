@@ -117,7 +117,7 @@ margin: 25px 0px;
   background-color: #2a2a72;
   border-radius: 8px;
   direction: ltr;
-  padding: 8px;
+  padding: 4px 8px;
 }
 
 .file-name {
@@ -147,6 +147,7 @@ margin: 25px 0px;
 
 .code-block code .txt {
   color: lightgray;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .code-block code .jsblue {
@@ -206,7 +207,7 @@ margin: 25px 0px;
 
 .code-block {
   background: #0c0c25;
-  padding: 10px;
+  padding: 0 10px;
   border-radius: 6px;
   font-family: Arial, Helvetica, sans-serif;
   color: #ffffff;

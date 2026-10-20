@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هي أمثلة الفئات الزائفة pseudo-classes الخاصة بعناصر الإدخال input ؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/pseudo-classes-and-elements-Styles/working-with-pseudo-classes-and-pseudo-elements-in-css/What-Are-Examples-of-Input-Pseudo-classes.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الفئات والعناصر الزائفة</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>العمل مع الفئات الزائفة Pseudo-Classes والعناصر الزائفة Pseudo-Elements في CSS</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+    <section class="sub-title">
+		<h2>ما هي أمثلة الفئات الزائفة pseudo-classes الخاصة بعناصر الإدخال input ؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+    </section>
+
+    <section>
+
+        <p>
+            يُعد مظهر عناصر الإدخال (input elements) وسلوكها أمراً مهماً عند إنشاء نماذج الويب. 
+            فالنموذج (form) الذي تتفاعل عناصره مع إجراءات المستخدم (user actions) يسهم بشكل كبير في تحسين تجربة المستخدم (user experience)، 
+            وينبغي ألا يتسبب في أي ارتباك أو إحباط له.
+        </p>
+        <p>
+            توفر لغة CSS العديد من الفئات الزائفة (pseudo-classes) الخاصة بعناصر الإدخال، 
+            والتي يمكن أن تجعل نماذجك أكثر سهولة في الاستخدام وأكثر بديهية. 
+            دعونا نلقي نظرة تفصيلية على هذه الفئات الزائفة.
+        </p>
+
+        <!-- The :focus Pseudo-class -->
+        <section>
+            <h3>الفئة الزائفة <span dir="ltr" class="special-code">:focus</span></h3>
+            <p>
+                تتيح لك الفئة الزائفة 0 استهداف عنصر إدخال (input element) عندما يقوم المستخدم بتحديده أو النقر عليه، 
+                مما يسلط الضوء على حقل الإدخال النشط (active input field). 
+                ويساعد ذلك المستخدمين على معرفة المكان الذي يكتبون فيه حالياً بكل سهولة:
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;form&gt;
+ &lt;input <span class="attr">type=<span class="value">"text"</span></span> /&gt;
+&lt;/form&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">input:focus</span> <span class="attr">{
+ border: <span class="txt">2px solid crismon</span>;
+ outline: <span class="txt">none</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview1">
+                    <form>
+                        <input type="text" />
+                    </form>
+				</div>
+            </div>
+            <br>
+
+        </section>
+
+        <!-- The :hover Pseudo-class -->
+        <section>
+            <h3>الفئة الزائفة <span dir="ltr" class="special-code">:hover</span></h3>
+            <p>
+                كما يوحي الاسم، يتم تفعيل الفئة الزائفة <span dir="ltr" class="br-spec nw">:hover</span> عندما يضع المستخدم مؤشر الفأرة فوق أحد العناصر. 
+                وهي توفر تغذية راجعة مرئية (visual feedback) قبل أن يتفاعل المستخدم مع العنصر، 
+                مما ينبهه بفعالية إلى أن هذا العنصر جاهز للاستخدام.
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;form&gt;
+ &lt;input <span class="attr">type=<span class="value">"text"</span></span> /&gt;
+&lt;/form&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">input:hover</span> <span class="attr">{
+ background-color: <span class="txt">orange</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview2">
+                    <form>
+                        <input type="text" />
+                    </form>
+				</div>
+            </div>
+            <p>
+                في المثال أعلاه، يتغير خلفية عنصر الإدخال إلى اللون البرتقالي عندما يحوم المستخدم فوقه، مما يخبره بأن الحقل جاهز للتفاعل.
+            </p>
+
+        </section>
+
+        <!-- The :checked Pseudo-class -->
+        <section>
+            <h3>الفئة الزائفة <span dir="ltr" class="special-code">:checked</span></h3>
+            <p>
+                تتيح لك الفئة الزائفة <span dir="ltr" class="br-spec nw">:checked</span> تنسيق زر الاختيار (radio button) أو مربع الاختيار (checkbox) بشكل مختلف عند قيام المستخدم بتحديده؛ 
+                مما يسهّل على المستخدم معرفة الخيار الذي قام باختياره.
+            </p>
+            <p>
+                إليك مثال يتضمن مربع اختيار (checkbox) للموافقة على الشروط في أحد المواقع الإلكترونية.
+            </p>
+
+            <p>
+                    <b>ملاحظة:</b> يستخدم بعض كود CSS في هذا المثال خصائص لم نتناولها بعد. 
+                    الغرض من ذلك هو فقط إعطاؤك فكرة عن كيفية إنشاء مربع اختيار (checkbox) مخصص. 
+                    ستتعلم تفاصيل عمل كل هذا في الدروس وورش العمل القادمة.
+            </p>
+
+
+            <div class="codeFiles">
+                <p class="file-name">index.html</p>
+                <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;form&gt;
+ &lt;label&gt;
+  <span dir="rtl" class="txt">موافق</span>
+  &lt;input <span class="attr">class=<span class="value">"checkbox"</span> type=<span class="value">"checkbox"</span></span> /&gt;
+ &lt;/label&gt;
+&lt;/form&gt;</span>
+                </code></pre></div>
+                
+                <p class="file-name">styles.css</p>
+                <div class="code-block"><pre><code>
+<span class="tag-b">.checkbox</span> <span class="attr">{</span>
+<span class="attr">appearance:</span> <span class="txt">none</span>;
+<span class="attr">width:</span> <span class="txt">18px</span>;
+<span class="attr">height:</span> <span class="txt">18px</span>;
+<span class="attr">border:</span> <span class="txt">2px solid #ccc</span>;
+<span class="attr">border-radius:</span> <span class="txt">4px</span>;
+<span class="attr">display:</span> <span class="txt">inline-block</span>;
+<span class="attr">position:</span> <span class="txt">relative</span>;
+<span class="attr">cursor:</span> <span class="txt">pointer</span>;
+<span class="attr">transition:</span> <span class="txt">all 0.25s ease</span>;
+<span class="attr">vertical-align:</span> <span class="txt">middle</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.checkbox:hover</span> <span class="attr">{</span>
+<span class="attr">border-color:</span> <span class="txt">#888</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.checkbox:checked</span> <span class="attr">{</span>
+<span class="attr">background-color:</span> <span class="txt">#4caf50</span>;
+<span class="attr">border-color:</span> <span class="txt">#4caf50</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.checkbox:checked::after</span> <span class="attr">{</span>
+<span class="attr">content:</span> <span class="txt">""</span>;
+<span class="attr">position:</span> <span class="txt">absolute</span>;
+<span class="attr">left:</span> <span class="txt">4px</span>;
+<span class="attr">top:</span> <span class="txt">0px</span>;
+<span class="attr">width:</span> <span class="txt">5px</span>;
+<span class="attr">height:</span> <span class="txt">10px</span>;
+<span class="attr">border:</span> <span class="txt">solid white</span>;
+<span class="attr">border-width:</span> <span class="txt">0 2px 2px 0</span>;
+<span class="attr">transform:</span> <span class="txt">rotate(45deg)</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.checkbox:focus</span> <span class="attr">{</span>
+<span class="attr">outline:</span> <span class="txt">2px solid #90caf9</span>;
+<span class="attr">outline-offset:</span> <span class="txt">2px</span>;
+<span class="attr">}</span>
+                </code></pre></div>
+            </div>
+            
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview3">
+                    <form>
+                        <label>
+                            موافق
+                            <input class="checkbox" type="checkbox" />
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <br>
+
+        </section>
+
+        <!-- The :required Pseudo-class -->
+        <section>
+            <h3>الفئة الزائفة <span dir="ltr" class="special-code">:required</span></h3>
+            <p>
+                يستهدف المُحدد <span dir="ltr" class="br-spec nw">:required</span> عناصر الإدخال التي تحمل السمة <span dir="ltr" class="br-spec nw">required</span>. 
+                وهو يُنبّه المستخدم إلى ضرورة ملء هذا الحقل ليتمكن من إرسال النموذج.
+            </p>
+            <p>
+                إليك مثالًا مع نموذج يحتوي على بعض حقول الإدخال المطلوبة:
+            </p>
+
+
+            <div class="codeFiles">
+                <p class="file-name">index.html</p>
+                <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;form <span class="attr">action=<span class="value">"#"</span></span>&gt;
+ &lt;label <span class="attr">for=<span class="value">"name"</span></span>&gt;<span dir="rtl" class="txt">الاسم:</span>&lt;/label&gt;
+ &lt;input <span class="attr">type=<span class="value">"text"</span> id=<span class="value">"name"</span> name=<span class="value">"name"</span> required</span> /&gt;
+ 
+ &lt;label <span class="attr">for=<span class="value">"email"</span></span>&gt;<span dir="rtl" class="txt">البريد الإلكتروني:</span>&lt;/label&gt;
+ &lt;input <span class="attr">type=<span class="value">"email"</span> id=<span class="value">"email"</span> name=<span class="value">"email"</span> required</span> /&gt;
+
+ &lt;label <span class="attr">for=<span class="value">"phone"</span></span>&gt;<span dir="rtl" class="txt">رقم الهاتف:</span>&lt;/label&gt;
+ &lt;input <span class="attr">type=<span class="value">"tel"</span> id=<span class="value">"phone"</span> name=<span class="value">"phone"</span></span> /&gt;
+ 
+ &lt;button <span class="attr">type=<span class="value">"submit"</span></span>&gt;<span dir="rtl" class="txt">إرسال</span>&lt;/button&gt;
+&lt;/form&gt;</span>
+                </code></pre></div>
+                
+                <p class="file-name">styles.css</p>
+                <div class="code-block"><pre><code>
+<span class="tag-b">input:required</span> <span class="attr">{
+ border: <span class="txt">2px solid orange</span>;
+}</span>
+                </code></pre></div>
+            </div>
+            
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview4">
+                    <form action="#">
+                        <label for="name">الاسم:</label>
+                        <input type="text" id="name" name="name" required />
+                        
+                        <label for="email">البريد الإلكتروني:</label>
+                        <input type="email" id="email" name="email" required />
+
+                        <label for="phone">رقم الهاتف:</label>
+                        <input type="tel" id="phone" name="phone" />
+                        
+                        <button type="submit">إرسال</button>
+                    </form>
+                </div>
+            </div>
+            <br>
+
+        </section>
+
+        <!-- The :valid and :invalid Pseudo-classes -->
+        <section>
+            <h3>الفئتان الزائفتان <span dir="ltr" class="special-code">:valid</span> و <span dir="ltr" class="special-code">:invalid</span></h3>
+            <p>
+                عند التحقق من صحة النماذج (validating forms)، يمكنك استخدام الفئة الزائفة (pseudo-class) <span dir="ltr" class="br-spec nw">:valid</span> لتنسيق حقول الإدخال التي تستوفي معايير التحقق، 
+                واستخدام <span dir="ltr" class="br-spec nw">:invalid</span> لتنسيق الحقول التي لا تستوفي تلك المعايير. 
+                وعادةً ما يُستخدم اللون الأخضر للإشارة إلى المدخلات الصحيحة (valid input)، 
+                واللون الأحمر للإشارة إلى المدخلات غير الصحيحة (invalid input).
+            </p>
+            <p>إليك مثال يستخدم الفئة الزائفة <span dir="ltr" class="br-spec nw">:valid</span> :</p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;form&gt;
+ &lt;label <span class="attr">for=<span class="value">"email"</span></span>&gt;<span dir="rtl" class="txt">البريد الإلكتروني:</span>&lt;/label&gt;
+ &lt;input <span class="attr">type=<span class="value">"email"</span> id=<span class="value">"email"</span> name=<span class="value">"email"</span></span> /&gt;
+&lt;/form&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">input:valid</span> <span class="attr">{
+ border-color: <span class="txt">green</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview5">
+                    <form>
+                        <label for="email">البريد الإلكتروني:</label>
+                        <input type="email" id="email" name="email" />
+                    </form>
+				</div>
+            </div>
+
+            <p>إليك مثال يستخدم الفئة الزائفة <span dir="ltr" class="br-spec nw">:invalid</span> :</p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;form&gt;
+ &lt;label <span class="attr">for=<span class="value">"email"</span></span>&gt;<span dir="rtl" class="txt">البريد الإلكتروني:</span>&lt;/label&gt;
+ &lt;input <span class="attr">type=<span class="value">"email"</span> id=<span class="value">"email"</span> name=<span class="value">"email"</span></span> /&gt;
+&lt;/form&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">input:invalid</span> <span class="attr">{
+ border-color: <span class="txt">crimson</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview6">
+                    <form>
+                        <label for="email">البريد الإلكتروني:</label>
+                        <input type="email" id="email" name="email" />
+                    </form>
+				</div>
+            </div>
+            <br>
+
+        </section>
+
+        <!-- The :disabled Pseudo-class -->
+        <section>
+            <h3>الفئة الزائفة <span dir="ltr" class="special-code">:disabled</span></h3>
+            <p>
+                تتيح لك الفئة الزائفة <span dir="ltr" class="br-spec nw">:disabled</span> تحديد عناصر الإدخال (input elements) المعطّلة وتنسيقها. 
+                تحتوي هذه العناصر على السمة <span dir="ltr" class="br-spec nw">disabled</span> التي تمنع المستخدمين من التفاعل معها؛ 
+                فعندما يكون عنصر الإدخال معطّلاً، لا يمكن النقر عليه، أو توجيه التركيز إليه، أو تعديله.
+            </p>
+            <p>
+                إليك مثال على عنصر تسمية (label) وعنصر إدخال (input) معطَّل.
+            </p>
+            <p>
+                في ملف CSS، نستهدف عنصر الإدخال (input) المعطَّل، ونضبط لون خلفيته على الرمادي الفاتح <span dir="ltr" class="br-spec nw">lightgray</span>، 
+                ونغيّر شكل مؤشر الفأرة إلى النمط الذي يشير إلى عدم السماح بالإجراء <span dir="ltr" class="br-spec nw">not-allowed</span>.
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;form&gt;
+ &lt;label <span class="attr">for=<span class="value">"name"</span></span>&gt;<span dir="rtl" class="txt">الاسم:</span>&lt;/label&gt;
+ &lt;input <span class="attr">class=<span class="value">"text-input"</span> type=<span class="value">"text"</span> id=<span class="value">"name"</span> name=<span class="value">"name"</span> disabled</span> /&gt;
+&lt;/form&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.text-input:disabled</span> <span class="attr">{
+ background-color: <span class="txt">lightgray</span>;
+ cursor: <span class="txt">not-allowed</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview7"> 
+                    <form>
+                        <label for="name">الاسم:</label>
+                        <input class="text-input" type="text" id="name" name="name" disabled />
+                    </form>
+				</div>
+            </div>
+            <p>
+                تُغيِّر قيمة <span dir="ltr" class="br-spec nw">cursor: not-allowed;</span> في لغة CSS مظهر مؤشر الفأرة، 
+                وذلك للإشارة إلى أن إجراءً ما غير مسموح به (not permitted).
+            </p>
+            <p>
+                عند تطبيقها على عنصر، تعرض مؤشرًا برمز دائرة مع شريط مائل (عادة دائرة مع خط قطري) لتنبيه المستخدمين أن العنصر غير تفاعلي أو لا يمكن النقر عليه أو التفاعل معه.
+            </p>
+
+            
+
+        </section>
+
+        <!-- Other Input Pseudo-classes -->
+        <section>
+            <h3>فئات زائفة أخرى خاصة بعناصر الإدخال</h3>
+            <p>
+                إليك بعض الأمثلة الأخرى على الفئات الزائفة (pseudo-classes) الخاصة بعناصر الإدخال (input) وما تقوم به:
+            </p>
+            <ul>
+                <li>
+                    <p>
+                        <span dir="ltr" class="br-spec nw">:autofill</span> : تُطبِّق أنماطاً على حقول الإدخال التي يملؤها المتصفح تلقائياً ببياناتٍ محفوظة (with saved data).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span dir="ltr" class="br-spec nw">:optional</span> : تُستخدم لتنسيق عناصر الإدخال (input elements) غير المطلوبة، والتي يمكن تركها فارغة.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span dir="ltr" class="br-spec nw">:in-range</span> و <span dir="ltr" class="br-spec nw">:out-of-range</span> : تُستخدم لتنسيق العناصر بناءً على ما إذا كانت قيمها (their values) تقع ضمن قيود نطاق محددة أو خارجها.
+                    </p>
+                </li>
+            </ul>
+
+        </section>
+
+
+
+    </section>
+
+
+    <section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ماذا تتيح لك الفئة الزائفة <span dir="ltr" class="br-spec nw">:focus</span> ؟</p>
+
+		<p> 1. تمكنك من تمييز عدة عناصر في نفس الوقت. ❌</p>
+        <p><mark> 2. تسمح لك بتنسيق عنصر الإدخال عندما يتم اختياره أو النقر عليه. ✅</mark></p>
+        <p> 3. تتيح لك إرسال النموذج تلقائيًا عند النقر على الإدخال. ❌</p>
+		<p> 4. تسمح لك بإعادة ترتيب العناصر في النموذج ديناميكيًا. ❌</p>
+        <br>
+
+        <p class="userstory">فيمَ يمكن استخدام الفئتين الزائفين <span dir="ltr" class="br-spec nw">:valid</span> و <span dir="ltr" class="br-spec nw">:invalid</span> في عملية التحقق من صحة النماذج (form validation) ؟</p>
+		
+		<p> 1. تمكنك من إعادة تعيين جميع حقول الإدخال تلقائيًا. ❌</p>
+        <p><mark> 2. تتيح لك توفير أنماط مختلفة للإدخالات (for inputs)  بناءً على ما إذا كانت تستوفي معايير التحقق. ✅</mark></p>
+        <p> 3. تسمح لك بتعطيل إرسال النموذج إذا تُرك أي حقل فارغًا. ❌</p>
+		<p> 4. تمكنك من تغيير نص العنصر النائب (placeholder text) ديناميكيًا. ❌</p>
+        <br>
+
+        <p class="userstory">ما هي الفئة الزائفة (pseudo-class) التي تتيح لك تنسيق حقول الإدخال التي يجب ملؤها قبل إرسال النموذج؟</p>
+		
+		<p> 1. <span dir="ltr" class="br-spec nw">:optional</span> ❌</p>
+        <p> 2. <span dir="ltr" class="br-spec nw">:disabled</span> ❌</p>
+        <p><mark> 3. <span dir="ltr" class="br-spec nw">:required</span> ✅</mark></p>
+		<p> 4. <span dir="ltr" class="br-spec nw">:checked</span> ❌</p>
+        
+	</section>
+ 
+
+  
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./What-Are-Examples-of-Element-User-Action-Pseudo-classes.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
