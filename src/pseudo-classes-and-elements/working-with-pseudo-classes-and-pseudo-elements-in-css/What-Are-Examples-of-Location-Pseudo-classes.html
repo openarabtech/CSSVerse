@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هي أمثلة الفئات الزائفة Pseudo-classes المتعلقة بالموقع Location ؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/pseudo-classes-and-elements-Styles/working-with-pseudo-classes-and-pseudo-elements-in-css/What-Are-Examples-of-Location-Pseudo-classes.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الفئات والعناصر الزائفة</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>العمل مع الفئات الزائفة Pseudo-Classes والعناصر الزائفة Pseudo-Elements في CSS</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+    <section class="sub-title">
+        <h2>ما هي أمثلة الفئات الزائفة Pseudo-classes المتعلقة بالموقع Location ؟</h2>
+        <span class="hint">نظري</span>
+		<p></p>
+    </section>
+
+    <section>
+        <p>
+            تُستخدم الفئات الزائفة الخاصة بالموقع (Location pseudo-classes) لتنسيق الروابط والعناصر المُستهدفة (targeted) داخل المستند الحالي. 
+            وهي تتيح إمكانية تطبيق تنسيقات معينة بناءً على ما إذا كان الرابط قد زِيِرَ من قبل (visited)، 
+            أو ما إذا كان العنصر في حالة تركيز (focus) حالياً.
+        </p>
+        <p>
+            من أمثلة الفئات الزائفة المتعلقة بالموقع (location pseudo-classes) :
+        </p>
+        <ul>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:link</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:visited</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:any-link</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:local-link</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:target</span></p>
+            </li>
+        </ul>
+        <p>
+            لنلقِ نظرةً أكثر تعمقاً على كلٍّ من هذه الفئات الزائفة (pseudo-classes).
+        </p>
+
+        <p>
+            تتيح لك الفئة الزائفة <span dir="ltr" class="br-spec nw">:link</span> استهداف جميع الروابط التي لم تتم زيارتها في صفحة الويب. 
+            يمكنك استخدامها لتنسيق هذه الروابط بشكل مختلف قبل أن يقوم المستخدم بالنقر عليها؛ 
+            فعلى سبيل المثال، قد ترغب في جعل جميع الروابط غير المُزارة (unvisited links) تظهر باللون الأزرق (blue) أو باللون الأساسي لموقعك الإلكتروني (website's primary color).
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;a <span class="attr">target=<span class="value">"_blank"</span> href=<span class="value">"https://www.example.com"</span></span>&gt;<span class="txt">تفضل بزيارة Example.com</span>&lt;/a&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">a:link</span> <span class="attr">{
+ color: <span class="txt">magenta</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <div class="preview1">
+                <a target="_blank" href="https://www.example.com/#1">تفضل بزيارة Example.com</a>
+			</div>
+        </div>
+        
+        <p>
+            في هذه الحالة، سيظهر أي رابط (any link) لم يقم المستخدم بالنقر عليه بعد باللون الأرجواني (magenta). 
+            وبمجرد أن ينقر المستخدم على الرابط، يتوقف تطبيق النمط المرتبط بـ <span dir="ltr" class="br-spec nw">:link</span> ، 
+            ويحل محله النمط الخاص بالفئة الزائفة <span dir="ltr" class="br-spec nw">:visited</span>. 
+            تدخل الفئة الزائفة <span dir="ltr" class="br-spec nw">:visited</span> حيز التنفيذ بعد قيام المستخدم بالنقر على الرابط، 
+            مما يتيح لك استهداف الروابط التي سبق للمستخدم النقر عليها.
+        </p>
+        <p>
+            إليك مثال على تغيير حالة الرابط الذي تمت زيارته إلى اللون البنفسجي <span dir="ltr" class="br-spec nw">purple</span> :
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;a <span class="attr">target=<span class="value">"_blank"</span> href=<span class="value">"https://www.example.com"</span></span>&gt;<span class="txt">تفضل بزيارة Example.com</span>&lt;/a&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">a:visited</span> <span class="attr">{
+ color: <span class="txt">purple</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <div class="preview2">
+                <a target="_blank" href="https://www.example.com/#2">تفضل بزيارة Example.com</a>
+			</div>
+        </div>
+        <p>
+            تساعد الفئة الزائفة <span dir="ltr" class="br-spec nw">:visited</span> المستخدمين على التمييز بين الروابط التي زاروها وتلك التي لم يزوروها.
+        </p>
+
+        <p>
+            تُعد الفئة الزائفة <span dir="ltr" class="br-spec nw">:any-link</span> مزيجاً من الفئتين الزائفيتين <span dir="ltr" class="br-spec nw">:link</span> و <span dir="ltr" class="br-spec nw">:visited</span> ؛ 
+            فهي تطابق أي عنصر رابط (anchor element) يحتوي على سمة <span dir="ltr" class="br-spec nw">href</span> ، 
+            بغض النظر عما إذا كان قد تمت زيارته أم لا.
+        </p>
+
+        <p>
+            إليك مثال على تغيير لون الرابط الخاص بالفئة الزائفة <span dir="ltr" class="br-spec nw">:any-link</span> إلى اللون القرمزي <span dir="ltr" class="br-spec nw">crimson</span> :
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;a <span class="attr">target=<span class="value">"_blank"</span> href=<span class="value">"https://www.example.com"</span></span>&gt;<span class="txt">تفضل بزيارة Example.com</span>&lt;/a&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">a:any-link</span> <span class="attr">{
+ color: <span class="txt">crimson</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <div class="preview3">
+                <a target="_blank" href="https://www.example.com/#3">تفضل بزيارة Example.com</a>
+			</div>
+        </div>
+        <br>
+
+        <p>
+            تستهدف الفئة الزائفة <span dir="ltr" class="br-spec nw">:local-link</span> الروابط التي تشير إلى المستند نفسه. 
+            ويمكن أن تكون مفيدة عندما ترغب في التمييز بين الروابط الداخلية والروابط الخارجية. 
+            وفي الوقت الحالي، لا يدعم أي متصفح الفئة الزائفة <span dir="ltr" class="br-spec nw">:local-link</span>.
+        </p>
+
+        <p>
+            تُستخدم الفئة الزائفة <span dir="ltr" class="br-spec nw">:target</span> لاختيار عنصر يطابق مُعرِّف الجزء (fragment identifier) ​​في عنوان URL الحالي، 
+            على سبيل المثال: <span dir="ltr" class="br-spec nw">#section1</span>. 
+            وتُعد هذه الميزة مفيدة للغاية في الصفحات التي تحتوي على تنقّل داخلي (in-page navigation).
+        </p>
+        <p>
+            إليك مثال بلغة HTML يمثل تنقلاً داخل الصفحة. 
+            تستخدم لغة CSS الفئة الزائفة <span dir="ltr" class="br-spec nw">:target</span> لتنسيق القسم الذي يتوافق مع الوجهة التي ينتقل إليها المستخدم:
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;nav <span class="attr">id=<span class="value">"table-of-contents"</span></span>&gt;
+ &lt;ul&gt;
+  &lt;li&gt;&lt;a <span class="attr">href=<span class="value">"#section1"</span></span>&gt;<span dir="rtl" class="txt">المقدِّمة</span>&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a <span class="attr">href=<span class="value">"#section2"</span></span>&gt;<span dir="rtl" class="txt">الميزات</span>&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;section <span class="attr">id=<span class="value">"section1"</span></span>&gt;
+ &lt;h2&gt;<span dir="rtl" class="txt">المقدمة</span>&lt;/h2&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">هذا هو قسم المقدمة.</span>&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section <span class="attr">id=<span class="value">"section2"</span></span>&gt;
+ &lt;h2&gt;<span dir="rtl" class="txt">المميزات</span>&lt;/h2&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">يستعرض هذا القسم المميزات.</span>&lt;/p&gt;
+&lt;/section&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">section:target</span> <span class="attr">{
+ background-color: <span class="txt">green</span>;
+ border: <span class="txt">2px solid green</span>;
+ padding: <span class="txt">10px</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <div class="preview4">
+                <nav id="table-of-contents">
+                    <ul>
+                    <li><a href="#section1">المقدِّمة</a></li>
+                    <li><a href="#section2">الميزات</a></li>
+                    </ul>
+                </nav>
+
+                <section id="section1">
+                    <h2>المقدمة</h2>
+                    <p>هذا هو قسم المقدمة.</p>
+                </section>
+
+                <section id="section2">
+                    <h2>المميزات</h2>
+                    <p>يستعرض هذا القسم المميزات.</p>
+                </section>
+			</div>
+        </div>
+
+        <p>
+            عندما ينقر المستخدم على أحد روابط التنقل (navigation links)، 
+            سيتغير لون خلفية (background color) القسم المقابل إلى اللون الأخضر (green).
+        </p>
+
+
+
+    </section>
+
+    <section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما هي الفئة الزائفة (pseudo-class) التي تتيح لك تنسيق عنصر يطابق مُعرِّف جزء الرابط (URL fragment identifier) ​​الحالي، مثل <span dir="ltr" class="br-spec nw">#section1</span> ؟</p>
+
+		<p> 1. <span dir="ltr" class="br-spec nw">:hover</span> ❌</p>
+        <p> 2. <span dir="ltr" class="br-spec nw">:focus</span> ❌</p>
+        <p><mark> 3. <span dir="ltr" class="br-spec nw">:target</span> ✅</mark></p>
+		<p> 4. <span dir="ltr" class="br-spec nw">:checked</span> ❌</p>
+        <br>
+
+        <p class="userstory">متى تكون الفئات الزائفة المتعلقة بالموقع (location pseudo-classes) مفيدة بشكل خاص؟</p>
+		
+		<p> 1. عند تنسيق العناصر بناءً على علاقاتها مع العناصر الشقيقة. ❌</p>
+        <p><mark> 2. عند تطبيق التنسيقات بناءً على ما إذا كان الرابط قد تمت زيارته أو كان العنصر في حالة التركيز (focus) حالياً. ✅</mark></p>
+        <p> 3. عند تنسيق العناصر بناءً على سمات العنصر الأب. ❌</p>
+		<p> 4. عند تعديل تخطيط صفحة الويب بشكل ديناميكي. ❌</p>
+        <br>
+
+        <p class="userstory">ما هي الفئة الزائفة (pseudo-class) المصممة لاستهداف الروابط التي تشير إلى المستند نفسه، والتي لا تدعمها حالياً أي متصفحات؟</p>
+		
+		<p> 1. <span dir="ltr" class="br-spec nw">:any-link</span> ❌</p>
+        <p><mark> 2. <span dir="ltr" class="br-spec nw">:local-link</span> ✅</mark></p>
+        <p> 3. <span dir="ltr" class="br-spec nw">:visited</span> ❌</p>
+		<p> 4. <span dir="ltr" class="br-spec nw">:target</span> ❌</p>
+        
+	</section>
+ 
+
+  
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./What-Are-Examples-of-Input-Pseudo-classes.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>

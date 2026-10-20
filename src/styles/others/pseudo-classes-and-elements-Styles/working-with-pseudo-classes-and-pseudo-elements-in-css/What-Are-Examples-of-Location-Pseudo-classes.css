@@ -1,0 +1,37 @@
+/* PREVIEW 1 */
+.preview1 {
+    min-height: 20vh;
+}
+
+.preview1 a:link {
+ color: magenta;
+}
+
+/* PREVIEW 2 */
+.preview2 {
+    min-height: 20vh;
+}
+
+.preview2 a:visited {
+ color: purple;
+}
+
+/* PREVIEW 3 */
+.preview3 {
+    min-height: 20vh;
+}
+
+.preview3 a:any-link {
+  color: crimson;
+}
+
+/* PREVIEW 4 */
+.preview4 {
+    min-height: 45vh;
+}
+
+.preview4 section:target {
+ background-color: green;
+ border: 2px solid green;
+ padding: 10px;
+}
