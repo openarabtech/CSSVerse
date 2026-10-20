@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هي أمثلة الفئات الزائفة pseudo-classes ذات البنية الشجرية Tree-structural ؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/pseudo-classes-and-elements-Styles/working-with-pseudo-classes-and-pseudo-elements-in-css/What-Are-Examples-of-Tree-structural-Pseudo-classes.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الفئات والعناصر الزائفة</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>العمل مع الفئات الزائفة Pseudo-Classes والعناصر الزائفة Pseudo-Elements في CSS</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+    <section class="sub-title">
+        <h2>ما هي أمثلة الفئات الزائفة Pseudo-classes ذات البنية الشجرية Tree-structural ؟</h2>
+        <span class="hint">نظري</span>
+		<p></p>
+    </section>
+
+    <section>
+        <p>
+            تتيح لك الفئات الزائفة ذات البنية الشجرية (Tree-structural pseudo-classes) استهداف العناصر وتنسيقها بناءً على موقعها داخل شجرة المستند. 
+            ويُقصد بشجرة المستند "البنية الهرمية" (The hierarchical structure) للعناصر في مستند HTML.
+        </p>
+        <p>
+            إليك قائمة بالفئات الزائفة ذات البنية الشجرية (tree-structural pseudo-classes) :
+        </p>
+        <ul>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:root</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:empty</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:nth-child(n)</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:nth-last-child(n)</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:first-child</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:last-child</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:only-child</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:nth-of-type</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:first-of-type</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:last-of-type</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:only-of-type</span></p>
+            </li>
+        </ul>
+        <p>
+            لنلقِ نظرة فاحصة على كل من الفئات الزائفة ذات البنية الشجرية (tree-structural pseudo-classes)، 
+            مع إدراج أمثلة توضيحية.
+        </p>
+        <br>
+
+        <!-- The :root Pseudo-class -->
+        <section>
+            <h3>الفئة الزائفة <span dir="ltr" class="special-code">:root</span></h3>
+            <p>
+                تُشير الفئة الزائفة <span dir="ltr" class="br-spec nw">:root</span> عادةً إلى عنصر الجذر <span dir="ltr" class="br-spec nw">html</span>. 
+                وهي تساعدك على استهداف المستوى الأعلى في المستند، مما يتيح لك تطبيق نمطٍ موحّد على المستند بأكمله.
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;h1&gt;<span dir="rtl" class="txt">مرحباً بك في موقعي الإلكتروني</span>&lt;/h1&gt;
+&lt;p&gt;<span dir="rtl" class="txt">هذه فقرة نموذجية لتوضيح الفئة الزائفة <span dir="ltr">:root</span></span>&lt;/p&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">:root</span> <span class="attr">{
+ background-color: <span class="txt">black</span>;
+ color: <span class="txt">aliceblue</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview1">
+                    <h1>مرحباً بك في موقعي الإلكتروني</h1>
+                    <p>هذه فقرة نموذجية لتوضيح الفئة الزائفة :root</p>
+				</div>
+            </div>
+
+            <br>
+            <p>
+                تُستخدم الفئة الزائفة <span dir="ltr" class="br-spec nw">:root</span> أيضاً بشكل شائع في تعيين متغيرات سي.اس.اس (CSS variables) :
+            </p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">:root</span> <span class="attr">{
+ --main-font: <span class="txt">'Arial, sans-serif'</span>;
+ --primary-color: <span class="txt">blue</span>;
+ --secondary-color: <span class="txt">green</span>;
+}</span>
+            </code></pre></div>
+            <p>
+                تتيح لك متغيرات سي.اس.اس (CSS variables) تخزين القيم (store values) وإعادة استخدامها في ملف الأنماط (stylesheet) الخاص بك. 
+                ستتعرف على المزيد حول هذا الموضوع لاحقاً.
+            </p>
+            <br>
+
+        </section>
+
+        <!-- The :empty Pseudo-class -->
+        <section>
+            <h3>الفئة الزائفة <span dir="ltr" class="special-code">:empty</span></h3>
+            <p>
+                تُدرج العناصر الفارغة (Empty elements) — أي العناصر التي لا تحتوي على أي عناصر فرعية سوى المسافات البيضاء (white space) — ضمن شجرة المستند. 
+                ولهذا السبب، توجد الفئة الزائفة <span dir="ltr" class="br-spec nw">:empty</span> التي تتيح استهداف هذه العناصر الفارغة. 
+                فعلى سبيل المثال، يحتوي كود HTML التالي على عنصرين فارغين ضمن قائمة؛ 
+                وباستخدام الفئة الزائفة <span dir="ltr" class="br-spec nw">:empty</span> ، 
+                يمكنك تطبيق تنسيقات مختلفة على هذين العنصرين:
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">العنصر 1</span>&lt;/li&gt;
+ &lt;li&gt;&lt;/li&gt; <span class="value">&lt;!-- This list is empty هذه القائمة فارغة --&gt;</span>
+ &lt;li&gt;<span dir="rtl" class="txt">العنصر 2</span>&lt;/li&gt;
+ &lt;li&gt;&lt;/li&gt; <span class="value">&lt;!-- This list is empty هذه القائمة فارغة --&gt;</span>
+ &lt;li&gt;<span dir="rtl" class="txt">العنصر 3</span>&lt;/li&gt;
+&lt;/ul&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">:empty</span> <span class="attr">{
+ background: <span class="txt">black</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview2">
+                    <ul>
+                        <li>العنصر 1</li>
+                        <li></li> <!-- This list is empty هذه القائمة فارغة -->
+                        <li>العنصر 2</li>
+                        <li></li> <!-- This list is empty هذه القائمة فارغة -->
+                        <li>العنصر 3</li>
+                    </ul>
+				</div>
+            </div>
+
+            <p>
+                ربما يكون التصرف الأكثر عمليةً فيما يخص عناصر القائمة الفارغة (the empty list items) هو عدم عرضها (not displaying them) على الإطلاق:
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">العنصر 1</span>&lt;/li&gt;
+ &lt;li&gt;&lt;/li&gt; <span class="value">&lt;!-- This list is empty هذه القائمة فارغة --&gt;</span>
+ &lt;li&gt;<span dir="rtl" class="txt">العنصر 2</span>&lt;/li&gt;
+ &lt;li&gt;&lt;/li&gt; <span class="value">&lt;!-- This list is empty هذه القائمة فارغة --&gt;</span>
+ &lt;li&gt;<span dir="rtl" class="txt">العنصر 3</span>&lt;/li&gt;
+&lt;/ul&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">:empty</span> <span class="attr">{
+ display: <span class="txt">none</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview3">
+                    <ul>
+                        <li>العنصر 1</li>
+                        <li></li> <!-- This list is empty هذه القائمة فارغة -->
+                        <li>العنصر 2</li>
+                        <li></li> <!-- This list is empty هذه القائمة فارغة -->
+                        <li>العنصر 3</li>
+                    </ul>
+				</div>
+            </div>
+            <br>
+            <br>
+
+
+
+        </section>
+
+        <!-- The :nth-child(n) and :nth-last-child(n) Pseudo-classes -->
+        <section>
+            <h3>الفئتان الزائفتان <span dir="ltr" class="special-code">:nth-child(n)</span> و <span dir="ltr" class="special-code">:nth-last-child(n)</span></h3>
+            <p>
+                تتيح لك <span dir="ltr" class="br-spec nw">:nth-child(n)</span> اختيار العناصر بناءً على موقعها داخل عنصر أب (parent)، 
+                بينما تمكّنك <span dir="ltr" class="br-spec nw">:nth-last-child(n)</span> من اختيار العناصر عن طريق العدّ من النهاية. 
+                يمكن أن تكون <span dir="ltr" class="br-spec nw">n</span> رقماً محدداً أو كلمة مفتاحية مثل <span dir="ltr" class="br-spec nw">odd</span> (فردي) أو <span dir="ltr" class="br-spec nw">even</span> (زوجي). 
+                وتُعد هذه الميزة مفيدة للغاية عند تنسيق خلايا الجداول بناءً على موقعها، 
+                سواء كانت في ترتيب زوجي أو فردي.
+            </p>
+            <p>
+                إليك مثال بلغة HTML لجدول يتضمن قائمة بأسعار الفاكهة. 
+                يستخدم كود CSS الفئة الزائفة (pseudo-class) المسماة <span dir="ltr" class="br-spec nw">:nth-child</span> لاستهداف خلايا الجدول بناءً على ترتيبها، 
+                سواء كانت في مواقع فردية (odd) أو زوجية (even) :
+            </p>
+
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;table&gt;
+ &lt;tr&gt;
+  &lt;th&gt;<span dir="rtl" class="txt">العنصر</span>&lt;/th&gt;
+  &lt;th&gt;<span dir="rtl" class="txt">السعر</span>&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+  &lt;td&gt;<span dir="rtl" class="txt">تفاح</span>&lt;/td&gt;
+  &lt;td&gt;<span dir="rtl" class="txt">$1.00</span>&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+  &lt;td&gt;<span dir="rtl" class="txt">موز</span>&lt;/td&gt;
+  &lt;td&gt;<span dir="rtl" class="txt">$0.50</span>&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+  &lt;td&gt;<span dir="rtl" class="txt">برتقال</span>&lt;/td&gt;
+  &lt;td&gt;<span dir="rtl" class="txt">$0.80</span>&lt;/td&gt;
+ &lt;/tr&gt;
+&lt;/table&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">th, td</span> <span class="attr">{
+ border: <span class="txt">1px solid lightgray</span>;
+ padding: <span class="txt">8px</span>;
+}</span>
+<span class="tag-b">tr:nth-child(even)</span> <span class="attr">{
+ background-color: <span class="txt">orangered</span>;
+}</span>
+<span class="tag-b">tr:nth-child(odd)</span> <span class="attr">{
+ background-color: <span class="txt">lightgreen</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview4">
+                    <table>
+                        <tr>
+                            <th>العنصر</th>
+                            <th>السعر</th>
+                        </tr>
+                        <tr>
+                            <td>تفاح</td>
+                            <td>$1.00</td>
+                        </tr>
+                        <tr>
+                            <td>موز</td>
+                            <td>$0.50</td>
+                        </tr>
+                        <tr>
+                            <td>برتقال</td>
+                            <td>$0.80</td>
+                        </tr>
+                    </table>
+				</div>
+            </div>
+            <br>
+            <br>
+        </section>
+
+        <!-- The :first-child, :last-child, and :only-child Pseudo-classes -->
+        <section>
+            <h3>الفئات الزائفة <span dir="ltr" class="special-code">:first-child</span> و <span dir="ltr" class="special-code">:last-child</span> و <span dir="ltr" class="special-code">:only-child</span></h3>
+            <p>
+                تعمل الفئات الزائفة (pseudo-classes) المتمثلة في 
+                <span dir="ltr" class="br-spec nw">:first-child</span> و <span dir="ltr" class="br-spec nw">:last-child</span> و <span dir="ltr" class="br-spec nw">:only-child</span> على العناصر الموجودة داخل حاوية أب (parent container) أو في المستند بأكمله.
+            </p>
+            <ul>
+                <li>
+                    <p>
+                       <span dir="ltr" class="br-spec nw">:first-child</span> يختار العنصر الأول ضمن عنصر أب (parent element) أو ضمن المستند. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span dir="ltr" class="br-spec nw">:last-child</span> يختار العنصر الأخير ضمن عنصر أب (parent element) أو ضمن المستند.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span dir="ltr" class="br-spec nw">:only-child</span> يختار العنصر الوحيد ضمن عنصر أب (parent element) أو ضمن المستند.
+                    </p>
+                </li>
+            </ul>
+            <p>
+                سيؤدي استخدام الفئتين الزائفين <span dir="ltr" class="br-spec nw">:first-child</span> و <span dir="ltr" class="br-spec nw">:last-child</span> إلى تحديد كل من العنصر الأول والعنصر الثالث في هذا المثال:
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">العنصر الأول</span>&lt;/li&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">العنصر الثاني</span>&lt;/li&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">العنصر الثالث</span>&lt;/li&gt;
+&lt;/ul&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">li:first-child</span> <span class="attr">{
+ background-color: <span class="txt">orangered</span>;
+}</span>
+
+<span class="tag-b">li:last-child</span> <span class="attr">{
+ background-color: <span class="txt">lightgreen</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview5">
+                    <ul>
+                        <li>العنصر الأول</li>
+                        <li>العنصر الثاني</li>
+                        <li>العنصر الثالث</li>
+                    </ul>
+				</div>
+            </div>
+            <p>
+                إذا كان هناك المزيد من القوائم غير المرتبة (unordered lists) في الصفحة، 
+                فيجب عليك أن تكون أكثر دقة (more specific) في عملية الاختيار:
+            </p>
+            <p>
+                لتوضيح كيفية عمل الفئة الزائفة <span dir="ltr" class="br-spec nw">:only-child</span> ، 
+                إليك مثال بلغة HTML يتضمن عنصرين منفصلين من نوع <span dir="ltr" class="br-spec nw">div</span>. 
+                يضمن استخدام الفئة الزائفة <span dir="ltr" class="br-spec nw">:only-child</span> اختيار عنصر <span dir="ltr" class="br-spec nw">div</span> الذي يحتوي على ابن واحد فقط (single child) :
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"container"</span></span>&gt;
+ &lt;div&gt;<span dir="rtl" class="txt">هذا هو العنصر الوحيد في هذه الحاوية.</span>&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div <span class="attr">class=<span class="value">"container"</span></span>&gt;
+ &lt;div&gt;<span dir="rtl" class="txt">هذا أحد عنصرين موجودين في هذه الحاوية.</span>&lt;/div&gt;
+ &lt;div&gt;<span dir="rtl" class="txt">وهذا هو العنصر الثاني.</span>&lt;/div&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.container div:only-child</span> <span class="attr">{
+ border: <span class="txt">2px solid crimson</span>;
+ padding: <span class="txt">10px</span>;
+ background-color: <span class="txt">lightblue</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview6">
+                    <div class="container">
+                        <div>هذا هو العنصر الوحيد في هذه الحاوية.</div>
+                    </div>
+
+                    <div class="container">
+                        <div>هذا أحد عنصرين موجودين في هذه الحاوية.</div>
+                        <div>وهذا هو العنصر الثاني.</div>
+                    </div>
+				</div>
+            </div>
+            <br>
+            <br>
+
+        </section>
+
+        <!-- The :first-of-type and :last-of-type Pseudo-classes -->
+        <section>
+            <h3>الفئتان الزائفتان <span dir="ltr" class="special-code">:first-of-type</span> و <span dir="ltr" class="special-code">:last-of-type</span></h3>
+            <p>
+                تُستخدم الفئات الزائفة (pseudo-classes) من النوعين <span dir="ltr" class="br-spec nw">:first-of-type</span> و <span dir="ltr" class="br-spec nw">:last-of-type</span> لاختيار أول وآخر ظهور لنوع معين من العناصر داخل عنصره الأب (parent). 
+                وتعد هذه الفئات مفيدة لتطبيق تنسيقات فريدة على أول أو آخر مثيل من ذلك النوع من العناصر ضمن مجموعة العناصر الشقيقة له.
+            </p>
+            <p>
+                في المثال أدناه، يُطبَّق كل من <span dir="ltr" class="br-spec nw">:first-of-type</span> و <span dir="ltr" class="br-spec nw">:last-of-type</span> على العنصر الأول والعنصر الأخير داخل عنصر <span dir="ltr" class="br-spec nw">section</span> :
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;section&gt;
+ &lt;h2&gt;<span dir="rtl" class="txt">المقدمة</span>&lt;/h2&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">هذه هي الفقرة الأولى في القسم الأول</span>&lt;/p&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">هذه هي الفقرة الثانية في القسم الأول</span>&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+ &lt;h2&gt;<span dir="rtl" class="txt">التفاصيل</span>&lt;/h2&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">هذه هي الفقرة الأولى في القسم الثاني.</span>&lt;/p&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">هذه هي الفقرة الثانية في القسم الثاني.</span>&lt;/p&gt;
+&lt;/section&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">section p:first-of-type</span> <span class="attr">{
+ background-color: <span class="txt">lightgreen</span>;
+}</span>
+
+<span class="tag-b">section p:last-of-type</span> <span class="attr">{
+ background-color: <span class="txt">lightblue</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview7">
+                    <section>
+                        <h2>المقدمة</h2>
+                        <p>هذه هي الفقرة الأولى في القسم الأول</p>
+                        <p>هذه هي الفقرة الثانية في القسم الأول</p>
+                    </section>
+
+                    <section>
+                        <h2>التفاصيل</h2>
+                        <p>هذه هي الفقرة الأولى في القسم الثاني.</p>
+                        <p>هذه هي الفقرة الثانية في القسم الثاني.</p>
+                    </section>
+				</div>
+            </div>
+            <br>
+            <br>
+
+        </section>
+
+        <!-- The :nth-of-type(n) Pseudo-class -->
+        <section>
+            <h3>الفئة الزائفة <span dir="ltr" class="special-code">:nth-of-type(n)</span></h3>
+            <p>
+                يسمح لك المُحدد <span dir="ltr" class="br-spec nw">:nth-of-type(n)</span> باختيار عنصرٍ مُعينٍ داخل عنصره الأب (parent)، 
+                وذلك بناءً على ترتيبه بين العناصر الشقيقة التي تنتمي إلى النوع ذاته. 
+                على سبيل المثال، في كود HTML أدناه، 
+                يستهدف المُحدد <span dir="ltr" class="br-spec nw">:nth-of-type(2)</span> العنصر الثاني داخل الحاوية:
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">الفقرة الأولى</span>&lt;/p&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">الفقرة الثانية</span>&lt;/p&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">الفقرة الثالثة</span>&lt;/p&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">p:nth-of-type(2)</span> <span class="attr">{
+ color: <span class="txt">red</span>;
+ font-weight: <span class="txt">bold</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview8">
+                    <div>
+                        <p>الفقرة الأولى</p>
+                        <p>الفقرة الثانية</p>
+                        <p>الفقرة الثالثة</p>
+                    </div>
+				</div>
+            </div>
+            <br>
+            <br>
+
+        </section>
+
+        <!-- The :only-of-type Pseudo-class -->
+        <section>
+            <h3>الفئة الزائفة <span dir="ltr" class="special-code">:only-of-type</span></h3>
+            <p>
+                يختار المُحدد <span dir="ltr" class="br-spec nw">:only-of-type</span> عنصراً ما إذا كان هو العنصر الوحيد من نوعه ضمن عنصره الأب (parent). 
+                ويمكن الاستفادة من ذلك في إبراز العناصر الفردية، 
+                أو ضمان حصولها على تنسيق مختلف عندما لا تكون جزءاً من مجموعة.
+            </p>
+            <p>
+                في المثال أدناه، يوجد عنصران من نوع <span dir="ltr" class="br-spec nw">div</span> ؛ 
+                أحدهما يحتوي على عنصر واحد. 
+                يتم تطبيق تنسيق CSS على الحاوية الأولى فقط:
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<spa class="value">"container"</spa></span>&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">الفقرة الوحيدة</span>&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div <span class="attr">class=<spa class="value">"container"</spa></span>&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">الفقرة الأولى</span>&lt;/p&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">الفقرة الثانية</span>&lt;/p&gt;
+&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">p:only-of-type</span> <span class="attr">{
+ border: <span class="txt">4px solid green</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview9">
+                    <div class="container">
+                        <p>الفقرة الوحيدة</p>
+                    </div>
+
+                    <div class="container">
+                        <p>الفقرة الأولى</p>
+                        <p>الفقرة الثانية</p>
+                    </div>
+				</div>
+            </div>
+            <br>
+
+        </section>
+
+
+
+    </section>
+
+    <section class="questions">
+		<p class="pquestions">أسئلة :</p>
+
+
+        <p class="userstory">ما الفرق بين الفئتين الزائفين <span dir="ltr" class="br-spec nw">:first-of-type</span> و <span dir="ltr" class="br-spec nw">:last-of-type</span> ؟</p>
+		
+		<p> 1. تستهدف <span dir="ltr" class="br-spec nw">:first-of-type</span> أول عنصر من نوع معين داخل العنصر الأب، بينما تستهدف <span dir="ltr" class="br-spec nw">:last-of-type</span> آخر عنصر من نوع مختلف. ❌</p>
+        <p> 2. تستهدف كل من <span dir="ltr" class="br-spec nw">:first-of-type</span> و <span dir="ltr" class="br-spec nw">:last-of-type</span> أول ظهور لعنصر لكن في أقسام مختلفة من المستند. ❌</p>
+        <p><mark> 3. تختار <span dir="ltr" class="br-spec nw">:first-of-type</span> أول ظهور لنوع عنصر معين داخل العنصر الأب، بينما تختار <span dir="ltr" class="br-spec nw">:last-of-type</span> آخر ظهور لنفس نوع العنصر داخل العنصر الأب. ✅</mark></p>
+		<p> 4. تطبق <span dir="ltr" class="br-spec nw">:last-of-type</span> التنسيقات على أول وآخر العناصر داخل المستند، بينما تطبق <span dir="ltr" class="br-spec nw">:last-of-type</span> التنسيقات على جميع العناصر من نوع معين. ❌</p>
+        <br>
+
+        <p class="userstory">ما الفرق بين الفئتين الزائفين <span dir="ltr" class="br-spec nw">:first-child</span> و <span dir="ltr" class="br-spec nw">:last-child</span> ؟</p>
+		
+		<p> 1. تستهدف <span dir="ltr" class="br-spec nw">:first-child</span> أول عنصر داخل العنصر الأب، بينما تستهدف <span dir="ltr" class="br-spec nw">:last-child</span> آخر عنصر داخل عنصر أب مختلف. ❌</p>
+        <p><mark> 2. تستهدف <span dir="ltr" class="br-spec nw">:first-child</span> أول عنصر داخل العنصر الأب، بينما تستهدف <span dir="ltr" class="br-spec nw">:last-child</span> آخر عنصر داخل نفس العنصر الأب. ✅</mark></p>
+        <p> 3. تستهدف <span dir="ltr" class="br-spec nw">:first-child</span> أول عنصر من نوع معين داخل العنصر الأب، بينما تستهدف <span dir="ltr" class="br-spec nw">:last-child</span> آخر عنصر من نوع مختلف داخل العنصر الأب. ❌</p>
+		<p> 4. تستهدف <span dir="ltr" class="br-spec nw">:first-child</span> أول وآخر العناصر داخل العنصر الأب، بينما تستهدف <span dir="ltr" class="br-spec nw">:last-child</span> جميع العناصر الأخرى. ❌</p>
+        <br>
+			
+		<p class="userstory">ما هي الفئة الزائفة (pseudo-class) التي تتيح لك استهداف العناصر التي لا تحتوي على أي عناصر أبناء، بما في ذلك العناصر التي لا تحتوي إلا على مسافات بيضاء؟</p>
+
+		<p><mark> 1. <span dir="ltr" class="br-spec nw">:empty</span> ✅</mark></p>
+		<p> 2. <span dir="ltr" class="br-spec nw">:first-child</span> ❌</p>
+        <p> 3. <span dir="ltr" class="br-spec nw">:last-child</span> ❌</p>
+		<p> 4. <span dir="ltr" class="br-spec nw">:only-of-type</span> ❌</p>
+
+	</section>
+ 
+
+  
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./What-Are-Examples-of-Location-Pseudo-classes.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>

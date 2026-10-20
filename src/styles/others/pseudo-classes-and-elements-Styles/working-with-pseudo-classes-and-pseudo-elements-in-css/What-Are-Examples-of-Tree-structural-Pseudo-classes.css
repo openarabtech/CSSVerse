@@ -1,0 +1,98 @@
+/* PREVIEW 1 */
+.preview1 {
+    min-height: 40vh;
+    background-color: black;
+    color: aliceblue;
+}
+
+/* PREVIEW 2 */
+.preview2 {
+    min-height: 30vh;
+}
+
+.preview2 :empty {
+ background: black;
+}
+
+/* PREVIEW 3 */
+.preview3 {
+    min-height: 30vh;
+}
+
+.preview3 :empty {
+ display: none;
+}
+
+/* PREVIEW 4 */
+.preview4 {
+    min-height: 30vh;
+}
+
+.preview4 th, td {
+ border: 1px solid lightgray;
+ padding: 8px;
+}
+.preview4 tr:nth-child(even) {
+ background-color: orangered;
+}
+.preview4 tr:nth-child(odd) {
+ background-color: lightgreen;
+}
+
+
+/* PREVIEW 5 */
+.preview5 {
+    min-height: 20vh;
+}
+
+
+.preview5 li:first-child {
+ background-color: orangered;
+}
+
+.preview5 li:last-child {
+ background-color: lightgreen;
+}
+
+/* PREVIEW 6 */
+.preview6 {
+    min-height: 25vh;
+}
+
+.preview6 .container div:only-child {
+ border: 2px solid crimson;
+ padding: 10px;
+ background-color: lightblue;
+}
+
+/* PREVIEW 7 */
+.preview7 {
+    min-height: 30vh;
+}
+
+.preview7 section p:first-of-type {
+  background-color: lightgreen;
+}
+
+.preview7 section p:last-of-type {
+  background-color:lightblue;
+}
+
+/* PREVIEW 8 */
+.preview8 {
+    min-height: 20vh;
+}
+
+.preview8 p:nth-of-type(2) {
+ color: red;
+ font-weight: bold;
+}
+
+/* PREVIEW 9 */
+.preview9 {
+    min-height: 20vh;
+}
+
+.preview9 p:only-of-type {
+ border: 4px solid green;
+}
