@@ -1,0 +1,97 @@
+/* PREVIEW 1 */
+.preview1 {
+    min-height: 30vh;
+}
+
+
+.preview1 button, 
+.preview1 a.button, 
+.preview1 input[type='submit'], 
+.preview1 input[type='reset'] {
+ background-color: darkblue;
+ color: white;
+ border: 1px solid darkblue;
+ padding: 10px 20px;
+ text-decoration: none;
+ border-radius: 5px;
+ cursor: pointer;
+ display: inline-block;
+ margin: 5px;
+ font-size: 16px;
+ text-align: center;
+}
+
+.preview1 button:hover, 
+.preview1 a.button:hover, 
+.preview1 input[type='submit']:hover, 
+.preview1 input[type='reset']:hover {
+ background-color: blue;
+ border-color: blue;
+}
+
+/* PREVIEW 2 */
+
+.preview2 {
+    min-height: 30vh;
+}
+
+
+:is(.preview2 button, .preview2 a.button, .preview2 input[type='submit'], .preview2 input[type='reset']) {
+ background-color: darkblue;
+ color: white;
+ border: 1px solid darkblue;
+ padding: 10px 20px;
+ text-decoration: none;
+ border-radius: 5px;
+ cursor: pointer;
+ display: inline-block;
+ margin: 5px;
+ font-size: 16px;
+ text-align: center;
+}
+
+:is(.preview2 button, .preview2 a.button, .preview2 input[type='submit'], .preview2 input[type='reset']):hover {
+ background-color: blue;
+ border-color: blue;
+}
+
+
+/* PREVIEW 3 */
+
+.preview3 {
+    min-height: 30vh;
+}
+
+:where(.preview3 h1, .preview3 h2, .preview3 h3) {
+ margin: 0;
+ padding: 0;
+}
+
+
+/* PREVIEW 4 */
+
+.preview4 article:has(h2) {
+ border: 2px solid hotpink;
+}
+
+/* PREVIEW 5 */
+.preview5 {
+    min-height: 30vh;
+}
+
+.preview5 button {
+ padding: 10px 20px;
+ border-radius: 4px;
+ cursor: pointer;
+ font-size: 16px;
+ border: none;
+ color: white;
+}
+
+.preview5 button.primary {
+ background-color: deepskyblue;
+}
+
+.preview5 button:not(.primary) {
+ background-color: grey;
+}

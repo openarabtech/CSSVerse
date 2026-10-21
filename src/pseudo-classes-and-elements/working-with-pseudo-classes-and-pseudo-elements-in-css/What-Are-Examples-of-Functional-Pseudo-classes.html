@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هي أمثلة الفئات الزائفة الوظيفية Functional Pseudo-classes ؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/pseudo-classes-and-elements-Styles/working-with-pseudo-classes-and-pseudo-elements-in-css/What-Are-Examples-of-Functional-Pseudo-classes.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الفئات والعناصر الزائفة</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>العمل مع الفئات الزائفة Pseudo-Classes والعناصر الزائفة Pseudo-Elements في CSS</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+    <section class="sub-title">
+        <h2>ما هي أمثلة الفئات الزائفة الوظيفية Functional Pseudo-classes ؟</h2>
+        <span class="hint">نظري</span>
+		<p></p>
+    </section>
+
+    <section>
+        <p>
+            تتيح لك الفئات الزائفة الوظيفية (functional pseudo-classes) اختيار العناصر بناءً على شروط أو علاقات أكثر تعقيداً. 
+            وعلى عكس الفئات الزائفة العادية التي تستهدف العناصر استناداً إلى حالة معينة - مثل <span dir="ltr" class="br-spec nw">:hover</span> أو <span dir="ltr" class="br-spec nw">:focus</span> ، 
+            فإن الفئات الزائفة الوظيفية تقبل وسائط (arguments) داخل أقواس؛ 
+            ومن هنا جاءت تسميتها بـ "الفئات الزائفة الوظيفية" (functional pseudo-classes).
+        </p>
+        <p>من أمثلة الفئات الزائفة الوظيفية:</p>
+        <ul>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:is()</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:where()</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:has()</span></p>
+            </li>
+            <li>
+                <p><span dir="ltr" class="br-spec nw">:not()</span></p>
+            </li>
+        </ul>
+        <p>
+            لنلقِ نظرةً أكثر تعمقاً على كلٍّ من هذه الفئات الزائفة الوظيفية (functional pseudo-classes) مع تقديم أمثلة عليها.
+        </p>
+
+        <p>
+            تُعد الفئة الزائفة <span dir="ltr" class="br-spec nw">:is()</span> مفيدة عندما ترغب في تطبيق تنسيقات على مجموعة من العناصر التي تشترك في بعض الخصائص، ولكن ليس كلها. 
+            على سبيل المثال، قد ترغب في تنسيق أنواع مختلفة من الأزرار في موقعك الإلكتروني، 
+            بما في ذلك عناصر الأزرار <span dir="ltr" class="br-spec nw">button</span>، 
+            والروابط التي تم تنسيقها لتبدو كأزرار، 
+            وعناصر الإدخال <span dir="ltr" class="br-spec nw">input</span> من النوعين <span dir="ltr" class="br-spec nw">submit</span> و <span dir="ltr" class="br-spec nw">reset</span>. 
+            إليك مثال يوضح ذلك؛ فبدون استخدام الدالة <span dir="ltr" class="br-spec nw">:is()</span>، 
+            ستضطر إلى كتابة مُحدِّد (selector) معقد كهذا:
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;button&gt;<span dir="rtl" class="txt">زر تجريبي</span>&lt;/button&gt;
+&lt;a <span class="attr">href=<span class="value">"#"</span> class=<span class="value">"button"</span></span>&gt;<span dir="rtl" class="txt">رابط مُصمَّم على هيئة زر</span>&lt;/a&gt;
+&lt;input <span class="attr">type=<span class="value">"submit"</span> value=<span class="value">"إرسال"</span></span> /&gt;
+&lt;input <span class="attr">type=<span class="value">"reset"</span> value=<span class="value">"إعادة ضبط"</span></span> /&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">button, 
+a.button, 
+input[type='submit'], 
+input[type='reset']</span> <span class="attr">{
+ background-color: <span class="txt">darkblue</span>;
+ color: <span class="txt">white</span>;
+ border: <span class="txt">1px solid darkblue</span>;
+ padding: <span class="txt">10px 20px</span>;
+ text-decoration: <span class="txt">none</span>;
+ border-radius: <span class="txt">5px</span>;
+ cursor: <span class="txt">pointer</span>;
+ display: <span class="txt">inline-block</span>;
+ margin: <span class="txt">5px</span>;
+ font-size: <span class="txt">16px</span>;
+ text-align: <span class="txt">center</span>;
+}</span>
+
+<span class="tag-b">button:hover, 
+a.button:hover, 
+input[type='submit']:hover, 
+input[type='reset']:hover</span> <span class="attr">{
+ background-color: <span class="txt">blue</span>;
+ border-color: <span class="txt">blue</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+                <div class="preview1">
+                    <button>زر تجريبي</button>
+                    <a href="#" class="button">رابط مُصمَّم على هيئة زر</a>
+                    <input type="submit" value="إرسال" />
+                    <input type="reset" value="إعادة ضبط" />
+				</div>
+        </div>
+        <br>
+        <p>
+            باستخدام الدالة <span dir="ltr" class="br-spec nw">:is()</span> ، يمكنك كتابة مُحدِّد أكثر إيجازاً ووضوحاً على النحو التالي:
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;button&gt;<span dir="rtl" class="txt">زر تجريبي</span>&lt;/button&gt;
+&lt;a <span class="attr">href=<span class="value">"#"</span> class=<span class="value">"button"</span></span>&gt;<span dir="rtl" class="txt">رابط مُصمَّم على هيئة زر</span>&lt;/a&gt;
+&lt;input <span class="attr">type=<span class="value">"submit"</span> value=<span class="value">"إرسال"</span></span> /&gt;
+&lt;input <span class="attr">type=<span class="value">"reset"</span> value=<span class="value">"إعادة ضبط"</span></span> /&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="attr">:is(<span class="tag-b">button, a.button, input[type='submit'], input[type='reset']</span>) {
+ background-color: <span class="txt">darkblue</span>;
+ color: <span class="txt">white</span>;
+ border: <span class="txt">1px solid darkblue</span>;
+ padding: <span class="txt">10px 20px</span>;
+ text-decoration: <span class="txt">none</span>;
+ border-radius: <span class="txt">5px</span>;
+ cursor: <span class="txt">pointer</span>;
+ display: <span class="txt">inline-block</span>;
+ margin: <span class="txt">5px</span>;
+ font-size: <span class="txt">16px</span>;
+ text-align: <span class="txt">center</span>;
+}</span>
+
+<span class="attr">:is(<span class="tag-b">button, a.button, input[type='submit'], input[type='reset']</span>):hover {
+ background-color: <span class="txt">blue</span>;
+ border-color: <span class="txt">blue</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+                <div class="preview2">
+                    <button>زر تجريبي</button>
+                    <a href="#" class="button">رابط مُصمَّم على هيئة زر</a>
+                    <input type="submit" value="إرسال" />
+                    <input type="reset" value="إعادة ضبط" />
+				</div>
+        </div>
+        <br>
+        <p>
+            تعمل الفئة الزائفة <span dir="ltr" class="br-spec nw">:where()</span> بشكل مشابه لـ <span dir="ltr" class="br-spec nw">:is()</span> ، 
+            لكنها لا تزيد من درجة تحديد (specificity) المُحدِّدات الخاصة بك. 
+            وهذا يجعلها مثالية لتطبيق الأنماط دون التأثير على درجة تحديد القواعد الأخرى.
+        </p>
+
+        <p>
+            على سبيل المثال، يمكنك استخدام الدالة <span dir="ltr" class="br-spec nw">:where()</span> لضبط الهوامش <span dir="ltr" class="br-spec nw">margin</span> والحشوات <span dir="ltr" class="br-spec nw">padding</span> لعناصر العناوين (headings) على القيمة صفر. 
+            يضمن ذلك ألا تتعارض عملية إعادة الضبط (reset) هذه مع أي تنسيقات أكثر تحديداً قد تطبقها لاحقاً. إليك مثال على ذلك:
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;h1&gt;<span dir="rtl" class="txt">عنوان الصفحة</span>&lt;/h1&gt;
+&lt;h2&gt;<span dir="rtl" class="txt">عنوان فرعي</span>&lt;/h2&gt;
+&lt;h3&gt;<span dir="rtl" class="txt">نقطة</span>&lt;/h3&gt;
+
+&lt;p&gt;<span dir="rtl" class="txt">فقرة نموذجية.</span>&lt;/p&gt;
+&lt;p&gt;<span dir="rtl" class="txt">فقرة نموذجية.</span>&lt;/p&gt;
+&lt;p&gt;<span dir="rtl" class="txt">فقرة نموذجية.</span>&lt;/p&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="attr">:where(<span class="tag-b">h1, h2, h3</span>) {
+ margin: <span class="txt">0</span>;
+ padding: <span class="txt">0</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+                <div class="preview3">        
+                    <h1>عنوان الصفحة</h1>
+                    <h2>عنوان فرعي</h2>
+                    <h3>نقطة</h3>
+
+                    <p>فقرة نموذجية.</p>
+                    <p>فقرة نموذجية.</p>
+                    <p>فقرة نموذجية.</p>
+				</div>
+        </div>
+        <br>
+
+        <p>
+            كان تنسيق عنصر أبٍ (Styling a parent element) بناءً على حالات عناصره الأبناء (its children's states) أمراً صعباً في السابق، 
+            إلى أن ظهرت الفئة الزائفة <span dir="ltr" class="br-spec nw">:has()</span>. 
+            فهي تتيح لك تطبيق تنسيقات على عنصر أبٍ (parent element) استناداً إلى وجود عناصره الأبناء أو حالاتها.
+        </p>
+        <p>
+            على سبيل المثال، سيُطبَّق كود CSS أدناه فقط على أي عنصر <span dir="ltr" class="br-spec nw">article</span> يحتوي بداخله على عنصر <span dir="ltr" class="br-spec nw">h2</span> :
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;article&gt;
+ &lt;h2&gt;<span dir="rtl" class="txt">عنوان فرعي</span>&lt;/h2&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">لوريم إيبسوم دولور سيت أميت.</span>&lt;/p&gt;
+&lt;/article&gt;
+
+&lt;article&gt;
+ &lt;h3&gt;<span dir="rtl" class="txt">نقطة</span>&lt;/h3&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">لوريم إيبسوم دولور سيت أميت.</span>&lt;/p&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">لوريم إيبسوم دولور سيت أميت.</span>&lt;/p&gt;
+&lt;/article&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="attr"><span class="tag-b">article</span>:has(<span class="tag-b">h2</span>) {
+ border: <span class="txt">2px solid hotpink</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+                <div class="preview4">        
+                    <article>
+                        <h2>عنوان فرعي</h2>
+                        <p>لوريم إيبسوم دولور سيت أميت.</p>
+                    </article>
+
+                    <article>
+                        <h3>نقطة</h3>
+                        <p>لوريم إيبسوم دولور سيت أميت.</p>
+                        <p>لوريم إيبسوم دولور سيت أميت.</p>
+                    </article>
+				</div>
+        </div>
+        <br>
+
+        <p>
+            تُعد الفئة الزائفة <span dir="ltr" class="br-spec nw">:not()</span> مثالية للحالات التي ترغب فيها بتطبيق أنماط على مجموعة من العناصر، 
+            مع استبعاد عنصر واحد أو أكثر. 
+            في كود CSS أدناه، سيظهر أي زر - غير الزر الرئيسي (primary button) - بخلفية رمادية (grey background) :
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;button <span class="attr">class=<span class="value">"primary"</span></span>&gt;<span dir="rtl" class="txt">زر أساسي</span>&lt;/button&gt;
+&lt;button <span class="attr">class=<span class="value">"secondary"</span></span>&gt;<span dir="rtl" class="txt">زر ثانوي</span>&lt;/button&gt;
+&lt;button <span class="attr">class=<span class="value">"danger"</span></span>&gt;<span dir="rtl" class="txt">زر ثانوي آخر</span>&lt;/button&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">button</span><span class="attr"> {
+ padding: <span class="txt">10px 20px</span>;
+ border-radius: <span class="txt">4px</span>;
+ cursor: <span class="txt">pointer</span>;
+ font-size: <span class="txt">16px</span>;
+ border: <span class="txt">none</span>;
+ color: <span class="txt">white</span>;
+}</span>
+
+<span class="tag-b">button.primary</span><span class="attr"> {
+ background-color: <span class="txt">deepskyblue</span>;
+}</span>
+
+<span class="tag-b">button</span><span class="attr">:not(<span class="tag-b">.primary</span>) {
+ background-color: <span class="txt">grey</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+                <div class="preview5">        
+                    <button class="primary">زر أساسي</button>
+                    <button class="secondary">زر ثانوي</button>
+                    <button class="danger">زر ثانوي آخر</button>
+				</div>
+        </div>
+        <br>
+
+
+        
+
+
+
+    </section>
+
+    <section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما هي الفئة الزائفة التي تعمل مثل <span dir="ltr" class="br-spec nw">:is()</span> ، لكنها لا تضيف أي خصوصية (specificity) إلى محدداتك (selectors) ؟</p>
+
+		<p> 1. <span dir="ltr" class="br-spec nw">:not()</span> ❌</p>
+        <p> 2. <span dir="ltr" class="br-spec nw">:has()</span> ❌</p>
+        <p><mark> 3. <span dir="ltr" class="br-spec nw">:where()</span> ✅</mark></p>
+		<p> 4. <span dir="ltr" class="br-spec nw">:empty</span> ❌</p>
+        <br>
+
+        <p class="userstory">أيٌّ من هذه لا يُعدُّ فئةً زائفةً وظيفيةً (functional pseudo-class) ؟</p>
+		
+		<p> 1. <span dir="ltr" class="br-spec nw">:is()</span> ❌</p>
+        <p><mark> 2. <span dir="ltr" class="br-spec nw">:first-child</span> ✅</mark></p>
+        <p> 3. <span dir="ltr" class="br-spec nw">:has()</span> ❌</p>
+		<p> 4. <span dir="ltr" class="br-spec nw">:where()</span> ❌</p>
+        <br>
+
+        <p class="userstory">ما هي الفئة الزائفة (pseudo-class) المثالية لحالة ترغب فيها بتطبيق أنماط على مجموعة من العناصر، مع استثناء عنصر أو عنصرين منها؟</p>
+		
+		<p> 1. <span dir="ltr" class="br-spec nw">:has()</span> ❌</p>
+        <p> 2. <span dir="ltr" class="br-spec nw">:is()</span> ❌</p>
+        <p><mark> 3. <span dir="ltr" class="br-spec nw">:not()</span> ✅</mark></p>
+		<p> 4. <span dir="ltr" class="br-spec nw">:where()</span> ❌</p>
+	</section>
+ 
+
+  
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./What-Are-Examples-of-Tree-structural-Pseudo-classes.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
