@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هي العناصر الزائفة Pseudo-elements ، وكيف تعمل؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/pseudo-classes-and-elements-Styles/working-with-pseudo-classes-and-pseudo-elements-in-css/What-Are-Pseudo-elements-and-How-Do-They-Work.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الفئات والعناصر الزائفة</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>العمل مع الفئات الزائفة Pseudo-Classes والعناصر الزائفة Pseudo-Elements في CSS</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+    <section class="sub-title">
+        <h2>ما هي العناصر الزائفة Pseudo-elements ، وكيف تعمل؟</h2>
+        <span class="hint">نظري</span>
+		<p></p>
+    </section>
+
+    <section>
+        <p>
+            من أكثر جوانب CSS إثارة للاهتمام هو استخدام "العناصر الزائفة" (pseudo-elements). 
+            وفي هذا السياق، تعني كلمة "زائف" (pseudo) "غير حقيقي"؛ 
+            لذا فإن العناصر الزائفة هي عناصر افتراضية أو مُستحدثة لا تقابل بشكل مباشر أي عناصر HTML فعلية. 
+            وهي تتيح لك تنسيق أجزاء محددة من عنصر ما، 
+            أو إدراج محتوى دون الحاجة إلى إضافة عناصر HTML إضافية.
+        </p>
+
+        <!-- Pseudo-element Syntax -->
+        <section>
+            <h3>صيغة العناصر الزائفة Pseudo-element Syntax</h3>
+            <p>
+                لتطبيق عنصر زائف (pseudo-element)، 
+                قم بإلحاقه بمحدد العنصر الأصلي باستخدام علامة النقطتين المزدوجتين (<span dir="ltr" class="br-spec nw">::</span>). 
+                لاحظ أن المحدد يمكن أن يكون من أي نوع، كأن يكون محدد فئة (class) أو محدد مُعرِّف (ID). 
+                إليك الشكل العام للصيغة الأساسية للعناصر الزائفة:
+            </p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">selector::pseudo-element</span> <span class="attr">{
+ property: <span class="txt">value</span>;
+}</span>
+            </code></pre></div>
+            <p>
+                هذا النقطتان المتتاليتان (double colon) هما ما يميّز العناصر الزائفة (pseudo-elements) عن الفئات الزائفة (pseudo-classes)، التي تستخدم نقطتان فقط (single colon).
+            </p>
+            <p>
+                تتيح لك العناصر الزائفة (pseudo-elements) تنسيق أجزاء محددة من محتوى عنصر ما، 
+                أو إدراج محتوى قبل هذا العنصر أو بعده، 
+                لكنها لا يمكن أن توجد بشكل مستقل. 
+                ويُطلق على العنصر الذي يرتبط به العنصر الزائف اسم "العنصر الأصلي" (originating element).
+            </p>
+            <br>
+
+        </section>
+
+        <!-- The ::before and ::after Pseudo-elements -->
+        <section>
+            <h3>العناصر الزائفة <span dir="ltr" class="special-code">::before</span> و <span dir="ltr" class="special-code">::after</span></h3>
+            <p>
+                لنبدأ بالاطلاع على أمثلة للعناصر الزائفة <span dir="ltr" class="br-spec nw">::before</span> و <span dir="ltr" class="br-spec nw">::after</span>. 
+                فكما يوحي اسماهما، 
+                يتيح لك <span dir="ltr" class="br-spec nw">::before</span> إدراج محتوى قبل محتوى العنصر مباشرةً، 
+                بينما يتيح لك <span dir="ltr" class="br-spec nw">::after</span> إدراج محتوى بعده.
+            </p>
+            <p>
+                إليك مثال على عنصر زر (button). 
+                في لغة CSS، سنستخدم التموضع المطلق (absolute positioning) والعنصر الزائف (pseudo-element) المسمى <span dir="ltr" class="br-spec nw">::before</span> لإضافة نجمة قبل نص <span dir="rtl" class="br-spec nw">اعرف المزيد</span> الموجود داخل الزر. 
+                ستتعرف على المزيد حول التموضع المطلق (absolute positioning) في دروس قادمة.
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;button <span class="attr">class=<span class="value">"cta-button"</span></span>&gt;<span dir="rtl" class="txt">اعرف المزيد</span>&lt;/button&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.cta-button</span> <span class="attr">{
+ background-color: <span class="txt">lightseagreen</span>;
+ color: <span class="txt">white</span>;
+ border: <span class="txt">none</span>;
+ padding: <span class="txt">10px 20px</span>;
+ cursor: <span class="txt">pointer</span>;
+ position: <span class="txt">relative</span>;
+}</span>
+
+<span class="tag-b">.cta-button::before</span> <span class="attr">{
+ content: <span class="txt">"⭐"</span>;
+ position: <span class="txt">absolute</span>;
+ right: <span class="txt">3px</span>;
+ top: <span class="txt">8px</span>;
+ font-size: <span class="txt">0.75rem</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview1">
+                    <button class="cta-button">اعرف المزيد</button>
+				</div>
+            </div>
+            <br>
+            <p>
+                تُستخدم الخاصية <span dir="ltr" class="br-spec nw">content</span> لإضافة محتوى قبل نص الزر. 
+                في هذا المثال، نقوم بإضافة رمز نجمة. 
+                ستلاحظ أنه لا يمكنك إضافة محتوى فحسب، بل يمكنك أيضاً تنسيقه. 
+                إليك مثال على استخدام العنصر الزائف <span dir="ltr" class="br-spec nw">::after</span> مع الزر ذاته:
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;button <span class="attr">class=<span class="value">"cta-button"</span></span>&gt;<span dir="rtl" class="txt">اعرف المزيد</span>&lt;/button&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.cta-button</span> <span class="attr">{
+ background-color: <span class="txt">orange</span>;
+ border: <span class="txt">none</span>;
+ padding: <span class="txt">10px 30px</span>;
+ cursor: <span class="txt">pointer</span>;
+ position: <span class="txt">relative</span>;
+}</span>
+
+<span class="tag-b">.cta-button::after</span> <span class="attr">{
+ content: <span class="txt">"⬅️"</span>;
+ position: <span class="txt">absolute</span>;
+ left: <span class="txt">5px</span>;
+ bottom: <span class="txt">6px</span>;
+ font-size: <span class="txt">1.125rem</span>;
+ transition: <span class="txt">transform 0.3s ease</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview2">
+                    <button class="cta-button">اعرف المزيد</button>
+				</div>
+            </div>
+            <br>
+
+            <p>
+                في العنصر الزائف <span dir="ltr" class="br-spec nw">::after</span> ، 
+                تُستخدم الخاصية <span dir="ltr" class="br-spec nw">transition</span> لإجراء تغييرات متحركة (animate changes) على مدار 0.3 ثانية مع تأثير تدرج في السرعة (easing effect)، 
+                مما يضفي طابعاً سلساً وتدريجياً على التحول بدلاً من حدوثه بشكل مفاجئ. 
+                ستتعرف على المزيد حول الخاصية <span dir="ltr" class="br-spec nw">transition</span> في دروس قادمة.
+            </p>
+            <p>
+                يمكنك أيضاً إلحاق فئة زائفة (pseudo-class) بالمحتوى الذي تدرجه داخل محتوى آخر باستخدام العناصر الزائفة (pseudo-elements) مثل <span dir="ltr" class="br-spec nw">::before</span> و <span dir="ltr" class="br-spec nw">::after</span>. 
+                على سبيل المثال، يمكنك إضافة حالة "التمرير بالفأرة" (hover state) لهذا المحتوى. 
+                إليك مثال على ذلك:
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;button <span class="attr">class=<span class="value">"cta-button"</span></span>&gt;<span dir="rtl" class="txt">اعرف المزيد</span>&lt;/button&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.cta-button</span> <span class="attr">{
+ background-color: <span class="txt">orange</span>;
+ border: <span class="txt">none</span>;
+ padding: <span class="txt">10px 30px</span>;
+ cursor: <span class="txt">pointer</span>;
+ position: <span class="txt">relative</span>;
+}</span>
+
+<span class="tag-b">.cta-button::after</span> <span class="attr">{
+ content: <span class="txt">"⬅️"</span>;
+ position: <span class="txt">absolute</span>;
+ left: <span class="txt">5px</span>;
+ bottom: <span class="txt">6px</span>;
+ font-size: <span class="txt">1.125rem</span>;
+ transition: <span class="txt">transform 0.3s ease</span>;
+}</span>
+
+<span class="tag-b">.cta-button:hover::after</span> <span class="attr">{
+ transform: <span class="txt">translateX(-2px)</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview3">
+                    <button class="cta-button">اعرف المزيد</button>
+				</div>
+            </div>
+            <br>
+            <p>
+                عند استخدام الخاصية <span dir="ltr" class="br-spec nw">transform: translateX(-2px)</span> في حالة التمرير (hover)، يندفع المحتوى بمقدار <span dir="ltr" class="br-spec nw">2px</span> نحو اليسار كلما مرر المستخدم مؤشر الفأرة فوق الزر. 
+                أما خاصية (transition) المطبقة على العنصر الزائف <span dir="ltr" class="br-spec nw">::after</span> فتضمن استغراق هذه العملية 0.3 ثانية <span dir="ltr" class="br-spec nw">0.3s</span>.
+            </p>
+            <p>
+                هذا ما تفعله خاصية <span dir="ltr" class="br-spec nw">transform</span> ؛ 
+                فهي تتيح لك تدوير عنصر ما، أو إمالته، أو تغيير حجمه، أو تحريكه في اتجاه معين. 
+                ستتعرف على المزيد حول هذا الموضوع في دروس قادمة.
+            </p>
+            <br>
+
+
+        </section>
+
+        <!-- The ::first-letter Pseudo-element -->
+        <section>
+            <h3>العنصر الزائف <span dir="ltr" class="special-code">::first-letter</span></h3>
+            <p>
+                في المثال التالي، سنلقي نظرة على العنصر الزائف <span dir="ltr" class="br-spec nw">::first-letter</span>. 
+                يستهدف هذا العنصر الزائف الحرف الأول (the first letter) من محتوى عنصرٍ ما، 
+                مما يتيح لك تنسيقه. 
+                إليك مثال يتضمن نصاً في فقرة؛ 
+                فإذا أردنا تنسيق الحرف الأول، 
+                يمكننا استخدام العنصر الزائف <span dir="ltr" class="br-spec nw">::first-letter</span> على النحو التالي:
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;p&gt;<span dir="rtl" class="txt">معًا نصنع مستقبل التقنية العربية</span>&lt;/p&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">p::first-letter</span> <span class="attr">{
+ font-size: <span class="txt">2rem</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview4">
+                    <p>معًا نصنع مستقبل التقنية العربية</p>
+				</div>
+            </div>
+            <br>
+            <br>
+
+        </section>
+
+        <!-- The ::marker Pseudo-element -->
+        <section>
+            <h3>العنصر الزائف <span dir="ltr" class="special-code">::marker</span></h3>
+            <p>
+                في المثال الأخير، سنتناول العنصر الزائف <span dir="ltr" class="br-spec nw">::marker</span> ، 
+                الذي يتيح لك تحديد العلامات أو النقاط أو الأرقام الخاصة بعناصر القائمة (list items) لتنسيقها. 
+                يوفر العنصر الزائف <span dir="ltr" class="br-spec nw">::marker</span> وسيلةً لتعزيز الهوية البصرية لموقعك الإلكتروني، 
+                وذلك من خلال تخصيص علامات القوائم لتتناغم مع نظام الألوان المعتمد في موقعك.
+            </p>
+            <p>
+                إليك مثال على قائمة غير مرتبة (unordered list) وقائمة مرتبة (ordered list). 
+                لتغيير لون وحجم العلامة المميزة لعناصر القائمة، 
+                يمكنك استخدام العنصر الزائف (pseudo-element) المسمى <span dir="ltr" class="br-spec nw">::marker</span> على النحو التالي:
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">عنصر قائمة غير مرتبة 1</span>&lt;/li&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">عنصر قائمة غير مرتبة 2</span>&lt;/li&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">عنصر قائمة غير مرتبة 3</span>&lt;/li&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">عنصر قائمة غير مرتبة 4</span>&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">عنصر قائمة مرتبة 1</span>&lt;/li&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">عنصر قائمة مرتبة 2</span>&lt;/li&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">عنصر قائمة مرتبة 3</span>&lt;/li&gt;
+ &lt;li&gt;<span dir="rtl" class="txt">عنصر قائمة مرتبة 4</span>&lt;/li&gt;
+&lt;/ol&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">li::marker</span> <span class="attr">{
+ color: <span class="txt">crimson</span>;
+ font-size: <span class="txt">1.5em</span>;
+ font-weight: <span class="txt">bold</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview5">
+                    <ul>
+                        <li>عنصر قائمة غير مرتبة 1</li>
+                        <li>عنصر قائمة غير مرتبة 2</li>
+                        <li>عنصر قائمة غير مرتبة 3</li>
+                        <li>عنصر قائمة غير مرتبة 4</li>
+                    </ul>
+
+                    <ol>
+                        <li>عنصر قائمة مرتبة 1</li>
+                        <li>عنصر قائمة مرتبة 2</li>
+                        <li>عنصر قائمة مرتبة 3</li>
+                        <li>عنصر قائمة مرتبة 4</li>
+                    </ol>
+				</div>
+            </div>
+            <br>
+            
+
+        </section>
+        <p>
+            في هذا الدرس، تناولنا عدداً قليلاً فقط من العناصر الزائفة (pseudo-elements). 
+            ولكن هناك الكثير غيرها، مثل <span dir="ltr" class="br-spec nw">::placeholder</span> و <span dir="ltr" class="br-spec nw">::spelling-error</span> و <span dir="ltr" class="br-spec nw">::selection</span> ، 
+            والتي أشجعك على استكشافها بنفسك.
+        </p>
+
+    </section>
+
+
+    <section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">أيّ مما يلي يصف بدقة العلاقة بين العناصر الزائفة (pseudo-elements) والعنصر الأصلي المرتبطة به؟</p>
+
+		<p> 1. يمكن للعناصر الزائفة أن توجد بشكل مستقل عن العنصر الأصلي. ❌</p>
+        <p> 2. يجب دائماً تعريف العناصر الزائفة قبل العنصر الأصلي. ❌</p>
+        <p><mark> 3. تعتمد العناصر الزائفة على العنصر الأصلي ولا يمكنها الوجود بشكل مستقل. ✅</mark></p>
+		<p> 4. تُستخدم العناصر الزائفة لإنشاء عناصر HTML جديدة. ❌</p>
+        <br>
+
+        <p class="userstory">أيّ مما يلي يوضّح الفرق الصحيح بين العناصر الزائفة (pseudo-elements) والفئات الزائفة (pseudo-classes)؟</p>
+		
+		<p> 1. تستخدم العناصر الزائفة نقطتَيْن (colon) مفردتَيْن، بينما تستخدم الفئات الزائفة نقطتَيْن مزدوجتَيْن. ❌</p>
+        <p><mark> 2. تستخدم العناصر الزائفة نقطتَيْن مزدوجتَيْن، بينما تستخدم الفئات الزائفة نقطتَيْن مفردتَيْن. ✅</mark></p>
+        <p> 3. تستخدم كلّ من العناصر الزائفة والفئات الزائفة نفس صيغة النقطتَيْن. ❌</p>
+		<p> 4. تتطلّب الفئات الزائفة نقطتَيْن مزدوجتَيْن، بينما لا تتطلّب العناصر الزائفة ذلك. ❌</p>
+        <br>
+
+        <p class="userstory">أي مما يلي يصف بشكل أدق وظيفة العناصر الزائفة (pseudo-elements) في لغة CSS ؟</p>
+		
+		<p> 1. تُضيف عناصر HTML جديدة إلى المستند. ❌</p>
+        <p><mark> 2. تُطبق تنسيقات على أجزاء محددة من محتوى العنصر دون إضافة وسوم HTML إضافية. ✅</mark></p>
+        <p> 3. تستبدل المحتوى الكامل للعنصر بمحتوى جديد. ❌</p>
+		<p> 4. تُعدل بنية مستند HTML. ❌</p>
+        
+	</section>
+ 
+
+  
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./What-Are-Examples-of-Functional-Pseudo-classes.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>

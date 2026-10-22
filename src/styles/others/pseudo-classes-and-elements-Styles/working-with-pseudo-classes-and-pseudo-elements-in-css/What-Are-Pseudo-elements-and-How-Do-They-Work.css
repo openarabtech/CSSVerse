@@ -1,0 +1,89 @@
+/* PREVIEW 1 */
+.preview1 {
+    min-height: 10vh;
+}
+
+.preview1 .cta-button {
+ background-color: lightseagreen;
+ color: white;
+ border: none;
+ padding: 10px 20px;
+ cursor: pointer;
+ position: relative;
+}
+
+.preview1 .cta-button::before {
+ content: "⭐";
+ position: absolute;
+ right: 3px;
+ top: 8px;
+ font-size: 0.75rem;
+}
+
+/* PREVIEW 2 */
+.preview2 {
+    min-height: 10vh;
+}
+
+.preview2 .cta-button {
+ background-color: orange;
+ border: none;
+ padding: 10px 30px;
+ cursor: pointer;
+ position: relative;
+}
+
+.preview2 .cta-button::after {
+ content: "⬅️";
+ position: absolute;
+ left: 5px;
+ bottom: 6px;
+ font-size: 1.125rem;
+ transition: transform 0.3s ease;
+}
+
+/* PREVIEW 3 */
+.preview3 {
+    min-height: 10vh;
+}
+
+.preview3 .cta-button {
+ background-color: orange;
+ border: none;
+ padding: 10px 30px;
+ cursor: pointer;
+ position: relative;
+}
+
+.preview3 .cta-button::after {
+ content: "⬅️";
+ position: absolute;
+ left: 5px;
+ bottom: 6px;
+ font-size: 1.125rem;
+ transition: transform 0.3s ease;
+}
+
+.preview3 .cta-button:hover::after {
+ transform: translateX(-2px);
+}
+
+/* PREVIEW 4 */
+.preview4 {
+    min-height: 10vh;
+}
+
+.preview4 p::first-letter {
+ font-size: 2rem;
+}
+
+/* PREVIEW 5 */
+.preview5 {
+    min-height: 30vh;
+}
+
+.preview5 li::marker {
+ color: crimson;
+ font-size: 1.5em;
+ font-weight: bold;
+}
