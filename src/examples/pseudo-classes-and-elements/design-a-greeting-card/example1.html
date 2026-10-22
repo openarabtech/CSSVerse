@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" تصميم بطاقة تهنئة Greeting Card "/>
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title> تصميم بطاقة تهنئة Greeting Card</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<style>
+	body {
+ font-family: Arial, sans-serif;
+ padding: 40px;
+ text-align: center;
+ background-color: brown;
+}
+
+.card {
+ background-color: white;
+ max-width: 400px;
+ padding: 40px;
+ margin: 0 auto 0;
+ border-radius: 10px;
+ box-shadow: 0 4px 8px gray;
+ transition: transform 0.3s, background-color 0.3s ease;
+}
+
+.card:hover {
+ background-color: khaki;
+ transform: scale(1.1);
+}
+
+h1::before {
+ content: " 🥳";
+}
+
+h1::after {
+ content: "🥳 ";
+}
+
+.message {
+ font-size: 1.2em;
+ margin-bottom: 20px;
+}
+
+.card-links {
+ margin-top: 20px;
+ display: flex;
+ justify-content: space-around;
+}
+
+.card-links a {
+ text-decoration: none;
+ font-size: 1em;
+ padding: 10px 20px;
+ border-radius: 5px;
+ color: white;
+ background-color: midnightblue;
+ transition: background-color 0.3s ease;
+}
+
+.card-links a:hover {
+ background-color: orangered;
+}
+
+.card-links a:active {
+ background-color: midnightblue;
+}
+
+.card-links a:focus {
+ outline: 2px solid yellow;
+}
+
+.card-links a:visited {
+ color: crimson;
+}
+
+section {
+ margin: 20px auto;
+ max-width: 600px;
+ background-color: whitesmoke;
+ padding: 20px;
+ border-radius: 10px;
+ display: none;
+}
+
+section:hover {
+ transform: skewX(-10deg);
+}
+
+section:target {
+ display: block;
+}
+/* 1 */
+</style>
+<body>
+
+
+<div id="greeting-card" class="card">
+   <h1>عيد ميلاد سعيد!</h1>
+   <p class="message">أتمنى لك كل السعادة والفرح في يومك المميز!</p>
+   <div class="card-links">
+    <a class="send-link" href="#send">إرسال بطاقة</a>
+    <a class="share-link" href="#share">شارك على وسائل التواصل الاجتماعي</a>
+   </div>
+  </div>
+  <section id="send">
+   <h2>جاري إرسال بطاقتك...</h2>
+   <p>تم إرسال البطاقة بنجاح إلى المتلقي!</p>
+  </section>
+  <section id="share">
+   <h2>جاري مشاركة بطاقتك...</h2>
+   <p>تمت مشاركة بطاقتك على وسائل التواصل الاجتماعي!</p>
+  </section>
+
+
+
+
+</body>
+</html>

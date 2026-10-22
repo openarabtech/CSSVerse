@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" تصميم بطاقة تهنئة Greeting Card "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/pseudo-classes-and-elements-Styles/design-a-greeting-card/Design-a-Greeting-Card.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الفئات والعناصر الزائفة</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+    <h1>الفئات والعناصر الزائفة</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+    <section class="sub-title">
+        <h2>تصميم بطاقة تهنئة Greeting Card</h2>
+        <span class="hint">ورشة عمل</span>
+		<p>
+            في هذه الورشة، ستتدرب على استخدام فئات زائفة (pseudo-classes) وعناصر زائفة (pseudo-elements) متنوعة من خلال تصميم بطاقة تهنئة. 
+            تم توفير الهيكل الأساسي (boilerplate) للغة HTML لك.
+        </p>
+    </section>
+
+    
+    <section>
+        <!-- HTML boilerplate -->
+        <section>
+        <br>
+        <h3>هيكل HTML الأساسي HTML boilerplate</h3>
+        
+        <br>
+        <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=<span class="value">"viewport"</span> content=<span class="value">"width=device-width, initial-scale=1.0"</span></span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span>بطاقة تهنئة<span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+ <span class="value">&lt;!-- هنا تضع اكواد التطبيق --&gt;</span>
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+            </div>
+        </section>
+
+    <!-- STEPS -->
+    <section>
+        <br>
+        <h3>الخطوات</h3>
+        <br>
+
+        <!-- STEP 1 -->
+        <section>
+            <h4>الخطوة 1</h4>
+            <p>ابدأ ورشة العمل بربط ملف <span dir="ltr" class="br-spec nw">styles.css</span>.</p>
+        </section>
+
+        <!-- STEP 2 -->
+        <section>
+            <h4>الخطوة 2</h4>
+            <p>
+                أنشئ عنصراً من نوع <span dir="ltr" class="br-spec nw">div</span> يحمل المعرّف <span dir="ltr" class="br-spec nw">id</span> القيمة <span dir="ltr" class="br-spec nw">greeting-card</span> والفئة <span dir="ltr" class="br-spec nw">class</span> القيمة <span dir="ltr" class="br-spec nw">card</span>.
+            </p>
+            <p>
+                داخل عنصر <span dir="ltr" class="br-spec nw">div</span> 
+                أضف عنصراً من نوع <span dir="ltr" class="br-spec nw">h1</span> يحتوي على النص <span dir="rtl" class="br-spec nw">عيد ميلاد سعيد!</span>. 
+                ثم أضف عنصراً من نوع فقرة <span dir="ltr" class="br-spec nw">p</span> يحمل فئة <span dir="ltr" class="br-spec nw">class</span> باسم <span dir="ltr" class="br-spec nw">message</span>، 
+                ويتضمن النص <span dir="rtl" class="br-spec nw">أتمنى لك كل السعادة والفرح في يومك المميز!</span>.
+            </p>
+        </section>
+
+        <!-- STEP 3 -->
+        <section>
+            <h4>الخطوة 3</h4>
+            <p>حان الآن وقت تنسيق بطاقة التهنئة الخاصة بك.</p>
+            <p>أضف مُحدِّدًا (selector) لعنصر الجسم <span dir="ltr" class="br-spec nw">body</span> ، ثم:</p>
+            <ul>
+                <li>
+                    <p>غيّر نوع الخط <span dir="ltr" class="br-spec nw">font-family</span> ليصبح <span dir="ltr" class="br-spec nw">Arial</span> متبوعاً بالخيار العام <span dir="ltr" class="br-spec nw">sans-serif</span> ،</p>
+                </li>
+                <li>
+                    <p>أضف هامشاً داخلياً (padding) مقداره <span dir="ltr" class="br-spec nw">40px</span> من جميع الجهات،</p>
+                </li>
+                <li>
+                    <p>واضبط خاصية محاذاة النص <span dir="ltr" class="br-spec nw">text-align</span> لتكون في المنتصف <span dir="ltr" class="br-spec nw">center</span>.</p>
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- STEP 4 -->
+        <section>
+            <h4>الخطوة 4</h4>
+            <p>
+                حان الآن وقت إضافة بعض الألوان. امنح العنصر <span dir="ltr" class="br-spec nw">body</span> لون خلفية <span dir="ltr" class="br-spec nw">background-color</span> بني <span dir="ltr" class="br-spec nw">brown</span> ، 
+                وامنح العنصر <span dir="ltr" class="br-spec nw">.card</span> لون خلفية <span dir="ltr" class="br-spec nw">background-color</span> أبيض <span dir="ltr" class="br-spec nw">white</span>.
+            </p>
+        </section>
+
+        <!-- STEP 5 -->
+        <section>
+            <h4>الخطوة 5</h4>
+            <p>
+              امنح العنصر <span dir="ltr" class="br-spec nw">.card</span> عرضاً أقصى <span dir="ltr" class="br-spec nw">max-width</span> قدره <span dir="ltr" class="br-spec nw">400px</span>  ، 
+            وهوامش داخلية <span dir="ltr" class="br-spec nw">padding</span> مقدارها <span dir="ltr" class="br-spec nw">40px</span>  من جميع الجهات، 
+            وهوامش خارجية <span dir="ltr" class="br-spec nw">margin</span> قيمتها 0 من الأعلى والأسفل و <span dir="ltr" class="br-spec nw">auto</span> من اليمين واليسار (استخدم خاصية الاختصار).  
+            </p>
+        </section>
+
+        <!-- STEP 6 -->
+        <section>
+            <h4>الخطوة 6</h4>
+            <p>
+                يحتاج العنصر <span dir="ltr" class="br-spec nw">.card</span> إلى مزيد من التنسيق: 
+                أضف خاصية <span dir="ltr" class="br-spec nw">border-radius</span> بقيمة <span dir="ltr" class="br-spec nw">10px</span> ، 
+                وخاصية <span dir="ltr" class="br-spec nw">box-shadow</span> بقيمة <span dir="ltr" class="br-spec nw">0 4px 8px gray</span> .
+            </p>
+        </section>
+
+        <!-- STEP 7 -->
+        <section>
+            <h4>الخطوة 7</h4>
+            <p>
+                أضف الآن عنصر <span dir="ltr" class="br-spec nw">div</span> جديداً أسفل العنصر الذي يحمل الفئة <span dir="ltr" class="br-spec nw">.message</span> . 
+                يجب أن يحتوي هذا العنصر الجديد على سمة <span dir="ltr" class="br-spec nw">class</span> بقيمة <span dir="ltr" class="br-spec nw">card-links</span> .
+            </p>
+        </section>
+
+        <!-- STEP 8 -->
+        <section>
+            <h4>الخطوة 8</h4>
+            <p>
+                أضف عنصرين من نوع <span dir="ltr" class="br-spec nw">a</span> داخل العنصر الذي يحمل الفئة <span dir="ltr" class="br-spec nw">.card-links</span> .
+            </p>
+            <p>
+                يجب أن يحتوي العنصر الأول على النص <span dir="rtl" class="br-spec nw">إرسال بطاقة</span> ، 
+                وفئة <span dir="ltr" class="br-spec nw">class</span> باسم <span dir="ltr" class="br-spec nw">send-link</span> ، 
+                وسمة <span dir="ltr" class="br-spec nw">href</span> بقيمة <span dir="ltr" class="br-spec nw">#send</span>.
+            </p>
+            <p>
+                أما العنصر الثاني فيجب أن يحتوي على النص <span dir="rtl" class="br-spec nw">شارك على وسائل التواصل الاجتماعي</span> ، 
+                وفئة <span dir="ltr" class="br-spec nw">class</span> باسم <span dir="ltr" class="br-spec nw">share-link</span> ، 
+                وسمة <span dir="ltr" class="br-spec nw">href</span> بقيمة <span dir="ltr" class="br-spec nw">#share</span> .
+            </p>
+        </section>
+
+        <!-- STEP 9 -->
+        <section>
+            <h4>الخطوة 9</h4>
+            <p>
+                أضف عنصرين من نوع <span dir="ltr" class="br-spec nw">section</span> ، أحدهما تلو الآخر. 
+                يجب أن يحمل العنصر الأول مُعرِّفاً <span dir="ltr" class="br-spec nw">id</span> باسم <span dir="ltr" class="br-spec nw">send</span> ،
+                بينما يجب أن يحمل العنصر الثاني مُعرِّفاً <span dir="ltr" class="br-spec nw">id</span> باسم <span dir="ltr" class="br-spec nw">share</span> .
+            </p>
+        </section>
+
+        <!-- STEP 10 -->
+        <section>
+            <h4>الخطوة 10</h4>
+            <p>
+                أضف عنصراً من نوع <span dir="ltr" class="br-spec nw">h2</span> إلى العنصر الذي يحمل المعرّف <span dir="ltr" class="br-spec nw">#send</span> ، 
+                بحيث يحتوي على النص <span dir="rtl" class="br-spec nw">جاري إرسال بطاقتك...</span> ، 
+                ثم أضف عنصراً من نوع <span dir="ltr" class="br-spec nw">p</span> يحتوي على النص  <span dir="rtl" class="br-spec nw">تم إرسال البطاقة بنجاح إلى المتلقي!</span> .
+            </p>
+        </section>
+
+        <!-- STEP 11 -->
+        <section>
+            <h4>الخطوة 11</h4>
+            <p>حان وقت ملء القسم <span dir="ltr" class="br-spec nw">section</span> الثاني!</p>
+            <p>
+                أضف عنصراً من نوع <span dir="ltr" class="br-spec nw">h2</span> إلى العنصر الذي يحمل المعرّف <span dir="ltr" class="br-spec nw">#share</span> ، 
+                بحيث يحتوي على النص <span dir="rtl" class="br-spec nw">جاري مشاركة بطاقتك...</span> ، 
+                ثم أضف عنصراً من نوع <span dir="ltr" class="br-spec nw">p</span> يحتوي على النص <span dir="rtl" class="br-spec nw">تمت مشاركة بطاقتك على وسائل التواصل الاجتماعي!</span> .
+            </p>
+           
+        </section>
+
+        <!-- STEP 12 -->
+        <section>
+            <h4>الخطوة 12</h4>
+            <p>
+                أضف محددًا (selector) جديدا يغير لون خلفية <span dir="ltr" class="br-spec nw">background-color</span> العنصر <span dir="ltr" class="br-spec nw">.card</span> إلى اللون الكاكي <span dir="ltr" class="br-spec nw">khaki</span> عند تمرير مؤشر الفأرة فوقه.
+            </p>
+           
+        </section>
+
+        <!-- STEP 13 -->
+        <section>
+            <h4>الخطوة 13</h4>
+            <p>
+                تُتيح خاصية <span dir="ltr" class="br-spec nw">transform</span> تغيير مظهر العنصر؛ 
+                فعلى سبيل المثال، 
+                يؤدي تعيين القيمة <span dir="ltr" class="br-spec nw">scale(0.9)</span> لها إلى تصغير حجم العنصر بنسبة 10%.
+            </p>
+            <p class="hinty">نموذج برمجي</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">p</span> <span class="attr">{
+ transform: <span class="tag-b">scale</span>(<span class="txt">0.9</span>);
+}</span>
+            </code></pre></div>
+            <p>
+                أضف خاصية <span dir="ltr" class="br-spec nw">transform</span> إلى المُحدِّد <span dir="ltr" class="br-spec nw">.card:hover</span> واضبط قيمتها على <span dir="ltr" class="br-spec nw">scale(1.1)</span> .
+            </p>
+           
+        </section>
+
+        <!-- STEP 14 -->
+        <section>
+            <h4>الخطوة 14</h4>
+            <p>
+                عند تمرير مؤشر الفأرة فوق عناصر <span dir="ltr" class="br-spec nw">a</span> ، 
+                يتغير لون الخلفية تدريجيًا إلى لون آخر. 
+                يمكنك التحكم في كيفية حدوث هذا الانتقال باستخدام الخاصية <span dir="ltr" class="br-spec nw">transition</span> :
+            </p>
+            <p class="hinty">نموذج برمجي</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">a</span> <span class="attr">{
+ transition: <span class="txt">color 1s linear</span>;
+}</span>
+            </code></pre></div>
+            <p>
+                القيم التي تقبلها خاصية الانتقال <span dir="ltr" class="br-spec nw">transition</span> هي، بالترتيب: 
+الخاصية المراد تطبيق الانتقال عليها، ومدة الانتقال، ثم توقيت الانتقال.
+            </p>
+            <p>
+                إذا كانت هناك خصائص متعددة تتضمن انتقالاً (transition)، 
+                فيمكنك كتابة قيم كل منها مفصولةً بفاصلة:
+            </p>
+            <p class="hinty">نموذج برمجي</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">a</span> <span class="attr">{
+ transition: <span class="txt">property1 0.1s</span>, <span class="txt">property2 0.1s linear</span>;
+}</span>
+            </code></pre></div>
+            <p>
+                إذا تم حذف قيمة ما، كتوقيت الخاصية الأولى، فسيتم تطبيق قيمة افتراضية.
+            </p>
+            <p>
+                أضف الخاصية <span dir="ltr" class="br-spec nw">transition: transform 0.3s, background-color 0.3s ease</span> إلى المُحدِّد <span dir="ltr" class="br-spec nw">.card</span> .
+            </p>
+            <p>جرِّبها، فقد اكتمل تأثير الانتقال عند تمرير المؤشر.</p>
+        </section>
+
+        <!-- STEP 15 -->
+        <section>
+            <h4>الخطوة 15</h4>
+           <p>
+            يمكنك إضافة رمز تعبيري (emoji) قبل العنوان باستخدام العنصر الزائف <span dir="ltr" class="br-spec nw">::before</span> الخاص بالعنصر <span dir="ltr" class="br-spec nw">h1</span>.
+           </p>
+           <p>
+            أنشئ مُحدِّد <span dir="ltr" class="br-spec nw">h1::before</span> ، 
+وأضف إليه خاصية <span dir="ltr" class="br-spec nw">content</span> واضبط قيمتها لتكون <span dir="rtl" class="br-spec nw">"🥳 "</span> (لاحظ وجود مسافة بعد الرموز التعبيرية).
+           </p>
+        </section>
+
+        <!-- STEP 16 -->
+        <section>
+            <h4>الخطوة 16</h4>
+            <p>يمكنك الآن القيام بشيء مشابه لإضافة الرموز التعبيرية بعد العنوان أيضاً.</p>
+            <p>
+                أنشئ مُحدِّدًا يستهدف العنصر الزائف <span dir="ltr" class="br-spec nw">::after</span> الخاص بالعنصر <span dir="ltr" class="br-spec nw">h1</span> . أضف إليه الخاصية <span dir="ltr" class="br-spec nw">content</span> واضبط قيمتها لتكون <span dir="rtl" class="br-spec nw">" 🥳"</span> (لاحظ وجود مسافة قبل الرموز التعبيرية).
+            </p>
+        </section>
+
+        <!-- STEP 17 -->
+        <section>
+            <h4>الخطوة 17</h4>
+           <p>
+            يحتاج العنصر <span dir="ltr" class="br-spec nw">.message</span> إلى بعض التنسيق. 
+            أضف إليه ما يلي:
+           </p>
+           <ul>
+            <li>
+                <p>حجم خط <span dir="ltr" class="br-spec nw">font-size</span> قدره <span dir="ltr" class="br-spec nw">1.2em</span> ،</p>
+            </li>
+            <li>
+                <p>وهامشاً سفلياً <span dir="ltr" class="br-spec nw">margin-bottom</span> قدره <span dir="ltr" class="br-spec nw">20px</span> .</p>
+            </li>
+           </ul>
+        </section>
+
+        <!-- STEP 18 -->
+        <section>
+            <h4>الخطوة 18</h4>
+            <p>
+                أضف مُحدِّدًا باسم <span dir="ltr" class="br-spec nw">.card-links</span> ، 
+                واضبط خاصية <span dir="ltr" class="br-spec nw">margin-top</span> على <span dir="ltr" class="br-spec nw">20px</span> .
+            </p>
+            <p>
+                يمكنك إضافة <span dir="ltr" class="br-spec nw">display: flex</span> لجعل عنصر ما يستخدم نموذج (flexbox). 
+                ستتعرف على المزيد حول (flexbox) لاحقاً في هذه الدورة، 
+                ويمكنك اعتبار هذا بمثابة لمحة موجزة عنه.
+            </p>
+            <p>
+                لضبط المسافة بين الرابطين بحيث تتساوى المساحات المحيطة بهما، 
+                أضف الخاصية <span dir="ltr" class="br-spec nw">display</span> بقيمة <span dir="ltr" class="br-spec nw">flex</span> ، 
+                والخاصية <span dir="ltr" class="br-spec nw">justify-content</span> بقيمة <span dir="ltr" class="br-spec nw">space-around</span> .
+            </p>
+            
+        </section>
+
+        <!-- STEP 19 -->
+        <section>
+            <h4>الخطوة 19</h4>
+            <p>
+                استهدف عناصر <span dir="ltr" class="br-spec nw">a</span> الموجودة داخل <span dir="ltr" class="br-spec nw">.card-links</span> و امنحها ما يلي:
+            </p>
+            <ul>
+                <li>
+                    <p>خاصية <span dir="ltr" class="br-spec nw">text-decoration</span> بقيمة <span dir="ltr" class="br-spec nw">none</span>.</p>
+                </li>
+                <li>
+                    <p>خاصية <span dir="ltr" class="br-spec nw">font-size</span> بقيمة <span dir="ltr" class="br-spec nw">1em</span>.</p>
+                </li>
+                <li>
+                    <p>خاصية <span dir="ltr" class="br-spec nw">padding</span> بقيمة <span dir="ltr" class="br-spec nw">10px 20px</span>.</p>
+                </li>
+                <li>
+                    <p>خاصية <span dir="ltr" class="br-spec nw">border-radius</span> بقيمة <span dir="ltr" class="br-spec nw">5px</span>.</p>
+                </li>
+                <li>
+                    <p>خاصية <span dir="ltr" class="br-spec nw">color</span> بقيمة <span dir="ltr" class="br-spec nw">white</span>.</p>
+                </li>
+                <li>
+                    <p>خاصية <span dir="ltr" class="br-spec nw">background-color</span> بقيمة <span dir="ltr" class="br-spec nw">midnightblue</span>.</p>
+                </li>
+            </ul>
+            
+        </section>
+
+        <!-- STEP 20 -->
+        <section>
+            <h4>الخطوة 20</h4>
+            <p>
+                أنشئ مُحدِّد فئة زائفة (pseudo-class selector) يستهدف عناصر <span dir="ltr" class="br-spec nw">.card-links a</span>  عند تمرير مؤشر الفأرة فوقها .
+            </p>
+            <p>
+                يجب أن يتغير لون الخلفية <span dir="ltr" class="br-spec nw">background-color</span> إلى اللون البرتقالي المحمر <span dir="ltr" class="br-spec nw">orangered</span>.
+            </p>
+            
+        </section>
+
+        <!-- STEP 21 -->
+        <section>
+            <h4>الخطوة 21</h4>
+            <p>
+                أضف خاصية <span dir="ltr" class="br-spec nw">transition</span> إلى المُحدد <span dir="ltr" class="br-spec nw">.card-links a</span> ، 
+                وامنحها القيمة <span dir="ltr" class="br-spec nw">background-color 0.3s ease</span> .
+            </p>
+            
+        </section>
+
+        <!-- STEP 22 -->
+        <section>
+            <h4>الخطوة 22</h4>
+            <p>
+                أضف مُحدِّداً جديداً يستهدف عناصر <span dir="ltr" class="br-spec nw">.card-links a</span> عندما تكون في حالة النشاط (active). 
+واضبط خاصية لون الخلفية <span dir="ltr" class="br-spec nw">background-color</span> على اللون <span dir="ltr" class="br-spec nw">midnightblue</span>.
+            </p>
+        </section>
+
+        <!-- STEP 23 -->
+        <section>
+            <h4>الخطوة 23</h4>
+            <p>
+                أضف مُحدِّدًا جديدًا يستهدف عناصر <span dir="ltr" class="br-spec nw">.card-links a</span> عند التركيز عليها (focus) ، 
+                واضبط خاصية <span dir="ltr" class="br-spec nw">outline</span> لتكون <span dir="ltr" class="br-spec nw">2px solid yellow</span>.
+            </p>
+            
+        </section>
+
+        <!-- STEP 24 -->
+        <section>
+            <h4>الخطوة 24</h4>
+            <p>
+                أنشئ مُحدِّداً (selector) جديداً يستهدف عناصر <span dir="ltr" class="br-spec nw">.card-links a</span> التي تمت زيارتها بالفعل، 
+                واضبط خاصية اللون <span dir="ltr" class="br-spec nw">color</span> على اللون القرمزي <span dir="ltr" class="br-spec nw">crimson</span>.
+            </p>
+            
+        </section>
+
+        <!-- STEP 25 -->
+        <section>
+            <h4>الخطوة 25</h4>
+            <p>
+                أنشئ مُحدِّدًا (selector) لعناصر الـ section ، واضبط لها الخصائص التالية:
+            </p>
+            <ul>
+                <li>
+                    <p>خاصية <span dir="ltr" class="br-spec nw">margin</span> بقيمة <span dir="ltr" class="br-spec nw">20px auto</span> ،</p>
+                </li>
+                <li>
+                    <p>خاصية <span dir="ltr" class="br-spec nw">max-width</span> بقيمة <span dir="ltr" class="br-spec nw">600px</span> ،</p>
+                </li>
+                <li>
+                    <p>خاصية <span dir="ltr" class="br-spec nw">background-color</span> بقيمة <span dir="ltr" class="br-spec nw">whitesmoke</span> ،</p>
+                </li>
+                <li>
+                    <p>خاصية <span dir="ltr" class="br-spec nw">padding</span> بقيمة <span dir="ltr" class="br-spec nw">20px</span> ،</p>
+                </li>
+                <li>
+                    <p>خاصية <span dir="ltr" class="br-spec nw">border-radius</span> بقيمة <span dir="ltr" class="br-spec nw">10px</span> ،</p>
+                </li>
+            </ul>
+            
+        </section>
+
+        <!-- STEP 26 -->
+        <section>
+            <h4>الخطوة 26</h4>
+            <p>
+                هناك قيمة أخرى يمكن استخدامها مع الخاصية <span dir="ltr" class="br-spec nw">transform</span> وهي <span dir="ltr" class="br-spec nw">skewX</span> ؛ 
+                حيث تقوم هذه الدالة بإمالة (skews) العنصر أفقيًا.
+            </p>
+            <p class="hinty">نموذج برمجي</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">div</span> <span class="attr">{
+ transform: <span class="tag-b">skewX</span>(<span class="txt">7deg</span>);
+}</span>
+            </code></pre></div>
+            <p>
+                أضف مُحدِّداً يستهدف عناصر القسم <span dir="ltr" class="br-spec nw">section</span> عند تمرير المؤشر فوقها، 
+                واضبط خاصية التحويل <span dir="ltr" class="br-spec nw">transform</span> على القيمة <span dir="ltr" class="br-spec nw">skewX(-10deg)</span>.
+            </p>
+            
+        </section>
+
+        <!-- STEP 27 -->
+        <section>
+            <h4>الخطوة 27</h4>
+            <p>
+                كخطوة أخيرة لإتمام هذا المشروع، أضف خاصية <span dir="ltr" class="br-spec nw">display</span> مضبوطة على القيمة <span dir="ltr" class="br-spec nw">none</span> إلى مُحدِّد القسم <span dir="ltr" class="br-spec nw">section</span> .
+            </p>
+            <p>
+                بعد ذلك، أنشئ مُحدِّدًا من النوع <span dir="ltr" class="br-spec nw">section:target</span> ، 
+                وأضف إليه خاصية <span dir="ltr" class="br-spec nw">display</span> مضبوطة على القيمة <span dir="ltr" class="br-spec nw">block</span>؛ 
+                بحيث لا تظهر عناصر <span dir="ltr" class="br-spec nw">section</span> إلا عند النقر على الروابط.
+            </p>
+            
+        </section>
+
+        
+    </section>
+
+    <section>
+        <br>
+		<h3>حل التطبيق :</h3>
+        <br>
+        <div class="codeFiles">
+        <p class="file-name">index.html</p>
+        <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span>بطاقة تهنئة<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+
+  <span class="tag">&lt;div <span class="attr">id=<span class="value">"greeting-card"</span> class=<span class="value">"card"</span></span>&gt;
+   &lt;h1&gt;<span dir="rtl" class="txt">عيد ميلاد سعيد!</span>&lt;/h1&gt;
+   &lt;p <span class="attr">class=<span class="value">"message"</span></span>&gt;<span dir="rtl" class="txt">أتمنى لك كل السعادة والفرح في يومك المميز!</span>&lt;/p&gt;
+   &lt;div <span class="attr">class=<span class="value">"card-links"</span></span>&gt;
+    &lt;a <span class="attr">class=<span class="value">"send-link"</span> href=<span class="value">"#send"</span></span>&gt;<span dir="rtl" class="txt">إرسال بطاقة</span>&lt;/a&gt;
+    &lt;a <span class="attr">class=<span class="value">"share-link"</span> href=<span class="value">"#share"</span></span>&gt;<span dir="rtl" class="txt">شارك على وسائل التواصل الاجتماعي</span>&lt;/a&gt;
+   &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;section <span class="attr">id=<span class="value">"send"</span></span>&gt;
+   &lt;h2&gt;<span dir="rtl" class="txt">جاري إرسال بطاقتك...</span>&lt;/h2&gt;
+   &lt;p&gt;<span dir="rtl" class="txt">تم إرسال البطاقة بنجاح إلى المتلقي!</span>&lt;/p&gt;
+  &lt;/section&gt;
+  &lt;section <span class="attr">id=<span class="value">"share"</span></span>&gt;
+   &lt;h2&gt;<span dir="rtl" class="txt">جاري مشاركة بطاقتك...</span>&lt;/h2&gt;
+   &lt;p&gt;<span dir="rtl" class="txt">تمت مشاركة بطاقتك على وسائل التواصل الاجتماعي!</span>&lt;/p&gt;
+  &lt;/section&gt;
+  </span>
+
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+        </div>
+        <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">body</span> <span class="attr">{
+ font-family: <span class="txt">Arial, sans-serif</span>;
+ padding: <span class="txt">40px</span>;
+ text-align: <span class="txt">center</span>;
+ background-color: <span class="txt">brown</span>;
+}</span>
+
+<span class="tag-b">.card</span> <span class="attr">{
+ background-color: <span class="txt">white</span>;
+ max-width: <span class="txt">400px</span>;
+ padding: <span class="txt">40px</span>;
+ margin: <span class="txt">0 auto 0</span>;
+ border-radius: <span class="txt">10px</span>;
+ box-shadow: <span class="txt">0 4px 8px gray</span>;
+ transition: <span class="txt">transform 0.3s, background-color 0.3s ease</span>;
+}</span>
+
+<span class="tag-b">.card:hover</span> <span class="attr">{
+ background-color: <span class="txt">khaki</span>;
+ transform: <span class="txt">scale(1.1)</span>;
+}</span>
+
+<span class="tag-b">h1::before</span> <span class="attr">{
+ content: <span class="txt">" 🥳"</span>;
+}</span>
+
+<span class="tag-b">h1::after</span> <span class="attr">{
+ content: <span class="txt">"🥳 "</span>;
+}</span>
+
+<span class="tag-b">.message</span> <span class="attr">{
+ font-size: <span class="txt">1.2em</span>;
+ margin-bottom: <span class="txt">20px</span>;
+}</span>
+
+<span class="tag-b">.card-links</span> <span class="attr">{
+ margin-top: <span class="txt">20px</span>;
+ display: <span class="txt">flex</span>;
+ justify-content: <span class="txt">space-around</span>;
+}</span>
+
+<span class="tag-b">.card-links a</span> <span class="attr">{
+ text-decoration: <span class="txt">none</span>;
+ font-size: <span class="txt">1em</span>;
+ padding: <span class="txt">10px 20px</span>;
+ border-radius: <span class="txt">5px</span>;
+ color: <span class="txt">white</span>;
+ background-color: <span class="txt">midnightblue</span>;
+ transition: <span class="txt">background-color 0.3s ease</span>;
+}</span>
+
+<span class="tag-b">.card-links a:hover</span> <span class="attr">{
+ background-color: <span class="txt">orangered</span>;
+}</span>
+
+<span class="tag-b">.card-links a:active</span> <span class="attr">{
+ background-color: <span class="txt">midnightblue</span>;
+}</span>
+
+<span class="tag-b">.card-links a:focus</span> <span class="attr">{
+ outline: <span class="txt">2px solid yellow</span>;
+}</span>
+
+<span class="tag-b">.card-links a:visited</span> <span class="attr">{
+ color: <span class="txt">crimson</span>;
+}</span>
+
+<span class="tag-b">section</span> <span class="attr">{
+ margin: <span class="txt">20px auto</span>;
+ max-width: <span class="txt">600px</span>;
+ background-color: <span class="txt">whitesmoke</span>;
+ padding: <span class="txt">20px</span>;
+ border-radius: <span class="txt">10px</span>;
+ display: <span class="txt">none</span>;
+}</span>
+
+<span class="tag-b">section:hover</span> <span class="attr">{
+ transform: <span class="txt">skewX(-10deg)</span>;
+}</span>
+
+<span class="tag-b">section:target</span> <span class="attr">{
+ display: <span class="txt">block</span>;
+}</span>
+            </code></pre></div>
+            </div>
+    </section>
+
+
+    <section>
+        <br>
+		<h3>معاينة التطبيق :</h3>
+        <br>
+
+        <div class="preview" role="presentation">
+                <div class="preview1">
+				 <iframe
+					src="../../examples/pseudo-classes-and-elements/design-a-greeting-card/example1.html"
+					title=" تصميم بطاقة تهنئة Greeting Card"
+					loading="lazy"
+				 ></iframe>
+				</div>
+        </div>
+    </section>
+
+    </section>
+ 
+
+  
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="../working-with-pseudo-classes-and-pseudo-elements-in-css/What-Are-Pseudo-elements-and-How-Do-They-Work.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
