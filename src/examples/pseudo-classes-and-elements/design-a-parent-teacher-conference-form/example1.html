@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="  "/>
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title></title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<style>
+body {
+ background-color: midnightblue;
+ color: whitesmoke;
+}
+.container {
+ background-color: #ffffff1a;
+ width: 80%;
+ max-width: 600px;
+ border-radius: 10px;
+ margin: 20px auto;
+ padding: 10px 20px;
+ box-shadow: 0 5px 15px black;
+}
+.center {
+  text-align: center;
+}
+.description {
+  font-size: 1.2rem;
+}
+fieldset {
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 20px;
+}
+fieldset legend {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+label {
+  font-size: 1.2rem;
+}
+label:not(.contact-method) {
+  display: block;
+  margin: 10px 0;
+}
+input:not(.contact-method-radio-btn), textarea {
+  background-color: #ffffff1a;
+  width: 95%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+}
+input, input::placeholder, textarea {
+  color: whitesmoke;
+}
+.contact-method-radio-btn{
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid gray;
+  vertical-align: bottom;
+}
+.contact-method-radio-btn::before {
+  display: block;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translate(-3px, 3px) scale(0);
+  transition: all 0.3s ease-in;
+}
+.contact-method-radio-btn:checked::before {
+  transform: translate(-3px, 3px) scale(1);
+  background-color: lightgreen; 
+}
+.submit-btn{
+  cursor: pointer;
+  background-color: royalblue;
+  color: whitesmoke;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  display: block;
+  margin: auto;
+}
+.submit-btn:hover {
+  background-color: midnightblue;
+}
+</style>
+<body>
+
+
+<main class="container">
+   <h1 class="center title">نموذج لاجتماع أولياء الأمور والمعلمين</h1>
+   <p class="center description">يرجى تعبئة النموذج أدناه للمساعدة في تحديد موعد لاجتماع أولياء الأمور والمعلمين.</p>
+   <form>
+    <fieldset>
+     <legend>معلومات الطالب</legend>
+     <label for="student-name">الاسم الكامل: </label>
+     <input type="text" name="student-name" id="student-name" placeholder="مثال: أحمد محمد" required />
+
+     <label for="grade">درجة الطالب: </label>
+     <input type="number" name="grade" id="grade" placeholder="مثال: 4" required />
+    </fieldset>
+    <fieldset>
+     <legend>معلومات الوالد/ولي الأمر</legend>
+     <label for="parent-name">اسم الوالد/ولي الأمر: </label>
+     <input type="text" name="parent-name" id="parent-name" placeholder="مثال: محمد علي" required />
+    </fieldset>
+    <fieldset>
+     <legend>طريقة التواصل المفضلة</legend>
+     <label class="contact-method" for="email">البريد الإلكتروني: </label>
+     <input type="radio" id="email" value="email" name="contact-method" class="contact-method-radio-btn" checked />
+     
+     <label class="contact-method" for="phone">الهاتف: </label>
+     <input type="radio" id="phone" value="phone" name="contact-method" class="contact-method-radio-btn" />
+    </fieldset>
+    <fieldset>
+     <legend>ملاحظات إضافية</legend>
+     <label for="notes">هل هناك أي مخاوف أو موضوعات محددة تود مناقشتها؟</label>
+     <textarea id="notes" name="notes" rows="4" cols="50"></textarea>
+    </fieldset>
+    <button class=submit-btn type="submit">إرسال النموذج</button>
+   </form>
+  </main>
+
+
+
+
+</body>
+</html>
