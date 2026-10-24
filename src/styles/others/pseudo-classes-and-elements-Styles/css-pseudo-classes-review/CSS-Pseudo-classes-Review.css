@@ -1,0 +1,7 @@
+/* PREVIEW 1 */
+.preview1 {
+    min-height: 30vh;
+}
+.preview1 p:is(.example, .this-works-too) {
+    color: red;
+}

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" مراجعة الفئات الزائفة Pseudo-classes في CSS "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/pseudo-classes-and-elements-Styles/css-pseudo-classes-review/CSS-Pseudo-classes-Review.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الفئات والعناصر الزائفة</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+    <h1>الفئات والعناصر الزائفة</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+    <section class="sub-title">
+        <h2>مراجعة الفئات الزائفة Pseudo-classes في CSS</h2>
+        <span class="hint">مراجعة</span>
+		<p></p>
+    </section>
+
+    
+    <section>
+
+        
+        <!-- User Action Pseudo-classes -->
+        <section>
+            <h3>الفئات الزائفة الخاصة بإجراءات المستخدم <span class="nw" style="font-size: 0.9em;" dir="ltr">User Action Pseudo-classes</span></h3>
+            <ul>
+                <li>
+                    <p>
+                        <b>تعريف الفئات الزائفة (Pseudo-classes) :</b> هي كلمات مفتاحية (keywords) خاصة في لغة CSS 
+                        تتيح لك اختيار عنصر بناءً على حالته (state) أو موقعه (position) المحدد.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئات الزائفة الخاصة بإجراءات المستخدم (User Action Pseudo-classes) :</b> هي كلمات مفتاحية خاصة 
+                        تتيح لك تغيير مظهر العناصر بناءً على تفاعلات المستخدم، 
+                        مما يعزز تجربة المستخدم ككل.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:active</span> :</b> تتيح لك هذه الفئة الزائفة تحديد الحالة النشطة لعنصر ما، 
+                        مثل حالة النقر على زر.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:hover</span> :</b> تُحدد هذه الفئة الزائفة حالة العنصر عند تمرير مؤشر الفأرة فوقه.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:focus</span> :</b> تُطبِّق هذه الفئة الزائفة أنماطاً (styles) عندما يكتسب عنصرٌ ما التركيز (focus)، 
+                        ويحدث ذلك عادةً من خلال التنقل عبر لوحة المفاتيح أو عندما ينقر المستخدم داخل حقل إدخال في نموذج.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:focus-within</span> :</b> تُستخدم هذه الفئة الزائفة لتطبيق أنماط على عنصر ما عندما يكتسب هذا العنصر - 
+                        أو أيّ من العناصر التابعة له - التركيز (focus).
+                    </p>
+                </li>
+            </ul>
+            <br>
+        </section>
+
+
+        <!-- Input Pseudo-classes -->
+        <section>
+            <h3>فئات الإدخال الزائفة <span class="nw" style="font-size: 0.9em;" dir="ltr">Input Pseudo-classes</span></h3>
+            <ul>
+                <li>
+                    <p>
+                        <b>الفئات الزائفة لعناصر الإدخال (Input Pseudo-classes) :</b> تُستخدم هذه الفئات الزائفة لاستهداف عناصر الإدخال <span dir="ltr" class="br-spec nw">input</span> في لغة HTML 
+                        بناءً على حالتها قبل وبعد تفاعل المستخدم معها.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:enabled</span> :</b> تُستخدم هذه الفئة الزائفة لاستهداف أزرار النماذج أو العناصر الأخرى المُمكَّنة (enabled) حالياً.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:disabled</span> :</b> تتيح لك هذه الفئة الزائفة تنسيق عنصر تفاعلي في حالة التعطيل (disabled mode).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:checked</span> :</b> تُستخدم هذه الفئة الزائفة للإشارة للمستخدم إلى أن العنصر مُحدَّد (مُؤشَّر عليه).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:valid</span> :</b> تستهدف هذه الفئة الزائفة حقول الإدخال التي تستوفي معايير التحقق.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:invalid</span> :</b> تستهدف هذه الفئة الزائفة حقول الإدخال التي لا تستوفي معايير التحقق.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئتان الزائفتان <span dir="ltr" class="br-spec nw">:in-range</span> و <span dir="ltr" class="br-spec nw">:out-of-range</span> :</b> تُطبِّق هاتان الفئتان الزائفتا التنسيقات على العناصر بناءً على ما إذا كانت قيمها تقع ضمن قيود النطاق المحددة أو خارجها.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:required</span> :</b> تستهدف هذه الفئة الزائفة عناصر الإدخال <span dir="ltr" class="br-spec nw">input</span> 
+                        التي تحمل السمة <span dir="ltr" class="br-spec nw">required</span>. 
+                        وهي تشير للمستخدم إلى ضرورة ملء هذا الحقل حتى يتمكن من إرسال النموذج.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:optional</span> :</b> تُطبِّق هذه الفئة الزائفة أنماطاً على عناصر الإدخال (input elements) غير المطلوبة، 
+                        والتي يمكن تركها فارغة.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:autofill</span> :</b> تُطبِّق هذه الفئة الزائفة أنماطاً على حقول الإدخال التي يقوم المتصفح بملئها تلقائياً باستخدام بيانات محفوظة.
+                    </p>
+                </li>
+            </ul>
+            <br>
+
+        </section>
+
+
+        <!-- Location Pseudo-classes -->
+        <section>
+            <h3>الفئات الزائفة للموقع <span class="nw" style="font-size: 0.9em;" dir="ltr">Location Pseudo-classes</span></h3>
+            <ul>
+                <li>
+                    <p>
+                        <b>الفئات الزائفة الخاصة بالموقع Location Pseudo-classes :</b> تُستخدم هذه الفئات الزائفة لتنسيق الروابط والعناصر المُستهدفة داخل المستند الحالي.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:any-link</span> :</b> تجمع هذه الفئة الزائفة بين الفئتين الزائفين <span dir="ltr" class="br-spec nw">:link</span> و <span dir="ltr" class="br-spec nw">:visited</span> ؛ 
+                        فهي تطابق أي عنصر رابط (anchor element) 
+                        يحتوي على السمة href ، 
+                        بغض النظر عما إذا كان قد تمت زيارته أم لا.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:link</span> :</b> تتيح لك هذه الفئة الزائفة استهداف جميع الروابط التي لم تتم زيارتها في صفحة الويب. 
+                        يمكنك استخدامها لتنسيق الروابط بشكل مختلف قبل أن يقوم المستخدم بالنقر عليها.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:local-link</span> :</b> تستهدف هذه الفئة الزائفة الروابط التي تشير إلى المستند نفسه. 
+                        وتعد مفيدة عندما ترغب في التمييز بين الروابط الداخلية والروابط الخارجية.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:visited</span> :</b> تستهدف هذه الفئة الزائفة رابطاً قام المستخدم بزيارته.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:target</span> :</b> تُستخدم هذه الفئة الزائفة لتطبيق أنماط على عنصر يُمثّل الهدف (target) لجزءٍ مُحدَّد في رابط (URL fragment).
+                    </p>
+                </li>
+            </ul>
+            <br>
+
+        </section>
+
+
+        <!-- Tree-structural Pseudo-classes -->
+        <section>
+            <h3>الفئات الزائفة ذات البنية الشجرية <span class="nw" style="font-size: 0.9em;" dir="ltr">Tree-structural Pseudo-classes</span></h3>
+            <ul>
+                <li>
+                    <p>
+                        <b>الفئات الزائفة ذات البنية الشجرية (Tree-structural Pseudo-classes) :</b> تتيح لك هذه الفئات الزائفة استهداف العناصر وتنسيقها بناءً على موقعها ضمن شجرة المستند (document tree).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:root</span> :</b> تشير هذه الفئة الزائفة عادةً إلى العنصر الجذري <span dir="ltr" class="br-spec nw">html</span> في المستند. 
+                        وهي تتيح لك استهداف المستوى الأعلى في المستند، مما يمكنك من تطبيق نمط موحد على المستند بأكمله.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:empty</span> :</b> تُدرج العناصر الفارغة — أي العناصر التي لا تحتوي على أي أبناء سوى مسافات بيضاء — ضمن شجرة المستند؛ 
+                        ولهذا السبب وُجدت الفئة الزائفة <span dir="ltr" class="br-spec nw">:empty</span> لاستهداف هذه العناصر الفارغة.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:nth-child(n)</span> :</b> تتيح لك هذه الفئة الزائفة اختيار العناصر بناءً على موقعها ضمن عنصر أب (parent).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:nth-last-child(n)</span> :</b> تتيح لك هذه الفئة الزائفة اختيار العناصر عن طريق العدّ بدءاً من النهاية.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:first-child</span> :</b> تختار هذه الفئة الزائفة العنصر الأول ضمن عنصر أب (parent element) أو داخل المستند.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:last-child</span> :</b> تختار هذه الفئة الزائفة العنصر الأخير ضمن عنصر أب (parent element) أو داخل المستند.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:only-child</span> :</b> تختار هذه الفئة الزائفة العنصر الوحيد الموجود داخل عنصر أب (parent element) أو داخل المستند.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:first-of-type</span> :</b> تختار هذه الفئة الزائفة أول ظهور لنوعٍ معين من العناصر ضمن عنصره الأب (its parent).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:last-of-type</span> :</b> تختار هذه الفئة الزائفة التكرار الأخير لنوع عنصر معين ضمن عنصره الأب (its parent).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:nth-of-type(n)</span> :</b> تتيح لك هذه الفئة الزائفة اختيار عنصرٍ محددٍ داخل عنصره الأب (its parent)، 
+                        وذلك بناءً على موقعه بين العناصر الشقيقة التي تنتمي إلى النوع ذاته (same type).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:only-of-type</span> :</b> تختار هذه الفئة الزائفة عنصراً ما إذا كان هو العنصر الوحيد من نوعه ضمن عنصره الأب (its parent).
+                    </p>
+                </li>
+            </ul>
+            <br>
+
+        </section>
+
+
+        <!-- Functional Pseudo-classes -->
+        <section>
+            <h3>الفئات الزائفة الوظيفية <span class="nw" style="font-size: 0.9em;" dir="ltr">Functional Pseudo-classes</span></h3>
+            <ul>
+                <li>
+                    <p>
+                        <b>الفئات الزائفة الوظيفية (Functional Pseudo-classes) :</b> تتيح لك الفئات الزائفة الوظيفية اختيار العناصر بناءً على شروط أو علاقات أكثر تعقيداً. 
+                        وعلى عكس الفئات الزائفة العادية التي تستهدف العناصر بناءً على حالة معينة (مثل <span dir="ltr" class="br-spec nw">:hover</span> أو <span dir="ltr" class="br-spec nw">:focus</span>)، 
+                        فإن الفئات الزائفة الوظيفية تقبل تمرير وسائط (arguments) إليها.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:is()</span> :</b> تقبل هذه الفئة الزائفة قائمةً من المُحدِّدات (مثل <span dir="ltr" class="br-spec nw">ol</span> ، <span dir="ltr" class="br-spec nw">ul</span>) 
+                        وتختار أي عنصرٍ يطابق واحداً من المُحدِّدات الموجودة في تلك القائمة.
+                    </p>
+                    <div class="codeFiles">
+                        <p class="file-name">index.html</p>
+                        <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;p <span class="attr">class=<span class="value">"example"</span></span>&gt;<span dir="rtl" class="txt">سيتغير لون هذا النص.</span>&lt;/p&gt;
+&lt;p&gt;<span dir="rtl" class="txt">لن يتغير لون هذا النص.</span>&lt;/p&gt;
+&lt;p&gt;<span dir="rtl" class="txt">لن يتغير لون هذا النص.</span>&lt;/p&gt;
+&lt;p <span class="attr">class=<span class="value">"this-works-too"</span></span>&gt;<span dir="rtl" class="txt">سيتغير لون هذا النص.</span>&lt;/p&gt;</span>
+                </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">p:is(.example, .this-works-too)</span> <span class="attr">{
+ color: <span class="txt">red</span>;
+}</span>
+                        </code></pre></div>
+                    </div>
+        
+                    <p class="hinty">معاينة:</p>
+                    <div class="preview" role="presentation">
+                        <div class="preview1">
+                            <p class="example">سيتغير لون هذا النص.</p>
+                            <p>لن يتغير لون هذا النص.</p>
+                            <p>لن يتغير لون هذا النص.</p>
+                            <p class="this-works-too">سيتغير لون هذا النص.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:where()</span> :</b> تقبل هذه الفئة الزائفة قائمةً من المُحدِّدات (مثل <span dir="ltr" class="br-spec nw">ol</span> ، <span dir="ltr" class="br-spec nw">ul</span>) 
+                        وتختار أي عنصر يطابق واحداً منها. 
+                        ويكمن الفرق بين <span dir="ltr" class="br-spec nw">:is()</span> و <span dir="ltr" class="br-spec nw">:where()</span> 
+                        في أن الأخيرة تمتلك قيمة "تحديد" (specificity) تساوي 0.
+                    </p>
+                    <div class="code-block"><pre><code>
+<span class="tag-b">:where(h1, h2, h3)</span> <span class="attr">{
+ margin: <span class="txt">0</span>;
+ padding: <span class="txt">0</span>;
+}</span>
+                    </code></pre></div>
+                </li>
+                <li>
+                    <p>
+                        <b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:has()</span> :</b> يُطلق على هذه الفئة الزائفة غالبًا اسم مُحدِّد "العنصر الأب" (parent selector)؛ 
+                        لأنها تتيح لك تنسيق العناصر التي تحتوي بداخلها على عناصر فرعية مُحدَّدة ضمن قائمة المُحدِّدات.
+                    </p>
+                    <div class="code-block"><pre><code>
+<span class="tag-b">article:has(h2)</span> <span class="attr">{
+ border: <span class="txt">2px solid hotpink</span>;
+}</span>
+                    </code></pre></div>
+                </li>
+                <li>
+                    <p><b>الفئة الزائفة <span dir="ltr" class="br-spec nw">:not()</span> :</b> تُستخدم هذه الفئة الزائفة لاختيار العناصر التي لا تطابق المُحدِّد المُقدَّم.</p>
+                    <div class="code-block"><pre><code>
+<span class="tag-b">p:not(.example)</span> <span class="attr">{
+ color: <span class="txt">blue</span>;
+}</span>
+                    </code></pre></div>
+                </li>
+            </ul>
+            <br>
+        </section>
+
+
+        <!-- Pseudo-elements -->
+        <section>
+            <h3>العناصر الزائفة <span class="nw" style="font-size: 0.9em;" dir="ltr">Pseudo-elements</span></h3>
+            <ul>
+                <li>
+                    <p>
+                        <b>العنصر الزائف <span dir="ltr" class="br-spec nw">::before</span> :</b> يستخدم هذا العنصر الزائف الخاصية <span dir="ltr" class="br-spec nw">content</span> لإدراج محتوى تجميلي، مثل الأيقونات، مباشرةً قبل العنصر.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>العنصر الزائف <span dir="ltr" class="br-spec nw">::after</span> :</b> يستخدم هذا العنصر الزائف الخاصية <span dir="ltr" class="br-spec nw">content</span> لإدراج محتوى تجميلي، مثل الأيقونات، مباشرةً بعد العنصر.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>العنصر الزائف <span dir="ltr" class="br-spec nw">::first-letter</span> :</b> يستهدف هذا العنصر الزائف الحرف الأول من محتوى أحد العناصر، مما يتيح لك تنسيقه.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>العنصر الزائف <span dir="ltr" class="br-spec nw">::marker</span> :</b> يتيح لك هذا العنصر الزائف تحديد العلامة (نقطة أو رقم) الخاصة بعناصر القائمة، وذلك بهدف تنسيقها.
+                    </p>
+                </li>
+            </ul>
+
+            <br>
+        </section>
+
+    </section>
+ 
+
+  
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="../build-a-job-application-form/Build-a-Job-Application-Form.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
