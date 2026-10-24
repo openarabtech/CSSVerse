@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" إنشاء نموذج طلب توظيف Job Application Form "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/pseudo-classes-and-elements-Styles/build-a-job-application-form/Build-a-Job-Application-Form.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الفئات والعناصر الزائفة</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+    <h1>الفئات والعناصر الزائفة</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+    <section class="sub-title">
+        <h2>إنشاء نموذج طلب توظيف Job Application Form</h2>
+        <span class="hint">ورشة عمل</span>
+		<p>مختبر</p>
+    </section>
+
+    
+    <section>
+
+        <!-- HTML boilerplate -->
+	<section>
+        <br>
+        <h3>هيكل HTML الأساسي HTML boilerplate</h3>
+        <br>
+        <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span>إنشاء نموذج طلب توظيف<span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+ <span class="value">&lt;!-- هنا تضع اكواد التطبيق --&gt;</span>
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+            </div>
+            <br><br>
+    </section>
+
+    <!-- User stories -->
+    <section>
+        <h3>قصص المستخدم User stories :</h3>
+
+        <ol>
+            
+            <li>
+                <p class="hinty">
+                    ينبغي أن يكون لديك عنصر <span dir="ltr" class="br-spec nw">div</span> يحمل الفئة <span dir="ltr" class="br-spec nw">container</span>.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    داخل عنصر <span dir="ltr" class="br-spec nw">div</span>، ينبغي أن يكون هناك عنصر <span dir="ltr" class="br-spec nw">form</span>.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب أن يحتوي النموذج (form) على عنصر إدخال <span dir="ltr" class="br-spec nw">input</span> 
+                    من النوع <span dir="ltr" class="br-spec nw">text</span> 
+                    وبالمُعرِّف <span dir="ltr" class="br-spec nw">name</span> ، 
+                    وذلك لإدخال الاسم الكامل للمستخدم.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    ينبغي أن يتوفر لديك عنصر <span dir="ltr" class="br-spec nw">input</span> آخر 
+                    من النوع <span dir="ltr" class="br-spec nw">email</span> 
+                    وبالمعرف <span dir="ltr" class="br-spec nw">email</span> 
+                    لإدخال عنوان البريد الإلكتروني للمستخدم.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب أن يتضمن النموذج عنصراً من نوع <span dir="ltr" class="br-spec nw">select</span> 
+                    يحمل المعرّف <span dir="ltr" class="br-spec nw">position</span>، 
+                    والذي يتيح للمستخدمين اختيار منصب وظيفي.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    ينبغي أن يتوفر لديك عنصر <span dir="ltr" class="br-spec nw">fieldset</span> 
+                    يحمل الفئة <span dir="ltr" class="br-spec nw">radio-group</span>.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    داخل العنصر <span dir="ltr" class="br-spec nw">.radio-group</span>، 
+                    يجب أن تضع مجموعة من عناصر <span dir="ltr" class="br-spec nw">input</span> 
+                    من النوع <span dir="ltr" class="br-spec nw">radio</span> 
+                    مع التسميات <span dir="ltr" class="br-spec nw">labels</span> المقابلة لها، 
+                    وذلك لاختيار خيارات التوافر (على سبيل المثال: دوام كامل، دوام جزئي). 
+                    يجب أن تكون قيمة الخاصية <span dir="ltr" class="br-spec nw">name</span> 
+                    لهذه المجموعة هي <span dir="ltr" class="br-spec nw">availability</span>.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    ينبغي أن يتوفر لديك عنصر <span dir="ltr" class="br-spec nw">textarea</span> 
+                    يحمل المُعرِّف <span dir="ltr" class="br-spec nw">message</span> لإدخال رسالة.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    ينبغي عليك ربط كل عنصر من عناصر <span dir="ltr" class="br-spec nw">input</span> 
+                    أو <span dir="ltr" class="br-spec nw">select</span> 
+                    أو <span dir="ltr" class="br-spec nw">textarea</span> 
+                    بعنصر <span dir="ltr" class="br-spec nw">label</span>.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب أن يتوفر لديك عنصر زر <span dir="ltr" class="br-spec nw">button</span> 
+                    من النوع <span dir="ltr" class="br-spec nw">submit</span> لإرسال النموذج.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    أضف الفئة الزائفة <span dir="ltr" class="br-spec nw">:focus</span> 
+                    إلى عنصري <span dir="ltr" class="br-spec nw">input</span> 
+                    و <span dir="ltr" class="br-spec nw">textarea</span> 
+                    لتغيير لون حدودهما وإزالة الإطار الافتراضي عند التركيز عليهما.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب أن تحتوي عناصر <span dir="ltr" class="br-spec nw">input</span> 
+                    و <span dir="ltr" class="br-spec nw">select</span> 
+                    و <span dir="ltr" class="br-spec nw">textarea</span> 
+                    على فئة زائفة <span dir="ltr" class="br-spec nw">:invalid</span> 
+                    تُغيِّر لون الحدود إلى الأحمر عند اكتشاف إدخال غير صالح.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب أن تحتوي عناصر <span dir="ltr" class="br-spec nw">input</span> 
+                    و <span dir="ltr" class="br-spec nw">select</span> 
+                    و <span dir="ltr" class="br-spec nw">textarea</span> 
+                    على فئة زائفة <span dir="ltr" class="br-spec nw">:valid</span> 
+                    تُغيّر لون الحدود إلى الأخضر عند إدخال بيانات صحيحة.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب أن يحتوي عنصر <span dir="ltr" class="br-spec nw">button</span> 
+                    على فئة زائفة <span dir="ltr" class="br-spec nw">:hover</span> 
+                    تُغيِّر لون الخلفية عند تمرير مؤشر الفأرة فوقه.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    استخدم الفئة الزائفة <span dir="ltr" class="br-spec nw">:checked</span> 
+                    على <span dir="ltr" class="br-spec nw">.radio-group input[type="radio"]</span> 
+                    لإضافة لون إطار، ولون خلفية، وظل للصندوق (box shadow) عند اختيار زر الاختيار (radio button).
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    استخدم الفئة الزائفة <span dir="ltr" class="br-spec nw">:checked</span> 
+                    مع أزرار الاختيار (radio buttons) 
+                    لتغيير لون نص العنصر <span dir="ltr" class="br-spec nw">label</span> 
+                    المرتبط بها عند تحديد الخيار.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    أضف الفئة الزائفة <span dir="ltr" class="br-spec nw">:first-of-type</span> 
+                    إلى عنصر <span dir="ltr" class="br-spec nw">input</span> 
+                    لتنسيق حقل الإدخال الأول بشكل مختلف 
+                    (على سبيل المثال: جعل الزوايا مستديرة).
+                </p>
+            </li>
+            
+        </ol>
+        
+        <p>
+            <b>ملاحظة:</b> تأكد من ربط ملف الأنماط (stylesheet) في ملف HTML وتطبيق قواعد CSS.
+        </p>
+        
+
+    </section>
+
+
+    <!-- SOLUTION -->
+    <section>
+        <br>
+		<h3>حل التطبيق :</h3>
+        <br>
+        <div class="codeFiles">
+        <p class="file-name">index.html</p>
+        <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span>نموذج طلب توظيف<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ 
+ <span class="tag">&lt;body&gt;
+
+  &lt;div <span class="attr">class=<span class="value">"container"</span></span>&gt;
+   &lt;h1&gt;<span dir="rtl" class="txt">نموذج طلب توظيف</span>&lt;/h1&gt;
+   &lt;form&gt;
+    &lt;label <span class="attr">for=<span class="value">"name"</span></span>&gt;<span dir="rtl" class="txt">الاسم الكامل:</span>&lt;/label&gt;
+    &lt;input <span class="attr">type=<span class="value">"text"</span> id=<span class="value">"name"</span> name=<span class="value">"name"</span>placeholder=<span class="value">"أدخل اسمك"</span> required</span> /&gt;
+    
+    &lt;label <span class="attr">for=<span class="value">"email"</span></span>&gt;<span dir="rtl" class="txt">البريد الإلكتروني:</span>&lt;/label&gt;
+    &lt;input <span class="attr">type=<span class="value">"email"</span> id=<span class="value">"email"</span> name=<span class="value">"email"</span>placeholder=<span class="value">"أدخل بريدك الإلكتروني"</span> required</span> /&gt;
+    
+    &lt;label <span class="attr">for=<span class="value">"position"</span></span>&gt;<span dir="rtl" class="txt">الوظيفة:</span>&lt;/label&gt;
+    &lt;select <span class="attr">id=<span class="value">"position"</span> name=<span class="value">"position"</span> required</span>&gt;
+     &lt;option <span class="attr">value=<span class="value">""</span></span>&gt;<span class="txt">اختر وظيفة</span>&lt;/option&gt;
+     &lt;option <span class="attr">value=<span class="value">"developer"</span></span>&gt;<span class="txt">مطور ويب</span>&lt;/option&gt;
+     &lt;option <span class="attr">value=<span class="value">"designer"</span></span>&gt;<span dir="rtl" class="txt">مصمم واجهة/تجربة المستخدم (UI/UX)</span>&lt;/option&gt;
+     &lt;option <span class="attr">value=<span class="value">"tester"</span></span>&gt;<span dir="rtl" class="txt">مختبِر برمجيات</span>&lt;/option&gt;
+     &lt;option <span class="attr">value=<span class="value">"manager"</span></span>&gt;<span dir="rtl" class="txt">مدير مشاريع</span>&lt;/option&gt;
+    &lt;/select&gt;
+
+    &lt;fieldset <span class="attr">class=<span class="value">radio-group</span></span>&gt;
+     &lt;legend&gt;<span dir="rtl" class="txt">الإتاحة</span>&lt;/legend&gt;
+
+     &lt;input <span class="attr">type=<span class="value">"radio"</span> id=<span class="value">"full-time"</span> name=<span class="value">"availibity"</span> value=<span class="value">"full-time"</span> checked</span> /&gt;
+     &lt;label <span class="attr">for=<span class="value">"full-time"</span></span>&gt;<span class="txt">دوام كامل</span>&lt;/label&gt;
+
+     &lt;input <span class="attr">type=<span class="value">"radio"</span> id=<span class="value">"part-time"</span> name=<span class="value">"availibity"</span> value=<span class="value">"part-time"</span></span> /&gt;
+     &lt;label <span class="attr">for=<span class="value">"part-time"</span></span>&gt;<span class="txt">دوام جزئى</span>&lt;/label&gt;
+    &lt;/fieldset&gt;
+
+    &lt;label <span class="attr">for=<span class="value">"message"</span></span>&gt;<span dir="rtl" class="txt">لماذا ترغب في الحصول على هذه الوظيفة؟</span>&lt;/label&gt;
+    &lt;textarea <span class="attr">id=<span class="value">"message"</span> name=<span class="value">"message"</span> placeholder=<span class="value">"اكتب دوافعك"</span> required</span>&gt;&lt;/textarea&gt;
+
+    &lt;button <span class="attr">type=<span class="value">"submit"</span></span>&gt;<span class="txt">قدِّم الطلب</span>&lt;/button&gt;
+   &lt;/form&gt;
+  &lt;/div&gt;
+  
+ &lt;/body&gt;</span>
+
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+        </div>
+        <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">*</span><span class="attr"> {
+ box-sizing: <span class="txt">border-box</span>;
+}</span>
+
+<span class="tag-b">body</span><span class="attr"> {
+ font-family: <span class="txt">Arial, sans-serif</span>;
+ margin: <span class="txt">0</span>;
+ padding: <span class="txt">30px 20px</span>;
+ background-color: <span class="txt">#fff</span>;
+}</span>
+
+<span class="tag-b">.container</span><span class="attr"> {
+ max-width: <span class="txt">640px</span>;
+ margin: <span class="txt">0 auto</span>;
+ padding: <span class="txt">25px 20px 12px</span>;
+ background-color: <span class="txt">white</span>;
+ border-radius: <span class="txt">8px</span>;
+ box-shadow: <span class="txt">0 0 10px #00000015</span>;
+}</span>
+
+<span class="tag-b">h1</span><span class="attr"> {
+ text-align: <span class="txt">center</span>;
+ font-size: <span class="txt">32px</span>;
+ margin: <span class="txt">15px 0 22px</span>;
+}</span>
+
+<span class="tag-b">label</span><span class="attr"> {
+ display: <span class="txt">block</span>;
+ margin: <span class="txt">10px 0</span>;
+ font-weight: <span class="txt">bold</span>;
+}</span>
+
+<span class="tag-b">input,
+select,
+textarea</span><span class="attr"> {
+ width: <span class="txt">100%</span>;
+ padding: <span class="txt">10px</span>;
+ margin-bottom: <span class="txt">15px</span>;
+ border: <span class="txt">1px solid #ccc</span>;
+ border-radius: <span class="txt">4px</span>;
+ font-family: <span class="txt">inherit</span>;
+ font-size: <span class="txt">14px</span>;
+}</span>
+
+<span class="value">/* Style the first input differently */</span>
+<span class="tag-b">input:first-of-type</span><span class="attr"> {
+ border-radius: <span class="txt">6px</span>;
+}</span>
+
+<span class="value">/* Focus State */</span>
+<span class="tag-b">input:focus, 
+textarea:focus</span><span class="attr"> {
+ outline: <span class="txt">none</span>;
+ border-color: <span class="txt">#0066cc</span>;
+}</span>
+
+<span class="value">/* Invalid fields */</span>
+<span class="tag-b">input:invalid, 
+select:invalid, 
+textarea:invalid</span><span class="attr"> {
+ border-color: <span class="txt">red</span>;
+}</span>
+
+<span class="value">/* Valid fields */</span>
+<span class="tag-b">input:valid, 
+select:valid, 
+textarea:valid</span><span class="attr"> {
+ border-color: <span class="txt">green</span>;
+}</span>
+
+<span class="value">/* Availability group */</span>
+<span class="tag-b">.radio-group</span><span class="attr"> {
+ margin: <span class="txt">15px 2px 0</span>;
+ padding: <span class="txt">12px 15px 18px</span>;
+ border: <span class="txt">1px solid #aaa</span>;
+}</span>
+
+<span class="tag-b">.radio-group legend</span><span class="attr"> {
+ padding: <span class="txt">0 3px</span>;
+}</span>
+
+<span class="value">/* Radio buttons */</span>
+<span class="tag-b">.radio-group input[type="radio"]</span><span class="attr"> {
+ appearance: <span class="txt">none</span>;
+ width: <span class="txt">24px</span>;
+ height: <span class="txt">24px</span>;
+ margin: <span class="txt">0 5px 0 0</span>;
+ padding: <span class="txt">0</span>;
+ border: <span class="txt">2px solid #ccc</span>;
+ border-radius: <span class="txt">50%</span>;
+ vertical-align: <span class="txt">middle</span>;
+ cursor: <span class="txt">pointer</span>;
+}</span>
+
+<span class="tag-b">.radio-group input[type="radio"]:checked</span><span class="attr"> {
+ border-color: <span class="txt">green</span>;
+ background-color: <span class="txt">white</span>;
+ box-shadow: <span class="txt">inset 0 0 0 4px white</span>;
+ background-image: <span class="txt">radial-gradient(green 50%, transparent 55%)</span>;
+}</span>
+
+<span class="value">/* Selected option label */</span>
+<span class="tag-b">.radio-group input[type="radio"]:checked + label</span><span class="attr"> {
+ color: <span class="txt">green</span>;
+}</span>
+
+<span class="value">/* Keep radio labels beside their buttons */</span>
+<span class="tag-b">.radio-group input[type="radio"] + label</span><span class="attr"> {
+ display: <span class="txt">inline-block</span>;
+ margin: <span class="txt">0 5px 0 0</span>;
+ font-weight: <span class="txt">normal</span>;
+ vertical-align: <span class="txt">middle</span>;
+}</span>
+
+<span class="value">/* Motivation field */</span>
+<span class="tag-b">textarea</span><span class="attr"> {
+ height: <span class="txt">98px</span>;
+ resize: <span class="txt">vertical</span>;
+}</span>
+
+<span class="value">/* Submit button */</span>
+<span class="tag-b">button</span><span class="attr"> {
+ width: <span class="txt">100px</span>;
+ padding: <span class="txt">10px</span>;
+ border: <span class="txt">none</span>;
+ border-radius: <span class="txt">4px</span>;
+ background-color: <span class="txt">green</span>;
+ color: <span class="txt">white</span>;
+ font-size: <span class="txt">16px</span>;
+ cursor: <span class="txt">pointer</span>;
+}</span>
+
+<span class="tag-b">button:hover</span><span class="attr"> {
+ background-color: <span class="txt">darkgreen</span>;
+}</span>
+
+            </code></pre></div>
+            </div>
+    </section>
+
+
+    <!-- APP -->
+    <section>
+        <br>
+		<h3>معاينة التطبيق :</h3>
+        <br>
+
+        <div class="preview" role="presentation">
+            <div class="preview1">
+                <iframe
+					src="../../examples/pseudo-classes-and-elements/build-a-job-application-form/example1.html"
+					title="Build Job Application Form"
+					loading="lazy"
+				 ></iframe>
+            </div>
+        </div>
+    </section>
+
+    </section>
+ 
+
+  
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="../design-a-parent-teacher-conference-form/Design-a-Parent-Teacher-Conference-Form.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>

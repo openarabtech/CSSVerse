@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" إنشاء نموذج طلب توظيف Job Application Form "/>
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>إنشاء نموذج طلب توظيف Job Application Form</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 30px 20px;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 25px 20px 12px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00000015;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  margin: 15px 0 22px;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+/* Style the first input differently */
+input:first-of-type {
+  border-radius: 6px;
+}
+
+/* Focus state */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+/* Invalid fields */
+input:invalid,
+select:invalid,
+textarea:invalid {
+  border-color: red;
+}
+
+/* Valid fields */
+input:valid,
+select:valid,
+textarea:valid {
+  border-color: green;
+}
+
+/* Availability group */
+.radio-group {
+  margin: 15px 2px 0;
+  padding: 12px 15px 18px;
+  border: 1px solid #aaa;
+}
+
+.radio-group legend {
+  padding: 0 3px;
+}
+
+/* Radio buttons */
+.radio-group input[type="radio"] {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  margin: 0 5px 0 0;
+  padding: 0;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.radio-group input[type="radio"]:checked {
+  border-color: green;
+  background-color: white;
+  box-shadow: inset 0 0 0 4px white;
+  background-image: radial-gradient(green 50%, transparent 55%);
+}
+
+/* Selected option label */
+.radio-group input[type="radio"]:checked + label {
+  color: green;
+}
+
+/* Keep radio labels beside their buttons */
+.radio-group input[type="radio"] + label {
+  display: inline-block;
+  margin: 0 5px 0 0;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* Motivation field */
+textarea {
+  height: 98px;
+  resize: vertical;
+}
+
+/* Submit button */
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: green;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkgreen;
+}
+	
+</style>
+<body>
+
+
+<div class="container">
+   <h1>نموذج طلب توظيف</h1>
+   <form>
+    <label for="name">الاسم الكامل:</label>
+    <input type="text" id="name" name="name"placeholder="أدخل اسمك" required />
+    
+    <label for="email">البريد الإلكتروني:</label>
+    <input type="email" id="email" name="email"placeholder="أدخل بريدك الإلكتروني" required />
+    
+    <label for="position">الوظيفة:</label>
+    <select id="position" name="position" required>
+     <option value="">اختر وظيفة</option>
+     <option value="developer">مطور ويب</option>
+     <option value="designer">مصمم واجهة/تجربة المستخدم (UI/UX)</option>
+     <option value="tester">مختبِر برمجيات</option>
+     <option value="manager">مدير مشاريع</option>
+    </select>
+
+    <fieldset class="radio-group">
+     <legend>الإتاحة</legend>
+
+     <input type="radio" id="full-time" name="availibity" value="full-time" checked />
+     <label for="full-time">دوام كامل</label>
+
+     <input type="radio" id="part-time" name="availibity" value="part-time" />
+     <label for="part-time">دوام جزئى</label>
+    </fieldset>
+
+    <label for="message">لماذا ترغب في الحصول على هذه الوظيفة؟</label>
+    <textarea id="message" name="message" placeholder="اكتب دوافعك" required></textarea>
+
+    <button type="submit">قدِّم الطلب</button>
+   </form>
+  </div>
+
+
+
+</body>
+</html>
