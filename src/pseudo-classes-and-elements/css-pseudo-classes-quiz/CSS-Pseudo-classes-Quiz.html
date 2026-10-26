@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" اختبار الفئات الزائفة Pseudo-classes في CSS "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/pseudo-classes-and-elements-Styles/css-pseudo-classes-quiz/CSS-Pseudo-classes-Quiz.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الفئات والعناصر الزائفة</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>الفئات والعناصر الزائفة</h1>
+</header>
+
+
+
+
+
+
+<main class="box">
+
+
+    <!-- sub-title -->
+    <section class="sub-title">
+        <h2>اختبار الفئات الزائفة Pseudo-classes في CSS</h2>
+		<span class="hint">إختبار</span>
+		<p></p>
+    </section>
+
+
+    <section>
+        <ol>
+            <!-- Q1 -->
+            <li>
+                <h3>ما هي الفئات الزائفة (pseudo-classes) ؟</h3>
+                <form>
+				<label><input type="radio" name="q1" value="">هي قواعد في لغة CSS تُنشئ محتوى إضافياً داخل عنصر ما عند الحاجة.</label><br>
+				<label><input type="radio" name="q1" value="">هي كلمات مفتاحية تُضاف إلى المُحدِّد (selector) لتنسيق عنصر بناءً على حالته.</label><br>
+				<label><input type="radio" name="q1" value="">هي خصائص تُستخدم لضبط حجم العنصر أو تخطيطه على الصفحة.</label><br>
+				<label><input type="radio" name="q1" value="">هي مُحدِّدات تُستخدم لإضافة تأثيرات حركية على عنصر ما أثناء التفاعل معه.</label>
+			</form>
+			<h4>هي كلمات مفتاحية تُضاف إلى المُحدِّد (selector) لتنسيق عنصر بناءً على حالته.</h4>
+            </li>
+
+            <!-- Q2 -->
+            <li>
+                <h3>ما هي الفئة الزائفة (pseudo-class) التي تُطبَّق عندما يتم توجيه جهاز تأشير فوق عنصرٍ ما؟</h3>
+                <form>
+				<label><input type="radio" name="q2" value=""><span dir="ltr" class="br-spec nw">:hover</span></label><br>
+				<label><input type="radio" name="q2" value=""><span dir="ltr" class="br-spec nw">:focus</span></label><br>
+				<label><input type="radio" name="q2" value=""><span dir="ltr" class="br-spec nw">:active</span></label><br>
+				<label><input type="radio" name="q2" value=""><span dir="ltr" class="br-spec nw">:checked</span></label>
+			</form>
+			<h4><span dir="ltr" class="br-spec nw">:hover</span></h4>
+            </li>
+
+            <!-- Q3 -->
+            <li>
+                <h3>ما هو العنصر الزائف (pseudo-element) الذي يتيح لك تنسيق الحرف الأول من فقرة ما؟</h3>
+                <form>
+				<label><input type="radio" name="q3" value=""><span dir="ltr" class="br-spec nw">:last-of-type</span></label><br>
+				<label><input type="radio" name="q3" value=""><span dir="ltr" class="br-spec nw">:first-letter</span></label><br>
+				<label><input type="radio" name="q3" value=""><span dir="ltr" class="br-spec nw">::first-letter</span></label><br>
+				<label><input type="radio" name="q3" value=""><span dir="ltr" class="br-spec nw">:first-child</span></label>
+			</form>
+			<h4><span dir="ltr" class="br-spec nw">::first-lettre</span></h4>
+            </li>
+
+            <!-- Q4 -->
+            <li>
+                <h3>ما هي الفئة الزائفة (pseudo-class) التي تُغيِّر نمط العنصر أثناء النقر عليه؟</h3>
+                <form>
+				<label><input type="radio" name="q4" value=""><span dir="ltr" class="br-spec nw">:hover</span></label><br>
+				<label><input type="radio" name="q4" value=""><span dir="ltr" class="br-spec nw">:checked</span></label><br>
+				<label><input type="radio" name="q4" value=""><span dir="ltr" class="br-spec nw">:focus</span></label><br>
+				<label><input type="radio" name="q4" value=""><span dir="ltr" class="br-spec nw">:active</span></label>
+			</form>
+			<h4><span dir="ltr" class="br-spec nw">:active</span></h4>
+            </li>
+
+            <!-- Q5 -->
+            <li>
+                <h3>ما هي الفئة الزائفة (pseudo-class) التي تُستخدم لتنسيق عنصر ما عندما يكون جاهزاً لتلقي مدخلات المستخدم، مثل حقل نصي عند النقر عليه أو الانتقال إليه باستخدام مفتاح Tab ؟</h3>
+                <form>
+				<label><input type="radio" name="q5" value=""><span dir="ltr" class="br-spec nw">:visited</span></label><br>
+				<label><input type="radio" name="q5" value=""><span dir="ltr" class="br-spec nw">:focus</span></label><br>
+				<label><input type="radio" name="q5" value=""><span dir="ltr" class="br-spec nw">:active</span></label><br>
+				<label><input type="radio" name="q5" value=""><span dir="ltr" class="br-spec nw">::focus</span></label>
+			</form>
+			<h4><span dir="ltr" class="br-spec nw">:focus</span></h4>
+            </li>
+
+            <!-- Q6 -->
+            <li>
+                <h3>أي من قواعد CSS التالية تضيف النص <span dir="rtl" class="br-spec nw">ملاحظة:</span> بشكل صحيح أمام كل عنصر فقرة (paragraph element) يحمل الفئة (class) المسماة <span dir="ltr" class="br-spec nw">note</span> ؟</h3>
+                <form>
+				<label><input type="radio" name="q6" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag-b">p::before</span> <span class="attr">{
+ content: <span dir="rtl" class="txt">"ملاحظة:"</span>;
+}</span>
+            </code></pre></div>
+                </label><br>
+
+				<label><input type="radio" name="q6" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag-b">p.note::after</span> <span class="attr">{
+ content: <span dir="rtl" class="txt">"ملاحظة:"</span>;
+}</span>
+            </code></pre></div>
+                </label><br>
+
+				<label><input type="radio" name="q6" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag-b">.note::before</span> <span class="attr">{
+ content: <span dir="rtl" class="txt">"ملاحظة:"</span>;
+}</span>
+            </code></pre></div>
+                </label><br>
+
+				<label><input type="radio" name="q6" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag-b">p.note::before</span> <span class="attr">{
+ content: <span dir="rtl" class="txt">"ملاحظة:"</span>;
+}</span>
+            </code></pre></div>
+                </label>
+			</form>
+			<h4>
+                <div class="code-block"><pre><code>
+<span class="tag-b">p.note::before</span> <span class="attr">{
+ content: <span dir="rtl" class="txt">"ملاحظة:"</span>;
+}</span>
+            </code></pre></div>
+            </h4>
+            </li>
+
+            <!-- Q7 -->
+            <li>
+                <h3>ما هي الفئة الزائفة (pseudo-class) التي تُطبَّق على حقل الإدخال عند اختياره أو تفعيله؟</h3>
+                <form>
+				<label><input type="radio" name="q7" value=""><span dir="ltr" class="br-spec nw">:disabled</span></label><br>
+				<label><input type="radio" name="q7" value=""><span dir="ltr" class="br-spec nw">:checked</span></label><br>
+				<label><input type="radio" name="q7" value=""><span dir="ltr" class="br-spec nw">:optional</span></label><br>
+				<label><input type="radio" name="q7" value=""><span dir="ltr" class="br-spec nw">:required</span></label>
+			</form>
+			<h4><span dir="ltr" class="br-spec nw">:checked</span></h4>
+            </li>
+
+            <!-- Q8 -->
+            <li>
+                <h3>أيٌّ مما يلي يُمثّل الصيغة الصحيحة لتنسيق العنصر الأخير في قائمة؟</h3>
+                <form>
+				<label><input type="radio" name="q8" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag-b">li:last-child</span> <span class="attr">{
+ color: <span class="txt">blue</span>;
+}</span>
+            </code></pre></div>
+                </label><br>
+
+				<label><input type="radio" name="q8" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag-b">#li:last-child</span> <span class="attr">{
+ color: <span class="txt">blue</span>;
+}</span>
+            </code></pre></div>
+                </label><br>
+
+				<label><input type="radio" name="q8" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag-b">li:nth-child(last)</span> <span class="attr">{
+ color: <span class="txt">blue</span>;
+}</span>
+            </code></pre></div>
+                </label><br>
+
+				<label><input type="radio" name="q8" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag-b">.li:last-child()</span> <span class="attr">{
+ color: <span class="txt">blue</span>;
+}</span>
+            </code></pre></div>
+                </label>
+			</form>
+			<h4>
+                <div class="code-block"><pre><code>
+<span class="tag-b">li:last-child</span> <span class="attr">{
+ color: <span class="txt">blue</span>;
+}</span>
+            </code></pre></div>
+            </h4>
+            </li>
+
+            <!-- Q9 -->
+            <li>
+                <h3>ما هي الفئة الزائفة (pseudo-class) التي تستهدف حقول الإدخال غير المطلوبة (التي لا يلزم تعبئتها)؟</h3>
+                <form>
+				<label><input type="radio" name="q9" value=""><span dir="ltr" class="br-spec nw">::optional</span></label><br>
+				<label><input type="radio" name="q9" value=""><span dir="ltr" class="br-spec nw">:enable</span></label><br>
+				<label><input type="radio" name="q9" value=""><span dir="ltr" class="br-spec nw">:optional</span></label><br>
+				<label><input type="radio" name="q9" value=""><span dir="ltr" class="br-spec nw">:required</span></label>
+			</form>
+			<h4><span dir="ltr" class="br-spec nw">:optional</span></h4>
+            </li>
+
+            <!-- Q10 -->
+            <li>
+                <h3>ما الذي تقوم به الفئة الزائفة <span dir="ltr" class="br-spec nw">:disabled</span> ؟</h3>
+                <form>
+				<label><input type="radio" name="q10" value="">تختار العناصر التي لا تطابق مُحدِّدًا (selector) معينًا.</label><br>
+				<label><input type="radio" name="q10" value="">تُطبِّق تنسيقات على العناصر غير المتاحة لتفاعل المستخدم.</label><br>
+				<label><input type="radio" name="q10" value="">تُطبِّق تنسيقات على العناصر التي يتم تمرير مؤشر الفأرة فوقها.</label><br>
+				<label><input type="radio" name="q10" value="">تُطبِّق تنسيقات على عناصر الإدخال (inputs) المُحدَّدة (checked).</label>
+			</form>
+			<h4>تُطبِّق تنسيقات على العناصر غير المتاحة لتفاعل المستخدم.</h4>
+            </li>
+
+            <!-- Q11 -->
+            <li>
+                <h3>أي فئة زائفة (pseudo-class) تُطبَّق عندما يستوفي حقل الإدخال في نموذجٍ ما معايير التحقق الخاصة به؟</h3>
+                <form>
+				<label><input type="radio" name="q11" value=""><span dir="ltr" class="br-spec nw">:checked</span></label><br>
+				<label><input type="radio" name="q11" value=""><span dir="ltr" class="br-spec nw">:required</span></label><br>
+				<label><input type="radio" name="q11" value=""><span dir="ltr" class="br-spec nw">:disabled</span></label><br>
+				<label><input type="radio" name="q11" value=""><span dir="ltr" class="br-spec nw">:valid</span></label>
+			</form>
+			<h4><span dir="ltr" class="br-spec nw">:valid</span></h4>
+            </li>
+
+            <!-- Q12 -->
+            <li>
+                <h3>أيٌّ من هذه الخيارات لا يُعدّ فئةً زائفةً (pseudo-class) متعلقةً بالموقع؟</h3>
+                <form>
+				<label><input type="radio" name="q12" value=""><span dir="ltr" class="br-spec nw">:current</span></label><br>
+				<label><input type="radio" name="q12" value=""><span dir="ltr" class="br-spec nw">:link</span></label><br>
+				<label><input type="radio" name="q12" value=""><span dir="ltr" class="br-spec nw">:any-link</span></label><br>
+				<label><input type="radio" name="q12" value=""><span dir="ltr" class="br-spec nw">:visited</span></label>
+			</form>
+			<h4><span dir="ltr" class="br-spec nw">:current</span></h4>
+            </li>
+
+            <!-- Q13 -->
+            <li>
+                <h3>أيٌّ مما يلي يختار عنصر القائمة الثالث؟</h3>
+                <form>
+				<label><input type="radio" name="q13" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag-b">li:last-child(3)</span> <span class="attr">{
+ color: <span class="txt">red</span>;
+}</span>
+            </code></pre></div>
+                </label><br>
+
+				<label><input type="radio" name="q13" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag-b">li:child(3)</span> <span class="attr">{
+ color: <span class="txt">red</span>;
+}</span>
+            </code></pre></div>
+                </label><br>
+
+				<label><input type="radio" name="q13" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag-b">li:nth-child(three)</span> <span class="attr">{
+ color: <span class="txt">red</span>;
+}</span>
+            </code></pre></div>
+                </label><br>
+
+				<label><input type="radio" name="q13" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag-b">li:nth-child(3)</span> <span class="attr">{
+ color: <span class="txt">red</span>;
+}</span>
+            </code></pre></div>
+                </label>
+			</form>
+			<h4>
+                <div class="code-block"><pre><code>
+<span class="tag-b">li:nth-child(3)</span> <span class="attr">{
+ color: <span class="txt">red</span>;
+}</span>
+            </code></pre></div>
+            </h4>
+            </li>
+
+            <!-- Q14 -->
+            <li>
+                <h3>ما هي العناصر التي ستظهر باللون الأزرق <span dir="ltr" class="br-spec nw">blue</span> عند استخدام كود CSS التالي؟</h3>
+                <div class="code-block"><pre><code>
+<span class="tag-b">p:is(.blue, .highlight)</span> <span class="attr">{
+ color: <span class="txt">blue</span>;
+}</span>
+            </code></pre></div>
+                <form>
+				<label><input type="radio" name="q14" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag">&lt;p <span class="attr">class=<span class="value">"blue"</span></span>&gt;<span dir="rtl" class="txt">الفقرة 1</span>&lt;/p&gt;
+&lt;p <span class="attr">class=<span class="value">"highlight"</span></span>&gt;<span dir="rtl" class="txt">الفقرة 2</span>&lt;/p&gt;</span>
+                    </code></pre></div>
+                </label><br>
+
+				<label><input type="radio" name="q14" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag">&lt;p <span class="attr">class=<span class="value">"class"</span></span>&gt;<span dir="rtl" class="txt">الفقرة 1</span>&lt;/p&gt;
+&lt;p <span class="attr">class=<span class="value">"highlight"</span></span>&gt;<span dir="rtl" class="txt">الفقرة 2</span>&lt;/p&gt;</span>
+                    </code></pre></div>
+                </label><br>
+
+				<label><input type="radio" name="q14" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag">&lt;div <span class="attr">class=<span class="value">"blue"</span></span>&gt;<span dir="rtl" class="txt">الفقرة 1</span>&lt;/div&gt;
+&lt;div <span class="attr">class=<span class="value">"highlight"</span></span>&gt;<span dir="rtl" class="txt">الفقرة 2</span>&lt;/div&gt;</span>
+                    </code></pre></div>
+                </label><br>
+
+				<label><input type="radio" name="q14" value="">
+                    <div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;<span dir="rtl" class="txt">الفقرة 1</span>&lt;/p&gt;
+&lt;span <span class="attr">class=<span class="value">"highlight"</span></span>&gt;<span dir="rtl" class="txt">الفقرة 2</span>&lt;/span&gt;</span>
+                    </code></pre></div>
+                </label>
+			</form>
+			<h4>
+                <div class="code-block"><pre><code>
+<span class="tag">&lt;p <span class="attr">class=<span class="value">"blue"</span></span>&gt;<span dir="rtl" class="txt">الفقرة 1</span>&lt;/p&gt;
+&lt;p <span class="attr">class=<span class="value">"highlight"</span></span>&gt;<span dir="rtl" class="txt">الفقرة 2</span>&lt;/p&gt;</span>
+                    </code></pre></div>
+            </h4>
+            </li>
+
+            <!-- Q15 -->
+            <li>
+                <h3>ما الذي تفعله الفئة الزائفة <span dir="ltr" class="br-spec nw">:not()</span> ؟</h3>
+                <form>
+				<label><input type="radio" name="q15" value="">تختار العناصر التي تطابق مُحدِّدًا معينًا.</label><br>
+				<label><input type="radio" name="q15" value="">تُضيف أنماطًا (styles) إلى جميع العناصر.</label><br>
+				<label><input type="radio" name="q15" value="">تختار جميع العناصر التابعة لعنصر أب.</label><br>
+				<label><input type="radio" name="q15" value="">تختار العناصر التي لا تطابق مُحدِّدًا معينًا.</label>
+			</form>
+			<h4>تختار العناصر التي لا تطابق مُحدِّدًا معينًا.</h4>
+            </li>
+
+            <!-- Q16 -->
+            <li>
+                <h3>ما الذي تقوم به قاعدة CSS التالية؟</h3>
+                <div class="code-block"><pre><code>
+<span class="tag-b">p:first-of-type</span> <span class="attr">{
+ font-style: <span class="txt">italic</span>;
+}</span>
+            </code></pre></div>
+                <form>
+				<label><input type="radio" name="q16" value="">يختار الابن الأول لكل عنصر من عناصر <span dir="ltr" class="br-spec nw">p</span>.</label><br>
+				<label><input type="radio" name="q16" value="">يختار أول عنصر <span dir="ltr" class="br-spec nw">p</span> في المستند.</label><br>
+				<label><input type="radio" name="q16" value="">يختار أول عنصر <span dir="ltr" class="br-spec nw">p</span> داخل حاوية أب.</label><br>
+				<label><input type="radio" name="q16" value="">يختار جميع عناصر <span dir="ltr" class="br-spec nw">p</span> في المستند.</label>
+			</form>
+			<h4>يختار أول عنصر <span dir="ltr" class="br-spec nw">p</span> داخل حاوية أب.</h4>
+            </li>
+
+            <!-- Q17 -->
+            <li>
+                <h3>ما الذي تقوم به الفئة الزائفة <span dir="ltr" class="br-spec nw">:last-of-type</span> ؟</h3>
+                <form>
+				<label><input type="radio" name="q17" value="">يختار العنصر الابن الأول من نوعٍ محددٍ داخل عنصره الأب.</label><br>
+				<label><input type="radio" name="q17" value="">يختار العنصر الابن الأوسط من نوعٍ محددٍ داخل عنصره الأب.</label><br>
+				<label><input type="radio" name="q17" value="">يختار العنصر الابن الأخير من نوعٍ محددٍ داخل عنصره الأب.</label><br>
+				<label><input type="radio" name="q17" value="">يختار كل العناصر الأبناء من نوعٍ محددٍ داخل عنصره الأب.</label>
+			</form>
+			<h4>يختار العنصر الابن الأخير من نوعٍ محددٍ داخل عنصره الأب.</h4>
+            </li>
+
+            <!-- Q18 -->
+            <li>
+                <h3>أي فئة زائفة (pseudo-class) تُستخدم لاختيار العنصر الثاني في قائمة ما؟</h3>
+                <form>
+				<label><input type="radio" name="q18" value=""><span dir="ltr" class="br-spec nw">:nth-child(2)</span></label><br>
+				<label><input type="radio" name="q18" value=""><span dir="ltr" class="br-spec nw">:is()</span></label><br>
+				<label><input type="radio" name="q18" value=""><span dir="ltr" class="br-spec nw">:required</span></label><br>
+				<label><input type="radio" name="q18" value=""><span dir="ltr" class="br-spec nw">:first-child</span></label>
+			</form>
+			<h4><span dir="ltr" class="br-spec nw">:nth-child(2)</span></h4>
+            </li>
+
+            <!-- Q19 -->
+            <li>
+                <h3>أيٌّ من هذه يُعدُّ فئةً زائفةً وظيفيةً (functional pseudo-class) ؟</h3>
+                <form>
+				<label><input type="radio" name="q19" value=""><span dir="ltr" class="br-spec nw">:is()</span></label><br>
+				<label><input type="radio" name="q19" value=""><span dir="ltr" class="br-spec nw">:checked</span></label><br>
+				<label><input type="radio" name="q19" value=""><span dir="ltr" class="br-spec nw">:match()</span></label><br>
+				<label><input type="radio" name="q19" value=""><span dir="ltr" class="br-spec nw">:first-child</span></label>
+			</form>
+			<h4><span dir="ltr" class="br-spec nw">:is()</span></h4>
+            </li>
+
+            <!-- Q20 -->
+            <li>
+                <h3>أيٌّ من هذه الخيارات لا يُعدُّ فئةً زائفةً وظيفيةً (functional pseudo-class) ؟</h3>
+                <form>
+				<label><input type="radio" name="q20" value=""><span dir="ltr" class="br-spec nw">:contains()</span></label><br>
+				<label><input type="radio" name="q20" value=""><span dir="ltr" class="br-spec nw">:not()</span></label><br>
+				<label><input type="radio" name="q20" value=""><span dir="ltr" class="br-spec nw">:where()</span></label><br>
+				<label><input type="radio" name="q20" value=""><span dir="ltr" class="br-spec nw">:has()</span></label>
+			</form>
+			<h4><span dir="ltr" class="br-spec nw">:contains()</span></h4>
+            </li>
+        </ol>
+
+        <!-- Centered button -->
+		<div class="btn-container">
+		<button class="show-btn" onclick="showAllAnswers()">Show All Answers</button>
+		</div>
+		
+	</section>
+
+    
+
+  
+
+
+  <!-- Pages -->
+  <section class="page-nav">
+    <a class="prev" href="../css-pseudo-classes-review/CSS-Pseudo-classes-Review.html">&#8594; السابق</a>
+    <a class="next" href="#">التالي &#8592;</a>
+  </section>
+
+
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+<script>
+function showAllAnswers() {
+  const allAnswers = document.querySelectorAll('h4');
+  allAnswers.forEach(ans => ans.style.display = 'block');
+}
+</script>
+
+</body>
+</html>
