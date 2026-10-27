@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هو نموذج الألوان RGB، وكيف تعمل دالة RGB في لغة CSS ؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/colorsStyles/working-with-colors-in-css/What-Is-the-RGB-Color-Model-and-How-Does-the-RGB-Function-Work-in-CSS.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الألوان</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>التعامل مع الألوان في CSS</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+    <section class="sub-title">
+        <h2>ما هو نموذج الألوان RGB، وكيف تعمل دالة RGB في لغة CSS ؟</h2>
+        <span class="hint">نظري</span>
+		<p></p>
+    </section>
+
+
+    
+
+    <section>
+
+        <!-- Introduction to the RGB Color Model -->
+        <section>
+            <h3>مقدمة إلى نموذج الألوان RGB</h3>
+            <p>
+                عند التعامل مع الألوان في لغة CSS، من الضروري فهم نموذج الألوان RGB. 
+                يرمز الاختصار RGB إلى الأحمر (Red) والأخضر (Green) والأزرق (Blue)، وهي الألوان الأساسية للضوء. 
+                وتُدمج هذه الألوان الثلاثة بكثافات متفاوتة لإنتاج طيف واسع من الألوان.
+            </p>
+            <p>
+                يُعد نموذج الألوان RGB نموذجاً لونياً جمعياً (additive color model)، 
+                مما يعني أن الألوان تُنشأ عن طريق دمج الضوء بكثافات متفاوتة.
+            </p>
+            <p>
+                يمكن أن تتراوح شدة (intensity) كل لون من <span dir="ltr" class="br-spec nw">0</span> (أي غياب الضوء تماماً) إلى <span dir="ltr" class="br-spec nw">255</span> (أي أقصى درجات الضوء). 
+                ومن خلال مزج مستويات مختلفة من الألوان الأحمر والأخضر والأزرق، يمكنك إنتاج أي لون تراه على شاشتك. 
+                على سبيل المثال:
+            </p>
+            <ul>
+                <li>
+                    <p>
+                        يُمثَّل اللون الأسود Black بالصيغة <span dir="ltr" class="br-spec nw">rgb(0, 0, 0)</span> ، 
+                        وهو ما يعني غياب الضوء عن الألوان الثلاثة جميعها.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        يُمثَّل اللون الأبيض White بالصيغة <span dir="ltr" class="br-spec nw">rgb(255, 255, 255)</span> ، 
+                        وهو ما يعني أقصى شدة ضوئية للألوان الثلاثة جميعها.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        يُمثَّل اللون الأحمر Red بالصيغة <span dir="ltr" class="br-spec nw">rgb(255, 0, 0)</span> ، 
+                        حيث تكون كثافة اللون الأحمر في أقصى درجاتها، بينما تنعدم كثافة اللونين الأخضر والأزرق.
+                    </p>
+                </li>
+            </ul>
+            <br>
+
+        </section>
+
+        <!-- The rgb() Function in CSS -->
+        <section>
+            <h3>دالة <span dir="ltr" class="special-code">rgb()</span> في CSS</h3>
+            <p>
+                في لغة CSS، تتيح لك الدالة <span dir="ltr" class="br-spec nw">rgb()</span> تحديد الألوان باستخدام نموذج الألوان RGB. 
+                تأخذ هذه الدالة ثلاث قيم، تُمثّل كل منها شدة اللون الأحمر red والأخضر green والأزرق blue، على التوالي. 
+                إليك الصيغة الأساسية لها:
+            </p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">element</span> <span class="attr">{
+ color: <span class="tag-b">rgb</span>(<span class="txt">red, green, blue</span>);
+}</span>
+            </code></pre></div>
+
+            <p>
+                يمكن أن تتراوح قيم الألوان الأحمر والأخضر والأزرق بين <span dir="ltr" class="br-spec nw">0</span> و <span dir="ltr" class="br-spec nw">255</span>، 
+                حيث يمثل الرقم <span dir="ltr" class="br-spec nw">0</span> غياب اللون، 
+                بينما يمثل الرقم <span dir="ltr" class="br-spec nw">255</span> التشبع الكامل. 
+                إليك مثال على كيفية استخدام الدالة <span dir="ltr" class="br-spec nw">rgb()</span> في لغة CSS:
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;p&gt;<span dir="rtl" class="txt">هذه فقرة.</span>&lt;/p&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">p</span> <span class="attr">{
+ color: <span class="tag-b">rgb</span>(<span class="txt">255, 0, 0</span>);
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview1">
+                    <p>هذه فقرة.</p>
+				</div>
+            </div>
+            <p>
+                سيؤدي هذا الكود إلى تغيير لون نص الفقرة إلى اللون الأحمر لأن قيمة اللون الأحمر مضبوطة على <span dir="ltr" class="br-spec nw">255</span>، 
+                بينما تم ضبط اللونين الأخضر والأزرق على <span dir="ltr" class="br-spec nw">0</span>.
+            </p>
+            <br>
+
+        </section>
+
+        <!-- Transparency with the rgba() Function -->
+        <section>
+            <h3>الشفافية Transparency باستخدام الدالة <span dir="ltr" class="special-code">rgba()</span></h3>
+            <p>
+                توفر لغة CSS أيضاً الدالة <span dir="ltr" class="br-spec nw">rgba()</span> ، 
+                التي تضيف قيمة رابعة — وهي "ألفا" (alpha) — تتحكم في شفافية اللون. 
+                تتراوح قيمة "ألفا" بين <span dir="ltr" class="br-spec nw">0</span> (شفاف تماماً) و <span dir="ltr" class="br-spec nw">1</span> (غير شفاف تماماً). 
+                إليك مثال على استخدام <span dir="ltr" class="br-spec nw">rgba()</span> :
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div&gt;<span dir="rtl" class="txt">هذا عنصر div.</span>&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">div</span> <span class="attr">{
+ background-color: <span class="tag-b">rgba</span>(<span class="txt">0, 0, 255, 0.5</span>);
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview2">
+                    <div>هذا عنصر div.</div>
+				</div>
+            </div>
+
+            <p>
+                سيؤدي هذا الكود إلى تطبيق خلفية زرقاء شبه شفافة على عنصر <span dir="ltr" class="br-spec nw">div</span>؛ 
+                وذلك لأن قيمتي اللونين الأحمر والأخضر مضبوطتان على <span dir="ltr" class="br-spec nw">0</span> ، 
+                وقيمة اللون الأزرق مضبوطة على <span dir="ltr" class="br-spec nw">255</span> ، 
+                بينما تم ضبط قيمة الشفافية (alpha) على <span dir="ltr" class="br-spec nw">0.5</span> (أي بنسبة شفافية تبلغ 50%).
+            </p>
+            <br>
+
+        </section>
+
+        <!-- Why Use the RGB Color Model? -->
+        <section>
+            <h3>لماذا نستخدم نموذج الألوان RGB ؟</h3>
+            <p>
+                يُعد نموذج الألوان RGB مفيداً بشكل خاص للوسائط الرقمية؛ 
+                لأنه يتوافق مباشرةً مع كيفية عرض الشاشات للألوان. 
+                إذ تستخدم الشاشات وحدات بكسل دقيقة باللون الأحمر والأخضر والأزرق لتكوين الألوان التي تراها. 
+                ومن خلال التحكم في شدة هذه الوحدات عبر قيم RGB، 
+                يمكنك الحصول على مجموعة واسعة من الألوان لتصاميم الويب الخاصة بك.
+            </p>
+            <p>
+                بالإضافة إلى ذلك، يُعد نموذج RGB مثالياً عند العمل على تصميمات ديناميكية. 
+                فعلى سبيل المثال، إذا كنت ترغب في إنشاء رسوم متحركة أو تأثيرات لونية تتطلب تغييرات فورية، 
+                فإن مرونة نظام RGB تتيح لك تعديل الألوان برمجياً.
+            </p>
+            <p>
+                من خلال فهم نموذج الألوان RGB وكيفية استخدام الدالتين <span dir="ltr" class="br-spec nw">rgb()</span> و <span dir="ltr" class="br-spec nw">rgba()</span> في لغة CSS، 
+                ستتمتع بتحكم أكبر في كيفية عرض الألوان على صفحات الويب الخاصة بك. 
+                إذ يمكنك ابتكار تصاميم ذات ألوان نابضة بالحياة، 
+                وإضافة تأثيرات الشفافية، 
+                بل وتعديل الألوان برمجياً للحصول على تأثيرات ديناميكية.
+            </p>
+        </section>
+
+    </section>
+
+    <!-- questions -->
+    <section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما الذي تمثله الأرقام الموجودة في الدالة <span dir="ltr" class="br-spec nw">rgb()</span> ؟</p>
+
+		<p> 1. عرض <span dir="ltr" class="br-spec nw">width</span> العنصر وارتفاعه <span dir="ltr" class="br-spec nw">height</span> وعمقه <span dir="ltr" class="br-spec nw">depth</span>. ❌</p>
+        <p><mark> 2. مقدار الضوء الأحمر <span dir="ltr" class="br-spec nw">red</span> والأخضر <span dir="ltr" class="br-spec nw">green</span> والأزرق <span dir="ltr" class="br-spec nw">blue</span>. ✅</mark></p>
+        <p> 3. أحجام الحشوة <span dir="ltr" class="br-spec nw">padding</span> والهامش <span dir="ltr" class="br-spec nw">margin</span> والحدود <span dir="ltr" class="br-spec nw">border</span>. ❌</p>
+		<p> 4. مقدار درجة اللون <span dir="ltr" class="br-spec nw">hue</span> والتشبع <span dir="ltr" class="br-spec nw">saturation</span> والسطوع <span dir="ltr" class="br-spec nw">lightness</span>. ❌</p>
+        <br>
+
+        <p class="userstory">ما هي دالة CSS التي ستستخدمها إذا أردت التحكم في شفافية (transparency) لون ما؟</p>
+		
+		<p> 1. <span dir="ltr" class="br-spec nw">rgb()</span> ❌</p>
+        <p><mark> 2. <span dir="ltr" class="br-spec nw">rgba()</span> ✅</mark></p>
+        <p> 3. <span dir="ltr" class="br-spec nw">hsl()</span> ❌</p>
+		<p> 4. <span dir="ltr" class="br-spec nw">hex()</span> ❌</p>
+        <br>
+
+        <p class="userstory">ما هي القيمة القصوى لأي لون فردي في نموذج RGB ؟</p>
+		
+		<p> 1. <span dir="ltr" class="br-spec nw">100</span> ❌</p>
+        <p> 2. <span dir="ltr" class="br-spec nw">50</span> ❌</p>
+        <p><mark> 3. <span dir="ltr" class="br-spec nw">255</span> ✅</mark></p>
+		<p> 4. <span dir="ltr" class="br-spec nw">360</span> ❌</p>
+        
+	</section>
+  
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./What-Are-Named-Colors-in-CSS-and-When-to-Use-Them.html">&#8594; السابق</a>
+        <a class="next" href="./What-Is-the-HSL-Color-Model-and-How-Does-the-HSL-Function-Work-in-CSS.html">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>

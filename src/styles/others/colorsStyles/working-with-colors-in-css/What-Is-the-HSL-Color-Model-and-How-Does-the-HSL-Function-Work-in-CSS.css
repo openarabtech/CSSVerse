@@ -1,0 +1,32 @@
+/* PREVIEW 1 */
+.preview1 {
+    min-height: 10vh;
+    background-color: hsl(0 0% 1% / 1);
+}
+
+.preview1 p {
+ color: hsl(120 100% 50%);
+}
+
+/* PREVIEW 2 */
+.preview2 {
+    min-height: 20vh;
+}
+
+.preview2 div.light {
+  background-color: hsl(240 100% 80%);
+}
+
+div.dark {
+  background-color: hsl(240 100% 20%);
+  color: hsl(0 0% 100%);
+}
+
+/* PREVIEW 3 */
+.preview3 {
+    min-height: 20vh;
+}
+
+.preview3 div {
+ background-color: hsl(0 100% 50% / 0.5);
+}

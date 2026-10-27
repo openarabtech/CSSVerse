@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هو نموذج الألوان HSL، وكيف تعمل دالة HSL في CSS ؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/colorsStyles/working-with-colors-in-css/What-Is-the-HSL-Color-Model-and-How-Does-the-HSL-Function-Work-in-CSS.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الألوان</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>التعامل مع الألوان في CSS</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+    <section class="sub-title">
+        <h2>ما هو نموذج الألوان HSL، وكيف تعمل دالة HSL في CSS ؟</h2>
+        <span class="hint">نظري</span>
+		<p></p>
+    </section>
+
+
+    
+
+    <section>
+        <section>
+            <p>
+                عند تصميم المواقع الإلكترونية، 
+                تُعدّ طريقة استخدام نموذج الألوان HSL واحدة من أكثر الطرق مرونة وبديهية للتعامل مع الألوان. 
+                يرمز الاختصار HSL إلى "درجة اللون" (Hue)، 
+                و"التشبع" (Saturation)، 
+                و"السطوع" (Lightness)؛ 
+                وهي المكونات الثلاثة الأساسية التي تحدد أي لون.
+            </p>
+            <p>
+                يمثّل نموذج الألوان HSL الألوان بطريقة تتوافق بشكل أكبر مع كيفية إدراك البشر للألوان. 
+                في هذا الدرس، سنتعرف على ماهية نموذج الألوان HSL وكيفية استخدام الدالة <span dir="ltr" class="br-spec nw">hsl()</span> في لغة CSS.
+            </p>
+        </section>
+
+        <!-- Understanding HSL -->
+        <section>
+            <h3>فهم نظام HSL</h3>
+            <p>
+                يُشير مصطلح "درجة اللون" (Hue) إلى نوع اللون، 
+                ويُمثَّل كزاوية على عجلة الألوان (color wheel) 
+                تتراوح قيمتها بين <span dir="ltr" class="br-spec nw">0</span> و<span dir="ltr" class="br-spec nw">360</span> درجة. 
+                فعلى سبيل المثال، تُمثِّل الزاوية <span dir="ltr" class="br-spec nw">0</span> درجة اللون الأحمر Red، 
+                بينما تُمثِّل الزاوية <span dir="ltr" class="br-spec nw">120</span> درجة اللون الأخضر Green، 
+                وتُمثِّل الزاوية <span dir="ltr" class="br-spec nw">240</span> درجة اللون الأزرق Blue. 
+                ومن خلال تعديل درجة اللون، 
+                يمكنك التنقل بين ألوان مختلفة عبر الطيف اللوني (the spectrum).
+            </p>
+            <p>
+                يشير "التشبع" (Saturation) إلى كثافة اللون أو نقائه. 
+                ويُقاس كنسبة مئوية تتراوح من <span dir="ltr" class="br-spec nw">0%</span> (لون فاقد للتشبع تماماً، أي درجة من درجات الرمادي) إلى <span dir="ltr" class="br-spec nw">100%</span> (أكثر صور اللون حيويةً). 
+                فاللون ذو التشبع بنسبة <span dir="ltr" class="br-spec nw">100%</span> يكون فائق الحيوية، 
+                بينما يظهر اللون ذو التشبع بنسبة <span dir="ltr" class="br-spec nw">0%</span> كدرجة من درجات الرمادي (shade of gray).
+            </p>
+            <p>
+                تُحدد "السطوع" (Lightness) مدى كون اللون فاتحاً أو داكناً، 
+                ويُعبَّر عنها أيضاً كنسبة مئوية. 
+                فقيمة السطوع <span dir="ltr" class="br-spec nw">0%</span> تُنتج اللون الأسود، 
+                بينما تمنحك قيمة <span dir="ltr" class="br-spec nw">50%</span> الدرجة الطبيعية للون، 
+                وتؤدي قيمة <span dir="ltr" class="br-spec nw">100%</span> إلى اللون الأبيض.
+            </p>
+            <br>
+
+        </section>
+
+
+        <!-- The hsl() Function -->
+        <section>
+            <h3>دالة <span dir="ltr" class="special-code">hsl()</span></h3>
+            <p>
+                في لغة CSS، تُستخدم الدالة <span dir="ltr" class="br-spec nw">hsl()</span> لتحديد الألوان باستخدام نموذج الألوان HSL. 
+                وتستخدم الصيغة الحديثة قيماً مفصولة بمسافات:
+            </p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">element</span> <span class="attr">{
+ color: <span class="tag-b">hsl</span>(<span class="txt">hue saturation lightness</span>);
+}</span>
+            </code></pre></div>
+            <p>
+                قد تصادف أيضًا الصيغة القديمة التي تستخدم الفواصل للفصل بين العناصر في الأكواد البرمجية الموجودة، وهي صيغة لا تزال المتصفحات تدعمها:
+            </p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">element</span> <span class="attr">{
+ color: <span class="tag-b">hsl</span>(<span class="txt">hue, saturation, lightness</span>);
+}</span>
+            </code></pre></div>
+            <p>
+                لنُوضِّح ذلك من خلال مثال:
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;p&gt;<span dir="rtl" class="txt">هذه فقرة.</span>&lt;/p&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">body</span> <span class="attr">{
+ background-color: <span class="tag-b">hsl</span>(<span class="txt">0 0% 1% / 1</span>);
+}</span>
+
+<span class="tag-b">p</span> <span class="attr">{
+ color: <span class="tag-b">hsl</span>(<span class="txt">120 100% 50%</span>);
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview1">
+                    <p>هذه فقرة.</p>
+				</div>
+            </div>
+
+            <p>
+                في هذه الحالة، تبلغ (hue) درجة اللون <span dir="ltr" class="br-spec nw">120</span> درجة، 
+                وهو ما يقابل اللون الأخضر Green. 
+                وبما أن درجة التشبع (saturation) تبلغ <span dir="ltr" class="br-spec nw">100%</span> ، 
+                فسيكون اللون الأخضر فائق الحيوية (fully vivid). 
+                أما درجة السطوع (lightness) فتبلغ <span dir="ltr" class="br-spec nw">50%</span> ، 
+                مما يعني أن اللون في درجته الطبيعية؛ 
+                أي ليس داكناً جداً ولا فاتحاً جداً. 
+                ونتيجة لذلك، سيكون لون نص الفقرة أخضر زاهياً (bright green).
+            </p>
+
+            <br>
+
+        </section>
+
+
+        <!-- Creating Shades and Tints -->
+        <section>
+            <h3>إنشاء الظلال Shades  والألوان الفاتحة Tints</h3>
+            <p>
+                تتمثل إحدى المزايا الرئيسية لنظام الألوان HSL في طبيعته البديهية؛ 
+                فهو يسهّل تعديل حيوية اللون أو درجة سطوعه من خلال تغيير قيم التشبع (saturation) والسطوع (lightness)، 
+                وذلك دون الحاجة إلى تغيير اللون الأساسي (hue).
+            </p>
+            <p>
+                على سبيل المثال، إذا أردت إنشاء درجات أو ألوان فرعية مختلفة من اللون نفسه، 
+                فيمكنك ببساطة تعديل قيمة السطوع (lightness value).
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"light"</span></span>&gt;<span dir="rtl" class="txt">هذا عنصر div باللون الأزرق الفاتح (light blue).</span>&lt;/div&gt;
+&lt;div <span class="attr">class=<span class="value">"dark"</span></span>&gt;<span dir="rtl" class="txt">هذا عنصر div باللون الأزرق الداكن (dark blue).</span>&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">div.light</span> <span class="attr">{
+ background-color: <span class="tag-b">hsl</span>(<span class="txt">240 100% 80%</span>);
+}</span>
+
+<span class="tag-b">div.dark</span> <span class="attr">{
+ background-color: <span class="tag-b">hsl</span>(<span class="txt">240 100% 20%</span>);
+ color: <span class="tag-b">hsl</span>(<span class="txt">0 0% 100%</span>);
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview2">
+                    <div class="light">هذا عنصر div باللون الأزرق الفاتح (light blue).</div>
+                    <div class="dark">هذا عنصر div باللون الأزرق الداكن (dark blue).</div>
+				</div>
+            </div>
+            <p>
+                هنا، يستخدم كلا عنصري div 
+                نفس درجة اللون (<span dir="ltr" class="br-spec nw">240</span> درجة، وهي اللون الأزرق)، 
+                لكن أحدهما يتمتع بقيمة سطوع (lightness) تبلغ <span dir="ltr" class="br-spec nw">80%</span> (درجة أفتح من الأزرق)، 
+                بينما يتمتع الآخر بقيمة سطوع (lightness) تبلغ <span dir="ltr" class="br-spec nw">20%</span> (درجة أغمق من الأزرق).
+            </p>
+            <br>
+
+        </section>
+
+
+        <!-- Working with Transparency -->
+        <section>
+            <h3>العمل مع الشفافية Transparency</h3>
+            <p>
+                تماماً مثل نموذج RGB، 
+                تدعم الدالة <span dir="ltr" class="br-spec nw">hsl()</span> أيضاً قيمة "ألفا" (alpha) اختيارية للتحكم في الشفافية (transparency). 
+                يمكنك إضافتها بعد فاصل من نوع <span dir="ltr" class="br-spec nw">/</span> كمعامل رابع. 
+                إليك الصيغة الأساسية:
+            </p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">element</span> <span class="attr">{
+ background-color: <span class="tag-b">hsl</span>(<span class="txt">hue saturation lightness / alpha</span>);
+}</span>
+            </code></pre></div>
+            <p>
+                لنلقِ نظرةً على مثالٍ:
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div&gt;<span dir="rtl" class="txt">هذا عنصر div.</span>&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">div</span> <span class="attr">{
+ background-color: <span class="tag-b">hsl</span>(<span class="txt">0 100% 50% / 0.5</span>);
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview3">
+                    <div>هذا عنصر div.</div>
+            	</div>
+            </div>
+
+            <p>
+                يمنح هذا الكود العنصر <span dir="ltr" class="br-spec nw">div</span> خلفيةً حمراء شبه شفافة (semi-transparent)؛ 
+                حيث تُضبط درجة اللون (hue) عند <span dir="ltr" class="br-spec nw">0</span> درجة (اللون الأحمر)، 
+                والتشبع (saturation) عند <span dir="ltr" class="br-spec nw">100%</span> ، 
+                والسطوع (lightness) عند <span dir="ltr" class="br-spec nw">50%</span>، 
+                بينما تُحدد قيمة ألفا (alpha) بـ <span dir="ltr" class="br-spec nw">0.5</span> (أي بنسبة تعتيم قدرها <span dir="ltr" class="br-spec nw">50%</span>). 
+                يمكنك أيضاً تحديد قيمة ألفا كنسبة مئوية؛ 
+                فعلى سبيل المثال، الصيغة <span dir="ltr" class="br-spec nw">hsl(0 100% 50% / 50%)</span> 
+                تعادل الصيغة <span dir="ltr" class="br-spec nw">hsl(0 100% 50% / 0.5)</span>.
+            </p>
+            <br>
+
+        </section>
+
+
+        <!-- The hsla() Function -->
+        <section>
+            <h3>دالة <span dir="ltr" class="special-code">hsla()</span></h3>
+            <p>
+                ستجد أيضًا، وبشكل شائع، 
+                الدالة <span dir="ltr" class="br-spec nw">hsla()</span> في أكواد CSS الحالية. 
+                كانت هذه هي الطريقة الأصلية لإضافة الشفافية إلى ألوان HSL، 
+                وذلك باستخدام قيم تفصل بينها فواصل:
+            </p>
+
+            <div class="code-block"><pre><code>
+<span class="tag-b">element</span> <span class="attr">{
+ background-color: <span class="tag-b">hsla</span>(<span class="txt">hue, saturation, lightness, alpha</span>);
+}</span>
+            </code></pre></div>
+            <p>
+                على سبيل المثال، تُعدّ الصيغة <span dir="ltr" class="special-code">hsla(0, 100%, 50%, 0.5)</span> 
+                المكافئ القديم للصيغة <span dir="ltr" class="special-code">hsl(0 100% 50% / 0.5)</span>. 
+                ورغم أن المتصفحات تدعم كلتيهما، 
+                إلا أن صيغة <span dir="ltr" class="special-code">hsl()</span> الحديثة التي تستخدم الفاصل المائل <span dir="ltr" class="special-code">/</span> أصبحت هي المفضلة حالياً.
+            </p>
+            <br>
+
+
+        </section>
+
+
+        <!-- Advantages of HSL -->
+        <section>
+            <h3>مزايا HSL</h3>
+            <p>
+                يُعد نموذج الألوان HSL مفيداً بشكل خاص عندما تحتاج إلى إنشاء أنظمة ألوان وتعديل درجات الألوان أو تفتيحها وتغميقها بسهولة.
+            </p>
+            <p>
+                نظراً لأن نظام HSL يفصل درجة اللون (Hue) عن التشبع (Saturation) والسطوع (Lightness)، 
+                فإنه يتيح لك الحفاظ على نسق لوني متسق مع إمكانية تعديل السطوع لإضافة الظلال أو الإضاءات. 
+                وتجعل هذه المرونة من نظام HSL خياراً مفضلاً لدى المصممين والمطورين على حد سواء.
+            </p>
+            <p>
+                بالإضافة إلى ذلك، 
+                تجعل صيغة HSL قيم الألوان أكثر قابلية للقراءة والفهم مقارنةً بطرق أخرى، 
+                مثل رموز الألوان بنظام الـ Hex أو نظام RGB. 
+                فهي تتيح لك إدراك الغرض من اللون بشكل أوضح، 
+                مما يسهّل عليك إجراء التعديلات المناسبة، 
+                لا سيما عند تجربة تصميمات مختلفة.
+            </p>
+            <p>
+                يمنحك نموذج الألوان HSL مرونة أكبر في التحكم في درجات الألوان، والتشبع، والسطوع؛ 
+                مما يجعله أداةً قويةً لإنشاء تصاميم غنية وديناميكية باستخدام CSS.
+            </p>
+        </section>
+
+        
+        
+
+    </section>
+
+    <!-- questions -->
+        <section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		
+
+        <p class="userstory">ما الذي تمثله القيمة الأولى في الدالة <span dir="ltr">hsl()</span> ؟</p>
+		
+		<p> 1. التشبع Saturation ❌</p>
+        <p> 2. السطوع Lightness ❌</p>
+        <p><mark> 3. درجة اللون Hue ✅</mark></p>
+		<p> 4. الشفافية Opacity ❌</p>
+        <br>
+
+        <p class="userstory">ما هي قيمة النسبة المئوية للسطوع (lightness) التي تؤدي إلى اللون الأبيض الخالص عند استخدام نموذج HSL ؟</p>
+		
+		<p> 1. <span dir="ltr" class="br-spec nw">0%</span> ❌</p>
+        <p> 2. <span dir="ltr" class="br-spec nw">50%</span> ❌</p>
+        <p><mark> 3. <span dir="ltr" class="br-spec nw">100%</span> ✅</mark></p>
+		<p> 4. <span dir="ltr" class="br-spec nw">25%</span> ❌</p>
+        <br>
+
+        <p class="userstory">كيف يمكنك جعل لونٍ ما شبه شفاف (semi-transparent) باستخدام نموذج HSL ؟</p>
+
+		<p><mark> 1. من خلال استخدام الدالة <span dir="ltr" class="br-spec nw">hsl()</span> مع فاصل مائل <span dir="ltr" class="br-spec nw">/</span> وقيمة للشفافية (alpha). ✅</mark></p>
+		<p> 2. من خلال خفض قيمة السطوع (lightness) في الدالة <span dir="ltr" class="br-spec nw">hsl()</span>. ❌</p>
+        <p> 3. من خلال زيادة قيمة درجة اللون (hue) عن 360 درجة. ❌</p>
+		<p> 4. من خلال ضبط قيمة التشبع (saturation) عند <span dir="ltr" class="br-spec nw">0%</span>. ❌</p>
+        
+	</section>
+  
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./What-Is-the-RGB-Color-Model-and-How-Does-the-RGB-Function-Work-in-CSS.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
