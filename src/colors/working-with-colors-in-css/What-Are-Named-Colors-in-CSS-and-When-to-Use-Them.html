@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هي الألوان المُسمَّاة Named Colors في CSS، ومتى ينبغي استخدامها؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/colorsStyles/working-with-colors-in-css/What-Are-Named-Colors-in-CSS-and-When-to-Use-Them.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الألوان</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>التعامل مع الألوان في CSS</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+    <section class="sub-title">
+        <h2>ما هي الألوان المُسمَّاة Named Colors في CSS، ومتى ينبغي استخدامها؟</h2>
+        <span class="hint">نظري</span>
+		<p></p>
+    </section>
+
+
+    
+
+    <section>
+        <p>
+            تؤدي الألوان في لغة CSS دوراً جوهرياً في تصميم صفحات الويب؛ 
+            فهي تعزز قابلية القراءة، وتضفي طابعاً معيناً على الصفحة، وتُحسّن تجربة المستخدم. 
+            ومن أبسط الطرق لتحديد الألوان في CSS استخدام "أسماء الألوان" (Named Colors)؛ 
+            وهي أسماء ألوان مُعرَّفة مسبقاً وتتعرف عليها المتصفحات. 
+            إليك مثال على استخدام اسم لون لعنصر فقرة (paragraph element) :
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;p&gt;<span dir="rtl" class="txt">هذه فقرة.</span>&lt;/p&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">p</span> <span class="attr">{
+ color: <span class="txt">red</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <div class="preview1">
+                <p>هذه فقرة.</p>
+			</div>
+        </div>
+        <p>
+            في هذا المثال، نستخدم اللون المُسمَّى "أحمر" <span dir="ltr" class="br-spec nw">red</span> لتنسيق النص داخل فقرة.
+        </p>
+        <p>
+            تُعد الألوان المُسماة (Named colors) في لغة CSS مجموعةً تضم 140 اسماً قياسياً للألوان، مثل الأحمر (red) ، 
+            والأزرق <span dir="ltr" class="br-spec nw">blue</span> ، 
+            والأصفر <span dir="ltr" class="br-spec nw">yellow</span> ، 
+            والأكوا <span dir="ltr" class="br-spec nw">aqua</span> ، 
+            والفوشيا <span dir="ltr" class="br-spec nw">fuchsia</span> ، 
+            والأسود <span dir="ltr" class="br-spec nw">black</span> ، وغيرها. 
+            وتتميز هذه الأسماء بسهولة الاستخدام، 
+            كما أنها تجعل الكود البرمجي أكثر قابلية للقراءة، فضلاً عن كونها تعبّر عن نفسها بوضوح.
+        </p>
+        <p>
+            تُعد الألوان المُسماة مفيدة في النماذج الأولية السريعة (quick prototyping)، 
+            والتصاميم البسيطة، وتحسين قابلية قراءة الكود. 
+            إليك مثال آخر على استخدام الألوان المُسماة مع مُحدد (selector) من نوع <span dir="ltr" class="br-spec nw">h1</span> :
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;h1&gt;<span dir="rtl" class="txt">هذا عنوان</span>&lt;/h1&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">h1</span> <span class="attr">{
+ color: <span class="txt">navy</span>;
+ background-color: <span class="txt">lightgray</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <div class="preview2">
+                <h1>هذا عنوان</h1>
+			</div>
+        </div>
+
+        <p>
+            في هذا المثال، سيتم تنسيق نص العنوان باللون الكحلي (navy)، 
+            مع خلفية باللون الرمادي الفاتح (light gray background). 
+            وتتحسن قابلية قراءة الكود بفضل استخدام أسماء الألوان، 
+            إذ تتيح فهماً بصرياً مباشراً للنمط المطلوب.
+        </p>
+        <p>
+            تُعد الألوان المُسماة في لغة CSS خياراً مريحاً، لكنها محدودة؛ 
+            إذ لا يتوفر منها سوى 140 لوناً فقط، 
+            وقد لا توفر الدرجة اللونية الدقيقة المطلوبة للتصاميم الأكثر تفصيلاً.
+        </p>
+        <p>
+            تُعد الألوان المُسماة في لغة CSS وسيلةً ممتازة لتطبيق الألوان بسرعة وبطريقة تعبيرية واضحة. 
+            ومع أنها مفيدة في التصاميم الأولية، وعمليات النمذجة، وتعزيز قابلية قراءة الكود، إلا أن محدودية نطاقها تجعلها أقل ملاءمة للتصاميم المعقدة التي تتطلب تحكماً دقيقاً في الألوان.
+        </p>
+        <p>
+            من خلال فهم نقاط القوة ومحدودية الألوان المُسَمَّاة، 
+            يمكنك تحديد الحالات التي يكون فيها استخدامها أفضل من الاعتماد على نماذج ألوان أكثر تفصيلاً - مثل RGB أو HSL - والتي ستتعرف عليها في دروس قادمة.
+        </p>
+
+
+    </section>
+    
+
+    <!-- questions -->
+    <section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما هي إحدى المزايا الرئيسية لاستخدام الألوان المُسَمَّاة (Named Colors) في لغة CSS ؟</p>
+
+		<p> 1. تتيح لك الألوان المُسَمَّاة إنشاء تدرجات (gradients) لونية. ❌</p>
+        <p><mark> 2. تُعد الألوان المُسَمَّاة أسهل في الكتابة وتجعل الكود أكثر قابلية للقراءة. ✅</mark></p>
+        <p> 3. توفر الألوان المُسَمَّاة نطاقاً أوسع من خيارات الألوان مقارنةً بالرموز الست عشرية (Hex codes). ❌</p>
+		<p> 4. تُعد الألوان المُسَمَّاة أدق وسيلة لتحديد الألوان في تصميم الويب. ❌</p>
+        <br>
+
+        <p class="userstory">في أي سيناريو قد لا تكون الألوان المُسَمَّاة (Named Colors) هي الخيار الأمثل؟</p>
+		
+		<p> 1. عندما تحتاج إلى إنشاء نموذج أولي (Prototype) لتصميم ما بسرعة. ❌</p>
+        <p><mark> 2. عندما يتطلب تصميمك درجات لونية محددة للغاية أو دقيقة التباين. ✅</mark></p>
+        <p> 3. عندما يقتصر تصميمك على الألوان الأساسية فقط. ❌</p>
+		<p> 4. عند العمل بالتعاون مع الآخرين في مشروع بسيط. ❌</p>
+        <br>
+
+        <p class="userstory">أي مما يلي يُعد مثالاً على لون مُسمَّى (named color) في CSS ؟</p>
+		
+		<p> 1. <span dir="ltr" class="br-spec nw">#ff5733</span> ❌</p>
+        <p> 2. <span dir="ltr" class="br-spec nw">rgb(255, 99, 71)</span> ❌</p>
+        <p><mark> 3. <span dir="ltr" class="br-spec nw">tomato</span> ✅</mark></p>
+		<p> 4. <span dir="ltr" class="br-spec nw">hsl(120, 100%, 50%)</span> ❌</p>
+        
+	</section>
+  
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./What-Is-Color-Theory-in-Design.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
