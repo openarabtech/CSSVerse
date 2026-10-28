@@ -1,0 +1,38 @@
+/* PREVIEW 1 */
+.preview1 {
+    min-height: 15vh;
+}
+
+.preview1 h1 {
+ color: #FF5733; /* A reddish-orange color لون برتقالي مائل إلى الحمرة */
+}
+
+.preview1 p {
+ background-color: #4CAF50; /* A shade of green درجة من اللون الأخضر */
+}
+
+/* PREVIEW 2 */
+.preview2 {
+    min-height: 25vh;
+    background-color: #F0F0F0; /* Light gray background */
+}
+
+.preview2 button {
+  background-color: #007BFF; /* A shade of blue */
+  color: #FFFFFF; /* White text */
+  font-size: 1.1rem;
+  padding: 2px 8px;
+  margin: 8px;
+}
+
+
+/* PREVIEW 3 */
+.preview3 {
+    min-height: 15vh;
+    background-color: #000;
+}
+
+.preview3 h2 {
+  color: #FFF;
+  margin: 8px;
+}

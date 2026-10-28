@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هي رموز الألوان Hex Codes وكيف تعمل في لغة CSS ؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/colorsStyles/working-with-colors-in-css/What-Are-Hex-Codes-and-How-Do-They-Work-in-CSS.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الألوان</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>التعامل مع الألوان في CSS</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+    <section class="sub-title">
+        <h2>ما هي رموز الألوان Hex Codes وكيف تعمل في لغة CSS ؟</h2>
+        <span class="hint">نظري</span>
+		<p></p>
+    </section>
+
+
+    
+
+    <section>
+        <section>
+            <p>
+                عند استخدام لغة CSS لتنسيق صفحات الويب، 
+                تُعدّ قيم الألوان بنظام "ست عشري" (Hexadecimal) إحدى أكثر الطرق شيوعاً لتحديد الألوان. 
+                وتُعتبر هذه القيم - أو ما يُعرف بـ "رموز Hex" - 
+                وسيلةً موجزة لتمثيل الألوان ضمن نموذج الألوان RGB. 
+                في هذا الدرس، سنتعرف على ماهية رموز Hex، 
+                وكيفية عملها في لغة CSS، ومتى ينبغي استخدامها.  
+            </p>
+        </section>
+
+
+        <!-- How Hex Codes Work -->
+        <section>
+            <h3>كيف تعمل رموز الألوان (Hex Codes)</h3>
+            <p>
+                رمز "hex" (اختصاراً لـ "hexadecimal code" أو الرمز الست عشري) 
+                هو سلسلة مكونة من ستة رموز تُستخدم لتمثيل الألوان في نموذج الألوان RGB. 
+                ويشير مصطلح "hex" إلى نظام العد ذي الأساس 16، 
+                الذي يستخدم الأرقام 
+                من <span dir="ltr" class="br-spec nw">0</span> 
+                إلى <span dir="ltr" class="br-spec nw">9</span> 
+                والحروف 
+                من <span dir="ltr" class="br-spec nw">A</span> 
+                إلى <span dir="ltr" class="br-spec nw">F</span>.
+            </p>
+            <p>
+                في سياق الألوان، 
+                تُحدد رموز الألوان الست عشرية (hex codes) مقدار كل من الأحمر والأخضر والأزرق (RGB) التي يتكون منها لون معين. 
+                يبدأ كل رمز من هذه الرموز بعلامة المربع (<span dir="ltr" class="br-spec nw">#</span>)، 
+                تليها ستة رموز تحدد كثافة اللون الأحمر والأخضر والأزرق في ذلك اللون.
+            </p>
+            <p>
+                على سبيل المثال، الرمز الست عشري (hex code) للون الأسود black هو <span dir="ltr" class="br-spec nw">#000000</span> ، 
+                والرمز الست عشري للون الأبيض white هو <span dir="ltr" class="br-spec nw">#FFFFFF</span>. 
+                يمثل الرمزان الأولان قيمة اللون الأحمر red، 
+                ويمثل الرمزان التاليان قيمة اللون الأخضر green، 
+                بينما يمثل الرمزان الأخيران قيمة اللون الأزرق blue.
+            </p>
+            <p>
+                في لغة CSS، يمكنك إضافة ألوان إلى العناصر باستخدام الرموز الست عشرية (hex codes). 
+                إليك الصيغة الأساسية لذلك:
+            </p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">element</span> <span class="attr">{
+ color: <span class="txt">#RRGGBB</span>;
+}</span>
+            </code></pre></div>
+            <p>
+                هنا، يُعدّ <span dir="ltr" class="br-spec nw">#RRGGBB</span> رمزاً نائباً عن رمز اللون الست عشري (hex code) الفعلي. 
+                وتمثّل أزواج الرموز <span dir="ltr" class="br-spec nw">RR</span> و <span dir="ltr" class="br-spec nw">GG</span> و <span dir="ltr" class="br-spec nw">BB</span> شدة الألوان الأحمر والأخضر والأزرق، على التوالي.
+            </p>
+            <p>
+                يمكن أن تتراوح هذه الأزواج من <span dir="ltr" class="br-spec nw">00</span> (أدنى درجة كثافة) 
+                إلى <span dir="ltr" class="br-spec nw">FF</span> (أعلى درجة كثافة). 
+                وكلما زادت القيمة، 
+                زاد حضور ذلك اللون في المزيج النهائي. 
+                على سبيل المثال، لنقم بتطبيق بعض الألوان بنظام (hex) على عدد من العناصر:
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;h1&gt;<span dir="rtl" class="txt">هذا عنوان.</span>&lt;/h1&gt;
+&lt;p&gt;<span dir="rtl" class="txt">هذه فقرة.</span>&lt;/p&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">h1</span> <span class="attr">{
+ color: <span class="txt">#FF5733</span>; <span class="value">/* A reddish-orange color لون برتقالي مائل إلى الحمرة */</span>
+}</span>
+
+<span class="tag-b">p</span> <span class="attr">{
+ background-color: <span class="txt">#4CAF50</span>; <span class="value">/* A shade of green درجة من اللون الأخضر */</span>
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview1">
+                    <h1>هذا عنوان.</h1>
+                    <p>هذه فقرة.</p>
+				</div>
+            </div>
+            <br>
+            <p>
+                في الحالة الأولى، يمثل الرمز <span dir="ltr" class="br-spec nw">#FF5733</span> لوناً برتقالياً مائلاً إلى الحمرة. 
+                وإليك التفاصيل:
+            </p>
+            <ul>
+                <li>
+                    <p><span dir="ltr" class="br-spec nw">FF</span> هي القيمة القصوى للون الأحمر (مشبع بالكامل).</p>
+                </li>
+                <li>
+                    <p><span dir="ltr" class="br-spec nw">57</span> تمثل مقداراً متوسطاً من اللون الأخضر.</p>
+                </li>
+                <li>
+                    <p><span dir="ltr" class="br-spec nw">33</span> تمثل مقداراً صغيراً من اللون الأزرق.</p>
+                </li>
+            </ul>
+            <p>
+                في الحالة الثانية، 
+                يُعدّ <span dir="ltr" class="br-spec nw">#4CAF50</span> درجةً من درجات اللون الأخضر:
+            </p>
+            <ul>
+                <li>
+                    <p><span dir="ltr" class="br-spec nw">4C</span> هي قيمة منخفضة للون الأحمر.</p>
+                </li>
+                <li>
+                    <p><span dir="ltr" class="br-spec nw">AF</span> هي قيمة قوية للون الأخضر.</p>
+                </li>
+                <li>
+                    <p><span dir="ltr" class="br-spec nw">50</span> هي قيمة متوسطة للون الأزرق.</p>
+                </li>
+            </ul>
+            <br>
+
+        </section>
+
+        <!-- Using Hex Codes in CSS -->
+        <section>
+            <h3>استخدام رموز الألوان (Hex Codes) في CSS</h3>
+            <p>
+                تحظى رموز الألوان (Hex codes) بشعبية واسعة؛ 
+                نظراً لدقتها وسهولة استخدامها. 
+                فهي تتيح لك ضبط ألوانك بدقة متناهية، 
+                مما يجعلها مثالية للتصاميم التي تتطلب اتساقاً في الألوان.
+            </p>
+            <p>
+                توفر معظم برامج التصميم، 
+                مثل Adobe Photoshop أو Figma، 
+                رموزاً ست عشرية (hex codes) للألوان التي تختارها، 
+                مما يسهل عليك نسخ هذه القيم ولصقها مباشرة في ملفات CSS الخاصة بك.
+            </p>
+            <p>
+                في تطوير الويب، تُستخدم الرموز الست عشرية (hex codes) غالبًا لتحديد ألوان النصوص، 
+                والخلفيات، والحدود، وغيرها من العناصر المرئية. 
+                على سبيل المثال:
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;button&gt;<span dir="rtl" class="txt">مثال</span>&lt;/button&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">body</span> <span class="attr">{
+ background-color: <span class="txt">#F0F0F0</span>; <span class="value">/* Light gray background خلفية رمادية فاتحة */</span>
+}</span>
+
+<span class="tag-b">button</span> <span class="attr">{
+ background-color: <span class="txt">#007BFF</span>; <span class="value">/* A shade of blue درجة من درجات اللون الأزرق */</span>
+ color: <span class="txt">#FFFFFF</span>; <span class="value">/* White text نص أبيض */</span>
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview2">
+                    <button>مثال</button>
+				</div>
+            </div>
+            <p>
+                يضمن هذا بقاء ألوانك متسقة عبر موقعك الإلكتروني أو تطبيقك بالكامل.
+            </p>
+            <br>
+
+        </section>
+
+
+        <!-- Hex Code Shorthand -->
+        <section>
+            <h3>صيغة مختصرة لرموز الألوان (Hex Code)</h3>
+            <p>
+                في بعض الحالات، 
+                قد تلاحظ كتابة رموز الألوان (hex codes) بصيغة مختصرة، 
+                بحيث تتكون من ثلاثة رموز فقط بدلاً من ستة. 
+                ويصبح هذا ممكناً عندما يتطابق الرمزان المكونان لكل زوج من أزواج الألوان؛ 
+                فعلى سبيل المثال، لا يمكن اختصار الرمز <span dir="ltr" class="br-spec nw">#FF5733</span>، 
+                بينما يمكن كتابة الرمز <span dir="ltr" class="br-spec nw">#FFFFFF</span> (اللون الأبيض) 
+                على النحو التالي: <span dir="ltr" class="br-spec nw">#FFF</span>.
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;h2&gt;<span dir="rtl" class="txt">هذا عنوان.</span>&lt;/h2&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">body</span> <span class="attr">{
+ background-color: <span class="txt">#000</span>;
+}</span>
+
+<span class="tag-b">h2</span> <span class="attr">{
+ color: <span class="txt">#FFF</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview3">
+                    <h2>هذا عنوان.</h2>
+				</div>
+            </div>
+            <p>
+                تُعد الصيغة المختصرة <span dir="ltr" class="br-spec nw">#FFF</span> 
+                مكافئة للصيغة <span dir="ltr" class="br-spec nw">#FFFFFF</span>. 
+                وبالمثل، يمثل الرمز <span dir="ltr" class="br-spec nw">#000</span> اللون الأسود، 
+                وهو ما يقابل <span dir="ltr" class="br-spec nw">#000000</span> في صيغته الكاملة.
+            </p>
+
+
+        </section>
+
+        <p>
+            تحظى رموز الألوان (Hex codes) بشعبية واسعة بفضل دقتها وتوافقها، 
+            حيث تتيح استخدام أكثر من 16 مليون لون عبر جميع المتصفحات. 
+            وتُعد هذه الرموز خياراً مثالياً عندما تحتاج إلى استخدام ألوان محددة مرتبطة بعلامة تجارية، 
+            أو عندما ترغب في ضبط درجات لونية دقيقة يصعب تحديدها عبر الأسماء المباشرة للألوان أو نظام HSL، 
+            أو حتى عند نسخ الألوان من برامج التصميم التي توفر رموز Hex بشكل افتراضي.
+        </p>
+
+
+    </section>
+
+
+    <!-- questions -->
+    <section class="questions">
+		<p class="pquestions">أسئلة :</p>
+		
+        <p class="userstory">ما الذي يمثله كل زوج من الرموز في رمز اللون الست عشري (hex code) ؟</p>
+		
+		<p> 1. مقدار الشفافية (opacity) في اللون. ❌</p>
+        <p><mark> 2. شدة اللون (intensity) الأحمر أو الأخضر أو ​​الأزرق في اللون. ✅</mark></p>
+        <p> 3. مقدار التباين (contrast) بين الألوان. ❌</p>
+		<p> 4. درجة السطوع (lightness) والتشبع (saturation) في اللون. ❌</p>
+        <br>
+        
+		<p class="userstory">كيف تكتب الرمز الست عشري (hex code) للون الأسود باستخدام الصيغة المختصرة؟</p>
+
+		<p><mark> 1. <span dir="ltr" class="br-spec nw">#000</span> ✅</mark></p>
+		<p> 2. <span dir="ltr" class="br-spec nw">#000000</span> ❌</p>
+        <p> 3. <span dir="ltr" class="br-spec nw">#FFF</span> ❌</p>
+		<p> 4. <span dir="ltr" class="br-spec nw">#FFFFFF</span> ❌</p>
+        <br>
+
+        <p class="userstory">لماذا قد يختار المصمم استخدام رموز الألوان (Hex codes) في لغة CSS بدلاً من أسماء الألوان المحددة مسبقاً؟</p>
+		
+		<p><mark> 1. تتيح رموز الألوان (Hex codes) اختياراً أكثر دقة للألوان. ✅</mark></p>
+		<p> 2. تُعد رموز الألوان (Hex codes) أسهل في التذكر مقارنة بأسماء الألوان. ❌</p>
+        <p> 3. تتكيف رموز الألوان (Hex codes) تلقائياً مع وضعي الإضاءة الفاتح والداكن. ❌</p>
+		<p> 4. لا تتطلب رموز الألوان (Hex codes) أي تنسيق خاص عند استخدامها في لغة CSS. ❌</p>
+        
+	</section>
+  
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./What-Is-the-HSL-Color-Model-and-How-Does-the-HSL-Function-Work-in-CSS.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
