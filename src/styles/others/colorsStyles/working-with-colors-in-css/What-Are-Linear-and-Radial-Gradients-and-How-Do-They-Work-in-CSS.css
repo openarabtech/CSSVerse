@@ -1,0 +1,30 @@
+/* PREVIEW 1 */
+.preview1 .linear-gradient {
+ background: linear-gradient(to right, red, blue);
+ height: 40vh;;
+}
+
+
+/* PREVIEW 2 */
+.preview2 .multi-color-gradient {
+ background: linear-gradient(to right, red, yellow, blue);
+ height: 40vh;;
+}
+
+/* PREVIEW 3 */
+.preview3 .radial-gradient {
+ background: radial-gradient(circle, red, blue);
+ height: 40vh;;
+}
+
+/* PREVIEW 4 */
+.preview4 .custom-radial-gradient {
+ background: radial-gradient(ellipse at top left, red, blue);
+ height: 40vh;;
+}
+
+/* PREVIEW 5 */
+.preview5 .precise-gradient {
+  background: linear-gradient(to right, red 20%, yellow 40%, blue 80%);
+  height: 40vh;
+}

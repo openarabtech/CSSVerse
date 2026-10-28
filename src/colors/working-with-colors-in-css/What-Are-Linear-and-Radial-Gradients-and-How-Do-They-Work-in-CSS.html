@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هي التدرجات Gradients الخطية Linear والشعاعية Radial، وكيف تعمل في لغة CSS ؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/colorsStyles/working-with-colors-in-css/What-Are-Linear-and-Radial-Gradients-and-How-Do-They-Work-in-CSS.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الألوان</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>التعامل مع الألوان في CSS</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+    <section class="sub-title">
+        <h2>ما هي التدرجات Gradients الخطية Linear والشعاعية Radial، وكيف تعمل في لغة CSS ؟</h2>
+        <span class="hint">نظري</span>
+		<p></p>
+    </section>
+
+
+    
+
+    <section>
+        <p>
+            في درس سابق، تعلمت كيفية البدء في استخدام التدرجات الخطية والشعاعية (linear and radial gradients). 
+            أما في هذا الدرس، 
+            فسنتعمق أكثر في كيفية التعامل مع خصائص CSS 
+            لإنشاء تصاميم أكثر تعقيداً وجاذبية من الناحية البصرية.
+        </p>
+        <p>
+            تتيح لك التدرجات (Gradients) في لغة CSS إنشاء انتقالات سلسة بين لونين أو أكثر. 
+            وغالباً ما تُستخدم لإضفاء عمق وملمس وجاذبية بصرية على تصميمات الويب، 
+            دون الحاجة إلى استخدام ملفات صور.
+        </p>
+        <p>
+            تدعم لغة CSS نوعين رئيسيين من التدرجات: 
+            التدرجات الخطية (linear gradients) والتدرجات الشعاعية (radial gradients).
+        </p>
+        <p>
+            تُنشئ التدرجات الخطية (Linear gradients) مزيجاً تدريجياً بين الألوان على طول خط مستقيم. 
+            يمكنك التحكم في اتجاه هذا الخط والألوان المستخدمة. 
+            إليك مثال أساسي على التدرج الخطي:
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"linear-gradient"</span></span>&gt;&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.linear-gradient</span> <span class="attr">{
+ background: <span class="tag-b">linear-gradient</span>(<span class="txt">to right, red, blue</span>);
+ height: <span class="txt">40vh;</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <div class="preview1">
+                <div class="linear-gradient"></div>
+			</div>
+        </div>
+        <p>
+            يُنشئ هذا تدرجاً لونياً ينتقل من اللون الأحمر على اليسار إلى اللون الأزرق على اليمين. 
+            ويُحدد المعامل <span dir="ltr" class="br-spec nw">to right</span> اتجاه هذا التدرج؛ 
+            إذ يمكنك استخدام اتجاهات أخرى مثل <span dir="ltr" class="br-spec nw">to left</span> 
+            أو <span dir="ltr" class="br-spec nw">to top</span>
+            أو <span dir="ltr" class="br-spec nw">to bottom</span>، 
+            أو حتى تحديد زوايا معينة مثل <span dir="ltr" class="br-spec nw">45deg</span>
+        </p>
+        <p>
+            يمكنك أيضاً استخدام نقاط ألوان متعددة في التدرج الخطي (linear gradient) :
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"multi-color-gradient"</span></span>&gt;&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.multi-color-gradient</span> <span class="attr">{
+ background: <span class="tag-b">linear-gradient</span>(<span class="txt">to right, red, yellow, blue</span>);
+ height: <span class="txt">40vh;</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <div class="preview2">
+                <div class="multi-color-gradient"></div>
+			</div>
+        </div>
+        <p>
+            يُنشئ هذا تدرجاً لونياً ينتقل من الأحمر إلى الأصفر ثم الأزرق، موزعةً بانتظام عبر العنصر.
+        </p>
+        <p>
+            أما التدرجات الشعاعية (Radial gradients)، 
+            فهي تُنشئ تدرجات دائرية (circular) أو بيضاوية (elliptical) تنطلق من نقطة مركزية. 
+            إليك مثال على ذلك:
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"radial-gradient"</span></span>&gt;&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.radial-gradient</span> <span class="attr">{
+ background: <span class="tag-b">radial-gradient</span>(<span class="txt">circle, red, blue</span>);
+ height: <span class="txt">40vh;</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <div class="preview3">
+                <div class="radial-gradient"></div>
+			</div>
+        </div>
+
+        <p>
+            يُنشئ هذا تدرجاً دائرياً (circular gradient) يبدأ باللون الأحمر في المركز وينتقل تدريجياً إلى اللون الأزرق عند الحواف (edges). 
+            كما يمكنك تحديد شكل (shape) وحجم (size) التدرجات الدائرية (radial gradients) :
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"custom-radial-gradient"</span></span>&gt;&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.custom-radial-gradient</span> <span class="attr">{
+ background: <span class="tag-b">radial-gradient</span>(<span class="txt">ellipse at top left, red, blue</span>);
+ height: <span class="txt">40vh;</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <div class="preview4">
+                <div class="custom-radial-gradient"></div>
+			</div>
+        </div>
+        <p>
+            يُنشئ هذا تدرجاً بيضاوياً (elliptical gradient) يبدأ من الزاوية العلوية اليسرى (top left corner) للعنصر. 
+            وتتيح لك كل من التدرجات الخطية والشعاعية تحديد نقاط لونية (color stops) عند مواضع دقيقة. 
+            على سبيل المثال:
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;div <span class="attr">class=<span class="value">"precise-gradient"</span></span>&gt;&lt;/div&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.precise-gradient</span> <span class="attr">{
+ background: <span class="tag-b">linear-gradient</span>(<span class="txt">to right, red 20%, yellow 40%, blue 80%</span>);
+ height: <span class="txt">40vh;</span>;
+}</span>
+            </code></pre></div>
+        </div>
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <div class="preview5">
+                <div class="precise-gradient"></div>
+			</div>
+        </div>
+
+        <p>
+            يُنشئ هذا تدرجاً لونياً يشغل فيه اللون الأحمر نسبة الـ <span dir="ltr" class="br-spec nw">20%</span> الأولى، 
+            ثم يتحول إلى اللون الأصفر عند نسبة <span dir="ltr" class="br-spec nw">40%</span> ، 
+            وأخيراً إلى اللون الأزرق عند نسبة <span dir="ltr" class="br-spec nw">80%</span>.
+        </p>
+        <p>
+            يمكن استخدام التدرجات اللونية (Gradients) في أي موضع يمكنك فيه استخدام صورة في لغة CSS. 
+            وهذا ما يجعلها مرنة للغاية؛ 
+            إذ يمكن الاستعانة بها لإنشاء خلفيات أو أزرار، 
+            أو حتى تأثيرات نصية عند دمجها مع خصائص CSS أخرى.
+        </p>
+        <p>
+            تذكر أنه على الرغم من أن التدرجات اللونية يمكن أن تعزز المظهر البصري لموقعك الإلكتروني، 
+            فمن المهم ضمان وجود تباين كافٍ لدعم إمكانية الوصول، 
+            لا سيما عند استخدام التدرجات اللونية خلف النصوص.
+        </p>
+
+    </section>
+
+    <section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+	
+        <p class="userstory">ما الفرق بين التدرجات الخطية (linear gradients) والتدرجات الشعاعية (radial gradients) في CSS ؟</p>
+		
+		<p> 1. تستخدم التدرجات الخطية (Linear gradients) لونين فقط، بينما تستخدم التدرجات الشعاعية (radial gradients) ألواناً متعددة. ❌</p>
+        <p><mark> 2. تنتقل التدرجات الخطية (Linear gradients) على طول خط مستقيم، بينما تنطلق التدرجات الشعاعية (radial gradients) من نقطة مركزية. ✅</mark></p>
+        <p> 3. تكون التدرجات الخطية (Linear gradients) أفقية فقط، بينما يمكن أن تتخذ التدرجات الشعاعية (radial gradients) أي شكل. ❌</p>
+		<p> 4. تعد التدرجات الخطية (Linear gradients) أكثر سلاسة من التدرجات الشعاعية (radial gradients). ❌</p>
+        <br>
+
+        <p class="userstory">في كود CSS التالي، ماذا تحدد القيمة 45deg ؟</p>
+        <div class="code-block"><pre><code>
+<span class="attr">{
+ background: <span class="tag-b">linear-gradient</span>(<span class="txt">45deg, red, blue</span>);
+}</span>
+            </code></pre></div>
+		
+		<p> 1. زاوية الدوران للعنصر بأكمله. ❌</p>
+        <p><mark> 2. اتجاه خط التدرج. ✅</mark></p>
+        <p> 3. حجم التدرج. ❌</p>
+		<p> 4. المسافة بين نقاط الألوان. ❌</p>
+        <br>
+
+        <p class="userstory">أيٌّ مما يلي لا يُعدُّ طريقةً صحيحةً لتحديد الاتجاه في التدرج اللوني الخطي (linear gradient) ؟</p>
+		
+		<p> 1. <span dir="ltr" class="br-spec nw">to right</span> ❌</p>
+		<p> 2. <span dir="ltr" class="br-spec nw">to bottom left</span> ❌</p>
+		<p> 3. <span dir="ltr" class="br-spec nw">90deg</span> ❌</p>
+        <p><mark> 4. <span dir="ltr" class="br-spec nw">diagonal</span> ✅</mark></p>
+	</section>
+  
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./What-Are-Hex-Codes-and-How-Do-They-Work-in-CSS.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
