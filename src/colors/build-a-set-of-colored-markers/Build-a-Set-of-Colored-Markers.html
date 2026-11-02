@@ -1,0 +1,1966 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" إعداد مجموعة من الأقلام الملونة Colored Markers "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/colorsStyles/build-a-set-of-colored-markers/Build-a-Set-of-Colored-Markers.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الألوان</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>الألوان</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+    <section class="sub-title">
+        <h2>إعداد مجموعة من الأقلام الملونة Colored Markers</h2>
+        <span class="hint">ورشة عمل</span>
+		<p></p>
+    </section>
+
+
+    
+
+    <section>
+        <!-- HTML boilerplate -->
+        <section>
+        <br>
+        <h3>هيكل HTML الأساسي HTML boilerplate</h3>
+        
+        <br>
+        <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=<span class="value">"viewport"</span> content=<span class="value">"width=device-width, initial-scale=1.0"</span></span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span><span class="txt">إعداد مجموعة من الأقلام الملونة</span><span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+ <span class="value">&lt;!-- هنا تضع اكواد التطبيق --&gt;</span>
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+            </div>
+        </section>
+
+    <!-- STEPS -->
+    <section>
+        <br>
+        <h3>الخطوات</h3>
+        <br>
+
+        <!-- STEP 1 -->
+        <section>
+            <h4>الخطوة 1</h4>
+            <p>
+                داخل عنصر body ، 
+                أدرج عنصراً من نوع <span dir="ltr" class="br-spec nw">h1</span> 
+                يحتوي على النص <span dir="rtl" class="br-spec nw">أقلام تلوين CSS</span>.
+            </p>
+        </section>
+
+        <!-- STEP 2 -->
+        <section>
+            <h4>الخطوة 2</h4>
+            <p>
+                في هذا المشروع، 
+                ستستخدم ملف CSS خارجي لتنسيق الصفحة. 
+                ستحتاج إلى ربط ملف <span dir="ltr" class="br-spec nw">styles.css</span> بالصفحة.
+            </p>
+            <p>
+                أدرج عنصر رابط <span dir="ltr" class="br-spec nw">link</span> 
+                داخل عنصر الرأس <span dir="ltr" class="br-spec nw">head</span>. 
+                امنحه سمة <span dir="ltr" class="br-spec nw">rel</span> 
+                مضبوطة على القيمة <span dir="ltr" class="br-spec nw">stylesheet</span>، 
+                وسمة <span dir="ltr" class="br-spec nw">href</span> 
+                مضبوطة على القيمة <span dir="ltr" class="br-spec nw">styles.css</span>.
+            </p>
+        </section>
+
+        <!-- STEP 3 -->
+        <section>
+            <h4>الخطوة 3</h4>
+            <p>
+                بعد إعداد ملف CSS الخارجي الخاص بك، يمكنك البدء في تنسيق الصفحة.
+            </p>
+            <p>
+                للتذكير، إليك كيفية استهداف عنصر فقرة (paragraph element) ومحاذاته إلى اليمين:
+            </p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">p</span> <span class="attr">{
+ text-align: <span class="txt">right</span>;
+}</span>
+            </code></pre></div>
+            <p>
+                أنشئ قاعدة CSS جديدة تستهدف عنصر <span dir="ltr" class="br-spec nw">h1</span>، 
+                واضبط خاصية <span dir="ltr" class="br-spec nw">text-align</span> الخاصة به 
+                على القيمة <span dir="ltr" class="br-spec nw">center</span>.
+            </p>
+
+        </section>
+
+        <!-- STEP 4 -->
+        <section>
+            <h4>الخطوة 4</h4>
+            <p>
+                ستقوم الآن بإضافة بعض العناصر التي ستُنسِّقها لاحقاً لتصبح علامات ملونة.
+            </p>
+            <p>
+                أولاً، داخل عنصر <span dir="ltr" class="br-spec nw">body</span> ، 
+                أضف عنصراً من نوع <span dir="ltr" class="br-spec nw">div</span> 
+                مع ضبط سمة <span dir="ltr" class="br-spec nw">class</span> 
+                على القيمة <span dir="ltr" class="br-spec nw">container</span>. 
+                تأكد من وضع عنصر <span dir="ltr" class="br-spec nw">div</span> 
+                أسفل عنصر <span dir="ltr" class="br-spec nw">h1</span>.
+            </p>
+        </section>
+
+        <!-- STEP 5 -->
+        <section>
+            <h4>الخطوة 5</h4>
+            <p>
+                بعد ذلك، وضمن عنصر <span dir="ltr" class="br-spec nw">div</span>، 
+                أضف عنصر <span dir="ltr" class="br-spec nw">div</span> آخر 
+                وامنحه فئة <span dir="ltr" class="br-spec nw">class</span> 
+                باسم <span dir="ltr" class="br-spec nw">marker</span>.
+            </p>
+        </section>
+
+        <!-- STEP 6 -->
+        <section>
+            <h4>الخطوة 6</h4>
+            <p>
+                حان الوقت لإضافة بعض الألوان إلى العلامة (marker). 
+                تذكر أن إحدى طرق إضافة لون إلى عنصر ما هي استخدام كلمة مفتاحية دالة على اللون، 
+                مثل الأسود <span dir="ltr" class="br-spec nw">black</span> 
+                أو السماوي <span dir="ltr" class="br-spec nw">cyan</span> 
+                أو الأصفر <span dir="ltr" class="br-spec nw">yellow</span>.
+            </p>
+            <p>
+                للتذكير، إليك كيفية استهداف الفئة (class) التي تحمل الاسم <span dir="ltr" class="br-spec nw">openarabtech</span> :
+            </p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.openarabtech</span> <span class="attr">{
+ 
+}</span>
+            </code></pre></div>
+            <p>
+                أنشئ قاعدة CSS جديدة تستهدف الفئة (class) 
+                التي تحمل الاسم <span dir="ltr" class="br-spec nw">marker</span> ، 
+                واضبط خاصية لون الخلفية <span dir="ltr" class="br-spec nw">background-color</span> الخاصة بها 
+                على اللون الأحمر <span dir="ltr" class="br-spec nw">red</span>.
+            </p>
+            <p>
+                <b>ملاحظة:</b> لن تلاحظ أي تغييرات بعد إضافة كود CSS.
+            </p>
+        </section>
+
+        <!-- STEP 7 -->
+        <section>
+            <h4>الخطوة 7</h4>
+            <p>
+                تم تطبيق لون الخلفية، ولكن بما أن عنصر التحديد <span dir="ltr" class="br-spec nw">div</span> لا يحتوي على أي محتوى بداخله، فإنه لا يمتلك أي ارتفاع بشكل افتراضي.
+            </p>
+            <p>
+                في قاعدة CSS الخاصة بـ <span dir="ltr" class="br-spec nw">.marker</span> ، 
+                اضبط خاصية <span dir="ltr" class="br-spec nw">height</span> 
+                على <span dir="ltr" class="br-spec nw">25px</span> 
+                وخاصية <span dir="ltr" class="br-spec nw">width</span> 
+                على <span dir="ltr" class="br-spec nw">200px</span>.
+            </p>
+        </section>
+
+        <!-- STEP 8 -->
+        <section>
+            <h4>الخطوة 8</h4>
+            <p>
+                سيبدو مؤشرك بمظهر أفضل لو كان متمركزاً في وسط الصفحة. ومن الطرق السهلة لتحقيق ذلك استخدام خاصية الاختصار <span dir="ltr" class="br-spec nw">margin</span>.
+            </p>
+            <p>
+                يمكنك ضبط مساحة الهامش (margin) للعناصر بشكل منفصل باستخدام خصائص 
+                مثل <span dir="ltr" class="br-spec nw">margin-top</span> 
+                و <span dir="ltr" class="br-spec nw">margin-left</span> ، 
+                كما تتيح لك الخاصية المختصرة <span dir="ltr" class="br-spec nw">margin</span> 
+                ضبط مساحات هوامش متعددة في آنٍ واحد.
+            </p>
+            <p>
+                لتوسيط العنصر على الصفحة، 
+                اضبط خاصية الهامش <span dir="ltr" class="br-spec nw">margin</span> الخاصة به 
+                على القيمة <span dir="ltr" class="br-spec nw">auto</span>. 
+                يؤدي هذا إلى ضبط كل من الهامش العلوي <span dir="ltr" class="br-spec nw">margin-top</span>، 
+                والأيمن <span dir="ltr" class="br-spec nw">margin-right</span>، 
+                والسفلي <span dir="ltr" class="br-spec nw">margin-bottom</span>، 
+                والأيسر <span dir="ltr" class="br-spec nw">margin-left</span> 
+                على القيمة <span dir="ltr" class="br-spec nw">auto</span>.
+            </p>
+        </section>
+
+        <!-- STEP 9 -->
+        <section>
+            <h4>الخطوة 9</h4>
+            <p>
+                والآن بعد أن أصبح أحد العلامات (marker) في المنتصف ومُلوناً، 
+                فقد حان الوقت لإضافة العلامات الأخرى.
+            </p>
+            <p>
+                داخل عنصر <span dir="ltr" class="br-spec nw">.container</span>، 
+                أضف عنصرين آخرين من نوع <span dir="ltr" class="br-spec nw">div</span> 
+                وامنح كلاً منهما فئة (class) 
+                تحمل الاسم <span dir="ltr" class="br-spec nw">marker</span>.
+            </p>
+        </section>
+
+        <!-- STEP 10 -->
+        <section>
+            <h4>الخطوة 10</h4>
+            <p>
+                على الرغم من وجود ثلاثة عناصر <span dir="ltr" class="br-spec nw">div</span> منفصلة، ​​
+                إلا أنها تبدو كمستطيل واحد كبير. 
+                ينبغي عليك إضافة بعض المساحة بينها لتسهيل تمييز كل عنصر على حدة.
+            </p>
+            <p>
+                عندما تتضمن خاصية الاختصار <span dir="ltr" class="br-spec nw">margin</span> قيمتين، 
+                فإنها تُعيّن القيمة الأولى لكل من <span dir="ltr" class="br-spec nw">margin-top</span> 
+                و <span dir="ltr" class="br-spec nw">margin-bottom</span>، 
+                وتُعيّن القيمة الثانية لكل من <span dir="ltr" class="br-spec nw">margin-left</span> 
+                و <span dir="ltr" class="br-spec nw">margin-right</span>.
+            </p>
+            <p>
+                في قاعدة CSS الخاصة بك <span dir="ltr" class="br-spec nw">.marker</span> ، 
+                اضبط خاصية <span dir="ltr" class="br-spec nw">margin</span> 
+                على القيمة <span dir="ltr" class="br-spec nw">10px auto</span>.
+            </p>
+        </section>
+
+        <!-- STEP 11 -->
+        <section>
+            <h4>الخطوة 11</h4>
+            <p>
+                لمنح العلامات ألواناً مختلفة، 
+                ستحتاج إلى إضافة فئة (class) فريدة لكل منها. 
+                يمكنك إضافة عدة فئات إلى عنصر ما عن طريق إدراجها ضمن السمة <span dir="ltr" class="br-spec nw">class</span> وفصلها بمسافة. 
+                على سبيل المثال، 
+                يضيف الكود التالي كلاً من الفئتين <span dir="ltr" class="br-spec nw">animal</span> 
+                و <span dir="ltr" class="br-spec nw">dog</span> 
+                إلى عنصر <span dir="ltr" class="br-spec nw">div</span> :
+            </p>
+            <p class="hinty">نموذج برمجي</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;div <span class="attr">class=<span class="value">"animal dog"</span></span>&gt;</span>
+            </code></pre></div>
+            <p>
+                إذا أضفت فئات (classes) متعددة إلى عنصر HTML، فقد يتم تجاوز أنماط الفئات المذكورة أولاً في ورقة الأنماط (stylesheet) بواسطة فئات أخرى تليها.
+            </p>
+            <p>
+                للبدء، أضف الفئة <span dir="ltr" class="br-spec nw">one</span> 
+                إلى عنصر <span dir="ltr" class="br-spec nw">div</span> 
+                الخاص بالعلامة الأولى (first marker).
+            </p>
+           
+        </section>
+
+        <!-- STEP 12 -->
+        <section>
+            <h4>الخطوة 12</h4>
+            <p>
+                بعد ذلك، أزِل خاصية <span dir="ltr" class="br-spec nw">background-color</span> وقيمتها 
+                من قاعدة CSS الخاصة بـ <span dir="ltr" class="br-spec nw">.marker</span>.
+            </p>
+        </section>
+
+        <!-- STEP 13 -->
+        <section>
+            <h4>الخطوة 13</h4>
+            <p>
+                بعد ذلك، 
+                أنشئ قاعدة CSS جديدة تستهدف الفئة <span dir="ltr" class="br-spec nw">one</span>، 
+                واضبط خاصية <span dir="ltr" class="br-spec nw">background-color</span> الخاصة بها 
+                على اللون الأحمر <span dir="ltr" class="br-spec nw">red</span>.
+            </p>
+           
+        </section>
+
+        <!-- STEP 14 -->
+        <section>
+            <h4>الخطوة 14</h4>
+            <p>
+                أضف الفئة <span dir="ltr" class="br-spec nw">two</span> 
+                إلى الوسم <span dir="ltr" class="br-spec nw">div</span> الثاني، 
+                والفئة <span dir="ltr" class="br-spec nw">three</span> 
+                إلى الوسم <span dir="ltr" class="br-spec nw">div</span> الثالث.
+            </p>
+        </section>
+
+        <!-- STEP 15 -->
+        <section>
+            <h4>الخطوة 15</h4>
+            <p>
+                أنشئ قاعدة CSS تستهدف الفئة <span dir="ltr" class="br-spec nw">two</span> 
+                واضبط خاصية <span dir="ltr" class="br-spec nw">background-color</span> الخاصة بها 
+                على اللون الأخضر <span dir="ltr" class="br-spec nw">green</span>.
+            </p>
+            <p>
+                أنشئ أيضاً قاعدة CSS منفصلة تستهدف الفئة <span dir="ltr" class="br-spec nw">three</span>، 
+                واضبط خاصية <span dir="ltr" class="br-spec nw">background-color</span> الخاصة بها 
+                على اللون الأزرق <span dir="ltr" class="br-spec nw">blue</span>.
+            </p>
+        </section>
+
+        <!-- STEP 16 -->
+        <section>
+            <h4>الخطوة 16</h4>
+            <p>
+                كما تعلمت في الدروس، 
+                هناك نموذجان رئيسيان للألوان: 
+                نموذج RGB (الأحمر red، الأخضر green، الأزرق blue) 
+                القائم على الجمع، والذي يُستخدم في الأجهزة الإلكترونية، 
+                ونموذج CMYK (السماوي cyan، الأرجواني magenta، الأصفر yellow، الأسود black) 
+                القائم على الطرح، والذي يُستخدم في الطباعة.
+            </p>
+            <p>
+                في هذا المشروع، ستتعامل مع نموذج الألوان RGB. 
+                وهذا يعني أن الألوان تبدأ باللون الأسود black، 
+                وتتغير عند إضافة مستويات متفاوتة من الألوان الأحمر red والأخضر green والأزرق blue. 
+                ويمكن ملاحظة ذلك بسهولة من خلال استخدام دالة <span dir="ltr" class="br-spec nw">rgb</span> في لغة CSS.
+            </p>
+            <p>
+                أنشئ قاعدة CSS جديدة تستهدف الفئة <span dir="ltr" class="br-spec nw">container</span>، 
+                واضبط خاصية <span dir="ltr" class="br-spec nw">background-color</span> الخاصة بها 
+                على اللون الأسود black 
+                باستخدام <span dir="ltr" class="br-spec nw">rgb(0, 0, 0)</span>.
+            </p>
+        </section>
+
+        <!-- STEP 17 -->
+        <section>
+            <h4>الخطوة 17</h4>
+            <p>
+                كما تعلمت في دروس سابقة، 
+                الدالة (function) هي جزء من الكود يمكنه استقبال مدخلات وتنفيذ إجراء محدد. 
+                تقبل دالة CSS المسماة <span dir="ltr" class="br-spec nw">rgb</span> قيماً — أو ما يُعرف بالمعاملات (arguments) — 
+                تمثل الألوان الأحمر red والأخضر green والأزرق blue، 
+                وتنتج عن ذلك لوناً معيناً:
+            </p>
+            <p class="hinty">نموذج برمجي</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">rgb</span><span class="attr">(<span class="txt">red, green, blue</span>);</span>
+            </code></pre></div>
+            <p>
+                تُمثَّل كل قيمة من قيم الألوان الأحمر red والأخضر green والأزرق blue 
+                برقم يتراوح بين <span dir="ltr" class="br-spec nw">0</span> و <span dir="ltr" class="br-spec nw">255</span>. 
+                تشير القيمة <span dir="ltr" class="br-spec nw">0</span> إلى وجود نسبة <span class="nw" dir="ltr">0%</span> من ذلك اللون (وهو ما يمثل اللون الأسود)، 
+                بينما تشير القيمة <span dir="ltr" class="br-spec nw">255</span> إلى وجود نسبة <span class="nw" dir="ltr">100%</span> من ذلك اللون.
+            </p>
+            <p>
+                في قاعدة CSS التي تحمل الاسم <span dir="ltr" class="br-spec nw">.one</span>، 
+                استبدل الكلمة المفتاحية للون <span dir="ltr" class="br-spec nw">red</span> 
+                بالدالة <span dir="ltr" class="br-spec nw">rgb</span>. 
+                وبالنسبة للدالة <span dir="ltr" class="br-spec nw">rgb</span>، 
+                اضبط قيمة اللون الأحمر (red) على <span dir="ltr" class="br-spec nw">255</span>، 
+                وقيمة اللون الأخضر (green) على <span dir="ltr" class="br-spec nw">0</span>، 
+                وقيمة اللون الأزرق (blue) على <span dir="ltr" class="br-spec nw">0</span>.
+            </p>
+        </section>
+
+        <!-- STEP 18 -->
+        <section>
+            <h4>الخطوة 18</h4>
+            <p>
+                لاحظ أن لون الخلفية <span dir="ltr" class="br-spec nw">background-color</span> للمؤشر لا يزال أحمر. 
+                ويعود ذلك إلى أنك ضبطت قيمة اللون الأحمر في دالة <span dir="ltr" class="br-spec nw">rgb</span> 
+                عند حدها الأقصى <span dir="ltr" class="br-spec nw">255</span> 
+                — أي بنسبة 100% للون الأحمر red — 
+                بينما ضبطت قيمتي اللونين الأخضر green والأزرق blue عند <span dir="ltr" class="br-spec nw">0</span>.
+            </p>
+            <p>
+                استخدم الآن الدالة <span dir="ltr" class="br-spec nw">rgb</span> لضبط الألوان الأخرى.
+            </p>
+            <p>
+                في قاعدة CSS التي تحمل الاسم <span dir="ltr" class="br-spec nw">.two</span>، 
+                استخدم الدالة <span dir="ltr" class="br-spec nw">rgb</span> 
+                لضبط خاصية <span dir="ltr" class="br-spec nw">background-color</span> 
+                بحيث تكون قيمة اللون الأخضر green عند حدها الأقصى، 
+                بينما تكون القيم الأخرى صفراً <span dir="ltr" class="br-spec nw">0</span>. 
+                وفي قاعدة CSS التي تحمل الاسم <span dir="ltr" class="br-spec nw">.three</span>، 
+                استخدم الدالة <span dir="ltr" class="br-spec nw">rgb</span> 
+                لضبط خاصية <span dir="ltr" class="br-spec nw">background-color</span> 
+                بحيث تكون قيمة اللون الأزرق blue عند حدها الأقصى، 
+                بينما تكون القيم الأخرى صفراً <span dir="ltr" class="br-spec nw">0</span>.
+            </p>
+            
+        </section>
+
+        <!-- STEP 19 -->
+        <section>
+            <h4>الخطوة 19</h4>
+            <p>
+                بينما تبدو العلامتان الحمراء والزرقاء متطابقتين، فإن العلامة الخضراء أفتح بكثير مما كانت عليه من قبل. 
+                ويعود السبب في ذلك إلى أن الكلمة المفتاحية للون <span dir="ltr" class="br-spec nw">green</span> تشير في الواقع إلى درجة لونية أكثر قتامة، 
+                تقع تقريباً في منتصف المسافة بين اللون الأسود والقيمة القصوى للون الأخضر.
+            </p>
+            <p>
+                في قاعدة CSS التي تحمل الاسم <span dir="ltr" class="br-spec nw">.two</span>، 
+                اضبط قيمة اللون الأخضر green داخل دالة <span dir="ltr" class="br-spec nw">rgb</span> 
+                على <span dir="ltr" class="br-spec nw">127</span> لتقليل شدتها.
+            </p>
+            
+        </section>
+
+        <!-- STEP 20 -->
+        <section>
+            <h4>الخطوة 20</h4>
+            <p>
+                أضف الآن مساحة إضافية رأسية (vertical space) بين علاماتك (markers) وحافة العنصر <span dir="ltr" class="br-spec nw">container</span> الذي توجد بداخله.
+            </p>
+            <p>
+                في قاعدة CSS الخاصة بـ <span dir="ltr" class="br-spec nw">.container</span>، 
+                استخدم خاصية الاختصار <span dir="ltr" class="br-spec nw">padding</span> لإضافة مساحة حشو  
+                مقدارها <span dir="ltr" class="br-spec nw">10px</span> من الأعلى والأسفل، 
+                واضبط مساحة الحشو (padding) من اليمين واليسار على <span dir="ltr" class="br-spec nw">0</span>. يعمل هذا بشكل مشابه لخاصية الاختصار <span dir="ltr" class="br-spec nw">margin</span> التي استخدمتها سابقاً.
+            </p>
+            
+        </section>
+
+        <!-- STEP 21 -->
+        <section>
+            <h4>الخطوة 21</h4>
+            <p>
+                في نموذج الألوان الجمعي (RGB)، 
+                تُعد الألوان الأساسية هي تلك الألوان التي تُنتج اللون الأبيض النقي عند دمجها معاً؛ 
+                ولكن لكي يتحقق ذلك،
+                يجب أن يكون كل لون منها في أقصى درجات شدته (highest intensity).
+            </p>
+            <p>
+                قبل دمج الألوان، 
+                أعد ضبط مؤشر اللون الأخضر إلى اللون الأخضر الصافي. 
+                وفي قاعدة CSS التي تحمل الاسم <span dir="ltr" class="br-spec nw">.two</span>، 
+                اضبط قيمة اللون الأخضر (ضمن دالة <span dir="ltr" class="br-spec nw">rgb</span>) 
+                لتعود إلى قيمتها القصوى <span dir="ltr" class="br-spec nw">255</span>.
+            </p>
+            
+        </section>
+
+        <!-- STEP 22 -->
+        <section>
+            <h4>الخطوة 22</h4>
+            <p>
+                والآن بعد أن أصبحت لديك الألوان الأساسية (RGB)، فقد حان الوقت لدمجها معاً.
+            </p>
+            <p>
+                بالنسبة للدالة <span dir="ltr" class="br-spec nw">rgb</span> 
+                في القاعدة <span dir="ltr" class="br-spec nw">.container</span>، 
+                اضبط قيم الأحمر red والأخضر green والأزرق blue 
+                على الحد الأقصى وهو <span dir="ltr" class="br-spec nw">255</span>.
+            </p>
+        </section>
+
+        <!-- STEP 23 -->
+        <section>
+            <h4>الخطوة 23</h4>
+            <p>
+                الألوان الثانوية (Secondary colors) هي الألوان التي تحصل عليها عند دمج الألوان الأساسية (primary colors). 
+                ربما لاحظت بعض الألوان الثانوية في الخطوة السابقة أثناء تغييرك لقيم الألوان الأحمر والأخضر والأزرق.
+            </p>
+            <p>
+                لإنشاء اللون الثانوي (secondary color) الأول، 
+                وهو اللون الأصفر yellow، 
+                قم بتعديل الدالة <span dir="ltr" class="br-spec nw">rgb</span> في قاعدة CSS 
+                التي تحمل الاسم <span dir="ltr" class="br-spec nw">.one</span> 
+                بحيث تدمج اللون الأحمر الصافي (pure red) مع اللون الأخضر الصافي (pure green).
+
+            </p>
+            
+        </section>
+
+        <!-- STEP 24 -->
+        <section>
+            <h4>الخطوة 24</h4>
+            <p>
+                لإنشاء اللون الثانوي (secondary color) التالي، 
+                وهو اللون السماوي (cyan)، 
+                عدِّل الدالة <span dir="ltr" class="br-spec nw">rgb</span> ضمن قاعدة CSS 
+                المسماة <span dir="ltr" class="br-spec nw">.two</span> 
+                بحيث تدمج اللون الأخضر الصافي (pure green) مع اللون الأزرق الصافي (pure blue).
+            </p>
+            
+        </section>
+
+        <!-- STEP 25 -->
+        <section>
+            <h4>الخطوة 25</h4>
+            <p>
+                لإنشاء اللون الثانوي (secondary color) النهائي، 
+                وهو اللون الأرجواني (magenta)، 
+                قم بتعديل الدالة <span dir="ltr" class="br-spec nw">rgb</span> في قاعدة CSS 
+                التي تحمل الاسم <span dir="ltr" class="br-spec nw">.three</span> 
+                بحيث تدمج اللون الأزرق الصافي (pure blue) مع اللون الأحمر الصافي (pure red).
+            </p>
+            
+        </section>
+
+        <!-- STEP 26 -->
+        <section>
+            <h4>الخطوة 26</h4>
+            <p>
+                بعد أن تدربت على الألوان الثانوية (secondary colors)، 
+                إليك مراجعة حول كيفية تكوين الألوان الثالثية (tertiary colors) : 
+                تُنتج الألوان الثالثية من خلال دمج لون أساسي (primary color) مع لون ثانوي مجاور له (nearby secondary color).
+            </p>
+            <p>
+                لإنشاء اللون الثالثي "البرتقالي" (tertiary color orange) ، 
+                قم بتعديل الدالة <span dir="ltr" class="br-spec nw">rgb</span> ضمن قاعدة CSS المحددة بالمعرّف <span dir="ltr" class="br-spec nw">.one</span>، 
+                وذلك بضبط قيمة اللون الأحمر red عند حدها الأقصى <span dir="ltr" class="br-spec nw">255</span>، 
+                وقيمة اللون الأخضر green عند <span dir="ltr" class="br-spec nw">127</span>.
+            </p>
+            
+        </section>
+
+        <!-- STEP 27 -->
+        <section>
+            <h4>الخطوة 27</h4>
+            <p>
+                لاحظ أنه للحصول على اللون البرتقالي orange، 
+                قمت بزيادة كثافة (intensity) اللون الأحمر red وتقليل كثافة (intensity) اللون الأخضر green في قيم <span dir="ltr" class="br-spec nw">rgb</span>؛ 
+                وذلك لأن اللون البرتقالي orange ينتج عن مزج اللون الأحمر red باللون الأصفر yellow.
+            </p>
+            <p>
+                لإنشاء اللون الثالثي "الأخضر الربيعي" (spring green)، 
+                ادمج اللون السماوي cyan مع اللون الأخضر green. 
+                عدِّل دالة <span dir="ltr" class="br-spec nw">rgb</span> في قاعدة CSS 
+                التي تحمل الاسم <span dir="ltr" class="br-spec nw">.two</span>، 
+                وذلك بضبط قيمة اللون الأخضر green عند حدها الأقصى، 
+                وتحديد قيمة اللون الأزرق blue بـ <span dir="ltr" class="br-spec nw">127</span>.
+            </p>
+            
+        </section>
+
+        <!-- STEP 28 -->
+        <section>
+            <h4>الخطوة 28</h4>
+            <p>
+                للحصول على اللون الثالثي "البنفسجي" violet، 
+                ادمج اللون الأرجواني magenta مع اللون الأزرق blue. 
+                قم بتعديل الدالة <span dir="ltr" class="br-spec nw">rgb</span> ضمن قاعدة CSS 
+                التي تحمل الاسم <span dir="ltr" class="br-spec nw">.three</span>، 
+                وذلك بضبط قيمة اللون الأزرق blue عند حدها الأقصى، 
+                وقيمة اللون الأحمر red عند <span dir="ltr" class="br-spec nw">127</span>.
+            </p>
+            
+        </section>
+
+        <!-- STEP 29 -->
+        <section>
+            <h4>الخطوة 29</h4>
+            <p>
+                هناك ثلاثة ألوان ثالثية أخرى: 
+                الأخضر المصفرّ Chartreuse green (أخضر gren + أصفر yellow)، 
+                والأزرق السماوي Azure (أزرق blue + سماوي cyan)، 
+                والوردي Rose (أحمر red + أرجواني magenta).
+            </p>
+            <p>
+                للحصول على اللون الأخضر الأخضر المصفرّ (Chartreuse green)، 
+                عدِّل الدالة <span dir="ltr" class="br-spec nw">rgb</span> في قاعدة CSS 
+                المحددة بـ <span dir="ltr" class="br-spec nw">.one</span> 
+                بحيث تكون قيمة اللون الأحمر <span dir="ltr" class="br-spec nw">127</span>، 
+                واضبط قيمة اللون الأخضر عند حدها الأقصى.
+            </p>
+            <p>
+                بالنسبة للون الأزرق السماوي (Azure)، 
+                عدِّل دالة <span dir="ltr" class="br-spec nw">rgb</span> في قاعدة CSS 
+                التي تحمل الاسم <span dir="ltr" class="br-spec nw">.two</span>، 
+                بحيث تصبح قيمة اللون الأخضر <span dir="ltr" class="br-spec nw">127</span>، 
+                وقيمة اللون الأزرق عند حدها الأقصى.
+            </p>
+            <p>
+                أما بالنسبة للون الوردي (Rose) - 
+                والذي يُسمى أحياناً بالوردي الزاهي (bright pink) - 
+                فقم بتعديل دالة <span dir="ltr" class="br-spec nw">rgb</span> في قاعدة CSS 
+                التي تحمل الاسم <span dir="ltr" class="br-spec nw">.three</span>، 
+                بحيث تكون قيمة اللون الأزرق <span dir="ltr" class="br-spec nw">127</span> 
+                وقيمة اللون الأحمر عند حدها الأقصى.
+            </p>
+            
+        </section>
+
+        <!-- STEP 30 -->
+        <section>
+            <h4>الخطوة 30</h4>
+            <p>
+                بعد أن أصبحت على دراية بالألوان الأساسية (primary) والثانوية (secondary) والثالثية (tertiary) في عجلة الألوان (color wheel)، 
+                سيصبح من الأسهل عليك فهم مفاهيم أخرى في نظرية الألوان (color theory concepts) 
+                ومعرفة مدى تأثيرها على التصميم.
+            </p>
+            <p>
+                أولاً، في قواعد CSS التي تحمل الأسماء 
+                <span dir="ltr" class="br-spec nw">.one</span> 
+                و <span dir="ltr" class="br-spec nw">.two</span> 
+                و <span dir="ltr" class="br-spec nw">.three</span>، 
+                عدِّل القيم داخل دالة <span dir="ltr" class="br-spec nw">rgb</span> 
+                بحيث يصبح <span dir="ltr" class="br-spec nw">background-color</span> (لون الخلفية) لكل عنصر هو اللون الأسود الصافي (pure black). 
+                تذكَّر أن دالة <span dir="ltr" class="br-spec nw">rgb</span> 
+                تعتمد نموذج الألوان الجمعي (additive color model)، 
+                حيث تبدأ الألوان باللون الأسود وتتغير مع زيادة قيم الألوان الأحمر والأخضر والأزرق.
+            </p>
+            
+        </section>
+
+        <!-- STEP 31 -->
+        <section>
+            <h4>الخطوة 31</h4>
+            <p>
+                عجلة الألوان (color wheel) هي دائرة تتقارب فيها الألوان المتشابهة - أو درجات الألوان - من بعضها البعض، 
+                بينما تتباعد الألوان المختلفة. 
+                فعلى سبيل المثال، 
+                يقع اللون الأحمر الصافي (pure red) بين درجتي الوردي rose والبرتقالي orange.
+            </p>
+            <p>
+                يُطلق على اللونين المتقابلين (opposite) في عجلة الألوان (color wheel) اسم "الألوان المتكاملة" (complementary colors). 
+                وعند دمج لونين متكاملين معاً، 
+                ينتج عنهما اللون الرمادي gray؛ 
+                أما إذا وُضعا جنباً إلى جنب، 
+                فإنهما يُحدثان تبايناً بصرياً قوياً ويظهران بمظهر أكثر سطوعاً.
+            </p>
+            <p>
+                في دالة <span dir="ltr" class="br-spec nw">rgb</span> الخاصة بقاعدة CSS 
+                للعنصر <span dir="ltr" class="br-spec nw">.one</span>، 
+                اضبط قيمة اللون الأحمر red على الحد الأقصى <span dir="ltr" class="br-spec nw">255</span> للحصول على اللون الأحمر الصافي. 
+                أما في دالة <span dir="ltr" class="br-spec nw">rgb</span> الخاصة بقاعدة CSS 
+                للعنصر <span dir="ltr" class="br-spec nw">.two</span>، 
+                فاضبط قيمتي اللونين الأخضر green والأزرق blue على الحد الأقصى <span dir="ltr" class="br-spec nw">255</span> للحصول على اللون السماوي (cyan).
+            </p>
+            
+        </section>
+
+        <!-- STEP 32 -->
+        <section>
+            <h4>الخطوة 32</h4>
+            <p>
+                لاحظ أن اللونين الأحمر red والسماوي cyan يبدوان ساطعين للغاية عند وضعهما بجانب بعضهما البعض. 
+                قد يؤدي هذا التباين إلى تشتيت الانتباه إذا أُفرط في استخدامه على موقع إلكتروني، 
+                كما قد يجعل قراءة النصوص صعبة إذا وُضعت على خلفية ذات لون مكمل (complementary-colored background).
+            </p>
+            <p>
+                من الأفضل اختيار لون واحد ليكون اللون السائد (dominant color)، 
+                واستخدام لونه المكمّل (its complementary color) كعنصر إضافي لجذب الانتباه إلى محتوى معين في الصفحة.
+            </p>
+            <p>
+                أولاً، في قاعدة <span dir="ltr" class="br-spec nw">h1</span>، 
+                استخدم الدالة <span dir="ltr" class="br-spec nw">rgb</span> 
+                لضبط خاصية <span dir="ltr" class="br-spec nw">background-color</span> 
+                على اللون السماوي (cyan).
+            </p>
+            
+        </section>
+
+        <!-- STEP 33 -->
+        <section>
+            <h4>الخطوة 33</h4>
+            <p>
+                بعد ذلك، في قاعدة CSS التي تحمل الاسم <span dir="ltr" class="br-spec nw">.one</span>، 
+                استخدم الدالة <span dir="ltr" class="br-spec nw">rgb</span> 
+                لضبط لون الخلفية <span dir="ltr" class="br-spec nw">background-color</span> 
+                على الأسود black. 
+                وفي قاعدة CSS التي تحمل الاسم <span dir="ltr" class="br-spec nw">.two</span>، 
+                استخدم الدالة <span dir="ltr" class="br-spec nw">rgb</span> 
+                لضبط لون الخلفية <span dir="ltr" class="br-spec nw">background-color</span> 
+                على الأحمر red.
+            </p>
+        </section>
+
+        <!-- STEP 34 -->
+        <section>
+            <h4>الخطوة 34</h4>
+            <p>
+                لاحظ كيف تنجذب عيناك تلقائيًا إلى اللون الأحمر الموجود في المنتصف؟ 
+                عند تصميم موقع إلكتروني، 
+                يمكنك الاستفادة من هذا التأثير لتوجيه الانتباه نحو العناوين أو الأزرار أو الروابط المهمة.
+            </p>
+            <p>
+                هناك العديد من التوليفات اللونية (color combinations) المهمة الأخرى بخلاف الألوان المتكاملة (complementary colors)، 
+                لكنك ستتعرف عليها لاحقاً.
+            </p>
+            <p>
+                في الوقت الحالي، 
+                استخدم الدالة <span dir="ltr" class="br-spec nw">rgb</span> ضمن قاعدة CSS التي تحمل الاسم <span dir="ltr" class="br-spec nw">.two</span> 
+                لضبط خاصية <span dir="ltr" class="br-spec nw">background-color</span> 
+                على اللون الأسود black.
+            </p>
+            
+        </section>
+
+        <!-- STEP 35 -->
+        <section>
+            <h4>الخطوة 35</h4>
+            <p>
+                في قاعدة CSS الخاصة بـ <span dir="ltr" class="br-spec nw">h1</span>، 
+                احذف خاصية <span dir="ltr" class="br-spec nw">background-color</span> وقيمتها 
+                للعودة إلى اللون الأبيض الافتراضي.
+            </p>
+            
+        </section>
+
+        <!-- STEP 36 -->
+        <section>
+            <h4>الخطوة 36</h4>
+            <p>
+                حان الآن وقت إضافة تفاصيل أخرى إلى العلامات، 
+                بدءاً بالعلامة الأولى.
+            </p>
+            <p>
+                في عنصر <span dir="ltr" class="br-spec nw">div</span> الأول 
+                المخصص للعلامة (marker)، 
+                غيّر الفئة (class) من <span dir="ltr" class="br-spec nw">one</span> 
+                إلى <span dir="ltr" class="br-spec nw">red</span>.
+            </p>
+            
+        </section>
+
+        <!-- STEP 37 -->
+        <section>
+            <h4>الخطوة 37</h4>
+            <p>
+                قم بتحديث قاعدة CSS الخاصة بـ <span dir="ltr" class="br-spec nw">.one</span> 
+                لتستهدف الفئة <span dir="ltr" class="br-spec nw">red</span> الجديدة.
+            </p>
+        </section>
+
+        <!-- STEP 38 -->
+        <section>
+            <h4>الخطوة 38</h4>
+            <p>
+                قم بتحديث الدالة <span dir="ltr" class="br-spec nw">rgb</span> في قاعدة CSS 
+                الخاصة بـ <span dir="ltr" class="br-spec nw">.red</span> من خلال ضبط قيمة اللون الأحمر red على حدها الأقصى.
+            </p>
+        </section>
+
+        <!-- STEP 39 -->
+        <section>
+            <h4>الخطوة 39</h4>
+            <p>
+                بعد ذلك، 
+                غيّر الفئة (class) من <span dir="ltr" class="br-spec nw">two</span> 
+                إلى <span dir="ltr" class="br-spec nw">green</span> 
+                في الوسم <span dir="ltr" class="br-spec nw">div</span> الثاني، 
+                وغيّر الفئة (class) من <span dir="ltr" class="br-spec nw">three</span> 
+                إلى <span dir="ltr" class="br-spec nw">blue</span> 
+                في الوسم <span dir="ltr" class="br-spec nw">div</span> الثالث.
+            </p>
+        </section>
+
+        <!-- STEP 40 -->
+        <section>
+            <h4>الخطوة 40</h4>
+            <p>
+                قم بتحديث مُحدِّد فئة CSS‏ <span dir="ltr" class="br-spec nw">.two</span> 
+                بحيث يستهدف الفئة الجديدة <span dir="ltr" class="br-spec nw">green</span>، 
+                وقم بتحديث مُحدِّد الفئة <span dir="ltr" class="br-spec nw">.three</span> 
+                بحيث يستهدف الفئة الجديدة <span dir="ltr" class="br-spec nw">blue</span>.
+            </p>
+        </section>
+
+        <!-- STEP 41 -->
+        <section>
+            <h4>الخطوة 41</h4>
+            <p>
+                تُعد القيم الست عشرية (Hexadecimal values) - 
+                أو اختصاراً قيم Hex - 
+                إحدى أكثر الطرق شيوعاً لتطبيق الألوان على العناصر باستخدام لغة CSS. 
+                ورغم أن مصطلح "القيم الست عشرية" (hex values) قد يبدو معقداً، 
+                إلا أنه في الواقع ليس سوى صيغة أخرى لقيم RGB.
+            </p>
+            <p>
+                تبدأ قيم الألوان بنظام الست عشر (Hex) بالرمز <span dir="ltr" class="br-spec nw">#</span>، 
+                وتتكون من ستة محارف تتراوح بين الأرقام (0-9) والحروف (A-F). 
+                يمثل الزوج الأول من المحارف اللون الأحمر red، 
+                ويمثل الزوج الثاني اللون الأخضر green، 
+                بينما يمثل الزوج الثالث اللون الأزرق blue. 
+                على سبيل المثال: <span dir="ltr" class="br-spec nw">#4B5320</span>.
+            </p>
+            <p>
+                في مُحدِّد الفئة <span dir="ltr" class="br-spec nw">.green</span>، 
+                اضبط خاصية <span dir="ltr" class="br-spec nw">background-color</span> 
+                على رمز لون بنظام الأرقام الست عشرية (hex)، 
+                بحيث تكون القيم <span dir="ltr" class="br-spec nw">00</span> للون الأحمر red، 
+                و <span dir="ltr" class="br-spec nw">FF</span> للون الأخضر green، 
+                و <span dir="ltr" class="br-spec nw">00</span> للون الأزرق blue.
+            </p>
+        </section>
+
+        <!-- STEP 42 -->
+        <section>
+            <h4>الخطوة 42</h4>
+            <p>
+                ربما تكون على دراية بالفعل بالنظام العشري (decimal) أو (base 10)،
+                الذي تتراوح قيمه من 0 إلى 9. 
+                أما النظام الست عشري (Hexadecimal) أو (base 16)، 
+                فتتراوح قيمه من 0 إلى 9، 
+                تليها الحروف من A إلى F:
+            </p>
+            <p class="hinty">نموذج برمجي</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">0, 1, 2, 3, 4, 5, 6, 7, 8, 9</span><span class="attr">, A, B, C, D, E, F</span>
+            </code></pre></div>
+            <p>
+                في نظام الألوان الست عشري (hex colors)، 
+                تُمثّل القيمة <span dir="ltr" class="br-spec nw">00</span> نسبة 0% من اللون، 
+                بينما تُمثّل القيمة <span dir="ltr" class="br-spec nw">FF</span> نسبة 100% منه. 
+                وبناءً على ذلك، 
+                فإن الرمز <span dir="ltr" class="br-spec nw">#00FF00</span> 
+                يعني 0% من اللون الأحمر red، 
+                و100% من اللون الأخضر green، 
+                و0% من اللون الأزرق blue، 
+                وهو ما يعادل الصيغة <span dir="ltr" class="br-spec nw">rgb(0, 255, 0)</span>.
+            </p>
+            <p>
+                قلل من شدة اللون الأخضر عن طريق ضبط قيمة اللون الأخضر في رمز اللون الست عشري (hex color) 
+                على <span dir="ltr" class="br-spec nw">7F</span>.
+            </p>
+
+        </section>
+
+        <!-- STEP 43 -->
+        <section>
+            <h4>الخطوة 43</h4>
+            <p>
+                يُعد نموذج الألوان HSL — 
+                الذي يرمز إلى درجة اللون (Hue)، 
+                والتشبع (Saturation)، 
+                والسطوع (Lightness) — 
+                طريقةً أخرى لتمثيل الألوان.
+            </p>
+            <p>
+                تقبل دالة <span dir="ltr" class="br-spec nw">hsl</span> في CSS ثلاث قيم: 
+                رقماً يتراوح بين 0 و360 لدرجة اللون (hue)، 
+                ونسبة مئوية تتراوح بين 0 و100 للتشبع (saturation)، 
+                ونسبة مئوية تتراوح بين 0 و100 للإضاءة (lightness).
+            </p>
+            <p>
+                إذا تخيلت عجلة ألوان (color wheel)، 
+                فإن اللون الأحمر red يقع عند درجة 0، 
+                والأخضر green عند درجة 120، 
+                والأزرق blue عند درجة 240.
+            </p>
+            <p>
+                التشبع (Saturation) هو مدى كثافة اللون، 
+                ويتراوح من 0% (أي اللون الرمادي gray) 
+                إلى 100% (أي اللون النقي pure color). 
+                يجب إضافة علامة النسبة المئوية (%) إلى قيم التشبع والسطوع.
+            </p>
+            <p>
+                تشير درجة السطوع (Lightness) إلى مدى سطوع اللون؛ 
+                إذ تتراوح من 0% (اللون الأسود التام complete black) 
+                إلى 100% (اللون الأبيض التام complete white)، 
+                وتُمثّل نسبة 50% الدرجة المحايدة.
+            </p>
+            <p>
+                في قاعدة CSS التي تحمل الاسم <span dir="ltr" class="br-spec nw">.blue</span>، 
+                استخدم الدالة <span dir="ltr" class="br-spec nw">hsl</span> 
+                لتغيير خاصية <span dir="ltr" class="br-spec nw">background-color</span> 
+                إلى اللون الأزرق الصافي pure blue؛ 
+                بحيث تضبط قيمة درجة اللون (hue) على <span dir="ltr" class="br-spec nw">240</span>، 
+                والتشبع (saturation) على <span dir="ltr" class="br-spec nw">100%</span>، 
+                والسطوع (lightness) على <span dir="ltr" class="br-spec nw">50%</span>.
+            </p>
+        </section>
+
+        <!-- STEP 44 -->
+        <section>
+            <h4>الخطوة 44</h4>
+            <p>
+                لقد تدربت على عدة طرق لتحديد ألوان ثابتة في CSS، 
+                ولكن يمكنك أيضاً استخدام تدرج لوني (gradient) على أحد العناصر.
+            </p>
+            <p>
+                التدرج اللوني (Gradient) هو انتقال لونٍ ما إلى لونٍ آخر. 
+                وتتيح لك دالة <span dir="ltr" class="br-spec nw">linear-gradient</span> 
+                في لغة CSS التحكم في اتجاه هذا الانتقال على طول خطٍ معين، 
+                وكذلك تحديد الألوان المستخدمة فيه.
+            </p>
+            <p>
+                من الأمور التي تجدر ملاحظتها أن دالة <span dir="ltr" class="br-spec nw">linear-gradient</span> 
+                تُنشئ في الواقع عنصر "صورة" <span dir="ltr" class="br-spec nw">image</span>، 
+                وعادةً ما تُستخدم مقترنةً بخاصية <span dir="ltr" class="br-spec nw">background</span> 
+                التي يمكنها قبول صورة كقيمة لها.
+            </p>
+            <p>
+                في قاعدة CSS التي تحمل الاسم <span dir="ltr" class="br-spec nw">.red</span>، 
+                غيّر خاصية <span dir="ltr" class="br-spec nw">background-color</span> 
+                إلى <span dir="ltr" class="br-spec nw">background</span>.
+            </p>
+        </section>
+
+        <!-- STEP 45 -->
+        <section>
+            <h4>الخطوة 45</h4>
+            <p>
+                تتميز دالة <span dir="ltr" class="br-spec nw">linear-gradient</span> بمرونة عالية؛ 
+                وإليك الصيغة الأساسية التي ستتعرف عليها في هذا الدرس:
+            </p>
+            <p class="hinty">نموذج برمجي</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">linear-gradient</span><span class="attr">(<span class="txt">gradientDirection, color1, color2, ...</span>);</span>
+            </code></pre></div>
+            <p>
+                يُشير <span dir="ltr" class="br-spec nw">gradientDirection</span> 
+                إلى اتجاه الخط المُستخدم في عملية الانتقال اللوني. 
+                أما <span dir="ltr" class="br-spec nw">color1</span> 
+                و <span dir="ltr" class="br-spec nw">color2</span> 
+                فهما مُعاملان يحددان الألوان التي ستُستخدم في هذا الانتقال؛ 
+                ويمكن أن تكون هذه الألوان من أي نوع، 
+                بما في ذلك أسماء الألوان (color keywords)، 
+                أو القيم بنظام الست عشري (hex)، 
+                أو صيغ <span dir="ltr" class="br-spec nw">rgb</span> 
+                أو <span dir="ltr" class="br-spec nw">hsl</span>.
+            </p>
+            <p>
+                والآن، ستُطبِّق تدرجاً لونياً (gradient) من الأحمر red إلى الأخضر green على طول خط بزاوية 90 درجة على العلامة الأولى.
+            </p>
+            <p>
+                أولاً، في قاعدة CSS التي تحمل الاسم <span dir="ltr" class="br-spec nw">.red</span>، 
+                اضبط خاصية <span dir="ltr" class="br-spec nw">background</span> 
+                على القيمة <span dir="ltr" class="br-spec nw">linear-gradient()</span>، 
+                ومرِّر لها القيمة <span dir="ltr" class="br-spec nw">90deg</span> 
+                بصفتها <span dir="ltr" class="br-spec nw">gradientDirection</span>.
+            </p>
+        </section>
+
+        <!-- STEP 46 -->
+        <section>
+            <h4>الخطوة 46</h4>
+            <p>
+                ستستخدم الدالة <span dir="ltr" class="br-spec nw">rgb</span> لتحديد ألوان هذا التدرج اللوني.
+            </p>
+            <p>
+                في دالة <span dir="ltr" class="br-spec nw">linear-gradient</span>، 
+                استخدم دالة <span dir="ltr" class="br-spec nw">rgb</span> لضبط وسيط اللون الأول 
+                على اللون الأحمر الصافي pure red.
+            </p>
+        </section>
+
+        <!-- STEP 47 -->
+        <section>
+            <h4>الخطوة 47</h4>
+            <p>
+                لن تظهر لك أي تدرجات لونية (gradient) بعد، 
+                لأن دالة <span dir="ltr" class="br-spec nw">linear-gradient</span> تتطلب وسيطين لونيين على الأقل لكي تعمل.
+            </p>
+            <p>
+                في دالة التدرج الخطي <span dir="ltr" class="br-spec nw">linear-gradient</span> ذاتها، 
+                استخدم الدالة <span dir="ltr" class="br-spec nw">rgb</span> لضبط وسيط اللون الثاني على اللون الأخضر الصافي pure green.
+            </p>
+        </section>
+
+        <!-- STEP 48 -->
+        <section>
+            <h4>الخطوة 48</h4>
+            <p>
+                كما تلاحظ، 
+                أنتجت الدالة <span dir="ltr" class="br-spec nw">linear-gradient</span> 
+                تدرجاً لونياً سلساً بين الأحمر والأخضر. 
+                وعلى الرغم من أن هذه الدالة تتطلب وسيطين لونيين على الأقل لكي تعمل، 
+                إلا أنه يمكنها قبول عدد أكبر من الألوان.
+            </p>
+            <p>
+                استخدم الدالة <span dir="ltr" class="br-spec nw">rgb</span> 
+                لإضافة اللون الأزرق الصافي pure blue كمعامل ثالث 
+                ضمن الدالة <span dir="ltr" class="br-spec nw">linear-gradient</span>.
+            </p>
+        </section>
+
+        <!-- STEP 49 -->
+        <section>
+            <h4>الخطوة 49</h4>
+            <p>
+                تتيح لك نقاط التوقف اللونية (color-stops) ضبط أماكن توضع الألوان بدقة على طول خط التدرج. 
+                وتُستخدم هذه النقاط ضمن دالة <span dir="ltr" class="br-spec nw">linear-gradient</span> 
+                لتحديد النقطة التي ينتهي عندها لونٌ ما، 
+                ويبدأ عندها الانتقال إلى اللون التالي. 
+                ويمكن تحديد موقع نقطة التوقف اللونية باستخدام قيمة مئوية (percentage) 
+                أو قيمة طولية (length value).
+            </p>
+            <p>
+                على سبيل المثال، في هذا التدرج اللوني من الأحمر إلى الأسود، 
+                يحدث الانتقال من اللون الأحمر إلى اللون الأسود عند نقطة تمثل 90% من طول خط التدرج؛ 
+                وبذلك يشغل اللون الأحمر الجزء الأكبر من المساحة المتاحة:
+            </p>
+            <p class="hinty">نموذج برمجي</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">linear-gradient</span><span class="attr">(<span class="txt">90deg, red 90%, black</span>);</span>
+            </code></pre></div>
+            <p>
+                في دالة <span dir="ltr" class="br-spec nw">linear-gradient</span>، 
+                أضف نقطة توقف لونية (color stop) عند نسبة <span dir="ltr" class="br-spec nw">75%</span> بعد وسيط اللون الأحمر الأول. 
+                لا تُضِف أي نقاط توقف لونية إلى وسائط الألوان الأخرى.
+            </p>
+        </section>
+
+        <!-- STEP 50 -->
+        <section>
+            <h4>الخطوة 50</h4>
+            <p>
+                والآن بعد أن أصبحت على دراية بأساسيات عمل دالة <span dir="ltr" class="br-spec nw">linear-gradient</span> 
+                ونقاط تدرج الألوان (color-stops)، 
+                يمكنك استخدامها لجعل العلامات تبدو أكثر واقعية.
+            </p>
+            <p>
+                في دالة <span dir="ltr" class="br-spec nw">linear-gradient</span>، 
+                اضبط <span dir="ltr" class="br-spec nw">gradientDirection</span> 
+                على القيمة <span dir="ltr" class="br-spec nw">180deg</span>.
+            </p>
+        </section>
+
+        <!-- STEP 51 -->
+        <section>
+            <h4>الخطوة 51</h4>
+            <p>
+                بعد ذلك، 
+                اضبط نقطة اللون (color-stop) الخاصة باللون الأحمر على <span dir="ltr" class="br-spec nw">0%</span>، 
+                ونقطة اللون (color-stop) الخاصة باللون الأخضر على <span dir="ltr" class="br-spec nw">50%</span>، 
+                ونقطة اللون (color-stop) الخاصة باللون الأزرق على <span dir="ltr" class="br-spec nw">100%</span>.
+            </p>
+        </section>
+
+        <!-- STEP 52 -->
+        <section>
+            <h4>الخطوة 52</h4>
+            <p>
+                بعد تحديد نقاط تدرج الألوان، 
+                ستقوم بتطبيق درجات مختلفة من اللون الأحمر على كل عنصر من عناصر الألوان داخل دالة <span dir="ltr" class="br-spec nw">linear-gradient</span>.
+                ستكون الدرجات عند الحواف العلوية والسفلية للعلامة أكثر قتامة (darker)، 
+                بينما ستكون الدرجة في المنتصف أكثر سطوعاً (lighter)، 
+                وكأن هناك ضوءاً مسلطاً عليها من الأعلى.
+            </p>
+            <p>
+                بالنسبة للمُعامل الأول الخاص باللون، 
+                والذي يمثل حالياً اللون الأحمر الصافي، 
+                قم بتعديل دالة <span dir="ltr" class="br-spec nw">rgb</span> 
+                بحيث تصبح قيمة اللون الأحمر <span dir="ltr" class="br-spec nw">122</span>، 
+                وقيمة اللون الأخضر <span dir="ltr" class="br-spec nw">74</span>، 
+                وقيمة اللون الأزرق <span dir="ltr" class="br-spec nw">14</span>.
+            </p>
+        </section>
+
+        <!-- STEP 53 -->
+        <section>
+            <h4>الخطوة 53</h4>
+            <p>
+                قم الآن بتعديل وسيط اللون الثاني في دالة <span dir="ltr" class="br-spec nw">linear-gradient</span>، 
+                والذي يمثل حالياً اللون الأخضر الصافي.
+            </p>
+            <p>
+                قم بتحديث الدالة <span dir="ltr" class="br-spec nw">rgb</span> 
+                بحيث تصبح قيمة اللون الأحمر <span dir="ltr" class="br-spec nw">245</span>، 
+                وقيمة اللون الأخضر <span dir="ltr" class="br-spec nw"></span>62، 
+                وقيمة اللون الأزرق <span dir="ltr" class="br-spec nw">113</span>.
+            </p>
+        </section>
+
+        <!-- STEP 54 -->
+        <section>
+            <h4>الخطوة 54</h4>
+            <p>
+                وأخيرًا، قم بتعديل وسيط اللون الثالث في دالة <span dir="ltr" class="br-spec nw">lineqr-gradient</span>، 
+                والذي يمثل حاليًا اللون الأزرق الصافي.
+            </p>
+            <p>
+                قم بتحديث الدالة <span dir="ltr" class="br-spec nw">rgb</span> 
+                بحيث تصبح قيمة اللون الأحمر <span dir="ltr" class="br-spec nw">162</span>، 
+                وقيمة اللون الأخضر <span dir="ltr" class="br-spec nw">27</span>، 
+                وقيمة اللون الأزرق <span dir="ltr" class="br-spec nw">27</span>.
+            </p>
+        </section>
+
+        <!-- STEP 55 -->
+        <section>
+            <h4>الخطوة 55</h4>
+            <p>
+                يبدو المؤشر الأحمر الآن أكثر واقعية بكثير. 
+                والآن، ستطبق الأمر ذاته على المؤشر الأخضر (green marker)، 
+                باستخدام مزيج من دالة <span dir="ltr" class="br-spec nw">linear-gradient</span> 
+                وقيم الألوان بنظام الست عشر (hex colors).
+            </p>
+            <p>
+                في قاعدة CSS التي تحمل الاسم <span dir="ltr" class="br-spec nw">.green</span>، 
+                غيّر خاصية <span dir="ltr" class="br-spec nw">background-color</span> 
+                إلى <span dir="ltr" class="br-spec nw">background</span>.
+            </p>
+        </section>
+
+        <!-- STEP 56 -->
+        <section>
+            <h4>الخطوة 56</h4>
+            <p>
+                بالنسبة لهذه العلامة، ستستخدم رموز الألوان بنظام "هيكس" (hex) للتدرج اللوني.
+            </p>
+            <p>
+                استخدم الدالة <span dir="ltr" class="br-spec nw">linear-gradient</span> 
+                واضبط <span dir="ltr" class="br-spec nw">gradientDirection</span> 
+                على القيمة <span dir="ltr" class="br-spec nw">180deg</span>. 
+                أما بالنسبة لمعامل اللون الأول، 
+                فاستخدم رمز لون بنظام "hex" بقيم <span dir="ltr" class="br-spec nw">55</span> للمكون الأحمر، 
+                و <span dir="ltr" class="br-spec nw">68</span> للمكون الأخضر، 
+                و <span dir="ltr" class="br-spec nw">0D</span> للمكون الأزرق.
+            </p>
+        </section>
+
+        <!-- STEP 57 -->
+        <section>
+            <h4>الخطوة 57</h4>
+            <p>
+                بالنسبة للمعامل الثاني الخاص باللون، 
+                استخدم رمز لون ست عشري (hex code) 
+                بقيم <span dir="ltr" class="br-spec nw">71</span> للون الأحمر، 
+                و<span dir="ltr" class="br-spec nw">F5</span> للون الأخضر، 
+                و<span dir="ltr" class="br-spec nw">3E</span> للون الأزرق.
+            </p>
+        </section>
+
+        <!-- STEP 58 -->
+        <section>
+            <h4>الخطوة 58</h4>
+            <p>
+                يبدو الأمر أفضل الآن، لكن الحافة السفلية للعلامة الخضراء تحتاج إلى أن تكون أكثر قتامة لإضفاء مزيد من الأبعاد.
+            </p>
+            <p>
+                في دالة التدرج الخطي <span dir="ltr" class="br-spec nw">linear-gradient</span> نفسها، 
+                أضف رمز لون بنظام الست عشري (hex color code) - 
+                بقيم <span dir="ltr" class="br-spec nw">11</span> للمكون الأحمر، 
+                و<span dir="ltr" class="br-spec nw">6C</span> للمكون الأخضر، 
+                و<span dir="ltr" class="br-spec nw">31</span> للمكون الأزرق - 
+                باعتباره المعامل اللوني الثالث.
+            </p>
+        </section>
+
+        <!-- STEP 59 -->
+        <section>
+            <h4>الخطوة 59</h4>
+            <p>
+                حتى بدون وجود نقاط تحديد الألوان (color-stops)، 
+                ربما لاحظت أن ألوان المؤشر الأخضر تتغير عند نفس النقاط التي تتغير عندها ألوان المؤشر الأحمر؛ 
+                فاللون الأول يقع في البداية (0%)، 
+                والثاني في المنتصف (50%)، 
+                والأخير في نهاية (100%) خط التدرج اللوني.
+            </p>
+            <p>
+                تقوم دالة التدرج الخطي <span dir="ltr" class="br-spec nw">linear-gradient</span> بحساب هذه القيم تلقائيًا نيابةً عنك، 
+                وتُوزِّع الألوان بانتظام على طول خط التدرج بشكل افتراضي.
+            </p>
+            <p>
+                في قاعدة CSS التي تحمل الاسم <span dir="ltr" class="br-spec nw">.red</span>، 
+                احذف نقاط التوقف اللونية (color stops) الثلاث 
+                من دالة <span dir="ltr" class="br-spec nw">linear-gradient</span> لتبسيط الكود قليلاً.
+            </p>
+        </section>
+
+        <!-- STEP 60 -->
+        <section>
+            <h4>الخطوة 60</h4>
+            <p>
+                إذا لم يتم توفير وسيط <span dir="ltr" class="br-spec nw">gradientDirection</span> 
+                للدالة <span dir="ltr" class="br-spec nw">linear-gradient</span>، 
+                فإنها تقوم افتراضيًا بترتيب الألوان من الأعلى إلى الأسفل، 
+                أو على طول خط بزاوية 180 درجة.
+            </p>
+            <p>
+                قم بتنظيف الكود الخاص بك أكثر قليلاً 
+                عن طريق إزالة الوسيط <span dir="ltr" class="br-spec nw">gradientDirection</span> 
+                من كلتا دالتي <span dir="ltr" class="br-spec nw">linear-gradient</span>.
+            </p>
+        </section>
+
+        <!-- STEP 61 -->
+        <section>
+            <h4>الخطوة 61</h4>
+            <p>
+                والآن، ستُطبِّق تدرجاً لونياً على العلامة الزرقاء، 
+                مستخدماً هذه المرة دالة <span dir="ltr" class="br-spec nw">hsl</span> لتحديد الألوان.
+            </p>
+            <p>
+                في قاعدة CSS التي تحمل الاسم <span dir="ltr" class="br-spec nw">.blue</span> ، 
+                غيّر خاصية <span dir="ltr" class="br-spec nw">background-color</span> 
+                إلى <span dir="ltr" class="br-spec nw">background</span>.
+            </p>
+        </section>
+
+        <!-- STEP 62 -->
+        <section>
+            <h4>الخطوة 62</h4>
+            <p>
+                استخدم الدالة <span dir="ltr" class="br-spec nw">linear-gradient</span>، 
+                ومرِّر الدالة <span dir="ltr" class="br-spec nw">hsl</span> -
+                مع ضبط قيمة تدرج اللون (hue) على <span dir="ltr" class="br-spec nw">186</span> ، 
+                والتشبع (saturation) على <span dir="ltr" class="br-spec nw">76%</span> ، 
+                والسطوع (lightness) على <span dir="ltr" class="br-spec nw">16%</span> - 
+                بصفتها وسيط اللون الأول.
+            </p>
+        </section>
+
+        <!-- STEP 63 -->
+        <section>
+            <h4>الخطوة 63</h4>
+            <p>
+                باعتباره الوسيط الثاني المتعلق باللون، 
+                مرِّر الدالة <span dir="ltr" class="br-spec nw">hsl</span> 
+                مع القيم <span dir="ltr" class="br-spec nw">223</span> لدرجة اللون (hue)، 
+                و <span dir="ltr" class="br-spec nw">90%</span> للتشبع (saturation)، 
+                و <span dir="ltr" class="br-spec nw">60%</span> للإضاءة (lightness).
+            </p>
+        </section>
+
+        <!-- STEP 64 -->
+        <section>
+            <h4>الخطوة 64</h4>
+            <p>
+                وباعتباره الوسيط الثالث المتعلق باللون، 
+                مرِّر الدالة <span dir="ltr" class="br-spec nw">hsl</span> 
+                مع القيم التالية: 
+                <span dir="ltr" class="br-spec nw">240</span> لدرجة اللون (hue)، 
+                و <span dir="ltr" class="br-spec nw">56%</span> للتشبع (saturation)، 
+                و <span dir="ltr" class="br-spec nw">42%</span> للإضاءة (lightness).
+            </p>
+        </section>
+
+        <!-- STEP 65 -->
+        <section>
+            <h4>الخطوة 65</h4>
+            <p>
+                بما أن أقلام التحديد أصبحت الآن بالألوان الصحيحة، 
+                فقد حان الوقت لصنع أغطية الأقلام (marker sleeves). 
+                ابدأ بقلم التحديد الأحمر (red marker).
+            </p>
+            <p>
+                داخل عنصر <span dir="ltr" class="br-spec nw">div</span> 
+                الذي يحمل العلامة "red marker"، 
+                أنشئ عنصر <span dir="ltr" class="br-spec nw">div</span> جديداً 
+                وامنحه فئة (class) باسم <span dir="ltr" class="br-spec nw">sleeve</span>.
+            </p>
+        </section>
+
+        <!-- STEP 66 -->
+        <section>
+            <h4>الخطوة 66</h4>
+            <p>
+                أنشئ قاعدة CSS جديدة تستهدف الفئة <span dir="ltr" class="br-spec nw">sleeve</span>. 
+                اضبط خاصية <span dir="ltr" class="br-spec nw">width</span> 
+                على القيمة <span dir="ltr" class="br-spec nw">100px</span> ، 
+                وخاصية <span dir="ltr" class="br-spec nw">height</span> 
+                على القيمة <span dir="ltr" class="br-spec nw">25px</span>.
+            </p>
+        </section>
+
+        <!-- STEP 67 -->
+        <section>
+            <h4>الخطوة 67</h4>
+            <p>
+                لجعل العلامة تبدو أكثر واقعية، امنح الغلاف لوناً أبيض شفافاً.
+            </p>
+            <p>
+                أولاً، اضبط خاصية <span dir="ltr" class="br-spec nw">background-color</span> 
+                لعنصر الغلاف (sleeve element) 
+                على القيمة <span dir="ltr" class="br-spec nw">white</span>.
+            </p>
+        </section>
+
+        <!-- STEP 68 -->
+        <section>
+            <h4>الخطوة 68</h4>
+            <p>
+                تُشير "العتامة" (Opacity) إلى مدى كون الشيء معتماً، 
+                أي غير شفاف. 
+                فعلى سبيل المثال، 
+                يُعد الجدار المصمت (solid wall) جسماً معتماً (opaque) لا يسمح بمرور الضوء من خلاله؛ 
+                أما الكوب الزجاجي (drinking glass) فهو أكثر شفافية بكثير، 
+                إذ يمكنك الرؤية من خلاله إلى الجانب الآخر.
+            </p>
+            <p>
+                باستخدام خاصية <span dir="ltr" class="br-spec nw">opacity</span> في CSS، 
+                يمكنك التحكم في درجة عتامة العنصر أو شفافيته. 
+                عند ضبط القيمة على <span dir="ltr" class="br-spec nw">0</span> (أو 0%)، 
+                يصبح العنصر شفافاً تماماً، 
+                بينما عند ضبطها على <span dir="ltr" class="br-spec nw">1.0</span> (أو 100%)، 
+                يصبح العنصر معتماً بالكامل، 
+                وهو الوضع الافتراضي له.
+            </p>
+            <p>
+                في قاعدة CSS التي تحمل الاسم <span dir="ltr" class="br-spec nw">.sleeve</span>، 
+                اضبط خاصية <span dir="ltr" class="br-spec nw">opacity</span> 
+                على القيمة <span dir="ltr" class="br-spec nw">0.5</span>.
+            </p>
+        </section>
+
+        <!-- STEP 69 -->
+        <section>
+            <h4>الخطوة 69</h4>
+            <p>
+                هناك طريقة أخرى لضبط درجة التعتيم (opacity) لعنصر ما، 
+                وهي استخدام قناة ألفا (alpha channel). 
+                فمثل خاصية <span dir="ltr" class="br-spec nw">opacity</span>، 
+                تتحكم قناة ألفا في مدى شفافية اللون أو تعتيمه.
+            </p>
+            <p>
+                لقد قمت بالفعل بضبط شفافية العنصر (sleeve) باستخدام اسم لون وخاصية الشفافية <span dir="ltr" class="br-spec nw">opacity</span>، 
+                ولكن يمكنك أيضاً إضافة قناة ألفا (alpha channel) إلى خصائص ألوان CSS الأخرى.
+            </p>
+            <p>
+                داخل القاعدة <span dir="ltr" class="br-spec nw">.sleeve</span>، 
+                احذف خاصية <span dir="ltr" class="br-spec nw">opacity</span> وقيمتها.
+            </p>
+        </section>
+
+        <!-- STEP 70 -->
+        <section>
+            <h4>الخطوة 70</h4>
+            <p>
+                كنت تستخدم الدالة <span dir="ltr" class="br-spec nw">rgb</span> لتحديد الألوان. 
+                ولإضافة قناة ألفا (alpha channel) إلى لون مُعرَّف بـ <span dir="ltr" class="br-spec nw">rgb</span>، 
+                استخدم الدالة <span dir="ltr" class="br-spec nw">rgba</span> بدلاً منها.
+            </p>
+            <p>
+                تعمل الدالة <span dir="ltr" class="br-spec nw">rgba</span> 
+                تماماً مثل الدالة <span dir="ltr" class="br-spec nw">rgb</span>، 
+                لكنها تقبل رقماً إضافياً يتراوح بين <span dir="ltr" class="br-spec nw">0</span> 
+                و <span dir="ltr" class="br-spec nw">1.0</span> خاصاً بقناة ألفا (alpha channel) :
+            </p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">rgba</span><span class="attr">(<span class="txt">redValue, greenValue, blueValue, alphaValue</span>);</span>
+            </code></pre></div>
+            <p>
+                يمكنك أيضاً استخدام قناة ألفا (alpha channel) مع الألوان بصيغتي 
+                <span dir="ltr" class="br-spec nw">hsl</span> 
+                و <span dir="ltr" class="br-spec nw">hex</span>. 
+                وستتعرف على كيفية القيام بذلك قريباً.
+            </p>
+            <p>
+                في القاعدة <span dir="ltr" class="br-spec nw">.sleeve</span>، 
+                استخدم الدالة <span dir="ltr" class="br-spec nw">rgba</span> 
+                لضبط خاصية <span dir="ltr" class="br-spec nw">background-color</span> 
+                على اللون الأبيض الصافي 
+                مع تعيين درجة الشفافية (opacity) عند 50%.
+            </p>
+        </section>
+
+        <!-- STEP 71 -->
+        <section>
+            <h4>الخطوة 71</h4>
+            <p>
+                يبدو تصميم الكم (sleeve) جيداً، 
+                لكنه سيبدو أفضل إذا تم وضعه باتجاه الجانب الأيسر من العلامة المؤشر (marker). 
+                إحدى طرق تحقيق ذلك هي إضافة عنصر آخر قبل الكم، 
+                مما سيؤدي إلى دفعه نحو اليسار.
+            </p>
+            <p>
+                أضف عنصر <span dir="ltr" class="br-spec nw">div</span> جديداً 
+                يحمل الفئة <span dir="ltr" class="br-spec nw">cap</span> 
+                قبل عنصر الـ <span dir="ltr" class="br-spec nw">div</span> 
+                الذي يحمل الفئة "sleeve".
+            </p>
+        </section>
+
+        <!-- STEP 72 -->
+        <section>
+            <h4>الخطوة 72</h4>
+            <p>
+                أنشئ قاعدة CSS جديدة تستهدف الفئة <span dir="ltr" class="br-spec nw">cap</span>. 
+                وفي هذه القاعدة الجديدة، 
+                اضبط خاصية <span dir="ltr" class="br-spec nw">width</span> 
+                على القيمة <span dir="ltr" class="br-spec nw">60px</span>، 
+                وخاصية <span dir="ltr" class="br-spec nw">height</span> 
+                على القيمة <span dir="ltr" class="br-spec nw">25px</span>.
+            </p>
+        </section>
+
+        <!-- STEP 73 -->
+        <section>
+            <h4>الخطوة 73</h4>
+            <p>
+                يبدو أن الغلاف (sleeve) قد اختفى، 
+                لكن لا تقلق؛ فهو لا يزال موجوداً. 
+                ما حدث هو أن عنصر <span dir="ltr" class="br-spec nw">div</span> الجديد الخاص بك (cap) يشغل العرض الكامل للعلامة (marker)، 
+                مما أدى إلى دفع الغلاف (sleeve) إلى السطر التالي.
+            </p>
+            <p>
+                يعود السبب في ذلك إلى أن القيمة الافتراضية لخاصية <span dir="ltr" class="br-spec nw">display</span> 
+                في عناصر <span dir="ltr" class="br-spec nw">div</span> 
+                هي <span dir="ltr" class="br-spec nw">block</span>. 
+                لذا، عندما يتجاور عنصران من نوع <span dir="ltr" class="br-spec nw">block</span>، 
+                فإنهما يتراصّان فوق بعضهما البعض تماماً ككتل مادية؛ 
+                فعلى سبيل المثال، 
+                تظهر عناصر العلامات (markers) الخاصة بك متراصّة جميعها فوق بعضها البعض.
+            </p>
+            <p>
+                لوضع عنصرين من نوع <span dir="ltr" class="br-spec nw">div</span> على نفس السطر، 
+                اضبط خاصية <span dir="ltr" class="br-spec nw">display</span> لكل منهما 
+                على القيمة <span dir="ltr" class="br-spec nw">inline-block</span>.
+            </p>
+            <p>
+                أنشئ قاعدة جديدة تستهدف كلاً من الفئتين <span dir="ltr" class="br-spec nw">cap</span> 
+                و <span dir="ltr" class="br-spec nw">sleeve</span>، 
+                واضبط الخاصية <span dir="ltr" class="br-spec nw">display</span> 
+                على القيمة <span dir="ltr" class="br-spec nw">inline-block</span>.
+            </p>
+        </section>
+
+        <!-- STEP 74 -->
+        <section>
+            <h4>الخطوة 74</h4>
+            <p>
+                تحتوي جميع عناصر HTML على حدود (borders)، 
+                على الرغم من أنها تكون مضبوطة افتراضيًا على القيمة <span dir="ltr" class="br-spec nw">none</span> (أي بلا حدود). 
+                وباستخدام CSS، يمكنك التحكم في كافة جوانب حدود العنصر، 
+                وتحديد الحدود من جميع الجهات أو من جهة واحدة فقط في كل مرة. 
+                ولكي تظهر الحدود، يجب عليك تحديد عرضها ونمطها.
+            </p>
+            <p>
+                في قاعدة CSS التي تحمل الاسم <span dir="ltr" class="br-spec nw">.sleeve</span>، 
+                أضف الخاصية <span dir="ltr" class="br-spec nw">border-right-width</span> 
+                بقيمة <span dir="ltr" class="br-spec nw">10px</span>.
+            </p>
+        </section>
+
+        <!-- STEP 75 -->
+        <section>
+            <h4>الخطوة 75</h4>
+            <p>
+                تتوفر أنماط متنوعة للحدود يمكنك الاختيار من بينها؛ 
+                إذ يمكنك جعل الحد خطاً متصلاً، 
+                أو استخدام خط متقطع أو منقط إذا كنت تفضل ذلك. 
+                وتُعد الخطوط المتصلة للحدود هي الأكثر شيوعاً على الأرجح.
+            </p>
+            <p>
+                في قاعدة CSS التي تحمل الاسم <span dir="ltr" class="br-spec nw">.sleeve</span>، 
+                أضف الخاصية <span dir="ltr" class="br-spec nw">border-right-style</span> 
+                بقيمة <span dir="ltr" class="br-spec nw">solid</span>.
+            </p>
+        </section>
+
+        <!-- STEP 76 -->
+        <section>
+            <h4>الخطوة 76</h4>
+            <p>
+                ينبغي أن يكون إطارك مرئيًا الآن. 
+                وإذا لم يتم تحديد لون، 
+                فسيُستخدم اللون الأسود افتراضيًا.
+            </p>
+            <p>
+                ولكن لجعل الكود الخاص بك أكثر قابلية للقراءة، 
+                من الأفضل تحديد لون الحدود (border color) بشكل صريح.
+            </p>
+            <p>
+                في قاعدة CSS التي تحمل الاسم <span dir="ltr" class="br-spec nw">.sleeve</span>، 
+                أضف الخاصية <span dir="ltr" class="br-spec nw">border-right-color</span> 
+                بقيمة <span dir="ltr" class="br-spec nw">black</span>.
+            </p>
+        </section>
+
+        <!-- STEP 77 -->
+        <section>
+            <h4>الخطوة 77</h4>
+            <p>
+                تتيح لك الخاصية المختصرة <span dir="ltr" class="br-spec nw">border-right</span> 
+                تعيين عرض الحد الأيمن ونمطه ولونه في آنٍ واحد.
+            </p>
+            <p>
+                إليك الصيغة:
+            </p>
+            <p class="hinty">نموذج برمجي</p>
+            <div class="code-block"><pre><code>
+<span class="attr">border-right: <span class="txt">width style color</span>;</span>
+            </code></pre></div>
+            <p>
+                في قاعدة CSS التي تحمل الاسم <span dir="ltr" class="br-spec nw">.sleeve</span>، 
+                استبدل الخصائص <span dir="ltr" class="br-spec nw">border-right-width</span> 
+                و <span dir="ltr" class="br-spec nw">border-right-style</span> 
+                و <span dir="ltr" class="br-spec nw">border-right-color</span> 
+                بالخاصية المختصرة <span dir="ltr" class="br-spec nw">border-right</span>. 
+                يجب أن تكون قيم عرض ونمط ولون الحد الأيسر هي نفسها.
+            </p>
+        </section>
+
+        <!-- STEP 78 -->
+        <section>
+            <h4>الخطوة 78</h4>
+            <p>
+                تبدو علامتك جيدة. ولكن لجعل مظهرها أكثر واقعية، 
+                يمكنك تغيير نمط الحدود إلى حدود مزدوجة صلبة (double solid borders).
+            </p>
+            <p>
+                بالنسبة لخاصية الاختصار <span dir="ltr" class="br-spec nw">border-right</span>، 
+                غيّر قيمة نمط الحدود (border style) من <span dir="ltr" class="br-spec nw">solid</span> 
+                إلى <span dir="ltr" class="br-spec nw">double</span>.
+            </p>
+        </section>
+
+        <!-- STEP 79 -->
+        <section>
+            <h4>الخطوة 79</h4>
+            <p>
+                يبدو اللون الأسود للإطار فجاً للغاية عند وضعه فوق الغلاف الأكثر شفافية. 
+                يمكنك استخدام قناة ألفا (alpha channel) لتقليل درجة تعتيم الإطار الأسود.
+            </p>
+            <p>
+                بالنسبة لخاصية الاختصار <span dir="ltr" class="br-spec nw">border-right</span>، 
+                استخدم الدالة <span dir="ltr" class="br-spec nw">rgba</span> 
+                لضبط قيمة اللون على الأسود الخالص مع تعيين درجة الشفافية عند 75%.
+            </p>
+        </section>
+
+        <!-- STEP 80 -->
+        <section>
+            <h4>الخطوة 80</h4>
+            <p>
+                رائع. يبدو قلم التحديد الأحمر (red marker) الخاص بك بحالة جيدة. الآن، 
+                ما عليك سوى إضافة الأغطية (caps) والأغلفة (sleeves) إلى أقلام التحديد (markers) الأخرى.
+            </p>
+            <p>
+                أضف "غطاءً" (cap) و"كمّاً" (sleeve) إلى كل من "العلامتين الخضراء green والزرقاء blue". 
+                يمكنك ببساطة نسخ عناصر <span dir="ltr" class="br-spec nw">div</span> من "العلامة الحمراء red marker" ولصقها داخل العلامتين الأخريين.
+            </p>
+        </section>
+
+        <!-- STEP 81 -->
+        <section>
+            <h4>الخطوة 81</h4>
+            <p>
+                آخر ما ستقوم به هو إضافة ظل خفيف (slight shadow) لكل علامة، 
+                لجعلها تبدو أكثر واقعية.
+            </p>
+            <p>
+                تتيح لك الخاصية <span dir="ltr" class="br-spec nw">box-shadow</span> إضافة ظل واحد أو أكثر حول عنصر ما. 
+                وإليك الصيغة الأساسية:
+            </p>
+            <p class="hinty">نموذج برمجي</p>
+            <div class="code-block"><pre><code>
+<span class="attr">box-shadow: <span class="txt">offsetX offsetY color</span>;</span>
+            </code></pre></div>
+            <p>
+                إليك كيفية عمل قيمتي <span dir="ltr" class="br-spec nw">offsetX</span> و <span dir="ltr" class="br-spec nw">offsetY</span>:
+            </p>
+            <ul>
+                <li>
+                    <p>
+                        يقبل كل من <span dir="ltr" class="br-spec nw">offsetX</span> و <span dir="ltr" class="br-spec nw">offsetY</span> قيماً رقمية بوحدة <span dir="ltr" class="br-spec nw">px</span> ووحدات CSS أخرى.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        تؤدي القيمة الموجبة لـ <span dir="ltr" class="br-spec nw">offsetX</span> إلى تحريك الظل نحو اليمين، بينما تؤدي القيمة السالبة إلى تحريكه نحو اليسار.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        تؤدي القيمة الموجبة لـ <span dir="ltr" class="br-spec nw">offsetY</span> إلى تحريك الظل نحو الأسفل، بينما تؤدي القيمة السالبة إلى تحريكه نحو الأعلى.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        إذا كنت ترغب في ضبط قيمة <span dir="ltr" class="br-spec nw">offsetX</span> 
+                        أو <span dir="ltr" class="br-spec nw">offsetY</span> (أو كلتيهما) 
+                        على صفر (<span dir="ltr" class="br-spec nw">0</span>)، 
+                        فلن تحتاج إلى إضافة وحدة قياس؛ 
+                        فجميع المتصفحات تفهم أن القيمة صفر تعني عدم وجود أي تغيير.
+                    </p>
+                </li>
+            </ul>
+
+            <p>
+                يتحدد ارتفاع الظل وعرضه بناءً على ارتفاع وعرض العنصر الذي يُطبَّق عليه. 
+                يمكنك أيضاً استخدام قيمة اختيارية تُدعى <span dir="ltr" class="br-spec nw">spreadRadius</span> لتوسيع نطاق انتشار الظل. 
+                سنوضح المزيد حول هذا لاحقاً.
+            </p>
+            
+            <p>
+                ابدأ بإضافة ظل بسيط (simple shadow) إلى العلامة الحمراء (red marker).
+            </p>
+
+            <p>
+                في قاعدة CSS التي تحمل الاسم <span dir="ltr" class="br-spec nw">.red</span>، 
+                أضف الخاصية <span dir="ltr" class="br-spec nw">box-shadow</span> 
+                بقيم: <span dir="ltr" class="br-spec nw">5px</span> 
+                لـ <span dir="ltr" class="br-spec nw">offsetX</span>، 
+                و <span dir="ltr" class="br-spec nw">5px</span> 
+                لـ <span dir="ltr" class="br-spec nw">offsetY</span>، 
+                و <span dir="ltr" class="br-spec nw">red</span> 
+                لـ <span dir="ltr" class="br-spec nw">color</span>.
+            </p>
+            
+            
+            
+        </section>
+
+        <!-- STEP 82 -->
+        <section>
+            <h4>الخطوة 82</h4>
+            <p>
+                كما تلاحظ، فقد أضفت ظلاً أحمر بسيطاً (simple red shadow) حول علامتك، 
+                بحيث يبتعد 5 بكسلات نحو اليمين و5 بكسلات نحو الأسفل.
+            </p>
+            <p>
+                ولكن ماذا لو أردت وضع الظل في الجانب المقابل؟ 
+                يمكنك القيام بذلك باستخدام قيم سالبة لكل 
+                من <span dir="ltr" class="br-spec nw">offsetX</span> 
+                و <span dir="ltr" class="br-spec nw">offsetY</span>.
+            </p>
+            <p>
+                قم بتحديث قيم الخاصية <span dir="ltr" class="br-spec nw">box-shadow</span>، 
+                واضبط <span dir="ltr" class="br-spec nw">offsetX</span> 
+                على <span dir="ltr" class="br-spec nw">-5px</span> ، 
+                و <span dir="ltr" class="br-spec nw">offsetY</span>   
+                على <span dir="ltr" class="br-spec nw">-5px</span> .
+            </p>
+        </section>
+
+        <!-- STEP 83 -->
+        <section>
+            <h4>الخطوة 83</h4>
+            <p>
+                لاحظ أن حواف الظل حادة؛ 
+                وذلك لوجود قيمة اختيارية تُدعى <span dir="ltr" class="br-spec nw">blurRadius</span> 
+                ضمن خاصية <span dir="ltr" class="br-spec nw">box-shadow</span> :
+            </p>
+            <p class="hinty">نموذج برمجي</p>
+            <div class="code-block"><pre><code>
+<span class="attr">box-shadow: <span class="txt">offsetX offsetY blurRadius color</span>;</span>
+            </code></pre></div>
+            <p>
+                إذا لم يتم تضمين قيمة لـ <span dir="ltr" class="br-spec nw">blurRadius</span>، 
+                فسيتم اعتماد القيمة الافتراضية <span dir="ltr" class="br-spec nw">0</span>، 
+                مما يؤدي إلى ظهور حواف حادة. 
+                وكلما زادت قيمة <span dir="ltr" class="br-spec nw">blurRadius</span>، 
+                أصبح تأثير التمويه أقوى.
+            </p>
+            <p>
+                في قاعدة CSS التي تحمل الاسم <span dir="ltr" class="br-spec nw">.green</span>، 
+                أضف الخاصية <span dir="ltr" class="br-spec nw">box-shadow</span> 
+                بقيم: <span dir="ltr" class="br-spec nw">5px</span> 
+                لـ <span dir="ltr" class="br-spec nw">offsetX</span>، 
+                و <span dir="ltr" class="br-spec nw">5px</span> 
+                لـ <span dir="ltr" class="br-spec nw">offsetY</span>، 
+                و <span dir="ltr" class="br-spec nw">5px</span> 
+                لـ <span dir="ltr" class="br-spec nw">blurRadius</span>، 
+                و <span dir="ltr" class="br-spec nw">green</span> 
+                لـ <span dir="ltr" class="br-spec nw">color</span>.
+            </p>
+        </section>
+
+        <!-- STEP 84 -->
+        <section>
+            <h4>الخطوة 84</h4>
+            <p>
+                ولكن ماذا لو أردت توسيع الظل إلى مسافة أبعد؟ 
+                يمكنك القيام بذلك باستخدام القيمة الاختيارية <span dir="ltr" class="br-spec nw">spreadRadius</span> :
+            </p>
+            <p class="hinty">نموذج برمجي</p>
+            <div class="code-block"><pre><code>
+<span class="attr">box-shadow: <span class="txt">offsetX offsetY blurRadius spreadRadius color</span>;</span>
+            </code></pre></div>
+            <p>
+                على غرار <span dir="ltr" class="br-spec nw">blurRadius</span>، 
+                تكون القيمة الافتراضية لـ <span dir="ltr" class="br-spec nw">spreadRadius</span> 
+                هي <span dir="ltr" class="br-spec nw">0</span> إذا لم يتم تضمينها.
+            </p>
+            <p>
+                تدرب على إضافة ظل بمقدار 5 بكسل مباشرةً حول العلامة الزرقاء.
+            </p>
+            <p>
+                في قاعدة CSS التي تحمل الاسم <span dir="ltr" class="br-spec nw">.blue</span>، 
+                أضف الخاصية <span dir="ltr" class="br-spec nw">box-shadow</span> 
+                بقيمٍ تبلغ <span dir="ltr" class="br-spec nw">0</span> 
+                لـ <span dir="ltr" class="br-spec nw">offsetX</span>، 
+                و <span dir="ltr" class="br-spec nw">0</span> 
+                لـ <span dir="ltr" class="br-spec nw">offsetY</span>، 
+                و <span dir="ltr" class="br-spec nw">0</span> 
+                لـ <span dir="ltr" class="br-spec nw">blurRadius</span>، 
+                و <span dir="ltr" class="br-spec nw">5px</span> 
+                لـ <span dir="ltr" class="br-spec nw">spreadRadius</span>، 
+                و <span dir="ltr" class="br-spec nw">blue</span> 
+                لـ <span dir="ltr" class="br-spec nw">color</span>.
+            </p>
+        </section>
+
+        <!-- STEP 85 -->
+        <section>
+            <h4>الخطوة 85</h4>
+            <p>
+                والآن بعد أن أصبحت على دراية بخاصية <span dir="ltr" class="br-spec nw">box-shadow</span>، 
+                يمكنك وضع اللمسات النهائية على الظلال،
+                بدءاً بظل العلامة الحمراء (red marker).
+            </p>
+            <p>
+                في قاعدة CSS التي تحمل الاسم <span dir="ltr" class="br-spec nw">.red</span>، 
+                حدِّث قيم الخاصية <span dir="ltr" class="br-spec nw">box-shadow</span> 
+                بحيث تكون قيمة <span dir="ltr" class="br-spec nw">offsetX</span> 
+                مساوية لـ <span dir="ltr" class="br-spec nw">0</span>، 
+                و <span dir="ltr" class="br-spec nw">offsetY</span> 
+                مساوية لـ <span dir="ltr" class="br-spec nw">0</span>، 
+                و <span dir="ltr" class="br-spec nw">blurRadius</span> 
+                مساوية لـ <span dir="ltr" class="br-spec nw">20px</span>، 
+                و <span dir="ltr" class="br-spec nw">spreadRadius</span> 
+                مساوية لـ <span dir="ltr" class="br-spec nw">0</span>، 
+                و <span dir="ltr" class="br-spec nw">color</span> 
+                مساوية لـ <span dir="ltr" class="br-spec nw">red</span>. 
+                تذكَّر أنه لا داعي لإضافة وحدات قياس إلى القيمة صفر.
+            </p>
+        </section>
+
+        <!-- STEP 86 -->
+        <section>
+            <h4>الخطوة 86</h4>
+            <p>
+                بعد ذلك، حدِّث قيمة "اللون" <span dir="ltr" class="br-spec nw">color</span> 
+                ضمن خاصية <span dir="ltr" class="br-spec nw">box-shadow</span> الخاصة بالعلامة الحمراء.
+            </p>
+            <p>
+                استبدل اسم اللون بالدالة <span dir="ltr" class="br-spec nw">rgba</span>. 
+                استخدم القيم <span dir="ltr" class="br-spec nw">83</span> للون الأحمر، 
+                و <span dir="ltr" class="br-spec nw">14</span> للون الأخضر، 
+                و <span dir="ltr" class="br-spec nw">14</span> للون الأزرق، 
+                و <span dir="ltr" class="br-spec nw">0.8</span> لقناة الشفافية (alpha channel).
+            </p>
+        </section>
+
+        <!-- STEP 87 -->
+        <section>
+            <h4>الخطوة 87</h4>
+            <p>
+                ستكون الظلال الخاصة بعلاماتك الخضراء والزرقاء ذات الموقع ودرجة التمويه والانتشار نفسها؛ 
+                أما الاختلاف الوحيد فسيكون في الألوان.
+            </p>
+            <p>
+                في قاعدتي <span dir="ltr" class="br-spec nw">.green</span> 
+             و <span dir="ltr" class="br-spec nw">.blue</span>، 
+                حدِّث قيم خصائص <span dir="ltr" class="br-spec nw">box-shadow</span> 
+                بحيث تصبح قيمة <span dir="ltr" class="br-spec nw">offsetX</span> 
+                مساوية لـ <span dir="ltr" class="br-spec nw">0</span>، 
+                و <span dir="ltr" class="br-spec nw">offsetY</span> 
+                مساوية لـ <span dir="ltr" class="br-spec nw">0</span>، 
+                و <span dir="ltr" class="br-spec nw">blurRadius</span> 
+                مساوية لـ <span dir="ltr" class="br-spec nw">20px</span>، 
+                و <span dir="ltr" class="br-spec nw">spreadRadius</span> 
+                مساوية لـ <span dir="ltr" class="br-spec nw">0</span>. 
+                أبقِ الألوان كما هي، <span dir="ltr" class="br-spec nw">green</span> 
+                و <span dir="ltr" class="br-spec nw">blue</span>، 
+                في الوقت الحالي.
+            </p>
+        </section>
+
+        <!-- STEP 88 -->
+        <section>
+            <h4>الخطوة 88</h4>
+            <p>
+                بالنسبة للخاصية <span dir="ltr" class="br-spec nw">box-shadow</span> الخاصة بالعلامة الخضراء، 
+                استبدل اسم اللون برمز لوني بنظام الست عشر (hex color code).
+            </p>
+            <p>
+                لإضافة قناة ألفا (alpha channel) إلى لون بصيغة "hex"، 
+                يجب إضافة زوج رابع من الرموز في نهايته. 
+                وكما هو الحال مع الأزواج الأخرى، 
+                تتراوح القيم من <span dir="ltr" class="br-spec nw">00</span> (شفاف تماماً) 
+                إلى <span dir="ltr" class="br-spec nw">FF</span> (غير شفاف تماماً/معتم بالكامل). 
+                على سبيل المثال، 
+                يمثل الرمز <span dir="ltr" class="br-spec nw">#FF000080</span> 
+                اللون الأحمر الصافي pure red 
+                بنسبة تعتيم (opacity) تبلغ حوالي 50%.
+            </p>
+            <p>
+                استخدم القيم <span dir="ltr" class="br-spec nw">3B</span> للون الأحمر، 
+                و <span dir="ltr" class="br-spec nw">7E</span> للون الأخضر، 
+                و <span dir="ltr" class="br-spec nw">20</span> للون الأزرق، 
+                و <span dir="ltr" class="br-spec nw">CC</span> لقناة ألفا (alpha channel).
+            </p>
+        </section>
+
+        <!-- STEP 89 -->
+        <section>
+            <h4>الخطوة 89</h4>
+            <p>
+                وأخيرًا، بالنسبة لخاصية <span dir="ltr" class="br-spec nw">box-shadow</span> 
+                الخاصة بالعلامة الزرقاء، 
+                استبدل اسم اللون بدالة <span dir="ltr" class="br-spec nw">hsla</span>.
+            </p>
+            <p>
+                تعمل الدالة <span dir="ltr" class="br-spec nw">hsla</span> تماماً 
+                مثل الدالة <span dir="ltr" class="br-spec nw">hsl</span>، 
+                لكنها تضيف قيمة رابعة تُعرف بـ "alpha"، 
+                والتي تتحكم في درجة شفافية اللون. 
+                وكما هو الحال مع <span dir="ltr" class="br-spec nw">rgba</span>، 
+                تكون قيمة "alpha" رقماً يتراوح 
+                بين <span dir="ltr" class="br-spec nw">0</span> 
+                و <span dir="ltr" class="br-spec nw">1.0</span>. 
+                إليك الصيغة الأساسية لها:
+            </p>
+            <p class="hinty">نموذج برمجي</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">hsla</span><span class="attr">(<span class="txt">hue, saturation, lightness, alpha</span>);</span>
+            </code></pre></div>
+            <p>
+                استخدم القيم <span dir="ltr" class="br-spec nw">223</span> لدرجة اللون (hue)، 
+                و <span dir="ltr" class="br-spec nw">59%</span> للتشبع (saturation)، 
+                و <span dir="ltr" class="br-spec nw">31%</span> للإضاءة (lightness)، 
+                و <span dir="ltr" class="br-spec nw">0.8</span> لقناة الشفافية (alpha channel).
+            </p>
+        </section>
+
+            
+        <p class="hinty">تهانينا على إتمام هذه الورشة!</p>
+
+        
+    </section>
+
+    <!-- SOLUTION -->
+    <section>
+        <br>
+		<h3>حل التطبيق :</h3>
+        <br>
+        <div class="codeFiles">
+        <p class="file-name">index.html</p>
+        <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span><span class="txt">إعداد مجموعة من الأقلام الملونة</span><span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+
+  <span class="tag">&lt;h1&gt;<span dir="rtl" class="txt">أقلام تلوين CSS</span>&lt;/h1&gt;
+  &lt;div <span class="attr">class=<span class="value">"container"</span></span>&gt;
+   &lt;div <span class="attr">class=<span class="value">"marker red"</span></span>&gt;
+    &lt;div <span class="attr">class=<span class="value">"cap"</span></span>&gt;&lt;/div&gt;
+    &lt;div <span class="attr">class=<span class="value">"sleeve"</span></span>&gt;&lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div <span class="attr">class=<span class="value">"marker green"</span></span>&gt;
+    &lt;div <span class="attr">class=<span class="value">"cap"</span></span>&gt;&lt;/div&gt;
+    &lt;div <span class="attr">class=<span class="value">"sleeve"</span></span>&gt;&lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div <span class="attr">class=<span class="value">"marker blue"</span></span>&gt;
+    &lt;div <span class="attr">class=<span class="value">"cap"</span></span>&gt;&lt;/div&gt;
+    &lt;div <span class="attr">class=<span class="value">"sleeve"</span></span>&gt;&lt;/div&gt;
+   &lt;/div&gt;
+  &lt;/div&gt;
+  </span>
+
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+        </div>
+        
+        
+        <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">h1</span> <span class="attr">{
+ text-align: <span class="txt">center</span>;
+}</span>
+
+<span class="tag-b">.container</span> <span class="attr">{
+ background-color: <span class="value">rgb</span>(<span class="txt">255, 255, 255</span>);
+ padding: <span class="txt">10px 0</span>;
+}</span>
+
+<span class="tag-b">.marker</span> <span class="attr">{
+ height: <span class="txt">25px</span>;
+ width: <span class="txt">200px</span>;
+ margin: <span class="txt">10px auto</span>;
+}</span>
+
+<span class="tag-b">.cap</span> <span class="attr">{
+ width: <span class="txt">60px</span>;
+ height: <span class="txt">25px</span>;
+}</span>
+
+<span class="tag-b">.sleeve</span> <span class="attr">{
+ width: <span class="txt">110px</span>;
+ height: <span class="txt">25px</span>;
+ background-color: <span class="value">rgba(<span class="txt">255, 255, 255, 50%</span>)</span>;
+ border-right: <span class="txt">10px double rgba(0, 0, 0, 75%)</span>;
+}</span>
+
+<span class="tag-b">.sleeve, .cap</span> <span class="attr">{
+ display: <span class="txt">inline-block</span>;
+}</span>
+
+<span class="tag-b">.red</span> <span class="attr">{
+ background: <span class="value">linear-gradinet</span>(<span class="txt">rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27)</span>);
+ box-shadow: <span class="txt">0 0 20px 0 rgba(83, 14, 14, 0.8)</span>;
+}</span>
+
+<span class="tag-b">.green</span> <span class="attr">{
+ background: <span class="value">linear-gradinet</span>(<span class="txt">#55680D, #71F53E, #116C31</span>);
+ box-shadow: <span class="txt">0 0 20px 0 #3B7E20CC</span>;
+}</span>
+
+<span class="tag-b">.blue</span> <span class="attr">{
+ background: <span class="value">linear-gradient</span>(<span class="txt">hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%)</span>);
+ box-shadow: <span class="txt">0 0 20px 0 hsla(223, 59%, 31%, 0.8)</span>;
+}</span>
+
+            </code></pre></div>
+            </div>
+    </section>
+
+
+    <!-- PREVIEW -->
+    <section>
+        <br>
+		<h3>معاينة التطبيق :</h3>
+        <br>
+
+        <div class="preview" role="presentation">
+                <div class="preview1">
+				 <iframe
+					src="../../examples/colors/build-a-set-of-colored-markers/example1.html"
+					title="Build a Set of Colored Markers"
+					loading="lazy"
+				 ></iframe>
+				</div>
+        </div>
+    </section>
+
+    </section>
+  
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="../working-with-colors-in-css/What-Are-Linear-and-Radial-Gradients-and-How-Do-They-Work-in-CSS.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
