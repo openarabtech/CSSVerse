@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" تصميم مجموعة من الصناديق الملونة Colored Boxes "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/colorsStyles/design-a-set-of-colored-boxes/Design-a-Set-of-Colored-Boxes.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الألوان</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>الألوان</h1>
+</header>
+
+
+
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+    <section class="sub-title">
+        <h2>تصميم مجموعة من الصناديق الملونة Colored Boxes</h2>
+        <span class="hint">مختبر</span>
+		<p>في هذا المختبر، ستتدرب على استخدام ألوان CSS من خلال تصميم مربعات.</p>
+    </section>
+
+
+    <section>
+
+        <!-- HTML boilerplate -->
+	<section>
+        <br>
+        <h3>هيكل HTML الأساسي HTML boilerplate</h3>
+        <br>
+        <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span>الصناديق الملونة<span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+ <span class="value">&lt;!-- هنا تضع اكواد التطبيق --&gt;</span>
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+            </div>
+            <br><br>
+    </section>
+
+    <!-- User stories -->
+    <section>
+        <h3>قصص المستخدم User stories :</h3>
+
+        <ol>
+            
+            <li>
+                <p class="hinty">
+                    ينبغي عليك ضبط "لون الخلفية" (background color) 
+                    للعنصر <span dir="ltr" class="br-spec nw">body</span> 
+                    على القيمة <span dir="ltr" class="br-spec nw">#f4f4f4</span>.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    ينبغي أن يكون لديك عنصر <span dir="ltr" class="br-spec nw">div</span> 
+                    يحمل الفئة <span dir="ltr" class="br-spec nw">color-grid</span> ليضم كافة عناصر الألوان الخاصة بك.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    ينبغي أن تحتوي على خمسة عناصر <span dir="ltr" class="br-spec nw">div</span> 
+                    داخل العنصر <span dir="ltr" class="br-spec nw">.color-grid</span>.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب أن تحتوي عناصر <span dir="ltr" class="br-spec nw">div</span> الخمسة جميعها 
+                    على الفئة <span dir="ltr" class="br-spec nw">color-box</span> 
+                    بالإضافة إلى فئة أخرى بصيغة <span dir="ltr" class="br-spec nw">color#</span>، 
+                    حيث يمثل الرمز <span dir="ltr" class="br-spec nw">#</span> رقم ترتيب 
+                    عنصر الـ <span dir="ltr" class="br-spec nw">div</span> المعني؛ 
+                    فعلى سبيل المثال: 
+                    <span dir="ltr" class="br-spec nw">color1</span> 
+                    لعنصر الـ <span dir="ltr" class="br-spec nw">div</span> الأول، 
+                    و <span dir="ltr" class="br-spec nw">color2</span> للعنصر الثاني، وهكذا.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب أن تحتوي الفئة <span dir="ltr" class="br-spec nw">.color-box</span> 
+                    على قيم محددة لكل من <span dir="ltr" class="br-spec nw">width</span> (العرض) 
+                    و <span dir="ltr" class="br-spec nw">height</span> (الارتفاع)؛ 
+                    وذلك حتى تظهر عناصر <span dir="ltr" class="br-spec nw">div</span> الخاصة بك على الصفحة.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب أن يحتوي العنصر <span dir="ltr" class="br-spec nw">.color1</span> 
+                    على خاصية <span dir="ltr" class="br-spec nw">background-color</span> 
+                    تستخدم قيمة لونية بنظام الرموز الست عشرية (hexadecimal).
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب أن يحتوي العنصر <span dir="ltr" class="br-spec nw">.color2</span> 
+                    على خاصية <span dir="ltr" class="br-spec nw">background-color</span> 
+                    تستخدم قيمة لونية بتنسيق RGB.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب أن يحتوي العنصر <span dir="ltr" class="br-spec nw">.color3</span> 
+                    على خاصية <span dir="ltr" class="br-spec nw">background-color</span> 
+                    تستخدم قيمة لونية محددة مسبقاً (على شكل كلمة).
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب أن يحتوي العنصر <span dir="ltr" class="br-spec nw">.color4</span> 
+                    على خاصية <span dir="ltr" class="br-spec nw">background-color</span> 
+                    تستخدم قيمة لونية بتنسيق HSL.
+                </p>
+            </li>
+
+            <li>
+                <p class="hinty">
+                    يجب ضبط خاصية <span dir="ltr" class="br-spec nw">background-color</span> 
+                    للعنصر <span dir="ltr" class="br-spec nw">.color5</span>.
+                </p>
+            </li>
+
+            
+            
+        </ol>
+        
+        <p>
+            <b>ملاحظة:</b> تأكد من ربط ملف الأنماط (stylesheet) في ملف HTML وتطبيق قواعد CSS.
+        </p>
+        
+
+    </section>
+
+
+    <!-- SOLUTION -->
+    <section>
+        <br>
+		<h3>حل التطبيق :</h3>
+        <br>
+        <div class="codeFiles">
+        <p class="file-name">index.html</p>
+        <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span>الصناديق الملونة<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ 
+ <span class="tag">&lt;body&gt;
+
+  &lt;div <span class="attr">class=<span class="value">"color-grid"</span></span>&gt;
+   &lt;div <span class="attr">class=<span class="value">"color-box color1"</span></span>&gt;&lt;/div&gt;
+   &lt;div <span class="attr">class=<span class="value">"color-box color2"</span></span>&gt;&lt;/div&gt;
+   &lt;div <span class="attr">class=<span class="value">"color-box color3"</span></span>&gt;&lt;/div&gt;
+   &lt;div <span class="attr">class=<span class="value">"color-box color4"</span></span>&gt;&lt;/div&gt;
+   &lt;div <span class="attr">class=<span class="value">"color-box color5"</span></span>&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  
+ &lt;/body&gt;</span>
+
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+        </div>
+        <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">body</span><span class="attr"> {
+ background-color: <span class="txt">#f4f4f4</span>;
+}</span>
+
+<span class="tag-b">.color-box</span><span class="attr"> {
+ width: <span class="txt">150px</span>;
+ height: <span class="txt">150px</span>;
+ display: <span class="txt">inline-block</span>;
+ box-shadow: <span class="txt">0 0 10px 0 #000000a1</span>;
+ border-radius: <span class="txt">8px</span>;
+}</span>
+
+<span class="tag-b">.color1</span><span class="attr"> {
+ background-color: <span class="txt">#ff0000</span>;
+}</span>
+
+<span class="tag-b">.color2</span><span class="attr"> {
+ background-color: <span class="value">rgb(<span class="txt">0, 255, 0</span>)</span>;
+}</span>
+
+<span class="tag-b">.color3</span><span class="attr"> {
+ background-color: <span class="txt">blue</span>;
+}</span>
+
+<span class="tag-b">.color4</span><span class="attr"> {
+ background-color: <span class="value">hsl(<span class="txt">200 100% 50%</span>)</span>;
+}</span>
+
+<span class="tag-b">.color5</span><span class="attr"> {
+ background-color: <span class="value">rgb(<span class="txt">255, 0, 255</span>)</span>;
+}</span>
+            </code></pre></div>
+            </div>
+    </section>
+
+
+    <!-- APP -->
+    <section>
+        <br>
+		<h3>معاينة التطبيق :</h3>
+        <br>
+
+        <div class="preview" role="presentation">
+            <div class="preview1">
+                <iframe
+					src="../../examples/colors/design-a-set-of-colored-boxes/example1.html"
+					title="Design a Set of Colored Boxes"
+					loading="lazy"
+				 ></iframe>
+            </div>
+        </div>
+    </section>
+
+</section>
+
+    
+  
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="../build-a-set-of-colored-markers/Build-a-Set-of-Colored-Markers.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
