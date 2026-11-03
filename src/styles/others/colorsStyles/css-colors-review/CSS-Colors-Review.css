@@ -1,0 +1,52 @@
+/* PREVIEW 1 */
+.preview1 p {
+    color: rgb(255, 0, 0);
+}
+
+/* PREVIEW 2 */
+.preview2 div {
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
+/* PREVIEW 3 */
+.preview3 p {
+ color: hsl(120 100% 50%);
+}
+.preview3 .alpha {
+ color: hsl(120 100% 50% / 0.8);
+}
+
+/* PREVIEW 4 */
+.preview4 div {
+    background-color: hsla(0, 100%, 50%, 0.5);
+}
+
+/* PREVIEW 5 */
+.preview5 h1 {
+  color: #FF5733; /* A reddish-orange color */
+}
+
+.preview5 p {
+  background-color: #4CAF50; /* A shade of green */
+}
+
+
+/* PREVIEW 6 */
+.preview6 .shadow-box {
+ width: 200px;
+ padding: 20px;
+ background-color: lightblue;
+ box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* PREVIEW 7 */
+.preview7 .linear-gradient {
+ background: linear-gradient(45deg, red, #33FF11, rgba(100, 100, 255, 0.5));
+ height: 40vh;
+}
+
+/* PREVIEW 8 */
+.preview8 .radial-gradient {
+ background: radial-gradient(circle, red, blue);
+ height: 40vh;
+}
