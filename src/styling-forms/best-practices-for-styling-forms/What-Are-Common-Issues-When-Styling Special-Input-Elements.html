@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" ما هي المشكلات الشائعة عند تنسيق عناصر الإدخال الخاصة Special Input Elements ؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/styling-forms-Styles/best-practices-for-styling-forms/What-Are-Common-Issues-When-Styling Special-Input-Elements.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | تنسيق النماذج</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>أفضل الممارسات لتنسيق النماذج Styling Forms</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+    <section class="sub-title">
+        <h2>ما هي المشكلات الشائعة عند تنسيق عناصر الإدخال الخاصة Special Input Elements ؟</h2>
+        <span class="hint">نظري</span>
+		<p></p>
+    </section>
+
+
+    <section>
+        <p>
+            لنتعرف على بعض المشكلات الشائعة التي تظهر عند محاولة تنسيق عناصر إدخال (special input elements) خاصة، 
+            مثل عناصر الإدخال من نوع <span dir="ltr" class="br-spec nw">datetime-local</span> 
+            و <span dir="ltr" class="br-spec nw">color</span>.
+        </p>
+        <p>
+            تعتمد هذه الأنواع الخاصة من حقول الإدخال على عناصر زائفة (pseudo-elements) معقدة لإنشاء مكونات مثل أدوات اختيار التاريخ أو اللون. 
+            ويفرض هذا تحدياً كبيراً عند محاولة تنسيق هذه الحقول؛ 
+            إذ تعتمد الأنماط الافتراضية كلياً على المتصفح، 
+            مما يعني أن شيفرة CSS التي تمنح أداة الاختيار مظهراً مناسباً في متصفح معين قد تؤدي إلى نتائج مختلفة تماماً في متصفح آخر.
+        </p>
+        <p>
+            إليك مثال على مدخلات الألوان (color input) :
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;form&gt;
+ &lt;label <span class="attr">for=<span class="value">"favorite-color"</span></span>&gt;<span dir="rtl" class="txt">اختر لونك المفضل:</span>&lt;/label&gt;
+ &lt;input <span class="attr">type=<span class="value">"color"</span> id=<span class="value">"favorite-color"</span> name=<span class="value">"favorite-color"</span></span> &gt;
+&lt;/form&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">input</span> <span class="attr">{
+ padding: <span class="txt">8px 12px</span>;
+ margin: <span class="txt">8px 0</span>;
+ border-radius: <span class="txt">6px</span>;
+ border: <span class="txt">1px solid #ccc</span>;
+}</span>
+
+<span class="tag-b">input[tupe="color"]</span> <span class="attr">{
+ width: <span class="txt">60px</span>;
+ height: <span class="txt">40px</span>;
+ padding: <span class="txt">0</span>;
+ border: <span class="txt">2px solid #555</span>;
+ border-radius: <span class="txt">4px</span>;
+ cursor: <span class="txt">pointer</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview1">
+                    <form>
+                        <label for="favorite-color">اختر لونك المفضل:</label>
+                        <input type="color" id="favorite-color" name="favorite-color" >
+                    </form>
+				</div>
+            </div>
+
+            <p>
+                قد يكمن سبب آخر في تعقيد العنصر الزائف (pseudo-element). 
+                لنأخذ على سبيل المثال مُختار التاريخ (date selector)؛ 
+                فهو يتضمن الكثير من الأجزاء المتحركة، 
+                وقد يشكل الهيكل المعقد للعنصر الزائف تحدياً كبيراً عند محاولة تطبيق التنسيقات على الأجزاء المطلوبة بدقة.
+            </p>
+            <p>
+                إليك مثال على حقل إدخال التاريخ (date input) :
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;form&gt;
+ &lt;label <span class="attr">for=<span class="value">"birthdate"</span></span>&gt;<span dir="rtl" class="txt">اختر تاريخ ميلادك:</span>&lt;/label&gt;
+ &lt;input <span class="attr">type=<span class="value">"date"</span> id=<span class="value">"birthdate"</span> name=<span class="value">"birthdate"</span></span> &gt;
+&lt;/form&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">input</span> <span class="attr">{
+ padding: <span class="txt">8px 12px</span>;
+ margin: <span class="txt">8px 0</span>;
+ border-radius: <span class="txt">6px</span>;
+ border: <span class="txt">1px solid #ccc</span>;
+}</span>
+
+<span class="tag-b">input[tupe="date"]</span> <span class="attr">{
+ padding: <span class="txt">6px 10px</span>;
+ border: <span class="txt">2px solid #555</span>;
+ border-radius: <span class="txt">4px</span>;
+ font-size: <span class="txt">14px</span>;
+ cursor: <span class="txt">pointer</span>;
+}</span>
+
+<span class="tag-b">input[tupe="date"]::-webkit-calendar-picker-indicator</span> <span class="attr">{
+ background-color: <span class="txt">#4CAF50</span>;
+ color: <span class="txt">white</span>;
+ border-radius: <span class="txt">4px</span>;
+ cursor: <span class="txt">pointer</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview2">
+                    <form>
+                        <label for="birthdate">اختر تاريخ ميلادك:</label>
+                        <input type="date" id="birthdate" name="birthdate" >
+                    </form>
+				</div>
+            </div>
+
+            <p>
+                بالطبع، ومع وجود هذه العناصر المعقدة، 
+                فإنك تواجه أيضاً خطر فقدان وظائف مهمة عن غير قصد عند تعديل تنسيقها يدوياً. 
+                فقد لا يقتصر الأمر على فقدان مؤشرات حيوية - 
+                مثل حالة التركيز (focus state) أو العنصر المُختار - 
+                بل قد يؤدي ذلك أيضاً إلى تعطيل المُحدِّد (selector) بالكامل.
+            </p>
+            <p>
+                ولهذه الأسباب، يعتمد العديد من المطورين كلياً على مكتبات JavaScript أو مكونات مخصصة، 
+                بدلاً من استخدام المكونات المدمجة في المتصفح.
+            </p>
+
+
+
+    </section>
+
+    <!-- QUESTIONS -->
+	<section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما هي إحدى التحديات الرئيسية عند تنسيق عناصر الإدخال الخاصة، مثل <span dir="ltr" class="br-spec nw">datetime-local</span> و <span dir="ltr" class="br-spec nw">color</span> ؟</p>
+
+		<p> 1. هذه العناصر غير مدعومة في جميع المتصفحات. ❌</p>
+        <p><mark> 2. تعتمد في عملها على عناصر زائفة (pseudo-elements) معقدة. ✅</mark></p>
+        <p> 3. تتطلب شيفرة JavaScript إضافية لكي تعمل بشكل صحيح. ❌</p>
+		<p> 4. لا يمكن تنسيقها باستخدام CSS على الإطلاق. ❌</p>
+        <br>
+
+        <p class="userstory">لماذا قد تختلف طريقة عمل أكواد CSS المكتوبة لتنسيق عنصر إدخال (input element) معين عبر المتصفحات المختلفة؟</p>
+		
+		<p> 1. تستخدم المتصفحات المختلفة محركات JavaScript متنوعة. ❌</p>
+        <p><mark> 2. تعتمد التنسيقات الافتراضية على المتصفح نفسه. ✅</mark></p>
+        <p> 3. لا تدعم بعض المتصفحات أنواع عناصر الإدخال هذه. ❌</p>
+		<p> 4. تختلف آلية عمل خصائص CSS من متصفح لآخر. ❌</p>
+        <br>
+
+        <p class="userstory">ما النهج الذي يتبعه العديد من المطورين للتعامل مع تحديات تنسيق عناصر الإدخال المعقدة (complex input elements) ؟</p>
+		
+		<p> 1. يتجنبون استخدام أنواع عناصر الإدخال هذه تماماً. ❌</p>
+        <p> 2. يستخدمون بادئات CSS خاصة بمتصفحات معينة. ❌</p>
+        <p><mark> 3. يعتمدون على مكتبات JavaScript أو مكونات مخصصة. ✅</mark></p>
+		<p> 4. يستخدمون التنسيقات المضمنة (inline styles) فقط لهذه العناصر. ❌</p>
+        
+	</section>
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./When-Should-You-Use-appearance-none-to-Deal-with-Issues-Styling-Search-Inputs-and-Checkboxes.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
