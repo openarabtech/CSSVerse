@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" متى ينبغي استخدام الخاصية appearance: none لمعالجة مشكلات تنسيق حقول البحث ومربعات الاختيار؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/styling-forms-Styles/best-practices-for-styling-forms/When-Should-You-Use-appearance-none-to-Deal-with-Issues-Styling-Search-Inputs-and-Checkboxes.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | تنسيق النماذج</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>أفضل الممارسات لتنسيق النماذج Styling Forms</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+    <section class="sub-title">
+        <h2>متى ينبغي استخدام الخاصية appearance: none لمعالجة مشكلات تنسيق حقول البحث ومربعات الاختيار؟</h2>
+        <span class="hint">نظري</span>
+		<p></p>
+    </section>
+
+
+    <section>
+        <p>
+            لنتعلم متى نستخدم الخاصية <span dir="ltr" class="br-spec nw">appearance: none</span> 
+            لمعالجة مشكلات التنسيق المتعلقة بحقول البحث، 
+            ومربعات الاختيار (checkboxes)، 
+            وأزرار الاختيار (radio buttons).
+        </p>
+        <p>
+            تُطبق المتصفحات تنسيقات افتراضية على العديد من العناصر. 
+            وفيما يخص عناصر الإدخال (input elements)، 
+            قد تبدو خياراتك لتعديل مظهرها باستخدام لغة CSS محدودة نوعاً ما. 
+            لذا، قد ترغب في استخدام الخاصية <span dir="ltr" class="br-spec nw">appearance: none</span> 
+            لإخفاء سمات العنصر الافتراضي وإنشاء تصميمك الخاص بدلاً منها. 
+            على سبيل المثال، 
+            يؤدي هذا إلى إخفاء مربعات الاختيار (checkboxes) الافتراضية، 
+            مما يتيح لك استخدام مؤشرات مخصصة — 
+            كعلامة اختيار خضراء أو علامة "X" حمراء — 
+            لتوضيح حالة العنصر. 
+            أما بالنسبة لحقول البحث (search inputs)، 
+            فإن المتصفحات القائمة على محرك "WebKit" 
+            تعرض أيقونة بحث افتراضية وزرّاً للإلغاء؛ 
+            لذا فإن إخفاء هذه العناصر يمنحك الفرصة لابتكار مؤشراتك الخاصة التي ستظهر بشكل موحد عبر جميع المتصفحات.
+        </p>
+        <p>
+            إليك مثال على مربع اختيار مخصص (custom checkbox) :
+        </p>
+        <p>
+            <b>ملاحظة:</b> يستخدم بعض كود CSS في هذا المثال خصائص لم نتناولها بعد. 
+            الغرض من ذلك هو فقط إعطاؤك فكرة عن كيفية إنشاء مربع اختيار (checkbox) مخصص. 
+            ستتعلم تفاصيل عمل كل هذا في الدروس وورش العمل القادمة.
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;form&gt;
+ &lt;label&gt;
+  &lt;input <span class="attr">class=<span class="value">"checkbox"</span> type=<span class="value">"checkbox"</span></span> /&gt;
+  <span class="txt">موافق</span>
+ &lt;/label&gt;
+&lt;/form&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">.checkbox</span> <span class="attr">{</span>
+<span class="attr">appearance:</span> <span class="txt">none</span>;
+<span class="attr">width:</span> <span class="txt">18px</span>;
+<span class="attr">height:</span> <span class="txt">18px</span>;
+<span class="attr">border:</span> <span class="txt">2px solid #ccc</span>;
+<span class="attr">border-radius:</span> <span class="txt">4px</span>;
+<span class="attr">display:</span> <span class="txt">inline-block</span>;
+<span class="attr">position:</span> <span class="txt">relative</span>;
+<span class="attr">cursor:</span> <span class="txt">pointer</span>;
+<span class="attr">transition:</span> <span class="txt">all 0.25s ease</span>;
+<span class="attr">vertical-align:</span> <span class="txt">middle</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.checkbox:hover</span> <span class="attr">{</span>
+<span class="attr">border-color:</span> <span class="txt">#888</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.checkbox:checked</span> <span class="attr">{</span>
+<span class="attr">background-color:</span> <span class="txt">#4caf50</span>;
+<span class="attr">border-color:</span> <span class="txt">#4caf50</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.checkbox:checked::after</span> <span class="attr">{</span>
+<span class="attr">content:</span> <span class="txt">""</span>;
+<span class="attr">position:</span> <span class="txt">absolute</span>;
+<span class="attr">left:</span> <span class="txt">4px</span>;
+<span class="attr">top:</span> <span class="txt">0px</span>;
+<span class="attr">width:</span> <span class="txt">5px</span>;
+<span class="attr">height:</span> <span class="txt">10px</span>;
+<span class="attr">border:</span> <span class="txt">solid white</span>;
+<span class="attr">border-width:</span> <span class="txt">0 2px 2px 0</span>;
+<span class="attr">transform:</span> <span class="txt">rotate(45deg)</span>;
+<span class="attr">}</span>
+
+<span class="tag-b">.checkbox:focus</span> <span class="attr">{</span>
+<span class="attr">outline:</span> <span class="txt">2px solid #90caf9</span>;
+<span class="attr">outline-offset:</span> <span class="txt">2px</span>;
+<span class="attr">}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview1">
+                    <form>
+                        <label>
+                            <input class="checkbox" type="checkbox" />
+                            موافق
+                        </label>
+                    </form>
+				</div>
+            </div>
+
+            <p>
+                يُعد WebKit محركاً برمجياً يساعد متصفحات الويب على عرض المواقع الإلكترونية. 
+                وتستخدم متصفحات مثل Safari محرك WebKit لضمان ظهور صفحات الويب وعملها بالشكل الصحيح. 
+                تمنحك خاصية CSS المسماة <span dir="ltr" class="br-spec nw">appearance: none</span> تحكماً كاملاً في المظهر، 
+                لكنها تنطوي على بعض الجوانب التي ينبغي الانتباه إليها؛ 
+                فالعناصر التفاعلية الافتراضية في حقول الإدخال (input elements) تتضمن ميزات مثل مؤشرات التركيز (focus) وتنبيهات الخطأ، 
+                وعليك التأكد من عدم فقدان هذه الميزات عند استخدام تلك الخاصية.
+            </p>
+            <p>
+                يُعدُّ تحقيق تناسق في التصميم عبر مختلف المنصات سبباً وجيهاً لاستخدام هذه الخاصية. 
+                كما يمكنك الاستعانة بها لضمان أن تكون عناصر التفاعل باللمس على الأجهزة المحمولة ذات حجم كافٍ، 
+                أو للتأكد من أن ألوان مربعات الاختيار (checkboxes) تتمتع بتباينٍ ملائم.
+            </p>
+
+    </section>
+    
+    <!-- QUESTIONS -->
+	<section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما الغرض الأساسي من استخدام <span dir="ltr" class="br-spec nw">appearance: none</span> على عناصر <span dir="ltr" class="br-spec nw">input</span> ؟</p>
+
+		<p> 1. لتحسين أوقات تحميل الصفحة. ❌</p>
+        <p> 2. لإخفاء عنصر الإدخال <span dir="ltr" class="br-spec nw">input</span> تماماً. ❌</p>
+        <p><mark> 3. لإزالة التنسيقات الافتراضية للمتصفح والسماح بتطبيق تنسيقات مخصصة. ✅</mark></p>
+		<p> 4. لجعل عنصر الإدخال <span dir="ltr" class="br-spec nw">input</span> غير قابل للتفاعل. ❌</p>
+        <br>
+
+        <p class="userstory">أيٌّ مما يلي لم يُذكَر كفائدة لاستخدام <span dir="ltr" class="br-spec nw">appearance: none</span> على عناصر <span dir="ltr" class="br-spec nw">input</span> ؟</p>
+		
+		<p> 1. تحقيق تناسق في التصميم عبر مختلف المنصات. ❌</p>
+        <p> 2. إتاحة مؤشرات مخصصة لمربعات الاختيار (checkboxes). ❌</p>
+        <p><mark> 3. تعزيز أمان عمليات إرسال النماذج. ✅</mark></p>
+		<p> 4. توفير مساحات أكبر للنقر على الأجهزة المحمولة. ❌</p>
+        <br>
+
+        <p class="userstory">ما هو العيب المحتمل لاستخدام الخاصية <span dir="ltr" class="br-spec nw">appearance: none</span> الذي ذُكر في الدرس؟</p>
+		
+		<p> 1. قد يؤدي ذلك إلى توقف عنصر الإدخال (input) عن العمل. ❌</p>
+        <p> 2. قد يتسبب في إبطاء الصفحة بشكل ملحوظ. ❌</p>
+        <p><mark> 3. قد يؤدي إلى إزالة ميزات افتراضية مهمة، مثل مؤشرات التركيز (focus indicators). ✅</mark></p>
+		<p> 4. لا يتم دعم هذه الخاصية في جميع المتصفحات الحديثة. ❌</p>
+        
+	</section>
+  
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./What-Are-Some-Best-Practices-for-Styling-Text-Inputs.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
