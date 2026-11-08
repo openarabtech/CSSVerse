@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" Design a Registration Form "/>
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title></title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+  	<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+	<h1>نموذج التسجيل</h1>
+	<p>يُرجى تعبئة هذا النموذج بالمعلومات المطلوبة</p>
+
+	<form action='https://register-demo.openarabtech.github.io' method="POST">
+		<fieldset>
+			<label for="first-name">
+				أدخل اسمك الأول: 
+				<input type="text" id="first-name" name="first-name" required>
+			</label>
+			<label for="last-name">
+				أدخل اسمك الأخير: 
+				<input type="text" id="last-name" name="last-name" required>
+			</label>
+			<label for="email">
+				أدخل بريدك الإلكتروني: 
+				<input type="email" id="email" name="email" required>
+			</label>
+			<label for="new-password">
+				أنشئ كلمة مرور جديدة: 
+				<input type="password" id="new-password" name="new-password" required pattern="[a-z0-5]{8,}">
+			</label>
+		</fieldset>
+		<fieldset>
+			<legend>نوع الحساب (مطلوب)</legend>
+			<label for="personal-account">
+				<input class="inline" id="personal-account" type="radio" name="account-type" value="personal" checked> 
+				شخصي
+			</label>
+			<label for="business-account">
+				<input class="inline" id="business-account" type="radio" name="account-type" value="business"> 
+				تجاري
+			</label>
+		</fieldset>
+		<fieldset>
+			<label for="profile-picture">
+				حمِّل صورة الملف الشخصي: 
+				<input id="profile-picture" name="profile-picture" type="file">
+			</label>
+			<label for="age">
+				أدخل عمرك (بالسنوات): 
+				<input id="age" name="age" type="number" min="13" max="120">
+			</label>
+			<label for="referrer">
+				كيف سمعت عنا؟
+				<select id="referrer" name="referrer">
+				<option value="">(اختر واحداً)</option>
+				<option value="1">أخبار التقنية العربية المفتوحة</option>
+				<option value="2">قناة التقنية العربية المفتوحة على يوتيوب</option>
+				<option value="3">منتدى التقنية العربية المفتوحة</option>
+				<option value="4">أخرى</option>
+				</select>
+			</label>
+			<label for="bio">
+				قدِّم نبذةً تعريفية: 
+				<textarea id="bio" name="bio"  rows="3" cols="30" placeholder="أحب البرمجة على الشاطئ..."></textarea>
+			</label>
+		</fieldset>
+		<a href="https://openarabtech.github.io/terms-of-service/">اقرأ الشروط والأحكام الخاصة بنا</a>
+		<label for="terms-and-conditions">
+			<input class="inline" id="terms-and-conditions" name="terms-and-conditions" type="checkbox" required > 
+			أوافق على الشروط والأحكام
+		</label>
+		<input type="submit" value="تسليم">
+  	</form>
+
+
+
+</body>
+</html>
