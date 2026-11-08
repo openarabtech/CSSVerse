@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" تصميم نموذج تسجيل Registration form "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/styling-forms-Styles/design-a-registration-form/Design-a-Registration-Form.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | تنسيق النماذج</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>تنسيق النماذج</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <section class="sub-title">
+        <h2>تصميم نموذج تسجيل Registration form</h2>
+        <span class="hint">ورشة عمل</span>
+		<p>في هذه الورشة، ستتعلم كيفية تنسيق النماذج من خلال تصميم نموذج تسجيل.</p>
+    </section>
+
+
+    
+
+    <section>
+        <!-- HTML boilerplate -->
+        <section>
+        <br>
+        <h3>هيكل HTML الأساسي HTML boilerplate</h3>
+        
+        <br>
+        <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=<span class="value">"viewport"</span> content=<span class="value">"width=device-width, initial-scale=1.0"</span></span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span><span class="txt">نموذج تسجيل</span><span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+ <span class="value">&lt;!-- هنا تضع اكواد التطبيق --&gt;</span>
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+            </div>
+        </section>
+
+    <!-- STEPS -->
+    <section>
+        <br>
+        <h3>الخطوات</h3>
+        <br>
+
+        <!-- STEP 1 -->
+        <section>
+            <h4>الخطوة 1</h4>
+            <p>
+                ضمن <span dir="ltr" class="br-spec nw">body</span>، 
+                أضف عنواناً لتوضيح سياق النموذج باستخدام عنصر <span dir="ltr" class="br-spec nw">h1</span> 
+                يحتوي على النص <span dir="rtl" class="br-spec nw">نموذج التسجيل</span>.
+            </p>
+        </section>
+
+        <!-- STEP 2 -->
+        <section>
+            <h4>الخطوة 2</h4>
+            <p>
+                أسفل العنوان، 
+                استخدم النص التالي ضمن عنصر فقرة لتشجيع المستخدمين على التسجيل:
+            </p>
+            <p class="hinty">نموذج برمجي</p>
+            <div class="code-block"><pre><code>
+<span dir="rtl" class="txt">يُرجى تعبئة هذا النموذج بالمعلومات المطلوبة</span>
+            </code></pre></div>
+
+        </section>
+
+        <!-- STEP 3 -->
+        <section>
+            <h4>الخطوة 3</h4>
+            <p>
+                في الدروس السابقة، 
+                تعلّمتَ كيفية التعامل مع وحدات إطار العرض (viewport units).
+            </p>
+            <p>
+                تذكر أن وحدة <span dir="ltr" class="br-spec nw">vh</span> 
+                ترمز إلى "ارتفاع إطار العرض" (viewport height)، 
+                وتساوي 1% من ارتفاع <span dir="ltr" class="br-spec nw">height</span> إطار العرض؛ 
+                مما يجعلها قيمة نسبية تعتمد على ارتفاع إطار العرض.
+            </p>
+            <p>
+                حان الوقت لإضفاء لمسة جمالية على المشروع باستخدام لغة CSS. 
+                ابدأ بتحديد عرض <span dir="ltr" class="br-spec nw">width</span> 
+                العنصر <span dir="ltr" class="br-spec nw">body</span> 
+                بنسبة <span dir="ltr" class="br-spec nw">100%</span>، 
+                وارتفاعه <span dir="ltr" class="br-spec nw">height</span> 
+                بقيمة <span dir="ltr" class="br-spec nw">100vh</span>.
+            </p>
+
+        </section>
+
+        <!-- STEP 4 -->
+        <section>
+            <h4>الخطوة 4</h4>
+            <p>
+                تخلَّ الآن عن شريط التمرير الأفقي (horizontal scroll-bar)، 
+                وذلك بضبط قيمة <span dir="ltr" class="br-spec nw">margin</span> الافتراضية 
+                لعنصر <span dir="ltr" class="br-spec nw">body</span> — 
+                التي تضيفها بعض المتصفحات — 
+                على <span dir="ltr" class="br-spec nw">0</span>.
+            </p>
+        </section>
+
+        <!-- STEP 5 -->
+        <section>
+            <h4>الخطوة 5</h4>
+            <p>
+                هذا أفضل. 
+                الآن، اجعل الخلفية مريحة للعين عن طريق تغيير خاصية <span dir="ltr" class="br-spec nw">background-color</span> 
+                للعنصر <span dir="ltr" class="br-spec nw">body</span> 
+                إلى <span dir="ltr" class="br-spec nw">#1b1b32</span>. 
+                ثم، لتتمكن من رؤية النص، 
+                غيّر خاصية <span dir="ltr" class="br-spec nw">color</span> 
+                إلى <span dir="ltr" class="br-spec nw">#f5f6f7</span>.
+            </p>
+        </section>
+
+        <!-- STEP 6 -->
+        <section>
+            <h4>الخطوة 6</h4>
+            <p>
+                كما يشير العنوان، 
+                أنت بصدد إنشاء نموذج (form). 
+                لذا، بعد عنصر <span dir="ltr" class="br-spec nw">p</span>، 
+                أضف عنصراً من نوع <span dir="ltr" class="br-spec nw">form</span> 
+                يتضمن خاصية <span dir="ltr" class="br-spec nw">action</span> 
+                تشير إلى الرابط 
+                <p class="long-link"><span dir="ltr" class="br-spec nw">https://register-demo.openarabtech.github.io</span>.</p>
+            </p>
+        </section>
+
+        <!-- STEP 7 -->
+        <section>
+            <h4>الخطوة 7</h4>
+            <p>
+                تُحدد السمة <span dir="ltr" class="br-spec nw">method</span> 
+                كيفية إرسال بيانات النموذج (form-data) إلى الرابط (URL) 
+                المذكور في السمة <span dir="ltr" class="br-spec nw">action</span>. 
+                يمكن إرسال هذه البيانات إما عبر طلب "GET" 
+                بحيث تُدرج كمعاملات ضمن الرابط 
+                (عند استخدام <span dir="ltr" class="br-spec nw">method="get"</span>)، 
+                أو عبر طلب <span dir="ltr" class="br-spec nw">POST</span> 
+                بحيث تُرسل كبيانات ضمن متن الطلب 
+                (عند استخدام <span dir="ltr" class="br-spec nw">method="post"</span>).
+            </p>
+            <p>
+                اضبط السمة <span dir="ltr" class="br-spec nw">method</span> لإرسال بيانات النموذج الخاص بك 
+                عبر طلب <span dir="ltr" class="br-spec nw">POST</span>.
+            </p>
+            <p>
+                <b>ملاحظة:</b> 
+                ستتعرف على المزيد حول طريقتي <span dir="ltr" class="br-spec nw">GET</span> 
+                و <span dir="ltr" class="br-spec nw">POST</span> في الدروس وورش العمل القادمة.
+            </p>
+        </section>
+
+        <!-- STEP 8 -->
+        <section>
+            <h4>الخطوة 8</h4>
+            <p>
+                بما أن النموذج سيتضمن ثلاثة أقسام متميزة، 
+                أضف ثلاثة عناصر <span dir="ltr" class="br-spec nw">fieldset</span> 
+                داخل عنصر النموذج <span dir="ltr" class="br-spec nw">form</span>.
+            </p>
+        </section>
+
+        <!-- STEP 9 -->
+        <section>
+            <h4>الخطوة 9</h4>
+            <p>
+                سيحتوي عنصر <span dir="ltr" class="br-spec nw">fieldset</span> الأول 
+                على حقول الاسم والبريد الإلكتروني وكلمة المرور. 
+                ابدأ بإضافة أربعة عناصر <span dir="ltr" class="br-spec nw">label</span> 
+                إلى عنصر <span dir="ltr" class="br-spec nw">fieldset</span> الأول.
+            </p>
+        </section>
+
+        <!-- STEP 10 -->
+        <section>
+            <h4>الخطوة 10</h4>
+            <p>أضف النص التالي إلى عناصر <span dir="ltr" class="br-spec nw">label</span> :</p>
+            <ul>
+                <li>
+                    <p><span dir="rtl" class="br-spec nw">أدخل اسمك الأول:</span></p>
+                </li>
+                <li>
+                    <p><span dir="rtl" class="br-spec nw">أدخل اسمك الأخير:</span></p>
+                </li>
+                <li>
+                    <p><span dir="rtl" class="br-spec nw">أدخل بريدك الإلكتروني:</span></p>
+                </li>
+                <li>
+                    <p><span dir="rtl" class="br-spec nw">أنشئ كلمة مرور جديدة:</span></p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- STEP 11 -->
+        <section>
+            <h4>الخطوة 11</h4>
+            <p>
+                في الدروس السابقة، 
+                تعلّمت كيفية التعامل مع وحدات <span dir="ltr" class="br-spec nw">rem</span>. 
+                تذكَّر أن وحدة <span dir="ltr" class="br-spec nw">rem</span> 
+                هي اختصار لـ <span dir="ltr" class="nw">(root <span dir="ltr" class="br-spec nw">em</span>)</span>، 
+                وتعتمد قيمتها على حجم الخط الخاص بعنصر <span dir="ltr" class="br-spec nw">html</span>.
+            </p>
+            <p>
+                بما أن عناصر <span dir="ltr" class="br-spec nw">label</span> 
+                تكون من النوع "inline" (ضمن السطر) افتراضياً، 
+                فإنها تظهر جميعاً جنباً إلى جنب على السطر نفسه، 
+                مما يجعل نصوصها صعبة القراءة.
+            </p>
+            <p>
+                لجعلها تظهر على أسطر منفصلة، 
+                ​​أضف الخاصية <span dir="ltr" class="br-spec nw">display: block</span> 
+                إلى عنصر <span dir="ltr" class="br-spec nw">label</span>، 
+                وأضف هامشاً <span dir="ltr" class="br-spec nw">margin</span> 
+                بقيمة <span dir="ltr" class="br-spec nw">0.5rem 0</span> للفصل بينها.
+            </p>
+           
+        </section>
+
+        <!-- STEP 12 -->
+        <section>
+            <h4>الخطوة 12</h4>
+            <p>
+                ضع عنصر إدخال <span dir="ltr" class="br-spec nw">input</span> 
+                داخل كل وسم تسمية <span dir="ltr" class="br-spec nw">label</span>. 
+                تأكد من إضافة كل عنصر <span dir="ltr" class="br-spec nw">input</span> 
+                بعد نص الـ <span dir="ltr" class="br-spec nw">label</span>، 
+                مع ترك مسافة بعد النقطتين.
+            </p>
+        </section>
+
+        <!-- STEP 13 -->
+        <section>
+            <h4>الخطوة 13</h4>
+            <p>
+                اتّباعاً لأفضل ممارسات إتاحة الوصول، 
+                اربط عناصر <span dir="ltr" class="br-spec nw">input</span> 
+                وعناصر <span dir="ltr" class="br-spec nw">label</span> ببعضها البعض 
+                باستخدام السمة <span dir="ltr" class="br-spec nw">for</span>.
+            </p>
+            <p>
+                استخدم <span dir="ltr" class="br-spec nw">first-name</span> 
+                و <span dir="ltr" class="br-spec nw">last-name</span> 
+                و <span dir="ltr" class="br-spec nw">email</span> 
+                و <span dir="ltr" class="br-spec nw">new-password</span> 
+                كقيم لسمات <span dir="ltr" class="br-spec nw">id</span> المقابلة.
+            </p>
+           
+        </section>
+
+        <!-- STEP 14 -->
+        <section>
+            <h4>الخطوة 14</h4>
+            <p>
+                يُعد تحديد السمة <span dir="ltr" class="br-spec nw">type</span> 
+                لعنصر <span dir="ltr" class="br-spec nw">input</span> أمراً مهماً؛ 
+                لكي يعرف المتصفح نوع البيانات التي ينبغي عليه توقعها. 
+                وإذا لم يتم تحديد السمة <span dir="ltr" class="br-spec nw">type</span>، 
+                فسيستخدم المتصفح القيمة الافتراضية <span dir="ltr" class="br-spec nw">text</span>.
+            </p>
+            <p>
+                امنح عنصري <span dir="ltr" class="br-spec nw">input</span> الأول والثاني 
+                سمة <span dir="ltr" class="br-spec nw">type</span> 
+                بقيمة <span dir="ltr" class="br-spec nw">text</span>، 
+                والعنصر الثالث سمة <span dir="ltr" class="br-spec nw">type</span> 
+                بقيمة <span dir="ltr" class="br-spec nw">email</span>، 
+                والعنصر الرابع سمة <span dir="ltr" class="br-spec nw">type</span> 
+                بقيمة <span dir="ltr" class="br-spec nw">password</span>.
+            </p>
+            <p>
+                يسمح النوع <span dir="ltr" class="br-spec nw">email</span> فقط بعناوين البريد الإلكتروني 
+                التي تحتوي على الرمز <span dir="ltr" class="br-spec nw">@</span> 
+                ونقطة <span dir="ltr" class="br-spec nw">.</span> في نطاق العنوان (domain). 
+                أما النوع <span dir="ltr" class="br-spec nw">password</span> فيقوم بإخفاء المدخلات، 
+                ويُصدر تحذيراً إذا كان الموقع لا يستخدم بروتوكول HTTPS.
+            </p>
+        </section>
+
+        <!-- STEP 15 -->
+        <section>
+            <h4>الخطوة 15</h4>
+            <p>
+                يُضبط أول عنصر <span dir="ltr" class="br-spec nw">input</span> 
+                من النوع <span dir="ltr" class="br-spec nw">submit</span> تلقائيًا ليقوم بإرسال 
+                أقرب عنصر <span dir="ltr" class="br-spec nw">form</span> يقع ضمنه.
+            </p>
+            <p>
+                للتعامل مع إرسال النموذج، 
+                أضف عنصر <span dir="ltr" class="br-spec nw">input</span> 
+                بعد آخر عنصر <span dir="ltr" class="br-spec nw">fieldset</span>، 
+                بحيث يتم ضبط السمة <span dir="ltr" class="br-spec nw">type</span> 
+                على القيمة <span dir="ltr" class="br-spec nw">submit</span> 
+                والسمة <span dir="ltr" class="br-spec nw">value</span> 
+                على القيمة <span dir="ltr" class="br-spec nw">تسليم</span>.
+            </p>
+        </section>
+
+        <!-- STEP 16 -->
+        <section>
+            <h4>الخطوة 16</h4>
+            <p>
+                عند هذه المرحلة، 
+                ينبغي أن تكون قادراً على إرسال النموذج. 
+                ومع ذلك، قد تلاحظ أنه لا يحدث الكثير.
+            </p>
+            <p>
+                لجعل النموذج أكثر تفاعلية، 
+                أضف السمة <span dir="ltr" class="br-spec nw">required</span> 
+                إلى عناصر <span dir="ltr" class="br-spec nw">input</span> 
+                الموجودة في مجموعة الحقول <span dir="ltr" class="br-spec nw">fieldset</span> الأولى.
+            </p>
+            <p>
+                والآن، إذا حاولت إرسال النموذج دون ملء الحقول المطلوبة، 
+                فستظهر لك رسالة خطأ.
+            </p>
+        </section>
+
+        <!-- STEP 17 -->
+        <section>
+            <h4>الخطوة 17</h4>
+            <p>
+                تتضمن بعض قيم السمة <span dir="ltr" class="br-spec nw">type</span> 
+                خاصيةً مدمجةً للتحقق من صحة البيانات في النماذج؛ 
+                فعلى سبيل المثال، 
+                تتطلب القيمة <span dir="ltr" class="br-spec nw">type="email"</span> أن تكون القيمة المدخلة عنوان بريد إلكتروني صالحاً.
+            </p>
+            <p>
+                أضف تحققاً مخصصاً إلى عنصر الإدخال <span dir="ltr" class="br-spec nw">input</span> 
+                الخاص بكلمة المرور (password)، 
+                وذلك بإضافة السمة <span dir="ltr" class="br-spec nw">minlength</span> 
+                بقيمة <span dir="ltr" class="br-spec nw">8</span>. 
+                سيؤدي هذا إلى منع إرسال أي مدخلات يقل طولها عن 8 أحرف.
+            </p>
+        </section>
+
+        <!-- STEP 18 -->
+        <section>
+            <h4>الخطوة 18</h4>
+            <p>
+                عند استخدام <span dir="ltr" class="br-spec nw">type="password"</span> ، 
+                يمكنك الاستعانة بالسمة <span dir="ltr" class="br-spec nw">pattern</span> 
+                لتحديد تعبير نمطي (regular expression) 
+                يجب أن تطابقه كلمة المرور حتى تُعتبر صالحة.
+            </p>
+            <p>
+                أضف السمة <span dir="ltr" class="br-spec nw">pattern</span> 
+                إلى عنصر الإدخال <span dir="ltr" class="br-spec nw">input</span> 
+                المخصص لكلمة المرور، 
+                بحيث تشترط أن يطابق المُدخل النمط التالي: 
+                <span dir="ltr" class="br-spec nw">[a-z0-5]{8,}</span>
+            </p>
+            <p>
+                ما سبق هو تعبير نمطي (regular expression) 
+                يطابق ثمانية أحرف صغيرة أو أكثر، 
+                أو الأرقام من <span dir="ltr" class="br-spec nw">0</span> إلى <span dir="ltr" class="br-spec nw">5</span>. 
+                بعد ذلك، قم بإزالة السمة <span dir="ltr" class="br-spec nw">minlength</span> 
+                وجرّب النتيجة.
+            </p>
+            
+        </section>
+
+        <!-- STEP 19 -->
+        <section>
+            <h4>الخطوة 19</h4>
+            <p>
+                لننتقل إلى الجزء التالي من نموذج التسجيل. 
+                سيطلب هذا القسم تحديد نوع الحساب الذي يقوم المستخدم بفتحه.
+            </p>
+            <p>
+                ابدأ بإضافة عنصرَي <span dir="ltr" class="br-spec nw">label</span> 
+                إلى عنصر <span dir="ltr" class="br-spec nw">fieldset</span> الثاني.
+            </p>
+            
+        </section>
+
+        <!-- STEP 20 -->
+        <section>
+            <h4>الخطوة 20</h4>
+            <p>
+                سيتمكن المستخدمون من اختيار ما إذا كان حسابهم مخصصاً لأغراض 
+                <span dir="rtl" class="br-spec nw">شخصية</span> 
+                أم <span dir="rtl" class="br-spec nw">تجارية</span>.
+            </p>
+            <p>
+                للقيام بذلك، 
+                أضف عنصر <span dir="rtl" class="br-spec nw">input</span> واحدًا - 
+                بحيث تكون خاصية <span dir="rtl" class="br-spec nw">type</span> 
+                مساوية لـ <span dir="rtl" class="br-spec nw">radio</span> - 
+                داخل كلٍّ من عنصري <span dir="rtl" class="br-spec nw">label</span> الأولين.
+            </p>
+            
+        </section>
+
+        <!-- STEP 21 -->
+        <section>
+            <h4>الخطوة 21</h4>
+            <p>
+                داخل كل عنصر <span dir="rtl" class="br-spec nw">label</span> مقابل، 
+                ومباشرةً بعد عنصر <span dir="rtl" class="br-spec nw">input</span>، 
+                أضف مسافةً ثم أضف النص التالي:
+            </p>
+            <p class="hinty">نموذج برمجي</p>
+            <div class="code-block"><pre><code>
+<span dir="rtl" class="txt">شخصي</span>
+<span dir="rtl" class="txt">تجاري</span>
+            </code></pre></div>
+            
+        </section>
+
+        <!-- STEP 22 -->
+        <section>
+            <h4>الخطوة 22</h4>
+            <p>
+                أنت ترغب في أن يكون من الممكن اختيار عنصر إدخال واحد فقط من نوع "راديو" (radio input) في المرة الواحدة. 
+                ومع ذلك، فإن النموذج (form) لا يدرك أن عناصر الإدخال هذه مرتبطة ببعضها البعض.
+            </p>
+            <p>
+                لربط عناصر الإدخال من نوع "راديو" (radio inputs) ببعضها، 
+                امنحها جميعاً السمة <span dir="ltr" class="br-spec nw">name</span> 
+                بقيمة <span dir="ltr" class="br-spec nw">account-type</span>. 
+                وبهذا، لن يعود بالإمكان تحديد أكثر من عنصر واحد منها في الوقت ذاته.
+            </p>
+        </section>
+
+        <!-- STEP 23 -->
+        <section>
+            <h4>الخطوة 23</h4>
+            <p>
+                لم يتم بعد تعيين قيمة لأزرار الاختيار (radio buttons)؛ 
+                ونتيجة لذلك، 
+                فإن طلب POST المُرسَل عبر النموذج لن يسجّل الخيار الذي تم تحديده.
+            </p>
+            <p>
+                لجعل الطلب متيناً تماماً، 
+                أضف السمة <span dir="ltr" class="br-spec nw">value</span> 
+                إلى كلا زري الاختيار (radio buttons)، 
+                بحيث تكون قيمتهما <span dir="ltr" class="br-spec nw">personal</span> 
+                و <span dir="ltr" class="br-spec nw">business</span> على التوالي.
+            </p>
+            
+        </section>
+
+        <!-- STEP 24 -->
+        <section>
+            <h4>الخطوة 24</h4>
+            <p>
+                في الوقت الحالي، 
+                يمكن للمستخدمين إرسال النموذج دون تحديد أي من خيارات الاختيار (radio inputs). 
+                وعلى الرغم من أنك استخدمت سابقاً السمة <span dir="ltr" class="br-spec nw">required</span> 
+                للإشارة إلى أن الحقل إلزامي، 
+                إلا أن هذا الحل لن يجدي نفعاً في هذه الحالة؛ 
+                لأن إضافة السمة <span dir="ltr" class="br-spec nw">required</span> 
+                إلى كلا الخيارين ستوصل للمستخدمين معلومات غير صحيحة.
+            </p>
+            <p>
+                لحل هذه المشكلة، 
+                يمكنك توضيح المطلوب من خلال إضافة عنصر <span dir="ltr" class="br-spec nw">legend</span> 
+                يحمل النص <span dir="rtl" class="br-spec nw">نوع الحساب (مطلوب)</span> 
+                قبل عناصر <span dir="ltr" class="br-spec nw">label</span> 
+                داخل عنصر <span dir="ltr" class="br-spec nw">fieldset</span> الثاني. 
+                بعد ذلك، أضف السمة <span dir="ltr" class="br-spec nw">checked</span> 
+                إلى عنصر الإدخال <span dir="ltr" class="br-spec nw">input</span> 
+                الخاص بـ <span dir="rtl" class="br-spec nw">شخصي</span> ؛ 
+                لضمان إرسال النموذج متضمناً البيانات المطلوبة.
+            </p>
+            
+        </section>
+
+        <!-- STEP 25 -->
+        <section>
+            <h4>الخطوة 25</h4>
+            <p>
+                اتبع أفضل ممارسات إتاحة الوصول من خلال ربط عناصر <span dir="rtl" class="br-spec nw">input</span> 
+                بعناصر <span dir="rtl" class="br-spec nw">label</span> 
+                في مجموعة الحقول <span dir="rtl" class="br-spec nw">fieldset</span> الثانية.
+            </p>
+            <p>
+                استخدم <span dir="ltr" class="br-spec nw">personal-account</span> 
+                و <span dir="ltr" class="br-spec nw">business-account</span> 
+                كقيم لسمات <span dir="ltr" class="br-spec nw">id</span> المقابلة.
+            </p>
+            
+        </section>
+
+        <!-- STEP 26 -->
+        <section>
+            <h4>الخطوة 26</h4>
+            <p>
+                يجب عليك التأكد من أن المستخدم قد قرأ الشروط والأحكام.
+            </p>
+            <p>
+                أضف عنصراً من نوع <span dir="ltr" class="br-spec nw">label</span>. 
+                وداخل هذا العنصر الذي أنشأته للتو، 
+                أضف عنصراً من نوع <span dir="ltr" class="br-spec nw">input</span> 
+                واضبط السمة <span dir="ltr" class="br-spec nw">type</span> 
+                على القيمة <span dir="ltr" class="br-spec nw">checkbox</span>. 
+                اجعل عنصر الـ <span dir="ltr" class="br-spec nw">input</span> 
+                هذا <span dir="ltr" class="br-spec nw">required</span> (إلزامياً)، 
+                بحيث لا يتمكن المستخدمون من التسجيل دون الموافقة على الشروط والأحكام.
+            </p>
+            <p>
+                أضف السمتين <span dir="ltr" class="br-spec nw">id</span> 
+                و <span dir="ltr" class="br-spec nw">for</span> 
+                بقيمة <span dir="ltr" class="br-spec nw">terms-and-conditions</span> إلى العناصر، 
+                وذلك من أجل إتاحة الوصول (accessibility).
+            </p>
+            
+        </section>
+
+        <!-- STEP 27 -->
+        <section>
+            <h4>الخطوة 27</h4>
+            <p>
+                أضف عنصراً من نوع "anchor" (رابط) 
+                يحتوي على النص <span dir="rtl" class="br-spec nw">اقرأ الشروط والأحكام الخاصة بنا</span> 
+                قبل عنصر <span dir="ltr" class="br-spec nw">label</span> المُضاف حديثاً. 
+                واضبط الخاصية <span dir="ltr" class="br-spec nw">href</span> على القيمة:
+            </p>
+            <p class="hinty">نموذج برمجي</p>
+            <div class="code-block"><pre><code>
+https://openarabtech.github.io/terms-of-service/
+            </code></pre></div>
+            <p>
+                ثم أضف النص <span dir="rtl" class="br-spec nw">أوافق على الشروط والأحكام</span> 
+                مباشرةً بعد عنصر <span dir="ltr" class="br-spec nw">input</span> 
+                داخل الوسم <span dir="ltr" class="br-spec nw">label</span>.
+            </p>
+            
+        </section>
+
+        <!-- STEP 28 -->
+        <section>
+            <h4>الخطوة 28</h4>
+            <p>
+                ننتقل الآن إلى مجموعة الحقول <span dir="ltr" class="br-spec nw">fieldset</span> الأخيرة. 
+                ماذا لو أردت السماح للمستخدم برفع صورة شخصية لحسابه؟
+            </p>
+            <p>
+                حسناً، يتيح لك العنصر <span dir="ltr" class="br-spec nw">input</span> 
+                من النوع <span dir="ltr" class="br-spec nw">file</span> القيام بذلك تماماً. 
+                أضف عنصراً من نوع <span dir="ltr" class="br-spec nw">label</span> 
+                يحمل النص <span dir="rtl" class="br-spec nw">حمِّل صورة الملف الشخصي:  </span> ، 
+                وضمنه ضع عنصراً من نوع <span dir="ltr" class="br-spec nw">input</span> مخصصاً لرفع الملفات.
+            </p>
+            
+        </section>
+
+        <!-- STEP 29 -->
+        <section>
+            <h4>الخطوة 29</h4>
+            <p>
+                أضف "وسماً" <span dir="ltr" class="br-spec nw">label</span> آخر بعد الأول، 
+                بحيث يحتوي على النص: <span dir="rtl" class="br-spec nw">أدخل عمرك (بالسنوات): </span> .
+                ثم، أدرج بداخله عنصر <span dir="ltr" class="br-spec nw">input</span> 
+                يكون من النوع <span dir="ltr" class="br-spec nw">number</span>.
+            </p>
+            <p>
+                بعد ذلك، 
+                أضف خاصية <span dir="ltr" class="br-spec nw">min</span> 
+                إلى عنصر <span dir="ltr" class="br-spec nw">input</span> 
+                بقيمة <span dir="ltr" class="br-spec nw">13</span> ؛ 
+                وذلك لأن المستخدمين الذين تقل أعمارهم عن 13 عاماً لا ينبغي لهم التسجيل. 
+                ونظراً لأن أعمار المستخدمين لن تتجاوز على الأرجح 120 عاماً، 
+                أضف أيضاً خاصية <span dir="ltr" class="br-spec nw">max</span> 
+                بقيمة <span dir="ltr" class="br-spec nw">120</span> .
+            </p>
+            <p>
+                والآن، إذا حاول أحدهم إرسال النموذج بقيم تقع خارج النطاق المحدد، فسيظهر تحذير ولن يتم إرسال النموذج. 
+                جَرِّب ذلك بنفسك.
+            </p>
+            
+        </section>
+
+        <!-- STEP 30 -->
+        <section>
+            <h4>الخطوة 30</h4>
+            <p>
+                تُعد إضافة قائمة منسدلة (dropdown) إلى النموذج أمراً سهلاً 
+                باستخدام العنصر <span dir="ltr" class="br-spec nw">select</span>. 
+                يعمل العنصر <span dir="ltr" class="br-spec nw">select</span> كحاوية لمجموعة من العناصر 
+                من نوع <span dir="ltr" class="br-spec nw">option</span>، 
+                حيث يمثل كل عنصر <span dir="ltr" class="br-spec nw">option</span> تسميةً لأحد خيارات القائمة المنسدلة. 
+                يتطلب كلا العنصرين وجود وسوم إغلاق (closing tags).
+            </p>
+            <p>
+                ابدأ بإضافة عنصر <span dir="ltr" class="br-spec nw">select</span> 
+                أسفل عنصر <span dir="ltr" class="br-spec nw">label</span> الأخير. 
+                ثم قم بتضمين 5 عناصر <span dir="ltr" class="br-spec nw">option</span> 
+                داخل عنصر <span dir="ltr" class="br-spec nw">select</span> هذا.
+            </p>
+            
+        </section>
+
+        <!-- STEP 31 -->
+        <section>
+            <h4>الخطوة 31</h4>
+            <p>
+                ضع عنصر <span dir="ltr" class="br-spec nw">select</span> 
+                (بما يتضمنه من عناصر <span dir="ltr" class="br-spec nw">option</span>) 
+                داخل عنصر <span dir="ltr" class="br-spec nw">label</span> 
+                يحتوي على النص <span dir="rtl" class="br-spec nw">كيف سمعت عنا؟</span> . 
+                يجب أن يظهر النص قبل عنصر <span dir="ltr" class="br-spec nw">select</span>.
+            </p>
+            
+        </section>
+
+        <!-- STEP 32 -->
+        <section>
+            <h4>الخطوة 32</h4>
+            <p>
+                خيارات القائمة المنسدلة فارغة حالياً. 
+                ولإضافة محتوى إليها، 
+                أدرج النص التالي في كل عنصر من عناصر <span dir="ltr" class="br-spec nw">option</span> اللاحقة:
+            </p>
+            <p class="hinty">نموذج برمجي</p>
+            <div class="code-block"><pre><code>
+<span dir="rtl" class="txt">(اختر واحداً)
+أخبار التقنية العربية المفتوحة
+قناة التقنية العربية المفتوحة على يوتيوب
+منتدى التقنية العربية المفتوحة
+أخرى</span>
+            </code></pre></div>
+            
+        </section>
+
+        <!-- STEP 33 -->
+        <section>
+            <h4>الخطوة 33</h4>
+            <p>
+                إن إرسال النموذج بعد اختيار أحد الخيارات لن يؤدي إلى إرسال قيمة مفيدة إلى الخادم؛ 
+                ولهذا السبب، 
+                يحتاج كل عنصر من عناصر <span dir="ltr" class="br-spec nw">option</span> 
+                إلى سمة <span dir="ltr" class="br-spec nw">value</span>. 
+                وفي حال غياب هذه السمة، 
+                سيتم إرسال المحتوى النصي للعنصر <span dir="ltr" class="br-spec nw">option</span> إلى الخادم.
+            </p>
+            <p>
+                امنح العنصر <span dir="ltr" class="br-spec nw">option</span> الأول 
+                قيمة <span dir="ltr" class="br-spec nw">value</span> 
+                فارغة <span dir="ltr" class="br-spec nw">""</span>، 
+                وامنح عناصر <span dir="ltr" class="br-spec nw">option</span> التالية 
+                قيماً <span dir="ltr" class="br-spec nw">value</span> 
+                تتراوح من <span dir="ltr" class="br-spec nw">1</span> 
+                إلى <span dir="ltr" class="br-spec nw">4</span>.
+            </p>
+        </section>
+
+        <!-- STEP 34 -->
+        <section>
+            <h4>الخطوة 34</h4>
+           <p>
+            يعمل عنصر <span dir="ltr" class="br-spec nw">textarea</span> 
+            بشكل مشابه لعنصر <span dir="ltr" class="br-spec nw">input</span> 
+            من النوع <span dir="ltr" class="br-spec nw">text</span>، 
+            لكنه يتميز بإمكانية استقبال نصوص متعددة الأسطر، 
+            مع إتاحة تحديد عدد أولي لصفوف وأعمدة النص.
+           </p>
+           <p>
+            سيتمكن المستخدمون من التسجيل مع إضافة نبذة تعريفية (bio). 
+            أضف عنصراً من نوع <span dir="ltr" class="br-spec nw">label</span> 
+            يحمل النص <span dir="rtl" class="br-spec nw">قدِّم نبذةً تعريفية: </span> 
+            في نهاية عنصر <span dir="ltr" class="br-spec nw">fieldset</span>، 
+            ثم أضف عنصراً من نوع <span dir="ltr" class="br-spec nw">textarea</span> 
+            داخل عنصر <span dir="ltr" class="br-spec nw">label</span> هذا. 
+            يرجى ملاحظة أن عنصر <span dir="ltr" class="br-spec nw">textarea</span> يتطلب وسماً للإغلاق.
+           </p>
+            
+        </section>
+
+        <!-- STEP 35 -->
+        <section>
+            <h4>الخطوة 35</h4>
+            <p>
+                اربط عناصر النموذج المعنية 
+                بعناصر "التسمية" <span dir="ltr" class="br-spec nw">label</span> الخاصة بها.
+            </p>
+            <p>
+                استخدم <span dir="ltr" class="br-spec nw">profile-picture</span> 
+                و <span dir="ltr" class="br-spec nw">age</span> 
+                و <span dir="ltr" class="br-spec nw">referrer</span> 
+                و <span dir="ltr" class="br-spec nw">bio</span> 
+                كقيم لسمات <span dir="ltr" class="br-spec nw">id</span> المقابلة لها.
+            </p>
+        </section>
+
+        <!-- STEP 36 -->
+        <section>
+            <h4>الخطوة 36</h4>
+            <p>
+                يبدو عنصر <span dir="ltr" class="br-spec nw">textarea</span> صغيراً جداً. 
+                ولتحديد حجم أولي له، 
+                يمكنك إضافة السمتين <span dir="ltr" class="br-spec nw">rows</span> 
+                و <span dir="ltr" class="br-spec nw">cols</span>.
+            </p>
+            <p>
+                أضف حجماً أولياً يتكون 
+                من <span dir="ltr" class="br-spec nw">3</span> صفوف (rows)
+                و <span dir="ltr" class="br-spec nw">30</span> عموداً (columns).
+            </p>
+            
+        </section>
+
+        <!-- STEP 37 -->
+        <section>
+            <h4>الخطوة 37</h4>
+            <p>
+                لإعطاء المشاركين في المخيم فكرة عما يمكنهم كتابته في نبذتهم الشخصية، تُستخدم خاصية <span dir="ltr" class="br-spec nw">placeholder</span>. 
+                تقبل هذه الخاصية قيمة نصية تظل معروضة حتى يبدأ المستخدم في الكتابة.
+            </p>
+            <p>
+                امنح عنصر <span dir="ltr" class="br-spec nw">textarea</span> 
+                خاصية <span dir="ltr" class="br-spec nw">placeholder</span> 
+                بقيمة: <span dir="rtl" class="br-spec nw">أحب البرمجة على الشاطئ...</span> .
+            </p>
+        </section>
+
+        <!-- STEP 38 -->
+        <section>
+            <h4>الخطوة 38</h4>
+            <p>
+                عند إرسال النماذج، 
+                من المفيد - 
+                ويُعد ممارسةً جيدة - 
+                تزويد كل عنصر قابل للإرسال بخاصية <span dir="ltr" class="br-spec nw">name</span>. 
+                تُستخدم هذه الخاصية لتحديد العنصر ضمن بيانات النموذج المُرسلة.
+            </p>
+            <p>
+                باستثناء عنصري الإدخال من نوع <span dir="ltr" class="br-spec nw">radio</span> (اللذين قمت بتسميتهما بالفعل)، 
+                امنح كل عنصر قابل للإرسال (submittable element) 
+                سمة <span dir="ltr" class="br-spec nw">name</span> فريدة من اختيارك.
+            </p>
+        </section>
+
+        <!-- STEP 39 -->
+        <section>
+            <h4>الخطوة 39</h4>
+            <p>
+                لقد انتهيت من إعداد كود HTML الخاص بنموذج التسجيل. 
+                يمكنك الآن إضافة بعض اللمسات الجمالية عليه.
+            </p>
+            <p> 
+            ابدأ بتغيير الخط إلى <span dir="ltr" class="br-spec nw">Tahoma</span> 
+            وحجم الخط إلى <span dir="ltr" class="br-spec nw">17px</span> 
+            في عنصر <span dir="ltr" class="br-spec nw">body</span>.
+            </p>
+        </section>
+
+        <!-- STEP 40 -->
+        <section>
+            <h4>الخطوة 40</h4>
+            <p>
+                اجعل عنصري <span dir="ltr" class="br-spec nw">h1</span> 
+                و <span dir="ltr" class="br-spec nw">p</span> في المنتصف 
+                من خلال ضبط خاصية <span dir="ltr" class="br-spec nw">margin</span> 
+                لهما على القيمة <span dir="ltr" class="br-spec nw">1em auto</span> ، 
+                ثم قم أيضاً بمحاذاة النص بداخلهما إلى المنتصف.
+            </p>
+        </section>
+
+        <!-- STEP 41 -->
+        <section>
+            <h4>الخطوة 41</h4>
+            <p>
+                قم بتوسيط عنصر <span dir="ltr" class="br-spec nw">form</span> 
+                من خلال ضبط خاصية <span dir="ltr" class="br-spec nw">margin</span> 
+                على القيمة <span dir="ltr" class="br-spec nw">0 auto</span>. 
+                بعد ذلك، حدد أبعاده بحيث يكون 
+                عرضه الأقصى <span dir="ltr" class="br-spec nw">500px</span> 
+                وعرضه الأدنى <span dir="ltr" class="br-spec nw">300px</span>، 
+                مع السماح له بأن يشغل عرضاً <span dir="ltr" class="br-spec nw">width</span> 
+                قدره <span dir="ltr" class="br-spec nw">60vw</span> ضمن هذا النطاق.
+            </p>
+        </section>
+
+        <!-- STEP 42 -->
+        <section>
+            <h4>الخطوة 42</h4>
+            <p>
+                أثناء التطوير، 
+                من المفيد رؤية الحدود الافتراضية لعنصر <span dir="ltr" class="br-spec nw">fieldset</span>؛ 
+                لكنها تجعل المحتوى يبدو منفصلاً أكثر من اللازم.
+            </p>
+            <p>
+                أزِل "الحدود" <span dir="ltr" class="br-spec nw">border</span>، 
+                وأضِف هامشاً داخلياً (padding) 
+                بمقدار <span dir="ltr" class="br-spec nw">2rem</span> إلى الجزء العلوي والسفلي فقط 
+                من كل عنصر <span dir="ltr" class="br-spec nw">fieldset</span>؛ 
+                مع الحرص على إزالة الهامش الداخلي <span dir="ltr" class="br-spec nw">padding</span> من الجانبين الأيمن والأيسر.
+            </p>
+
+        </section>
+
+        <!-- STEP 43 -->
+        <section>
+            <h4>الخطوة 43</h4>
+            <p>
+                لإضافة بعض التباعد بين عناصر <span dir="ltr" class="br-spec nw">fieldset</span>، 
+                قم بتحديدها وأضف إليها خاصية <span dir="ltr" class="br-spec nw">border-bottom</span> 
+                بقيمة <span dir="ltr" class="br-spec nw">3px solid #3b3b4f</span>.
+            </p>
+        </section>
+
+        <!-- STEP 44 -->
+        <section>
+            <h4>الخطوة 44</h4>
+            <p>
+                يبدو إطار عنصر <span dir="ltr" class="br-spec nw">fieldset</span> الأخير 
+                في غير محله بعض الشيء.
+            </p>
+            <p>
+                في الدروس السابقة، 
+                تعلّمت كيفية التعامل مع الفئة الزائفة (pseudo-class) 
+                في CSS التي تحمل 
+                الاسم <span dir="ltr" class="br-spec nw">last-of-type</span> على النحو التالي:
+            </p>
+            <p class="hinty">نموذج برمجي</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">p:last-of-type </span><span class="attr">{ }</span>
+            </code></pre></div>
+            <p>
+                سيؤدي ذلك إلى تحديد عنصر <span dir="ltr" class="br-spec nw">p</span> الأخير.
+            </p>
+            <p>
+                أنشئ مُحدِّدًا جديدًا يستهدف عنصر <span dir="ltr" class="br-spec nw">fieldset</span> الأخير، 
+                واضبط خاصية <span dir="ltr" class="br-spec nw">border-bottom</span> الخاصة به 
+                على <span dir="ltr" class="br-spec nw">none</span>.
+            </p>
+        </section>
+
+        <!-- STEP 45 -->
+        <section>
+            <h4>الخطوة 45</h4>
+            <p>
+                سيكون من الأفضل أن يظهر نص "التسمية" <span dir="ltr" class="br-spec nw">label</span> فوق عناصر النموذج.
+            </p>
+            <p>
+                حدد جميع عناصر <span dir="ltr" class="br-spec nw">input</span> 
+                و <span dir="ltr" class="br-spec nw">textarea</span> 
+                و <span dir="ltr" class="br-spec nw">select</span>، 
+                واجعلها تشغل العرض الكامل للعناصر التي تحتويها.
+            </p>
+            <p>
+                أضف أيضاً هامشاً <span dir="ltr" class="br-spec nw">margin</span> 
+                مقداره <span dir="ltr" class="br-spec nw">10px</span> 
+                إلى الجزء العلوي من العناصر المحددة، 
+                واضبط الهوامش الأخرى 
+                على <span dir="ltr" class="br-spec nw">0</span>.
+            </p>
+        </section>
+
+        <!-- STEP 46 -->
+        <section>
+            <h4>الخطوة 46</h4>
+            <p>
+                بالنسبة لـ <span dir="ltr" class="br-spec nw">fieldset</span> الثاني، 
+                ينبغي أن يظهر كل من عنصر <span dir="ltr" class="br-spec nw">input</span> 
+                ونص <span dir="ltr" class="br-spec nw">label</span> على السطر نفسه.
+            </p>
+            <p>
+                ابدأ بمنح عناصر <span dir="ltr" class="br-spec nw">input</span> الموجودة 
+                في عنصر <span dir="ltr" class="br-spec nw">fieldset</span> الثاني 
+                فئة (class) تحمل 
+                الاسم <span dir="ltr" class="br-spec nw">inline</span>.
+            </p>
+        </section>
+
+        <!-- STEP 47 -->
+        <section>
+            <h4>الخطوة 47</h4>
+            <p>
+                حدد العناصر التي تحمل الفئة <span dir="ltr" class="br-spec nw">.inline</span> فقط، 
+                واضبط خاصية <span dir="ltr" class="br-spec nw">width</span> لها 
+                على القيمة <span dir="ltr" class="br-spec nw">unset</span>. 
+                سيؤدي هذا إلى إلغاء القاعدة السابقة التي كانت تضبط 
+                جميع عناصر <span dir="ltr" class="br-spec nw">input</span> 
+                على القيمة <span dir="ltr" class="br-spec nw">width: 100%</span>.
+            </p>
+        </section>
+
+        <!-- STEP 48 -->
+        <section>
+            <h4>الخطوة 48</h4>
+            <p>
+                أضف مسافة بين عناصر <span dir="ltr" class="br-spec nw">.inline</span> 
+                ونص <span dir="ltr" class="br-spec nw">"label"</span> 
+                من خلال ضبط الهامش الأيسر (margin-left) 
+                على <span dir="ltr" class="br-spec nw">0.5em</span>، 
+                واجعل بقية الهوامش الأخرى <span dir="ltr" class="br-spec nw">0</span>.
+            </p>
+        </section>
+
+        <!-- STEP 49 -->
+        <section>
+            <h4>الخطوة 49</h4>
+            <p>
+                إذا دققت النظر، 
+                ستلاحظ أن عناصر <span dir="ltr" class="br-spec nw">.inline</span> 
+                تظهر في موضع مرتفع أكثر من اللازم على السطر.
+            </p>
+            <p>
+                ولمعالجة هذه المشكلة، 
+                اضبط الخاصية <span dir="ltr" class="br-spec nw">vertical-align</span> 
+                على القيمة <span dir="ltr" class="br-spec nw">middle</span>.
+            </p>
+        </section>
+
+        <!-- STEP 50 -->
+        <section>
+            <h4>الخطوة 50</h4>
+            <p>
+                لجعل عنصري <span dir="ltr" class="br-spec nw">input</span> 
+               و <span dir="ltr" class="br-spec nw">textarea</span> يندمجان مع سمة الخلفية، 
+                اضبط خاصية <span dir="ltr" class="br-spec nw">background-color</span> 
+                لكل منهما على القيمة <span dir="ltr" class="br-spec nw">#0a0a23</span>. 
+                بعد ذلك، 
+                أضف لهما حدوداً (border) 
+                بسُمك <span dir="ltr" class="br-spec nw">1px</span> 
+                ونمط <span dir="ltr" class="br-spec nw">solid</span> 
+                وباللون <span dir="ltr" class="br-spec nw">#0a0a23</span>.
+            </p>
+        </section>
+
+        <!-- STEP 51 -->
+        <section>
+            <h4>الخطوة 51</h4>
+            <p>
+                في الوقت الحالي، 
+                إذا قمت بالكتابة داخل عناصر <span dir="ltr" class="br-spec nw">input</span> 
+                أو <span dir="ltr" class="br-spec nw">textarea</span>، 
+                فلن تتمكن من رؤية النص. 
+                كما أن ارتفاع هذه العناصر صغير جداً، 
+                مما يجعل استخدامها غير مريح.
+            </p>
+            <p>
+                قم بإصلاح ذلك عن طريق ضبط <span dir="ltr" class="br-spec nw">color</span> 
+                على <span dir="ltr" class="br-spec nw">#ffffff</span>، 
+                وضبط <span dir="ltr" class="br-spec nw">min-height</span> 
+                على <span dir="ltr" class="br-spec nw">2em</span>.
+            </p>
+        </section>
+
+        <!-- STEP 52 -->
+        <section>
+            <h4>الخطوة 52</h4>
+            <p>
+                تريد لعنصر <span dir="ltr" class="br-spec nw">select</span> أن يحتفظ بخلفية بيضاء، 
+                لكنه حالياً لا يكتسب نفس قيمة <span dir="ltr" class="br-spec nw">min-height</span> (الحد الأدنى للارتفاع) 
+                المطبقة على عنصري <span dir="ltr" class="br-spec nw">input</span> 
+                و <span dir="ltr" class="br-spec nw">textarea</span>.
+            </p>
+            <p>
+                انقُل خاصية <span dir="ltr" class="br-spec nw">min-height</span> وقيمتها 
+                بحيث تصبح جميع أنواع العناصر الثلاثة ذات قيمة <span dir="ltr" class="br-spec nw">min-height</span> متطابقة، 
+                مع الحفاظ على خلفية بيضاء لعنصر <span dir="ltr" class="br-spec nw">select</span>.
+            </p>
+        </section>
+
+        <!-- STEP 53 -->
+        <section>
+            <h4>الخطوة 53</h4>
+            <p>
+                لتنسيق زر الإرسال، 
+                يمكنك استخدام مُحدِّد السمات (attribute selector)، 
+                الذي يختار عنصراً بناءً على قيمة سمةٍ مُحدَّدة. 
+                إليك مثال على ذلك:
+            </p>
+            <p class="hinty">نموذج برمجي</p>
+            <div class="code-block"><pre><code>
+<span class="txt">input[name=<span class="attr">"password"</span>]</span>
+            </code></pre></div>
+            <p>
+                يختار ما سبق عناصر <span dir="ltr" class="br-spec nw">input</span> 
+                التي تحمل سمة <span dir="ltr" class="br-spec nw">name</span> 
+                بقيمة <span dir="ltr" class="br-spec nw">password</span>.
+            </p>
+            <p>
+                استخدم الآن مُحدِّد السمات (attribute selector) لتنسيق زر الإرسال (submit button)، 
+                بحيث تكون خاصية <span dir="ltr" class="br-spec nw">display</span> 
+                مضبوطة على <span dir="ltr" class="br-spec nw">block</span>، 
+                وخاصية <span dir="ltr" class="br-spec nw">width</span> 
+                مضبوطة على <span dir="ltr" class="br-spec nw">60%</span>.
+            </p>
+
+        </section>
+
+        <!-- STEP 54 -->
+        <section>
+            <h4>الخطوة 54</h4>
+            <p>
+                مع ضبط خاصية <span dir="ltr" class="br-spec nw">display</span> 
+                على القيمة <span dir="ltr" class="br-spec nw">block</span>، 
+                يستقر زر الإرسال ملاصقاً تماماً للحافة اليمنى لعنصره الأب (its parent).
+            </p>
+            <p>
+                استخدم الأسلوب نفسه الذي استُخدم لتوسيط "النموذج" (form) 
+                من أجل توسيط زر الإرسال (submit button).
+            </p>
+        </section>
+
+        <!-- STEP 55 -->
+        <section>
+            <h4>الخطوة 55</h4>
+            <p>
+                لجعل زر الإرسال يبدو أكثر انسجاماً مع بقية عناصر النموذج، 
+                اضبط خاصية <span dir="ltr" class="br-spec nw">height</span> (الارتفاع) لتكون 
+                مساوية لارتفاع الحقول الأخرى (<span dir="ltr" class="br-spec nw">2em</span>). 
+                كما يُرجى زيادة قيمة <span dir="ltr" class="br-spec nw">font-size</span> (حجم الخط) 
+                لتصبح <span dir="ltr" class="br-spec nw">1.1rem</span>.
+            </p>
+        </section>
+
+        <!-- STEP 56 -->
+        <section>
+            <h4>الخطوة 56</h4>
+            <p>
+                لجعل زر الإرسال يبدو أكثر تميزاً، 
+                عيّن خاصية <span dir="ltr" class="br-spec nw">background-color</span> له 
+                بالقيمة <span dir="ltr" class="br-spec nw">#3b3b4f</span>، 
+                وخاصية <span dir="ltr" class="br-spec nw">border-color</span> 
+                بالقيمة <span dir="ltr" class="br-spec nw">white</span>.
+            </p>
+        </section>
+
+        <!-- STEP 57 -->
+        <section>
+            <h4>الخطوة 57</h4>
+            <p>
+                وأخيرًا، بالنسبة لزر الإرسال، 
+                ينبغي فصله عن عنصر <span dir="ltr" class="br-spec nw">fieldset</span> الموجود أعلاه، 
+                وضبط عرضه بحيث لا يقل بأي حال عن <span dir="ltr" class="br-spec nw">300px</span>.
+            </p>
+            <p>
+                قم بتغيير خاصية <span dir="ltr" class="br-spec nw">margin</span> 
+                بحيث تتضمن القيمة <span dir="ltr" class="br-spec nw">1em</span> من الأعلى والأسفل، 
+                مع ترك الهوامش اليمنى واليسرى مضبوطة على القيمة <span dir="ltr" class="br-spec nw">auto</span>. 
+                بعد ذلك، حدد العرض كما هو موضح أعلاه.
+            </p>
+        </section>
+
+        <!-- STEP 58 -->
+        <section>
+            <h4>الخطوة 58</h4>
+            <p>
+                تُدرج معظم المتصفحات خصائص وقيم CSS افتراضية خاصة بها لعناصر مختلفة. 
+                وإذا أمعنت النظر، 
+                فقد تلاحظ أن حقل الإدخال <span dir="ltr" class="br-spec nw">input</span> يبدو أصغر من عناصر الإدخال النصية الأخرى؛ 
+                فافتراضيًا، يتم تطبيق هامش داخلي <span dir="ltr" class="br-spec nw">padding</span> 
+                بقيمة <span dir="ltr" class="br-spec nw">1px 2px</span> على عناصر الإدخال التي يمكن الكتابة بداخلها.
+            </p>
+            <p>
+                استخدم مُحدِّد سمات (attribute selector) آخر لتنسيق عنصر <span dir="ltr" class="br-spec nw">input</span> 
+                الذي يحمل السمة <span dir="ltr" class="br-spec nw">type</span> 
+                بقيمة <span dir="ltr" class="br-spec nw">file</span>، 
+                بحيث يكون له نفس مقدار الحشو (padding) 
+                المطبق على عناصر <span dir="ltr" class="br-spec nw">input</span> الأخرى.
+            </p>
+        </section>
+
+        <!-- STEP 59 -->
+        <section>
+            <h4>الخطوة 59</h4>
+            <p>
+                بالحديث عن "الهوامش الداخلية" <span dir="ltr" class="br-spec nw">padding</span>، 
+                يقع زر الإرسال في أسفل عنصر "النموذج" <span dir="ltr" class="br-spec nw">form</span>. 
+                أضف هامشاً داخلياً <span dir="ltr" class="br-spec nw">padding</span> 
+                بمقدار <span dir="ltr" class="br-spec nw">2em</span> إلى الجزء السفلي 
+                من عنصر "النموذج" <span dir="ltr" class="br-spec nw">form</span> فقط.
+            </p>
+        </section>
+
+        <!-- STEP 60 -->
+        <section>
+            <h4>الخطوة 60</h4>
+            <p>
+                اجعل عنصر "الإدخال" <span dir="ltr" class="br-spec nw">input</span> 
+                الخاص بالشروط والأحكام (terms and conditions) 
+                يظهر "ضمن السطر" <span dir="ltr" class="br-spec nw">inline</span> 
+                من خلال إضافة الفئة (class) المناسبة في كود HTML.
+            </p>
+        </section>
+
+        <!-- STEP 61 -->
+        <section>
+            <h4>الخطوة 61</h4>
+            <p>
+                وأخيرًا، غيّر لون نص عنصر الرابط <span dir="rtl" class="br-spec nw">الشروط والأحكام</span> (terms and conditions) 
+                إلى <span dir="ltr" class="br-spec nw">#dfdfe2</span> 
+                من خلال إضافة مُحدِّد (selector) جديد في ملف CSS.
+            </p>
+        </section>
+
+       
+
+           
+        <br>
+        <p class="hinty">أحسنت! لقد أكملت الجزء الأخير من ورشة عمل "نموذج التسجيل".</p>
+
+        
+    </section>
+
+    <!-- SOLUTION -->
+    <section>
+        <br>
+		<h3>حل التطبيق :</h3>
+        <br>
+        <div class="codeFiles">
+        <p class="file-name">index.html</p>
+        <div class="code-block">
+                <pre><code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang=</span><span class="value">"ar"</span> <span class="attr">dir=</span><span class="value">"rtl"</span>&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"UTF-8"</span>&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name=</span><span class="value">"viewport"</span> <span class="attr">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="tag">&lt;title&gt;</span><span class="txt">نموذج تسجيل</span><span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body&gt;</span>
+
+  <span class="tag">&lt;h1&gt;<span dir="rtl" class="txt">نموذج التسجيل</span>&lt;/h1&gt;
+  &lt;p&gt;<span dir="rtl" class="txt">يُرجى تعبئة هذا النموذج بالمعلومات المطلوبة</span>&lt;/p&gt;
+  
+  &lt;form <span class="attr">action=<span class="value">'https://register-demo.openarabtech.github.io'</span> method=<span class="value">"POST"</span></span>&gt;
+   &lt;fieldset&gt;
+    &lt;label <span class="attr">for=<span class="value">"first-name"</span></span>&gt;
+     <span dir="rtl" class="txt">أدخل اسمك الأول:</span> 
+     &lt;input <span class="attr">type=<span class="value">"text"</span> id=<span class="value">"first-name"</span> name=<span class="value">"first-name"</span> required</span>&gt;
+    &lt;/label&gt;
+    &lt;label <span class="attr">for=<span class="value">"last-name"</span></span>&gt;
+     <span dir="rtl" class="txt">أدخل اسمك الأخير:</span> 
+     &lt;input <span class="attr">type=<span class="value">"text"</span> id=<span class="value">"last-name"</span> name=<span class="value">"last-name"</span> required</span>&gt;
+    &lt;/label&gt;
+    &lt;label <span class="attr">for=<span class="value">"email"</span></span>&gt;
+     <span dir="rtl" class="txt">أدخل بريدك الإلكتروني:</span> 
+     &lt;input <span class="attr">type=<span class="value">"email"</span> id=<span class="value">"email"</span> name=<span class="value">"email"</span> required</span>&gt;
+    &lt;/label&gt;
+    &lt;label <span class="attr">for=<span class="value">"new-password"</span></span>&gt;
+     <span dir="rtl" class="txt">أنشئ كلمة مرور جديدة:</span> 
+     &lt;input <span class="attr">type=<span class="value">"password"</span> id=<span class="value">"new-password"</span> name=<span class="value">"new-password"</span> required pattern=<span class="value">"[a-z0-5]{8,}"</span></span>&gt;
+    &lt;/label&gt;
+   &lt;/fieldset&gt;
+   
+   &lt;fieldset&gt;
+    &lt;legend&gt;<span dir="rtl" class="txt">نوع الحساب (مطلوب)</span>&lt;/legend&gt;
+    &lt;label <span class="attr">for=<span class="value">"personal-account"</span></span>&gt;
+     &lt;input <span class="attr">class=<span class="value">"inline"</span> id=<span class="value">"personal-account"</span> type=<span class="value">"radio"</span> name=<span class="value">"account-type"</span> value=<span class="value">"personal"</span> checked</span>&gt; 
+     <span dir="rtl" class="txt">شخصي</span>
+    &lt;/label&gt;
+    &lt;label <span class="attr">for=<span class="value">"business-account"</span></span>&gt;
+     &lt;input <span class="attr">class=<span class="value">"inline"</span> id=<span class="value">"business-account"</span> type=<span class="value">"radio"</span> name=<span class="value">"account-type"</span> value=<span class="value">"business"</span></span>&gt; 
+     <span dir="rtl" class="txt">تجاري</span>
+    &lt;/label&gt;
+   &lt;/fieldset&gt;
+   
+   &lt;fieldset&gt;
+    &lt;label <span class="attr">for=<span class="value">"profile-picture"</span></span>&gt;
+     <span dir="rtl" class="txt">حمِّل صورة الملف الشخصي: </span>
+     &lt;input <span class="attr">id=<span class="value">"profile-picture"</span> name=<span class="value">"profile-picture"</span> type=<span class="value">"file"</span></span>&gt;
+    &lt;/label&gt;
+    &lt;label <span class="attr">for=<span class="value">"age"</span></span>&gt;
+     <span dir="rtl" class="txt">أدخل عمرك (بالسنوات): </span>
+     &lt;input <span class="attr">id=<span class="value">"age"</span> name=<span class="value">"age"</span> type=<span class="value">"number"</span> min=<span class="value">"13"</span> max=<span class="value">"120"</span></span>&gt;
+    &lt;/label&gt;
+    &lt;label <span class="attr">for=<span class="value">"referrer"</span></span>&gt;
+     <span dir="rtl" class="txt">كيف سمعت عنا؟</span>
+     &lt;select <span class="attr">id=<span class="value">"referrer"</span> name=<span class="value">"referrer"</span></span>&gt;
+      &lt;option <span class="attr">value=<span class="value">""</span></span>&gt;<span dir="rtl" class="txt">(اختر واحداً)</span>&lt;/option&gt;
+      &lt;option <span class="attr">value=<span class="value">"1"</span></span>&gt;<span dir="rtl" class="txt">أخبار التقنية العربية المفتوحة</span>&lt;/option&gt;
+      &lt;option <span class="attr">value=<span class="value">"2"</span></span>&gt;<span dir="rtl" class="txt">قناة التقنية العربية المفتوحة على يوتيوب</span>&lt;/option&gt;
+      &lt;option <span class="attr">value=<span class="value">"3"</span></span>&gt;<span dir="rtl" class="txt">منتدى التقنية العربية المفتوحة</span>&lt;/option&gt;
+      &lt;option <span class="attr">value=<span class="value">"4"</span></span>&gt;<span dir="rtl" class="txt">أخرى</span>&lt;/option&gt;
+     &lt;/select&gt;
+    &lt;/label&gt;
+    &lt;label <span class="attr">for=<span class="value">"bio"</span></span>&gt;
+     <span dir="rtl" class="txt">قدِّم نبذةً تعريفية: </span>
+     &lt;textarea <span class="attr">id=<span class="value">"bio"</span> name=<span class="value">"bio"</span> rows=<span class="value">"3"</span> cols=<span class="value">"30"</span> placeholder=<span dir="rtl" class="value">"أحب البرمجة على الشاطئ..."</span></span>&gt;&lt;/textarea&gt;
+    &lt;/label&gt;
+   &lt;/fieldset&gt;
+   
+   &lt;a <span class="attr">href=<span class="value">"https://openarabtech.github.io/terms-of-service/"</span></span>&gt;<span dir="rtl" class="txt">اقرأ الشروط والأحكام الخاصة بنا</span>&lt;/a&gt;
+   &lt;label <span class="attr">for=<span class="value">"terms-and-conditions"</span></span>&gt;
+    &lt;input <span class="attr">class=<span class="value">"inline"</span> id=<span class="value">"terms-and-conditions"</span> name=<span class="value">"terms-and-conditions"</span> type=<span class="value">"checkbox"</span> required</span> &gt;
+    <span dir="rtl" class="txt">أوافق على الشروط والأحكام</span>
+   &lt;/label&gt;
+   &lt;input <span class="attr">type=<span class="value">"submit"</span> value=<span class="value">"تسليم"</span></span>&gt;
+  &lt;/form&gt;
+
+  </span>
+
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                </code></pre>
+        </div>
+        
+        
+        <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">body</span> <span class="attr">{
+ width: <span class="txt">100%</span>;
+ height: <span class="txt">100vh</span>;
+ margin: <span class="txt">0</span>;
+ background-color: <span class="txt">#1b1b32</span>;
+ color: <span class="txt">#f5f6f7</span>;
+ font-family: <span class="txt">Tahoma</span>;
+ font-size: <span class="txt">17px</span>;
+}</span>
+
+<span class="tag-b">h1, p</span> <span class="attr">{
+ margin: <span class="txt">1em auto</span>;
+ text-align: <span class="txt">center</span>;
+}</span>
+
+<span class="tag-b">form</span> <span class="attr">{
+ margin: <span class="txt">0 auto</span>;
+ max-width: <span class="txt">500px</span>;
+ min-width: <span class="txt">300px</span>;
+ width: <span class="txt">60vw</span>;
+ padding-bottom: <span class="txt">2em</span>;
+}</span>
+
+<span class="tag-b">fieldset</span> <span class="attr">{
+ border: <span class="txt">none</span>;
+ padding: <span class="txt">2rem 0</span>;
+ border-bottom: <span class="txt">3px solid #3b3b4f</span>;
+}</span>
+
+<span class="tag-b">fieldset:last-of-type</span> <span class="attr">{
+ border-bottom: <span class="txt">none</span>;
+}</span>
+
+<span class="tag-b">label</span> <span class="attr">{
+ display: <span class="txt">block</span>;
+ margin: <span class="txt">0.5rem 0</span>;
+}</span>
+
+<span class="tag-b">input, textarea, select</span> <span class="attr">{
+ width: <span class="txt">100%</span>;
+ margin: <span class="txt">10px 0 0</span>;
+ min-height: <span class="txt">2em</span>;
+}</span>
+
+<span class="tag-b">input, textarea</span> <span class="attr">{
+ background-color: <span class="txt">#0a0a23</span>;
+ border: <span class="txt">1px solid #0a0a23</span>;
+ color: <span class="txt">#ffffff</span>;
+}</span>
+
+<span class="tag-b">.inline</span> <span class="attr">{
+ width: <span class="txt">unset</span>;
+ margin: <span class="txt">0 0 0 0.5em</span>;
+ vertical-align: <span class="txt">middle</span>;
+}</span>
+
+<span class="tag-b">input[type="submit"]</span> <span class="attr">{
+ display: <span class="txt">block</span>;
+ width: <span class="txt">60%</span>;
+ margin: <span class="txt">1em auto</span>;
+ height: <span class="txt">2em</span>;
+ font-size: <span class="txt">1.1rem</span>;
+ background-color: <span class="txt">#3b3b4f</span>;
+ border-color: <span class="txt">white</span>;
+ min-width: <span class="txt">300px</span>;
+}</span>
+
+<span class="tag-b">input[type="file"]</span> <span class="attr">{
+ padding: <span class="txt">1px 2px</span>;
+}</span>
+
+<span class="tag-b">a</span> <span class="attr">{
+ color: <span class="txt">#dfdfe2</span>;
+}</span>
+
+            </code></pre></div>
+            </div>
+    </section>
+
+
+    <!-- PREVIEW -->
+    <section>
+        <br>
+		<h3>معاينة التطبيق :</h3>
+        <br>
+
+        <div class="preview" role="presentation">
+                <div class="preview1">
+				 <iframe
+					src="../../examples/styling-forms/design-a-registration-form/example1.html"
+					title="Design a Registration Form"
+					loading="lazy"
+				 ></iframe>
+				</div>
+        </div>
+    </section>
+
+    </section>
+
+
+    
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="../best-practices-for-styling-forms/What-Are-Common-Issues-When-Styling Special-Input-Elements.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
